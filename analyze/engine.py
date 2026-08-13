@@ -14,6 +14,7 @@ Everything here is EDUCATIONAL (mechanisms + tendencies), never buy/sell advice.
 
 from __future__ import annotations
 import json
+import time
 import requests
 
 import config
@@ -110,18 +111,39 @@ def _gemini(event: dict) -> dict | None:
         "contents": [{"role": "user", "parts": [{"text": user}]}],
         "generationConfig": {
             "temperature": 0.4,
-            "maxOutputTokens": 1200,
+            # Generous budget: newer Gemini models spend some tokens "thinking",
+            # so a small budget would truncate the JSON answer.
+            "maxOutputTokens": 8192,
             "responseMimeType": "application/json",
         },
     }
+
+    # Retry politely on rate limits (429) / transient server errors (5xx),
+    # which the free tier can return when calls come in quickly.
+    data = None
+    for attempt in range(4):
+        try:
+            resp = requests.post(url, json=payload, timeout=60)
+            if resp.status_code in (429, 500, 503):
+                wait = 5 * (attempt + 1)
+                print(f"    [gemini] {resp.status_code}, waiting {wait}s then retrying...")
+                time.sleep(wait)
+                continue
+            resp.raise_for_status()
+            data = resp.json()
+            break
+        except Exception as e:
+            print(f"    [gemini] request error ({e}); falling back to rule-based")
+            return None
+    if data is None:
+        print("    [gemini] still rate-limited after retries; falling back to rule-based")
+        return None
+
     try:
-        resp = requests.post(url, json=payload, timeout=45)
-        resp.raise_for_status()
-        data = resp.json()
         text = data["candidates"][0]["content"]["parts"][0]["text"]
         parsed = json.loads(text)
     except Exception as e:
-        print(f"    [gemini] failed ({e}); falling back to rule-based")
+        print(f"    [gemini] could not parse response ({e}); falling back to rule-based")
         return None
 
     # Attach metadata and normalize.
@@ -164,6 +186,9 @@ def analyze_all(events: list[dict]) -> list[dict]:
     for i, ev in enumerate(events, 1):
         print(f"  [analyze] {i}/{len(events)}: {ev.get('headline','')[:70]}")
         out.append(analyze_event(ev))
+        # Space out Gemini calls a little to stay under free-tier per-minute limits.
+        if config.has_gemini() and i < len(events):
+            time.sleep(4)
     out.sort(key=lambda e: e.get("importance", 0), reverse=True)
 
     # Mark the top highlights.

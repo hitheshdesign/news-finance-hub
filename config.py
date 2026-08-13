@@ -38,7 +38,10 @@ FILTERS = _load_yaml("filters.yaml")
 
 # --- Secrets / keys (all optional; missing keys just disable that feature) ---
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.0-flash").strip()
+# "gemini-flash-lite-latest" auto-tracks Google's current Flash-Lite model:
+# it has the most generous FREE daily quota and never goes stale. (Plain
+# "gemini-flash-latest" works too but caps at ~20 free requests/day.)
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-flash-lite-latest").strip()
 FRED_API_KEY = os.getenv("FRED_API_KEY", "").strip()
 
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()

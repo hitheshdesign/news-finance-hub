@@ -1,8 +1,8 @@
 {
   "date": "2026-08-13",
   "date_human": "Thursday, 13 August 2026",
-  "generated_at": "2026-08-13T16:25:32+00:00",
-  "engine": "rule-based (free)",
+  "generated_at": "2026-08-13T16:54:09+00:00",
+  "engine": "Gemini AI",
   "macro": [],
   "events": [
     {
@@ -30,52 +30,52 @@
       "coverage_boost": 0.0,
       "id": "0425edb322",
       "analysis": {
-        "what_happened": "Indian bonds mirror gains in Treasuries as oil slips",
+        "what_happened": "Global bond markets rallied as falling crude oil prices eased inflation fears, causing Indian government bonds to follow US Treasuries upward and push yields down. Lower yields mean bond prices rose, reflecting a friendlier global economic backdrop for emerging markets.",
         "why_it_matters_india": [
-          "US Fed signals or delivers a rate cut",
-          "US yields and the dollar soften; global risk appetite improves",
-          "Foreign money flows back into emerging markets like India",
-          "The rupee steadies/strengthens and Indian equities get a tailwind"
+          "Lower global crude oil prices reduce India's import bill and lower domestic inflationary pressures.",
+          "Declining US Treasury yields reduce the pressure on Indian bond yields, as global borrowing costs soften.",
+          "Improved global sentiment encourages foreign institutional investors to allocate capital into Indian debt and equities.",
+          "A stronger macroeconomic outlook helps stabilize the Indian rupee against the US dollar."
         ],
         "impacts": [
           {
-            "target": "Nifty 50 / Sensex",
-            "direction": "up",
-            "probability": "Medium",
-            "horizon": "days-weeks",
-            "rationale": "FII inflows, cheaper global money"
+            "target": "Indian Bond Yields",
+            "direction": "down",
+            "probability": "High",
+            "horizon": "days",
+            "rationale": "tracking global Treasury drops and lower domestic inflation worries"
           },
           {
-            "target": "INR (rupee)",
+            "target": "INR (Rupee)",
             "direction": "up",
             "probability": "Medium",
             "horizon": "weeks",
-            "rationale": "weaker dollar, returning flows"
+            "rationale": "eased oil import bill reduces dollar demand"
           },
           {
-            "target": "Gold",
+            "target": "Oil-Importing Sectors (Airlines, Paints)",
             "direction": "up",
             "probability": "High",
             "horizon": "weeks",
-            "rationale": "lower real yields lift gold"
+            "rationale": "lower crude prices reduce raw material and operating costs"
           },
           {
-            "target": "Rate-sensitives (Realty, Autos, NBFCs)",
+            "target": "Banking & NBFCs",
             "direction": "up",
             "probability": "Medium",
-            "horizon": "weeks",
-            "rationale": "cheaper credit expectations"
+            "horizon": "days",
+            "rationale": "falling bond yields result in treasury gains on their existing bond portfolios"
           }
         ],
         "watch_next": [
-          "How many cuts the market is pricing for the year",
-          "Whether RBI follows with its own easing"
+          "OPEC+ production announcements on crude oil supply",
+          "Upcoming US inflation prints and commentary from the Federal Reserve"
         ],
         "confidence": "Medium",
-        "caveats": "Generated from a knowledge-base pattern by keyword match. It describes the typical mechanism, not a guaranteed outcome — markets can react differently.",
+        "caveats": "This chain could break instantly if geopolitical tensions flare up and push crude oil prices back up unexpectedly.",
+        "engine": "gemini",
         "category": "monetary_policy",
-        "matched_linkage": "fed_dovish",
-        "engine": "rule_based"
+        "matched_linkage": "fed_dovish"
       },
       "category": "monetary_policy",
       "importance": 18.1,
@@ -106,359 +106,125 @@
       "coverage_boost": 0.0,
       "id": "60250a9083",
       "analysis": {
-        "what_happened": "Top Gainers & Losers on 13 August: Apar Industries, Hindalco, Ather Energy, Force Motors, CUB among top losers",
+        "what_happened": "Certain Indian stocks like Apar Industries, Hindalco, Ather Energy, Force Motors, and City Union Bank saw significant price drops during the August 13 trading session due to company-specific news, earnings reports, or sector-wide profit booking.",
         "why_it_matters_india": [
-          "This story was flagged as market-relevant, but it doesn't match a known transmission pattern yet.",
-          "Consider adding a linkage for it to knowledge/transmission_map.yaml so future coverage is explained automatically."
+          "Stock-specific price declines reflect shifting investor sentiment toward individual companies or mid-cap segments.",
+          "Index heavyweights like Hindalco falling can pull down broader sectoral indices like Nifty Metal.",
+          "Retail investors holding these specific equities experience short-term portfolio volatility.",
+          "Broader Indian markets evaluate these movements to gauge whether selling is isolated or systemic."
         ],
-        "impacts": [],
+        "impacts": [
+          {
+            "target": "Nifty Metal Sector",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "days",
+            "rationale": "dragged by heavyweights like Hindalco facing selling pressure"
+          },
+          {
+            "target": "Retail Investor Sentiment",
+            "direction": "down",
+            "probability": "High",
+            "horizon": "days",
+            "rationale": "short-term caution following prominent mid-cap and large-cap losers"
+          },
+          {
+            "target": "INR (rupee)",
+            "direction": "down",
+            "probability": "Low",
+            "horizon": "days",
+            "rationale": "domestic stock moves have negligible direct impact on currency"
+          }
+        ],
         "watch_next": [
-          "Watch for follow-up coverage that clarifies the market angle."
+          "Volume recovery in beaten-down stocks over subsequent trading sessions",
+          "Broader institutional buying or selling trends in the Indian equity market"
         ],
-        "confidence": "Low",
-        "caveats": "No matching knowledge-base pattern; shown for awareness only.",
-        "category": "uncategorized",
-        "matched_linkage": null,
-        "engine": "rule_based"
+        "confidence": "High",
+        "caveats": "This is purely about isolated daily stock price movements and does not reflect macroeconomic or global shockwaves.",
+        "engine": "gemini",
+        "category": "general",
+        "matched_linkage": null
       },
-      "category": "uncategorized",
-      "importance": 8.5,
+      "category": "general",
+      "importance": 9.7,
       "is_top": true
     },
     {
-      "headline": "Cleveland Fed’s Hammack calls for immediate rate hike to curb inflation",
-      "relevance": 6.0,
+      "headline": "Ahead of Market: 10 things that will decide stock market action on Friday",
+      "relevance": 7.5,
       "items": [
         {
-          "title": "Cleveland Fed’s Hammack calls for immediate rate hike to curb inflation",
-          "url": "https://www.investing.com/news/economy-news/cleveland-feds-hammack-calls-for-immediate-rate-hike-to-curb-inflation-93CH-4858159",
-          "source": "Investing.com Economy",
-          "published": "2026-08-13T07:54:33+00:00",
-          "summary": "",
-          "region": "global",
+          "title": "Ahead of Market: 10 things that will decide stock market action on Friday",
+          "url": "https://economictimes.indiatimes.com/markets/stocks/news/ahead-of-market-10-things-that-will-decide-stock-market-action-on-friday/articleshow/133218209.cms",
+          "source": "Economic Times Markets",
+          "published": "2026-08-13T10:29:34+00:00",
+          "summary": "Sensex gained 114 points while Nifty fell over 40 points on expiry day, reflecting divergent benchmark moves. Softer inflation supported sentiment, but elevated crude prices and geopolitical risks kept investors cautious, with Nifty remaining rangebound between key technical levels.",
+          "region": "india",
           "origin": "rss",
-          "relevance": 6.0
+          "relevance": 7.5
         }
       ],
       "sources": [
-        "Investing.com Economy"
+        "Economic Times Markets"
       ],
       "urls": [
-        "https://www.investing.com/news/economy-news/cleveland-feds-hammack-calls-for-immediate-rate-hike-to-curb-inflation-93CH-4858159"
+        "https://economictimes.indiatimes.com/markets/stocks/news/ahead-of-market-10-things-that-will-decide-stock-market-action-on-friday/articleshow/133218209.cms"
       ],
       "item_count": 1,
       "coverage_boost": 0.0,
-      "id": "05b007917f",
+      "id": "44179a0c48",
       "analysis": {
-        "what_happened": "Cleveland Fed’s Hammack calls for immediate rate hike to curb inflation",
+        "what_happened": "US consumer inflation printed below expectations, sparking optimism that the US Federal Reserve might cut interest rates sooner than previously expected. Lower inflation in the US typically reduces pressure on global borrowing costs and improves overall risk sentiment.",
         "why_it_matters_india": [
-          "US Federal Reserve signals higher-for-longer or raises its policy rate",
-          "US bond yields and the US dollar strengthen (money earns more sitting in the US)",
-          "Foreign investors (FIIs) pull money out of Indian stocks/bonds toward safer US assets",
-          "The rupee weakens and Nifty/Sensex face selling pressure"
+          "US inflation cools more than expected, reducing the likelihood of further US interest rate hikes.",
+          "Global bond yields and the US dollar decline as rate-cut expectations rise among investors.",
+          "Foreign institutional investors find emerging markets like India more attractive due to improving risk appetite.",
+          "Domestic financial markets react positively with potential inflows into Indian equities and stabilization in the rupee."
         ],
         "impacts": [
           {
             "target": "INR (rupee)",
-            "direction": "down",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "days",
+            "rationale": "weakening US dollar reduces pressure on emerging market currencies"
+          },
+          {
+            "target": "FII flows",
+            "direction": "up",
             "probability": "High",
-            "horizon": "days-weeks",
-            "rationale": "capital flows to the US, dollar demand rises"
+            "horizon": "weeks",
+            "rationale": "improved global risk appetite draws foreign capital into Indian equities"
           },
           {
-            "target": "Nifty 50 / Sensex",
-            "direction": "down",
-            "probability": "Medium",
-            "horizon": "days",
-            "rationale": "FII outflows and risk-off mood"
-          },
-          {
-            "target": "IT services (TCS, Infosys, Wipro)",
+            "target": "IT sector",
             "direction": "up",
             "probability": "Medium",
             "horizon": "weeks",
-            "rationale": "weaker rupee lifts their dollar export earnings"
-          },
-          {
-            "target": "Realty, Autos, NBFCs",
-            "direction": "down",
-            "probability": "Medium",
-            "horizon": "weeks",
-            "rationale": "rate-sensitive; borrowing costs and demand pressure"
-          },
-          {
-            "target": "Gold (in USD)",
-            "direction": "down",
-            "probability": "Medium",
-            "horizon": "days-weeks",
-            "rationale": "higher real yields make non-yielding gold less attractive"
-          }
-        ],
-        "watch_next": [
-          "Next US CPI and jobs (non-farm payrolls) prints — do they confirm the hawkish path?",
-          "FII daily flow figures on NSE",
-          "USD/INR level — pressure zones around 84-85"
-        ],
-        "confidence": "Medium",
-        "caveats": "Generated from a knowledge-base pattern by keyword match. It describes the typical mechanism, not a guaranteed outcome — markets can react differently.",
-        "category": "monetary_policy",
-        "matched_linkage": "fed_hawkish",
-        "engine": "rule_based"
-      },
-      "category": "monetary_policy",
-      "importance": 7.6,
-      "is_top": true
-    },
-    {
-      "headline": "RBI turns upbeat as worst of Iran war shock recedes",
-      "relevance": 5.5,
-      "items": [
-        {
-          "title": "RBI turns upbeat as worst of Iran war shock recedes",
-          "url": "https://economictimes.indiatimes.com/news/economy/indicators/rbi-turns-upbeat-as-worst-of-iran-war-shock-recedes/articleshow/133198841.cms",
-          "source": "Economic Times Economy",
-          "published": "2026-08-13T00:29:41+00:00",
-          "summary": "India’s economy is showing resilience five months after the Iran war sparked fears of inflation and a downturn. Inflation remains within the RBI’s tolerance band, while vehicle sales, credit growth and GST receipts point to firm demand. Strong corporate balance sheets and festive-season spending are further bolstering optimism despite renewed oil and currency risks.",
-          "region": "india",
-          "origin": "rss",
-          "relevance": 5.5
-        }
-      ],
-      "sources": [
-        "Economic Times Economy"
-      ],
-      "urls": [
-        "https://economictimes.indiatimes.com/news/economy/indicators/rbi-turns-upbeat-as-worst-of-iran-war-shock-recedes/articleshow/133198841.cms"
-      ],
-      "item_count": 1,
-      "coverage_boost": 0.0,
-      "id": "2cc58860ea",
-      "analysis": {
-        "what_happened": "RBI turns upbeat as worst of Iran war shock recedes",
-        "why_it_matters_india": [
-          "Conflict risk rises in a key oil-producing region",
-          "Oil and gold jump on supply-shock and safe-haven fears",
-          "For oil-importing India this means costlier crude, weaker rupee, higher inflation"
-        ],
-        "impacts": [
-          {
-            "target": "Crude oil",
-            "direction": "up",
-            "probability": "Medium",
-            "horizon": "days",
-            "rationale": "supply-disruption premium"
+            "rationale": "lower US interest rates can improve economic activity and tech spending for US clients"
           },
           {
             "target": "Gold",
             "direction": "up",
             "probability": "Medium",
             "horizon": "days",
-            "rationale": "safe-haven bid"
-          },
-          {
-            "target": "INR (rupee)",
-            "direction": "down",
-            "probability": "Medium",
-            "horizon": "days-weeks",
-            "rationale": "oil import cost + risk-off"
-          },
-          {
-            "target": "Aviation, Paints, OMCs",
-            "direction": "down",
-            "probability": "Medium",
-            "horizon": "weeks",
-            "rationale": "fuel/input cost pressure"
+            "rationale": "falling US bond yields and a weaker dollar make non-yielding bullion more attractive"
           }
         ],
         "watch_next": [
-          "Whether shipping routes (Strait of Hormuz, Red Sea) are actually disrupted",
-          "Brent crude above key levels ($90+)"
+          "Upcoming US Federal Reserve commentary and speeches",
+          "Daily Foreign Institutional Investor (FII) buy/sell data on Indian exchanges"
         ],
         "confidence": "Medium",
-        "caveats": "Generated from a knowledge-base pattern by keyword match. It describes the typical mechanism, not a guaranteed outcome — markets can react differently.",
-        "category": "geopolitics",
-        "matched_linkage": "mideast_escalation",
-        "engine": "rule_based"
+        "caveats": "This chain could break if subsequent US macroeconomic data unexpectedly reignites inflation fears and pushes bond yields back up.",
+        "engine": "gemini",
+        "category": "macro_data",
+        "matched_linkage": "us_cpi_cool"
       },
-      "category": "geopolitics",
-      "importance": 7.1,
-      "is_top": false
-    },
-    {
-      "headline": "Bank of Baroda raises $700 million in first overseas bond issue since 2019",
-      "relevance": 6.5,
-      "items": [
-        {
-          "title": "Bank of Baroda raises $700 million in first overseas bond issue since 2019",
-          "url": "https://economictimes.indiatimes.com/markets/bonds/bank-of-baroda-raises-700-million-in-first-overseas-bond-issue-since-2019/articleshow/133216422.cms",
-          "source": "Economic Times Markets",
-          "published": "2026-08-13T09:19:47+00:00",
-          "summary": "Bank of Baroda raised $700 million through three-year and five-year dollar bonds, marking its first overseas issue in over seven years. Strong investor demand helped tighten pricing, with proceeds aimed at leveraging RBI’s special swap window.",
-          "region": "india",
-          "origin": "rss",
-          "relevance": 6.5
-        }
-      ],
-      "sources": [
-        "Economic Times Markets"
-      ],
-      "urls": [
-        "https://economictimes.indiatimes.com/markets/bonds/bank-of-baroda-raises-700-million-in-first-overseas-bond-issue-since-2019/articleshow/133216422.cms"
-      ],
-      "item_count": 1,
-      "coverage_boost": 0.0,
-      "id": "fb68796c36",
-      "analysis": {
-        "what_happened": "Bank of Baroda raises $700 million in first overseas bond issue since 2019",
-        "why_it_matters_india": [
-          "This story was flagged as market-relevant, but it doesn't match a known transmission pattern yet.",
-          "Consider adding a linkage for it to knowledge/transmission_map.yaml so future coverage is explained automatically."
-        ],
-        "impacts": [],
-        "watch_next": [
-          "Watch for follow-up coverage that clarifies the market angle."
-        ],
-        "confidence": "Low",
-        "caveats": "No matching knowledge-base pattern; shown for awareness only.",
-        "category": "uncategorized",
-        "matched_linkage": null,
-        "engine": "rule_based"
-      },
-      "category": "uncategorized",
-      "importance": 6.5,
-      "is_top": false
-    },
-    {
-      "headline": "US stocks: S&P 500 hits intraday record as tech stocks rally, crude oil prices fall",
-      "relevance": 6.5,
-      "items": [
-        {
-          "title": "US stocks: S&P 500 hits intraday record as tech stocks rally, crude oil prices fall",
-          "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-stocks-sp-500-hits-intraday-record-as-tech-stocks-rally-crude-oil-prices-fall/articleshow/133214216.cms",
-          "source": "Economic Times Markets",
-          "published": "2026-08-13T08:17:39+00:00",
-          "summary": "Major Wall Street indexes opened higher on Thursday morning. Crude oil prices experienced a decline, boosting investor confidence. This development improved overall market risk appetite among traders. Investors also analyzed producer price inflation data which came in softer. The Dow Jones, S&P 500, and Nasdaq Composite all saw gains at the opening bell.",
-          "region": "india",
-          "origin": "rss",
-          "relevance": 6.5
-        }
-      ],
-      "sources": [
-        "Economic Times Markets"
-      ],
-      "urls": [
-        "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-stocks-sp-500-hits-intraday-record-as-tech-stocks-rally-crude-oil-prices-fall/articleshow/133214216.cms"
-      ],
-      "item_count": 1,
-      "coverage_boost": 0.0,
-      "id": "fa9d901800",
-      "analysis": {
-        "what_happened": "US stocks: S&P 500 hits intraday record as tech stocks rally, crude oil prices fall",
-        "why_it_matters_india": [
-          "This story was flagged as market-relevant, but it doesn't match a known transmission pattern yet.",
-          "Consider adding a linkage for it to knowledge/transmission_map.yaml so future coverage is explained automatically."
-        ],
-        "impacts": [],
-        "watch_next": [
-          "Watch for follow-up coverage that clarifies the market angle."
-        ],
-        "confidence": "Low",
-        "caveats": "No matching knowledge-base pattern; shown for awareness only.",
-        "category": "uncategorized",
-        "matched_linkage": null,
-        "engine": "rule_based"
-      },
-      "category": "uncategorized",
-      "importance": 6.5,
-      "is_top": false
-    },
-    {
-      "headline": "MCX launches crude sunflower oil futures contracts to strengthen edible oil price risk management",
-      "relevance": 6.5,
-      "items": [
-        {
-          "title": "MCX launches crude sunflower oil futures contracts to strengthen edible oil price risk management",
-          "url": "https://economictimes.indiatimes.com/news/economy/agriculture/mcx-launches-crude-sunflower-oil-futures-contracts-to-strengthen-edible-oil-price-risk-management/articleshow/133213860.cms",
-          "source": "Economic Times Economy",
-          "published": "2026-08-13T08:02:21+00:00",
-          "summary": "The Multi Commodity Exchange of India has launched crude sunflower oil futures contracts. This move aims to provide risk management options for India's edible oil sector. The new contract will help participants hedge against price volatility and improve efficiency. India relies heavily on imports for its edible oil requirements. MCX seeks to deepen the edible oil ecosystem and enhance price risk management tools.",
-          "region": "india",
-          "origin": "rss",
-          "relevance": 6.5
-        }
-      ],
-      "sources": [
-        "Economic Times Economy"
-      ],
-      "urls": [
-        "https://economictimes.indiatimes.com/news/economy/agriculture/mcx-launches-crude-sunflower-oil-futures-contracts-to-strengthen-edible-oil-price-risk-management/articleshow/133213860.cms"
-      ],
-      "item_count": 1,
-      "coverage_boost": 0.0,
-      "id": "dfc66bfb4b",
-      "analysis": {
-        "what_happened": "MCX launches crude sunflower oil futures contracts to strengthen edible oil price risk management",
-        "why_it_matters_india": [
-          "This story was flagged as market-relevant, but it doesn't match a known transmission pattern yet.",
-          "Consider adding a linkage for it to knowledge/transmission_map.yaml so future coverage is explained automatically."
-        ],
-        "impacts": [],
-        "watch_next": [
-          "Watch for follow-up coverage that clarifies the market angle."
-        ],
-        "confidence": "Low",
-        "caveats": "No matching knowledge-base pattern; shown for awareness only.",
-        "category": "uncategorized",
-        "matched_linkage": null,
-        "engine": "rule_based"
-      },
-      "category": "uncategorized",
-      "importance": 6.5,
-      "is_top": false
-    },
-    {
-      "headline": "RBI proposes new interest rate rules for regulated entities, seeks public comments",
-      "relevance": 5.5,
-      "items": [
-        {
-          "title": "RBI proposes new interest rate rules for regulated entities, seeks public comments",
-          "url": "https://economictimes.indiatimes.com/news/economy/finance/rbi-proposes-new-interest-rate-rules-for-regulated-entities-seeks-public-comments/articleshow/133188150.cms",
-          "source": "Economic Times Economy",
-          "published": "2026-08-12T11:00:07+00:00",
-          "summary": "The Reserve Bank of India is harmonizing interest rate determination methods for regulated entities. New guidelines will define internal benchmarks and loan pricing components for banks. Floating rate loans will have benchmark resets not exceeding three months. Existing loans must migrate to the new framework by April 2029. These draft guidelines are open for public comment until September 11.",
-          "region": "india",
-          "origin": "rss",
-          "relevance": 5.5
-        }
-      ],
-      "sources": [
-        "Economic Times Economy"
-      ],
-      "urls": [
-        "https://economictimes.indiatimes.com/news/economy/finance/rbi-proposes-new-interest-rate-rules-for-regulated-entities-seeks-public-comments/articleshow/133188150.cms"
-      ],
-      "item_count": 1,
-      "coverage_boost": 0.0,
-      "id": "f4a9d38d8e",
-      "analysis": {
-        "what_happened": "RBI proposes new interest rate rules for regulated entities, seeks public comments",
-        "why_it_matters_india": [
-          "This story was flagged as market-relevant, but it doesn't match a known transmission pattern yet.",
-          "Consider adding a linkage for it to knowledge/transmission_map.yaml so future coverage is explained automatically."
-        ],
-        "impacts": [],
-        "watch_next": [
-          "Watch for follow-up coverage that clarifies the market angle."
-        ],
-        "confidence": "Low",
-        "caveats": "No matching knowledge-base pattern; shown for awareness only.",
-        "category": "uncategorized",
-        "matched_linkage": null,
-        "engine": "rule_based"
-      },
-      "category": "uncategorized",
-      "importance": 5.5,
-      "is_top": false
+      "category": "macro_data",
+      "importance": 9.1,
+      "is_top": true
     }
   ]
 }

@@ -38,7 +38,7 @@ FILTERS = _load_yaml("filters.yaml")
 
 # --- Secrets / keys (all optional; missing keys just disable that feature) ---
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-1.5-flash").strip()
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.0-flash").strip()
 FRED_API_KEY = os.getenv("FRED_API_KEY", "").strip()
 
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()

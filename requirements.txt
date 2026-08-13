@@ -1,0 +1,6 @@
+# News Finance Hub — Python dependencies (all free, lightweight)
+requests>=2.31.0        # HTTP calls to GDELT, FRED, Gemini, Telegram
+feedparser>=6.0.10      # parse RSS news feeds
+PyYAML>=6.0.1           # read the knowledge base + config files
+Jinja2>=3.1.3           # render the web page and email HTML
+python-dotenv>=1.0.1    # load API keys from a local .env file (optional)

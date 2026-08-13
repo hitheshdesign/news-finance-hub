@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title></title>
+<style>
+:root{
+  --bg:#f6f7f9; --panel:#ffffff; --ink:#12151a; --muted:#5b6472;
+  --line:#e6e8ec; --accent:#1a56db; --up:#0b8a3d; --down:#c0281c;
+  --chip:#eef2ff; --chipink:#1a56db; --topbg:#fff8e6; --topline:#f2d98a;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0e1116; --panel:#161b22; --ink:#e6edf3; --muted:#9aa4b2;
+    --line:#232a33; --accent:#58a6ff; --up:#3fb950; --down:#f85149;
+    --chip:#1b2537; --chipink:#79b8ff; --topbg:#20211a; --topline:#5a5320;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:16px/1.55 -apple-system,BlinkMacSystemFont,&#34;Segoe UI&#34;,Roboto,Helvetica,Arial,sans-serif;}
+.wrap{max-width:820px;margin:0 auto;padding:24px 18px 64px;}
+header.top{padding:8px 0 20px;border-bottom:1px solid var(--line);margin-bottom:24px;}
+h1{font-size:24px;margin:0 0 4px;letter-spacing:-.3px;}
+.sub{color:var(--muted);font-size:14px;}
+.macro{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+.macro .m{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+  padding:8px 11px;font-size:13px;color:var(--muted);}
+.macro .m b{color:var(--ink);}
+.arrow-up{color:var(--up);font-weight:600;}
+.arrow-down{color:var(--down);font-weight:600;}
+.sectionlabel{font-size:12px;text-transform:uppercase;letter-spacing:.08em;
+  color:var(--muted);margin:26px 0 12px;font-weight:600;}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;
+  padding:18px 18px 14px;margin:0 0 16px;box-shadow:0 1px 2px rgba(0,0,0,.03);}
+.card.top{background:var(--topbg);border-color:var(--topline);}
+.card h2{font-size:18px;margin:0 0 8px;line-height:1.35;}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;}
+.chip{background:var(--chip);color:var(--chipink);border-radius:999px;
+  padding:3px 10px;font-size:12px;font-weight:600;}
+.chip.gray{background:transparent;color:var(--muted);border:1px solid var(--line);}
+.what{margin:0 0 12px;color:var(--ink);}
+.chain{margin:0 0 12px;padding:0;list-style:none;}
+.chain li{position:relative;padding:2px 0 2px 22px;color:var(--ink);font-size:15px;}
+.chain li:before{content:&#34;↓&#34;;position:absolute;left:6px;color:var(--muted);}
+.chain li:first-child:before{content:&#34;•&#34;;}
+table.impacts{width:100%;border-collapse:collapse;margin:6px 0 12px;font-size:14px;}
+table.impacts th,table.impacts td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top;}
+table.impacts th{color:var(--muted);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.04em;}
+.prob-High{color:var(--down);font-weight:700;}
+.prob-Medium{color:#b8860b;font-weight:600;}
+.prob-Low{color:var(--muted);font-weight:600;}
+.watch{margin:8px 0 4px;padding-left:18px;}
+.watch li{color:var(--ink);font-size:14px;margin:2px 0;}
+.meta{color:var(--muted);font-size:12px;margin-top:10px;display:flex;flex-wrap:wrap;gap:10px;}
+.meta a{color:var(--accent);text-decoration:none;}
+.caveat{color:var(--muted);font-size:13px;font-style:italic;margin-top:8px;}
+footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);
+  color:var(--muted);font-size:13px;}
+.archive a{color:var(--accent);text-decoration:none;margin-right:12px;}
+.disclaimer{background:var(--panel);border:1px dashed var(--line);border-radius:10px;
+  padding:12px 14px;color:var(--muted);font-size:13px;margin-top:22px;}
+</style>
+</head><body><div class="wrap">
+<header class="top">
+  <h1>🌍→🇮🇳 News → India Impact</h1>
+  <div class="sub">Thursday, 13 August 2026 · 8 signals ·
+    analysis: rule-based (free)</div>
+  
+</header>
+
+
+
+
+<div class="sectionlabel">Today — what matters most</div>
+
+<div class="card top">
+  <div class="chips">
+    <span class="chip">★ Top signal</span>
+    <span class="chip gray">Monetary Policy</span>
+    <span class="chip gray">pattern: fed_dovish</span>
+    <span class="chip gray">1 source</span>
+  </div>
+  <h2>Indian bonds mirror gains in Treasuries as oil slips</h2>
+  
+
+  
+    <div class="sectionlabel" style="margin:10px 0 6px">How it reaches India</div>
+    <ul class="chain">
+      <li>US Fed signals or delivers a rate cut</li><li>US yields and the dollar soften; global risk appetite improves</li><li>Foreign money flows back into emerging markets like India</li><li>The rupee steadies/strengthens and Indian equities get a tailwind</li>
+    </ul>
+  
+
+  
+    <table class="impacts">
+      <tr><th>What could move</th><th>Dir.</th><th>Odds</th><th>When</th><th>Why</th></tr>
+      
+      <tr>
+        <td>Nifty 50 / Sensex</td>
+        <td class="arrow-up">▲</td>
+        <td class="prob-Medium">Medium</td>
+        <td>days-weeks</td>
+        <td>FII inflows, cheaper global money</td>
+      </tr>
+      
+      <tr>
+        <td>INR (rupee)</td>
+        <td class="arrow-up">▲</td>
+        <td class="prob-Medium">Medium</td>
+        <td>weeks</td>
+        <td>weaker dollar, returning flows</td>
+      </tr>
+      
+      <tr>
+        <td>Gold</td>
+        <td class="arrow-up">▲</td>
+        <td class="prob-High">High</td>
+        <td>weeks</td>
+        <td>lower real yields lift gold</td>
+      </tr>
+      
+      <tr>
+        <td>Rate-sensitives (Realty, Autos, NBFCs)</td>
+        <td class="arrow-up">▲</td>
+        <td class="prob-Medium">Medium</td>
+        <td>weeks</td>
+        <td>cheaper credit expectations</td>
+      </tr>
+      
+    </table>
+  
+
+  
+    <div class="sectionlabel" style="margin:8px 0 4px">Watch next</div>
+    <ul class="watch">
+      <li>How many cuts the market is pricing for the year</li><li>Whether RBI follows with its own easing</li>
+    </ul>
+  
+
+  <div class="caveat">Caveat: Generated from a knowledge-base pattern by keyword match. It describes the typical mechanism, not a guaranteed outcome — markets can react differently.</div>
+
+  <div class="meta">
+    <span>Confidence: Medium</span>
+    <span>Sources: Economic Times Markets</span>
+    <a href="https://economictimes.indiatimes.com/markets/bonds/indian-bonds-mirror-gains-in-treasuries-as-oil-slips/articleshow/133211927.cms" target="_blank" rel="noopener">Read the news →</a>
+  </div>
+</div>
+<div class="card top">
+  <div class="chips">
+    <span class="chip">★ Top signal</span>
+    <span class="chip gray">Uncategorized</span>
+    
+    <span class="chip gray">1 source</span>
+  </div>
+  <h2>Top Gainers &amp; Losers on 13 August: Apar Industries, Hindalco, Ather Energy, Force Motors, CUB among top losers</h2>
+  
+
+  
+    <div class="sectionlabel" style="margin:10px 0 6px">How it reaches India</div>
+    <ul class="chain">
+      <li>This story was flagged as market-relevant, but it doesn&#39;t match a known transmission pattern yet.</li><li>Consider adding a linkage for it to knowledge/transmission_map.yaml so future coverage is explained automatically.</li>
+    </ul>
+  
+
+  
+
+  
+    <div class="sectionlabel" style="margin:8px 0 4px">Watch next</div>
+    <ul class="watch">
+      <li>Watch for follow-up coverage that clarifies the market angle.</li>
+    </ul>
+  
+
+  <div class="caveat">Caveat: No matching knowledge-base pattern; shown for awareness only.</div>
+
+  <div class="meta">
+    <span>Confidence: Low</span>
+    <span>Sources: Livemint Markets</span>
+    <a href="https://www.livemint.com/market/stock-market-news/top-gainers-losers-on-13-august-apar-industries-hindalco-ather-energy-force-motors-cub-among-top-losers-11786615201243.html" target="_blank" rel="noopener">Read the news →</a>
+  </div>
+</div>
+<div class="card top">
+  <div class="chips">
+    <span class="chip">★ Top signal</span>
+    <span class="chip gray">Monetary Policy</span>
+    <span class="chip gray">pattern: fed_hawkish</span>
+    <span class="chip gray">1 source</span>
+  </div>
+  <h2>Cleveland Fed’s Hammack calls for immediate rate hike to curb inflation</h2>
+  
+
+  
+    <div class="sectionlabel" style="margin:10px 0 6px">How it reaches India</div>
+    <ul class="chain">
+      <li>US Federal Reserve signals higher-for-longer or raises its policy rate</li><li>US bond yields and the US dollar strengthen (money earns more sitting in the US)</li><li>Foreign investors (FIIs) pull money out of Indian stocks/bonds toward safer US assets</li><li>The rupee weakens and Nifty/Sensex face selling pressure</li>
+    </ul>
+  
+
+  
+    <table class="impacts">
+      <tr><th>What could move</th><th>Dir.</th><th>Odds</th><th>When</th><th>Why</th></tr>
+      
+      <tr>
+        <td>INR (rupee)</td>
+        <td class="arrow-down">▼</td>
+        <td class="prob-High">High</td>
+        <td>days-weeks</td>
+        <td>capital flows to the US, dollar demand rises</td>
+      </tr>
+      
+      <tr>
+        <td>Nifty 50 / Sensex</td>
+        <td class="arrow-down">▼</td>
+        <td class="prob-Medium">Medium</td>
+        <td>days</td>
+        <td>FII outflows and risk-off mood</td>
+      </tr>
+      
+      <tr>
+        <td>IT services (TCS, Infosys, Wipro)</td>
+        <td class="arrow-up">▲</td>
+        <td class="prob-Medium">Medium</td>
+        <td>weeks</td>
+        <td>weaker rupee lifts their dollar export earnings</td>
+      </tr>
+      
+      <tr>
+        <td>Realty, Autos, NBFCs</td>
+        <td class="arrow-down">▼</td>
+        <td class="prob-Medium">Medium</td>
+        <td>weeks</td>
+        <td>rate-sensitive; borrowing costs and demand pressure</td>
+      </tr>
+      
+      <tr>
+        <td>Gold (in USD)</td>
+        <td class="arrow-down">▼</td>
+        <td class="prob-Medium">Medium</td>
+        <td>days-weeks</td>
+        <td>higher real yields make non-yielding gold less attractive</td>
+      </tr>
+      
+    </table>
+  
+
+  
+    <div class="sectionlabel" style="margin:8px 0 4px">Watch next</div>
+    <ul class="watch">
+      <li>Next US CPI and jobs (non-farm payrolls) prints — do they confirm the hawkish path?</li><li>FII daily flow figures on NSE</li><li>USD/INR level — pressure zones around 84-85</li>
+    </ul>
+  
+
+  <div class="caveat">Caveat: Generated from a knowledge-base pattern by keyword match. It describes the typical mechanism, not a guaranteed outcome — markets can react differently.</div>
+
+  <div class="meta">
+    <span>Confidence: Medium</span>
+    <span>Sources: Investing.com Economy</span>
+    <a href="https://www.investing.com/news/economy-news/cleveland-feds-hammack-calls-for-immediate-rate-hike-to-curb-inflation-93CH-4858159" target="_blank" rel="noopener">Read the news →</a>
+  </div>
+</div>
+
+<div class="sectionlabel">Also on the radar</div>
+
+<div class="card ">
+  <div class="chips">
+    
+    <span class="chip gray">Geopolitics</span>
+    <span class="chip gray">pattern: mideast_escalation</span>
+    <span class="chip gray">1 source</span>
+  </div>
+  <h2>RBI turns upbeat as worst of Iran war shock recedes</h2>
+  
+
+  
+    <div class="sectionlabel" style="margin:10px 0 6px">How it reaches India</div>
+    <ul class="chain">
+      <li>Conflict risk rises in a key oil-producing region</li><li>Oil and gold jump on supply-shock and safe-haven fears</li><li>For oil-importing India this means costlier crude, weaker rupee, higher inflation</li>
+    </ul>
+  
+
+  
+    <table class="impacts">
+      <tr><th>What could move</th><th>Dir.</th><th>Odds</th><th>When</th><th>Why</th></tr>
+      
+      <tr>
+        <td>Crude oil</td>
+        <td class="arrow-up">▲</td>
+        <td class="prob-Medium">Medium</td>
+        <td>days</td>
+        <td>supply-disruption premium</td>
+      </tr>
+      
+      <tr>
+        <td>Gold</td>
+        <td class="arrow-up">▲</td>
+        <td class="prob-Medium">Medium</td>
+        <td>days</td>
+        <td>safe-haven bid</td>
+      </tr>
+      
+      <tr>
+        <td>INR (rupee)</td>
+        <td class="arrow-down">▼</td>
+        <td class="prob-Medium">Medium</td>
+        <td>days-weeks</td>
+        <td>oil import cost + risk-off</td>
+      </tr>
+      
+      <tr>
+        <td>Aviation, Paints, OMCs</td>
+        <td class="arrow-down">▼</td>
+        <td class="prob-Medium">Medium</td>
+        <td>weeks</td>
+        <td>fuel/input cost pressure</td>
+      </tr>
+      
+    </table>
+  
+
+  
+    <div class="sectionlabel" style="margin:8px 0 4px">Watch next</div>
+    <ul class="watch">
+      <li>Whether shipping routes (Strait of Hormuz, Red Sea) are actually disrupted</li><li>Brent crude above key levels ($90+)</li>
+    </ul>
+  
+
+  <div class="caveat">Caveat: Generated from a knowledge-base pattern by keyword match. It describes the typical mechanism, not a guaranteed outcome — markets can react differently.</div>
+
+  <div class="meta">
+    <span>Confidence: Medium</span>
+    <span>Sources: Economic Times Economy</span>
+    <a href="https://economictimes.indiatimes.com/news/economy/indicators/rbi-turns-upbeat-as-worst-of-iran-war-shock-recedes/articleshow/133198841.cms" target="_blank" rel="noopener">Read the news →</a>
+  </div>
+</div>
+<div class="card ">
+  <div class="chips">
+    
+    <span class="chip gray">Uncategorized</span>
+    
+    <span class="chip gray">1 source</span>
+  </div>
+  <h2>Bank of Baroda raises $700 million in first overseas bond issue since 2019</h2>
+  
+
+  
+    <div class="sectionlabel" style="margin:10px 0 6px">How it reaches India</div>
+    <ul class="chain">
+      <li>This story was flagged as market-relevant, but it doesn&#39;t match a known transmission pattern yet.</li><li>Consider adding a linkage for it to knowledge/transmission_map.yaml so future coverage is explained automatically.</li>
+    </ul>
+  
+
+  
+
+  
+    <div class="sectionlabel" style="margin:8px 0 4px">Watch next</div>
+    <ul class="watch">
+      <li>Watch for follow-up coverage that clarifies the market angle.</li>
+    </ul>
+  
+
+  <div class="caveat">Caveat: No matching knowledge-base pattern; shown for awareness only.</div>
+
+  <div class="meta">
+    <span>Confidence: Low</span>
+    <span>Sources: Economic Times Markets</span>
+    <a href="https://economictimes.indiatimes.com/markets/bonds/bank-of-baroda-raises-700-million-in-first-overseas-bond-issue-since-2019/articleshow/133216422.cms" target="_blank" rel="noopener">Read the news →</a>
+  </div>
+</div>
+<div class="card ">
+  <div class="chips">
+    
+    <span class="chip gray">Uncategorized</span>
+    
+    <span class="chip gray">1 source</span>
+  </div>
+  <h2>US stocks: S&amp;P 500 hits intraday record as tech stocks rally, crude oil prices fall</h2>
+  
+
+  
+    <div class="sectionlabel" style="margin:10px 0 6px">How it reaches India</div>
+    <ul class="chain">
+      <li>This story was flagged as market-relevant, but it doesn&#39;t match a known transmission pattern yet.</li><li>Consider adding a linkage for it to knowledge/transmission_map.yaml so future coverage is explained automatically.</li>
+    </ul>
+  
+
+  
+
+  
+    <div class="sectionlabel" style="margin:8px 0 4px">Watch next</div>
+    <ul class="watch">
+      <li>Watch for follow-up coverage that clarifies the market angle.</li>
+    </ul>
+  
+
+  <div class="caveat">Caveat: No matching knowledge-base pattern; shown for awareness only.</div>
+
+  <div class="meta">
+    <span>Confidence: Low</span>
+    <span>Sources: Economic Times Markets</span>
+    <a href="https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-stocks-sp-500-hits-intraday-record-as-tech-stocks-rally-crude-oil-prices-fall/articleshow/133214216.cms" target="_blank" rel="noopener">Read the news →</a>
+  </div>
+</div>
+<div class="card ">
+  <div class="chips">
+    
+    <span class="chip gray">Uncategorized</span>
+    
+    <span class="chip gray">1 source</span>
+  </div>
+  <h2>MCX launches crude sunflower oil futures contracts to strengthen edible oil price risk management</h2>
+  
+
+  
+    <div class="sectionlabel" style="margin:10px 0 6px">How it reaches India</div>
+    <ul class="chain">
+      <li>This story was flagged as market-relevant, but it doesn&#39;t match a known transmission pattern yet.</li><li>Consider adding a linkage for it to knowledge/transmission_map.yaml so future coverage is explained automatically.</li>
+    </ul>
+  
+
+  
+
+  
+    <div class="sectionlabel" style="margin:8px 0 4px">Watch next</div>
+    <ul class="watch">
+      <li>Watch for follow-up coverage that clarifies the market angle.</li>
+    </ul>
+  
+
+  <div class="caveat">Caveat: No matching knowledge-base pattern; shown for awareness only.</div>
+
+  <div class="meta">
+    <span>Confidence: Low</span>
+    <span>Sources: Economic Times Economy</span>
+    <a href="https://economictimes.indiatimes.com/news/economy/agriculture/mcx-launches-crude-sunflower-oil-futures-contracts-to-strengthen-edible-oil-price-risk-management/articleshow/133213860.cms" target="_blank" rel="noopener">Read the news →</a>
+  </div>
+</div>
+<div class="card ">
+  <div class="chips">
+    
+    <span class="chip gray">Uncategorized</span>
+    
+    <span class="chip gray">1 source</span>
+  </div>
+  <h2>RBI proposes new interest rate rules for regulated entities, seeks public comments</h2>
+  
+
+  
+    <div class="sectionlabel" style="margin:10px 0 6px">How it reaches India</div>
+    <ul class="chain">
+      <li>This story was flagged as market-relevant, but it doesn&#39;t match a known transmission pattern yet.</li><li>Consider adding a linkage for it to knowledge/transmission_map.yaml so future coverage is explained automatically.</li>
+    </ul>
+  
+
+  
+
+  
+    <div class="sectionlabel" style="margin:8px 0 4px">Watch next</div>
+    <ul class="watch">
+      <li>Watch for follow-up coverage that clarifies the market angle.</li>
+    </ul>
+  
+
+  <div class="caveat">Caveat: No matching knowledge-base pattern; shown for awareness only.</div>
+
+  <div class="meta">
+    <span>Confidence: Low</span>
+    <span>Sources: Economic Times Economy</span>
+    <a href="https://economictimes.indiatimes.com/news/economy/finance/rbi-proposes-new-interest-rate-rules-for-regulated-entities-seeks-public-comments/articleshow/133188150.cms" target="_blank" rel="noopener">Read the news →</a>
+  </div>
+</div>
+
+<div class="disclaimer">
+  <b>Educational only.</b> This brief explains how events <i>tend</i> to affect markets so
+  you can learn the patterns and probabilities. It is not investment advice and gives no
+  buy/sell recommendations. Probabilities are rough judgments, not guarantees.
+</div>
+
+<footer>
+  
+  <p>Generated automatically by your News Finance Hub · 2026-08-13T16:25:32+00:00</p>
+</footer>
+</div></body></html>

@@ -1,0 +1,75 @@
+# =============================================================================
+# SOURCES — where the raw news and data come from (all free)
+# Add/remove RSS feeds freely. Keep them reputable to reduce noise.
+# =============================================================================
+
+# --- Curated RSS feeds (free, structured, reliable) ---
+rss_feeds:
+  # Global business / markets
+  - name: "Reuters Business"
+    url: "https://feeds.reuters.com/reuters/businessNews"
+    region: global
+  - name: "Reuters Markets"
+    url: "https://feeds.reuters.com/reuters/marketsNews"
+    region: global
+  - name: "CNBC Economy"
+    url: "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=20910258"
+    region: global
+  - name: "CNBC Finance"
+    url: "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000664"
+    region: global
+  - name: "Investing.com Economy"
+    url: "https://www.investing.com/rss/news_14.rss"
+    region: global
+  - name: "Investing.com Commodities"
+    url: "https://www.investing.com/rss/news_11.rss"
+    region: global
+  # India business / markets
+  - name: "Economic Times Markets"
+    url: "https://economictimes.indiatimes.com/markets/rssfeeds/1977021501.cms"
+    region: india
+  - name: "Economic Times Economy"
+    url: "https://economictimes.indiatimes.com/news/economy/rssfeeds/1373380680.cms"
+    region: india
+  - name: "Business Standard Markets"
+    url: "https://www.business-standard.com/rss/markets-106.rss"
+    region: india
+  - name: "Livemint Markets"
+    url: "https://www.livemint.com/rss/markets"
+    region: india
+  - name: "The Hindu BusinessLine"
+    url: "https://www.thehindubusinessline.com/feeder/default.rss"
+    region: india
+  - name: "Moneycontrol Business"
+    url: "https://www.moneycontrol.com/rss/business.xml"
+    region: india
+
+# --- GDELT (global events firehose, free, no API key) ---
+# We query recent English articles matching macro/market themes.
+gdelt:
+  enabled: true
+  # Themes/keywords OR-joined into the GDELT query. Kept focused to cut noise.
+  query_terms:
+    - "federal reserve"
+    - "interest rate"
+    - "inflation"
+    - "crude oil"
+    - "gold price"
+    - "rupee"
+    - "sanctions"
+    - "tariff"
+    - "central bank"
+  timespan: "1d"        # look back 1 day
+  max_records: 60
+  language: "english"
+
+# --- FRED (US macro data series, free API key needed) ---
+# Optional context signals. Skipped automatically if no FRED_API_KEY is set.
+fred:
+  enabled: true
+  series:
+    - {id: "FEDFUNDS",   label: "US Fed Funds Rate (%)"}
+    - {id: "CPIAUCSL",   label: "US CPI (index)"}
+    - {id: "UNRATE",     label: "US Unemployment Rate (%)"}
+    - {id: "DGS10",      label: "US 10-Year Treasury Yield (%)"}
+    - {id: "DTWEXBGS",   label: "US Dollar Index (broad)"}

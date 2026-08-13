@@ -1,0 +1,390 @@
+# =============================================================================
+# TRANSMISSION KNOWLEDGE BASE
+# -----------------------------------------------------------------------------
+# This is the "brain's textbook". Each entry describes a well-known economic
+# linkage: a global trigger, the step-by-step chain of how it reaches India,
+# the likely winners/losers, and what to watch next.
+#
+# It does TWO jobs:
+#   1. Grounds the AI so it explains REAL mechanics (not made-up guesses).
+#   2. Powers a free "rule-based" analysis when no AI key is set, so the
+#      pipeline always produces useful India-impact cards at $0.
+#
+# HOW TO GROW IT (this is also how YOU learn the patterns):
+#   - Copy an entry, change the id/name, and describe a new linkage.
+#   - `triggers` = words/phrases in a news headline that should match this entry.
+#   - `probability` uses plain buckets: High / Medium / Low.
+#   - `horizon` = how soon the effect tends to show: hours / days / weeks / months.
+#   - Directions: up = price/level rises, down = falls.
+#
+# NOTE: Everything here is EDUCATIONAL — it explains mechanisms and tendencies,
+# not buy/sell advice. Real markets can and do behave differently.
+# =============================================================================
+
+linkages:
+
+  # ------------------------- US MONETARY POLICY ---------------------------
+  - id: fed_hawkish
+    name: "US Fed turns hawkish / raises rates"
+    category: monetary_policy
+    triggers: ["fed hikes", "rate hike", "hawkish", "higher for longer", "fed raises", "powell", "fomc", "tightening", "dot plot"]
+    chain:
+      - "US Federal Reserve signals higher-for-longer or raises its policy rate"
+      - "US bond yields and the US dollar strengthen (money earns more sitting in the US)"
+      - "Foreign investors (FIIs) pull money out of Indian stocks/bonds toward safer US assets"
+      - "The rupee weakens and Nifty/Sensex face selling pressure"
+    impacts:
+      - {target: "INR (rupee)", direction: down, probability: High, horizon: "days-weeks", rationale: "capital flows to the US, dollar demand rises"}
+      - {target: "Nifty 50 / Sensex", direction: down, probability: Medium, horizon: "days", rationale: "FII outflows and risk-off mood"}
+      - {target: "IT services (TCS, Infosys, Wipro)", direction: up, probability: Medium, horizon: "weeks", rationale: "weaker rupee lifts their dollar export earnings"}
+      - {target: "Realty, Autos, NBFCs", direction: down, probability: Medium, horizon: "weeks", rationale: "rate-sensitive; borrowing costs and demand pressure"}
+      - {target: "Gold (in USD)", direction: down, probability: Medium, horizon: "days-weeks", rationale: "higher real yields make non-yielding gold less attractive"}
+    watch_next:
+      - "Next US CPI and jobs (non-farm payrolls) prints — do they confirm the hawkish path?"
+      - "FII daily flow figures on NSE"
+      - "USD/INR level — pressure zones around 84-85"
+
+  - id: fed_dovish
+    name: "US Fed turns dovish / cuts rates"
+    category: monetary_policy
+    triggers: ["fed cuts", "rate cut", "dovish", "easing", "pivot", "pause hikes", "lower rates"]
+    chain:
+      - "US Fed signals or delivers a rate cut"
+      - "US yields and the dollar soften; global risk appetite improves"
+      - "Foreign money flows back into emerging markets like India"
+      - "The rupee steadies/strengthens and Indian equities get a tailwind"
+    impacts:
+      - {target: "Nifty 50 / Sensex", direction: up, probability: Medium, horizon: "days-weeks", rationale: "FII inflows, cheaper global money"}
+      - {target: "INR (rupee)", direction: up, probability: Medium, horizon: "weeks", rationale: "weaker dollar, returning flows"}
+      - {target: "Gold", direction: up, probability: High, horizon: "weeks", rationale: "lower real yields lift gold"}
+      - {target: "Rate-sensitives (Realty, Autos, NBFCs)", direction: up, probability: Medium, horizon: "weeks", rationale: "cheaper credit expectations"}
+    watch_next:
+      - "How many cuts the market is pricing for the year"
+      - "Whether RBI follows with its own easing"
+
+  - id: us_cpi_hot
+    name: "US inflation (CPI) comes in hotter than expected"
+    category: macro_data
+    triggers: ["us cpi", "inflation rises", "hotter inflation", "cpi beats", "sticky inflation", "pce"]
+    chain:
+      - "US CPI prints above expectations"
+      - "Markets push out rate-cut hopes; yields and the dollar rise"
+      - "Risk-off spills into emerging markets; FIIs trim India exposure"
+    impacts:
+      - {target: "Gold", direction: down, probability: Medium, horizon: "days", rationale: "higher real yields, delayed cuts (short-term reaction)"}
+      - {target: "INR (rupee)", direction: down, probability: Medium, horizon: "days", rationale: "stronger dollar"}
+      - {target: "Nifty 50", direction: down, probability: Medium, horizon: "days", rationale: "risk-off"}
+    watch_next:
+      - "The Fed's next meeting tone"
+      - "US 10-year Treasury yield direction"
+
+  - id: us_cpi_cool
+    name: "US inflation (CPI) cools more than expected"
+    category: macro_data
+    triggers: ["us cpi cools", "inflation eases", "cpi misses", "softer inflation", "disinflation"]
+    chain:
+      - "US CPI prints below expectations"
+      - "Rate-cut hopes rise; yields and the dollar fall"
+      - "Global risk appetite improves, helping emerging markets"
+    impacts:
+      - {target: "Gold", direction: up, probability: High, horizon: "days-weeks", rationale: "lower real yields, softer dollar"}
+      - {target: "Nifty 50", direction: up, probability: Medium, horizon: "days", rationale: "risk-on, FII inflows"}
+      - {target: "INR (rupee)", direction: up, probability: Medium, horizon: "days", rationale: "weaker dollar"}
+    watch_next:
+      - "Confirmation from the next PCE/CPI print"
+
+  - id: us_jobs_strong
+    name: "US jobs data (payrolls) much stronger than expected"
+    category: macro_data
+    triggers: ["nonfarm payrolls", "jobs report", "strong jobs", "unemployment falls", "labor market", "payrolls beat"]
+    chain:
+      - "US adds far more jobs than expected / unemployment drops"
+      - "A hot labor market lets the Fed stay higher-for-longer"
+      - "Yields and dollar firm up; pressure on emerging-market assets"
+    impacts:
+      - {target: "INR (rupee)", direction: down, probability: Medium, horizon: "days", rationale: "stronger dollar"}
+      - {target: "Gold", direction: down, probability: Medium, horizon: "days", rationale: "delayed cuts"}
+      - {target: "IT services", direction: up, probability: Low, horizon: "weeks", rationale: "healthy US economy supports client tech spend + weak INR"}
+    watch_next:
+      - "Wage growth inside the report (inflation signal)"
+
+  # ------------------------- CRUDE OIL & ENERGY ---------------------------
+  - id: crude_oil_up
+    name: "Crude oil prices spike"
+    category: commodities
+    triggers: ["oil surges", "crude jumps", "brent rises", "oil price spike", "opec cut", "oil rally", "wti climbs"]
+    chain:
+      - "Crude oil prices rise sharply"
+      - "India imports ~85% of its crude, so the import bill balloons"
+      - "The current account deficit (CAD) widens and the rupee weakens"
+      - "Fuel-linked costs push up inflation across the economy"
+    impacts:
+      - {target: "INR (rupee)", direction: down, probability: High, horizon: "days-weeks", rationale: "bigger dollar outflow for oil imports"}
+      - {target: "Oil marketing (HPCL, BPCL, IOC)", direction: down, probability: Medium, horizon: "weeks", rationale: "marketing margins squeezed if pump prices are frozen"}
+      - {target: "Paints (Asian Paints), Tyres, Aviation (IndiGo)", direction: down, probability: Medium, horizon: "weeks", rationale: "crude-derived input / fuel cost rises"}
+      - {target: "Upstream (ONGC, Oil India)", direction: up, probability: Medium, horizon: "weeks", rationale: "higher realizations on the oil they produce"}
+      - {target: "CPI inflation", direction: up, probability: High, horizon: "weeks-months", rationale: "fuel and transport feed through prices"}
+    watch_next:
+      - "OPEC+ decisions and any Middle-East supply disruptions"
+      - "Government excise/duty changes to cushion pump prices"
+      - "USD/INR and the trade-deficit print"
+
+  - id: crude_oil_down
+    name: "Crude oil prices fall sharply"
+    category: commodities
+    triggers: ["oil falls", "crude drops", "brent slumps", "oil plunge", "oversupply oil", "demand fears oil"]
+    chain:
+      - "Crude oil prices drop"
+      - "India's import bill shrinks; the rupee and CAD get relief"
+      - "Fuel-linked inflation pressure eases"
+    impacts:
+      - {target: "Oil marketing (HPCL, BPCL, IOC)", direction: up, probability: Medium, horizon: "weeks", rationale: "fatter marketing margins"}
+      - {target: "Paints, Tyres, Aviation", direction: up, probability: Medium, horizon: "weeks", rationale: "lower input/fuel costs"}
+      - {target: "CPI inflation", direction: down, probability: Medium, horizon: "weeks-months", rationale: "cheaper fuel"}
+      - {target: "Upstream (ONGC, Oil India)", direction: down, probability: Medium, horizon: "weeks", rationale: "lower realizations"}
+    watch_next:
+      - "Whether the fall is demand-driven (growth worry) or supply-driven"
+
+  - id: natgas_lng_up
+    name: "Natural gas / LNG prices surge"
+    category: commodities
+    triggers: ["natural gas", "lng price", "gas surges", "gas shortage"]
+    chain:
+      - "Global LNG/natural-gas prices spike"
+      - "India imports LNG for fertilizers, power and city gas"
+      - "Input costs rise for gas-dependent industries"
+    impacts:
+      - {target: "City gas (IGL, MGL), Fertilizers", direction: down, probability: Medium, horizon: "weeks", rationale: "higher feedstock cost, margin pressure"}
+      - {target: "Fertilizer subsidy burden (fiscal)", direction: up, probability: Medium, horizon: "months", rationale: "government absorbs part of the cost"}
+    watch_next:
+      - "European winter demand and global LNG supply"
+
+  # ------------------------- GOLD & SAFE HAVENS ---------------------------
+  - id: gold_up_riskoff
+    name: "Gold rallies on safe-haven demand"
+    category: commodities
+    triggers: ["gold surges", "gold record", "safe haven", "gold rally", "bullion climbs"]
+    chain:
+      - "Uncertainty (war, banking stress, rate-cut hopes) drives money into gold"
+      - "Global gold prices rise, and India (a big importer) sees local prices climb too"
+    impacts:
+      - {target: "Gold (domestic)", direction: up, probability: High, horizon: "days-weeks", rationale: "global price + rupee effect"}
+      - {target: "Gold financiers (Muthoot, Manappuram)", direction: up, probability: Medium, horizon: "weeks", rationale: "higher collateral value supports loan book"}
+      - {target: "Jewellery (Titan)", direction: down, probability: Low, horizon: "weeks", rationale: "very high prices can dampen volume demand"}
+      - {target: "Gold import bill / CAD", direction: up, probability: Medium, horizon: "months", rationale: "costlier gold imports widen the deficit"}
+    watch_next:
+      - "US real yields and the dollar (gold's main drivers)"
+      - "Festival/wedding season demand in India"
+
+  # ------------------------- CHINA ---------------------------
+  - id: china_stimulus
+    name: "China announces major stimulus"
+    category: geopolitics_macro
+    triggers: ["china stimulus", "pboc cuts", "beijing stimulus", "china property support", "china spending"]
+    chain:
+      - "China rolls out big stimulus to revive its economy"
+      - "Expectations of stronger Chinese demand lift industrial metals and commodities"
+      - "Global commodity producers, including Indian metal makers, benefit"
+    impacts:
+      - {target: "Metals (Tata Steel, Hindalco, Vedanta, JSW)", direction: up, probability: Medium, horizon: "days-weeks", rationale: "metal prices track China demand"}
+      - {target: "Global crude/commodities", direction: up, probability: Medium, horizon: "weeks", rationale: "China is the marginal buyer"}
+    watch_next:
+      - "Whether stimulus is actually spent (follow-through)"
+      - "Chinese steel exports undercutting Indian prices"
+
+  - id: china_slowdown
+    name: "China growth slows / property stress deepens"
+    category: geopolitics_macro
+    triggers: ["china slowdown", "china property", "evergrande", "china deflation", "weak china data"]
+    chain:
+      - "China's economy weakens; demand for raw materials cools"
+      - "Industrial metal prices soften globally"
+      - "Cheap Chinese exports can flood other markets"
+    impacts:
+      - {target: "Metals (Tata Steel, Hindalco, JSW)", direction: down, probability: Medium, horizon: "weeks", rationale: "weaker metal prices + Chinese dumping"}
+      - {target: "Global crude", direction: down, probability: Low, horizon: "weeks", rationale: "softer demand"}
+    watch_next:
+      - "Anti-dumping duties from India to protect domestic metals"
+
+  # ------------------------- GEOPOLITICS ---------------------------
+  - id: mideast_escalation
+    name: "Middle-East conflict escalates"
+    category: geopolitics
+    triggers: ["middle east", "israel", "iran", "gaza", "strait of hormuz", "houthi", "gulf tension", "war escalation"]
+    chain:
+      - "Conflict risk rises in a key oil-producing region"
+      - "Oil and gold jump on supply-shock and safe-haven fears"
+      - "For oil-importing India this means costlier crude, weaker rupee, higher inflation"
+    impacts:
+      - {target: "Crude oil", direction: up, probability: Medium, horizon: "days", rationale: "supply-disruption premium"}
+      - {target: "Gold", direction: up, probability: Medium, horizon: "days", rationale: "safe-haven bid"}
+      - {target: "INR (rupee)", direction: down, probability: Medium, horizon: "days-weeks", rationale: "oil import cost + risk-off"}
+      - {target: "Aviation, Paints, OMCs", direction: down, probability: Medium, horizon: "weeks", rationale: "fuel/input cost pressure"}
+    watch_next:
+      - "Whether shipping routes (Strait of Hormuz, Red Sea) are actually disrupted"
+      - "Brent crude above key levels ($90+)"
+
+  - id: red_sea_shipping
+    name: "Red Sea / shipping-lane disruption"
+    category: geopolitics
+    triggers: ["red sea", "suez", "shipping disruption", "freight rates", "container", "houthi attacks"]
+    chain:
+      - "Attacks or blockages force ships onto longer routes"
+      - "Freight rates and shipping times jump globally"
+      - "Import/export costs rise; supply chains stretch"
+    impacts:
+      - {target: "Exporters & importers (margins)", direction: down, probability: Medium, horizon: "weeks", rationale: "higher freight and delays"}
+      - {target: "Shipping/logistics firms", direction: up, probability: Low, horizon: "weeks", rationale: "higher freight rates can lift some carriers"}
+      - {target: "Imported-goods inflation", direction: up, probability: Low, horizon: "weeks-months", rationale: "costlier logistics"}
+    watch_next:
+      - "Container freight rate indices (Drewry/Baltic)"
+
+  - id: us_tariffs_tradewar
+    name: "US imposes new tariffs / trade-war escalation"
+    category: trade
+    triggers: ["tariff", "trade war", "import duty", "section 301", "protectionism", "trade barrier"]
+    chain:
+      - "The US (or a big economy) raises tariffs on imports"
+      - "Global trade tensions rise; supply chains reshuffle"
+      - "Some Indian exporters lose access; others gain as buyers diversify away from China ('China+1')"
+    impacts:
+      - {target: "Export-heavy sectors (pharma, textiles, autos parts)", direction: down, probability: Low, horizon: "weeks-months", rationale: "depends who is targeted"}
+      - {target: "'China+1' beneficiaries (electronics, chemicals)", direction: up, probability: Low, horizon: "months", rationale: "orders shift to India"}
+      - {target: "Market volatility", direction: up, probability: Medium, horizon: "days", rationale: "uncertainty"}
+    watch_next:
+      - "Whether India is exempted or targeted specifically"
+
+  - id: semiconductor_curbs
+    name: "Semiconductor / tech export curbs"
+    category: trade
+    triggers: ["semiconductor", "chip ban", "export controls", "chip curbs", "asml", "nvidia export"]
+    chain:
+      - "Major economies restrict advanced chip/tech exports"
+      - "Global tech supply chains tighten; chip availability and prices shift"
+      - "India's electronics manufacturing and 'Make in India' plans are affected both ways"
+    impacts:
+      - {target: "Electronics manufacturing (Dixon, Kaynes)", direction: up, probability: Low, horizon: "months", rationale: "supply-chain diversification into India"}
+      - {target: "Global tech sentiment", direction: down, probability: Low, horizon: "days", rationale: "uncertainty for chip-dependent firms"}
+    watch_next:
+      - "India's semiconductor incentive (PLI) announcements"
+
+  - id: russia_sanctions
+    name: "New sanctions on Russia / oil price caps"
+    category: geopolitics
+    triggers: ["russia sanctions", "oil price cap", "russian crude", "g7 sanctions"]
+    chain:
+      - "Fresh sanctions target Russian oil/trade"
+      - "Discounted Russian crude flows shift; India has been a big buyer of cheap Russian oil"
+      - "If discounts shrink, India's oil import savings fade"
+    impacts:
+      - {target: "India oil import bill", direction: up, probability: Low, horizon: "weeks-months", rationale: "smaller Russian discount raises average import cost"}
+      - {target: "Refiners (Reliance, oil PSUs)", direction: down, probability: Low, horizon: "weeks", rationale: "narrower discount margins"}
+    watch_next:
+      - "The Russian crude discount vs Brent"
+
+  # ------------------------- CURRENCY & RATES ---------------------------
+  - id: dollar_index_up
+    name: "US dollar index (DXY) strengthens broadly"
+    category: currency
+    triggers: ["dollar index", "dxy", "dollar strengthens", "strong dollar", "greenback"]
+    chain:
+      - "The dollar strengthens against major currencies"
+      - "Emerging-market currencies, including the rupee, tend to weaken"
+      - "Importers pay more; foreign investors get cautious"
+    impacts:
+      - {target: "INR (rupee)", direction: down, probability: High, horizon: "days-weeks", rationale: "broad dollar strength"}
+      - {target: "Import-heavy sectors", direction: down, probability: Medium, horizon: "weeks", rationale: "costlier dollar inputs"}
+      - {target: "IT & Pharma exporters", direction: up, probability: Medium, horizon: "weeks", rationale: "weak rupee boosts export earnings"}
+    watch_next:
+      - "RBI intervention to defend the rupee (forex reserves)"
+
+  - id: us_yields_up
+    name: "US 10-year Treasury yield jumps"
+    category: currency
+    triggers: ["treasury yield", "bond yield", "10-year yield", "yields rise", "bond selloff"]
+    chain:
+      - "US long-term bond yields rise"
+      - "Global borrowing costs and the 'risk-free' benchmark go up"
+      - "Money rotates toward US bonds; emerging-market equities look less attractive"
+    impacts:
+      - {target: "Nifty 50", direction: down, probability: Medium, horizon: "days", rationale: "higher discount rate on equities, FII outflows"}
+      - {target: "Gold", direction: down, probability: Medium, horizon: "days", rationale: "higher yields compete with gold"}
+      - {target: "High-valuation growth stocks", direction: down, probability: Medium, horizon: "days-weeks", rationale: "most sensitive to discount rates"}
+    watch_next:
+      - "Whether the yield move is about growth or inflation"
+
+  # ------------------------- INDIA DOMESTIC ---------------------------
+  - id: rbi_rate_hike
+    name: "RBI raises interest rates / turns hawkish"
+    category: monetary_policy
+    triggers: ["rbi hikes", "rbi rate", "repo rate hike", "mpc hawkish", "rbi tightens"]
+    chain:
+      - "RBI raises the repo rate or signals tightening"
+      - "Loans (home, auto, business) get costlier; banks' margins can improve"
+      - "Rate-sensitive demand cools; the rupee can find some support"
+    impacts:
+      - {target: "Banks (HDFC, ICICI, SBI)", direction: up, probability: Low, horizon: "weeks", rationale: "better net interest margins in the short run"}
+      - {target: "Realty, Autos, NBFCs", direction: down, probability: Medium, horizon: "weeks", rationale: "higher EMIs dent demand"}
+      - {target: "INR (rupee)", direction: up, probability: Low, horizon: "weeks", rationale: "higher rates can attract flows"}
+    watch_next:
+      - "RBI's inflation forecast and stance (accommodative vs neutral)"
+
+  - id: rbi_rate_cut
+    name: "RBI cuts interest rates / turns dovish"
+    category: monetary_policy
+    triggers: ["rbi cuts", "repo rate cut", "mpc dovish", "rbi eases", "rate cut india"]
+    chain:
+      - "RBI cuts the repo rate or signals easing"
+      - "Loans get cheaper; demand for homes, autos and credit picks up"
+      - "Rate-sensitive sectors and broader markets get a boost"
+    impacts:
+      - {target: "Realty, Autos, NBFCs", direction: up, probability: Medium, horizon: "weeks", rationale: "cheaper credit revives demand"}
+      - {target: "Nifty 50", direction: up, probability: Low, horizon: "weeks", rationale: "lower rates support valuations"}
+      - {target: "Banks (margins)", direction: down, probability: Low, horizon: "weeks", rationale: "lending rates reset lower"}
+    watch_next:
+      - "Whether inflation stays within RBI's comfort band"
+
+  - id: india_cpi_high
+    name: "India's own inflation (CPI) runs hot"
+    category: macro_data
+    triggers: ["india cpi", "india inflation", "food inflation", "vegetable prices", "retail inflation india"]
+    chain:
+      - "Indian retail inflation prints above the RBI's comfort zone (often food-led)"
+      - "RBI is pushed to keep rates high for longer"
+      - "Household budgets tighten; rate-sensitive demand stays subdued"
+    impacts:
+      - {target: "Rate-sensitives (Realty, Autos, NBFCs)", direction: down, probability: Medium, horizon: "weeks", rationale: "no rate relief in sight"}
+      - {target: "FMCG (staples)", direction: down, probability: Low, horizon: "weeks", rationale: "margin pressure + demand hit if prices rise"}
+      - {target: "Bonds (yields)", direction: up, probability: Medium, horizon: "days", rationale: "higher-for-longer rate expectations"}
+    watch_next:
+      - "Monsoon progress and vegetable/pulse prices"
+      - "RBI MPC commentary"
+
+  - id: monsoon_deficit
+    name: "Weak / delayed monsoon in India"
+    category: macro_data
+    triggers: ["monsoon deficit", "weak monsoon", "el nino", "rainfall shortfall", "drought india", "poor rains"]
+    chain:
+      - "Monsoon rains are below normal or delayed"
+      - "Kharif crop output risk rises; food prices can climb"
+      - "Rural incomes and demand weaken; food inflation pressures the RBI"
+    impacts:
+      - {target: "Food/CPI inflation", direction: up, probability: Medium, horizon: "months", rationale: "lower crop supply"}
+      - {target: "Rural-demand plays (tractors, 2-wheelers, FMCG)", direction: down, probability: Medium, horizon: "months", rationale: "weaker farm incomes"}
+      - {target: "Fertilizer/agri-input demand", direction: down, probability: Low, horizon: "months", rationale: "less sowing"}
+    watch_next:
+      - "IMD rainfall updates and reservoir levels"
+      - "Government MSP and food-buffer actions"
+
+  - id: govt_capex_reform
+    name: "Big India government capex / reform push"
+    category: policy
+    triggers: ["budget capex", "infrastructure push", "pli scheme", "government spending india", "reform announcement"]
+    chain:
+      - "Government ramps up infrastructure spending or a big reform/PLI scheme"
+      - "Order books swell for infra, capital-goods and beneficiary sectors"
+    impacts:
+      - {target: "Infra, Capital goods (L&T), Cement, Railways", direction: up, probability: Medium, horizon: "months", rationale: "order inflows and demand"}
+      - {target: "PLI-beneficiary sectors", direction: up, probability: Low, horizon: "months", rationale: "incentive-driven investment"}
+    watch_next:
+      - "Actual execution vs announcement (fiscal deficit trade-off)"

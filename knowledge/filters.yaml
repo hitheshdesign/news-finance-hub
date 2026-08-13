@@ -1,0 +1,79 @@
+# =============================================================================
+# FILTERS — the "ground rules" that keep the brief focused and noise-free.
+# Tune these numbers to make the brief stricter (fewer, higher-signal items)
+# or looser (more items). No coding needed — just change the values.
+# =============================================================================
+
+# An item must score at least this to survive. Higher = stricter.
+min_relevance_score: 2.0
+
+# Maximum number of events in a daily brief (after ranking).
+max_events_per_brief: 8
+
+# How many go in the "Top — what matters most" highlight band.
+top_highlights: 3
+
+# Words that, if present, ADD to relevance (these touch India-transmission
+# channels). Weighted: strong signals score higher.
+relevance_keywords:
+  strong:   # +2.0 each (core macro drivers)
+    - fed
+    - federal reserve
+    - interest rate
+    - rate hike
+    - rate cut
+    - inflation
+    - cpi
+    - crude
+    - oil price
+    - brent
+    - gold
+    - rupee
+    - dollar
+    - rbi
+    - repo rate
+    - tariff
+    - sanctions
+    - yield
+    - opec
+  medium:   # +1.0 each (sectors / linked themes)
+    - metals
+    - steel
+    - semiconductor
+    - china
+    - monsoon
+    - fii
+    - nifty
+    - sensex
+    - bond
+    - gas
+    - shipping
+    - freight
+    - trade war
+    - export
+    - import
+  india_bonus: # +1.0 extra if any appear (direct India relevance)
+    - india
+    - indian
+    - rupee
+    - rbi
+    - nifty
+    - sensex
+    - mumbai
+    - sebi
+
+# Words that mark low-value noise; if present, SUBTRACT from relevance.
+noise_keywords:   # -1.5 each
+    - celebrity
+    - cricket
+    - bollywood
+    - horoscope
+    - lottery
+    - gadget review
+    - recipe
+    - astrology
+    - box office
+
+# Two items are treated as the SAME event if their headlines share at least
+# this fraction of significant words (simple de-duplication / clustering).
+cluster_similarity: 0.45

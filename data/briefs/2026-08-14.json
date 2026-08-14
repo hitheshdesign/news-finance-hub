@@ -1,0 +1,332 @@
+{
+  "date": "2026-08-14",
+  "date_human": "Friday, 14 August 2026",
+  "generated_at": "2026-08-14T14:17:15+00:00",
+  "engine": "Gemini AI",
+  "macro": [],
+  "events": [
+    {
+      "headline": "Fed signals higher-for-longer as Powell strikes hawkish tone on inflation",
+      "relevance": 10.0,
+      "items": [
+        {
+          "title": "Fed signals higher-for-longer as Powell strikes hawkish tone on inflation",
+          "url": "https://example.com/fed-hawkish",
+          "source": "Reuters Markets",
+          "published": "2026-08-13T08:00:00Z",
+          "summary": "Federal Reserve officials pushed back on rate cut expectations, saying interest rates may need to stay elevated as inflation proves sticky.",
+          "region": "global",
+          "origin": "sample",
+          "relevance": 10.0
+        }
+      ],
+      "sources": [
+        "Reuters Markets"
+      ],
+      "urls": [
+        "https://example.com/fed-hawkish"
+      ],
+      "item_count": 1,
+      "coverage_boost": 0.0,
+      "id": "4729d34f01",
+      "analysis": {
+        "tldr": "When the US central bank keeps interest rates high, global money rushes back to America, which can make Indian stocks dip and our rupee weaker.",
+        "what_happened": "The US Federal Reserve (America's central money manager) announced it will likely keep its borrowing costs high for a longer time because price rises in America are proving stubborn.",
+        "why_it_matters_india": [
+          "America keeps its interest rates high to fight price rises there.",
+          "Global investors can now earn safe returns sitting in America without taking risks in developing countries.",
+          "FIIs (big foreign investors) pull their money out of Indian stock markets to send it back to the US.",
+          "As dollars leave India, the rupee weakens (each rupee buys fewer dollars) and our local stock market faces selling pressure."
+        ],
+        "impacts": [
+          {
+            "target": "The rupee",
+            "direction": "down",
+            "probability": "High",
+            "horizon": "weeks",
+            "rationale": "dollars become scarcer in India as foreign investors take their money back to America"
+          },
+          {
+            "target": "Nifty 50 (India's top 50 companies index)",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "big foreign investors selling their shares puts downward pressure on local stock prices"
+          },
+          {
+            "target": "Gold",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "days",
+            "rationale": "a stronger US dollar often makes gold look less attractive globally for a short while"
+          },
+          {
+            "target": "TCS / Infosys (IT firms)",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "months",
+            "rationale": "these tech companies earn in US dollars, which turn into more rupees when the rupee weakens"
+          }
+        ],
+        "watch_next": [
+          "Watch what foreign investors do with their money in Indian shares over the next few weeks",
+          "Keep an eye on the exchange rate between the Indian rupee and the US dollar"
+        ],
+        "confidence": "High",
+        "caveats": "If upcoming US inflation data suddenly shows prices cooling faster than expected, the US central bank might change its mind quickly.",
+        "engine": "gemini",
+        "category": "monetary_policy",
+        "matched_linkage": "fed_hawkish"
+      },
+      "category": "monetary_policy",
+      "importance": 11.6,
+      "is_top": true
+    },
+    {
+      "headline": "India CPI inflation jumps on surging vegetable prices, dimming rate cut hopes",
+      "relevance": 9.5,
+      "items": [
+        {
+          "title": "India CPI inflation jumps on surging vegetable prices, dimming rate cut hopes",
+          "url": "https://example.com/india-cpi",
+          "source": "Business Standard Markets",
+          "published": "2026-08-13T02:10:00Z",
+          "summary": "Retail inflation in India rose sharply as food inflation spiked, pressuring the RBI to hold rates.",
+          "region": "india",
+          "origin": "sample",
+          "relevance": 9.5
+        }
+      ],
+      "sources": [
+        "Business Standard Markets"
+      ],
+      "urls": [
+        "https://example.com/india-cpi"
+      ],
+      "item_count": 1,
+      "coverage_boost": 0.0,
+      "id": "be53fe92b5",
+      "analysis": {
+        "tldr": "When everyday food prices jump in India, it makes things harder for families and delays cheaper bank loans.",
+        "what_happened": "India's retail inflation (CPI, which tracks the price of everyday household goods and groceries) has jumped higher than expected, mainly because vegetable prices are surging. This makes it less likely that the Reserve Bank of India (RBI, the country's central bank that controls interest rates) will lower borrowing costs soon.",
+        "why_why_it_matters_india": [
+          "Vegetable and food prices rise across local markets, pinching household monthly grocery budgets.",
+          "Higher inflation forces the RBI to keep interest rates high to cool down price rises.",
+          "Because rates stay high, loans for homes, cars, and businesses do not get cheaper anytime soon.",
+          "Slower consumer spending can hurt retail and real estate companies."
+        ],
+        "impacts": [
+          {
+            "target": "Home and car loan EMIs (monthly payments)",
+            "direction": "up",
+            "probability": "High",
+            "horizon": "months",
+            "rationale": "banks will likely keep loan interest rates steady or high since the central bank isn't cutting rates."
+          },
+          {
+            "target": "FMCG firms (companies selling daily packaged foods like Hindustan Unilever or ITC)",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "expensive vegetables leave families with less money to spend on extra packaged goods."
+          },
+          {
+            "target": "Gold",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "months",
+            "rationale": "Indians often buy gold as a safe backup when the cost of living goes up."
+          },
+          {
+            "target": "Rate-sensitive stocks (banks and real estate firms like SBI or DLF)",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "delayed interest rate cuts mean fewer people rushing to buy homes or take new bank loans."
+          }
+        ],
+        "watch_next": [
+          "Next month's vegetable and food price data in local markets",
+          "Official statements from RBI leaders about future interest rate decisions"
+        ],
+        "confidence": "High",
+        "caveats": "If good monsoon rains suddenly bring a massive harvest, vegetable prices could drop quickly and change the picture.",
+        "engine": "gemini",
+        "category": "macro_data",
+        "matched_linkage": "india_cpi_high",
+        "why_it_matters_india": []
+      },
+      "category": "macro_data",
+      "importance": 11.1,
+      "is_top": true
+    },
+    {
+      "headline": "Brent crude surges past $90 as OPEC extends supply cuts amid Middle East tension",
+      "relevance": 8.0,
+      "items": [
+        {
+          "title": "Brent crude surges past $90 as OPEC extends supply cuts amid Middle East tension",
+          "url": "https://example.com/oil-surge",
+          "source": "Investing.com Commodities",
+          "published": "2026-08-13T07:30:00Z",
+          "summary": "Oil prices jumped after OPEC+ signalled deeper production cuts, with a crude oil rally driven by supply worries.",
+          "region": "global",
+          "origin": "sample",
+          "relevance": 8.0
+        }
+      ],
+      "sources": [
+        "Investing.com Commodities"
+      ],
+      "urls": [
+        "https://example.com/oil-surge"
+      ],
+      "item_count": 1,
+      "coverage_boost": 0.0,
+      "id": "727ad09bf1",
+      "analysis": {
+        "tldr": "When global oil prices jump, India has to spend a lot more money to buy fuel from abroad, which affects our everyday costs and the Indian rupee.",
+        "what_happened": "Global oil prices crossed $90 a barrel because major oil-producing countries decided to keep producing less oil, while tensions in the Middle East made people worry about future supplies.",
+        "why_it_matters_india": [
+          "India imports about 85% of the crude oil it uses to run cars, factories, and power generators.",
+          "When oil prices go up, India's total import bill balloons (the country has to pay much more total money to buy the same amount of oil).",
+          "This creates a bigger CAD [the gap between what India earns from exports and pays for imports], which makes the rupee weaken (each rupee buys fewer dollars).",
+          "Costlier oil leads to higher fuel and transport prices inside India, pushing up overall inflation (the general rise in prices of everyday goods)."
+        ],
+        "impacts": [
+          {
+            "target": "The rupee",
+            "direction": "down",
+            "probability": "High",
+            "horizon": "weeks",
+            "rationale": "India needs more dollars to pay for costlier oil imports."
+          },
+          {
+            "target": "Gold",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "days",
+            "rationale": "Investors run to gold as a safe-haven asset when global tensions rise."
+          },
+          {
+            "target": "Oil marketing companies like BPCL and IOC",
+            "direction": "down",
+            "probability": "High",
+            "horizon": "weeks",
+            "rationale": "Higher raw oil purchase costs squeeze their profit margins if they cannot raise pump prices."
+          },
+          {
+            "target": "Paint and tyre companies like Asian Paints and MRF",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "months",
+            "rationale": "Crude oil is a main raw material for making paints and rubber tyres."
+          },
+          {
+            "target": "Nifty 50 (the main stock market index of top 50 Indian companies)",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "Overall market sentiment gets hurt when inflation and import costs rise."
+          }
+        ],
+        "watch_next": [
+          "Whether Middle East tensions actually disrupt physical oil shipments or just scare the markets",
+          "If the Indian government steps in to cut taxes on petrol and diesel"
+        ],
+        "confidence": "High",
+        "caveats": "If global economic growth slows down suddenly, demand for oil might drop and pull prices back down on its own.",
+        "engine": "gemini",
+        "category": "commodities",
+        "matched_linkage": "crude_oil_up"
+      },
+      "category": "commodities",
+      "importance": 9.6,
+      "is_top": true
+    },
+    {
+      "headline": "Rupee slips to record low against dollar as FII outflows accelerate",
+      "relevance": 6.5,
+      "items": [
+        {
+          "title": "Rupee slips to record low against dollar as FII outflows accelerate",
+          "url": "https://example.com/rupee-low",
+          "source": "Economic Times Markets",
+          "published": "2026-08-13T04:30:00Z",
+          "summary": "The Indian rupee weakened past a key level as foreign investors pulled money from Indian equities.",
+          "region": "india",
+          "origin": "sample",
+          "relevance": 6.5
+        }
+      ],
+      "sources": [
+        "Economic Times Markets"
+      ],
+      "urls": [
+        "https://example.com/rupee-low"
+      ],
+      "item_count": 1,
+      "coverage_boost": 0.0,
+      "id": "e1745c02a1",
+      "analysis": {
+        "tldr": "When big foreign investors pull their money out of India, our currency gets weaker, which can make imported goods like oil more expensive for us.",
+        "what_happened": "Foreign Institutional Investors (big money managers from other countries who invest in India) are taking their cash out of the Indian stock market and selling rupees to buy US dollars instead. This has pushed the rupee (India's money) down to its lowest value ever compared to the dollar.",
+        "why_it_matters_india": [
+          "Foreign investors sell Indian stocks and demand US dollars, creating a shortage of rupees.",
+          "Because more people want dollars than rupees, the price of the dollar goes up and the rupee sinks.",
+          "A weaker rupee (each rupee buys fewer dollars) makes buying things from other countries much costlier.",
+          "India has to pay more rupees for the oil and electronics it imports, which can push up daily prices for everyone."
+        ],
+        "impacts": [
+          {
+            "target": "The rupee (India's currency)",
+            "direction": "down",
+            "probability": "High",
+            "horizon": "days",
+            "rationale": "heavy selling by foreign funds naturally pushes its value down against the dollar"
+          },
+          {
+            "target": "Crude oil imports",
+            "direction": "up",
+            "probability": "High",
+            "horizon": "weeks",
+            "rationale": "weaker currency means India must pay more rupees to buy the same barrel of oil"
+          },
+          {
+            "target": "IT firms like TCS and Infosys",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "they earn in dollars from foreign clients, so their overseas earnings look bigger when converted to weak rupees"
+          },
+          {
+            "target": "Gold prices in India",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "days",
+            "rationale": "India imports most of its gold, and a weak rupee makes importing it more expensive"
+          },
+          {
+            "target": "Overall Indian stock market (Nifty 50)",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "when big foreign investors pull money out, share prices often drop due to lower demand"
+          }
+        ],
+        "watch_next": [
+          "Check if the Reserve Bank of India (our central bank that manages the country's money) steps in to sell dollars and defend the rupee",
+          "Watch daily reports on whether foreign investors are still selling Indian shares"
+        ],
+        "confidence": "High",
+        "caveats": "If global markets suddenly improve, foreign investors could stop pulling money out and start buying Indian shares again.",
+        "engine": "gemini",
+        "category": "general",
+        "matched_linkage": null
+      },
+      "category": "general",
+      "importance": 8.1,
+      "is_top": false
+    }
+  ]
+}

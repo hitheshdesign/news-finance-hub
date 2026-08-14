@@ -24,10 +24,19 @@ from analyze.knowledge_match import match_linkages
 # --------------------------------------------------------------------------
 # RULE-BASED backend (no key needed)
 # --------------------------------------------------------------------------
+def _rule_tldr(link: dict, impacts: list[dict]) -> str:
+    """Build a one-line plain-English takeaway from the matched linkage."""
+    if impacts:
+        movers = ", ".join(i["target"] for i in impacts[:2])
+        return f"{link.get('name', 'This event')} — likely to move {movers}."
+    return link.get("name", "A market-relevant development to be aware of.")
+
+
 def _rule_based(event: dict) -> dict:
     links = match_linkages(event, top_n=1)
     if not links:
         return {
+            "tldr": "Flagged as market-relevant, but no clear India link yet.",
             "what_happened": event.get("headline", ""),
             "why_it_matters_india": [
                 "This story was flagged as market-relevant, but it doesn't match a "
@@ -45,10 +54,12 @@ def _rule_based(event: dict) -> dict:
         }
 
     link = links[0]
+    impacts = [dict(i) for i in link.get("impacts", [])]
     return {
+        "tldr": _rule_tldr(link, impacts),
         "what_happened": event.get("headline", ""),
         "why_it_matters_india": list(link.get("chain", [])),
-        "impacts": [dict(i) for i in link.get("impacts", [])],
+        "impacts": impacts,
         "watch_next": list(link.get("watch_next", [])),
         "confidence": "Medium",
         "caveats": (
@@ -64,25 +75,37 @@ def _rule_based(event: dict) -> dict:
 # --------------------------------------------------------------------------
 # GEMINI backend (free tier)
 # --------------------------------------------------------------------------
-_SYSTEM = """You are a markets educator who explains, for a BEGINNER Indian investor,
-how a global news event could ripple through to India (inflation, the rupee,
-sectors, specific stocks, gold). You explain MECHANISMS and TENDENCIES with rough
-probabilities — you NEVER give buy/sell advice or price targets.
+_SYSTEM = """You explain world news to a COMPLETE BEGINNER Indian investor who knows
+almost no finance jargon. Your job: show how one global event could ripple through
+to India (inflation, the rupee, sectors, specific stocks, gold). You explain HOW and
+WHY with rough probabilities. You NEVER give buy/sell advice or price targets.
+
+WRITING RULES (very important):
+- Write like you're explaining to a smart friend with zero finance background.
+- Use short, everyday sentences. Prefer common words over technical ones.
+- The FIRST time you must use a technical term or acronym, immediately explain it in
+  plain words in brackets. E.g. "the rupee weakens (each rupee buys fewer dollars)",
+  "FIIs (big foreign investors)", "CAD (the gap between what India imports and exports)".
+- Never assume the reader knows what a term means. No unexplained acronyms.
+- Be concrete and India-specific. Name real sectors/companies where relevant.
 
 Return ONLY valid JSON (no markdown fences) with exactly this shape:
 {
-  "what_happened": "2-3 plain sentences a beginner understands",
-  "why_it_matters_india": ["step 1 of the chain", "step 2", "step 3", "step 4"],
+  "tldr": "ONE punchy plain-English sentence: the single biggest takeaway a beginner should remember",
+  "what_happened": "2-3 very plain sentences explaining the news itself",
+  "why_it_matters_india": ["step 1 in plain words", "step 2", "step 3", "step 4"],
   "impacts": [
-    {"target": "e.g. INR (rupee)", "direction": "up|down",
+    {"target": "e.g. The rupee, Gold, Nifty 50, TCS/Infosys (IT firms)",
+     "direction": "up|down",
      "probability": "High|Medium|Low", "horizon": "hours|days|weeks|months",
-     "rationale": "one short clause"}
+     "rationale": "one short plain-English clause on why"}
   ],
-  "watch_next": ["a leading indicator or upcoming event to track", "..."],
+  "watch_next": ["a simple thing to keep an eye on next", "..."],
   "confidence": "High|Medium|Low",
-  "caveats": "one sentence on where this chain could break"
+  "caveats": "one plain sentence on where this could go differently"
 }
-Keep it concise, concrete, and India-specific. 3-6 impacts is ideal."""
+Keep each piece short. 3-6 impacts is ideal. Everything must be understandable by
+someone reading about markets for the very first time."""
 
 
 def _gemini(event: dict) -> dict | None:
@@ -155,6 +178,7 @@ def _gemini(event: dict) -> dict | None:
     parsed.setdefault("why_it_matters_india", [])
     parsed.setdefault("confidence", "Medium")
     parsed.setdefault("caveats", "")
+    parsed.setdefault("tldr", "")
     return parsed
 
 

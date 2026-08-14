@@ -3,7 +3,12 @@ name: Daily India Impact Brief
 # WHEN it runs:
 on:
   schedule:
-    - cron: "0 1 * * *"      # 01:00 UTC = 06:30 AM IST, every day
+    # 01:30 UTC = 07:00 AM IST. Best single slot for an Indian investor: it
+    # captures the FULL overnight global cycle — the US market close, any US
+    # data/Fed news from the prior US session, and Asia's open — and lands
+    # BEFORE India's market opens at 09:15 IST, so you're briefed pre-market.
+    # (GitHub's free scheduler is best-effort and may run up to a few hours late.)
+    - cron: "30 1 * * *"
   workflow_dispatch: {}       # ...and a "Run" button you can press any time
 
 # What the job is allowed to do (commit results + publish the web page).

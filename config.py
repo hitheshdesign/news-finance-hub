@@ -35,6 +35,7 @@ def _load_yaml(name: str) -> dict:
 TRANSMISSION = _load_yaml("transmission_map.yaml").get("linkages", [])
 SOURCES = _load_yaml("sources.yaml")
 FILTERS = _load_yaml("filters.yaml")
+GLOSSARY = _load_yaml("glossary.yaml").get("terms", {})
 
 # --- Secrets / keys (all optional; missing keys just disable that feature) ---
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip()

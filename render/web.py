@@ -13,10 +13,24 @@ from markupsafe import Markup
 
 import config
 from render import templates
+from render.glossary import annotate
+
+
+def _dots(level: str) -> Markup:
+    """Render a 3-dot likelihood/confidence meter for High/Medium/Low."""
+    filled = {"high": 3, "medium": 2, "low": 1}.get(str(level).lower(), 0)
+    pips = "".join(
+        f'<i class="{"on" if i < filled else ""}"></i>' for i in range(3)
+    )
+    return Markup(f'<span class="dots" aria-hidden="true">{pips}</span>')
 
 
 def _env() -> Environment:
     env = Environment(autoescape=True)
+    # `gloss` = wrap finance jargon with tap-to-define tooltips.
+    # `dots`  = a small visual meter for likelihood/confidence.
+    env.filters["gloss"] = annotate
+    env.filters["dots"] = _dots
     card_tpl = env.from_string(templates.CARD)
     # expose the card as a callable inside the page template.
     # Markup(...) marks the already-rendered (and escaped) card HTML as safe so
@@ -48,7 +62,7 @@ def render_page(brief: dict) -> str:
     brief = dict(brief)
     brief["archive"] = _archive_list(brief["date"])
     page = env.from_string(templates.PAGE)
-    return page.render(brief=brief, css=templates.CSS)
+    return page.render(brief=brief, css=templates.CSS, fonts=templates.FONTS)
 
 
 def write_site(brief: dict) -> Path:

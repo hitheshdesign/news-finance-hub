@@ -1,158 +1,293 @@
 """
-render/templates.py — Jinja2 templates (kept as strings so the project stays
-self-contained). One shared card macro powers both the web page and the email.
+render/templates.py — editorial, beginner-friendly templates (Jinja2 strings so
+the project stays self-contained). One shared card macro powers web + email.
+
+Design language (from the ui-ux-pro-max design system):
+  * Editorial: Newsreader serif headlines + Inter sans body, generous whitespace.
+  * Calm slate palette; green/red used ONLY for direction, never decoration.
+  * Every card leads with a plain-English takeaway; jargon is tap-to-define.
 """
 
-# Shared CSS — theme-aware (respects the reader's light/dark preference).
+FONTS = (
+    "https://fonts.googleapis.com/css2?"
+    "family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&"
+    "family=Inter:wght@400;500;600;700&display=swap"
+)
+
 CSS = """
 :root{
-  --bg:#f6f7f9; --panel:#ffffff; --ink:#12151a; --muted:#5b6472;
-  --line:#e6e8ec; --accent:#1a56db; --up:#0b8a3d; --down:#c0281c;
-  --chip:#eef2ff; --chipink:#1a56db; --topbg:#fff8e6; --topline:#f2d98a;
+  --font-serif:'Newsreader',Georgia,'Times New Roman',serif;
+  --font-sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  --bg:#f7f6f3; --panel:#ffffff; --panel2:#faf9f7;
+  --ink:#141a24; --ink2:#3b4453; --muted:#6b7482; --faint:#98a1af;
+  --line:#e7e4de; --line2:#efece6;
+  --brand:#0f172a; --link:#1f5fd6;
+  --up:#15803d; --up-bg:#e9f6ee; --down:#c02626; --down-bg:#fbebe9;
+  --tip-bg:#1c2430; --tip-ink:#f2f5f9;
+  --top-bg:#fbf7ec; --top-line:#ecdcae;
 }
-@media (prefers-color-scheme: dark){
+@media (prefers-color-scheme:dark){
   :root{
-    --bg:#0e1116; --panel:#161b22; --ink:#e6edf3; --muted:#9aa4b2;
-    --line:#232a33; --accent:#58a6ff; --up:#3fb950; --down:#f85149;
-    --chip:#1b2537; --chipink:#79b8ff; --topbg:#20211a; --topline:#5a5320;
+    --bg:#0b0e14; --panel:#141a22; --panel2:#111721;
+    --ink:#e8edf3; --ink2:#c3ccd8; --muted:#93a0af; --faint:#6b7788;
+    --line:#232c38; --line2:#1c2430;
+    --brand:#e8edf3; --link:#6ea8fe;
+    --up:#42c17d; --up-bg:#12271c; --down:#f2726f; --down-bg:#2a1514;
+    --tip-bg:#e9edf2; --tip-ink:#10151d;
+    --top-bg:#1c1a12; --top-line:#4a4022;
   }
 }
 *{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;overflow-x:hidden;}
 body{margin:0;background:var(--bg);color:var(--ink);
-  font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
-.wrap{max-width:820px;margin:0 auto;padding:24px 18px 64px;}
-header.top{padding:8px 0 20px;border-bottom:1px solid var(--line);margin-bottom:24px;}
-h1{font-size:24px;margin:0 0 4px;letter-spacing:-.3px;}
-.sub{color:var(--muted);font-size:14px;}
-.macro{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+  font-family:var(--font-sans);font-size:17px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;}
+.wrap{max-width:720px;margin:0 auto;padding:28px 20px 72px;}
+
+/* ---------- Masthead ---------- */
+.mast{padding-bottom:20px;border-bottom:2px solid var(--ink);margin-bottom:8px;}
+.kicker{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:8px;}
+.mast h1{font-family:var(--font-serif);font-weight:700;letter-spacing:-.02em;
+  font-size:clamp(30px,7vw,44px);line-height:1.05;margin:0 0 10px;color:var(--ink);}
+.mast .date{font-size:15px;color:var(--ink2);}
+.mast .date b{color:var(--ink);}
+.mast .engine{color:var(--muted);}
+
+/* ---------- Reading guide ---------- */
+.guide{margin:18px 0 4px;padding:12px 15px;background:var(--panel2);
+  border:1px solid var(--line);border-radius:12px;font-size:13.5px;color:var(--ink2);}
+.guide b{color:var(--ink);}
+.guide .flow{color:var(--muted);}
+
+/* ---------- Macro strip ---------- */
+.macro{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;}
 .macro .m{background:var(--panel);border:1px solid var(--line);border-radius:10px;
-  padding:8px 11px;font-size:13px;color:var(--muted);}
-.macro .m b{color:var(--ink);}
-.arrow-up{color:var(--up);font-weight:600;}
-.arrow-down{color:var(--down);font-weight:600;}
-.sectionlabel{font-size:12px;text-transform:uppercase;letter-spacing:.08em;
-  color:var(--muted);margin:26px 0 12px;font-weight:600;}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;
-  padding:18px 18px 14px;margin:0 0 16px;box-shadow:0 1px 2px rgba(0,0,0,.03);}
-.card.top{background:var(--topbg);border-color:var(--topline);}
-.card h2{font-size:18px;margin:0 0 8px;line-height:1.35;}
-.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;}
-.chip{background:var(--chip);color:var(--chipink);border-radius:999px;
-  padding:3px 10px;font-size:12px;font-weight:600;}
-.chip.gray{background:transparent;color:var(--muted);border:1px solid var(--line);}
-.what{margin:0 0 12px;color:var(--ink);}
-.chain{margin:0 0 12px;padding:0;list-style:none;}
-.chain li{position:relative;padding:2px 0 2px 22px;color:var(--ink);font-size:15px;}
-.chain li:before{content:"↓";position:absolute;left:6px;color:var(--muted);}
-.chain li:first-child:before{content:"•";}
-table.impacts{width:100%;border-collapse:collapse;margin:6px 0 12px;font-size:14px;}
-table.impacts th,table.impacts td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top;}
-table.impacts th{color:var(--muted);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.04em;}
-.prob-High{color:var(--down);font-weight:700;}
-.prob-Medium{color:#b8860b;font-weight:600;}
-.prob-Low{color:var(--muted);font-weight:600;}
-.watch{margin:8px 0 4px;padding-left:18px;}
-.watch li{color:var(--ink);font-size:14px;margin:2px 0;}
-.meta{color:var(--muted);font-size:12px;margin-top:10px;display:flex;flex-wrap:wrap;gap:10px;}
-.meta a{color:var(--accent);text-decoration:none;}
-.caveat{color:var(--muted);font-size:13px;font-style:italic;margin-top:8px;}
-footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);
+  padding:7px 11px;font-size:12.5px;color:var(--muted);}
+.macro .m b{color:var(--ink);font-weight:600;}
+
+/* ---------- Section labels ---------- */
+.section{font-family:var(--font-sans);font-size:12.5px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.1em;color:var(--muted);
+  margin:34px 0 14px;display:flex;align-items:center;gap:10px;}
+.section::after{content:"";flex:1;height:1px;background:var(--line);}
+
+/* ---------- Card ---------- */
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;
+  padding:22px 22px 18px;margin:0 0 18px;}
+.card.top{background:linear-gradient(180deg,var(--top-bg),var(--panel));
+  border-color:var(--top-line);}
+.tags{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px;}
+.tag{font-size:11.5px;font-weight:600;letter-spacing:.03em;color:var(--muted);
+  text-transform:uppercase;}
+.tag.dot::before{content:"•";margin-right:8px;color:var(--faint);}
+.badge{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:700;
+  letter-spacing:.04em;text-transform:uppercase;color:#7a5b00;background:#f6e7bd;
+  padding:3px 9px;border-radius:999px;}
+@media (prefers-color-scheme:dark){.badge{color:#ffdf8a;background:#3a3216;}}
+.card h2{font-family:var(--font-serif);font-weight:600;letter-spacing:-.01em;
+  font-size:24px;line-height:1.22;margin:0 0 14px;color:var(--ink);}
+
+/* Plain-English takeaway — the rookie's anchor */
+.tldr{display:flex;gap:11px;align-items:flex-start;background:var(--panel2);
+  border-left:3px solid var(--link);border-radius:0 10px 10px 0;
+  padding:12px 15px;margin:0 0 16px;}
+.tldr .lbl{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--link);white-space:nowrap;padding-top:2px;}
+.tldr p{margin:0;font-size:16.5px;font-weight:500;color:var(--ink);line-height:1.5;}
+
+.blocklabel{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--muted);margin:18px 0 9px;}
+.what{margin:0 0 4px;color:var(--ink2);font-size:16px;}
+
+/* How it reaches India — connected chain */
+.chain{list-style:none;margin:0;padding:0;}
+.chain li{position:relative;padding:0 0 14px 26px;color:var(--ink2);font-size:15.5px;}
+.chain li::before{content:"";position:absolute;left:7px;top:8px;width:8px;height:8px;
+  border-radius:50%;background:var(--link);}
+.chain li::after{content:"";position:absolute;left:10.5px;top:16px;bottom:0;
+  width:1px;background:var(--line);}
+.chain li:last-child{padding-bottom:0;}
+.chain li:last-child::after{display:none;}
+
+/* What could move — impact rows */
+.impacts{display:flex;flex-direction:column;gap:9px;margin-top:4px;}
+.impact{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:baseline;
+  padding:11px 13px;background:var(--panel2);border:1px solid var(--line2);border-radius:11px;}
+.dir{font-size:12.5px;font-weight:700;padding:3px 9px;border-radius:7px;white-space:nowrap;}
+.dir.up{color:var(--up);background:var(--up-bg);}
+.dir.down{color:var(--down);background:var(--down-bg);}
+.impact-body{flex:1 1 220px;min-width:180px;}
+.impact-target{font-weight:600;color:var(--ink);font-size:15.5px;}
+.impact-why{color:var(--muted);font-size:13.5px;margin-top:1px;}
+.impact-side{display:flex;align-items:center;gap:12px;margin-left:auto;}
+.meter{display:inline-flex;align-items:center;gap:8px;}
+.dots{display:inline-flex;gap:3px;}
+.dots i{width:7px;height:7px;border-radius:50%;background:var(--line);display:block;}
+.dots i.on{background:var(--ink2);}
+.meter .lvl{font-size:12px;color:var(--muted);font-weight:600;}
+.when{font-size:12.5px;color:var(--faint);white-space:nowrap;}
+
+/* Watch next */
+.watch{list-style:none;margin:6px 0 0;padding:0;}
+.watch li{position:relative;padding:4px 0 4px 24px;color:var(--ink2);font-size:15px;}
+.watch li::before{content:"→";position:absolute;left:2px;color:var(--link);font-weight:700;}
+
+/* Footer bits */
+.foot{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;
+  margin-top:16px;padding-top:13px;border-top:1px solid var(--line2);
+  font-size:12.5px;color:var(--muted);}
+.foot .conf{display:inline-flex;align-items:center;gap:7px;}
+.foot a{color:var(--link);text-decoration:none;font-weight:600;}
+.foot a:hover{text-decoration:underline;}
+.caveat{color:var(--muted);font-size:13px;font-style:italic;margin-top:11px;
+  padding-left:11px;border-left:2px solid var(--line);}
+
+/* Jargon tooltips */
+.term{border-bottom:1.5px dotted var(--faint);cursor:help;position:relative;
+  color:inherit;outline:none;}
+.term:hover,.term:focus{border-bottom-color:var(--link);}
+.term::after{content:attr(data-def);position:absolute;left:0;top:calc(100% + 8px);
+  width:min(300px,78vw);background:var(--tip-bg);color:var(--tip-ink);
+  font-family:var(--font-sans);font-size:13px;font-weight:400;font-style:normal;
+  line-height:1.45;padding:10px 12px;border-radius:9px;
+  box-shadow:0 8px 24px rgba(0,0,0,.22);z-index:20;
+  opacity:0;visibility:hidden;transform:translateY(-3px);
+  transition:opacity .15s ease,transform .15s ease;pointer-events:none;}
+.term:hover::after,.term:focus::after{opacity:1;visibility:visible;transform:translateY(0);}
+
+/* Disclaimer + footer */
+.disclaimer{background:var(--panel2);border:1px dashed var(--line);border-radius:12px;
+  padding:14px 16px;color:var(--muted);font-size:13px;margin-top:28px;}
+.disclaimer b{color:var(--ink2);}
+.pagefoot{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);
   color:var(--muted);font-size:13px;}
-.archive a{color:var(--accent);text-decoration:none;margin-right:12px;}
-.disclaimer{background:var(--panel);border:1px dashed var(--line);border-radius:10px;
-  padding:12px 14px;color:var(--muted);font-size:13px;margin-top:22px;}
+.archive{margin-bottom:12px;}
+.archive b{color:var(--ink2);}
+.archive a{color:var(--link);text-decoration:none;margin:0 10px 6px 0;
+  display:inline-block;}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media (max-width:520px){
+  body{font-size:16px}
+  .card{padding:18px 16px 15px;border-radius:14px}
+  .impact-side{margin-left:0}
+}
 """
 
-# One event card (used by web + email). Expects `ev` with `ev.analysis`.
+# One event card (used by web + email). `gloss` and `dots` are Jinja filters.
 CARD = """
-<div class="card {{ 'top' if ev.is_top else '' }}">
-  <div class="chips">
-    {% if ev.is_top %}<span class="chip">★ Top signal</span>{% endif %}
-    <span class="chip gray">{{ ev.category|replace('_',' ')|title }}</span>
-    {% if ev.analysis.matched_linkage %}<span class="chip gray">pattern: {{ ev.analysis.matched_linkage }}</span>{% endif %}
-    <span class="chip gray">{{ ev.item_count }} source{{ 's' if ev.item_count>1 else '' }}</span>
+<article class="card {{ 'top' if ev.is_top else '' }}">
+  <div class="tags">
+    {% if ev.is_top %}<span class="badge">★ Top signal</span>{% endif %}
+    <span class="tag">{{ ev.category|replace('_',' ')|title }}</span>
+    <span class="tag dot">{{ ev.item_count }} source{{ 's' if ev.item_count>1 else '' }}</span>
   </div>
+
   <h2>{{ ev.headline }}</h2>
+
+  {% if ev.analysis.tldr %}
+  <div class="tldr">
+    <span class="lbl">In plain English</span>
+    <p>{{ ev.analysis.tldr|gloss }}</p>
+  </div>
+  {% endif %}
+
   {% if ev.analysis.what_happened and ev.analysis.what_happened != ev.headline %}
-    <p class="what">{{ ev.analysis.what_happened }}</p>
+    <p class="what">{{ ev.analysis.what_happened|gloss }}</p>
   {% endif %}
 
   {% if ev.analysis.why_it_matters_india %}
-    <div class="sectionlabel" style="margin:10px 0 6px">How it reaches India</div>
+    <div class="blocklabel">How this reaches India</div>
     <ul class="chain">
-      {% for step in ev.analysis.why_it_matters_india %}<li>{{ step }}</li>{% endfor %}
+      {% for step in ev.analysis.why_it_matters_india %}<li>{{ step|gloss }}</li>{% endfor %}
     </ul>
   {% endif %}
 
   {% if ev.analysis.impacts %}
-    <table class="impacts">
-      <tr><th>What could move</th><th>Dir.</th><th>Odds</th><th>When</th><th>Why</th></tr>
+    <div class="blocklabel">What could move — and how likely</div>
+    <div class="impacts">
       {% for im in ev.analysis.impacts %}
-      <tr>
-        <td>{{ im.target }}</td>
-        <td class="{{ 'arrow-up' if im.direction=='up' else 'arrow-down' }}">{{ '▲' if im.direction=='up' else '▼' }}</td>
-        <td class="prob-{{ im.probability }}">{{ im.probability }}</td>
-        <td>{{ im.horizon }}</td>
-        <td>{{ im.rationale }}</td>
-      </tr>
+      <div class="impact">
+        <span class="dir {{ 'up' if im.direction=='up' else 'down' }}">
+          {{ '▲ Rises' if im.direction=='up' else '▼ Falls' }}</span>
+        <div class="impact-body">
+          <div class="impact-target">{{ im.target }}</div>
+          {% if im.rationale %}<div class="impact-why">{{ im.rationale|gloss }}</div>{% endif %}
+        </div>
+        <div class="impact-side">
+          <span class="meter">{{ im.probability|dots }}<span class="lvl">{{ im.probability }}</span></span>
+          <span class="when">{{ im.horizon }}</span>
+        </div>
+      </div>
       {% endfor %}
-    </table>
+    </div>
   {% endif %}
 
   {% if ev.analysis.watch_next %}
-    <div class="sectionlabel" style="margin:8px 0 4px">Watch next</div>
+    <div class="blocklabel">What to watch next</div>
     <ul class="watch">
-      {% for w in ev.analysis.watch_next %}<li>{{ w }}</li>{% endfor %}
+      {% for w in ev.analysis.watch_next %}<li>{{ w|gloss }}</li>{% endfor %}
     </ul>
   {% endif %}
 
-  {% if ev.analysis.caveats %}<div class="caveat">Caveat: {{ ev.analysis.caveats }}</div>{% endif %}
-
-  <div class="meta">
-    <span>Confidence: {{ ev.analysis.confidence }}</span>
-    <span>Sources: {{ ev.sources|join(', ') }}</span>
-    {% if ev.urls %}<a href="{{ ev.urls[0] }}" target="_blank" rel="noopener">Read the news →</a>{% endif %}
+  <div class="foot">
+    <span class="conf">Confidence {{ ev.analysis.confidence|dots }}<b>{{ ev.analysis.confidence }}</b></span>
+    <span>{{ ev.sources|join(', ') }}</span>
+    {% if ev.urls %}<a href="{{ ev.urls[0] }}" target="_blank" rel="noopener">Read the source →</a>{% endif %}
   </div>
-</div>
+  {% if ev.analysis.caveats %}<div class="caveat">Where this could be wrong: {{ ev.analysis.caveats|gloss }}</div>{% endif %}
+</article>
 """
 
 PAGE = """<!doctype html>
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{{ brief.title }}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="{{ fonts }}" rel="stylesheet">
 <style>{{ css }}</style>
 </head><body><div class="wrap">
-<header class="top">
-  <h1>🌍→🇮🇳 News → India Impact</h1>
-  <div class="sub">{{ brief.date_human }} · {{ brief.events|length }} signals ·
-    analysis: {{ brief.engine }}</div>
-  {% if brief.macro %}
-  <div class="macro">
-    {% for m in brief.macro %}
-    <div class="m"><b>{{ m.label }}:</b> {{ m.value }}
-      {% if m.direction=='up' %}<span class="arrow-up">▲</span>
-      {% elif m.direction=='down' %}<span class="arrow-down">▼</span>{% endif %}</div>
-    {% endfor %}
-  </div>
-  {% endif %}
+
+<header class="mast">
+  <div class="kicker">World news, decoded for Indian markets</div>
+  <h1>The India Impact Brief</h1>
+  <div class="date"><b>{{ brief.date_human }}</b> · {{ brief.events|length }} signals ·
+    <span class="engine">analysis by {{ brief.engine }}</span></div>
 </header>
+
+<div class="guide">
+  <b>How to read this:</b> <span class="flow">each card goes what happened →
+  why it matters to India → what could move (and how likely) → what to watch.</span>
+  Any <span class="term" tabindex="0" role="button" data-def="Tap or hover an underlined word to see a simple definition.">underlined word</span>
+  has a plain-English meaning — hover or tap it.
+</div>
+
+{% if brief.macro %}
+<div class="macro">
+  {% for m in brief.macro %}
+  <div class="m"><b>{{ m.label }}:</b> {{ m.value }}
+    {% if m.direction=='up' %}▲{% elif m.direction=='down' %}▼{% endif %}</div>
+  {% endfor %}
+</div>
+{% endif %}
 
 {% set tops = brief.events|selectattr('is_top')|list %}
 {% set rest = brief.events|rejectattr('is_top')|list %}
 
-{% if tops %}<div class="sectionlabel">Today — what matters most</div>{% endif %}
+{% if tops %}<div class="section">Today — what matters most</div>{% endif %}
 {% for ev in tops %}{{ card(ev) }}{% endfor %}
 
-{% if rest %}<div class="sectionlabel">Also on the radar</div>{% endif %}
+{% if rest %}<div class="section">Also on the radar</div>{% endif %}
 {% for ev in rest %}{{ card(ev) }}{% endfor %}
 
 <div class="disclaimer">
-  <b>Educational only.</b> This brief explains how events <i>tend</i> to affect markets so
-  you can learn the patterns and probabilities. It is not investment advice and gives no
-  buy/sell recommendations. Probabilities are rough judgments, not guarantees.
+  <b>Learning tool, not advice.</b> This brief explains how world events <i>tend</i> to
+  affect markets so you can learn the patterns and probabilities yourself. It never tells
+  you what to buy or sell, and the odds shown are rough judgments, not guarantees.
 </div>
 
-<footer>
+<footer class="pagefoot">
   {% if brief.archive %}
   <div class="archive"><b>Past briefs:</b>
     {% for a in brief.archive %}<a href="{{ a.href }}">{{ a.label }}</a>{% endfor %}

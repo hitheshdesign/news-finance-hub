@@ -1,87 +1,10 @@
 {
   "date": "2026-08-14",
   "date_human": "Friday, 14 August 2026",
-  "generated_at": "2026-08-14T14:31:30+00:00",
+  "generated_at": "2026-08-14T17:14:15+00:00",
   "engine": "Gemini AI",
   "macro": [],
   "events": [
-    {
-      "headline": "India bonds end week flat, but demand for long notes firms",
-      "relevance": 14.5,
-      "items": [
-        {
-          "title": "India bonds end week flat, but demand for long notes firms",
-          "url": "https://economictimes.indiatimes.com/markets/bonds/india-bonds-end-week-flat-but-demand-for-long-notes-firms/articleshow/133240625.cms",
-          "source": "Economic Times Markets",
-          "published": "2026-08-14T11:57:36+00:00",
-          "summary": "Indian government bonds traded within a narrow range this past week. Fading inflation and rate-hike concerns left traders seeking market direction. Buyers entered long bonds as the yield curve steepened, attracting value. Rising oil prices exerted some pressure, but liquidity and softer inflation eased worries. Expectations now suggest neither the RBI nor the Federal Reserve will raise rates soon.",
-          "region": "india",
-          "origin": "rss",
-          "relevance": 14.5
-        }
-      ],
-      "sources": [
-        "Economic Times Markets"
-      ],
-      "urls": [
-        "https://economictimes.indiatimes.com/markets/bonds/india-bonds-end-week-flat-but-demand-for-long-notes-firms/articleshow/133240625.cms"
-      ],
-      "item_count": 1,
-      "coverage_boost": 0.0,
-      "id": "2e844bf141",
-      "analysis": {
-        "tldr": "When global borrowing costs drop, global investors find Indian long-term loans attractive, which keeps local borrowing stable.",
-        "what_happened": "Prices of Indian government bonds stayed mostly unchanged this week, but big investors showed strong interest in long-term notes (paper promises where the government borrows money for many years).",
-        "why_it_matters_india": [
-          "Big institutional investors look for safe places to park their money for a long time.",
-          "Strong demand for long-term notes means the government can borrow money without paying higher interest rates.",
-          "Stable local interest rates make it easier for Indian companies to plan new factories and projects.",
-          "This steady confidence helps keep India's financial markets calm and predictable."
-        ],
-        "impacts": [
-          {
-            "target": "Indian Government Bond Yields (the return the government pays to borrow money)",
-            "direction": "down",
-            "probability": "High",
-            "horizon": "weeks",
-            "rationale": "higher demand for bonds pushes down the returns the government needs to offer."
-          },
-          {
-            "target": "The Rupee (each rupee buys fewer dollars)",
-            "direction": "up",
-            "probability": "Medium",
-            "horizon": "months",
-            "rationale": "steady bond demand encourages foreign investors to keep their money in India."
-          },
-          {
-            "target": "Banking Sector (banks like HDFC Bank and SBI)",
-            "direction": "up",
-            "probability": "Medium",
-            "horizon": "weeks",
-            "rationale": "stable bond markets protect banks from sudden losses on their existing bond holdings."
-          },
-          {
-            "target": "Gold",
-            "direction": "down",
-            "probability": "Low",
-            "horizon": "weeks",
-            "rationale": "when fixed income assets look safe and steady, fewer people rush to buy gold as a panic shelter."
-          }
-        ],
-        "watch_next": [
-          "Upcoming government borrowing announcements",
-          "Changes in global interest rates set by the US central bank"
-        ],
-        "confidence": "High",
-        "caveats": "Unexpected jumps in global crude oil prices could suddenly push inflation up and disrupt bond demand.",
-        "engine": "gemini",
-        "category": "macro_data",
-        "matched_linkage": "us_cpi_cool"
-      },
-      "category": "macro_data",
-      "importance": 16.1,
-      "is_top": true
-    },
     {
       "headline": "Forex reserves up by $14.1 billion to $707 billion",
       "relevance": 9.5,
@@ -107,43 +30,44 @@
       "coverage_boost": 0.0,
       "id": "451580843f",
       "analysis": {
-        "tldr": "India's piggy bank of foreign money just hit a record high, making the country much safer against sudden global financial storms.",
-        "what_happened": "India's central bank (the main money authority that controls the country's cash and interest rates) collected a massive $14.1 billion extra in foreign currencies and gold, pushing our total savings up to $707 billion.",
+        "tldr": "India's piggy bank of foreign money is at an all-time high, which makes our country look very safe to the rest of the world and helps keep our currency steady.",
+        "what_happened": "India's foreign exchange reserves (money kept by the central bank in foreign currencies like US dollars) jumped by $14.1 billion in a single week to cross $707 billion. Why did this happen? Big global investors poured their money into Indian stocks and bonds, and the RBI (Reserve Bank of India, our country's main bank) bought up those extra dollars to keep the rupee from bouncing around too wildly.",
+        "analogy": "It is like having a massive emergency fund in your bank account; even if unexpected expenses pop up, nobody can bully you because you have plenty of cash to protect yourself.",
         "why_it_matters_india": [
-          "Having more foreign money in our piggy bank means India can easily pay for things it buys from abroad, like crude oil.",
-          "It gives big global investors confidence that the Indian economy is strong and stable.",
-          "It allows the central bank to step in and protect the rupee (our local currency) if it suddenly starts dropping in value.",
-          "A stronger safety shield makes foreign companies and investors more comfortable keeping their money in India."
+          "Foreign investors pumped money into Indian financial markets because they trust India's economic growth.",
+          "The RBI stepped in and bought those incoming US dollars, adding them directly to the country's backup piggy bank (the forex reserves).",
+          "With a massive pool of dollars, India can easily pay for its imports like crude oil even during global panics.",
+          "A heavy backup fund acts like a shield, stopping the rupee from crashing suddenly against the US dollar."
         ],
         "impacts": [
           {
-            "target": "The Rupee",
+            "target": "The rupee (vs the US dollar)",
             "direction": "up",
             "probability": "High",
             "horizon": "weeks",
-            "rationale": "extra foreign savings act as a heavy shield to keep our currency steady against the dollar."
+            "rationale": "More dollars in the bank mean the rupee stays stable or slightly stronger, which is great for you because imported goods like crude oil and electronics don't suddenly become super expensive."
           },
           {
-            "target": "Foreign Investment (FIIs - big foreign investors)",
-            "direction": "up",
+            "target": "India's inflation rate",
+            "direction": "down",
             "probability": "Medium",
             "horizon": "months",
-            "rationale": "a secure and stable economy attracts more money from overseas funds into Indian shares."
+            "rationale": "A stable rupee keeps the cost of importing items like crude oil in check, meaning everyday things like petrol and transport costs are less likely to shoot up — good news for household budgets."
           },
           {
-            "target": "Import-heavy businesses (Oil companies like Reliance or BPCL)",
-            "direction": "up",
+            "target": "10-year bond yield (the interest rate the government pays to borrow)",
+            "direction": "down",
             "probability": "Medium",
             "horizon": "months",
-            "rationale": "a stable currency makes buying expensive foreign goods like crude oil slightly smoother and less prone to sudden price shocks."
+            "rationale": "When foreign money keeps flowing in, demand for Indian government bonds goes up, which lowers the interest the government pays to borrow money — and often leads to cheaper loans for regular people."
           }
         ],
         "watch_next": [
-          "Keep an eye on whether global crude oil prices stay calm or shoot up",
-          "Watch if foreign investors continue putting money into Indian stock markets"
+          "Whether foreign investors keep pumping money into Indian markets or pull it out",
+          "How aggressively the RBI continues to buy dollars"
         ],
         "confidence": "High",
-        "caveats": "If global oil prices suddenly skyrocket, India will have to spend a huge chunk of these savings much faster than expected.",
+        "caveats": "If global oil prices suddenly skyrocket or foreign investors panic and take their money back out of India, these reserves could shrink just as fast.",
         "engine": "gemini",
         "category": "general",
         "matched_linkage": null
@@ -153,158 +77,75 @@
       "is_top": true
     },
     {
-      "headline": "Rupee logs weekly decline, with RBI intervention curbing losses",
+      "headline": "Gold jumps 9% in August as weaker dollar, easing Fed bets boost demand",
       "relevance": 8.5,
       "items": [
         {
-          "title": "Rupee logs weekly decline, with RBI intervention curbing losses",
-          "url": "https://economictimes.indiatimes.com/markets/forex/rupee-logs-weekly-decline-with-rbi-intervention-curbing-losses/articleshow/133237831.cms",
-          "source": "Economic Times Markets",
-          "published": "2026-08-14T10:24:16+00:00",
-          "summary": "The Indian rupee faced a challenging week, depreciating against the dollar amidst mounting tensions from the Middle East conflict. Despite this, central bank interventions and steady dollar sales by state banks helped mitigate more significant losses. With India relying on imports for about ninety percent of its oil, the economy remains susceptible to supply disruptions.",
+          "title": "Gold jumps 9% in August as weaker dollar, easing Fed bets boost demand",
+          "url": "https://www.livemint.com/market/commodities/gold-jumps-9-in-august-as-weaker-dollar-easing-fed-bets-boost-demand-11786716604532.html",
+          "source": "Livemint Markets",
+          "published": "2026-08-14T16:15:01+00:00",
+          "summary": "Gold prices are on a winning streak as US Fed rate hike expectations ease and a weaker dollar boosts overseas demand. Spot gold reached $4,397 an ounce, marking a 9% monthly gain in August, while remaining below January's all-time high of $5,602.",
           "region": "india",
           "origin": "rss",
           "relevance": 8.5
         }
       ],
       "sources": [
-        "Economic Times Markets"
+        "Livemint Markets"
       ],
       "urls": [
-        "https://economictimes.indiatimes.com/markets/forex/rupee-logs-weekly-decline-with-rbi-intervention-curbing-losses/articleshow/133237831.cms"
+        "https://www.livemint.com/market/commodities/gold-jumps-9-in-august-as-weaker-dollar-easing-fed-bets-boost-demand-11786716604532.html"
       ],
       "item_count": 1,
       "coverage_boost": 0.0,
-      "id": "2a7904e3a7",
+      "id": "9cb503ba16",
       "analysis": {
-        "tldr": "When global troubles make our currency weaker, everyday goods can get costlier because India buys most of its fuel from abroad.",
-        "what_happened": "The Indian rupee [our country's money used to buy things globally] lost value over the week, though our central bank stepped in to stop it from falling even faster.",
+        "tldr": "When global gold prices shoot up because big central banks are expected to lower interest rates, it makes imported jewellery and safe-haven investments costlier for regular people in India.",
+        "what_happened": "Gold prices shot up by nine percent in a single month because traders believe the US Fed (United States Federal Reserve, the main bank that controls US interest rates) will soon lower its lending rates. When interest rates drop, holding cash earns less, so global investors rush to buy gold instead, pushing its price up.",
+        "analogy": "It is like a crowded neighborhood street where a popular sweet shop suddenly lowers its prices. Everyone rushes to buy the same sweets, so the few boxes left get much more expensive.",
         "why_it_matters_india": [
-          "India buys most of its oil from other countries.",
-          "When oil prices go up globally, we need more rupees to buy the same amount of oil.",
-          "This extra cost makes the rupee weaker [each rupee buys fewer dollars].",
-          "Costlier oil leads to higher prices for petrol and transport, making everyday items more expensive for everyone."
+          "The US Fed signals it might cut interest rates, making the US dollar weaker (each dollar buys fewer things).",
+          "Global investors lose interest in keeping cash in the US and start buying safe assets like gold instead.",
+          "Because India imports most of its gold from abroad, global price hikes make physical gold and gold jewellery much costlier in local shops.",
+          "At the same time, a weaker dollar helps the Indian rupee steady, which slightly lowers the cost of importing crude oil."
         ],
         "impacts": [
           {
-            "target": "The rupee",
-            "direction": "down",
+            "target": "Gold price in India",
+            "direction": "up",
             "probability": "High",
             "horizon": "weeks",
-            "rationale": "Global pressures and heavy oil import bills keep pushing our currency down."
+            "rationale": "Global gold prices are rising due to US rate-cut bets, meaning buying jewellery or gold coins in India becomes more expensive — generally bad for everyday buyers and wedding shoppers."
           },
           {
-            "target": "Oil-importing firms (like transport and paint companies)",
-            "direction": "down",
-            "probability": "Medium",
-            "horizon": "weeks",
-            "rationale": "Raw materials become much more expensive to buy."
-          },
-          {
-            "target": "Gold",
+            "target": "The rupee (vs the US dollar)",
             "direction": "up",
             "probability": "Medium",
             "horizon": "days",
-            "rationale": "People rush to buy safe metals when global uncertainty grows."
+            "rationale": "A softer US dollar gives breathing room to the Indian rupee, making it slightly stronger — good because imported goods like electronics become a bit cheaper."
           },
           {
-            "target": "RBI (Reserve Bank of India, our central bank)",
+            "target": "Nifty 50 (India's main stock index)",
             "direction": "up",
-            "probability": "High",
-            "horizon": "days",
-            "rationale": "They will likely use their dollar savings to defend our currency from crashing."
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "When US rates fall, global investors (FIIs, big foreign investors) often bring spare money into developing countries like India, pushing local stock markets up — good for mutual fund investors."
           }
         ],
         "watch_next": [
-          "Watch if international crude oil prices go up or down next week.",
-          "See if the Reserve Bank of India sells more of its foreign money reserves to support the rupee."
+          "Official US inflation and job reports, which decide if the US Fed will actually cut interest rates",
+          "Local festival demand for gold in India"
         ],
         "confidence": "High",
-        "caveats": "If global oil prices suddenly drop, the pressure on our rupee will ease quickly.",
+        "caveats": "If unexpected inflation reports force the US Fed to change its mind and keep interest rates high, gold prices could suddenly tumble back down.",
         "engine": "gemini",
-        "category": "geopolitics",
-        "matched_linkage": "mideast_escalation"
+        "category": "monetary_policy",
+        "matched_linkage": "fed_hawkish"
       },
-      "category": "geopolitics",
-      "importance": 10.1,
+      "category": "monetary_policy",
+      "importance": 9.7,
       "is_top": true
-    },
-    {
-      "headline": "Sensex falls 71 points, Nifty closes below 24,400; broader markets underperform. What lies ahead?",
-      "relevance": 7.5,
-      "items": [
-        {
-          "title": "Sensex falls 71 points, Nifty closes below 24,400; broader markets underperform. What lies ahead?",
-          "url": "https://economictimes.indiatimes.com/markets/stocks/news/sensex-falls-71-points-nifty-closes-below-24400-broader-markets-underperform-what-lies-ahead/articleshow/133237775.cms",
-          "source": "Economic Times Markets",
-          "published": "2026-08-14T10:23:41+00:00",
-          "summary": "The Indian stock market ended lower on Friday as Sensex dropped 71 points and Nifty closed at 24,366. Broader midcap and smallcap indices underperformed, falling 0.7% each. Analysts cite global yield uncertainty and oil prices for the sideways movement, while technical indicators point to key support near 24,200.",
-          "region": "india",
-          "origin": "rss",
-          "relevance": 7.5
-        }
-      ],
-      "sources": [
-        "Economic Times Markets"
-      ],
-      "urls": [
-        "https://economictimes.indiatimes.com/markets/stocks/news/sensex-falls-71-points-nifty-closes-below-24400-broader-markets-underperform-what-lies-ahead/articleshow/133237775.cms"
-      ],
-      "item_count": 1,
-      "coverage_boost": 0.0,
-      "id": "8dbecc41fd",
-      "analysis": {
-        "tldr": "Indian stock markets had a small dip, and smaller companies fell more than the big ones, making investors cautious.",
-        "what_happened": "The Sensex (the top 30 big companies on the Indian stock market) dropped slightly by 71 points, and the Nifty (a group of the top 50 big companies) fell below 24,400. At the same time, smaller company stocks performed worse than the big ones.",
-        "why_it_matters_india": [
-          "When big stock indexes dip, it usually means big foreign investors (FIIs) are selling more than they are buying.",
-          "Smaller companies falling faster shows that everyday investors are getting nervous and taking their money off the table.",
-          "A slight dip is normal and happens all the time in a healthy market, but it makes people pause and watch the news closely.",
-          "If global markets stay shaky, Indian markets might stay flat or dip a little more in the short term."
-        ],
-        "impacts": [
-          {
-            "target": "Nifty 50 (the top 50 big Indian companies)",
-            "direction": "down",
-            "probability": "High",
-            "horizon": "days",
-            "rationale": "recent slight selling pressure can push numbers down temporarily"
-          },
-          {
-            "target": "Broader markets (smaller and medium-sized companies)",
-            "direction": "down",
-            "probability": "High",
-            "horizon": "days",
-            "rationale": "they often fall harder when nervous investors pull their money out"
-          },
-          {
-            "target": "Gold",
-            "direction": "up",
-            "probability": "Medium",
-            "horizon": "weeks",
-            "rationale": "investors often run to safe gold when stock markets look shaky"
-          },
-          {
-            "target": "The rupee (each rupee buys fewer dollars)",
-            "direction": "down",
-            "probability": "Medium",
-            "horizon": "weeks",
-            "rationale": "when foreign money leaves India, our currency gets slightly weaker"
-          }
-        ],
-        "watch_next": [
-          "Whether big foreign investors keep selling shares or start buying again",
-          "Global stock market trends, especially in the US"
-        ],
-        "confidence": "High",
-        "caveats": "A sudden positive global news announcement could easily reverse these small dips by tomorrow morning.",
-        "engine": "gemini",
-        "category": "general",
-        "matched_linkage": null
-      },
-      "category": "general",
-      "importance": 9.1,
-      "is_top": false
     },
     {
       "headline": "Top Gainers & Losers on 14 August: NALCO, HPCL, Tata Motors PV, Netweb Tech, Hindustan Copper among top losers",
@@ -331,56 +172,121 @@
       "coverage_boost": 0.0,
       "id": "b3004fb041",
       "analysis": {
-        "tldr": "When certain popular stocks drop sharply in a single day, it usually points to profit-taking by big investors or temporary bad news for specific industries rather than a crisis for all of India.",
-        "what_happened": "On August 14, several well-known Indian companies like Tata Motors, Hindustan Copper, and HPCL (Hindustan Petroleum Corporation Limited, a government-owned fuel seller) saw their share prices fall more than other companies on the stock market.",
+        "tldr": "Individual company stock prices move up and down every day based on buyer and seller moods, which affects the wealth of people who own those specific shares.",
+        "what_happened": "Stock prices for companies like NALCO and HPCL fell on August 14 because more people wanted to sell their shares than buy them. This usually happens when quarterly business results disappoint investors, or when global commodity prices drop, making traders worried about future profits.",
+        "analogy": "It is like a crowded vegetable market where nobody wants to buy tomatoes today because tomorrow's weather looks rainy, forcing sellers to slash their prices just to get rid of them.",
         "why_it_matters_india": [
-          "Traders and big investors often sell stocks that have risen a lot recently to take their money off the table.",
-          "When raw material companies like copper and aluminum makers drop, it can reflect worries about global demand.",
-          "When fuel retailers like HPCL drop, it often means investors are worried about rising crude oil costs squeezing their profits.",
-          "Such daily ups and downs are normal market noise and rarely change the long-term story of a growing Indian economy."
+          "Traders and big investors react to company earnings or global news by selling shares of certain firms.",
+          "When selling pressure goes up, the share price drops rapidly.",
+          "Retail investors (everyday people trading through apps) who hold these specific stocks see their portfolio value fall.",
+          "It reminds everyday investors that single stocks are risky and bounce around much more than the overall market."
         ],
         "impacts": [
           {
-            "target": "HPCL (fuel seller)",
+            "target": "Nifty 50 (India's main stock index)",
             "direction": "down",
             "probability": "High",
             "horizon": "days",
-            "rationale": "investors reacted to short-term cost pressures on fuel companies"
+            "rationale": "When prominent stocks fall together, it pulls down the overall market mood, which is generally bad for short-term investor sentiment."
           },
           {
-            "target": "Metal stocks like NALCO and Hindustan Copper",
+            "target": "Retail investor portfolios holding these specific stocks",
             "direction": "down",
-            "probability": "Medium",
-            "horizon": "days",
-            "rationale": "global growth worries lower the expected demand for metals"
-          },
-          {
-            "target": "The Rupee (our local currency)",
-            "direction": "down",
-            "probability": "Low",
+            "probability": "High",
             "horizon": "hours",
-            "rationale": "isolated stock market losers have almost no effect on the overall currency"
-          },
-          {
-            "target": "Gold",
-            "direction": "up",
-            "probability": "Low",
-            "horizon": "hours",
-            "rationale": "safe-haven buying is minimal since this is just routine stock movement"
+            "rationale": "People holding losers like NALCO or HPCL see their invested money shrink temporarily, which can cause stress."
           }
         ],
         "watch_next": [
-          "Whether these falling stocks bounce back or continue dropping over the next week",
-          "Global crude oil prices which affect fuel retail companies like HPCL"
+          "Whether these fallen stocks recover quickly or continue dropping over the coming week",
+          "Company announcements or quarterly financial results that might have triggered the sell-off"
         ],
         "confidence": "High",
-        "caveats": "If these single-day drops turn into a weeks-long trend across many sectors, it could mean bigger economic worries are brewing.",
+        "caveats": "A single day's drop does not mean a company is ruined forever; stocks often bounce back just as fast if the broader market recovers.",
         "engine": "gemini",
         "category": "general",
         "matched_linkage": null
       },
       "category": "general",
-      "importance": 9.1,
+      "importance": 8.3,
+      "is_top": true
+    },
+    {
+      "headline": "Sensex, Nifty 50 snap 2-week winning streak on Middle East uncertainty, oil price volatility",
+      "relevance": 5.5,
+      "items": [
+        {
+          "title": "Sensex, Nifty 50 snap 2-week winning streak on Middle East uncertainty, oil price volatility",
+          "url": "https://www.livemint.com/market/stock-market-news/sensex-nifty-50-snap-2-week-winning-streak-on-middle-east-uncertainty-oil-price-volatility-11786701521270.html",
+          "source": "Livemint Markets",
+          "published": "2026-08-14T10:04:13+00:00",
+          "summary": "The Sensex declined 71 points, or 0.09%, to end at 78,009.25, while the Nifty 50 ended at 24,366, down 30 points, or 0.12%. For the week, the 30-share pack dropped 490 points, or 0.62%, while the Nifty 50 declined by 205 points, or 0.83%.",
+          "region": "india",
+          "origin": "rss",
+          "relevance": 5.5
+        }
+      ],
+      "sources": [
+        "Livemint Markets"
+      ],
+      "urls": [
+        "https://www.livemint.com/market/stock-market-news/sensex-nifty-50-snap-2-week-winning-streak-on-middle-east-uncertainty-oil-price-volatility-11786701521270.html"
+      ],
+      "item_count": 1,
+      "coverage_boost": 0.0,
+      "id": "4884577c0f",
+      "analysis": {
+        "tldr": "Tension in the Middle East is making crude oil prices jump, which could soon make everyday items, transport, and cooking gas costlier in India.",
+        "what_happened": "India's main stock markets (Sensex and Nifty 50) fell after rising for two straight weeks. This happened because fighting in the Middle East has scared global investors, making them worry that oil supplies will get disrupted and prices will shoot up.",
+        "analogy": "It is like running a bakery where the price of flour suddenly jumps because of a fight in the neighborhood wheat fields — your costs go up instantly, and your business feels the heat.",
+        "why_it_matters_india": [
+          "Conflict in the Middle East threatens oil wells and shipping lanes",
+          "Global crude oil (raw petroleum) prices rise because traders fear a shortage",
+          "India imports over 80 percent of its oil, so the country has to pay much more in US dollars",
+          "To pay for that expensive oil, India's central bank and companies sell rupees to buy dollars, pushing the rupee down and making overall inflation (rising prices) worse"
+        ],
+        "impacts": [
+          {
+            "target": "Petrol & diesel prices",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "Costlier global crude means fuel gets more expensive to make, which hurts household budgets and makes transport costlier — bad for everyone."
+          },
+          {
+            "target": "The rupee (vs the US dollar)",
+            "direction": "down",
+            "probability": "High",
+            "horizon": "days",
+            "rationale": "India needs more dollars to buy expensive oil, making our currency weaker — which makes imported goods and foreign travel costlier."
+          },
+          {
+            "target": "Gold price in India",
+            "direction": "up",
+            "probability": "High",
+            "horizon": "days",
+            "rationale": "When world markets get scared by wars, investors rush to buy gold as a safe box for their wealth, pushing prices up for buyers in India."
+          },
+          {
+            "target": "Nifty 50 (India's main stock index)",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "days",
+            "rationale": "FIIs (big foreign investors) pull their money out of risky stock markets during global tensions, causing local share prices to drop."
+          }
+        ],
+        "watch_next": [
+          "Updates on whether Middle East oil production or shipping routes actually get disrupted",
+          "Daily changes in international crude oil prices"
+        ],
+        "confidence": "High",
+        "caveats": "If the political tensions cool down quickly, oil prices could fall back down just as fast, erasing these market worries.",
+        "engine": "gemini",
+        "category": "geopolitics",
+        "matched_linkage": "mideast_escalation"
+      },
+      "category": "geopolitics",
+      "importance": 7.1,
       "is_top": false
     },
     {
@@ -408,119 +314,49 @@
       "coverage_boost": 0.0,
       "id": "85359f1a55",
       "analysis": {
-        "tldr": "When the US puts taxes on Chinese goods, some factory orders shift to India, creating a mixed bag of new business and trade friction.",
-        "what_happened": "The US is investigating how much Chinese goods are secretly entering America through other countries like India to avoid high import taxes. This $67 billion trade trail means American regulators are looking closely at Indian shipping routes.",
+        "tldr": "When the US taxes goods from China, companies look to India to buy things instead, which can mean more business for Indian factories but also new trade investigations.",
+        "what_happened": "The US has placed heavy taxes on billions of dollars of Chinese goods to protect its own industries. Because of this, trade detectives are tracking how some Chinese goods might be quietly rerouting through other countries like India to avoid those taxes, sparking questions about whether India is becoming a backdoor for Chinese products.",
+        "analogy": "It is like a bouncer banning a rowdy customer from a club, so that customer tries to sneak in wearing a borrowed jacket — now the bouncer is checking everyone at the door to see who lent their jacket.",
         "why_it_matters_india": [
-          "The US questions if goods coming from India are actually made in China and just repacked.",
-          "American officials might slap stricter checks or taxes on Indian exports to stop this routing.",
-          "At the same time, global companies want to rely less on China and look to India as a reliable backup factory.",
-          "Indian factories that genuinely make their own products could win big if US buyers choose them over Chinese rivals."
+          "The US places heavy taxes on Chinese goods to make them expensive.",
+          "Global companies look for alternative places like India to make and buy goods instead of China.",
+          "US trade authorities check if some of those goods are secretly made in China and just labeled as Indian.",
+          "Legitimate Indian factories win more business, while companies caught cheating face strict US penalties."
         ],
         "impacts": [
           {
-            "target": "Manufacturing sector (like Dixon Technologies, Motherson Sumi)",
+            "target": "Manufacturing stocks like Dixon Technologies & Indian exporters",
             "direction": "up",
             "probability": "Medium",
             "horizon": "months",
-            "rationale": "global brands keep moving their factory orders away from China to India"
+            "rationale": "Global brands want alternatives to China, which brings more factory orders to India — generally good for job creation and business growth."
           },
           {
-            "target": "Indian exporters of electronics and engineering goods",
+            "target": "The rupee (vs the US dollar)",
             "direction": "down",
-            "probability": "Medium",
+            "probability": "Low",
             "horizon": "weeks",
-            "rationale": "stricter US customs checks could delay shipments and create paperwork headaches"
+            "rationale": "If trade tensions flare up and foreign investors pull money out of fear, the rupee weakens (each rupee buys fewer dollars), making imported fuel and electronics costlier for Indians."
           },
           {
-            "target": "Gold",
+            "target": "Nifty 50 (India's main stock index)",
             "direction": "up",
-            "probability": "Low",
-            "horizon": "days",
-            "rationale": "global trade fights make investors nervous, leading them to buy safe gold"
+            "probability": "Medium",
+            "horizon": "months",
+            "rationale": "More global factories moving to India boosts corporate earnings, which generally pushes the stock market higher — good for investors."
           }
         ],
         "watch_next": [
-          "Official statements from the US government regarding new trade rules on India",
-          "Monthly export data to see if Indian shipments to America are slowing down or speeding up"
+          "Official US announcements on whether they will place penalties or extra taxes on Indian goods",
+          "Monthly export data from the Indian government to see if manufacturing sales are actually rising"
         ],
         "confidence": "Medium",
-        "caveats": "If the US decides to slap broad taxes on all Indian goods instead of just suspicious ones, the impact on local factories could turn negative.",
+        "caveats": "If the US proves India is being used to bypass taxes on a large scale, it could slap broad taxes on Indian exports instead of helping them.",
         "engine": "gemini",
         "category": "trade",
         "matched_linkage": "us_tariffs_tradewar"
       },
       "category": "trade",
-      "importance": 6.7,
-      "is_top": false
-    },
-    {
-      "headline": "India’s July exports hit record $44.2 billion despite West Asia crisis",
-      "relevance": 5.5,
-      "items": [
-        {
-          "title": "India’s July exports hit record $44.2 billion despite West Asia crisis",
-          "url": "https://economictimes.indiatimes.com/news/economy/indicators/indias-july-exports-hit-record-44-2-billion-despite-west-asia-crisis/articleshow/133227026.cms",
-          "source": "Economic Times Economy",
-          "published": "2026-08-14T01:42:17+00:00",
-          "summary": "India's goods exports grew significantly in July, driven by engineering and electronics sectors. Imports also increased, leading to a wider trade deficit compared to last year. Gold and silver imports saw varied performance after a customs duty hike was implemented. Exports to West Asia showed recovery, and border trade resumed through Nathu La. Overall goods exports for April-July also registered a substantial year-on-year increase.",
-          "region": "india",
-          "origin": "rss",
-          "relevance": 5.5
-        }
-      ],
-      "sources": [
-        "Economic Times Economy"
-      ],
-      "urls": [
-        "https://economictimes.indiatimes.com/news/economy/indicators/indias-july-exports-hit-record-44-2-billion-despite-west-asia-crisis/articleshow/133227026.cms"
-      ],
-      "item_count": 1,
-      "coverage_boost": 0.0,
-      "id": "881e7e4d68",
-      "analysis": {
-        "tldr": "Even with global trouble in West Asia, Indian businesses sold a record amount of goods abroad last month, showing our economy's strength.",
-        "what_happened": "India's total exports (goods and services sold to other countries) reached a massive $44.2 billion in July. This happened even though shipping routes are facing trouble due to ongoing conflicts in West Asia (the Middle East region containing countries like Israel and Iran).",
-        "why_why_matters_india": [
-          "When Indian companies sell more goods abroad, they bring more foreign money into the country.",
-          "More money coming in makes the rupee (India's currency) steadier against global money like the US dollar.",
-          "Higher sales mean factories and local businesses are producing more, which creates more jobs in India.",
-          "This helps lower our CAD (the gap between what India imports and exports), making our overall economy safer from global shocks."
-        ],
-        "impacts": [
-          {
-            "target": "The rupee (each rupee buys fewer dollars)",
-            "direction": "up",
-            "probability": "Medium",
-            "horizon": "weeks",
-            "rationale": "steady money inflow from exports helps support the Indian currency"
-          },
-          {
-            "target": "Manufacturing and Export Sectors (like engineering and textiles)",
-            "direction": "up",
-            "probability": "High",
-            "horizon": "weeks",
-            "rationale": "record sales mean higher earnings for companies selling outside India"
-          },
-          {
-            "target": "CAD (the gap between what India buys and sells abroad)",
-            "direction": "down",
-            "probability": "High",
-            "horizon": "months",
-            "rationale": "stronger exports help shrink the trade deficit"
-          }
-        ],
-        "watch_next": [
-          "Whether shipping costs and oil prices stay stable despite the West Asia crisis",
-          "If upcoming months can maintain this record-breaking export speed"
-        ],
-        "confidence": "High",
-        "caveats": "If global conflicts suddenly worsen and block major shipping lanes, it could quickly become much more expensive to send goods abroad.",
-        "engine": "gemini",
-        "category": "general",
-        "matched_linkage": null,
-        "why_it_matters_india": []
-      },
-      "category": "general",
       "importance": 6.7,
       "is_top": false
     },
@@ -549,49 +385,192 @@
       "coverage_boost": 0.0,
       "id": "f02ac9b779",
       "analysis": {
-        "tldr": "India's central bank is stopping a special scheme that brought in lots of foreign money because our financial safety net is already super strong.",
-        "what_happened": "The RBI (Reserve Bank of India, our big boss bank) ran a special savings scheme for Non-Resident Indians living abroad to deposit foreign money. Since they collected a massive 52 billion dollars (about 4.3 lakh crore rupees), the RBI decided to close the scheme early.",
+        "tldr": "The RBI (Reserve Bank of India, our central bank) has collected so many US dollars from abroad that it is stopping a special savings scheme early because it has enough foreign money to keep our currency stable.",
+        "what_happened": "The RBI had launched a special scheme (called FCNR) allowing banks to offer attractive interest rates to pull in US dollars from non-resident Indians. Because global investors poured in a massive 52 billion dollars (over four lakh crore rupees), the RBI got more than enough foreign cash and decided to close the scheme ahead of time.",
+        "analogy": "It is like a neighborhood store that starts a special discount to collect loose cash from neighbors. When the owner gets way more cash than needed to pay suppliers, they happily put up a 'scheme closed' sign.",
         "why_it_matters_india": [
-          "NRIs (Non-Resident Indians, people of Indian origin living abroad) poured billions of foreign dollars into Indian banks.",
-          "This huge flood of foreign money made the RBI's vault very full and kept our country's financial safety net strong.",
-          "Because the RBI has enough dollars now, it does not need to offer extra perks to attract more foreign money.",
-          "Stopping the scheme means fewer foreign dollars will enter India through this specific route moving forward."
+          "Non-resident Indians and global banks deposited billions of US dollars into Indian banks to earn good interest.",
+          "The RBI gathered a massive pile of foreign currency, making our total foreign exchange reserves much stronger.",
+          "A larger dollar reserve helps protect the Indian rupee from falling sharply when global markets shake.",
+          "With enough dollars safely in the bank, the RBI does not need to offer extra-high interest rates anymore."
         ],
         "impacts": [
           {
-            "target": "The rupee (our local money)",
-            "direction": "down",
-            "probability": "Low",
+            "target": "The rupee (vs the US dollar)",
+            "direction": "up",
+            "probability": "High",
             "horizon": "weeks",
-            "rationale": "slightly fewer foreign dollars flowing in could remove a tiny bit of support for our currency"
+            "rationale": "More dollars sitting inside Indian banks make our currency stronger against the dollar, which is generally good for everyday Indians because imported items like crude oil become slightly cheaper."
           },
           {
-            "target": "Bank deposits and interest rates",
-            "direction": "down",
-            "probability": "Medium",
-            "horizon": "months",
-            "rationale": "banks will no longer need to chase NRI dollars by offering extra-high interest rates"
-          },
-          {
-            "target": "India's foreign exchange reserves (our national piggy bank of foreign money)",
+            "target": "India's foreign exchange reserves",
             "direction": "up",
             "probability": "High",
             "horizon": "days",
-            "rationale": "collecting 52 billion dollars leaves the country with a massive safety cushion against global shocks"
+            "rationale": "A flood of 52 billion dollars directly bulks up India's national savings safety net, making the country look very safe to global lenders."
+          },
+          {
+            "target": "10-year bond yield (interest India pays to borrow)",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "months",
+            "rationale": "When the banking system has plenty of cash, the government can borrow money more cheaply, which usually leads to lower interest rates on regular loans for people."
           }
         ],
         "watch_next": [
-          "Whether the RBI announces any new steps to manage the money already collected",
-          "How the rupee behaves against the US dollar in the coming weeks"
+          "Look out for updates on India's total foreign exchange reserve numbers published weekly by the RBI.",
+          "Check if banks lower the interest rates they offer on fixed deposits now that this special dollar scheme has ended."
         ],
         "confidence": "High",
-        "caveats": "If global oil prices suddenly skyrocket, India might burn through those saved dollars faster than expected.",
+        "caveats": "If global markets suddenly panic and investors rush to pull their dollars back out, the RBI might need to use these reserves quickly to defend the rupee.",
         "engine": "gemini",
         "category": "general",
         "matched_linkage": null
       },
       "category": "general",
       "importance": 6.7,
+      "is_top": false
+    },
+    {
+      "headline": "Here are five key takeaways from the July CPI inflation report",
+      "relevance": 4.0,
+      "items": [
+        {
+          "title": "Here are five key takeaways from the July CPI inflation report",
+          "url": "https://www.cnbc.com/2026/08/12/here-are-five-key-takeaways-from-the-july-cpi-inflation-report.html",
+          "source": "CNBC Economy",
+          "published": "2026-08-12T17:14:09+00:00",
+          "summary": "Readings for July on the prices consumers pay for goods and services came in pretty much on target.",
+          "region": "global",
+          "origin": "rss",
+          "relevance": 4.0
+        }
+      ],
+      "sources": [
+        "CNBC Economy"
+      ],
+      "urls": [
+        "https://www.cnbc.com/2026/08/12/here-are-five-key-takeaways-from-the-july-cpi-inflation-report.html"
+      ],
+      "item_count": 1,
+      "coverage_boost": 0.0,
+      "id": "c0242794db",
+      "analysis": {
+        "tldr": "US inflation is cooling down, which means the US central bank will likely lower interest rates soon, giving global markets a positive boost.",
+        "what_happened": "The US released its CPI (Consumer Price Index, a measure of how fast the prices of everyday goods and services are rising) report for July, showing that price rises are slowing down. This happened because costs for things like gasoline and used cars dropped, giving everyday American families some breathing room after months of high prices.",
+        "analogy": "It is like a car that was speeding down the highway finally taking its foot off the gas pedal. The car is still moving forward, but it is not accelerating as aggressively as before.",
+        "why_it_matters_india": [
+          "US inflation slows down -> US Federal Reserve (the US central bank) gets confidence that price pressures are under control.",
+          "The Fed signals it will cut interest rates -> global investors look for higher returns in developing countries like India.",
+          "FIIs (big foreign investors) pump money into Indian stocks and bonds -> demand for Indian rupees goes up.",
+          "The rupee strengthens (each rupee buys more dollars) -> imported items like crude oil become slightly cheaper for India."
+        ],
+        "impacts": [
+          {
+            "target": "The rupee (vs the US dollar)",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "A stronger rupee makes foreign travel and imported goods slightly cheaper for ordinary Indians."
+          },
+          {
+            "target": "10-year bond yield (interest India pays to borrow)",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "days",
+            "rationale": "When global interest rates drop, borrowing costs tend to ease globally, which is good for governments and eventually borrowers."
+          },
+          {
+            "target": "Nifty 50 (India's main stock index)",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "days",
+            "rationale": "Global stock markets usually cheer lower inflation because it means cheaper money for businesses, which is generally good for stock investors."
+          },
+          {
+            "target": "Gold price in India",
+            "direction": "down",
+            "probability": "Low",
+            "horizon": "weeks",
+            "rationale": "When US inflation cools, the US dollar and safety bets like gold sometimes lose a bit of their immediate panic-driven shine, which can slightly lower local gold prices."
+          }
+        ],
+        "watch_next": [
+          "Statements from US central bank officials about when they will actually start cutting interest rates",
+          "Next month's US employment and inflation data to see if the cooling trend continues"
+        ],
+        "confidence": "High",
+        "caveats": "If a sudden global crisis breaks out and spikes oil prices again, US inflation could bounce back up and ruin these plans.",
+        "engine": "gemini",
+        "category": "general",
+        "matched_linkage": null
+      },
+      "category": "general",
+      "importance": 5.6,
+      "is_top": false
+    },
+    {
+      "headline": "The Great Transshipment Scam: US report names India in alleged China tariff-evasion network",
+      "relevance": 4.5,
+      "items": [
+        {
+          "title": "The Great Transshipment Scam: US report names India in alleged China tariff-evasion network",
+          "url": "https://www.thehindubusinessline.com/economy/the-great-transshipment-scam-us-report-names-india-in-alleged-china-tariff-evasion-network/article71346627.ece",
+          "source": "The Hindu BusinessLine",
+          "published": "2026-08-14T16:00:05+00:00",
+          "summary": "MEA says India was studying the White House’s report and violations, if any, will be dealt with under law",
+          "region": "india",
+          "origin": "rss",
+          "relevance": 4.5
+        }
+      ],
+      "sources": [
+        "The Hindu BusinessLine"
+      ],
+      "urls": [
+        "https://www.thehindubusinessline.com/economy/the-great-transshipment-scam-us-report-names-india-in-alleged-china-tariff-evasion-network/article71346627.ece"
+      ],
+      "item_count": 1,
+      "coverage_boost": 0.0,
+      "id": "f38e53024e",
+      "analysis": {
+        "tldr": "If the US decides India is helping China sneak goods past heavy taxes, it could lead to stricter US checks on Indian exports, slowing down certain factories and businesses.",
+        "what_happened": "A US report claims that some companies are using India as a middle ground to repackage Chinese goods and send them to America, helping them avoid heavy US taxes on China. This happens because businesses look for sneaky ways to dodge extra costs when the US puts high import taxes (penalties on foreign goods) on Chinese products.",
+        "analogy": "It is like a bouncer banning a troublemaker from a club, but the troublemaker sneaks in wearing a friend's jacket. If the bouncer catches on, he might start frisking both of them at the door.",
+        "why_it_matters_india": [
+          "The US government reads the report and gets suspicious about goods coming from India.",
+          "US authorities might impose stricter checks or ask for more proof on where Indian exports were actually made.",
+          "Legitimate Indian factories face delays at American ports, increasing their shipping costs.",
+          "The Indian government steps up checks on imports from China to clear its name, tightening rules for local traders."
+        ],
+        "impacts": [
+          {
+            "target": "Nifty 50 (India's main stock index)",
+            "direction": "down",
+            "probability": "Low",
+            "horizon": "weeks",
+            "rationale": "If investors worry about big trade trouble with the US, stock prices can dip slightly — generally bad for everyday investors."
+          },
+          {
+            "target": "The rupee (vs the US dollar)",
+            "direction": "down",
+            "probability": "Low",
+            "horizon": "months",
+            "rationale": "If trade rules get stricter and export earnings slow down, fewer US dollars enter India, causing the rupee to weaken (each rupee buys fewer dollars) — which makes imported items like fuel pricier."
+          }
+        ],
+        "watch_next": [
+          "Official statements or warning letters from the US government regarding Indian trade",
+          "New rules from the Indian government on goods coming in from China"
+        ],
+        "confidence": "Medium",
+        "caveats": "If this report turns out to be a minor accusation that the US ignores, nothing much will change for Indian businesses.",
+        "engine": "gemini",
+        "category": "trade",
+        "matched_linkage": "us_tariffs_tradewar"
+      },
+      "category": "trade",
+      "importance": 5.3,
       "is_top": false
     }
   ]

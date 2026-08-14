@@ -79,17 +79,23 @@ body{margin:0;background:var(--bg);color:var(--ink);
 .card h2{font-family:var(--font-serif);font-weight:600;letter-spacing:-.01em;
   font-size:24px;line-height:1.22;margin:0 0 14px;color:var(--ink);}
 
-/* Plain-English takeaway — the rookie&#39;s anchor */
-.tldr{display:flex;gap:11px;align-items:flex-start;background:var(--panel2);
-  border-left:3px solid var(--link);border-radius:0 10px 10px 0;
-  padding:12px 15px;margin:0 0 16px;}
-.tldr .lbl{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
-  color:var(--link);white-space:nowrap;padding-top:2px;}
-.tldr p{margin:0;font-size:16.5px;font-weight:500;color:var(--ink);line-height:1.5;}
+/* Plain-English takeaway — the rookie&#39;s anchor. Label sits ABOVE the sentence
+   so the sentence gets the full width and reads as one clean line of meaning. */
+.tldr{background:var(--panel2);border-left:3px solid var(--link);
+  border-radius:0 10px 10px 0;padding:13px 16px;margin:0 0 16px;}
+.tldr .lbl{display:block;font-size:11px;font-weight:700;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--link);margin:0 0 6px;}
+.tldr p{margin:0;font-size:17px;font-weight:500;color:var(--ink);line-height:1.5;}
 
 .blocklabel{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
   color:var(--muted);margin:18px 0 9px;}
 .what{margin:0 0 4px;color:var(--ink2);font-size:16px;}
+
+/* &#34;Think of it like…&#34; — an everyday analogy that makes the mechanism click */
+.analogy{margin:14px 0 4px;padding:11px 14px;background:var(--panel2);
+  border:1px dashed var(--line);border-radius:11px;font-size:15px;color:var(--ink2);
+  line-height:1.55;}
+.analogy b{color:var(--ink);font-weight:600;}
 
 /* How it reaches India — connected chain */
 .chain{list-style:none;margin:0;padding:0;}
@@ -190,106 +196,6 @@ body{margin:0;background:var(--bg);color:var(--ink);
 <article class="card top">
   <div class="tags">
     <span class="badge">★ Top signal</span>
-    <span class="tag">Macro Data</span>
-    <span class="tag dot">1 source</span>
-  </div>
-
-  <h2>India bonds end week flat, but demand for long notes firms</h2>
-
-  
-  <div class="tldr">
-    <span class="lbl">In plain English</span>
-    <p>When global borrowing costs drop, global investors find Indian long-term loans attractive, which keeps local borrowing stable.</p>
-  </div>
-  
-
-  
-    <p class="what">Prices of Indian government bonds stayed mostly unchanged this week, but big investors showed strong interest in long-term notes (paper promises where the government borrows money for many years).</p>
-  
-
-  
-    <div class="blocklabel">How this reaches India</div>
-    <ul class="chain">
-      <li>Big institutional investors look for safe places to park their money for a long time.</li><li>Strong demand for long-term notes means the government can borrow money without paying higher interest rates.</li><li>Stable local interest rates make it easier for Indian companies to plan new factories and projects.</li><li>This steady confidence helps keep India&#x27;s financial markets calm and predictable.</li>
-    </ul>
-  
-
-  
-    <div class="blocklabel">What could move — and how likely</div>
-    <div class="impacts">
-      
-      <div class="impact">
-        <span class="dir down">
-          ▼ Falls</span>
-        <div class="impact-body">
-          <div class="impact-target">Indian Government Bond Yields (the return the government pays to borrow money)</div>
-          <div class="impact-why">higher demand for bonds pushes down the returns the government needs to offer.</div>
-        </div>
-        <div class="impact-side">
-          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
-          <span class="when">weeks</span>
-        </div>
-      </div>
-      
-      <div class="impact">
-        <span class="dir up">
-          ▲ Rises</span>
-        <div class="impact-body">
-          <div class="impact-target">The Rupee (each rupee buys fewer dollars)</div>
-          <div class="impact-why">steady bond demand encourages foreign investors to keep their money in India.</div>
-        </div>
-        <div class="impact-side">
-          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
-          <span class="when">months</span>
-        </div>
-      </div>
-      
-      <div class="impact">
-        <span class="dir up">
-          ▲ Rises</span>
-        <div class="impact-body">
-          <div class="impact-target">Banking Sector (banks like HDFC Bank and SBI)</div>
-          <div class="impact-why">stable bond markets protect banks from sudden losses on their existing bond holdings.</div>
-        </div>
-        <div class="impact-side">
-          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
-          <span class="when">weeks</span>
-        </div>
-      </div>
-      
-      <div class="impact">
-        <span class="dir down">
-          ▼ Falls</span>
-        <div class="impact-body">
-          <div class="impact-target">Gold</div>
-          <div class="impact-why">when fixed income assets look safe and steady, fewer people rush to buy gold as a panic shelter.</div>
-        </div>
-        <div class="impact-side">
-          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
-          <span class="when">weeks</span>
-        </div>
-      </div>
-      
-    </div>
-  
-
-  
-    <div class="blocklabel">What to watch next</div>
-    <ul class="watch">
-      <li>Upcoming government borrowing announcements</li><li>Changes in global interest rates set by the US central bank</li>
-    </ul>
-  
-
-  <div class="foot">
-    <span class="conf">Confidence <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><b>High</b></span>
-    <span>Economic Times Markets</span>
-    <a href="https://economictimes.indiatimes.com/markets/bonds/india-bonds-end-week-flat-but-demand-for-long-notes-firms/articleshow/133240625.cms" target="_blank" rel="noopener">Read the source →</a>
-  </div>
-  <div class="caveat">Where this could be wrong: Unexpected jumps in global <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> prices could suddenly push <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> up and disrupt bond demand.</div>
-</article>
-<article class="card top">
-  <div class="tags">
-    <span class="badge">★ Top signal</span>
     <span class="tag">General</span>
     <span class="tag dot">1 source</span>
   </div>
@@ -299,18 +205,22 @@ body{margin:0;background:var(--bg);color:var(--ink);
   
   <div class="tldr">
     <span class="lbl">In plain English</span>
-    <p>India&#x27;s piggy bank of foreign money just hit a record high, making the country much safer against sudden global financial storms.</p>
+    <p>India&#x27;s piggy bank of foreign money is at an all-time high, which makes our country look very safe to the rest of the world and helps keep our currency steady.</p>
   </div>
   
 
   
-    <p class="what">India&#x27;s central bank (the main money authority that controls the country&#x27;s cash and interest rates) collected a massive $14.1 billion extra in foreign currencies and gold, pushing our total savings up to $707 billion.</p>
+    <p class="what">India&#x27;s foreign exchange reserves (money kept by the central bank in foreign currencies like US dollars) jumped by $14.1 billion in a single week to cross $707 billion. Why did this happen? Big global investors poured their money into Indian stocks and bonds, and the <span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span> (Reserve Bank of India, our country&#x27;s main bank) bought up those extra dollars to keep the rupee from bouncing around too wildly.</p>
+  
+
+  
+    <div class="analogy"><b>Think of it like…</b> It is like having a massive emergency fund in your bank account; even if unexpected expenses pop up, nobody can bully you because you have plenty of cash to protect yourself.</div>
   
 
   
     <div class="blocklabel">How this reaches India</div>
     <ul class="chain">
-      <li>Having more foreign money in our piggy bank means India can easily pay for things it buys from abroad, like <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span>.</li><li>It gives big global investors confidence that the Indian economy is strong and stable.</li><li>It allows the central bank to step in and protect the rupee (our local currency) if it suddenly starts dropping in value.</li><li>A stronger safety shield makes foreign companies and investors more comfortable keeping their money in India.</li>
+      <li>Foreign investors pumped money into Indian financial markets because they trust India&#x27;s economic growth.</li><li>The <span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span> stepped in and bought those incoming US dollars, adding them directly to the country&#x27;s backup piggy bank (the forex reserves).</li><li>With a massive pool of dollars, India can easily pay for its imports like <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> even during global panics.</li><li>A heavy backup fund acts like a shield, stopping the rupee from crashing suddenly against the US dollar.</li>
     </ul>
   
 
@@ -322,8 +232,8 @@ body{margin:0;background:var(--bg);color:var(--ink);
         <span class="dir up">
           ▲ Rises</span>
         <div class="impact-body">
-          <div class="impact-target">The Rupee</div>
-          <div class="impact-why">extra foreign savings act as a heavy shield to keep our currency steady against the dollar.</div>
+          <div class="impact-target">The rupee (vs the US dollar)</div>
+          <div class="impact-why">More dollars in the bank mean the rupee stays stable or slightly stronger, which is great for you because imported goods like <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> and electronics don&#x27;t suddenly become super expensive.</div>
         </div>
         <div class="impact-side">
           <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
@@ -332,11 +242,11 @@ body{margin:0;background:var(--bg);color:var(--ink);
       </div>
       
       <div class="impact">
-        <span class="dir up">
-          ▲ Rises</span>
+        <span class="dir down">
+          ▼ Falls</span>
         <div class="impact-body">
-          <div class="impact-target">Foreign Investment (FIIs - big foreign investors)</div>
-          <div class="impact-why">a secure and stable economy attracts more money from overseas funds into Indian shares.</div>
+          <div class="impact-target">India&#39;s inflation rate</div>
+          <div class="impact-why">A stable rupee keeps the cost of importing items like <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> in check, meaning everyday things like petrol and transport costs are less likely to shoot up — good news for household budgets.</div>
         </div>
         <div class="impact-side">
           <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
@@ -345,11 +255,11 @@ body{margin:0;background:var(--bg);color:var(--ink);
       </div>
       
       <div class="impact">
-        <span class="dir up">
-          ▲ Rises</span>
+        <span class="dir down">
+          ▼ Falls</span>
         <div class="impact-body">
-          <div class="impact-target">Import-heavy businesses (Oil companies like Reliance or BPCL)</div>
-          <div class="impact-why">a stable currency makes buying expensive foreign goods like <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> slightly smoother and less prone to sudden price shocks.</div>
+          <div class="impact-target">10-year bond yield (the interest rate the government pays to borrow)</div>
+          <div class="impact-why">When foreign money keeps flowing in, demand for Indian government bonds goes up, which lowers the interest the government pays to borrow money — and often leads to cheaper loans for regular people.</div>
         </div>
         <div class="impact-side">
           <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
@@ -363,7 +273,7 @@ body{margin:0;background:var(--bg);color:var(--ink);
   
     <div class="blocklabel">What to watch next</div>
     <ul class="watch">
-      <li>Keep an eye on whether global <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> prices stay calm or shoot up</li><li>Watch if foreign investors continue putting money into Indian stock markets</li>
+      <li>Whether foreign investors keep pumping money into Indian markets or pull it out</li><li>How aggressively the <span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span> continues to buy dollars</li>
     </ul>
   
 
@@ -372,32 +282,36 @@ body{margin:0;background:var(--bg);color:var(--ink);
     <span>Economic Times Economy</span>
     <a href="https://economictimes.indiatimes.com/news/economy/finance/forex-reserves-up-by-14-136-billion-to-707-002-billion/articleshow/133240225.cms" target="_blank" rel="noopener">Read the source →</a>
   </div>
-  <div class="caveat">Where this could be wrong: If global oil prices suddenly skyrocket, India will have to spend a huge chunk of these savings much faster than expected.</div>
+  <div class="caveat">Where this could be wrong: If global oil prices suddenly skyrocket or foreign investors panic and take their money back out of India, these reserves could shrink just as fast.</div>
 </article>
 <article class="card top">
   <div class="tags">
     <span class="badge">★ Top signal</span>
-    <span class="tag">Geopolitics</span>
+    <span class="tag">Monetary Policy</span>
     <span class="tag dot">1 source</span>
   </div>
 
-  <h2>Rupee logs weekly decline, with RBI intervention curbing losses</h2>
+  <h2>Gold jumps 9% in August as weaker dollar, easing Fed bets boost demand</h2>
 
   
   <div class="tldr">
     <span class="lbl">In plain English</span>
-    <p>When global troubles make our currency weaker, everyday goods can get costlier because India buys most of its fuel from abroad.</p>
+    <p>When global gold prices shoot up because big central banks are expected to lower interest rates, it makes imported jewellery and safe-haven investments costlier for regular people in India.</p>
   </div>
   
 
   
-    <p class="what">The Indian rupee [our country&#x27;s money used to buy things globally] lost value over the week, though our central bank stepped in to stop it from falling even faster.</p>
+    <p class="what">Gold prices shot up by nine percent in a single month because traders believe the US <span class="term" tabindex="0" role="button" aria-label="The US Federal Reserve — America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India." data-def="The US Federal Reserve — America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India.">Fed</span> (United States <span class="term" tabindex="0" role="button" aria-label="America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India." data-def="America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India.">Federal Reserve</span>, the main bank that controls US interest rates) will soon lower its lending rates. When interest rates drop, holding cash earns less, so global investors rush to buy gold instead, pushing its price up.</p>
+  
+
+  
+    <div class="analogy"><b>Think of it like…</b> It is like a crowded neighborhood street where a popular sweet shop suddenly lowers its prices. Everyone rushes to buy the same sweets, so the few boxes left get much more expensive.</div>
   
 
   
     <div class="blocklabel">How this reaches India</div>
     <ul class="chain">
-      <li>India buys most of its oil from other countries.</li><li>When oil prices go up globally, we need more rupees to buy the same amount of oil.</li><li>This extra cost makes the rupee weaker [each rupee buys fewer dollars].</li><li>Costlier oil leads to higher prices for petrol and transport, making everyday items more expensive for everyone.</li>
+      <li>The US <span class="term" tabindex="0" role="button" aria-label="The US Federal Reserve — America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India." data-def="The US Federal Reserve — America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India.">Fed</span> signals it might cut interest rates, making the US dollar weaker (each dollar buys fewer things).</li><li>Global investors lose interest in keeping cash in the US and start buying safe assets like gold instead.</li><li>Because India imports most of its gold from abroad, global price hikes make physical gold and gold jewellery much costlier in local shops.</li><li>At the same time, a weaker dollar helps the Indian rupee steady, which slightly lowers the cost of importing <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span>.</li>
     </ul>
   
 
@@ -406,11 +320,11 @@ body{margin:0;background:var(--bg);color:var(--ink);
     <div class="impacts">
       
       <div class="impact">
-        <span class="dir down">
-          ▼ Falls</span>
+        <span class="dir up">
+          ▲ Rises</span>
         <div class="impact-body">
-          <div class="impact-target">The rupee</div>
-          <div class="impact-why">Global pressures and heavy oil import bills keep pushing our currency down.</div>
+          <div class="impact-target">Gold price in India</div>
+          <div class="impact-why">Global gold prices are rising due to US rate-cut bets, meaning buying jewellery or gold coins in India becomes more expensive — generally bad for everyday buyers and wedding shoppers.</div>
         </div>
         <div class="impact-side">
           <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
@@ -419,24 +333,11 @@ body{margin:0;background:var(--bg);color:var(--ink);
       </div>
       
       <div class="impact">
-        <span class="dir down">
-          ▼ Falls</span>
-        <div class="impact-body">
-          <div class="impact-target">Oil-importing firms (like transport and paint companies)</div>
-          <div class="impact-why">Raw materials become much more expensive to buy.</div>
-        </div>
-        <div class="impact-side">
-          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
-          <span class="when">weeks</span>
-        </div>
-      </div>
-      
-      <div class="impact">
         <span class="dir up">
           ▲ Rises</span>
         <div class="impact-body">
-          <div class="impact-target">Gold</div>
-          <div class="impact-why">People rush to buy safe metals when global uncertainty grows.</div>
+          <div class="impact-target">The rupee (vs the US dollar)</div>
+          <div class="impact-why">A softer US dollar gives breathing room to the Indian rupee, making it slightly stronger — good because imported goods like electronics become a bit cheaper.</div>
         </div>
         <div class="impact-side">
           <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
@@ -448,111 +349,8 @@ body{margin:0;background:var(--bg);color:var(--ink);
         <span class="dir up">
           ▲ Rises</span>
         <div class="impact-body">
-          <div class="impact-target">RBI (Reserve Bank of India, our central bank)</div>
-          <div class="impact-why">They will likely use their dollar savings to defend our currency from crashing.</div>
-        </div>
-        <div class="impact-side">
-          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
-          <span class="when">days</span>
-        </div>
-      </div>
-      
-    </div>
-  
-
-  
-    <div class="blocklabel">What to watch next</div>
-    <ul class="watch">
-      <li>Watch if international <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> prices go up or down next week.</li><li>See if the Reserve Bank of India sells more of its foreign money reserves to support the rupee.</li>
-    </ul>
-  
-
-  <div class="foot">
-    <span class="conf">Confidence <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><b>High</b></span>
-    <span>Economic Times Markets</span>
-    <a href="https://economictimes.indiatimes.com/markets/forex/rupee-logs-weekly-decline-with-rbi-intervention-curbing-losses/articleshow/133237831.cms" target="_blank" rel="noopener">Read the source →</a>
-  </div>
-  <div class="caveat">Where this could be wrong: If global oil prices suddenly drop, the pressure on our rupee will ease quickly.</div>
-</article>
-
-<div class="section">Also on the radar</div>
-
-<article class="card ">
-  <div class="tags">
-    
-    <span class="tag">General</span>
-    <span class="tag dot">1 source</span>
-  </div>
-
-  <h2>Sensex falls 71 points, Nifty closes below 24,400; broader markets underperform. What lies ahead?</h2>
-
-  
-  <div class="tldr">
-    <span class="lbl">In plain English</span>
-    <p>Indian stock markets had a small dip, and smaller companies fell more than the big ones, making investors cautious.</p>
-  </div>
-  
-
-  
-    <p class="what">The Sensex (the top 30 big companies on the Indian stock market) dropped slightly by 71 points, and the Nifty (a group of the top 50 big companies) fell below 24,400. At the same time, smaller company stocks performed worse than the big ones.</p>
-  
-
-  
-    <div class="blocklabel">How this reaches India</div>
-    <ul class="chain">
-      <li>When big stock indexes dip, it usually means big foreign investors (<span class="term" tabindex="0" role="button" aria-label="Foreign Institutional Investors — big overseas funds that buy and sell Indian shares. When they pull money out, markets and the rupee usually fall." data-def="Foreign Institutional Investors — big overseas funds that buy and sell Indian shares. When they pull money out, markets and the rupee usually fall.">FIIs</span>) are selling more than they are buying.</li><li>Smaller companies falling faster shows that everyday investors are getting nervous and taking their money off the table.</li><li>A slight dip is normal and happens all the time in a healthy market, but it makes people pause and watch the news closely.</li><li>If global markets stay shaky, Indian markets might stay flat or dip a little more in the short term.</li>
-    </ul>
-  
-
-  
-    <div class="blocklabel">What could move — and how likely</div>
-    <div class="impacts">
-      
-      <div class="impact">
-        <span class="dir down">
-          ▼ Falls</span>
-        <div class="impact-body">
-          <div class="impact-target">Nifty 50 (the top 50 big Indian companies)</div>
-          <div class="impact-why">recent slight selling pressure can push numbers down temporarily</div>
-        </div>
-        <div class="impact-side">
-          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
-          <span class="when">days</span>
-        </div>
-      </div>
-      
-      <div class="impact">
-        <span class="dir down">
-          ▼ Falls</span>
-        <div class="impact-body">
-          <div class="impact-target">Broader markets (smaller and medium-sized companies)</div>
-          <div class="impact-why">they often fall harder when nervous investors pull their money out</div>
-        </div>
-        <div class="impact-side">
-          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
-          <span class="when">days</span>
-        </div>
-      </div>
-      
-      <div class="impact">
-        <span class="dir up">
-          ▲ Rises</span>
-        <div class="impact-body">
-          <div class="impact-target">Gold</div>
-          <div class="impact-why">investors often run to safe gold when stock markets look shaky</div>
-        </div>
-        <div class="impact-side">
-          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
-          <span class="when">weeks</span>
-        </div>
-      </div>
-      
-      <div class="impact">
-        <span class="dir down">
-          ▼ Falls</span>
-        <div class="impact-body">
-          <div class="impact-target">The rupee (each rupee buys fewer dollars)</div>
-          <div class="impact-why">when foreign money leaves India, our currency gets slightly weaker</div>
+          <div class="impact-target">Nifty 50 (India&#39;s main stock index)</div>
+          <div class="impact-why">When US rates fall, global investors (<span class="term" tabindex="0" role="button" aria-label="Foreign Institutional Investors — big overseas funds that buy and sell Indian shares. When they pull money out, markets and the rupee usually fall." data-def="Foreign Institutional Investors — big overseas funds that buy and sell Indian shares. When they pull money out, markets and the rupee usually fall.">FIIs</span>, big foreign investors) often bring spare money into developing countries like India, pushing local stock markets up — good for mutual fund investors.</div>
         </div>
         <div class="impact-side">
           <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
@@ -566,20 +364,20 @@ body{margin:0;background:var(--bg);color:var(--ink);
   
     <div class="blocklabel">What to watch next</div>
     <ul class="watch">
-      <li>Whether big foreign investors keep selling shares or start buying again</li><li>Global stock market trends, especially in the US</li>
+      <li>Official US <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> and job reports, which decide if the US <span class="term" tabindex="0" role="button" aria-label="The US Federal Reserve — America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India." data-def="The US Federal Reserve — America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India.">Fed</span> will actually cut interest rates</li><li>Local festival demand for gold in India</li>
     </ul>
   
 
   <div class="foot">
     <span class="conf">Confidence <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><b>High</b></span>
-    <span>Economic Times Markets</span>
-    <a href="https://economictimes.indiatimes.com/markets/stocks/news/sensex-falls-71-points-nifty-closes-below-24400-broader-markets-underperform-what-lies-ahead/articleshow/133237775.cms" target="_blank" rel="noopener">Read the source →</a>
+    <span>Livemint Markets</span>
+    <a href="https://www.livemint.com/market/commodities/gold-jumps-9-in-august-as-weaker-dollar-easing-fed-bets-boost-demand-11786716604532.html" target="_blank" rel="noopener">Read the source →</a>
   </div>
-  <div class="caveat">Where this could be wrong: A sudden positive global news announcement could easily reverse these small dips by tomorrow morning.</div>
+  <div class="caveat">Where this could be wrong: If unexpected <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> reports force the US <span class="term" tabindex="0" role="button" aria-label="The US Federal Reserve — America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India." data-def="The US Federal Reserve — America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India.">Fed</span> to change its mind and keep interest rates high, gold prices could suddenly tumble back down.</div>
 </article>
-<article class="card ">
+<article class="card top">
   <div class="tags">
-    
+    <span class="badge">★ Top signal</span>
     <span class="tag">General</span>
     <span class="tag dot">1 source</span>
   </div>
@@ -589,18 +387,22 @@ body{margin:0;background:var(--bg);color:var(--ink);
   
   <div class="tldr">
     <span class="lbl">In plain English</span>
-    <p>When certain popular stocks drop sharply in a single day, it usually points to profit-taking by big investors or temporary bad news for specific industries rather than a crisis for all of India.</p>
+    <p>Individual company stock prices move up and down every day based on buyer and seller moods, which affects the wealth of people who own those specific shares.</p>
   </div>
   
 
   
-    <p class="what">On August 14, several well-known Indian companies like Tata Motors, Hindustan Copper, and HPCL (Hindustan Petroleum Corporation Limited, a government-owned fuel seller) saw their share prices fall more than other companies on the stock market.</p>
+    <p class="what">Stock prices for companies like NALCO and HPCL fell on August 14 because more people wanted to sell their shares than buy them. This usually happens when quarterly business results disappoint investors, or when global commodity prices drop, making traders worried about future profits.</p>
+  
+
+  
+    <div class="analogy"><b>Think of it like…</b> It is like a crowded vegetable market where nobody wants to buy tomatoes today because tomorrow&#x27;s weather looks rainy, forcing sellers to slash their prices just to get rid of them.</div>
   
 
   
     <div class="blocklabel">How this reaches India</div>
     <ul class="chain">
-      <li>Traders and big investors often sell stocks that have risen a lot recently to take their money off the table.</li><li>When raw material companies like copper and aluminum makers drop, it can reflect worries about global demand.</li><li>When fuel retailers like HPCL drop, it often means investors are worried about rising <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> costs squeezing their profits.</li><li>Such daily ups and downs are normal market noise and rarely change the long-term story of a growing Indian economy.</li>
+      <li>Traders and big investors react to company earnings or global news by selling shares of certain firms.</li><li>When selling pressure goes up, the share price drops rapidly.</li><li>Retail investors (everyday people trading through apps) who hold these specific stocks see their portfolio value fall.</li><li>It reminds everyday investors that single stocks are risky and bounce around much more than the overall market.</li>
     </ul>
   
 
@@ -612,8 +414,8 @@ body{margin:0;background:var(--bg);color:var(--ink);
         <span class="dir down">
           ▼ Falls</span>
         <div class="impact-body">
-          <div class="impact-target">HPCL (fuel seller)</div>
-          <div class="impact-why">investors reacted to short-term cost pressures on fuel companies</div>
+          <div class="impact-target">Nifty 50 (India&#39;s main stock index)</div>
+          <div class="impact-why">When prominent stocks fall together, it pulls down the overall market mood, which is generally bad for short-term investor sentiment.</div>
         </div>
         <div class="impact-side">
           <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
@@ -625,37 +427,11 @@ body{margin:0;background:var(--bg);color:var(--ink);
         <span class="dir down">
           ▼ Falls</span>
         <div class="impact-body">
-          <div class="impact-target">Metal stocks like NALCO and Hindustan Copper</div>
-          <div class="impact-why">global growth worries lower the expected demand for metals</div>
+          <div class="impact-target">Retail investor portfolios holding these specific stocks</div>
+          <div class="impact-why">People holding losers like NALCO or HPCL see their invested money shrink temporarily, which can cause stress.</div>
         </div>
         <div class="impact-side">
-          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
-          <span class="when">days</span>
-        </div>
-      </div>
-      
-      <div class="impact">
-        <span class="dir down">
-          ▼ Falls</span>
-        <div class="impact-body">
-          <div class="impact-target">The Rupee (our local currency)</div>
-          <div class="impact-why">isolated stock market losers have almost no effect on the overall currency</div>
-        </div>
-        <div class="impact-side">
-          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
-          <span class="when">hours</span>
-        </div>
-      </div>
-      
-      <div class="impact">
-        <span class="dir up">
-          ▲ Rises</span>
-        <div class="impact-body">
-          <div class="impact-target">Gold</div>
-          <div class="impact-why">safe-haven buying is minimal since this is just routine stock movement</div>
-        </div>
-        <div class="impact-side">
-          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
           <span class="when">hours</span>
         </div>
       </div>
@@ -666,7 +442,7 @@ body{margin:0;background:var(--bg);color:var(--ink);
   
     <div class="blocklabel">What to watch next</div>
     <ul class="watch">
-      <li>Whether these falling stocks bounce back or continue dropping over the next week</li><li>Global <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> prices which affect fuel retail companies like HPCL</li>
+      <li>Whether these fallen stocks recover quickly or continue dropping over the coming week</li><li>Company announcements or quarterly financial results that might have triggered the sell-off</li>
     </ul>
   
 
@@ -675,7 +451,114 @@ body{margin:0;background:var(--bg);color:var(--ink);
     <span>Livemint Markets</span>
     <a href="https://www.livemint.com/market/stock-market-news/top-gainers-losers-on-14-august-nalco-hpcl-tata-motors-pv-netweb-tech-hindustan-copper-among-top-losers-11786700818338.html" target="_blank" rel="noopener">Read the source →</a>
   </div>
-  <div class="caveat">Where this could be wrong: If these single-day drops turn into a weeks-long trend across many sectors, it could mean bigger economic worries are brewing.</div>
+  <div class="caveat">Where this could be wrong: A single day&#x27;s drop does not mean a company is ruined forever; stocks often bounce back just as fast if the broader market recovers.</div>
+</article>
+
+<div class="section">Also on the radar</div>
+
+<article class="card ">
+  <div class="tags">
+    
+    <span class="tag">Geopolitics</span>
+    <span class="tag dot">1 source</span>
+  </div>
+
+  <h2>Sensex, Nifty 50 snap 2-week winning streak on Middle East uncertainty, oil price volatility</h2>
+
+  
+  <div class="tldr">
+    <span class="lbl">In plain English</span>
+    <p>Tension in the Middle East is making <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> prices jump, which could soon make everyday items, transport, and cooking gas costlier in India.</p>
+  </div>
+  
+
+  
+    <p class="what">India&#x27;s main stock markets (Sensex and Nifty 50) fell after rising for two straight weeks. This happened because fighting in the Middle East has scared global investors, making them worry that oil supplies will get disrupted and prices will shoot up.</p>
+  
+
+  
+    <div class="analogy"><b>Think of it like…</b> It is like running a bakery where the price of flour suddenly jumps because of a fight in the neighborhood wheat fields — your costs go up instantly, and your business feels the heat.</div>
+  
+
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain">
+      <li>Conflict in the Middle East threatens oil wells and shipping lanes</li><li>Global <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> (raw petroleum) prices rise because traders fear a shortage</li><li>India imports over 80 percent of its oil, so the country has to pay much more in US dollars</li><li>To pay for that expensive oil, India&#x27;s central bank and companies sell rupees to buy dollars, pushing the rupee down and making overall <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> (rising prices) worse</li>
+    </ul>
+  
+
+  
+    <div class="blocklabel">What could move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Petrol &amp; diesel prices</div>
+          <div class="impact-why">Costlier global crude means fuel gets more expensive to make, which hurts household budgets and makes transport costlier — bad for everyone.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">The rupee (vs the US dollar)</div>
+          <div class="impact-why">India needs more dollars to buy expensive oil, making our currency weaker — which makes imported goods and foreign travel costlier.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Gold price in India</div>
+          <div class="impact-why">When world markets get scared by wars, investors rush to buy gold as a safe box for their wealth, pushing prices up for buyers in India.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Nifty 50 (India&#39;s main stock index)</div>
+          <div class="impact-why"><span class="term" tabindex="0" role="button" aria-label="Foreign Institutional Investors — big overseas funds that buy and sell Indian shares. When they pull money out, markets and the rupee usually fall." data-def="Foreign Institutional Investors — big overseas funds that buy and sell Indian shares. When they pull money out, markets and the rupee usually fall.">FIIs</span> (big foreign investors) pull their money out of risky stock markets during global tensions, causing local share prices to drop.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+    </div>
+  
+
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch">
+      <li>Updates on whether Middle East oil production or shipping routes actually get disrupted</li><li>Daily changes in international <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> prices</li>
+    </ul>
+  
+
+  <div class="foot">
+    <span class="conf">Confidence <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><b>High</b></span>
+    <span>Livemint Markets</span>
+    <a href="https://www.livemint.com/market/stock-market-news/sensex-nifty-50-snap-2-week-winning-streak-on-middle-east-uncertainty-oil-price-volatility-11786701521270.html" target="_blank" rel="noopener">Read the source →</a>
+  </div>
+  <div class="caveat">Where this could be wrong: If the political tensions cool down quickly, oil prices could fall back down just as fast, erasing these market worries.</div>
 </article>
 <article class="card ">
   <div class="tags">
@@ -689,18 +572,22 @@ body{margin:0;background:var(--bg);color:var(--ink);
   
   <div class="tldr">
     <span class="lbl">In plain English</span>
-    <p>When the US puts taxes on Chinese goods, some factory orders shift to India, creating a mixed bag of new business and trade friction.</p>
+    <p>When the US taxes goods from China, companies look to India to buy things instead, which can mean more business for Indian factories but also new trade investigations.</p>
   </div>
   
 
   
-    <p class="what">The US is investigating how much Chinese goods are secretly entering America through other countries like India to avoid high import taxes. This $67 billion trade trail means American regulators are looking closely at Indian shipping routes.</p>
+    <p class="what">The US has placed heavy taxes on billions of dollars of Chinese goods to protect its own industries. Because of this, trade detectives are tracking how some Chinese goods might be quietly rerouting through other countries like India to avoid those taxes, sparking questions about whether India is becoming a backdoor for Chinese products.</p>
+  
+
+  
+    <div class="analogy"><b>Think of it like…</b> It is like a bouncer banning a rowdy customer from a club, so that customer tries to sneak in wearing a borrowed jacket — now the bouncer is checking everyone at the door to see who lent their jacket.</div>
   
 
   
     <div class="blocklabel">How this reaches India</div>
     <ul class="chain">
-      <li>The US questions if goods coming from India are actually made in China and just repacked.</li><li>American officials might slap stricter checks or taxes on Indian exports to stop this routing.</li><li>At the same time, global companies want to rely less on China and look to India as a reliable backup factory.</li><li>Indian factories that genuinely make their own products could win big if US buyers choose them over Chinese rivals.</li>
+      <li>The US places heavy taxes on Chinese goods to make them expensive.</li><li>Global companies look for alternative places like India to make and buy goods instead of China.</li><li>US trade authorities check if some of those goods are secretly made in China and just labeled as Indian.</li><li>Legitimate Indian factories win more business, while companies caught cheating face strict US penalties.</li>
     </ul>
   
 
@@ -712,8 +599,8 @@ body{margin:0;background:var(--bg);color:var(--ink);
         <span class="dir up">
           ▲ Rises</span>
         <div class="impact-body">
-          <div class="impact-target">Manufacturing sector (like Dixon Technologies, Motherson Sumi)</div>
-          <div class="impact-why">global brands keep moving their factory orders away from China to India</div>
+          <div class="impact-target">Manufacturing stocks like Dixon Technologies &amp; Indian exporters</div>
+          <div class="impact-why">Global brands want alternatives to China, which brings more factory orders to India — generally good for job creation and business growth.</div>
         </div>
         <div class="impact-side">
           <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
@@ -725,11 +612,11 @@ body{margin:0;background:var(--bg);color:var(--ink);
         <span class="dir down">
           ▼ Falls</span>
         <div class="impact-body">
-          <div class="impact-target">Indian exporters of electronics and engineering goods</div>
-          <div class="impact-why">stricter US customs checks could delay shipments and create paperwork headaches</div>
+          <div class="impact-target">The rupee (vs the US dollar)</div>
+          <div class="impact-why">If trade tensions flare up and foreign investors pull money out of fear, the rupee weakens (each rupee buys fewer dollars), making imported fuel and electronics costlier for Indians.</div>
         </div>
         <div class="impact-side">
-          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
           <span class="when">weeks</span>
         </div>
       </div>
@@ -738,12 +625,12 @@ body{margin:0;background:var(--bg);color:var(--ink);
         <span class="dir up">
           ▲ Rises</span>
         <div class="impact-body">
-          <div class="impact-target">Gold</div>
-          <div class="impact-why">global trade fights make investors nervous, leading them to buy safe gold</div>
+          <div class="impact-target">Nifty 50 (India&#39;s main stock index)</div>
+          <div class="impact-why">More global factories moving to India boosts corporate earnings, which generally pushes the stock market higher — good for investors.</div>
         </div>
         <div class="impact-side">
-          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
-          <span class="when">days</span>
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">months</span>
         </div>
       </div>
       
@@ -753,7 +640,7 @@ body{margin:0;background:var(--bg);color:var(--ink);
   
     <div class="blocklabel">What to watch next</div>
     <ul class="watch">
-      <li>Official statements from the US government regarding new trade rules on India</li><li>Monthly export data to see if Indian shipments to America are slowing down or speeding up</li>
+      <li>Official US announcements on whether they will place penalties or extra taxes on Indian goods</li><li>Monthly export data from the Indian government to see if manufacturing sales are actually rising</li>
     </ul>
   
 
@@ -762,89 +649,7 @@ body{margin:0;background:var(--bg);color:var(--ink);
     <span>Economic Times Economy</span>
     <a href="https://economictimes.indiatimes.com/news/economy/foreign-trade/us-china-india-trade-67-billion-tariff-trail-transshipment-gtri-scrutiny-imports-exporters/articleshow/133237809.cms" target="_blank" rel="noopener">Read the source →</a>
   </div>
-  <div class="caveat">Where this could be wrong: If the US decides to slap broad taxes on all Indian goods instead of just suspicious ones, the impact on local factories could turn negative.</div>
-</article>
-<article class="card ">
-  <div class="tags">
-    
-    <span class="tag">General</span>
-    <span class="tag dot">1 source</span>
-  </div>
-
-  <h2>India’s July exports hit record $44.2 billion despite West Asia crisis</h2>
-
-  
-  <div class="tldr">
-    <span class="lbl">In plain English</span>
-    <p>Even with global trouble in West Asia, Indian businesses sold a record amount of goods abroad last month, showing our economy&#x27;s strength.</p>
-  </div>
-  
-
-  
-    <p class="what">India&#x27;s total exports (goods and services sold to other countries) reached a massive $44.2 billion in July. This happened even though shipping routes are facing trouble due to ongoing conflicts in West Asia (the Middle East region containing countries like Israel and Iran).</p>
-  
-
-  
-
-  
-    <div class="blocklabel">What could move — and how likely</div>
-    <div class="impacts">
-      
-      <div class="impact">
-        <span class="dir up">
-          ▲ Rises</span>
-        <div class="impact-body">
-          <div class="impact-target">The rupee (each rupee buys fewer dollars)</div>
-          <div class="impact-why">steady money inflow from exports helps support the Indian currency</div>
-        </div>
-        <div class="impact-side">
-          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
-          <span class="when">weeks</span>
-        </div>
-      </div>
-      
-      <div class="impact">
-        <span class="dir up">
-          ▲ Rises</span>
-        <div class="impact-body">
-          <div class="impact-target">Manufacturing and Export Sectors (like engineering and textiles)</div>
-          <div class="impact-why">record sales mean higher earnings for companies selling outside India</div>
-        </div>
-        <div class="impact-side">
-          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
-          <span class="when">weeks</span>
-        </div>
-      </div>
-      
-      <div class="impact">
-        <span class="dir down">
-          ▼ Falls</span>
-        <div class="impact-body">
-          <div class="impact-target">CAD (the gap between what India buys and sells abroad)</div>
-          <div class="impact-why">stronger exports help shrink the trade deficit</div>
-        </div>
-        <div class="impact-side">
-          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
-          <span class="when">months</span>
-        </div>
-      </div>
-      
-    </div>
-  
-
-  
-    <div class="blocklabel">What to watch next</div>
-    <ul class="watch">
-      <li>Whether shipping costs and oil prices stay stable despite the West Asia crisis</li><li>If upcoming months can maintain this record-breaking export speed</li>
-    </ul>
-  
-
-  <div class="foot">
-    <span class="conf">Confidence <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><b>High</b></span>
-    <span>Economic Times Economy</span>
-    <a href="https://economictimes.indiatimes.com/news/economy/indicators/indias-july-exports-hit-record-44-2-billion-despite-west-asia-crisis/articleshow/133227026.cms" target="_blank" rel="noopener">Read the source →</a>
-  </div>
-  <div class="caveat">Where this could be wrong: If global conflicts suddenly worsen and block major shipping lanes, it could quickly become much more expensive to send goods abroad.</div>
+  <div class="caveat">Where this could be wrong: If the US proves India is being used to bypass taxes on a large scale, it could slap broad taxes on Indian exports instead of helping them.</div>
 </article>
 <article class="card ">
   <div class="tags">
@@ -858,18 +663,217 @@ body{margin:0;background:var(--bg);color:var(--ink);
   
   <div class="tldr">
     <span class="lbl">In plain English</span>
-    <p>India&#x27;s central bank is stopping a special scheme that brought in lots of foreign money because our financial safety net is already super strong.</p>
+    <p>The <span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span> (Reserve Bank of India, our central bank) has collected so many US dollars from abroad that it is stopping a special savings scheme early because it has enough foreign money to keep our currency stable.</p>
   </div>
   
 
   
-    <p class="what">The <span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span> (Reserve Bank of India, our big boss bank) ran a special savings scheme for Non-Resident Indians living abroad to deposit foreign money. Since they collected a massive 52 billion dollars (about 4.3 lakh crore rupees), the RBI decided to close the scheme early.</p>
+    <p class="what">The <span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span> had launched a special scheme (called FCNR) allowing banks to offer attractive interest rates to pull in US dollars from non-resident Indians. Because global investors poured in a massive 52 billion dollars (over four lakh crore rupees), the RBI got more than enough foreign cash and decided to close the scheme ahead of time.</p>
+  
+
+  
+    <div class="analogy"><b>Think of it like…</b> It is like a neighborhood store that starts a special discount to collect loose cash from neighbors. When the owner gets way more cash than needed to pay suppliers, they happily put up a &#x27;scheme closed&#x27; sign.</div>
   
 
   
     <div class="blocklabel">How this reaches India</div>
     <ul class="chain">
-      <li>NRIs (Non-Resident Indians, people of Indian origin living abroad) poured billions of foreign dollars into Indian banks.</li><li>This huge flood of foreign money made the <span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span>&#x27;s vault very full and kept our country&#x27;s financial safety net strong.</li><li>Because the <span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span> has enough dollars now, it does not need to offer extra perks to attract more foreign money.</li><li>Stopping the scheme means fewer foreign dollars will enter India through this specific route moving forward.</li>
+      <li>Non-resident Indians and global banks deposited billions of US dollars into Indian banks to earn good interest.</li><li>The <span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span> gathered a massive pile of foreign currency, making our total foreign exchange reserves much stronger.</li><li>A larger dollar reserve helps protect the Indian rupee from falling sharply when global markets shake.</li><li>With enough dollars safely in the bank, the <span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span> does not need to offer extra-high interest rates anymore.</li>
+    </ul>
+  
+
+  
+    <div class="blocklabel">What could move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">The rupee (vs the US dollar)</div>
+          <div class="impact-why">More dollars sitting inside Indian banks make our currency stronger against the dollar, which is generally good for everyday Indians because imported items like <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> become slightly cheaper.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">India&#39;s foreign exchange reserves</div>
+          <div class="impact-why">A flood of 52 billion dollars directly bulks up India&#x27;s national savings safety net, making the country look very safe to global lenders.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">10-year bond yield (interest India pays to borrow)</div>
+          <div class="impact-why">When the banking system has plenty of cash, the government can borrow money more cheaply, which usually leads to lower interest rates on regular loans for people.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">months</span>
+        </div>
+      </div>
+      
+    </div>
+  
+
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch">
+      <li>Look out for updates on India&#x27;s total foreign exchange reserve numbers published weekly by the <span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span>.</li><li>Check if banks lower the interest rates they offer on fixed deposits now that this special dollar scheme has ended.</li>
+    </ul>
+  
+
+  <div class="foot">
+    <span class="conf">Confidence <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><b>High</b></span>
+    <span>Livemint Markets</span>
+    <a href="https://www.livemint.com/market/dollar-deluge-prompts-rbi-to-shut-special-fcnr-scheme-early-ecbs-ofcbs-nris-foreign-currency-deposits-11786713510471.html" target="_blank" rel="noopener">Read the source →</a>
+  </div>
+  <div class="caveat">Where this could be wrong: If global markets suddenly panic and investors rush to pull their dollars back out, the <span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span> might need to use these reserves quickly to defend the rupee.</div>
+</article>
+<article class="card ">
+  <div class="tags">
+    
+    <span class="tag">General</span>
+    <span class="tag dot">1 source</span>
+  </div>
+
+  <h2>Here are five key takeaways from the July CPI inflation report</h2>
+
+  
+  <div class="tldr">
+    <span class="lbl">In plain English</span>
+    <p>US <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> is cooling down, which means the US central bank will likely lower interest rates soon, giving global markets a positive boost.</p>
+  </div>
+  
+
+  
+    <p class="what">The US released its <span class="term" tabindex="0" role="button" aria-label="Consumer Price Index — the main measure of inflation, i.e. how fast everyday prices are rising." data-def="Consumer Price Index — the main measure of inflation, i.e. how fast everyday prices are rising.">CPI</span> (Consumer Price Index, a measure of how fast the prices of everyday goods and services are rising) report for July, showing that price rises are slowing down. This happened because costs for things like gasoline and used cars dropped, giving everyday American families some breathing room after months of high prices.</p>
+  
+
+  
+    <div class="analogy"><b>Think of it like…</b> It is like a car that was speeding down the highway finally taking its foot off the gas pedal. The car is still moving forward, but it is not accelerating as aggressively as before.</div>
+  
+
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain">
+      <li>US <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> slows down -&gt; US <span class="term" tabindex="0" role="button" aria-label="America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India." data-def="America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India.">Federal Reserve</span> (the US central bank) gets confidence that price pressures are under control.</li><li>The <span class="term" tabindex="0" role="button" aria-label="The US Federal Reserve — America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India." data-def="The US Federal Reserve — America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India.">Fed</span> signals it will cut interest rates -&gt; global investors look for higher returns in developing countries like India.</li><li><span class="term" tabindex="0" role="button" aria-label="Foreign Institutional Investors — big overseas funds that buy and sell Indian shares. When they pull money out, markets and the rupee usually fall." data-def="Foreign Institutional Investors — big overseas funds that buy and sell Indian shares. When they pull money out, markets and the rupee usually fall.">FIIs</span> (big foreign investors) pump money into Indian stocks and bonds -&gt; demand for Indian rupees goes up.</li><li>The rupee strengthens (each rupee buys more dollars) -&gt; imported items like <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> become slightly cheaper for India.</li>
+    </ul>
+  
+
+  
+    <div class="blocklabel">What could move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">The rupee (vs the US dollar)</div>
+          <div class="impact-why">A stronger rupee makes foreign travel and imported goods slightly cheaper for ordinary Indians.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">10-year bond yield (interest India pays to borrow)</div>
+          <div class="impact-why">When global interest rates drop, borrowing costs tend to ease globally, which is good for governments and eventually borrowers.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Nifty 50 (India&#39;s main stock index)</div>
+          <div class="impact-why">Global stock markets usually cheer lower <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> because it means cheaper money for businesses, which is generally good for stock investors.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Gold price in India</div>
+          <div class="impact-why">When US <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> cools, the US dollar and safety bets like gold sometimes lose a bit of their immediate panic-driven shine, which can slightly lower local gold prices.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+    </div>
+  
+
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch">
+      <li>Statements from US central bank officials about when they will actually start cutting interest rates</li><li>Next month&#x27;s US employment and <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> data to see if the cooling trend continues</li>
+    </ul>
+  
+
+  <div class="foot">
+    <span class="conf">Confidence <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><b>High</b></span>
+    <span>CNBC Economy</span>
+    <a href="https://www.cnbc.com/2026/08/12/here-are-five-key-takeaways-from-the-july-cpi-inflation-report.html" target="_blank" rel="noopener">Read the source →</a>
+  </div>
+  <div class="caveat">Where this could be wrong: If a sudden global crisis breaks out and spikes oil prices again, US <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> could bounce back up and ruin these plans.</div>
+</article>
+<article class="card ">
+  <div class="tags">
+    
+    <span class="tag">Trade</span>
+    <span class="tag dot">1 source</span>
+  </div>
+
+  <h2>The Great Transshipment Scam: US report names India in alleged China tariff-evasion network</h2>
+
+  
+  <div class="tldr">
+    <span class="lbl">In plain English</span>
+    <p>If the US decides India is helping China sneak goods past heavy taxes, it could lead to stricter US checks on Indian exports, slowing down certain factories and businesses.</p>
+  </div>
+  
+
+  
+    <p class="what">A US report claims that some companies are using India as a middle ground to repackage Chinese goods and send them to America, helping them avoid heavy US taxes on China. This happens because businesses look for sneaky ways to dodge extra costs when the US puts high import taxes (penalties on foreign goods) on Chinese products.</p>
+  
+
+  
+    <div class="analogy"><b>Think of it like…</b> It is like a bouncer banning a troublemaker from a club, but the troublemaker sneaks in wearing a friend&#x27;s jacket. If the bouncer catches on, he might start frisking both of them at the door.</div>
+  
+
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain">
+      <li>The US government reads the report and gets suspicious about goods coming from India.</li><li>US authorities might impose stricter checks or ask for more proof on where Indian exports were actually made.</li><li>Legitimate Indian factories face delays at American ports, increasing their shipping costs.</li><li>The Indian government steps up checks on imports from China to clear its name, tightening rules for local traders.</li>
     </ul>
   
 
@@ -881,8 +885,8 @@ body{margin:0;background:var(--bg);color:var(--ink);
         <span class="dir down">
           ▼ Falls</span>
         <div class="impact-body">
-          <div class="impact-target">The rupee (our local money)</div>
-          <div class="impact-why">slightly fewer foreign dollars flowing in could remove a tiny bit of support for our currency</div>
+          <div class="impact-target">Nifty 50 (India&#39;s main stock index)</div>
+          <div class="impact-why">If investors worry about big trade trouble with the US, stock prices can dip slightly — generally bad for everyday investors.</div>
         </div>
         <div class="impact-side">
           <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
@@ -894,25 +898,12 @@ body{margin:0;background:var(--bg);color:var(--ink);
         <span class="dir down">
           ▼ Falls</span>
         <div class="impact-body">
-          <div class="impact-target">Bank deposits and interest rates</div>
-          <div class="impact-why">banks will no longer need to chase NRI dollars by offering extra-high interest rates</div>
+          <div class="impact-target">The rupee (vs the US dollar)</div>
+          <div class="impact-why">If trade rules get stricter and export earnings slow down, fewer US dollars enter India, causing the rupee to weaken (each rupee buys fewer dollars) — which makes imported items like fuel pricier.</div>
         </div>
         <div class="impact-side">
-          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
           <span class="when">months</span>
-        </div>
-      </div>
-      
-      <div class="impact">
-        <span class="dir up">
-          ▲ Rises</span>
-        <div class="impact-body">
-          <div class="impact-target">India&#39;s foreign exchange reserves (our national piggy bank of foreign money)</div>
-          <div class="impact-why">collecting 52 billion dollars leaves the country with a massive safety cushion against global shocks</div>
-        </div>
-        <div class="impact-side">
-          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
-          <span class="when">days</span>
         </div>
       </div>
       
@@ -922,16 +913,16 @@ body{margin:0;background:var(--bg);color:var(--ink);
   
     <div class="blocklabel">What to watch next</div>
     <ul class="watch">
-      <li>Whether the <span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span> announces any new steps to manage the money already collected</li><li>How the rupee behaves against the US dollar in the coming weeks</li>
+      <li>Official statements or warning letters from the US government regarding Indian trade</li><li>New rules from the Indian government on goods coming in from China</li>
     </ul>
   
 
   <div class="foot">
-    <span class="conf">Confidence <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><b>High</b></span>
-    <span>Livemint Markets</span>
-    <a href="https://www.livemint.com/market/dollar-deluge-prompts-rbi-to-shut-special-fcnr-scheme-early-ecbs-ofcbs-nris-foreign-currency-deposits-11786713510471.html" target="_blank" rel="noopener">Read the source →</a>
+    <span class="conf">Confidence <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><b>Medium</b></span>
+    <span>The Hindu BusinessLine</span>
+    <a href="https://www.thehindubusinessline.com/economy/the-great-transshipment-scam-us-report-names-india-in-alleged-china-tariff-evasion-network/article71346627.ece" target="_blank" rel="noopener">Read the source →</a>
   </div>
-  <div class="caveat">Where this could be wrong: If global oil prices suddenly skyrocket, India might burn through those saved dollars faster than expected.</div>
+  <div class="caveat">Where this could be wrong: If this report turns out to be a minor accusation that the US ignores, nothing much will change for Indian businesses.</div>
 </article>
 
 <div class="disclaimer">
@@ -945,6 +936,6 @@ body{margin:0;background:var(--bg);color:var(--ink);
   <div class="archive"><b>Past briefs:</b>
     <a href="2026-08-13.html">2026-08-13</a>
   </div>
-  <p>Generated automatically by your News Finance Hub · 2026-08-14T14:31:30+00:00</p>
+  <p>Generated automatically by your News Finance Hub · 2026-08-14T17:14:15+00:00</p>
 </footer>
 </div></body></html>

@@ -37,6 +37,7 @@ def _rule_based(event: dict) -> dict:
     if not links:
         return {
             "tldr": "Flagged as market-relevant, but no clear India link yet.",
+            "analogy": "",
             "what_happened": event.get("headline", ""),
             "why_it_matters_india": [
                 "This story was flagged as market-relevant, but it doesn't match a "
@@ -57,6 +58,7 @@ def _rule_based(event: dict) -> dict:
     impacts = [dict(i) for i in link.get("impacts", [])]
     return {
         "tldr": _rule_tldr(link, impacts),
+        "analogy": "",
         "what_happened": event.get("headline", ""),
         "why_it_matters_india": list(link.get("chain", [])),
         "impacts": impacts,
@@ -76,29 +78,60 @@ def _rule_based(event: dict) -> dict:
 # GEMINI backend (free tier)
 # --------------------------------------------------------------------------
 _SYSTEM = """You explain world news to a COMPLETE BEGINNER Indian investor who knows
-almost no finance jargon. Your job: show how one global event could ripple through
-to India (inflation, the rupee, sectors, specific stocks, gold). You explain HOW and
-WHY with rough probabilities. You NEVER give buy/sell advice or price targets.
+almost no finance jargon. Your job is NOT to summarise the article — a beginner can read
+the headline themselves. Your job is to explain what it MEANS: the cause behind it, how it
+ripples through to India (inflation, the rupee, sectors, specific stocks, gold), and why a
+regular person should care. You explain HOW and WHY with rough probabilities. You NEVER
+give buy/sell advice or price targets.
 
 WRITING RULES (very important):
 - Write like you're explaining to a smart friend with zero finance background.
 - Use short, everyday sentences. Prefer common words over technical ones.
 - The FIRST time you must use a technical term or acronym, immediately explain it in
   plain words in brackets. E.g. "the rupee weakens (each rupee buys fewer dollars)",
-  "FIIs (big foreign investors)", "CAD (the gap between what India imports and exports)".
+  "FIIs (big foreign investors)", "bond yield (the interest rate the government pays to borrow)".
 - Never assume the reader knows what a term means. No unexplained acronyms.
-- Be concrete and India-specific. Name real sectors/companies where relevant.
+- EXPLAIN THE CAUSE, not just the fact. If a number changed (reserves hit a record, bonds
+  rose, yields fell), say WHAT PUSHED IT there — e.g. "the RBI bought up dollars", "foreign
+  investors poured money in", "traders expect the US to cut rates". A beginner's first
+  question is "but HOW did that happen?" — always answer it.
+
+THE "tldr" FIELD — this is the most important sentence you write:
+- It must say what the news MEANS for the reader, not restate the headline.
+- Connect it to a concrete outcome: cheaper/costlier loans, a stronger/weaker rupee, pricier
+  petrol, safer markets, etc.
+- It must be CONSISTENT with your impacts. If your impacts show a yield falling, don't call
+  everything "stable" — explain what that movement means for people.
+
+THE "analogy" FIELD — a short everyday comparison that makes the mechanism click:
+- Compare the money-machinery to ordinary life: a household, a shop, a piggy bank, an EMI,
+  a queue, a see-saw. E.g. "It's like your bank suddenly trusting you enough to lend you
+  money cheaper — because lots of people want to lend to you."
+- Keep it to one or two sentences. Skip it (use "") only if no honest analogy fits.
+
+THE "impacts" LIST — STRICT RULE:
+- Every "target" MUST be a THING WITH A PRICE OR LEVEL THAT LITERALLY MOVES UP OR DOWN.
+  GOOD targets: "The rupee (vs the US dollar)", "Gold price in India", "Nifty 50 (India's
+  main stock index)", "10-year bond yield (interest India pays to borrow)", "Petrol & diesel
+  prices", "India's inflation rate", "IT stocks like TCS & Infosys".
+- NEVER use an institution, person, or action as a target. "RBI", "The Fed", "The government",
+  "Investors", "Foreign inflows" are ACTORS, not prices — they cannot "rise" or "fall". If the
+  RBI is acting, the impact is on the rupee or on yields; put the RBI's action in the chain or
+  in watch_next instead.
+- In each "rationale", say plainly whether this move is generally GOOD or BAD for an ordinary
+  person, and why (e.g. "lower yields mean cheaper home and car loans — good for borrowers").
 
 Return ONLY valid JSON (no markdown fences) with exactly this shape:
 {
-  "tldr": "ONE punchy plain-English sentence: the single biggest takeaway a beginner should remember",
-  "what_happened": "2-3 very plain sentences explaining the news itself",
-  "why_it_matters_india": ["step 1 in plain words", "step 2", "step 3", "step 4"],
+  "tldr": "ONE plain sentence on what this MEANS for the reader (not a summary)",
+  "what_happened": "2-3 very plain sentences explaining the news AND what caused it",
+  "analogy": "one everyday comparison that makes it click, or \\"\\" if none fits",
+  "why_it_matters_india": ["cause -> effect step 1", "step 2", "step 3", "step 4"],
   "impacts": [
-    {"target": "e.g. The rupee, Gold, Nifty 50, TCS/Infosys (IT firms)",
+    {"target": "a price/level that moves — see STRICT RULE above",
      "direction": "up|down",
      "probability": "High|Medium|Low", "horizon": "hours|days|weeks|months",
-     "rationale": "one short plain-English clause on why"}
+     "rationale": "why it moves + whether that's good or bad for a regular person"}
   ],
   "watch_next": ["a simple thing to keep an eye on next", "..."],
   "confidence": "High|Medium|Low",
@@ -179,6 +212,7 @@ def _gemini(event: dict) -> dict | None:
     parsed.setdefault("confidence", "Medium")
     parsed.setdefault("caveats", "")
     parsed.setdefault("tldr", "")
+    parsed.setdefault("analogy", "")
     return parsed
 
 

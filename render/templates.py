@@ -88,17 +88,23 @@ body{margin:0;background:var(--bg);color:var(--ink);
 .card h2{font-family:var(--font-serif);font-weight:600;letter-spacing:-.01em;
   font-size:24px;line-height:1.22;margin:0 0 14px;color:var(--ink);}
 
-/* Plain-English takeaway — the rookie's anchor */
-.tldr{display:flex;gap:11px;align-items:flex-start;background:var(--panel2);
-  border-left:3px solid var(--link);border-radius:0 10px 10px 0;
-  padding:12px 15px;margin:0 0 16px;}
-.tldr .lbl{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
-  color:var(--link);white-space:nowrap;padding-top:2px;}
-.tldr p{margin:0;font-size:16.5px;font-weight:500;color:var(--ink);line-height:1.5;}
+/* Plain-English takeaway — the rookie's anchor. Label sits ABOVE the sentence
+   so the sentence gets the full width and reads as one clean line of meaning. */
+.tldr{background:var(--panel2);border-left:3px solid var(--link);
+  border-radius:0 10px 10px 0;padding:13px 16px;margin:0 0 16px;}
+.tldr .lbl{display:block;font-size:11px;font-weight:700;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--link);margin:0 0 6px;}
+.tldr p{margin:0;font-size:17px;font-weight:500;color:var(--ink);line-height:1.5;}
 
 .blocklabel{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
   color:var(--muted);margin:18px 0 9px;}
 .what{margin:0 0 4px;color:var(--ink2);font-size:16px;}
+
+/* "Think of it like…" — an everyday analogy that makes the mechanism click */
+.analogy{margin:14px 0 4px;padding:11px 14px;background:var(--panel2);
+  border:1px dashed var(--line);border-radius:11px;font-size:15px;color:var(--ink2);
+  line-height:1.55;}
+.analogy b{color:var(--ink);font-weight:600;}
 
 /* How it reaches India — connected chain */
 .chain{list-style:none;margin:0;padding:0;}
@@ -194,6 +200,10 @@ CARD = """
 
   {% if ev.analysis.what_happened and ev.analysis.what_happened != ev.headline %}
     <p class="what">{{ ev.analysis.what_happened|gloss }}</p>
+  {% endif %}
+
+  {% if ev.analysis.analogy %}
+    <div class="analogy"><b>Think of it like…</b> {{ ev.analysis.analogy|gloss }}</div>
   {% endif %}
 
   {% if ev.analysis.why_it_matters_india %}

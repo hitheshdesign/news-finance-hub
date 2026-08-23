@@ -65,6 +65,37 @@ def render_page(brief: dict) -> str:
     return page.render(brief=brief, css=templates.CSS, fonts=templates.FONTS)
 
 
+def render_patterns() -> str:
+    """Render the Pattern Library: every knowledge-base linkage, grouped by
+    category, as a browsable learning reference."""
+    env = _env()
+    groups: list[dict] = []
+    index: dict[str, dict] = {}
+    for lk in config.TRANSMISSION:
+        cat = lk.get("category", "general")
+        if cat not in index:
+            index[cat] = {"category": cat, "linkages": []}
+            groups.append(index[cat])
+        index[cat]["linkages"].append(lk)
+    total = sum(len(g["linkages"]) for g in groups)
+    page = env.from_string(templates.PATTERNS_PAGE)
+    return page.render(groups=groups, total=total,
+                       css=templates.CSS, fonts=templates.FONTS)
+
+
+def write_patterns_page() -> Path:
+    """Write site/patterns.html (and a copy under site/briefs/ so links from the
+    dated archive pages resolve too)."""
+    site = config.SITE_DIR
+    (site / "briefs").mkdir(parents=True, exist_ok=True)
+    html = render_patterns()
+    path = site / "patterns.html"
+    path.write_text(html, encoding="utf-8")
+    (site / "briefs" / "patterns.html").write_text(html, encoding="utf-8")
+    print(f"  [web] wrote {path}")
+    return path
+
+
 def write_site(brief: dict) -> Path:
     site = config.SITE_DIR
     (site / "briefs").mkdir(parents=True, exist_ok=True)

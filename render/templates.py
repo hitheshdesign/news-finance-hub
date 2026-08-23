@@ -53,6 +53,9 @@ body{margin:0;background:var(--bg);color:var(--ink);
 .mast .date{font-size:15px;color:var(--ink2);}
 .mast .date b{color:var(--ink);}
 .mast .engine{color:var(--muted);}
+.mast .nav{margin-top:12px;font-size:13.5px;}
+.mast .nav a{color:var(--link);text-decoration:none;font-weight:600;}
+.mast .nav a:hover{text-decoration:underline;}
 
 /* ---------- Reading guide ---------- */
 .guide{margin:18px 0 4px;padding:12px 15px;background:var(--panel2);
@@ -65,6 +68,22 @@ body{margin:0;background:var(--bg);color:var(--ink);
 .macro .m{background:var(--panel);border:1px solid var(--line);border-radius:10px;
   padding:7px 11px;font-size:12.5px;color:var(--muted);}
 .macro .m b{color:var(--ink);font-weight:600;}
+
+/* ---------- Forward calendar ("what to watch") ---------- */
+.cal{margin-top:16px;border:1px solid var(--line);border-radius:12px;
+  background:var(--panel);overflow:hidden;}
+.cal h3{font-family:var(--font-sans);font-size:12.5px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.1em;color:var(--muted);
+  margin:0;padding:12px 15px;border-bottom:1px solid var(--line2);}
+.cal ul{list-style:none;margin:0;padding:0;}
+.cal li{display:flex;gap:13px;align-items:baseline;padding:11px 15px;
+  border-bottom:1px solid var(--line2);}
+.cal li:last-child{border-bottom:none;}
+.cal .when{flex:0 0 88px;font-weight:600;color:var(--ink);font-size:13.5px;}
+.cal .when .in{display:block;font-weight:400;color:var(--faint);font-size:11.5px;}
+.cal .ev{flex:1;}
+.cal .ev b{color:var(--ink);font-weight:600;font-size:14.5px;}
+.cal .ev p{margin:2px 0 0;color:var(--muted);font-size:13px;line-height:1.45;}
 
 /* ---------- Section labels ---------- */
 .section{font-family:var(--font-sans);font-size:12.5px;font-weight:700;
@@ -85,6 +104,8 @@ body{margin:0;background:var(--bg);color:var(--ink);
   letter-spacing:.04em;text-transform:uppercase;color:#7a5b00;background:#f6e7bd;
   padding:3px 9px;border-radius:999px;}
 @media (prefers-color-scheme:dark){.badge{color:#ffdf8a;background:#3a3216;}}
+.badge.dev{color:#2f52b8;background:#e6ecfb;}
+@media (prefers-color-scheme:dark){.badge.dev{color:#a9c2ff;background:#1c2740;}}
 .card h2{font-family:var(--font-serif);font-weight:600;letter-spacing:-.01em;
   font-size:24px;line-height:1.22;margin:0 0 14px;color:var(--ink);}
 
@@ -133,6 +154,13 @@ body{margin:0;background:var(--bg);color:var(--ink);
 .dots i.on{background:var(--ink2);}
 .meter .lvl{font-size:12px;color:var(--muted);font-weight:600;}
 .when{font-size:12.5px;color:var(--faint);white-space:nowrap;}
+
+/* Pattern Library: the trigger keywords that fire a linkage */
+.triggers{font-size:12.5px;color:var(--muted);margin:0 0 10px;
+  display:flex;flex-wrap:wrap;gap:6px;align-items:baseline;}
+.triggers .lead{margin-right:2px;}
+.trig{background:var(--panel2);border:1px solid var(--line2);border-radius:6px;
+  padding:2px 8px;color:var(--ink2);font-size:12px;}
 
 /* Watch next */
 .watch{list-style:none;margin:6px 0 0;padding:0;}
@@ -185,6 +213,7 @@ CARD = """
 <article class="card {{ 'top' if ev.is_top else '' }}">
   <div class="tags">
     {% if ev.is_top %}<span class="badge">★ Top signal</span>{% endif %}
+    {% if ev.developing %}<span class="badge dev">↻ Developing</span>{% endif %}
     <span class="tag">{{ ev.category|replace('_',' ')|title }}</span>
     <span class="tag dot">{{ ev.item_count }} source{{ 's' if ev.item_count>1 else '' }}</span>
   </div>
@@ -264,6 +293,7 @@ PAGE = """<!doctype html>
   <h1>The India Impact Brief</h1>
   <div class="date"><b>{{ brief.date_human }}</b> · {{ brief.events|length }} signals ·
     <span class="engine">analysis by {{ brief.engine }}</span></div>
+  <div class="nav"><a href="patterns.html">📚 Learn the patterns — how the world moves India</a></div>
 </header>
 
 <div class="guide">
@@ -279,6 +309,22 @@ PAGE = """<!doctype html>
   <div class="m"><b>{{ m.label }}:</b> {{ m.value }}
     {% if m.direction=='up' %}▲{% elif m.direction=='down' %}▼{% endif %}</div>
   {% endfor %}
+</div>
+{% endif %}
+
+{% if brief.calendar %}
+<div class="cal">
+  <h3>Mark your calendar — what to watch</h3>
+  <ul>
+    {% for c in brief.calendar %}
+    <li>
+      <span class="when">{{ c.date_human }}
+        <span class="in">{% if c.days_away==0 %}today{% elif c.days_away==1 %}tomorrow{% else %}in {{ c.days_away }} days{% endif %}</span>
+      </span>
+      <span class="ev"><b>{{ c.name }}</b><p>{{ c.why|gloss }}</p></span>
+    </li>
+    {% endfor %}
+  </ul>
 </div>
 {% endif %}
 
@@ -303,6 +349,87 @@ PAGE = """<!doctype html>
     {% for a in brief.archive %}<a href="{{ a.href }}">{{ a.label }}</a>{% endfor %}
   </div>{% endif %}
   <p>Generated automatically by your News Finance Hub · {{ brief.generated_at }}</p>
+</footer>
+</div></body></html>
+"""
+
+# The Pattern Library — a browsable study page of every transmission linkage.
+PATTERNS_PAGE = """<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Pattern Library — India Impact Brief</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="{{ fonts }}" rel="stylesheet">
+<style>{{ css }}</style>
+</head><body><div class="wrap">
+
+<header class="mast">
+  <div class="kicker">World news, decoded for Indian markets</div>
+  <h1>The Pattern Library</h1>
+  <div class="date">How global events tend to ripple into Indian markets —
+    <b>{{ total }}</b> patterns the engine watches for</div>
+  <div class="nav"><a href="index.html">← Back to today's brief</a></div>
+</header>
+
+<div class="guide">
+  <b>How to use this:</b> <span class="flow">each pattern shows a cause → how it
+  reaches India → what tends to move (and how likely) → what to watch.</span>
+  These are typical mechanisms, not guarantees — the point is to learn the linkages
+  so you can spot them in the news yourself. Any
+  <span class="term" tabindex="0" role="button" data-def="Tap or hover an underlined word to see a simple definition.">underlined word</span>
+  has a plain-English meaning.
+</div>
+
+{% for g in groups %}
+<div class="section">{{ g.category|replace('_',' ')|title }}</div>
+{% for lk in g.linkages %}
+<article class="card">
+  <h2>{{ lk.name }}</h2>
+  {% if lk.triggers %}
+  <div class="triggers"><span class="lead">Fires on news like:</span>
+    {% for t in lk.triggers %}<span class="trig">{{ t }}</span>{% endfor %}
+  </div>
+  {% endif %}
+  {% if lk.chain %}
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain">{% for step in lk.chain %}<li>{{ step|gloss }}</li>{% endfor %}</ul>
+  {% endif %}
+  {% if lk.impacts %}
+    <div class="blocklabel">What tends to move — and how likely</div>
+    <div class="impacts">
+      {% for im in lk.impacts %}
+      <div class="impact">
+        <span class="dir {{ 'up' if im.direction=='up' else 'down' }}">
+          {{ '▲ Rises' if im.direction=='up' else '▼ Falls' }}</span>
+        <div class="impact-body">
+          <div class="impact-target">{{ im.target }}</div>
+          {% if im.rationale %}<div class="impact-why">{{ im.rationale|gloss }}</div>{% endif %}
+        </div>
+        <div class="impact-side">
+          <span class="meter">{{ im.probability|dots }}<span class="lvl">{{ im.probability }}</span></span>
+          <span class="when">{{ im.horizon }}</span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+  {% if lk.watch_next %}
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch">{% for w in lk.watch_next %}<li>{{ w|gloss }}</li>{% endfor %}</ul>
+  {% endif %}
+</article>
+{% endfor %}
+{% endfor %}
+
+<div class="disclaimer">
+  <b>Learning tool, not advice.</b> These are typical cause-and-effect patterns to help
+  you understand the machinery — never a recommendation to buy or sell anything.
+</div>
+
+<footer class="pagefoot">
+  <div class="archive"><a href="index.html">← Back to today's brief</a></div>
+  <p>News Finance Hub · the pattern library grows as new linkages are added.</p>
 </footer>
 </div></body></html>
 """

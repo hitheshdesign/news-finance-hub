@@ -14,14 +14,16 @@ It always writes:
 
 from __future__ import annotations
 import argparse
+import calendar as _calmod
 import json
-from datetime import datetime, timezone
+from datetime import datetime, timezone, date, timedelta
 from pathlib import Path
 
 import config
 from ingest import rss, gdelt, fred
-from screen import relevance, cluster
-from analyze import engine
+from screen import relevance, cluster, history
+from analyze import engine, track
+from analyze.knowledge_match import match_linkages
 from render import web, emailer, telegram
 
 
@@ -34,6 +36,43 @@ def _load_sample() -> list[dict]:
     path = config.KNOWLEDGE_DIR / "sample_items.json"
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
+
+
+def _select_balanced(events: list[dict], max_events: int, max_per_topic: int) -> list[dict]:
+    """Pick up to `max_events` with variety across themes, so one loud topic
+    (e.g. the Fed) can't crowd out everything else.
+
+    Topic is pre-tagged cheaply from the knowledge base (no Gemini cost) via
+    analyze.knowledge_match. We then round-robin: the strongest story from each
+    topic first, then the second, and so on — never more than `max_per_topic`
+    from any one theme. Events arrive already sorted by relevance, so each
+    topic contributes its highest-signal items first.
+    """
+    groups: dict[str, list[dict]] = {}
+    order: list[str] = []                # topic keys, in importance order
+    for i, ev in enumerate(events):
+        links = match_linkages(ev, top_n=1)
+        if links:
+            ev["category"] = links[0].get("category", "general")
+            key = links[0].get("id") or f"_uniq_{i}"
+        else:
+            ev["category"] = "general"
+            key = f"_uniq_{i}"          # unmatched stories are each their own topic
+        if key not in groups:
+            groups[key] = []
+            order.append(key)
+        groups[key].append(ev)
+
+    selected: list[dict] = []
+    for rnd in range(max_per_topic):
+        for key in order:
+            if len(selected) >= max_events:
+                break
+            if len(groups[key]) > rnd:
+                selected.append(groups[key][rnd])
+        if len(selected) >= max_events:
+            break
+    return selected[:max_events]
 
 
 def ingest_all(use_sample: bool) -> list[dict]:
@@ -52,7 +91,48 @@ def ingest_all(use_sample: bool) -> list[dict]:
     return items
 
 
-def build_brief(events: list[dict], macro: list[dict]) -> dict:
+def _safe_date(year: int, month: int, day: int) -> date:
+    """A valid date, clamping the day to the month's last day (e.g. 31 -> 30)."""
+    last = _calmod.monthrange(year, month)[1]
+    return date(year, month, min(day, last))
+
+
+def _upcoming_calendar(lookahead_days: int) -> list[dict]:
+    """Resolve knowledge/calendar.yaml into concrete upcoming events.
+
+    Fixed-date entries are used as-is; monthly-recurring entries roll to their
+    next occurrence. Only events within `lookahead_days` from today are kept.
+    """
+    today = datetime.now(timezone.utc).date()
+    horizon = today + timedelta(days=max(lookahead_days, 0))
+    out: list[dict] = []
+    for ev in config.CALENDAR:
+        d: date | None = None
+        if ev.get("date"):
+            try:
+                d = date.fromisoformat(str(ev["date"]))
+            except Exception:
+                d = None
+        elif ev.get("recurs") == "monthly" and ev.get("day"):
+            day = int(ev["day"])
+            d = _safe_date(today.year, today.month, day)
+            if d < today:                       # this month's is past -> next month
+                y = today.year + (1 if today.month == 12 else 0)
+                m = 1 if today.month == 12 else today.month + 1
+                d = _safe_date(y, m, day)
+        if d and today <= d <= horizon:
+            out.append({
+                "name": ev.get("name", ""),
+                "date_human": d.strftime("%a, %d %b"),
+                "days_away": (d - today).days,
+                "category": ev.get("category", "general"),
+                "why": ev.get("why", ""),
+            })
+    out.sort(key=lambda e: e["days_away"])
+    return out
+
+
+def build_brief(events: list[dict], macro: list[dict], calendar: list[dict]) -> dict:
     now = datetime.now(timezone.utc)
     return {
         "date": now.strftime("%Y-%m-%d"),
@@ -60,6 +140,7 @@ def build_brief(events: list[dict], macro: list[dict]) -> dict:
         "generated_at": now.isoformat(timespec="seconds"),
         "engine": "Gemini AI" if config.has_gemini() else "rule-based (free)",
         "macro": macro,
+        "calendar": calendar,
         "events": events,
     }
 
@@ -115,9 +196,24 @@ def main() -> None:
     kept = relevance.filter_items(raw)
     events = cluster.cluster(kept)
 
-    # cap to max events (from CLI or filters.yaml)
+    # 2b. Cross-day de-dupe: drop stories already covered in recent days,
+    #     tag evolved follow-ups as "developing".
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    prior = history.load_recent_events(
+        int(config.FILTERS.get("dedup_window_days", 5)), exclude_date=today)
+    before = len(events)
+    events = history.suppress_repeats(
+        events, prior,
+        drop_threshold=float(config.FILTERS.get("cross_day_similarity", 0.7)),
+        developing_threshold=float(config.FILTERS.get("developing_similarity", 0.45)),
+    )
+    if len(events) < before:
+        print(f"  [screen] cross-day de-dupe removed {before - len(events)} repeat(s)")
+
+    # 2c. Select a category-balanced set so the brief isn't 'all Fed/gold'.
     max_events = args.max or int(config.FILTERS.get("max_events_per_brief", 8))
-    events = events[:max_events]
+    events = _select_balanced(
+        events, max_events, int(config.FILTERS.get("max_per_topic", 2)))
 
     # 3. ANALYZE (India-impact cards)
     print("[analyze] generating India-impact cards...")
@@ -126,13 +222,18 @@ def main() -> None:
     # macro context (FRED) — optional
     macro = fred.fetch()
 
-    # 4. ASSEMBLE + STORE
-    brief = build_brief(events, macro)
-    store_brief(brief)
+    # forward calendar — what to watch for in the days ahead
+    upcoming = _upcoming_calendar(int(config.FILTERS.get("calendar_lookahead_days", 14)))
 
-    # 5. RENDER web page
+    # 4. ASSEMBLE + STORE
+    brief = build_brief(events, macro, upcoming)
+    store_brief(brief)
+    track.record_predictions(brief)
+
+    # 5. RENDER web page + the pattern-library study page
     print("[render] building web page...")
     index_path = web.write_site(brief)
+    web.write_patterns_page()
 
     # 6. DELIVER
     if args.dry_run:

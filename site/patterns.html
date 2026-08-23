@@ -1,0 +1,2079 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Pattern Library — India Impact Brief</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --font-serif:&#39;Newsreader&#39;,Georgia,&#39;Times New Roman&#39;,serif;
+  --font-sans:&#39;Inter&#39;,-apple-system,BlinkMacSystemFont,&#39;Segoe UI&#39;,Roboto,sans-serif;
+  --bg:#f7f6f3; --panel:#ffffff; --panel2:#faf9f7;
+  --ink:#141a24; --ink2:#3b4453; --muted:#6b7482; --faint:#98a1af;
+  --line:#e7e4de; --line2:#efece6;
+  --brand:#0f172a; --link:#1f5fd6;
+  --up:#15803d; --up-bg:#e9f6ee; --down:#c02626; --down-bg:#fbebe9;
+  --tip-bg:#1c2430; --tip-ink:#f2f5f9;
+  --top-bg:#fbf7ec; --top-line:#ecdcae;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0b0e14; --panel:#141a22; --panel2:#111721;
+    --ink:#e8edf3; --ink2:#c3ccd8; --muted:#93a0af; --faint:#6b7788;
+    --line:#232c38; --line2:#1c2430;
+    --brand:#e8edf3; --link:#6ea8fe;
+    --up:#42c17d; --up-bg:#12271c; --down:#f2726f; --down-bg:#2a1514;
+    --tip-bg:#e9edf2; --tip-ink:#10151d;
+    --top-bg:#1c1a12; --top-line:#4a4022;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;overflow-x:hidden;}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:var(--font-sans);font-size:17px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;}
+.wrap{max-width:720px;margin:0 auto;padding:28px 20px 72px;}
+
+/* ---------- Masthead ---------- */
+.mast{padding-bottom:20px;border-bottom:2px solid var(--ink);margin-bottom:8px;}
+.kicker{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:8px;}
+.mast h1{font-family:var(--font-serif);font-weight:700;letter-spacing:-.02em;
+  font-size:clamp(30px,7vw,44px);line-height:1.05;margin:0 0 10px;color:var(--ink);}
+.mast .date{font-size:15px;color:var(--ink2);}
+.mast .date b{color:var(--ink);}
+.mast .engine{color:var(--muted);}
+.mast .nav{margin-top:12px;font-size:13.5px;}
+.mast .nav a{color:var(--link);text-decoration:none;font-weight:600;}
+.mast .nav a:hover{text-decoration:underline;}
+
+/* ---------- Reading guide ---------- */
+.guide{margin:18px 0 4px;padding:12px 15px;background:var(--panel2);
+  border:1px solid var(--line);border-radius:12px;font-size:13.5px;color:var(--ink2);}
+.guide b{color:var(--ink);}
+.guide .flow{color:var(--muted);}
+
+/* ---------- Macro strip ---------- */
+.macro{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;}
+.macro .m{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+  padding:7px 11px;font-size:12.5px;color:var(--muted);}
+.macro .m b{color:var(--ink);font-weight:600;}
+
+/* ---------- Forward calendar (&#34;what to watch&#34;) ---------- */
+.cal{margin-top:16px;border:1px solid var(--line);border-radius:12px;
+  background:var(--panel);overflow:hidden;}
+.cal h3{font-family:var(--font-sans);font-size:12.5px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.1em;color:var(--muted);
+  margin:0;padding:12px 15px;border-bottom:1px solid var(--line2);}
+.cal ul{list-style:none;margin:0;padding:0;}
+.cal li{display:flex;gap:13px;align-items:baseline;padding:11px 15px;
+  border-bottom:1px solid var(--line2);}
+.cal li:last-child{border-bottom:none;}
+.cal .when{flex:0 0 88px;font-weight:600;color:var(--ink);font-size:13.5px;}
+.cal .when .in{display:block;font-weight:400;color:var(--faint);font-size:11.5px;}
+.cal .ev{flex:1;}
+.cal .ev b{color:var(--ink);font-weight:600;font-size:14.5px;}
+.cal .ev p{margin:2px 0 0;color:var(--muted);font-size:13px;line-height:1.45;}
+
+/* ---------- Section labels ---------- */
+.section{font-family:var(--font-sans);font-size:12.5px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.1em;color:var(--muted);
+  margin:34px 0 14px;display:flex;align-items:center;gap:10px;}
+.section::after{content:&#34;&#34;;flex:1;height:1px;background:var(--line);}
+
+/* ---------- Card ---------- */
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;
+  padding:22px 22px 18px;margin:0 0 18px;}
+.card.top{background:linear-gradient(180deg,var(--top-bg),var(--panel));
+  border-color:var(--top-line);}
+.tags{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px;}
+.tag{font-size:11.5px;font-weight:600;letter-spacing:.03em;color:var(--muted);
+  text-transform:uppercase;}
+.tag.dot::before{content:&#34;•&#34;;margin-right:8px;color:var(--faint);}
+.badge{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:700;
+  letter-spacing:.04em;text-transform:uppercase;color:#7a5b00;background:#f6e7bd;
+  padding:3px 9px;border-radius:999px;}
+@media (prefers-color-scheme:dark){.badge{color:#ffdf8a;background:#3a3216;}}
+.badge.dev{color:#2f52b8;background:#e6ecfb;}
+@media (prefers-color-scheme:dark){.badge.dev{color:#a9c2ff;background:#1c2740;}}
+.card h2{font-family:var(--font-serif);font-weight:600;letter-spacing:-.01em;
+  font-size:24px;line-height:1.22;margin:0 0 14px;color:var(--ink);}
+
+/* Plain-English takeaway — the rookie&#39;s anchor. Label sits ABOVE the sentence
+   so the sentence gets the full width and reads as one clean line of meaning. */
+.tldr{background:var(--panel2);border-left:3px solid var(--link);
+  border-radius:0 10px 10px 0;padding:13px 16px;margin:0 0 16px;}
+.tldr .lbl{display:block;font-size:11px;font-weight:700;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--link);margin:0 0 6px;}
+.tldr p{margin:0;font-size:17px;font-weight:500;color:var(--ink);line-height:1.5;}
+
+.blocklabel{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--muted);margin:18px 0 9px;}
+.what{margin:0 0 4px;color:var(--ink2);font-size:16px;}
+
+/* &#34;Think of it like…&#34; — an everyday analogy that makes the mechanism click */
+.analogy{margin:14px 0 4px;padding:11px 14px;background:var(--panel2);
+  border:1px dashed var(--line);border-radius:11px;font-size:15px;color:var(--ink2);
+  line-height:1.55;}
+.analogy b{color:var(--ink);font-weight:600;}
+
+/* How it reaches India — connected chain */
+.chain{list-style:none;margin:0;padding:0;}
+.chain li{position:relative;padding:0 0 14px 26px;color:var(--ink2);font-size:15.5px;}
+.chain li::before{content:&#34;&#34;;position:absolute;left:7px;top:8px;width:8px;height:8px;
+  border-radius:50%;background:var(--link);}
+.chain li::after{content:&#34;&#34;;position:absolute;left:10.5px;top:16px;bottom:0;
+  width:1px;background:var(--line);}
+.chain li:last-child{padding-bottom:0;}
+.chain li:last-child::after{display:none;}
+
+/* What could move — impact rows */
+.impacts{display:flex;flex-direction:column;gap:9px;margin-top:4px;}
+.impact{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:baseline;
+  padding:11px 13px;background:var(--panel2);border:1px solid var(--line2);border-radius:11px;}
+.dir{font-size:12.5px;font-weight:700;padding:3px 9px;border-radius:7px;white-space:nowrap;}
+.dir.up{color:var(--up);background:var(--up-bg);}
+.dir.down{color:var(--down);background:var(--down-bg);}
+.impact-body{flex:1 1 220px;min-width:180px;}
+.impact-target{font-weight:600;color:var(--ink);font-size:15.5px;}
+.impact-why{color:var(--muted);font-size:13.5px;margin-top:1px;}
+.impact-side{display:flex;align-items:center;gap:12px;margin-left:auto;}
+.meter{display:inline-flex;align-items:center;gap:8px;}
+.dots{display:inline-flex;gap:3px;}
+.dots i{width:7px;height:7px;border-radius:50%;background:var(--line);display:block;}
+.dots i.on{background:var(--ink2);}
+.meter .lvl{font-size:12px;color:var(--muted);font-weight:600;}
+.when{font-size:12.5px;color:var(--faint);white-space:nowrap;}
+
+/* Pattern Library: the trigger keywords that fire a linkage */
+.triggers{font-size:12.5px;color:var(--muted);margin:0 0 10px;
+  display:flex;flex-wrap:wrap;gap:6px;align-items:baseline;}
+.triggers .lead{margin-right:2px;}
+.trig{background:var(--panel2);border:1px solid var(--line2);border-radius:6px;
+  padding:2px 8px;color:var(--ink2);font-size:12px;}
+
+/* Watch next */
+.watch{list-style:none;margin:6px 0 0;padding:0;}
+.watch li{position:relative;padding:4px 0 4px 24px;color:var(--ink2);font-size:15px;}
+.watch li::before{content:&#34;→&#34;;position:absolute;left:2px;color:var(--link);font-weight:700;}
+
+/* Footer bits */
+.foot{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;
+  margin-top:16px;padding-top:13px;border-top:1px solid var(--line2);
+  font-size:12.5px;color:var(--muted);}
+.foot .conf{display:inline-flex;align-items:center;gap:7px;}
+.foot a{color:var(--link);text-decoration:none;font-weight:600;}
+.foot a:hover{text-decoration:underline;}
+.caveat{color:var(--muted);font-size:13px;font-style:italic;margin-top:11px;
+  padding-left:11px;border-left:2px solid var(--line);}
+
+/* Jargon tooltips */
+.term{border-bottom:1.5px dotted var(--faint);cursor:help;position:relative;
+  color:inherit;outline:none;}
+.term:hover,.term:focus{border-bottom-color:var(--link);}
+.term::after{content:attr(data-def);position:absolute;left:0;top:calc(100% + 8px);
+  width:min(300px,78vw);background:var(--tip-bg);color:var(--tip-ink);
+  font-family:var(--font-sans);font-size:13px;font-weight:400;font-style:normal;
+  line-height:1.45;padding:10px 12px;border-radius:9px;
+  box-shadow:0 8px 24px rgba(0,0,0,.22);z-index:20;
+  opacity:0;visibility:hidden;transform:translateY(-3px);
+  transition:opacity .15s ease,transform .15s ease;pointer-events:none;}
+.term:hover::after,.term:focus::after{opacity:1;visibility:visible;transform:translateY(0);}
+
+/* Disclaimer + footer */
+.disclaimer{background:var(--panel2);border:1px dashed var(--line);border-radius:12px;
+  padding:14px 16px;color:var(--muted);font-size:13px;margin-top:28px;}
+.disclaimer b{color:var(--ink2);}
+.pagefoot{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);
+  color:var(--muted);font-size:13px;}
+.archive{margin-bottom:12px;}
+.archive b{color:var(--ink2);}
+.archive a{color:var(--link);text-decoration:none;margin:0 10px 6px 0;
+  display:inline-block;}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media (max-width:520px){
+  body{font-size:16px}
+  .card{padding:18px 16px 15px;border-radius:14px}
+  .impact-side{margin-left:0}
+}
+</style>
+</head><body><div class="wrap">
+
+<header class="mast">
+  <div class="kicker">World news, decoded for Indian markets</div>
+  <h1>The Pattern Library</h1>
+  <div class="date">How global events tend to ripple into Indian markets —
+    <b>29</b> patterns the engine watches for</div>
+  <div class="nav"><a href="index.html">← Back to today's brief</a></div>
+</header>
+
+<div class="guide">
+  <b>How to use this:</b> <span class="flow">each pattern shows a cause → how it
+  reaches India → what tends to move (and how likely) → what to watch.</span>
+  These are typical mechanisms, not guarantees — the point is to learn the linkages
+  so you can spot them in the news yourself. Any
+  <span class="term" tabindex="0" role="button" data-def="Tap or hover an underlined word to see a simple definition.">underlined word</span>
+  has a plain-English meaning.
+</div>
+
+
+<div class="section">Monetary Policy</div>
+
+<article class="card">
+  <h2>US Fed turns hawkish / raises rates</h2>
+  
+  <div class="triggers"><span class="lead">Fires on news like:</span>
+    <span class="trig">fed hikes</span><span class="trig">rate hike</span><span class="trig">hawkish</span><span class="trig">higher for longer</span><span class="trig">fed raises</span><span class="trig">powell</span><span class="trig">fomc</span><span class="trig">tightening</span><span class="trig">dot plot</span>
+  </div>
+  
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain"><li>US <span class="term" tabindex="0" role="button" aria-label="America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India." data-def="America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India.">Federal Reserve</span> signals higher-for-longer or raises its policy rate</li><li>US <span class="term" tabindex="0" role="button" aria-label="The return investors earn on bonds. Rising yields often pull money away from stocks and gold." data-def="The return investors earn on bonds. Rising yields often pull money away from stocks and gold.">bond yields</span> and the US dollar strengthen (money earns more sitting in the US)</li><li>Foreign investors (<span class="term" tabindex="0" role="button" aria-label="Foreign Institutional Investors — big overseas funds that buy and sell Indian shares. When they pull money out, markets and the rupee usually fall." data-def="Foreign Institutional Investors — big overseas funds that buy and sell Indian shares. When they pull money out, markets and the rupee usually fall.">FIIs</span>) pull money out of Indian stocks/bonds toward safer US assets</li><li>The rupee weakens and Nifty/Sensex face selling pressure</li></ul>
+  
+  
+    <div class="blocklabel">What tends to move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">INR (rupee)</div>
+          <div class="impact-why">capital flows to the US, dollar demand rises</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
+          <span class="when">days-weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Nifty 50 / Sensex</div>
+          <div class="impact-why"><span class="term" tabindex="0" role="button" aria-label="Foreign Institutional Investors — big overseas funds that buy and sell Indian shares. When they pull money out, markets and the rupee usually fall." data-def="Foreign Institutional Investors — big overseas funds that buy and sell Indian shares. When they pull money out, markets and the rupee usually fall.">FII</span> outflows and risk-off mood</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">IT services (TCS, Infosys, Wipro)</div>
+          <div class="impact-why">weaker rupee lifts their dollar export earnings</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Realty, Autos, NBFCs</div>
+          <div class="impact-why"><span class="term" tabindex="0" role="button" aria-label="Businesses whose sales depend heavily on loans — like housing, cars and lenders — so they rise and fall with interest rates." data-def="Businesses whose sales depend heavily on loans — like housing, cars and lenders — so they rise and fall with interest rates.">rate-sensitive</span>; borrowing costs and demand pressure</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Gold (in USD)</div>
+          <div class="impact-why">higher real <span class="term" tabindex="0" role="button" aria-label="The return investors earn on bonds. Rising yields often pull money away from stocks and gold." data-def="The return investors earn on bonds. Rising yields often pull money away from stocks and gold.">yields</span> make non-yielding gold less attractive</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">days-weeks</span>
+        </div>
+      </div>
+      
+    </div>
+  
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch"><li>Next US <span class="term" tabindex="0" role="button" aria-label="Consumer Price Index — the main measure of inflation, i.e. how fast everyday prices are rising." data-def="Consumer Price Index — the main measure of inflation, i.e. how fast everyday prices are rising.">CPI</span> and jobs (non-farm payrolls) prints — do they confirm the <span class="term" tabindex="0" role="button" aria-label="Central-bank speak for leaning toward HIGHER interest rates to fight inflation. Usually a headwind for stocks." data-def="Central-bank speak for leaning toward HIGHER interest rates to fight inflation. Usually a headwind for stocks.">hawkish</span> path?</li><li><span class="term" tabindex="0" role="button" aria-label="Foreign Institutional Investors — big overseas funds that buy and sell Indian shares. When they pull money out, markets and the rupee usually fall." data-def="Foreign Institutional Investors — big overseas funds that buy and sell Indian shares. When they pull money out, markets and the rupee usually fall.">FII</span> daily flow figures on NSE</li><li>USD/INR level — pressure zones around 84-85</li></ul>
+  
+</article>
+
+<article class="card">
+  <h2>US Fed turns dovish / cuts rates</h2>
+  
+  <div class="triggers"><span class="lead">Fires on news like:</span>
+    <span class="trig">fed cuts</span><span class="trig">rate cut</span><span class="trig">dovish</span><span class="trig">easing</span><span class="trig">pivot</span><span class="trig">pause hikes</span><span class="trig">lower rates</span>
+  </div>
+  
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain"><li>US <span class="term" tabindex="0" role="button" aria-label="The US Federal Reserve — America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India." data-def="The US Federal Reserve — America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India.">Fed</span> signals or delivers a rate cut</li><li>US <span class="term" tabindex="0" role="button" aria-label="The return investors earn on bonds. Rising yields often pull money away from stocks and gold." data-def="The return investors earn on bonds. Rising yields often pull money away from stocks and gold.">yields</span> and the dollar soften; global risk appetite improves</li><li>Foreign money flows back into emerging markets like India</li><li>The rupee steadies/strengthens and Indian equities get a tailwind</li></ul>
+  
+  
+    <div class="blocklabel">What tends to move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Nifty 50 / Sensex</div>
+          <div class="impact-why"><span class="term" tabindex="0" role="button" aria-label="Foreign Institutional Investors — big overseas funds that buy and sell Indian shares. When they pull money out, markets and the rupee usually fall." data-def="Foreign Institutional Investors — big overseas funds that buy and sell Indian shares. When they pull money out, markets and the rupee usually fall.">FII</span> inflows, cheaper global money</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">days-weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">INR (rupee)</div>
+          <div class="impact-why">weaker dollar, returning flows</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Gold</div>
+          <div class="impact-why">lower real <span class="term" tabindex="0" role="button" aria-label="The return investors earn on bonds. Rising yields often pull money away from stocks and gold." data-def="The return investors earn on bonds. Rising yields often pull money away from stocks and gold.">yields</span> lift gold</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Rate-sensitives (Realty, Autos, NBFCs)</div>
+          <div class="impact-why">cheaper credit expectations</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+    </div>
+  
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch"><li>How many cuts the market is pricing for the year</li><li>Whether <span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span> follows with its own easing</li></ul>
+  
+</article>
+
+<article class="card">
+  <h2>RBI raises interest rates / turns hawkish</h2>
+  
+  <div class="triggers"><span class="lead">Fires on news like:</span>
+    <span class="trig">rbi hikes</span><span class="trig">rbi rate</span><span class="trig">repo rate hike</span><span class="trig">mpc hawkish</span><span class="trig">rbi tightens</span>
+  </div>
+  
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain"><li><span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span> raises the <span class="term" tabindex="0" role="button" aria-label="The interest rate at which the RBI lends to banks. When it rises, loans (home, car, business) get costlier; when it falls, they get cheaper." data-def="The interest rate at which the RBI lends to banks. When it rises, loans (home, car, business) get costlier; when it falls, they get cheaper.">repo rate</span> or signals tightening</li><li>Loans (home, auto, business) get costlier; banks&#x27; margins can improve</li><li><span class="term" tabindex="0" role="button" aria-label="Businesses whose sales depend heavily on loans — like housing, cars and lenders — so they rise and fall with interest rates." data-def="Businesses whose sales depend heavily on loans — like housing, cars and lenders — so they rise and fall with interest rates.">Rate-sensitive</span> demand cools; the rupee can find some support</li></ul>
+  
+  
+    <div class="blocklabel">What tends to move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Banks (HDFC, ICICI, SBI)</div>
+          <div class="impact-why">better net interest margins in the short run</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Realty, Autos, NBFCs</div>
+          <div class="impact-why">higher EMIs dent demand</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">INR (rupee)</div>
+          <div class="impact-why">higher rates can attract flows</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+    </div>
+  
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch"><li><span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span>&#x27;s <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> forecast and stance (accommodative vs neutral)</li></ul>
+  
+</article>
+
+<article class="card">
+  <h2>RBI cuts interest rates / turns dovish</h2>
+  
+  <div class="triggers"><span class="lead">Fires on news like:</span>
+    <span class="trig">rbi cuts</span><span class="trig">repo rate cut</span><span class="trig">mpc dovish</span><span class="trig">rbi eases</span><span class="trig">rate cut india</span>
+  </div>
+  
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain"><li><span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span> cuts the <span class="term" tabindex="0" role="button" aria-label="The interest rate at which the RBI lends to banks. When it rises, loans (home, car, business) get costlier; when it falls, they get cheaper." data-def="The interest rate at which the RBI lends to banks. When it rises, loans (home, car, business) get costlier; when it falls, they get cheaper.">repo rate</span> or signals easing</li><li>Loans get cheaper; demand for homes, autos and credit picks up</li><li><span class="term" tabindex="0" role="button" aria-label="Businesses whose sales depend heavily on loans — like housing, cars and lenders — so they rise and fall with interest rates." data-def="Businesses whose sales depend heavily on loans — like housing, cars and lenders — so they rise and fall with interest rates.">Rate-sensitive</span> sectors and broader markets get a boost</li></ul>
+  
+  
+    <div class="blocklabel">What tends to move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Realty, Autos, NBFCs</div>
+          <div class="impact-why">cheaper credit revives demand</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Nifty 50</div>
+          <div class="impact-why">lower rates support valuations</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Banks (margins)</div>
+          <div class="impact-why">lending rates reset lower</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+    </div>
+  
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch"><li>Whether <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> stays within <span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span>&#x27;s comfort band</li></ul>
+  
+</article>
+
+
+<div class="section">Macro Data</div>
+
+<article class="card">
+  <h2>US inflation (CPI) comes in hotter than expected</h2>
+  
+  <div class="triggers"><span class="lead">Fires on news like:</span>
+    <span class="trig">us cpi</span><span class="trig">inflation rises</span><span class="trig">hotter inflation</span><span class="trig">cpi beats</span><span class="trig">sticky inflation</span><span class="trig">pce</span>
+  </div>
+  
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain"><li>US <span class="term" tabindex="0" role="button" aria-label="Consumer Price Index — the main measure of inflation, i.e. how fast everyday prices are rising." data-def="Consumer Price Index — the main measure of inflation, i.e. how fast everyday prices are rising.">CPI</span> prints above expectations</li><li>Markets push out rate-cut hopes; <span class="term" tabindex="0" role="button" aria-label="The return investors earn on bonds. Rising yields often pull money away from stocks and gold." data-def="The return investors earn on bonds. Rising yields often pull money away from stocks and gold.">yields</span> and the dollar rise</li><li>Risk-off spills into emerging markets; <span class="term" tabindex="0" role="button" aria-label="Foreign Institutional Investors — big overseas funds that buy and sell Indian shares. When they pull money out, markets and the rupee usually fall." data-def="Foreign Institutional Investors — big overseas funds that buy and sell Indian shares. When they pull money out, markets and the rupee usually fall.">FIIs</span> trim India exposure</li></ul>
+  
+  
+    <div class="blocklabel">What tends to move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Gold</div>
+          <div class="impact-why">higher real <span class="term" tabindex="0" role="button" aria-label="The return investors earn on bonds. Rising yields often pull money away from stocks and gold." data-def="The return investors earn on bonds. Rising yields often pull money away from stocks and gold.">yields</span>, delayed cuts (short-term reaction)</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">INR (rupee)</div>
+          <div class="impact-why">stronger dollar</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Nifty 50</div>
+          <div class="impact-why">risk-off</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+    </div>
+  
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch"><li>The <span class="term" tabindex="0" role="button" aria-label="The US Federal Reserve — America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India." data-def="The US Federal Reserve — America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India.">Fed</span>&#x27;s next meeting tone</li><li>US 10-year Treasury yield direction</li></ul>
+  
+</article>
+
+<article class="card">
+  <h2>US inflation (CPI) cools more than expected</h2>
+  
+  <div class="triggers"><span class="lead">Fires on news like:</span>
+    <span class="trig">us cpi cools</span><span class="trig">inflation eases</span><span class="trig">cpi misses</span><span class="trig">softer inflation</span><span class="trig">disinflation</span>
+  </div>
+  
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain"><li>US <span class="term" tabindex="0" role="button" aria-label="Consumer Price Index — the main measure of inflation, i.e. how fast everyday prices are rising." data-def="Consumer Price Index — the main measure of inflation, i.e. how fast everyday prices are rising.">CPI</span> prints below expectations</li><li>Rate-cut hopes rise; <span class="term" tabindex="0" role="button" aria-label="The return investors earn on bonds. Rising yields often pull money away from stocks and gold." data-def="The return investors earn on bonds. Rising yields often pull money away from stocks and gold.">yields</span> and the dollar fall</li><li>Global risk appetite improves, helping emerging markets</li></ul>
+  
+  
+    <div class="blocklabel">What tends to move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Gold</div>
+          <div class="impact-why">lower real <span class="term" tabindex="0" role="button" aria-label="The return investors earn on bonds. Rising yields often pull money away from stocks and gold." data-def="The return investors earn on bonds. Rising yields often pull money away from stocks and gold.">yields</span>, softer dollar</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
+          <span class="when">days-weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Nifty 50</div>
+          <div class="impact-why">risk-on, <span class="term" tabindex="0" role="button" aria-label="Foreign Institutional Investors — big overseas funds that buy and sell Indian shares. When they pull money out, markets and the rupee usually fall." data-def="Foreign Institutional Investors — big overseas funds that buy and sell Indian shares. When they pull money out, markets and the rupee usually fall.">FII</span> inflows</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">INR (rupee)</div>
+          <div class="impact-why">weaker dollar</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+    </div>
+  
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch"><li>Confirmation from the next PCE/<span class="term" tabindex="0" role="button" aria-label="Consumer Price Index — the main measure of inflation, i.e. how fast everyday prices are rising." data-def="Consumer Price Index — the main measure of inflation, i.e. how fast everyday prices are rising.">CPI</span> print</li></ul>
+  
+</article>
+
+<article class="card">
+  <h2>US jobs data (payrolls) much stronger than expected</h2>
+  
+  <div class="triggers"><span class="lead">Fires on news like:</span>
+    <span class="trig">nonfarm payrolls</span><span class="trig">jobs report</span><span class="trig">strong jobs</span><span class="trig">unemployment falls</span><span class="trig">labor market</span><span class="trig">payrolls beat</span>
+  </div>
+  
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain"><li>US adds far more jobs than expected / unemployment drops</li><li>A hot labor market lets the <span class="term" tabindex="0" role="button" aria-label="The US Federal Reserve — America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India." data-def="The US Federal Reserve — America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India.">Fed</span> stay higher-for-longer</li><li><span class="term" tabindex="0" role="button" aria-label="The return investors earn on bonds. Rising yields often pull money away from stocks and gold." data-def="The return investors earn on bonds. Rising yields often pull money away from stocks and gold.">Yields</span> and dollar firm up; pressure on emerging-market assets</li></ul>
+  
+  
+    <div class="blocklabel">What tends to move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">INR (rupee)</div>
+          <div class="impact-why">stronger dollar</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Gold</div>
+          <div class="impact-why">delayed cuts</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">IT services</div>
+          <div class="impact-why">healthy US economy supports client tech spend + weak INR</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+    </div>
+  
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch"><li>Wage growth inside the report (<span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> signal)</li></ul>
+  
+</article>
+
+<article class="card">
+  <h2>India&#39;s own inflation (CPI) runs hot</h2>
+  
+  <div class="triggers"><span class="lead">Fires on news like:</span>
+    <span class="trig">india cpi</span><span class="trig">india inflation</span><span class="trig">food inflation</span><span class="trig">vegetable prices</span><span class="trig">retail inflation india</span>
+  </div>
+  
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain"><li>Indian retail <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> prints above the <span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span>&#x27;s comfort zone (often food-led)</li><li><span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span> is pushed to keep rates high for longer</li><li>Household budgets tighten; <span class="term" tabindex="0" role="button" aria-label="Businesses whose sales depend heavily on loans — like housing, cars and lenders — so they rise and fall with interest rates." data-def="Businesses whose sales depend heavily on loans — like housing, cars and lenders — so they rise and fall with interest rates.">rate-sensitive</span> demand stays subdued</li></ul>
+  
+  
+    <div class="blocklabel">What tends to move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Rate-sensitives (Realty, Autos, NBFCs)</div>
+          <div class="impact-why">no rate relief in sight</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">FMCG (staples)</div>
+          <div class="impact-why">margin pressure + demand hit if prices rise</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Bonds (yields)</div>
+          <div class="impact-why">higher-for-longer rate expectations</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+    </div>
+  
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch"><li><span class="term" tabindex="0" role="button" aria-label="India&#x27;s June–September rainy season. Good rains lift farm output and rural incomes; a weak monsoon can push up food prices." data-def="India&#x27;s June–September rainy season. Good rains lift farm output and rural incomes; a weak monsoon can push up food prices.">Monsoon</span> progress and vegetable/pulse prices</li><li><span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span> MPC commentary</li></ul>
+  
+</article>
+
+<article class="card">
+  <h2>Weak / delayed monsoon in India</h2>
+  
+  <div class="triggers"><span class="lead">Fires on news like:</span>
+    <span class="trig">monsoon deficit</span><span class="trig">weak monsoon</span><span class="trig">el nino</span><span class="trig">rainfall shortfall</span><span class="trig">drought india</span><span class="trig">poor rains</span>
+  </div>
+  
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain"><li><span class="term" tabindex="0" role="button" aria-label="India&#x27;s June–September rainy season. Good rains lift farm output and rural incomes; a weak monsoon can push up food prices." data-def="India&#x27;s June–September rainy season. Good rains lift farm output and rural incomes; a weak monsoon can push up food prices.">Monsoon</span> rains are below normal or delayed</li><li>Kharif crop output risk rises; food prices can climb</li><li>Rural incomes and demand weaken; food <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> pressures the <span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span></li></ul>
+  
+  
+    <div class="blocklabel">What tends to move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Food/CPI inflation</div>
+          <div class="impact-why">lower crop supply</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">months</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Rural-demand plays (tractors, 2-wheelers, FMCG)</div>
+          <div class="impact-why">weaker farm incomes</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">months</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Fertilizer/agri-input demand</div>
+          <div class="impact-why">less sowing</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">months</span>
+        </div>
+      </div>
+      
+    </div>
+  
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch"><li>IMD rainfall updates and reservoir levels</li><li>Government MSP and food-buffer actions</li></ul>
+  
+</article>
+
+
+<div class="section">Commodities</div>
+
+<article class="card">
+  <h2>Crude oil prices spike</h2>
+  
+  <div class="triggers"><span class="lead">Fires on news like:</span>
+    <span class="trig">oil surges</span><span class="trig">crude jumps</span><span class="trig">brent rises</span><span class="trig">oil price spike</span><span class="trig">opec cut</span><span class="trig">oil rally</span><span class="trig">wti climbs</span>
+  </div>
+  
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain"><li><span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">Crude oil</span> prices rise sharply</li><li>India imports ~85% of its crude, so the <span class="term" tabindex="0" role="button" aria-label="The total amount of foreign currency India pays for its imports (oil, gold, electronics). A bigger bill pressures the rupee." data-def="The total amount of foreign currency India pays for its imports (oil, gold, electronics). A bigger bill pressures the rupee.">import bill</span> balloons</li><li>The <span class="term" tabindex="0" role="button" aria-label="When India spends more foreign currency on imports than it earns from exports. A wider gap tends to weaken the rupee." data-def="When India spends more foreign currency on imports than it earns from exports. A wider gap tends to weaken the rupee.">current account deficit</span> (<span class="term" tabindex="0" role="button" aria-label="Current Account Deficit — when India spends more foreign currency on imports than it earns from exports. A wider gap tends to weaken the rupee." data-def="Current Account Deficit — when India spends more foreign currency on imports than it earns from exports. A wider gap tends to weaken the rupee.">CAD</span>) widens and the rupee weakens</li><li>Fuel-linked costs push up <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> across the economy</li></ul>
+  
+  
+    <div class="blocklabel">What tends to move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">INR (rupee)</div>
+          <div class="impact-why">bigger dollar outflow for oil imports</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
+          <span class="when">days-weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Oil marketing (HPCL, BPCL, IOC)</div>
+          <div class="impact-why">marketing margins squeezed if pump prices are frozen</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Paints (Asian Paints), Tyres, Aviation (IndiGo)</div>
+          <div class="impact-why">crude-derived input / fuel cost rises</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Upstream (ONGC, Oil India)</div>
+          <div class="impact-why">higher realizations on the oil they produce</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">CPI inflation</div>
+          <div class="impact-why">fuel and transport feed through prices</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
+          <span class="when">weeks-months</span>
+        </div>
+      </div>
+      
+    </div>
+  
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch"><li><span class="term" tabindex="0" role="button" aria-label="A group of major oil-producing nations that coordinate how much crude oil to pump, strongly influencing global oil prices." data-def="A group of major oil-producing nations that coordinate how much crude oil to pump, strongly influencing global oil prices.">OPEC</span>+ decisions and any Middle-East supply disruptions</li><li>Government excise/duty changes to cushion pump prices</li><li>USD/INR and the trade-deficit print</li></ul>
+  
+</article>
+
+<article class="card">
+  <h2>Crude oil prices fall sharply</h2>
+  
+  <div class="triggers"><span class="lead">Fires on news like:</span>
+    <span class="trig">oil falls</span><span class="trig">crude drops</span><span class="trig">brent slumps</span><span class="trig">oil plunge</span><span class="trig">oversupply oil</span><span class="trig">demand fears oil</span>
+  </div>
+  
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain"><li><span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">Crude oil</span> prices drop</li><li>India&#x27;s <span class="term" tabindex="0" role="button" aria-label="The total amount of foreign currency India pays for its imports (oil, gold, electronics). A bigger bill pressures the rupee." data-def="The total amount of foreign currency India pays for its imports (oil, gold, electronics). A bigger bill pressures the rupee.">import bill</span> shrinks; the rupee and <span class="term" tabindex="0" role="button" aria-label="Current Account Deficit — when India spends more foreign currency on imports than it earns from exports. A wider gap tends to weaken the rupee." data-def="Current Account Deficit — when India spends more foreign currency on imports than it earns from exports. A wider gap tends to weaken the rupee.">CAD</span> get relief</li><li>Fuel-linked <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> pressure eases</li></ul>
+  
+  
+    <div class="blocklabel">What tends to move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Oil marketing (HPCL, BPCL, IOC)</div>
+          <div class="impact-why">fatter marketing margins</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Paints, Tyres, Aviation</div>
+          <div class="impact-why">lower input/fuel costs</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">CPI inflation</div>
+          <div class="impact-why">cheaper fuel</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks-months</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Upstream (ONGC, Oil India)</div>
+          <div class="impact-why">lower realizations</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+    </div>
+  
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch"><li>Whether the fall is demand-driven (growth worry) or supply-driven</li></ul>
+  
+</article>
+
+<article class="card">
+  <h2>Natural gas / LNG prices surge</h2>
+  
+  <div class="triggers"><span class="lead">Fires on news like:</span>
+    <span class="trig">natural gas</span><span class="trig">lng price</span><span class="trig">gas surges</span><span class="trig">gas shortage</span>
+  </div>
+  
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain"><li>Global LNG/natural-gas prices spike</li><li>India imports LNG for fertilizers, power and city gas</li><li>Input costs rise for gas-dependent industries</li></ul>
+  
+  
+    <div class="blocklabel">What tends to move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">City gas (IGL, MGL), Fertilizers</div>
+          <div class="impact-why">higher feedstock cost, margin pressure</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Fertilizer subsidy burden (fiscal)</div>
+          <div class="impact-why">government absorbs part of the cost</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">months</span>
+        </div>
+      </div>
+      
+    </div>
+  
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch"><li>European winter demand and global LNG supply</li></ul>
+  
+</article>
+
+<article class="card">
+  <h2>Gold rallies on safe-haven demand</h2>
+  
+  <div class="triggers"><span class="lead">Fires on news like:</span>
+    <span class="trig">gold surges</span><span class="trig">gold record</span><span class="trig">safe haven</span><span class="trig">gold rally</span><span class="trig">bullion climbs</span>
+  </div>
+  
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain"><li>Uncertainty (war, banking stress, rate-cut hopes) drives money into gold</li><li>Global gold prices rise, and India (a big importer) sees local prices climb too</li></ul>
+  
+  
+    <div class="blocklabel">What tends to move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Gold (domestic)</div>
+          <div class="impact-why">global price + rupee effect</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
+          <span class="when">days-weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Gold financiers (Muthoot, Manappuram)</div>
+          <div class="impact-why">higher collateral value supports loan book</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Jewellery (Titan)</div>
+          <div class="impact-why">very high prices can dampen volume demand</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Gold import bill / CAD</div>
+          <div class="impact-why">costlier gold imports widen the deficit</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">months</span>
+        </div>
+      </div>
+      
+    </div>
+  
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch"><li>US real <span class="term" tabindex="0" role="button" aria-label="The return investors earn on bonds. Rising yields often pull money away from stocks and gold." data-def="The return investors earn on bonds. Rising yields often pull money away from stocks and gold.">yields</span> and the dollar (gold&#x27;s main drivers)</li><li>Festival/wedding season demand in India</li></ul>
+  
+</article>
+
+<article class="card">
+  <h2>Sugar prices climb</h2>
+  
+  <div class="triggers"><span class="lead">Fires on news like:</span>
+    <span class="trig">sugar prices</span><span class="trig">sugar surges</span><span class="trig">sugar export</span><span class="trig">sugar futures</span><span class="trig">brazil sugar</span><span class="trig">sugar rally</span><span class="trig">sugar shortage</span>
+  </div>
+  
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain"><li>A global driver — a Brazil drought/smaller cane crop, or India curbing exports and diverting cane to ethanol — tightens sugar supply</li><li>World sugar prices climb; India is the world&#x27;s #2 producer and a swing exporter, so policy here moves global prices too</li><li>At home, tighter supply and export limits feed into food <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span></li></ul>
+  
+  
+    <div class="blocklabel">What tends to move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Sugar stocks (Balrampur Chini, Shree Renuka, Dhampur, Triveni, EID Parry)</div>
+          <div class="impact-why">higher sugar realisations lift margins — good for these producers</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">days-weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Sugar-using FMCG (Varun Beverages, Britannia, Nestle)</div>
+          <div class="impact-why">costlier sugar squeezes input margins — mildly bad for these buyers</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">CPI food inflation</div>
+          <div class="impact-why">sugar is a staple; pricier sugar nudges up the cost of living</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks-months</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Ethanol / OMC blending economics</div>
+          <div class="impact-why">more cane diverted to ethanol ties sugar to fuel policy</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">months</span>
+        </div>
+      </div>
+      
+    </div>
+  
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch"><li>Brazil&#x27;s cane crop and weather (the world&#x27;s biggest exporter)</li><li>India&#x27;s export-quota and ethanol-diversion decisions</li><li><span class="term" tabindex="0" role="button" aria-label="India&#x27;s June–September rainy season. Good rains lift farm output and rural incomes; a weak monsoon can push up food prices." data-def="India&#x27;s June–September rainy season. Good rains lift farm output and rural incomes; a weak monsoon can push up food prices.">Monsoon</span> rainfall over the Maharashtra/UP cane belts</li></ul>
+  
+</article>
+
+<article class="card">
+  <h2>Edible / cooking oil prices spike</h2>
+  
+  <div class="triggers"><span class="lead">Fires on news like:</span>
+    <span class="trig">edible oil</span><span class="trig">palm oil</span><span class="trig">cooking oil</span><span class="trig">sunflower oil</span><span class="trig">soybean oil</span><span class="trig">soyabean oil</span><span class="trig">vegetable oil</span><span class="trig">oil export ban</span><span class="trig">indonesia palm</span>
+  </div>
+  
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain"><li>A supply shock abroad — an Indonesia/Malaysia palm-oil export curb, Black Sea sunflower disruption, or a poor South American soy crop — lifts global edible-oil prices</li><li>India imports ~55-60% of its cooking oil, so the <span class="term" tabindex="0" role="button" aria-label="The total amount of foreign currency India pays for its imports (oil, gold, electronics). A bigger bill pressures the rupee." data-def="The total amount of foreign currency India pays for its imports (oil, gold, electronics). A bigger bill pressures the rupee.">import bill</span> jumps quickly</li><li>Costlier cooking oil is a direct, visible hit to household food budgets</li></ul>
+  
+  
+    <div class="blocklabel">What tends to move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Edible-oil FMCG (Marico, Adani Wilmar, Godrej Consumer, HUL)</div>
+          <div class="impact-why">pricier oil inputs squeeze margins — bad for these makers unless they hike prices</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">CPI food inflation</div>
+          <div class="impact-why">cooking oil is in almost every kitchen — bad for household budgets</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
+          <span class="when">weeks-months</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">INR (rupee)</div>
+          <div class="impact-why">a bigger <span class="term" tabindex="0" role="button" aria-label="The total amount of foreign currency India pays for its imports (oil, gold, electronics). A bigger bill pressures the rupee." data-def="The total amount of foreign currency India pays for its imports (oil, gold, electronics). A bigger bill pressures the rupee.">import bill</span> means more dollars flowing out</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+    </div>
+  
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch"><li>Indonesia/Malaysia export-tax and ban policy</li><li>India&#x27;s import-duty changes to cool prices</li><li>Black Sea (sunflower) and South American (soy) harvest news</li></ul>
+  
+</article>
+
+<article class="card">
+  <h2>Wheat / foodgrain prices rise</h2>
+  
+  <div class="triggers"><span class="lead">Fires on news like:</span>
+    <span class="trig">wheat prices</span><span class="trig">wheat export</span><span class="trig">grain prices</span><span class="trig">food grain</span><span class="trig">black sea grain</span><span class="trig">wheat shortage</span><span class="trig">rice export</span>
+  </div>
+  
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain"><li>A global grain shock — Black Sea export disruption, a heatwave hitting harvests, or big buyers stockpiling — pushes world wheat/grain prices up</li><li>India manages its own grain via export policy and buffer stocks, but global prices and local heat still pressure food <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span></li><li>Pricier grain feeds into bread, flour and everyday staples</li></ul>
+  
+  
+    <div class="blocklabel">What tends to move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">CPI food inflation</div>
+          <div class="impact-why">grain is a staple — pricier wheat lifts the cost of living</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks-months</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Packaged-foods FMCG (ITC, Britannia, Nestle)</div>
+          <div class="impact-why">higher flour costs pressure margins for food makers</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Farm sentiment / rural demand</div>
+          <div class="impact-why">better crop realisations can support rural spending</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">months</span>
+        </div>
+      </div>
+      
+    </div>
+  
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch"><li>India&#x27;s wheat/rice export-ban or stock-release decisions</li><li>Rabi harvest and heatwave forecasts</li><li>Global (Russia/Ukraine, Australia) harvest news</li></ul>
+  
+</article>
+
+<article class="card">
+  <h2>Base metals rally (copper, aluminium)</h2>
+  
+  <div class="triggers"><span class="lead">Fires on news like:</span>
+    <span class="trig">copper prices</span><span class="trig">copper surges</span><span class="trig">aluminium</span><span class="trig">aluminum</span><span class="trig">base metals</span><span class="trig">zinc prices</span><span class="trig">nickel prices</span><span class="trig">lme</span><span class="trig">metal prices rise</span>
+  </div>
+  
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain"><li>Stronger global demand (China, the green-energy build-out) or a supply hit (mine outage, high energy costs) pushes base-metal prices up on the LME (London Metal Exchange, where global metal prices are set)</li><li>India both produces and consumes these metals, so producers gain while metal-using industries pay more</li></ul>
+  
+  
+    <div class="blocklabel">What tends to move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Metal producers (Tata Steel, Hindalco, Vedanta, Hindustan Zinc, NALCO, JSW Steel)</div>
+          <div class="impact-why">higher metal prices lift their realisations — good for producers</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">days-weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Metal users (autos, consumer durables, cables)</div>
+          <div class="impact-why">costlier copper/aluminium raises input costs — mildly bad for these buyers</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Nifty Metal index</div>
+          <div class="impact-why">tracks the metal-producer basket</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">days-weeks</span>
+        </div>
+      </div>
+      
+    </div>
+  
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch"><li>China demand signals and stimulus</li><li>LME inventory levels and mine-supply disruptions</li><li>Energy costs (smelting is power-hungry)</li></ul>
+  
+</article>
+
+<article class="card">
+  <h2>Base metals slump</h2>
+  
+  <div class="triggers"><span class="lead">Fires on news like:</span>
+    <span class="trig">copper falls</span><span class="trig">metal prices fall</span><span class="trig">aluminium falls</span><span class="trig">base metals slump</span><span class="trig">metals selloff</span><span class="trig">weak metal demand</span>
+  </div>
+  
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain"><li>Weak global demand (a China slowdown or recession fears) or oversupply drags base-metal prices down</li><li>India&#x27;s metal producers earn less, while metal-using industries get some input-cost relief</li></ul>
+  
+  
+    <div class="blocklabel">What tends to move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Metal producers (Tata Steel, Hindalco, Vedanta, JSW Steel)</div>
+          <div class="impact-why">lower metal prices squeeze their margins — bad for producers</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Metal users (autos, durables, cables)</div>
+          <div class="impact-why">cheaper metal inputs ease costs — mildly good for these buyers</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+    </div>
+  
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch"><li>China growth and property data</li><li>Global recession signals and LME stockpiles</li></ul>
+  
+</article>
+
+<article class="card">
+  <h2>Fertiliser prices rise</h2>
+  
+  <div class="triggers"><span class="lead">Fires on news like:</span>
+    <span class="trig">fertilizer</span><span class="trig">fertiliser</span><span class="trig">urea</span><span class="trig">dap</span><span class="trig">potash</span><span class="trig">phosphate</span><span class="trig">di-ammonium</span><span class="trig">fertilizer prices</span>
+  </div>
+  
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain"><li>Costlier natural gas (a key feedstock) or a global supply squeeze pushes fertiliser prices up worldwide</li><li>India imports a large share of its fertiliser, so the government&#x27;s subsidy bill rises to keep farm prices affordable</li><li>This strains the budget and, if passed on, lifts farmers&#x27; input costs</li></ul>
+  
+  
+    <div class="blocklabel">What tends to move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Fertiliser stocks (Coromandel, Chambal, GNFC, RCF, Deepak Fertilisers)</div>
+          <div class="impact-why">pricing/volume effects vary, but higher realisations can help — mixed</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Government subsidy bill / fiscal deficit</div>
+          <div class="impact-why">bigger subsidies to shield farmers strain the budget</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">months</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Farm input costs / rural demand</div>
+          <div class="impact-why">costlier inputs can squeeze farm margins if subsidies don&#x27;t fully cushion</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">months</span>
+        </div>
+      </div>
+      
+    </div>
+  
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch"><li>Natural-gas prices (the main feedstock)</li><li>Global urea/DAP prices and China&#x27;s export policy</li><li>Government subsidy announcements ahead of the sowing season</li></ul>
+  
+</article>
+
+
+<div class="section">Geopolitics Macro</div>
+
+<article class="card">
+  <h2>China announces major stimulus</h2>
+  
+  <div class="triggers"><span class="lead">Fires on news like:</span>
+    <span class="trig">china stimulus</span><span class="trig">pboc cuts</span><span class="trig">beijing stimulus</span><span class="trig">china property support</span><span class="trig">china spending</span>
+  </div>
+  
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain"><li>China rolls out big stimulus to revive its economy</li><li>Expectations of stronger Chinese demand lift industrial metals and commodities</li><li>Global commodity producers, including Indian metal makers, benefit</li></ul>
+  
+  
+    <div class="blocklabel">What tends to move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Metals (Tata Steel, Hindalco, Vedanta, JSW)</div>
+          <div class="impact-why">metal prices track China demand</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">days-weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Global crude/commodities</div>
+          <div class="impact-why">China is the marginal buyer</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+    </div>
+  
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch"><li>Whether stimulus is actually spent (follow-through)</li><li>Chinese steel exports undercutting Indian prices</li></ul>
+  
+</article>
+
+<article class="card">
+  <h2>China growth slows / property stress deepens</h2>
+  
+  <div class="triggers"><span class="lead">Fires on news like:</span>
+    <span class="trig">china slowdown</span><span class="trig">china property</span><span class="trig">evergrande</span><span class="trig">china deflation</span><span class="trig">weak china data</span>
+  </div>
+  
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain"><li>China&#x27;s economy weakens; demand for raw materials cools</li><li>Industrial metal prices soften globally</li><li>Cheap Chinese exports can flood other markets</li></ul>
+  
+  
+    <div class="blocklabel">What tends to move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Metals (Tata Steel, Hindalco, JSW)</div>
+          <div class="impact-why">weaker metal prices + Chinese dumping</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Global crude</div>
+          <div class="impact-why">softer demand</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+    </div>
+  
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch"><li>Anti-dumping duties from India to protect domestic metals</li></ul>
+  
+</article>
+
+
+<div class="section">Geopolitics</div>
+
+<article class="card">
+  <h2>Middle-East conflict escalates</h2>
+  
+  <div class="triggers"><span class="lead">Fires on news like:</span>
+    <span class="trig">middle east</span><span class="trig">israel</span><span class="trig">iran</span><span class="trig">gaza</span><span class="trig">strait of hormuz</span><span class="trig">houthi</span><span class="trig">gulf tension</span><span class="trig">war escalation</span>
+  </div>
+  
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain"><li>Conflict risk rises in a key oil-producing region</li><li>Oil and gold jump on supply-shock and safe-haven fears</li><li>For oil-importing India this means costlier crude, weaker rupee, higher <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span></li></ul>
+  
+  
+    <div class="blocklabel">What tends to move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Crude oil</div>
+          <div class="impact-why">supply-disruption premium</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Gold</div>
+          <div class="impact-why">safe-haven bid</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">INR (rupee)</div>
+          <div class="impact-why">oil import cost + risk-off</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">days-weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Aviation, Paints, OMCs</div>
+          <div class="impact-why">fuel/input cost pressure</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+    </div>
+  
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch"><li>Whether shipping routes (Strait of Hormuz, Red Sea) are actually disrupted</li><li>Brent crude above key levels ($90+)</li></ul>
+  
+</article>
+
+<article class="card">
+  <h2>Red Sea / shipping-lane disruption</h2>
+  
+  <div class="triggers"><span class="lead">Fires on news like:</span>
+    <span class="trig">red sea</span><span class="trig">suez</span><span class="trig">shipping disruption</span><span class="trig">freight rates</span><span class="trig">container</span><span class="trig">houthi attacks</span>
+  </div>
+  
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain"><li>Attacks or blockages force ships onto longer routes</li><li>Freight rates and shipping times jump globally</li><li>Import/export costs rise; supply chains stretch</li></ul>
+  
+  
+    <div class="blocklabel">What tends to move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Exporters &amp; importers (margins)</div>
+          <div class="impact-why">higher freight and delays</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Shipping/logistics firms</div>
+          <div class="impact-why">higher freight rates can lift some carriers</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Imported-goods inflation</div>
+          <div class="impact-why">costlier logistics</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">weeks-months</span>
+        </div>
+      </div>
+      
+    </div>
+  
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch"><li>Container freight rate indices (Drewry/Baltic)</li></ul>
+  
+</article>
+
+<article class="card">
+  <h2>New sanctions on Russia / oil price caps</h2>
+  
+  <div class="triggers"><span class="lead">Fires on news like:</span>
+    <span class="trig">russia sanctions</span><span class="trig">oil price cap</span><span class="trig">russian crude</span><span class="trig">g7 sanctions</span>
+  </div>
+  
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain"><li>Fresh sanctions target Russian oil/trade</li><li>Discounted Russian crude flows shift; India has been a big buyer of cheap Russian oil</li><li>If discounts shrink, India&#x27;s oil import savings fade</li></ul>
+  
+  
+    <div class="blocklabel">What tends to move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">India oil import bill</div>
+          <div class="impact-why">smaller Russian discount raises average import cost</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">weeks-months</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Refiners (Reliance, oil PSUs)</div>
+          <div class="impact-why">narrower discount margins</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+    </div>
+  
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch"><li>The Russian crude discount vs Brent</li></ul>
+  
+</article>
+
+
+<div class="section">Trade</div>
+
+<article class="card">
+  <h2>US imposes new tariffs / trade-war escalation</h2>
+  
+  <div class="triggers"><span class="lead">Fires on news like:</span>
+    <span class="trig">tariff</span><span class="trig">trade war</span><span class="trig">import duty</span><span class="trig">section 301</span><span class="trig">protectionism</span><span class="trig">trade barrier</span>
+  </div>
+  
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain"><li>The US (or a big economy) raises tariffs on imports</li><li>Global trade tensions rise; supply chains reshuffle</li><li>Some Indian exporters lose access; others gain as buyers diversify away from China (&#x27;China+1&#x27;)</li></ul>
+  
+  
+    <div class="blocklabel">What tends to move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Export-heavy sectors (pharma, textiles, autos parts)</div>
+          <div class="impact-why">depends who is targeted</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">weeks-months</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">&#39;China+1&#39; beneficiaries (electronics, chemicals)</div>
+          <div class="impact-why">orders shift to India</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">months</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Market volatility</div>
+          <div class="impact-why">uncertainty</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+    </div>
+  
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch"><li>Whether India is exempted or targeted specifically</li></ul>
+  
+</article>
+
+<article class="card">
+  <h2>Semiconductor / tech export curbs</h2>
+  
+  <div class="triggers"><span class="lead">Fires on news like:</span>
+    <span class="trig">semiconductor</span><span class="trig">chip ban</span><span class="trig">export controls</span><span class="trig">chip curbs</span><span class="trig">asml</span><span class="trig">nvidia export</span>
+  </div>
+  
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain"><li>Major economies restrict advanced chip/tech exports</li><li>Global tech supply chains tighten; chip availability and prices shift</li><li>India&#x27;s electronics manufacturing and &#x27;Make in India&#x27; plans are affected both ways</li></ul>
+  
+  
+    <div class="blocklabel">What tends to move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Electronics manufacturing (Dixon, Kaynes)</div>
+          <div class="impact-why">supply-chain diversification into India</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">months</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Global tech sentiment</div>
+          <div class="impact-why">uncertainty for chip-dependent firms</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+    </div>
+  
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch"><li>India&#x27;s semiconductor incentive (PLI) announcements</li></ul>
+  
+</article>
+
+
+<div class="section">Currency</div>
+
+<article class="card">
+  <h2>US dollar index (DXY) strengthens broadly</h2>
+  
+  <div class="triggers"><span class="lead">Fires on news like:</span>
+    <span class="trig">dollar index</span><span class="trig">dxy</span><span class="trig">dollar strengthens</span><span class="trig">strong dollar</span><span class="trig">greenback</span>
+  </div>
+  
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain"><li>The dollar strengthens against major currencies</li><li>Emerging-market currencies, including the rupee, tend to weaken</li><li>Importers pay more; foreign investors get cautious</li></ul>
+  
+  
+    <div class="blocklabel">What tends to move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">INR (rupee)</div>
+          <div class="impact-why">broad dollar strength</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
+          <span class="when">days-weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Import-heavy sectors</div>
+          <div class="impact-why">costlier dollar inputs</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">IT &amp; Pharma exporters</div>
+          <div class="impact-why">weak rupee boosts export earnings</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+    </div>
+  
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch"><li><span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span> intervention to defend the rupee (forex reserves)</li></ul>
+  
+</article>
+
+<article class="card">
+  <h2>US 10-year Treasury yield jumps</h2>
+  
+  <div class="triggers"><span class="lead">Fires on news like:</span>
+    <span class="trig">treasury yield</span><span class="trig">bond yield</span><span class="trig">10-year yield</span><span class="trig">yields rise</span><span class="trig">bond selloff</span>
+  </div>
+  
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain"><li>US long-term <span class="term" tabindex="0" role="button" aria-label="The return investors earn on bonds. Rising yields often pull money away from stocks and gold." data-def="The return investors earn on bonds. Rising yields often pull money away from stocks and gold.">bond yields</span> rise</li><li>Global borrowing costs and the &#x27;risk-free&#x27; benchmark go up</li><li>Money rotates toward US bonds; emerging-market equities look less attractive</li></ul>
+  
+  
+    <div class="blocklabel">What tends to move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Nifty 50</div>
+          <div class="impact-why">higher discount rate on equities, <span class="term" tabindex="0" role="button" aria-label="Foreign Institutional Investors — big overseas funds that buy and sell Indian shares. When they pull money out, markets and the rupee usually fall." data-def="Foreign Institutional Investors — big overseas funds that buy and sell Indian shares. When they pull money out, markets and the rupee usually fall.">FII</span> outflows</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Gold</div>
+          <div class="impact-why">higher <span class="term" tabindex="0" role="button" aria-label="The return investors earn on bonds. Rising yields often pull money away from stocks and gold." data-def="The return investors earn on bonds. Rising yields often pull money away from stocks and gold.">yields</span> compete with gold</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">High-valuation growth stocks</div>
+          <div class="impact-why">most sensitive to discount rates</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">days-weeks</span>
+        </div>
+      </div>
+      
+    </div>
+  
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch"><li>Whether the yield move is about growth or <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span></li></ul>
+  
+</article>
+
+
+<div class="section">Policy</div>
+
+<article class="card">
+  <h2>Big India government capex / reform push</h2>
+  
+  <div class="triggers"><span class="lead">Fires on news like:</span>
+    <span class="trig">budget capex</span><span class="trig">infrastructure push</span><span class="trig">pli scheme</span><span class="trig">government spending india</span><span class="trig">reform announcement</span>
+  </div>
+  
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain"><li>Government ramps up infrastructure spending or a big reform/PLI scheme</li><li>Order books swell for infra, capital-goods and beneficiary sectors</li></ul>
+  
+  
+    <div class="blocklabel">What tends to move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Infra, Capital goods (L&amp;T), Cement, Railways</div>
+          <div class="impact-why">order inflows and demand</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">months</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">PLI-beneficiary sectors</div>
+          <div class="impact-why">incentive-driven investment</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">months</span>
+        </div>
+      </div>
+      
+    </div>
+  
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch"><li>Actual execution vs announcement (<span class="term" tabindex="0" role="button" aria-label="The gap between what the government spends and what it earns. A large gap can worry investors and pressure the rupee." data-def="The gap between what the government spends and what it earns. A large gap can worry investors and pressure the rupee.">fiscal deficit</span> trade-off)</li></ul>
+  
+</article>
+
+
+
+<div class="disclaimer">
+  <b>Learning tool, not advice.</b> These are typical cause-and-effect patterns to help
+  you understand the machinery — never a recommendation to buy or sell anything.
+</div>
+
+<footer class="pagefoot">
+  <div class="archive"><a href="index.html">← Back to today's brief</a></div>
+  <p>News Finance Hub · the pattern library grows as new linkages are added.</p>
+</footer>
+</div></body></html>

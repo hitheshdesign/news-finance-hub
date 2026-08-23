@@ -31,11 +31,20 @@ def _load_yaml(name: str) -> dict:
         return yaml.safe_load(f)
 
 
+def _load_yaml_optional(name: str) -> dict:
+    """Like _load_yaml, but returns {} if the file is missing (optional data)."""
+    try:
+        return _load_yaml(name) or {}
+    except FileNotFoundError:
+        return {}
+
+
 # --- Knowledge base + config (read once) ---
 TRANSMISSION = _load_yaml("transmission_map.yaml").get("linkages", [])
 SOURCES = _load_yaml("sources.yaml")
 FILTERS = _load_yaml("filters.yaml")
 GLOSSARY = _load_yaml("glossary.yaml").get("terms", {})
+CALENDAR = _load_yaml_optional("calendar.yaml").get("events", [])
 
 # --- Secrets / keys (all optional; missing keys just disable that feature) ---
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip()

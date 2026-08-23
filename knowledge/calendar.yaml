@@ -1,0 +1,53 @@
+# =============================================================================
+# CALENDAR — upcoming market-moving events to watch for IN ADVANCE.
+# The brief shows any of these falling within the next `calendar_lookahead_days`
+# (set in filters.yaml). This is how you learn to anticipate a move instead of
+# reacting after it.
+#
+# Two kinds of entry:
+#   * Fixed date:   date: 2026-09-16
+#   * Monthly:      recurs: monthly   +   day: 12   (auto-rolls to the next one,
+#                   so you never have to update these)
+# Edit freely — update the fixed policy dates as official calendars are released.
+# =============================================================================
+
+events:
+  # --- Monthly data releases (auto-recurring; approximate days) ---
+  - name: "US inflation report (CPI)"
+    recurs: monthly
+    day: 12
+    category: macro_data
+    why: "Hot US inflation can lift global interest rates and pull foreign money out of India; a cool reading does the reverse. A big driver of gold."
+
+  - name: "India inflation report (CPI)"
+    recurs: monthly
+    day: 12
+    category: macro_data
+    why: "Decides how soon the RBI can cut rates — moves bond yields, the rupee, and rate-sensitive stocks (banks, autos, real estate)."
+
+  - name: "US jobs report (non-farm payrolls)"
+    recurs: monthly
+    day: 5
+    category: macro_data
+    why: "Strong US jobs means fewer rate cuts, a stronger dollar, and pressure on the rupee and gold."
+
+  # --- Fixed policy events (update these as official dates are published) ---
+  - name: "US Fed rate decision (FOMC)"
+    date: 2026-09-16
+    category: monetary_policy
+    why: "Sets US interest rates — the single biggest lever on the dollar, gold, and foreign flows into Indian stocks."
+
+  - name: "OPEC+ output meeting"
+    date: 2026-09-07
+    category: commodities
+    why: "Decides how much oil the world's big producers pump — swings crude prices, India's import bill, fuel costs and inflation."
+
+  - name: "RBI rate decision (MPC)"
+    date: 2026-10-01
+    category: monetary_policy
+    why: "India's central bank sets the repo rate — directly affects your loan/EMI costs, the rupee, and bank stocks."
+
+  - name: "Union Budget"
+    date: 2027-02-01
+    category: policy
+    why: "India's annual budget — capital spending, taxes and the fiscal deficit can move entire sectors in a day."

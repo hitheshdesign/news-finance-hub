@@ -59,8 +59,20 @@ gdelt:
     - "sanctions"
     - "tariff"
     - "central bank"
+    # commodities & agriculture — so the CAUSE of a commodity move (weather,
+    # export bans, supply shocks) is actually fetched, not just its price
+    - "sugar prices"
+    - "edible oil"
+    - "palm oil"
+    - "wheat prices"
+    - "food prices"
+    - "export ban"
+    - "fertilizer"
+    - "copper prices"
+    - "aluminium"
+    - "natural gas"
   timespan: "1d"        # look back 1 day
-  max_records: 60
+  max_records: 80
   language: "english"
 
 # --- FRED (US macro data series, free API key needed) ---

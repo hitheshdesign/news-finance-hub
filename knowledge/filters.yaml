@@ -13,6 +13,23 @@ max_events_per_brief: 8
 # How many go in the "Top — what matters most" highlight band.
 top_highlights: 3
 
+# --- Variety: stop the brief being "all Fed / all gold" ---
+# Cap how many cards can share the SAME matched pattern (e.g. two Fed stories),
+# so distinct themes get a seat. Higher = allow more repeats of one theme.
+max_per_topic: 2
+
+# --- Cross-day de-duplication (don't re-post yesterday's story) ---
+# How many recent days of briefs to compare today's stories against.
+dedup_window_days: 5
+# If a story overlaps a recent one by at least this much, DROP it as a repeat.
+cross_day_similarity: 0.7
+# If it overlaps in this looser band, KEEP it but flag it "Developing".
+developing_similarity: 0.45
+
+# --- Forward calendar ---
+# Show calendar events falling within this many days ahead.
+calendar_lookahead_days: 21
+
 # Words that, if present, ADD to relevance (these touch India-transmission
 # channels). Weighted: strong signals score higher.
 relevance_keywords:
@@ -36,6 +53,16 @@ relevance_keywords:
     - sanctions
     - yield
     - opec
+    # commodities & agri (so a sugar/edible-oil/metal move isn't dropped)
+    - sugar
+    - edible oil
+    - palm oil
+    - wheat
+    - fertilizer
+    - fertiliser
+    - copper
+    - aluminium
+    - aluminum
   medium:   # +1.0 each (sectors / linked themes)
     - metals
     - steel
@@ -52,6 +79,16 @@ relevance_keywords:
     - trade war
     - export
     - import
+    # softer commodity / food signals
+    - cotton
+    - soybean
+    - soyabean
+    - food inflation
+    - food prices
+    - export ban
+    - urea
+    - commodity
+    - crop
   india_bonus: # +1.0 extra if any appear (direct India relevance)
     - india
     - indian
@@ -74,6 +111,10 @@ noise_keywords:   # -1.5 each
     - astrology
     - box office
 
-# Two items are treated as the SAME event if their headlines share at least
-# this fraction of significant words (simple de-duplication / clustering).
-cluster_similarity: 0.45
+# Two items are treated as the SAME event (same day) if their headline+summary
+# share at least this fraction of significant words. Lower = merges more
+# aggressively (fewer near-duplicate cards).
+cluster_similarity: 0.4
+# ...but they must also share at least this many significant words, so two
+# short headlines with one word in common don't get falsely merged.
+cluster_min_shared: 2

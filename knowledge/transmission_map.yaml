@@ -163,7 +163,7 @@ linkages:
   - id: gold_up_riskoff
     name: "Gold rallies on safe-haven demand"
     category: commodities
-    triggers: ["gold surges", "gold record", "safe haven", "gold rally", "bullion climbs"]
+    triggers: ["gold surges", "gold record", "gold price", "gold rises", "gold climbs", "gold jumps", "gold hits", "gold rally", "gold rallies", "gold shines", "safe haven", "bullion", "record high"]
     chain:
       - "Uncertainty (war, banking stress, rate-cut hopes) drives money into gold"
       - "Global gold prices rise, and India (a big importer) sees local prices climb too"
@@ -388,3 +388,105 @@ linkages:
       - {target: "PLI-beneficiary sectors", direction: up, probability: Low, horizon: "months", rationale: "incentive-driven investment"}
     watch_next:
       - "Actual execution vs announcement (fiscal deficit trade-off)"
+
+  # ------------------------- AGRI COMMODITIES ---------------------------
+  - id: sugar_prices_up
+    name: "Sugar prices climb"
+    category: commodities
+    triggers: ["sugar price", "sugar surges", "sugar export", "sugar futures", "brazil sugar", "sugar rally", "sugar shortage", "sugar output", "sugar production", "sugar stockpile", "sugar deficit", "sugar stocks"]
+    chain:
+      - "A global driver — a Brazil drought/smaller cane crop, or India curbing exports and diverting cane to ethanol — tightens sugar supply"
+      - "World sugar prices climb; India is the world's #2 producer and a swing exporter, so policy here moves global prices too"
+      - "At home, tighter supply and export limits feed into food inflation"
+    impacts:
+      - {target: "Sugar stocks (Balrampur Chini, Shree Renuka, Dhampur, Triveni, EID Parry)", direction: up, probability: Medium, horizon: "days-weeks", rationale: "higher sugar realisations lift margins — good for these producers"}
+      - {target: "Sugar-using FMCG (Varun Beverages, Britannia, Nestle)", direction: down, probability: Low, horizon: "weeks", rationale: "costlier sugar squeezes input margins — mildly bad for these buyers"}
+      - {target: "CPI food inflation", direction: up, probability: Medium, horizon: "weeks-months", rationale: "sugar is a staple; pricier sugar nudges up the cost of living"}
+      - {target: "Ethanol / OMC blending economics", direction: up, probability: Low, horizon: "months", rationale: "more cane diverted to ethanol ties sugar to fuel policy"}
+    watch_next:
+      - "Brazil's cane crop and weather (the world's biggest exporter)"
+      - "India's export-quota and ethanol-diversion decisions"
+      - "Monsoon rainfall over the Maharashtra/UP cane belts"
+
+  - id: edible_oil_up
+    name: "Edible / cooking oil prices spike"
+    category: commodities
+    triggers: ["edible oil", "palm oil", "cooking oil", "sunflower oil", "soybean oil", "soyabean oil", "vegetable oil", "oil export ban", "indonesia palm"]
+    chain:
+      - "A supply shock abroad — an Indonesia/Malaysia palm-oil export curb, Black Sea sunflower disruption, or a poor South American soy crop — lifts global edible-oil prices"
+      - "India imports ~55-60% of its cooking oil, so the import bill jumps quickly"
+      - "Costlier cooking oil is a direct, visible hit to household food budgets"
+    impacts:
+      - {target: "Edible-oil FMCG (Marico, Adani Wilmar, Godrej Consumer, HUL)", direction: down, probability: Medium, horizon: "weeks", rationale: "pricier oil inputs squeeze margins — bad for these makers unless they hike prices"}
+      - {target: "CPI food inflation", direction: up, probability: High, horizon: "weeks-months", rationale: "cooking oil is in almost every kitchen — bad for household budgets"}
+      - {target: "INR (rupee)", direction: down, probability: Low, horizon: "weeks", rationale: "a bigger import bill means more dollars flowing out"}
+    watch_next:
+      - "Indonesia/Malaysia export-tax and ban policy"
+      - "India's import-duty changes to cool prices"
+      - "Black Sea (sunflower) and South American (soy) harvest news"
+
+  - id: wheat_foodgrain_up
+    name: "Wheat / foodgrain prices rise"
+    category: commodities
+    triggers: ["wheat prices", "wheat export", "grain prices", "food grain", "black sea grain", "wheat shortage", "rice export"]
+    chain:
+      - "A global grain shock — Black Sea export disruption, a heatwave hitting harvests, or big buyers stockpiling — pushes world wheat/grain prices up"
+      - "India manages its own grain via export policy and buffer stocks, but global prices and local heat still pressure food inflation"
+      - "Pricier grain feeds into bread, flour and everyday staples"
+    impacts:
+      - {target: "CPI food inflation", direction: up, probability: Medium, horizon: "weeks-months", rationale: "grain is a staple — pricier wheat lifts the cost of living"}
+      - {target: "Packaged-foods FMCG (ITC, Britannia, Nestle)", direction: down, probability: Low, horizon: "weeks", rationale: "higher flour costs pressure margins for food makers"}
+      - {target: "Farm sentiment / rural demand", direction: up, probability: Low, horizon: "months", rationale: "better crop realisations can support rural spending"}
+    watch_next:
+      - "India's wheat/rice export-ban or stock-release decisions"
+      - "Rabi harvest and heatwave forecasts"
+      - "Global (Russia/Ukraine, Australia) harvest news"
+
+  # ------------------------- BASE METALS ---------------------------
+  - id: base_metals_up
+    name: "Base metals rally (copper, aluminium)"
+    category: commodities
+    triggers: ["copper prices", "copper surges", "aluminium", "aluminum", "base metals", "zinc prices", "nickel prices", "lme", "metal prices rise"]
+    chain:
+      - "Stronger global demand (China, the green-energy build-out) or a supply hit (mine outage, high energy costs) pushes base-metal prices up on the LME (London Metal Exchange, where global metal prices are set)"
+      - "India both produces and consumes these metals, so producers gain while metal-using industries pay more"
+    impacts:
+      - {target: "Metal producers (Tata Steel, Hindalco, Vedanta, Hindustan Zinc, NALCO, JSW Steel)", direction: up, probability: Medium, horizon: "days-weeks", rationale: "higher metal prices lift their realisations — good for producers"}
+      - {target: "Metal users (autos, consumer durables, cables)", direction: down, probability: Low, horizon: "weeks", rationale: "costlier copper/aluminium raises input costs — mildly bad for these buyers"}
+      - {target: "Nifty Metal index", direction: up, probability: Medium, horizon: "days-weeks", rationale: "tracks the metal-producer basket"}
+    watch_next:
+      - "China demand signals and stimulus"
+      - "LME inventory levels and mine-supply disruptions"
+      - "Energy costs (smelting is power-hungry)"
+
+  - id: base_metals_down
+    name: "Base metals slump"
+    category: commodities
+    triggers: ["copper falls", "metal prices fall", "aluminium falls", "base metals slump", "metals selloff", "weak metal demand"]
+    chain:
+      - "Weak global demand (a China slowdown or recession fears) or oversupply drags base-metal prices down"
+      - "India's metal producers earn less, while metal-using industries get some input-cost relief"
+    impacts:
+      - {target: "Metal producers (Tata Steel, Hindalco, Vedanta, JSW Steel)", direction: down, probability: Medium, horizon: "weeks", rationale: "lower metal prices squeeze their margins — bad for producers"}
+      - {target: "Metal users (autos, durables, cables)", direction: up, probability: Low, horizon: "weeks", rationale: "cheaper metal inputs ease costs — mildly good for these buyers"}
+    watch_next:
+      - "China growth and property data"
+      - "Global recession signals and LME stockpiles"
+
+  # ------------------------- FERTILISERS ---------------------------
+  - id: fertilizer_up
+    name: "Fertiliser prices rise"
+    category: commodities
+    triggers: ["fertilizer", "fertiliser", "urea", "dap", "potash", "phosphate", "di-ammonium", "fertilizer prices"]
+    chain:
+      - "Costlier natural gas (a key feedstock) or a global supply squeeze pushes fertiliser prices up worldwide"
+      - "India imports a large share of its fertiliser, so the government's subsidy bill rises to keep farm prices affordable"
+      - "This strains the budget and, if passed on, lifts farmers' input costs"
+    impacts:
+      - {target: "Fertiliser stocks (Coromandel, Chambal, GNFC, RCF, Deepak Fertilisers)", direction: up, probability: Low, horizon: "weeks", rationale: "pricing/volume effects vary, but higher realisations can help — mixed"}
+      - {target: "Government subsidy bill / fiscal deficit", direction: up, probability: Medium, horizon: "months", rationale: "bigger subsidies to shield farmers strain the budget"}
+      - {target: "Farm input costs / rural demand", direction: down, probability: Low, horizon: "months", rationale: "costlier inputs can squeeze farm margins if subsidies don't fully cushion"}
+    watch_next:
+      - "Natural-gas prices (the main feedstock)"
+      - "Global urea/DAP prices and China's export policy"
+      - "Government subsidy announcements ahead of the sowing season"

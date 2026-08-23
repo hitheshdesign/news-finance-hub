@@ -1,0 +1,1019 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title></title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --font-serif:&#39;Newsreader&#39;,Georgia,&#39;Times New Roman&#39;,serif;
+  --font-sans:&#39;Inter&#39;,-apple-system,BlinkMacSystemFont,&#39;Segoe UI&#39;,Roboto,sans-serif;
+  --bg:#f7f6f3; --panel:#ffffff; --panel2:#faf9f7;
+  --ink:#141a24; --ink2:#3b4453; --muted:#6b7482; --faint:#98a1af;
+  --line:#e7e4de; --line2:#efece6;
+  --brand:#0f172a; --link:#1f5fd6;
+  --up:#15803d; --up-bg:#e9f6ee; --down:#c02626; --down-bg:#fbebe9;
+  --tip-bg:#1c2430; --tip-ink:#f2f5f9;
+  --top-bg:#fbf7ec; --top-line:#ecdcae;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0b0e14; --panel:#141a22; --panel2:#111721;
+    --ink:#e8edf3; --ink2:#c3ccd8; --muted:#93a0af; --faint:#6b7788;
+    --line:#232c38; --line2:#1c2430;
+    --brand:#e8edf3; --link:#6ea8fe;
+    --up:#42c17d; --up-bg:#12271c; --down:#f2726f; --down-bg:#2a1514;
+    --tip-bg:#e9edf2; --tip-ink:#10151d;
+    --top-bg:#1c1a12; --top-line:#4a4022;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;overflow-x:hidden;}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:var(--font-sans);font-size:17px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;}
+.wrap{max-width:720px;margin:0 auto;padding:28px 20px 72px;}
+
+/* ---------- Masthead ---------- */
+.mast{padding-bottom:20px;border-bottom:2px solid var(--ink);margin-bottom:8px;}
+.kicker{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:8px;}
+.mast h1{font-family:var(--font-serif);font-weight:700;letter-spacing:-.02em;
+  font-size:clamp(30px,7vw,44px);line-height:1.05;margin:0 0 10px;color:var(--ink);}
+.mast .date{font-size:15px;color:var(--ink2);}
+.mast .date b{color:var(--ink);}
+.mast .engine{color:var(--muted);}
+
+/* ---------- Reading guide ---------- */
+.guide{margin:18px 0 4px;padding:12px 15px;background:var(--panel2);
+  border:1px solid var(--line);border-radius:12px;font-size:13.5px;color:var(--ink2);}
+.guide b{color:var(--ink);}
+.guide .flow{color:var(--muted);}
+
+/* ---------- Macro strip ---------- */
+.macro{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;}
+.macro .m{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+  padding:7px 11px;font-size:12.5px;color:var(--muted);}
+.macro .m b{color:var(--ink);font-weight:600;}
+
+/* ---------- Section labels ---------- */
+.section{font-family:var(--font-sans);font-size:12.5px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.1em;color:var(--muted);
+  margin:34px 0 14px;display:flex;align-items:center;gap:10px;}
+.section::after{content:&#34;&#34;;flex:1;height:1px;background:var(--line);}
+
+/* ---------- Card ---------- */
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;
+  padding:22px 22px 18px;margin:0 0 18px;}
+.card.top{background:linear-gradient(180deg,var(--top-bg),var(--panel));
+  border-color:var(--top-line);}
+.tags{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px;}
+.tag{font-size:11.5px;font-weight:600;letter-spacing:.03em;color:var(--muted);
+  text-transform:uppercase;}
+.tag.dot::before{content:&#34;•&#34;;margin-right:8px;color:var(--faint);}
+.badge{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:700;
+  letter-spacing:.04em;text-transform:uppercase;color:#7a5b00;background:#f6e7bd;
+  padding:3px 9px;border-radius:999px;}
+@media (prefers-color-scheme:dark){.badge{color:#ffdf8a;background:#3a3216;}}
+.card h2{font-family:var(--font-serif);font-weight:600;letter-spacing:-.01em;
+  font-size:24px;line-height:1.22;margin:0 0 14px;color:var(--ink);}
+
+/* Plain-English takeaway — the rookie&#39;s anchor. Label sits ABOVE the sentence
+   so the sentence gets the full width and reads as one clean line of meaning. */
+.tldr{background:var(--panel2);border-left:3px solid var(--link);
+  border-radius:0 10px 10px 0;padding:13px 16px;margin:0 0 16px;}
+.tldr .lbl{display:block;font-size:11px;font-weight:700;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--link);margin:0 0 6px;}
+.tldr p{margin:0;font-size:17px;font-weight:500;color:var(--ink);line-height:1.5;}
+
+.blocklabel{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--muted);margin:18px 0 9px;}
+.what{margin:0 0 4px;color:var(--ink2);font-size:16px;}
+
+/* &#34;Think of it like…&#34; — an everyday analogy that makes the mechanism click */
+.analogy{margin:14px 0 4px;padding:11px 14px;background:var(--panel2);
+  border:1px dashed var(--line);border-radius:11px;font-size:15px;color:var(--ink2);
+  line-height:1.55;}
+.analogy b{color:var(--ink);font-weight:600;}
+
+/* How it reaches India — connected chain */
+.chain{list-style:none;margin:0;padding:0;}
+.chain li{position:relative;padding:0 0 14px 26px;color:var(--ink2);font-size:15.5px;}
+.chain li::before{content:&#34;&#34;;position:absolute;left:7px;top:8px;width:8px;height:8px;
+  border-radius:50%;background:var(--link);}
+.chain li::after{content:&#34;&#34;;position:absolute;left:10.5px;top:16px;bottom:0;
+  width:1px;background:var(--line);}
+.chain li:last-child{padding-bottom:0;}
+.chain li:last-child::after{display:none;}
+
+/* What could move — impact rows */
+.impacts{display:flex;flex-direction:column;gap:9px;margin-top:4px;}
+.impact{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:baseline;
+  padding:11px 13px;background:var(--panel2);border:1px solid var(--line2);border-radius:11px;}
+.dir{font-size:12.5px;font-weight:700;padding:3px 9px;border-radius:7px;white-space:nowrap;}
+.dir.up{color:var(--up);background:var(--up-bg);}
+.dir.down{color:var(--down);background:var(--down-bg);}
+.impact-body{flex:1 1 220px;min-width:180px;}
+.impact-target{font-weight:600;color:var(--ink);font-size:15.5px;}
+.impact-why{color:var(--muted);font-size:13.5px;margin-top:1px;}
+.impact-side{display:flex;align-items:center;gap:12px;margin-left:auto;}
+.meter{display:inline-flex;align-items:center;gap:8px;}
+.dots{display:inline-flex;gap:3px;}
+.dots i{width:7px;height:7px;border-radius:50%;background:var(--line);display:block;}
+.dots i.on{background:var(--ink2);}
+.meter .lvl{font-size:12px;color:var(--muted);font-weight:600;}
+.when{font-size:12.5px;color:var(--faint);white-space:nowrap;}
+
+/* Watch next */
+.watch{list-style:none;margin:6px 0 0;padding:0;}
+.watch li{position:relative;padding:4px 0 4px 24px;color:var(--ink2);font-size:15px;}
+.watch li::before{content:&#34;→&#34;;position:absolute;left:2px;color:var(--link);font-weight:700;}
+
+/* Footer bits */
+.foot{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;
+  margin-top:16px;padding-top:13px;border-top:1px solid var(--line2);
+  font-size:12.5px;color:var(--muted);}
+.foot .conf{display:inline-flex;align-items:center;gap:7px;}
+.foot a{color:var(--link);text-decoration:none;font-weight:600;}
+.foot a:hover{text-decoration:underline;}
+.caveat{color:var(--muted);font-size:13px;font-style:italic;margin-top:11px;
+  padding-left:11px;border-left:2px solid var(--line);}
+
+/* Jargon tooltips */
+.term{border-bottom:1.5px dotted var(--faint);cursor:help;position:relative;
+  color:inherit;outline:none;}
+.term:hover,.term:focus{border-bottom-color:var(--link);}
+.term::after{content:attr(data-def);position:absolute;left:0;top:calc(100% + 8px);
+  width:min(300px,78vw);background:var(--tip-bg);color:var(--tip-ink);
+  font-family:var(--font-sans);font-size:13px;font-weight:400;font-style:normal;
+  line-height:1.45;padding:10px 12px;border-radius:9px;
+  box-shadow:0 8px 24px rgba(0,0,0,.22);z-index:20;
+  opacity:0;visibility:hidden;transform:translateY(-3px);
+  transition:opacity .15s ease,transform .15s ease;pointer-events:none;}
+.term:hover::after,.term:focus::after{opacity:1;visibility:visible;transform:translateY(0);}
+
+/* Disclaimer + footer */
+.disclaimer{background:var(--panel2);border:1px dashed var(--line);border-radius:12px;
+  padding:14px 16px;color:var(--muted);font-size:13px;margin-top:28px;}
+.disclaimer b{color:var(--ink2);}
+.pagefoot{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);
+  color:var(--muted);font-size:13px;}
+.archive{margin-bottom:12px;}
+.archive b{color:var(--ink2);}
+.archive a{color:var(--link);text-decoration:none;margin:0 10px 6px 0;
+  display:inline-block;}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media (max-width:520px){
+  body{font-size:16px}
+  .card{padding:18px 16px 15px;border-radius:14px}
+  .impact-side{margin-left:0}
+}
+</style>
+</head><body><div class="wrap">
+
+<header class="mast">
+  <div class="kicker">World news, decoded for Indian markets</div>
+  <h1>The India Impact Brief</h1>
+  <div class="date"><b>Tuesday, 18 August 2026</b> · 8 signals ·
+    <span class="engine">analysis by Gemini AI</span></div>
+</header>
+
+<div class="guide">
+  <b>How to read this:</b> <span class="flow">each card goes what happened →
+  why it matters to India → what could move (and how likely) → what to watch.</span>
+  Any <span class="term" tabindex="0" role="button" data-def="Tap or hover an underlined word to see a simple definition.">underlined word</span>
+  has a plain-English meaning — hover or tap it.
+</div>
+
+
+
+
+
+
+<div class="section">Today — what matters most</div>
+
+<article class="card top">
+  <div class="tags">
+    <span class="badge">★ Top signal</span>
+    <span class="tag">Monetary Policy</span>
+    <span class="tag dot">3 sources</span>
+  </div>
+
+  <h2>Dollar feeble as rate hike bets dwindle, Iran war worries grow</h2>
+
+  
+  <div class="tldr">
+    <span class="lbl">In plain English</span>
+    <p>A weakening US dollar and fears of a widening war in the Middle East will likely make imported goods and <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> pricier for Indians, while pushing gold prices higher.</p>
+  </div>
+  
+
+  
+    <p class="what">The US dollar has become weak (value dropped compared to other currencies) because traders now expect the US central bank to lower its interest rates soon, making the dollar less attractive to hold. At the same time, growing worries about a war involving Iran have scared global markets, making people nervous.</p>
+  
+
+  
+    <div class="analogy"><b>Think of it like…</b> It is like the US dollar is a store that used to offer the highest interest on your savings, so everyone rushed to put their money there. Now that store is lowering its rewards, and people are also panicking because a fight broke out next door, so they are running to buy safe items like gold instead.</div>
+  
+
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain">
+      <li>Global investors expect US interest rates to drop, so the US dollar weakens against other currencies.</li><li>Fears of war in the Middle East push global investors to look for safe investments like gold.</li><li>Because India buys most of its oil from the Middle East, war fears can disrupt oil supplies and hike crude prices.</li><li>A weaker dollar helps the Indian rupee stabilize a bit against the dollar, but expensive <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> puts pressure on India&#x27;s import bills and <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span>.</li>
+    </ul>
+  
+
+  
+    <div class="blocklabel">What could move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Gold price in India</div>
+          <div class="impact-why">When war worries grow globally, people rush to buy gold as a safe asset, pushing its price up—which is good for existing gold owners but costly for wedding buyers.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Petrol &amp; diesel prices</div>
+          <div class="impact-why">Tensions involving Iran threaten oil supplies, which can raise <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> prices and make fuel costlier for everyday Indians.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">The rupee (vs the US dollar)</div>
+          <div class="impact-why">Since the US dollar is feeling weak, the Indian rupee gets some breathing room to strengthen, making foreign goods and travel slightly cheaper.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">India&#39;s inflation rate</div>
+          <div class="impact-why">If <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> becomes more expensive due to Middle-East conflict, transporting goods becomes costlier, pushing up prices of everyday items for common people.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">months</span>
+        </div>
+      </div>
+      
+    </div>
+  
+
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch">
+      <li>Official statements or military updates regarding the Iran conflict</li><li>Upcoming announcements from the US <span class="term" tabindex="0" role="button" aria-label="America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India." data-def="America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India.">Federal Reserve</span> (the US central bank) about interest rate cuts</li>
+    </ul>
+  
+
+  <div class="foot">
+    <span class="conf">Confidence <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><b>Medium</b></span>
+    <span>Economic Times Markets, Investing.com Economy, economictimes.indiatimes.com</span>
+    <a href="https://economictimes.indiatimes.com/markets/forex/forex-news/dollar-feeble-as-rate-hike-bets-dwindle-iran-war-worries-grow/articleshow/133309496.cms" target="_blank" rel="noopener">Read the source →</a>
+  </div>
+  <div class="caveat">Where this could be wrong: If the US central bank suddenly changes its mind and decides to keep interest rates high, the US dollar could bounce back quickly.</div>
+</article>
+<article class="card top">
+  <div class="tags">
+    <span class="badge">★ Top signal</span>
+    <span class="tag">Geopolitics</span>
+    <span class="tag dot">1 source</span>
+  </div>
+
+  <h2>Global Market: Japan stocks slide as oil spike and rising bond yields weigh on sentiment</h2>
+
+  
+  <div class="tldr">
+    <span class="lbl">In plain English</span>
+    <p>When global oil prices jump, everyday items and transport in India get costlier, and the rupee loses a bit of its purchasing power.</p>
+  </div>
+  
+
+  
+    <p class="what">Japanese stock markets fell because <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> prices spiked and bond yield (the interest rate governments pay to borrow) went up globally. This happened because investors are worried that tensions in the Middle East might disrupt oil supplies, making energy more expensive everywhere.</p>
+  
+
+  
+    <div class="analogy"><b>Think of it like…</b> It is like a sudden traffic jam on the main highway that delivers goods to your city — all transport gets delayed and everyone ends up paying more for the exact same vegetables at the market.</div>
+  
+
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain">
+      <li>Conflict or supply worries in the Middle East cause global <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> prices to jump sharply.</li><li>Because India imports most of its oil, the country needs to spend a lot more dollars to buy it.</li><li>To buy those extra dollars, people sell rupees, causing the rupee to weaken (each rupee buys fewer dollars).</li><li>Costlier oil flows into the domestic economy, pushing up petrol, diesel, and general everyday <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> (rising prices of goods).</li>
+    </ul>
+  
+
+  
+    <div class="blocklabel">What could move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Petrol &amp; diesel prices</div>
+          <div class="impact-why"><span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">Crude oil</span> is the raw material for petrol and diesel. When crude becomes expensive globally, running vehicles and transport costs go up, which is bad for your household budget.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">The rupee (vs the US dollar)</div>
+          <div class="impact-why">India needs to send more rupees out of the country to buy the same amount of costlier oil, making our currency weaker — bad for people wanting to study or travel abroad.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">India&#39;s inflation rate</div>
+          <div class="impact-why">When transport becomes expensive, everything from vegetables to clothes costs more to move, raising overall <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> — bad because your money buys fewer things.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">months</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Gold price in India</div>
+          <div class="impact-why">During global uncertainty like oil spikes or conflicts, investors rush to safe assets like gold, pushing its price up — good if you own gold, bad if you plan to buy jewellery.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Nifty 50 (India&#39;s main stock index)</div>
+          <div class="impact-why">Global panic often causes <span class="term" tabindex="0" role="button" aria-label="Foreign Institutional Investors — big overseas funds that buy and sell Indian shares. When they pull money out, markets and the rupee usually fall." data-def="Foreign Institutional Investors — big overseas funds that buy and sell Indian shares. When they pull money out, markets and the rupee usually fall.">FIIs</span> (big foreign investors) to pull their money out of emerging markets like India to play it safe, causing local stock indices to dip — unsettling for regular investors.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+    </div>
+  
+
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch">
+      <li>Updates on Middle-East conflicts and whether actual oil supply lines are disrupted</li><li>Movements in international <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> prices (like Brent crude)</li>
+    </ul>
+  
+
+  <div class="foot">
+    <span class="conf">Confidence <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><b>High</b></span>
+    <span>Economic Times Markets</span>
+    <a href="https://economictimes.indiatimes.com/markets/us-stocks/news/global-market-japan-stocks-slide-as-oil-spike-and-rising-bond-yields-weigh-on-sentiment/articleshow/133310581.cms" target="_blank" rel="noopener">Read the source →</a>
+  </div>
+  <div class="caveat">Where this could be wrong: If the oil price spike turns out to be short-lived and tensions cool down quickly, these market fears will fade away.</div>
+</article>
+<article class="card top">
+  <div class="tags">
+    <span class="badge">★ Top signal</span>
+    <span class="tag">Geopolitics</span>
+    <span class="tag dot">1 source</span>
+  </div>
+
+  <h2>Oil Price Today (August 18): Crude oil crosses $91/barrel amid fading US-Iran peace hopes. What lies ahead?</h2>
+
+  
+  <div class="tldr">
+    <span class="lbl">In plain English</span>
+    <p>When global <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> prices shoot up like this, everyday things in India—from petrol and diesel at the pump to your monthly household budget—tend to get noticeably costlier.</p>
+  </div>
+  
+
+  
+    <p class="what"><span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">Crude oil</span> (raw petroleum pumped from the ground) crossed $91 a barrel because hopes for a peace deal between the US and Iran faded away. When peace talks fail, traders worry that oil supplies from the Middle East might get disrupted or blocked, causing them to panic-buy and push prices higher.</p>
+  
+
+  
+    <div class="analogy"><b>Think of it like…</b> It is like living in a big housing colony where half the water supply comes from one main well. If people start whispering that the well might get locked up tomorrow, everybody rushes to buy bottled water right now, and the price of each bottle shoots up instantly.</div>
+  
+
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain">
+      <li>India imports over 80 percent of the <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> it needs from other countries to run its cars, factories, and power plants.</li><li>When global oil prices rise, India has to spend a lot more US dollars to buy the same amount of oil.</li><li>To buy those extra dollars, people and businesses sell rupees, causing the rupee to weaken (each rupee buys fewer dollars).</li><li>Costlier imported oil eventually trickles down into higher transport costs, making everyday goods, vegetables, and fuels more expensive for ordinary people.</li>
+    </ul>
+  
+
+  
+    <div class="blocklabel">What could move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Petrol &amp; diesel prices</div>
+          <div class="impact-why">Raw material costs for fuel makers are rising, which generally leads to higher pump prices—bad for your daily travel and transport budget.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">The rupee (vs the US dollar)</div>
+          <div class="impact-why">India needs more dollars to pay for costlier oil, putting downward pressure on our currency—making foreign travel and imported goods pricier.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">India&#39;s inflation rate</div>
+          <div class="impact-why">When transport and manufacturing costs go up because of expensive oil, shopkeepers pass those costs to consumers, causing overall price rises.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
+          <span class="when">months</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Gold price in India</div>
+          <div class="impact-why">Global tensions and fear make investors run towards safe investments like gold, driving its price up—good if you own gold, bad if you want to buy.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+    </div>
+  
+
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch">
+      <li>Any sudden military or diplomatic news coming out of the Middle East</li><li>Weekly reports on how much <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> is sitting in US storage tanks</li>
+    </ul>
+  
+
+  <div class="foot">
+    <span class="conf">Confidence <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><b>High</b></span>
+    <span>Economic Times Markets</span>
+    <a href="https://economictimes.indiatimes.com/markets/commodities/news/oil-price-today-august-18-crude-oil-crosses-91/barrel-amid-fading-us-iran-peace-hopes-what-lies-ahead/articleshow/133310278.cms" target="_blank" rel="noopener">Read the source →</a>
+  </div>
+  <div class="caveat">Where this could be wrong: If unexpected peace talks suddenly succeed or big countries release oil from their emergency reserves, these high prices could drop back down quickly.</div>
+</article>
+
+<div class="section">Also on the radar</div>
+
+<article class="card ">
+  <div class="tags">
+    
+    <span class="tag">Monetary Policy</span>
+    <span class="tag dot">1 source</span>
+  </div>
+
+  <h2>Gold rises 1% amid softer dollar, falling Fed rate hike bets; oil caps gains</h2>
+
+  
+  <div class="tldr">
+    <span class="lbl">In plain English</span>
+    <p>When global gold prices go up because the US is expected to lower interest rates, it usually means imported gold gets costlier for us, but our stock market can breathe a sigh of relief as foreign money stays put.</p>
+  </div>
+  
+
+  
+    <p class="what">Gold prices went up by one percent because the US dollar got weaker and traders stopped expecting the US <span class="term" tabindex="0" role="button" aria-label="America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India." data-def="America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India.">Federal Reserve</span> (America&#x27;s central bank that controls interest rates) to hike rates further. When the US looks like it might lower rates, people find less reason to keep cash in American banks, so they buy gold instead.</p>
+  
+
+  
+    <div class="analogy"><b>Think of it like…</b> It is like a seesaw on a playground: when the US dollar goes down on one side, gold goes right up on the other side.</div>
+  
+
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain">
+      <li>Traders expect the US <span class="term" tabindex="0" role="button" aria-label="America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India." data-def="America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India.">Federal Reserve</span> to slow down or cut interest rates.</li><li>This makes the US dollar weaker globally, making gold cheaper to buy with other currencies.</li><li>Global investors look at India as a safer place to keep their money instead of shifting it all to America.</li><li>This steady flow of foreign money helps stabilise Indian financial markets and eases pressure on our currency.</li>
+    </ul>
+  
+
+  
+    <div class="blocklabel">What could move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Gold price in India</div>
+          <div class="impact-why">Since India imports most of its gold, higher global prices mean buying gold for weddings or savings gets more expensive for households.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">The rupee (vs the US dollar)</div>
+          <div class="impact-why">A softer US dollar means our rupee gets a bit of breathing room and doesn&#x27;t lose value as fast, which is good because imported petrol and electronics don&#x27;t suddenly get super expensive.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Nifty 50 (India&#39;s main stock index)</div>
+          <div class="impact-why">When US rate hike fears drop, <span class="term" tabindex="0" role="button" aria-label="Foreign Institutional Investors — big overseas funds that buy and sell Indian shares. When they pull money out, markets and the rupee usually fall." data-def="Foreign Institutional Investors — big overseas funds that buy and sell Indian shares. When they pull money out, markets and the rupee usually fall.">FIIs</span> (big foreign investors) are more comfortable leaving their money in Indian shares instead of rushing back to America, which helps the stock market stay steady or rise.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">10-year bond yield (interest India pays to borrow)</div>
+          <div class="impact-why">Lower global interest rate pressure usually means local borrowing costs ease slightly, which is good for people taking home or car loans.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+    </div>
+  
+
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch">
+      <li>Upcoming speeches by US central bank officials about future interest rate cuts</li><li>Official US <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> data reports</li>
+    </ul>
+  
+
+  <div class="foot">
+    <span class="conf">Confidence <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><b>High</b></span>
+    <span>Investing.com Commodities</span>
+    <a href="https://www.investing.com/news/commodities-news/gold-rises-near-4400-as-fed-minutes-oil-risks-shape-rate-outlook-4862058" target="_blank" rel="noopener">Read the source →</a>
+  </div>
+  <div class="caveat">Where this could be wrong: If sudden bad news hits the global economy, panic can make people rush back to the US dollar regardless of interest rates, reversing these moves quickly.</div>
+</article>
+<article class="card ">
+  <div class="tags">
+    
+    <span class="tag">Geopolitics</span>
+    <span class="tag dot">1 source</span>
+  </div>
+
+  <h2>Stock market today: Gift Nifty hints a weak start; eight day trading stocks to buy on Tuesday, 18 August</h2>
+
+  
+  <div class="tldr">
+    <span class="lbl">In plain English</span>
+    <p>Indian stock markets are likely to open lower today because global markets are feeling nervous, which could make investing feel a bit shaky in the short term.</p>
+  </div>
+  
+
+  
+    <p class="what">The Gift Nifty (an early indicator that shows how the Indian stock market might open based on trading happening in Gujarat&#x27;s international financial tech city) is pointing downward. This happens because global investors are feeling cautious, causing selling pressure that spills over into India before our markets even officially open.</p>
+  
+
+  
+    <div class="analogy"><b>Think of it like…</b> It is like checking the weather forecast before stepping outside; if the morning sky looks grey and stormy, you carry an umbrella even before the rain actually starts.</div>
+  
+
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain">
+      <li>Global markets feel nervous -&gt; Gift Nifty drops</li><li>Gift Nifty drops -&gt; Indian stock market opens lower as a reaction</li><li>Lower opening -&gt; Investors see stock prices dip across major companies</li><li>Short-term dip -&gt; Regular retail investors get nervous about their recent stock purchases</li>
+    </ul>
+  
+
+  
+    <div class="blocklabel">What could move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Nifty 50 (India&#39;s main stock index)</div>
+          <div class="impact-why">A weak opening usually pulls the main stock index down at the start of the trading day, which can temporarily reduce the total value of your stock investments.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
+          <span class="when">hours</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">The rupee (vs the US dollar)</div>
+          <div class="impact-why">When global sentiment turns negative, foreign investors often pull their money out of India, weakening the rupee (each rupee buys fewer dollars) and making foreign goods costlier.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+    </div>
+  
+
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch">
+      <li>How global stock markets perform through the rest of the day</li><li>Whether big foreign investors are pulling money out of India or buying more</li>
+    </ul>
+  
+
+  <div class="foot">
+    <span class="conf">Confidence <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><b>High</b></span>
+    <span>Livemint Markets</span>
+    <a href="https://www.livemint.com/market/stock-market-news/stock-market-today-gift-nifty-hints-a-weak-start-eight-day-trading-stocks-to-buy-on-tuesday-18-august-11787019135761.html" target="_blank" rel="noopener">Read the source →</a>
+  </div>
+  <div class="caveat">Where this could be wrong: A weak opening does not mean the whole day will stay bad; local buyers often step in and push prices back up if they think stocks are now available at a discount.</div>
+</article>
+<article class="card ">
+  <div class="tags">
+    
+    <span class="tag">Monetary Policy</span>
+    <span class="tag dot">1 source</span>
+  </div>
+
+  <h2>Gold and silver prices drop by up to 1% on the MCX as rising oil prices stoke rate hike fears</h2>
+
+  
+  <div class="tldr">
+    <span class="lbl">In plain English</span>
+    <p>Rising oil prices are making people worry that interest rates will stay high, which makes gold and silver less shiny to investors and causes their prices to dip.</p>
+  </div>
+  
+
+  
+    <p class="what">Gold and silver prices fell by up to 1% on the MCX (Multi Commodity Exchange, where metals are traded in India). Why did this happen? <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">Crude oil</span> prices have been going up, which pushes up everyday <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> (the general rise in prices of goods). Because inflation is rising, traders fear central banks will keep interest rates higher for longer to cool things down. When interest rates stay high, investors prefer keeping cash in banks instead of buying gold, which doesn&#x27;t pay any regular interest.</p>
+  
+
+  
+    <div class="analogy"><b>Think of it like…</b> It is like a crowded food stall: when the price of cooking oil goes up, the stall owner worries about overall expenses and holds back on buying expensive gold decorations, choosing to keep cash handy instead.</div>
+  
+
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain">
+      <li><span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">Crude oil</span> prices rise globally because of supply worries.</li><li>Higher oil prices push up <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> (the speed at which everyday prices rise) in India and globally.</li><li>Central banks get nervous about <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> and signal they might keep interest rates high (borrowing costs stay expensive).</li><li>Investors sell off gold and silver to put money where it can earn interest, causing metal prices on the MCX to drop.</li>
+    </ul>
+  
+
+  
+    <div class="blocklabel">What could move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Gold price in India</div>
+          <div class="impact-why">As global fears of high interest rates grow, investors sell gold, which is generally good if you are planning to buy jewellery soon as it gets slightly cheaper.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Silver price in India</div>
+          <div class="impact-why">Silver moves closely with gold and industrial demand worries, meaning it becomes cheaper for retail buyers.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Petrol &amp; diesel prices</div>
+          <div class="impact-why">Since the root cause is rising <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span>, it eventually trickles down to fuel costs, which is bad for your household monthly budget.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">India&#39;s inflation rate</div>
+          <div class="impact-why">Costlier oil means transportation and goods become pricier, which hurts ordinary people&#x27;s purchasing power.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">months</span>
+        </div>
+      </div>
+      
+    </div>
+  
+
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch">
+      <li>Global <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> price movements in the international market</li><li>Statements from US <span class="term" tabindex="0" role="button" aria-label="America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India." data-def="America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India.">Federal Reserve</span> (the US central bank) officials about interest rates</li>
+    </ul>
+  
+
+  <div class="foot">
+    <span class="conf">Confidence <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><b>High</b></span>
+    <span>Livemint Markets</span>
+    <a href="https://www.livemint.com/market/commodities/gold-and-silver-prices-drop-by-up-to-1-on-the-mcx-as-rising-oil-prices-stoke-rate-hike-fears-11787025060554.html" target="_blank" rel="noopener">Read the source →</a>
+  </div>
+  <div class="caveat">Where this could be wrong: If oil prices suddenly drop due to a unexpected peace deal or surprise supply boost, these fears could vanish and gold prices might bounce right back up.</div>
+</article>
+<article class="card ">
+  <div class="tags">
+    
+    <span class="tag">General</span>
+    <span class="tag dot">1 source</span>
+  </div>
+
+  <h2>From Gift Nifty to Kospi rally, crude oil prices: 6 key things that changed for Indian stock market overnight</h2>
+
+  
+  <div class="tldr">
+    <span class="lbl">In plain English</span>
+    <p>Global stock markets and oil prices shifting overnight means Indian investors might see a positive start to their trading day, but fluctuating crude costs could soon affect local fuel prices.</p>
+  </div>
+  
+
+  
+    <p class="what">Global financial markets moved overnight, led by strong rallies in foreign stock indexes like Kospi (South Korea&#x27;s main stock market) and shifting <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> (raw petroleum used to make petrol) prices. These shifts happen because global investors constantly react to changing economic news, trade data, and interest rate expectations around the world.</p>
+  
+
+  
+    <div class="analogy"><b>Think of it like…</b> It is like a large apartment building where someone on the top floor opens their windows for fresh air, causing a cool breeze to flow down and change the temperature in everyone else&#x27;s rooms.</div>
+  
+
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain">
+      <li>Foreign stock markets rally overnight due to positive global news.</li><li>This optimism spreads to Gift Nifty (an index that tracks Indian stocks traded overnight abroad), signaling a strong opening for India&#x27;s market.</li><li>At the same time, <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> prices fluctuate based on global supply and demand.</li><li>Since India imports most of its oil, these global price changes eventually impact local <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> (the rate at which prices rise) and petrol costs.</li>
+    </ul>
+  
+
+  
+    <div class="blocklabel">What could move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Nifty 50 (India&#39;s main stock index)</div>
+          <div class="impact-why">A strong overnight push from global markets and Gift Nifty usually sets a positive mood for Indian stocks at the market opening, which is good for investors.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Crude oil prices</div>
+          <div class="impact-why">If global oil supplies rise or demand drops, lower crude prices help India save money on imports, which is good for the economy and can eventually lower fuel costs.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">The rupee (vs the US dollar)</div>
+          <div class="impact-why">When global markets are happy, <span class="term" tabindex="0" role="button" aria-label="Foreign Institutional Investors — big overseas funds that buy and sell Indian shares. When they pull money out, markets and the rupee usually fall." data-def="Foreign Institutional Investors — big overseas funds that buy and sell Indian shares. When they pull money out, markets and the rupee usually fall.">FIIs</span> (big foreign investors) tend to put more money into India, making the rupee strengthen (each rupee buys more dollars).</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+    </div>
+  
+
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch">
+      <li>Opening numbers of the Indian stock market</li><li>Daily updates on international <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> prices</li>
+    </ul>
+  
+
+  <div class="foot">
+    <span class="conf">Confidence <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><b>Medium</b></span>
+    <span>Livemint Markets</span>
+    <a href="https://www.livemint.com/market/stock-market-news/from-gift-nifty-to-kospi-rally-crude-oil-prices-6-key-things-that-changed-for-indian-stock-market-overnight-11787015325545.html" target="_blank" rel="noopener">Read the source →</a>
+  </div>
+  <div class="caveat">Where this could be wrong: Global sentiment can change very quickly if sudden negative news hits the market before trading opens.</div>
+</article>
+<article class="card ">
+  <div class="tags">
+    
+    <span class="tag">General</span>
+    <span class="tag dot">1 source</span>
+  </div>
+
+  <h2>Gold rises near $4,450 as Fed hike bets fade, dollar weakens, risks persist</h2>
+
+  
+  <div class="tldr">
+    <span class="lbl">In plain English</span>
+    <p>When global gold prices climb and the US dollar drops, gold jewellery and gold investments in India become more expensive, while foreign goods get costlier due to a weaker rupee.</p>
+  </div>
+  
+
+  
+    <p class="what">Global gold prices have shot up near $4,450 because traders believe the US central bank, the <span class="term" tabindex="0" role="button" aria-label="The US Federal Reserve — America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India." data-def="The US Federal Reserve — America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India.">Fed</span> (short for the US <span class="term" tabindex="0" role="button" aria-label="America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India." data-def="America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India.">Federal Reserve</span>, which manages money and interest rates in America), will stop raising interest rates. At the same time, the US dollar (America&#x27;s currency) is losing value against other global currencies because lower interest rates make holding dollars less attractive. When the dollar weakens and interest rates drop, investors rush to buy gold as a safe place to hide their money, pushing its price up.</p>
+  
+
+  
+    <div class="analogy"><b>Think of it like…</b> It is like gold being a popular umbrella: when the weather looks stormy in the financial world, everyone rushes to buy one, and the shopkeeper raises the price because demand is huge.</div>
+  
+
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain">
+      <li>Global gold prices rise because lower US interest rates make gold more attractive than cash.</li><li>The US dollar weakens globally, which makes buying foreign goods costlier for India.</li><li>India imports almost all its gold from abroad, so higher global prices instantly mean costlier gold in local Indian markets.</li><li>Local jewellery buyers and investors pay higher prices for both physical gold and digital gold options.</li>
+    </ul>
+  
+
+  
+    <div class="blocklabel">What could move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Gold price in India</div>
+          <div class="impact-why">Because India imports most of its gold, higher global prices directly translate to costlier gold for Indian consumers — generally good for existing gold owners, but bad for wedding shoppers and new buyers.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">The rupee (vs the US dollar)</div>
+          <div class="impact-why">A weaker US dollar globally often helps the Indian rupee gain a bit of strength against it, which is good because it makes imported items like <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> slightly cheaper for India.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Gold loan companies like Muthoot Finance &amp; Manappuram Finance</div>
+          <div class="impact-why">When gold prices rise, the value of the gold people have pledged for loans goes up, making these companies safer and more eager to lend — good for their business.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">India&#39;s import bill for gold</div>
+          <div class="impact-why">Buying the same amount of gold now costs India more total dollars, which puts slight pressure on the country&#x27;s foreign money reserves — a bit negative for the broader economy.</div>
+        </div>
+        <div class="impact-side">
+          <span class="meter"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
+          <span class="when">months</span>
+        </div>
+      </div>
+      
+    </div>
+  
+
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch">
+      <li>Upcoming <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> data and statements from US central bank officials about future interest rates</li><li>Local demand for gold in Indian markets ahead of festival and wedding seasons</li>
+    </ul>
+  
+
+  <div class="foot">
+    <span class="conf">Confidence <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><b>High</b></span>
+    <span>Investing.com Commodities</span>
+    <a href="https://www.investing.com/news/commodities-news/gold-rises-near-4450-as-fed-hike-bets-fade-dollar-weakens-risks-persist-4864147" target="_blank" rel="noopener">Read the source →</a>
+  </div>
+  <div class="caveat">Where this could be wrong: If US <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> suddenly spikes again, the <span class="term" tabindex="0" role="button" aria-label="The US Federal Reserve — America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India." data-def="The US Federal Reserve — America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India.">Fed</span> might change its mind and raise interest rates, which could quickly send gold prices back down.</div>
+</article>
+
+<div class="disclaimer">
+  <b>Learning tool, not advice.</b> This brief explains how world events <i>tend</i> to
+  affect markets so you can learn the patterns and probabilities yourself. It never tells
+  you what to buy or sell, and the odds shown are rough judgments, not guarantees.
+</div>
+
+<footer class="pagefoot">
+  
+  <div class="archive"><b>Past briefs:</b>
+    <a href="2026-08-17.html">2026-08-17</a><a href="2026-08-16.html">2026-08-16</a><a href="2026-08-15.html">2026-08-15</a><a href="2026-08-14.html">2026-08-14</a><a href="2026-08-13.html">2026-08-13</a>
+  </div>
+  <p>Generated automatically by your News Finance Hub · 2026-08-18T04:03:25+00:00</p>
+</footer>
+</div></body></html>

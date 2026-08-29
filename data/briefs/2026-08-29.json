@@ -1,0 +1,870 @@
+{
+  "date": "2026-08-29",
+  "date_human": "Saturday, 29 August 2026",
+  "generated_at": "2026-08-29T01:37:31+00:00",
+  "engine": "Gemini AI",
+  "macro": [],
+  "calendar": [
+    {
+      "name": "US jobs report (non-farm payrolls)",
+      "date_human": "Sat, 05 Sep",
+      "days_away": 7,
+      "category": "macro_data",
+      "why": "Strong US jobs means fewer rate cuts, a stronger dollar, and pressure on the rupee and gold."
+    },
+    {
+      "name": "OPEC+ output meeting",
+      "date_human": "Mon, 07 Sep",
+      "days_away": 9,
+      "category": "commodities",
+      "why": "Decides how much oil the world's big producers pump — swings crude prices, India's import bill, fuel costs and inflation."
+    },
+    {
+      "name": "US inflation report (CPI)",
+      "date_human": "Sat, 12 Sep",
+      "days_away": 14,
+      "category": "macro_data",
+      "why": "Hot US inflation can lift global interest rates and pull foreign money out of India; a cool reading does the reverse. A big driver of gold."
+    },
+    {
+      "name": "India inflation report (CPI)",
+      "date_human": "Sat, 12 Sep",
+      "days_away": 14,
+      "category": "macro_data",
+      "why": "Decides how soon the RBI can cut rates — moves bond yields, the rupee, and rate-sensitive stocks (banks, autos, real estate)."
+    },
+    {
+      "name": "US Fed rate decision (FOMC)",
+      "date_human": "Wed, 16 Sep",
+      "days_away": 18,
+      "category": "monetary_policy",
+      "why": "Sets US interest rates — the single biggest lever on the dollar, gold, and foreign flows into Indian stocks."
+    }
+  ],
+  "events": [
+    {
+      "headline": "Jackson Hole: Will Kevin Warsh's inflation warning put Nifty under pressure on Monday?",
+      "relevance": 15.5,
+      "items": [
+        {
+          "title": "Jackson Hole: Will Kevin Warsh's inflation warning put Nifty under pressure on Monday?",
+          "url": "https://economictimes.indiatimes.com/markets/stocks/news/jackson-hole-will-kevin-warshs-inflation-warning-put-nifty-under-pressure-on-monday/articleshow/133595035.cms",
+          "source": "Economic Times Markets",
+          "published": "2026-08-28T15:41:32+00:00",
+          "summary": "Nifty faces potential pressure on Monday following US Fed Chairman Kevin Warsh's hawkish inflation comments at Jackson Hole. Elevated US bond yields, a stronger dollar, and rising crude oil prices threaten foreign institutional flows, while technical analysts highlight 24,200 as a key resistance level for the Indian stock market.",
+          "region": "india",
+          "origin": "rss",
+          "relevance": 15.5
+        },
+        {
+          "title": "Gold prices shed about 3% on hawkish Warsh at Jackson Hole, set for weekly decline",
+          "url": "https://www.investing.com/news/commodities-news/gold-dips-ahead-of-warshs-jackson-hole-speech-set-for-weekly-fall-4880473",
+          "source": "Investing.com Commodities",
+          "published": "2026-08-28T20:02:45+00:00",
+          "summary": "",
+          "region": "global",
+          "origin": "rss",
+          "relevance": 2.0
+        }
+      ],
+      "sources": [
+        "Economic Times Markets",
+        "Investing.com Commodities"
+      ],
+      "urls": [
+        "https://economictimes.indiatimes.com/markets/stocks/news/jackson-hole-will-kevin-warshs-inflation-warning-put-nifty-under-pressure-on-monday/articleshow/133595035.cms",
+        "https://www.investing.com/news/commodities-news/gold-dips-ahead-of-warshs-jackson-hole-speech-set-for-weekly-fall-4880473"
+      ],
+      "item_count": 2,
+      "coverage_boost": 0.5,
+      "id": "e13427ba01",
+      "keywords": [
+        "about",
+        "bond",
+        "chairman",
+        "comments",
+        "crude",
+        "decline",
+        "dollar",
+        "elevated",
+        "faces",
+        "fed",
+        "following",
+        "gold",
+        "hawkish",
+        "hole",
+        "inflation",
+        "jackson",
+        "kevin",
+        "monday",
+        "nifty",
+        "oil",
+        "potential",
+        "pressure",
+        "prices",
+        "put",
+        "rising",
+        "set",
+        "shed",
+        "stronger",
+        "under",
+        "warning",
+        "warsh",
+        "weekly",
+        "yields"
+      ],
+      "developing": true,
+      "developing_since": "2026-08-25",
+      "category": "monetary_policy",
+      "analysis": {
+        "tldr": "A top US official warned that prices in America might keep rising, which could cause big foreign investors to pull their money out of India and make our stock market dip.",
+        "what_happened": "An influential economic thinker named Kevin Warsh gave a warning at a big annual meeting of central bankers in a place called Jackson Hole. He said the US might keep interest rates high to fight inflation (rising prices of everyday goods), which happened because people are worried that prices in America are not cooling down fast enough.",
+        "analogy": "It is like a popular neighborhood lender announcing he is going to start paying higher interest on savings; suddenly, all the neighborhood money starts running toward him, leaving other local shops short of cash.",
+        "why_it_matters_india": [
+          "Kevin Warsh warns that US inflation might stay high, forcing the US central bank to keep interest rates high.",
+          "Global investors realize they can earn safe, high returns just keeping their money in the US.",
+          "FIIs (big foreign investors) start pulling their money out of Indian stock markets to shift it back to America.",
+          "As foreign investors sell their Indian shares, the Nifty 50 (India's main stock index) faces selling pressure and dips."
+        ],
+        "impacts": [
+          {
+            "target": "Nifty 50 (India's main stock index)",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "days",
+            "rationale": "When foreign investors pull money out of India, stock prices tend to drop, which can feel unsettling for local investors."
+          },
+          {
+            "target": "The rupee (vs the US dollar)",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "days",
+            "rationale": "As dollars flow back to America, the rupee weakens (each rupee buys fewer dollars), which makes imported items like crude oil costlier for India."
+          },
+          {
+            "target": "Gold price in India",
+            "direction": "down",
+            "probability": "High",
+            "horizon": "days",
+            "rationale": "With the US dollar getting stronger and interest rates staying high, global gold prices dropped sharply, bringing local gold prices down too — which is good news if you are planning to buy jewellery."
+          }
+        ],
+        "watch_next": [
+          "Statements from other US Federal Reserve officials to see if they agree with this warning",
+          "Daily trading data showing whether big foreign investors are actually selling Indian shares"
+        ],
+        "confidence": "Medium",
+        "caveats": "Markets can quickly change their minds if upcoming US jobs or inflation data turn out better than expected.",
+        "engine": "gemini",
+        "category": "monetary_policy",
+        "matched_linkage": "fed_hawkish"
+      },
+      "importance": 17.2,
+      "is_top": true
+    },
+    {
+      "headline": "US Treasury yields rise after comments from Fed's Kevin Warsh at Jackson Hole",
+      "relevance": 8.5,
+      "items": [
+        {
+          "title": "US Treasury yields rise after comments from Fed's Kevin Warsh at Jackson Hole",
+          "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/us-treasury-yields-rise-after-comments-from-feds-kevin-warsh-at-jackson-hole/articleshow/133593960.cms",
+          "source": "Economic Times Markets",
+          "published": "2026-08-28T14:33:32+00:00",
+          "summary": "U.S. Treasury yields saw an increase during trading sessions. Federal Reserve Chairman Kevin Warsh indicated further action may be necessary. Policymakers need confidence that inflation is returning to the target.",
+          "region": "india",
+          "origin": "rss",
+          "relevance": 8.5
+        }
+      ],
+      "sources": [
+        "Economic Times Markets"
+      ],
+      "urls": [
+        "https://economictimes.indiatimes.com/markets/us-stocks/news/us-treasury-yields-rise-after-comments-from-feds-kevin-warsh-at-jackson-hole/articleshow/133593960.cms"
+      ],
+      "item_count": 1,
+      "coverage_boost": 0.0,
+      "id": "53bbcebf40",
+      "keywords": [
+        "action",
+        "chairman",
+        "comments",
+        "confidence",
+        "during",
+        "fed",
+        "federal",
+        "further",
+        "hole",
+        "increase",
+        "indicated",
+        "inflation",
+        "jackson",
+        "kevin",
+        "may",
+        "necessary",
+        "need",
+        "policymakers",
+        "reserve",
+        "returning",
+        "rise",
+        "saw",
+        "sessions",
+        "target",
+        "trading",
+        "treasury",
+        "warsh",
+        "yields"
+      ],
+      "category": "currency",
+      "analysis": {
+        "tldr": "When the US pays higher interest to people who lend it money, global investors pull cash out of India, making it slightly harder and costlier to borrow here too.",
+        "what_happened": "US Treasury yields (the interest rate the US government pays to borrow money for the long term) went up. This happened because Kevin Warsh, an important official at the Fed (the US central bank, like a bank for all banks), hinted at a big annual gathering in Jackson Hole that US interest rates might stay higher for longer to fight ongoing money-price increases.",
+        "analogy": "It is like the safest, most popular bank in town suddenly offering a higher fixed deposit rate; suddenly, everyone wants to put their money there instead of lending it to riskier local shops.",
+        "why_it_matters_india": [
+          "The US government started paying higher interest on its long-term loans.",
+          "Global investors compare this safe US return with what they get in developing countries like India.",
+          "Because the US is paying more, big foreign investors take their money out of Indian stocks to chase that safer US return.",
+          "As foreign money leaves, the Indian rupee drops in value, making imported goods like crude oil and electronics more expensive for us."
+        ],
+        "impacts": [
+          {
+            "target": "The rupee (vs the US dollar)",
+            "direction": "down",
+            "probability": "High",
+            "horizon": "weeks",
+            "rationale": "As foreign investors pull money out of India to buy higher-paying US assets, they sell rupees for dollars, making the rupee weaker. A weaker rupee is bad for everyday Indians because it makes imported items like petrol and gadgets costlier."
+          },
+          {
+            "target": "Nifty 50 (India's main stock index)",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "When big foreign investors take their money out of India, stock prices tend to dip. This can make regular investors feel poorer as the value of their mutual funds temporarily slows down."
+          },
+          {
+            "target": "10-year bond yield (interest India pays to borrow)",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "days",
+            "rationale": "Global borrowing costs pull local Indian interest rates up. Higher bond yields mean the Indian government and eventually regular banks pay more to borrow, which can lead to costlier home and car loans."
+          },
+          {
+            "target": "Gold price in India",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "days",
+            "rationale": "When the rupee weakens against the dollar, importing gold into India automatically becomes more expensive in local currency terms, which is generally a bummer if you are planning to buy jewellery."
+          }
+        ],
+        "watch_next": [
+          "Speeches by other US central bank officials to see if they agree with keeping interest rates high",
+          "Daily reports on whether big foreign investors are pulling money out of Indian shares"
+        ],
+        "confidence": "High",
+        "caveats": "If upcoming US inflation data comes in much lower than expected, these yields could quickly drop back down and reverse the pressure on India.",
+        "engine": "gemini",
+        "category": "currency",
+        "matched_linkage": "us_yields_up"
+      },
+      "importance": 10.1,
+      "is_top": true
+    },
+    {
+      "headline": "India sees Canada export opening as US trade tensions reshape imports: Report",
+      "relevance": 7.5,
+      "items": [
+        {
+          "title": "India sees Canada export opening as US trade tensions reshape imports: Report",
+          "url": "https://economictimes.indiatimes.com/news/economy/foreign-trade/india-sees-canada-export-opening-as-us-trade-tensions-reshape-imports-report/articleshow/133591581.cms",
+          "source": "Economic Times Economy",
+          "published": "2026-08-28T12:56:39+00:00",
+          "summary": "India sees new export chances in Canada as economic ties strengthen. Bilateral trade aims for fifty billion dollars by twenty thirty, with talks ongoing. India's goods exports to Canada grew significantly, showing market momentum. Canada's tariffs on US products create openings for Indian suppliers. This shift offers Indian companies a chance to expand their market share.",
+          "region": "india",
+          "origin": "rss",
+          "relevance": 7.5
+        }
+      ],
+      "sources": [
+        "Economic Times Economy"
+      ],
+      "urls": [
+        "https://economictimes.indiatimes.com/news/economy/foreign-trade/india-sees-canada-export-opening-as-us-trade-tensions-reshape-imports-report/articleshow/133591581.cms"
+      ],
+      "item_count": 1,
+      "coverage_boost": 0.0,
+      "id": "43bf08f418",
+      "keywords": [
+        "aims",
+        "bilateral",
+        "billion",
+        "canada",
+        "chances",
+        "dollars",
+        "economic",
+        "export",
+        "exports",
+        "fifty",
+        "goods",
+        "grew",
+        "imports",
+        "ongoing",
+        "opening",
+        "report",
+        "reshape",
+        "sees",
+        "strengthen",
+        "talks",
+        "tensions",
+        "thirty",
+        "ties",
+        "trade",
+        "twenty"
+      ],
+      "category": "trade",
+      "analysis": {
+        "tldr": "When big countries fight over trade and put taxes on imports, global companies look for backup suppliers, giving Indian factories and farms a golden chance to sell more goods abroad.",
+        "what_happened": "Trade tensions between the US and other major players are forcing global buyers to look for suppliers outside their usual network. Because of this shifting trade map, Indian businesses are spotting a big opening to export more goods, such as items to Canada, as the world looks for reliable alternatives.",
+        "analogy": "It is like a big local grocery store having a fight with its main potato farmer, so the store owner suddenly starts buying potatoes from you instead.",
+        "why_it_matters_india": [
+          "Big countries like the US put extra taxes (tariffs) on imports from certain nations to protect their own local businesses.",
+          "Global buyers get stressed about these sudden tax hikes and want to avoid relying on just one country for their goods.",
+          "These buyers start looking at India as a safe, backup supplier to buy everything from clothes to car parts, often called the China-plus-one strategy.",
+          "Indian factories get more orders, making local businesses grow, create more jobs, and bring more foreign money into India."
+        ],
+        "impacts": [
+          {
+            "target": "Export company stocks like manufacturing and textile firms",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "months",
+            "rationale": "Getting more foreign orders means these companies make more money, which generally helps their share prices rise—good for investors."
+          },
+          {
+            "target": "The rupee (vs the US dollar)",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "months",
+            "rationale": "When India sells more goods abroad, foreign buyers pay us in dollars, increasing the demand for our rupee and making it stronger—good because imported items like crude oil become slightly cheaper."
+          },
+          {
+            "target": "Nifty 50 (India's main stock index)",
+            "direction": "up",
+            "probability": "Low",
+            "horizon": "months",
+            "rationale": "Higher profits for export businesses boost overall market confidence, which is generally good for the health of India's main stock market."
+          }
+        ],
+        "watch_next": [
+          "New trade rules or tax announcements coming out of the US government",
+          "Quarterly export numbers published by the Indian government"
+        ],
+        "confidence": "Medium",
+        "caveats": "If global trade tension causes a massive worldwide recession, even backup suppliers like India will see demand drop.",
+        "engine": "gemini",
+        "category": "trade",
+        "matched_linkage": "us_tariffs_tradewar"
+      },
+      "importance": 8.7,
+      "is_top": true
+    },
+    {
+      "headline": "At $729 billion, forex kitty hits a record",
+      "relevance": 5.5,
+      "items": [
+        {
+          "title": "At $729 billion, forex kitty hits a record",
+          "url": "https://economictimes.indiatimes.com/news/economy/indicators/at-729-billion-forex-kitty-hits-a-record/articleshow/133599614.cms",
+          "source": "Economic Times Economy",
+          "published": "2026-08-28T19:43:10+00:00",
+          "summary": "Reserves increased $12.4 billion during the week, with foreign currency assets increasing $9.4 billion to $591 billion, while the value of gold reserves rose by $2.8 billion to $114 billion. Forex reserves last touched a high of $728 billion late February this year. As of August 21, Indian banks have mobilised $65.4 billion in foreign currency non-resident (FCNR-B) deposits under the Reserve Bank of India's special forex swap facility. Total foreign exchange inflows through this specific window reached $72.85 billion, the RBI said in a statement.",
+          "region": "india",
+          "origin": "rss",
+          "relevance": 5.5
+        },
+        {
+          "title": "India's forex reserves hit record high of $729.33 billion after $12.4 billion weekly jump",
+          "url": "https://economictimes.indiatimes.com/news/economy/indicators/indias-forex-reserves-hit-record-high-of-729-33-billion-after-12-4-billion-weekly-jump/articleshow/133590978.cms",
+          "source": "Economic Times Economy",
+          "published": "2026-08-28T12:05:46+00:00",
+          "summary": "India's foreign exchange reserves have reached an all-time high of $729.328 billion. This surge marks a significant build-up in the nation's external reserves. Foreign currency assets and gold reserves drove this substantial increase. The Reserve Bank of India's measures have attracted considerable forex inflows. These reserves are now higher than both end-March and a year earlier levels.",
+          "region": "india",
+          "origin": "rss",
+          "relevance": 3.5
+        }
+      ],
+      "sources": [
+        "Economic Times Economy"
+      ],
+      "urls": [
+        "https://economictimes.indiatimes.com/news/economy/indicators/at-729-billion-forex-kitty-hits-a-record/articleshow/133599614.cms",
+        "https://economictimes.indiatimes.com/news/economy/indicators/indias-forex-reserves-hit-record-high-of-729-33-billion-after-12-4-billion-weekly-jump/articleshow/133590978.cms"
+      ],
+      "item_count": 2,
+      "coverage_boost": 0.5,
+      "id": "6812bfeb8b",
+      "keywords": [
+        "114",
+        "328",
+        "591",
+        "729",
+        "all",
+        "assets",
+        "billion",
+        "build",
+        "currency",
+        "drove",
+        "during",
+        "exchange",
+        "external",
+        "foreign",
+        "forex",
+        "gold",
+        "high",
+        "hit",
+        "hits",
+        "increased",
+        "increasing",
+        "jump",
+        "kitty",
+        "marks",
+        "nation",
+        "reached",
+        "record",
+        "reserves",
+        "rose",
+        "significant",
+        "surge",
+        "time",
+        "value",
+        "weekly",
+        "while"
+      ],
+      "category": "monetary_policy",
+      "analysis": {
+        "tldr": "India's piggy bank of foreign money has hit an all-time high, making our country much safer against sudden global financial storms and helping keep the rupee stable.",
+        "what_happened": "India's forex reserves (a giant pool of foreign currencies and gold held by the central bank) jumped by over 12 billion dollars in a single week to cross 729 billion dollars. This happened because foreign investors poured money into Indian stocks, and the RBI (Reserve Bank of India, our country's supreme banking regulator) stepped in to buy up those extra dollars to keep the rupee steady.",
+        "analogy": "It is like a family saving up a massive emergency fund in a safe locker so that if anyone falls sick or loses a job, the household won't panic or have to borrow at high interest.",
+        "why_it_matters_india": [
+          "Foreign investors pour money into India seeking better returns",
+          "The RBI steps in and buys those incoming dollars, adding them to the national reserves",
+          "These massive reserves act like a financial airbag for India",
+          "A well-padded reserve discourages speculators from attacking the rupee, keeping daily imports like crude oil stable"
+        ],
+        "impacts": [
+          {
+            "target": "The rupee (vs the US dollar)",
+            "direction": "up",
+            "probability": "High",
+            "horizon": "weeks",
+            "rationale": "A massive pile of foreign currency gives the central bank the muscle to defend our currency, which is good because it prevents imported goods like crude oil and electronics from suddenly becoming very costly."
+          },
+          {
+            "target": "India's inflation rate",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "months",
+            "rationale": "When the rupee stays stable thanks to strong reserves, imported items do not get suddenly expensive, which helps keep everyday household inflation lower — good for your grocery and fuel bills."
+          },
+          {
+            "target": "Nifty 50 (India's main stock index)",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "Large foreign inflows that build up these reserves also push up stock prices, which is good for retail investors watching their mutual fund portfolios grow."
+          },
+          {
+            "target": "10-year bond yield (interest India pays to borrow)",
+            "direction": "down",
+            "probability": "Low",
+            "horizon": "months",
+            "rationale": "A stable macroeconomic environment gives lenders confidence, which can eventually lead to slightly cheaper borrowing costs for businesses and home buyers."
+          }
+        ],
+        "watch_next": [
+          "Weekly updates from the Reserve Bank of India on whether reserves continue to grow or start shrinking",
+          "Trends in how much money foreign institutional investors are pumping into or pulling out of Indian stock markets"
+        ],
+        "confidence": "High",
+        "caveats": "If global crude oil prices suddenly shoot up due to wars, the country will have to spend these reserves much faster to pay for oil imports.",
+        "engine": "gemini",
+        "category": "monetary_policy",
+        "matched_linkage": "fed_dovish"
+      },
+      "importance": 7.6,
+      "is_top": false
+    },
+    {
+      "headline": "China needs U.S. dollars but is building a hedge against Washington’s sanctions",
+      "relevance": 5.0,
+      "items": [
+        {
+          "title": "China needs U.S. dollars but is building a hedge against Washington’s sanctions",
+          "url": "https://www.cnbc.com/2026/08/25/china-iran-us-sanctions-banks-cips.html",
+          "source": "CNBC Economy",
+          "published": "2026-08-25T16:00:40+00:00",
+          "summary": "The U.S. can pressure Chinese banks over Iran through access to its financial system, while Beijing is building alternatives such as CIPS.",
+          "region": "global",
+          "origin": "rss",
+          "relevance": 5.0
+        }
+      ],
+      "sources": [
+        "CNBC Economy"
+      ],
+      "urls": [
+        "https://www.cnbc.com/2026/08/25/china-iran-us-sanctions-banks-cips.html"
+      ],
+      "item_count": 1,
+      "coverage_boost": 0.0,
+      "id": "72707023fa",
+      "keywords": [
+        "access",
+        "against",
+        "alternatives",
+        "banks",
+        "beijing",
+        "building",
+        "can",
+        "china",
+        "chinese",
+        "cips",
+        "dollars",
+        "financial",
+        "hedge",
+        "iran",
+        "needs",
+        "pressure",
+        "sanctions",
+        "such",
+        "system",
+        "through",
+        "washington",
+        "while"
+      ],
+      "category": "geopolitics",
+      "analysis": {
+        "tldr": "China is quietly stockpiling safe assets and looking for ways around American money rules, which could slowly make global trade more unpredictable and sway the price of gold in India.",
+        "what_happened": "China relies heavily on the US dollar (the main currency used for international trade) to buy and sell goods globally. However, because China worries the United States might freeze its money or block its trade using economic punishments (sanctions), it is looking for backup options like using other currencies and buying more gold to protect itself.",
+        "analogy": "It is like a shopkeeper who is forced to use one big bank to take payments, but because he does not trust the bank owner, he starts accepting gold coins and local IOUs from his friends just in case the bank locks his account.",
+        "why_it_matters_india": [
+          "China worries about US sanctions and wants to reduce its reliance on the US dollar",
+          "To protect itself, China buys more physical gold and encourages other countries to trade in local currencies instead of dollars",
+          "When a giant country like China buys massive amounts of gold, global demand goes up",
+          "Higher global gold prices translate to pricier gold for Indian households buying jewelry or investments"
+        ],
+        "impacts": [
+          {
+            "target": "Gold price in India",
+            "direction": "up",
+            "probability": "High",
+            "horizon": "months",
+            "rationale": "China buying more gold as a shield pushes up global prices, making gold costlier for Indian families — generally bad if you want to buy jewelry, good if you already own it."
+          },
+          {
+            "target": "The rupee (vs the US dollar)",
+            "direction": "down",
+            "probability": "Low",
+            "horizon": "weeks",
+            "rationale": "If global currency markets get nervous about countries fighting over dollar dominance, investors rush to safe US assets, which can weaken other currencies like the rupee (each rupee buys fewer dollars), making imported goods costlier."
+          },
+          {
+            "target": "Nifty 50 (India's main stock index)",
+            "direction": "down",
+            "probability": "Low",
+            "horizon": "months",
+            "rationale": "Global trade friction and worries about big economies fighting can make big foreign investors nervous, causing them to pull money out of Indian stocks, which hurts your portfolio values."
+          }
+        ],
+        "watch_next": [
+          "Whether other major countries start trading with China in their own local currencies instead of US dollars",
+          "How much gold China's central bank adds to its piggy bank each month"
+        ],
+        "confidence": "Medium",
+        "caveats": "If the US and China suddenly become friendlier and ease trade tensions, China might stop hoarding alternative assets so aggressively.",
+        "engine": "gemini",
+        "category": "geopolitics",
+        "matched_linkage": "mideast_escalation"
+      },
+      "importance": 6.2,
+      "is_top": false
+    },
+    {
+      "headline": "India cotton production forecast at 24.5 million bales in 2026/27: USDA",
+      "relevance": 4.5,
+      "items": [
+        {
+          "title": "India cotton production forecast at 24.5 million bales in 2026/27: USDA",
+          "url": "https://www.thehindubusinessline.com/economy/agri-business/india-cotton-production-forecast-at-245-million-bales-in-202627-usda/article71401991.ece",
+          "source": "The Hindu BusinessLine",
+          "published": "2026-08-28T17:36:51+00:00",
+          "summary": "Below-normal rainfall and delayed planting are weighing on crop prospects, while stronger textile and apparel export orders are boosting mill demand.",
+          "region": "india",
+          "origin": "rss",
+          "relevance": 4.5
+        }
+      ],
+      "sources": [
+        "The Hindu BusinessLine"
+      ],
+      "urls": [
+        "https://www.thehindubusinessline.com/economy/agri-business/india-cotton-production-forecast-at-245-million-bales-in-202627-usda/article71401991.ece"
+      ],
+      "item_count": 1,
+      "coverage_boost": 0.0,
+      "id": "ddf088e3f7",
+      "keywords": [
+        "2026",
+        "apparel",
+        "bales",
+        "below",
+        "boosting",
+        "cotton",
+        "crop",
+        "delayed",
+        "demand",
+        "export",
+        "forecast",
+        "mill",
+        "million",
+        "normal",
+        "orders",
+        "planting",
+        "production",
+        "prospects",
+        "rainfall",
+        "stronger",
+        "textile",
+        "usda",
+        "weighing",
+        "while"
+      ],
+      "category": "general",
+      "analysis": {
+        "tldr": "Lower cotton crop forecasts mean your clothes and bedsheets could get more expensive in the coming months.",
+        "what_happened": "The USDA (United States Department of Agriculture, the American government's farming research body) has predicted that Indian farmers will grow less cotton next year, coming down to 24.5 million bales. This drop happens because farmers are switching to other crops like pulses or corn that give them better and safer money.",
+        "analogy": "It is like a local vegetable vendor planting fewer tomatoes because onions are selling for a higher price, leaving fewer tomatoes in the market and pushing up their price.",
+        "why_it_matters_india": [
+          "Farmers choose to plant other crops instead of cotton -> Total cotton grown in India goes down",
+          "Clothing factories (textile mills) get less raw cotton locally -> They have to pay more to buy it",
+          "Higher raw material costs for factories -> Branded clothes, shirts, and jeans become costlier in shops",
+          "Indian clothing companies find it harder to compete globally because their costs are higher"
+        ],
+        "impacts": [
+          {
+            "target": "Clothing & textile prices in India",
+            "direction": "up",
+            "probability": "High",
+            "horizon": "months",
+            "rationale": "Costlier raw cotton means manufacturing shirts and trousers gets expensive, which is bad for shoppers as retail prices go up."
+          },
+          {
+            "target": "Textile stocks like Vardhman Textiles or Raymond",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "months",
+            "rationale": "Higher raw material costs squeeze profit margins for garment makers, making these company shares less attractive to investors."
+          }
+        ],
+        "watch_next": [
+          "Monsoon rainfall reports in central and southern India",
+          "Actual domestic cotton prices in Indian wholesale markets"
+        ],
+        "confidence": "Medium",
+        "caveats": "If late monsoon rains turn out exceptionally good, Indian farmers might plant more cotton than currently expected.",
+        "engine": "gemini",
+        "category": "general",
+        "matched_linkage": null
+      },
+      "importance": 5.3,
+      "is_top": false
+    },
+    {
+      "headline": "Fed’s preferred inflation gauge shows core prices rose 3.3% annually in July",
+      "relevance": 4.0,
+      "items": [
+        {
+          "title": "Fed’s preferred inflation gauge shows core prices rose 3.3% annually in July",
+          "url": "https://www.cnbc.com/2026/08/26/feds-preferred-inflation-gauge-shows-core-prices-rose-3point3percent-annually-in-july.html",
+          "source": "CNBC Economy",
+          "published": "2026-08-26T13:35:50+00:00",
+          "summary": "The personal consumption expenditures price index was expected to rise 0.1% monthly and 3.6% on a 12-month basis, according to economists surveyed by Dow Jones.",
+          "region": "global",
+          "origin": "rss",
+          "relevance": 4.0
+        }
+      ],
+      "sources": [
+        "CNBC Economy"
+      ],
+      "urls": [
+        "https://www.cnbc.com/2026/08/26/feds-preferred-inflation-gauge-shows-core-prices-rose-3point3percent-annually-in-july.html"
+      ],
+      "item_count": 1,
+      "coverage_boost": 0.0,
+      "id": "2909823b2e",
+      "keywords": [
+        "according",
+        "annually",
+        "basis",
+        "consumption",
+        "core",
+        "dow",
+        "economists",
+        "expected",
+        "expenditures",
+        "fed",
+        "gauge",
+        "index",
+        "inflation",
+        "jones",
+        "july",
+        "month",
+        "monthly",
+        "personal",
+        "preferred",
+        "price",
+        "prices",
+        "rise",
+        "rose",
+        "shows",
+        "surveyed"
+      ],
+      "category": "general",
+      "analysis": {
+        "tldr": "US inflation is cooling down, which means big global banks will likely lower borrowing costs soon, making loans slightly cheaper and money flow more freely into India.",
+        "what_happened": "America's favorite measure of price rises—called the PCE (Personal Consumption Expenditures) price index—showed that yearly core prices went up by 3.3% in July. This happened because the constant wave of price hikes after the pandemic is finally settling down as people and businesses spend money more carefully.",
+        "analogy": "It is like a speeding car slowly taking its foot off the accelerator. The car is still moving forward, but the driver is no longer pushing it to go faster.",
+        "why_it_matters_india": [
+          "US inflation (rising prices in America) slows down",
+          "Traders expect the US Federal Reserve (the US central bank) to cut interest rates soon",
+          "Global investors look for better returns outside the US and pour money into emerging markets like India",
+          "Foreign money pushes up Indian stock markets and strengthens the rupee (each rupee buys fewer dollars)"
+        ],
+        "impacts": [
+          {
+            "target": "The rupee (vs the US dollar)",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "As US interest rates look set to fall, foreign money flows into India, strengthening the rupee — good because it makes imported goods like crude oil slightly cheaper for India."
+          },
+          {
+            "target": "Nifty 50 (India's main stock index)",
+            "direction": "up",
+            "probability": "High",
+            "horizon": "days",
+            "rationale": "Global investors love when US rates drop because it leaves more money to invest in growing markets like India, pushing Indian share prices higher — generally good for regular investors with mutual funds."
+          },
+          {
+            "target": "Gold price in India",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "When US interest rates are expected to fall, the US dollar usually weakens, causing global investors to buy gold as a safe backup — mixed for everyday buyers as gold gets costlier."
+          }
+        ],
+        "watch_next": [
+          "The upcoming speech by the US Federal Reserve chief about when interest rates will actually be cut",
+          "Jobs data from the US which will decide how fast rates come down"
+        ],
+        "confidence": "High",
+        "caveats": "If upcoming job reports from the US surprise everyone by being too strong, inflation could jump back up and ruin plans for interest rate cuts.",
+        "engine": "gemini",
+        "category": "general",
+        "matched_linkage": null
+      },
+      "importance": 5.2,
+      "is_top": false
+    },
+    {
+      "headline": "India food regulator proposes front-of-pack warning labels for high sugar, fat and salt",
+      "relevance": 3.5,
+      "items": [
+        {
+          "title": "India food regulator proposes front-of-pack warning labels for high sugar, fat and salt",
+          "url": "https://www.thehindubusinessline.com/news/india-food-regulator-proposes-front-of-pack-warning-labels-for-high-sugar-fat-and-salt/article71402004.ece",
+          "source": "The Hindu BusinessLine",
+          "published": "2026-08-28T17:28:20+00:00",
+          "summary": "The proposed labelling comes after health activists challenged the government in court, while food companies have opposed warning labels as confusing",
+          "region": "india",
+          "origin": "rss",
+          "relevance": 3.5
+        }
+      ],
+      "sources": [
+        "The Hindu BusinessLine"
+      ],
+      "urls": [
+        "https://www.thehindubusinessline.com/news/india-food-regulator-proposes-front-of-pack-warning-labels-for-high-sugar-fat-and-salt/article71402004.ece"
+      ],
+      "item_count": 1,
+      "coverage_boost": 0.0,
+      "id": "c198abe459",
+      "keywords": [
+        "activists",
+        "challenged",
+        "comes",
+        "companies",
+        "confusing",
+        "court",
+        "fat",
+        "food",
+        "front",
+        "government",
+        "health",
+        "high",
+        "labelling",
+        "labels",
+        "opposed",
+        "pack",
+        "proposed",
+        "proposes",
+        "regulator",
+        "salt",
+        "sugar",
+        "warning",
+        "while"
+      ],
+      "category": "general",
+      "analysis": {
+        "tldr": "Big snack and biscuit companies might soon have to print big warning labels on their packets, which could change what people buy and hurt sales for some famous brands.",
+        "what_happened": "India's food safety watchdog (the government body that makes sure our food is safe to eat) wants to make companies put clear warning symbols on the front of packaged foods if they have too much sugar, salt, or fat. This is happening because lifestyle diseases like diabetes and blood pressure are rising fast across the country, and the government wants to help shoppers make healthier choices.",
+        "analogy": "It is like putting a big red 'Caution: Very Hot' sticker on a mug of tea so you do not burn your tongue without looking.",
+        "why_it_matters_india": [
+          "The food regulator proposes new warning labels -> packaged food companies face pressure to change their recipes",
+          "Companies remove sugar, salt, and fat or face lower sales -> people buy fewer unhealthy snacks",
+          "Sales drop for junk food makers -> profits for biscuit and soft drink companies might take a hit",
+          "Healthier eating habits spread across cities -> long-term medical costs for families could come down"
+        ],
+        "impacts": [
+          {
+            "target": "Consumer goods stocks (companies like Nestle, Britannia, and ITC)",
+            "direction": "down",
+            "probability": "High",
+            "horizon": "months",
+            "rationale": "Clear warning labels can scare buyers away, leading to lower sales and profits for junk food makers, which is bad for investors holding these shares."
+          },
+          {
+            "target": "Health food and organic product brands",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "months",
+            "rationale": "If people stop buying heavily processed snacks, they might switch to healthier local foods and organic brands, boosting sales for those smaller companies."
+          }
+        ],
+        "watch_next": [
+          "Whether food companies manage to water down the rules before they become final laws",
+          "How fast companies change their ingredients to avoid the warning labels"
+        ],
+        "confidence": "High",
+        "caveats": "Big food companies might lobby hard to delay these rules or make the warning symbols smaller and less noticeable.",
+        "engine": "gemini",
+        "category": "general",
+        "matched_linkage": null
+      },
+      "importance": 4.3,
+      "is_top": false
+    }
+  ]
+}

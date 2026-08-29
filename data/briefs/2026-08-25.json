@@ -1,0 +1,862 @@
+{
+  "date": "2026-08-25",
+  "date_human": "Tuesday, 25 August 2026",
+  "generated_at": "2026-08-25T04:05:45+00:00",
+  "engine": "Gemini AI",
+  "macro": [],
+  "calendar": [
+    {
+      "name": "US jobs report (non-farm payrolls)",
+      "date_human": "Sat, 05 Sep",
+      "days_away": 11,
+      "category": "macro_data",
+      "why": "Strong US jobs means fewer rate cuts, a stronger dollar, and pressure on the rupee and gold."
+    },
+    {
+      "name": "OPEC+ output meeting",
+      "date_human": "Mon, 07 Sep",
+      "days_away": 13,
+      "category": "commodities",
+      "why": "Decides how much oil the world's big producers pump — swings crude prices, India's import bill, fuel costs and inflation."
+    },
+    {
+      "name": "US inflation report (CPI)",
+      "date_human": "Sat, 12 Sep",
+      "days_away": 18,
+      "category": "macro_data",
+      "why": "Hot US inflation can lift global interest rates and pull foreign money out of India; a cool reading does the reverse. A big driver of gold."
+    },
+    {
+      "name": "India inflation report (CPI)",
+      "date_human": "Sat, 12 Sep",
+      "days_away": 18,
+      "category": "macro_data",
+      "why": "Decides how soon the RBI can cut rates — moves bond yields, the rupee, and rate-sensitive stocks (banks, autos, real estate)."
+    }
+  ],
+  "events": [
+    {
+      "headline": "India's exports to Iran set to fall further due to Dubai halt, US sanctions",
+      "relevance": 6.5,
+      "items": [
+        {
+          "title": "India's exports to Iran set to fall further due to Dubai halt, US sanctions",
+          "url": "https://economictimes.indiatimes.com/news/economy/foreign-trade/indias-exports-to-iran-set-to-fall-further-due-to-dubai-halt-us-sanctions/articleshow/133467129.cms",
+          "source": "Economic Times Economy",
+          "published": "2026-08-24T12:56:33+00:00",
+          "summary": "New U.S. sanctions and UAE trade suspension may disrupt Indian exports to Iran. Rice, tea, and pharmaceutical shipments routed through Dubai face potential severe disruptions. Exporters anticipate higher freight and payment processing costs due to these changes. Bilateral trade has already significantly declined from previous highs. Alternative payment and shipping routes are being explored by affected businesses.",
+          "region": "india",
+          "origin": "rss",
+          "relevance": 6.5
+        },
+        {
+          "title": "Iran vows to retaliate after US widens sanctions",
+          "url": "https://www.investing.com/news/commodities-news/iran-vows-to-retaliate-after-us-widens-sanctions-4874350",
+          "source": "Investing.com Commodities",
+          "published": "2026-08-25T01:19:07+00:00",
+          "summary": "",
+          "region": "global",
+          "origin": "rss",
+          "relevance": 2.0
+        },
+        {
+          "title": "US widens sanctions on Iran but withholds more punishing options",
+          "url": "https://www.investing.com/news/commodities-news/us-vows-economic-dday-as-iran-threatens-to-halt-all-oil-exports-4872522",
+          "source": "Investing.com Commodities",
+          "published": "2026-08-25T01:00:36+00:00",
+          "summary": "",
+          "region": "global",
+          "origin": "rss",
+          "relevance": 2.0
+        },
+        {
+          "title": "Oil drops more than $2 despite new US sanctions on Iran",
+          "url": "https://www.investing.com/news/commodities-news/oil-falls-1-ahead-of-us-announcement-to-impose-further-sanctions-on-iran-4872489",
+          "source": "Investing.com Commodities",
+          "published": "2026-08-24T19:54:31+00:00",
+          "summary": "",
+          "region": "global",
+          "origin": "rss",
+          "relevance": 2.0
+        }
+      ],
+      "sources": [
+        "Economic Times Economy",
+        "Investing.com Commodities"
+      ],
+      "urls": [
+        "https://economictimes.indiatimes.com/news/economy/foreign-trade/indias-exports-to-iran-set-to-fall-further-due-to-dubai-halt-us-sanctions/articleshow/133467129.cms",
+        "https://www.investing.com/news/commodities-news/iran-vows-to-retaliate-after-us-widens-sanctions-4874350",
+        "https://www.investing.com/news/commodities-news/us-vows-economic-dday-as-iran-threatens-to-halt-all-oil-exports-4872522",
+        "https://www.investing.com/news/commodities-news/oil-falls-1-ahead-of-us-announcement-to-impose-further-sanctions-on-iran-4872489"
+      ],
+      "item_count": 4,
+      "coverage_boost": 1.5,
+      "id": "b5519c1461",
+      "keywords": [
+        "anticipate",
+        "despite",
+        "disrupt",
+        "disruptions",
+        "drops",
+        "dubai",
+        "due",
+        "exporters",
+        "exports",
+        "face",
+        "fall",
+        "freight",
+        "further",
+        "halt",
+        "higher",
+        "indian",
+        "iran",
+        "may",
+        "oil",
+        "options",
+        "pharmaceutical",
+        "potential",
+        "punishing",
+        "retaliate",
+        "rice",
+        "routed",
+        "sanctions",
+        "set",
+        "severe",
+        "shipments",
+        "suspension",
+        "tea",
+        "through",
+        "trade",
+        "uae",
+        "vows",
+        "widens",
+        "withholds"
+      ],
+      "category": "geopolitics",
+      "analysis": {
+        "tldr": "Tougher trade rules and blocked shipping lanes mean Indian businesses will sell less to Iran, but global oil prices might actually stay steady or fall for now.",
+        "what_happened": "India's selling of goods to Iran is dropping sharply. Why? The US government has tightened penalties (sanctions, meaning official bans and trade restrictions) on Iran, and shipping hubs like Dubai have stopped smooth transit routes. At the same time, global crude oil prices fell slightly because the US avoided the strictest possible oil bans.",
+        "analogy": "It is like a local shopkeeper who is forced to stop selling goods to a regular customer because the local authority put up police tape around the delivery alley, forcing the shopkeeper to find other buyers.",
+        "why_it_matters_india": [
+          "The US tightens trade rules against Iran -> Iranian buyers cannot easily pay Indian sellers.",
+          "Shipping routes through Dubai freeze up -> Indian exporters cannot physically deliver goods like tea, rice, and medicine to Iran.",
+          "India exports less overall to this region -> Certain Indian farming and manufacturing businesses make less money.",
+          "Global oil supply avoids major disruption for now -> India's import bills for crude oil remain stable rather than suddenly spiking."
+        ],
+        "impacts": [
+          {
+            "target": "Petrol & diesel prices",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "Because global oil prices dropped slightly after the US avoided extreme supply punishments, fuel costs for regular people might ease slightly or stay steady—which is good for household budgets."
+          },
+          {
+            "target": "The rupee (vs the US dollar)",
+            "direction": "down",
+            "probability": "Low",
+            "horizon": "days",
+            "rationale": "A drop in exports means India earns fewer foreign dollars, which can slightly weaken our currency, making imported goods costlier for everyday Indians."
+          },
+          {
+            "target": "Gold price in India",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "days",
+            "rationale": "Tensions in the Middle East make global investors nervous, pushing them to buy safe gold. Higher gold prices mean buying jewellery becomes costlier for Indian families."
+          },
+          {
+            "target": "Agri-export stocks & farming businesses",
+            "direction": "down",
+            "probability": "High",
+            "horizon": "weeks",
+            "rationale": "Indian companies that ship food items like basmati rice to Iran will lose sales, hurting their business profits—bad for investors holding those specific stocks."
+          }
+        ],
+        "watch_next": [
+          "Whether the US introduces even harsher bans on Iranian oil tankers",
+          "Alternative shipping routes Indian exporters find to bypass Dubai"
+        ],
+        "confidence": "Medium",
+        "caveats": "If Middle East tensions suddenly worsen and block major oil tanker routes, global oil prices could spike overnight despite current calm.",
+        "engine": "gemini",
+        "category": "geopolitics",
+        "matched_linkage": "mideast_escalation"
+      },
+      "importance": 9.6,
+      "is_top": true
+    },
+    {
+      "headline": "India eases raw sugar import rules as it cracks down on hoarding",
+      "relevance": 6.5,
+      "items": [
+        {
+          "title": "India eases raw sugar import rules as it cracks down on hoarding",
+          "url": "https://economictimes.indiatimes.com/news/economy/foreign-trade/india-revises-sugar-import-rules-gives-2-month-window-to-sell-refined-sugar/articleshow/133488895.cms",
+          "source": "Economic Times Economy",
+          "published": "2026-08-25T03:12:39+00:00",
+          "summary": "The government has extended the processing window for duty-free raw sugar imports. This move aims to increase domestic sugar availability before the festive season. Domestic sugar prices have risen sharply due to tighter supplies and increased demand. The government is also curbing hoarding by reducing stockholding limits for bulk consumers. These measures seek to stabilize sugar prices and ensure adequate supply for consumers.",
+          "region": "india",
+          "origin": "rss",
+          "relevance": 6.5
+        }
+      ],
+      "sources": [
+        "Economic Times Economy"
+      ],
+      "urls": [
+        "https://economictimes.indiatimes.com/news/economy/foreign-trade/india-revises-sugar-import-rules-gives-2-month-window-to-sell-refined-sugar/articleshow/133488895.cms"
+      ],
+      "item_count": 1,
+      "coverage_boost": 0.0,
+      "id": "b9472315d2",
+      "keywords": [
+        "aims",
+        "availability",
+        "before",
+        "cracks",
+        "domestic",
+        "duty",
+        "eases",
+        "extended",
+        "festive",
+        "free",
+        "government",
+        "hoarding",
+        "import",
+        "imports",
+        "increase",
+        "move",
+        "prices",
+        "processing",
+        "raw",
+        "risen",
+        "rules",
+        "season",
+        "sharply",
+        "sugar",
+        "window"
+      ],
+      "category": "commodities",
+      "analysis": {
+        "tldr": "India is letting in raw sugar more easily to increase supply in local markets, which will likely keep your grocery bills and festive sweets from getting much more expensive.",
+        "what_happened": "The Indian government has relaxed rules for bringing raw sugar into the country from abroad. Why did they do this? Traders and mill owners were hoarding sugar to push prices up, and local supplies were tightening, so the government stepped in to flood the market with more sugar and bring prices down.",
+        "analogy": "It is like a local vegetable market where vendors are hiding onions in the back to make them look rare and charge you more, so the head of the market suddenly opens the gates for trucks from other towns to bring in tons of fresh onions.",
+        "why_it_matters_india": [
+          "The government allows more raw sugar imports from other countries -> more sugar physically enters Indian ports and refineries.",
+          "Refineries process this raw sugar quickly and dump it into local wholesale markets -> total sugar supply in India goes up.",
+          "Higher supply forces traders who were hoarding sugar to sell quickly before prices crash -> local sugar prices drop or stabilize.",
+          "Lower sugar prices mean food inflation (the rate at which daily food items get costlier) stays in check -> packaged foods, biscuits, and sweets do not get sudden price hikes."
+        ],
+        "impacts": [
+          {
+            "target": "Domestic sugar prices in India",
+            "direction": "down",
+            "probability": "High",
+            "horizon": "weeks",
+            "rationale": "More sugar coming into the country increases supply, which is good for your wallet because sweet treats and daily groceries won't get suddenly pricier."
+          },
+          {
+            "target": "India's food inflation rate",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "months",
+            "rationale": "Cheaper sugar helps keep the overall food price rise under control, protecting ordinary household budgets from getting squeezed."
+          },
+          {
+            "target": "Sugar company stocks like Balrampur Chini or Triveni Engineering",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "days",
+            "rationale": "When sugar prices drop due to government rules, these companies make lower profits on their stock, which usually pushes their share prices down temporarily."
+          }
+        ],
+        "watch_next": [
+          "Whether domestic sugar mills complain about falling prices and ask the government for help",
+          "Updates on how much raw sugar actually arrives at Indian ports in the coming weeks"
+        ],
+        "confidence": "High",
+        "caveats": "If global raw sugar prices suddenly shoot up overseas, importing it might become too expensive for traders, defeating the purpose of the new rules.",
+        "engine": "gemini",
+        "category": "commodities",
+        "matched_linkage": "sugar_prices_up"
+      },
+      "importance": 7.7,
+      "is_top": true
+    },
+    {
+      "headline": "Sensex today | Stock Market Live: Sensex, Nifty open lower as West Asia tensions, crude prices weigh",
+      "relevance": 6.5,
+      "items": [
+        {
+          "title": "Sensex today | Stock Market Live: Sensex, Nifty open lower as West Asia tensions, crude prices weigh",
+          "url": "https://www.thehindubusinessline.com/markets/sensex-nifty50-today-stock-market-live-updates-25-august-2026/article71384173.ece",
+          "source": "The Hindu BusinessLine",
+          "published": "2026-08-25T04:00:05+00:00",
+          "summary": "Sensex, Nifty, Share Prices Live: Indian equities opened lower on Tuesday as investors remained cautious over escalating West Asia tensions, elevated crude prices and the upcoming Nifty 50 monthly derivatives expiry, while concerns over a weak monsoon and global market weakness added to the pressure.",
+          "region": "india",
+          "origin": "rss",
+          "relevance": 6.5
+        }
+      ],
+      "sources": [
+        "The Hindu BusinessLine"
+      ],
+      "urls": [
+        "https://www.thehindubusinessline.com/markets/sensex-nifty50-today-stock-market-live-updates-25-august-2026/article71384173.ece"
+      ],
+      "item_count": 1,
+      "coverage_boost": 0.0,
+      "id": "abd6746753",
+      "keywords": [
+        "asia",
+        "cautious",
+        "crude",
+        "derivatives",
+        "elevated",
+        "equities",
+        "escalating",
+        "indian",
+        "investors",
+        "live",
+        "lower",
+        "monthly",
+        "nifty",
+        "open",
+        "opened",
+        "prices",
+        "remained",
+        "sensex",
+        "share",
+        "stock",
+        "tensions",
+        "today",
+        "tuesday",
+        "upcoming",
+        "weigh",
+        "west"
+      ],
+      "developing": true,
+      "developing_since": "2026-08-21",
+      "category": "macro_data",
+      "analysis": {
+        "tldr": "Tense news from West Asia is making crude oil dearer, which will likely make daily travel and imported goods costlier for you.",
+        "what_happened": "The stock market indices Sensex (India's main collection of 30 big company stocks) and Nifty (India's top 50 company stocks) opened lower today. This happened because fighting and worries in West Asia made crude oil (unrefined petroleum straight from the ground) more expensive, scaring investors who fear higher energy costs for businesses.",
+        "analogy": "It is like your neighborhood delivery van suddenly having to pay much more for petrol, meaning the shopkeeper has to raise prices on everything else to survive.",
+        "why_it_matters_india": [
+          "West Asia tensions make oil supply look risky -> crude oil prices jump up globally",
+          "India imports most of its oil -> the country has to pay more dollars to buy it",
+          "Higher oil bills push up petrol and diesel prices at home, and make transport costlier -> general inflation (rising prices of everyday goods) goes up",
+          "Foreign investors pull money out of Indian stock markets to play safe -> stock indices like Sensex and Nifty fall"
+        ],
+        "impacts": [
+          {
+            "target": "Petrol & diesel prices",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "Costlier crude oil means refiners pay more, which is generally bad as it raises travel and transport costs for ordinary people."
+          },
+          {
+            "target": "Nifty 50 (India's main stock index)",
+            "direction": "down",
+            "probability": "High",
+            "horizon": "days",
+            "rationale": "Global worries cause big investors to sell stocks, making your mutual funds dip temporarily — a stressful sight, but normal in market cycles."
+          },
+          {
+            "target": "The rupee (vs the US dollar)",
+            "direction": "down",
+            "probability": "High",
+            "horizon": "days",
+            "rationale": "India needs more dollars to buy costlier oil, weakening the rupee (each rupee buys fewer dollars), which makes foreign items and travel pricier."
+          }
+        ],
+        "watch_next": [
+          "Updates on the political situation and fighting in West Asia",
+          "Daily international crude oil price movements"
+        ],
+        "confidence": "High",
+        "caveats": "If the conflict cools down quickly, crude oil prices could drop just as fast, reversing these market drops.",
+        "engine": "gemini",
+        "category": "macro_data",
+        "matched_linkage": "monsoon_deficit"
+      },
+      "importance": 7.7,
+      "is_top": true
+    },
+    {
+      "headline": "Sensex, Nifty, Nikkei, KOSPI to Dow Jones: Global equity heatmap before the opening bell of the Indian stock market",
+      "relevance": 5.5,
+      "items": [
+        {
+          "title": "Sensex, Nifty, Nikkei, KOSPI to Dow Jones: Global equity heatmap before the opening bell of the Indian stock market",
+          "url": "https://www.livemint.com/market/stock-market-news/sensex-nifty-nikkei-kospi-to-dow-jones-global-equity-heatmap-before-the-opening-bell-of-the-indian-stock-market-11787622491284.html",
+          "source": "Livemint Markets",
+          "published": "2026-08-25T02:48:55+00:00",
+          "summary": "Global markets today: US equities closed lower on Monday as chip stocks came under renewed pressure ahead of a pivotal week featuring Nvidia's earnings and the Fed's Jackson Hole symposium",
+          "region": "india",
+          "origin": "rss",
+          "relevance": 5.5
+        }
+      ],
+      "sources": [
+        "Livemint Markets"
+      ],
+      "urls": [
+        "https://www.livemint.com/market/stock-market-news/sensex-nifty-nikkei-kospi-to-dow-jones-global-equity-heatmap-before-the-opening-bell-of-the-indian-stock-market-11787622491284.html"
+      ],
+      "item_count": 1,
+      "coverage_boost": 0.0,
+      "id": "6bb4afb439",
+      "keywords": [
+        "ahead",
+        "before",
+        "bell",
+        "came",
+        "chip",
+        "closed",
+        "dow",
+        "earnings",
+        "equities",
+        "equity",
+        "featuring",
+        "fed",
+        "global",
+        "heatmap",
+        "hole",
+        "indian",
+        "jackson",
+        "jones",
+        "kospi",
+        "lower",
+        "monday",
+        "nifty",
+        "nikkei",
+        "nvidia",
+        "opening",
+        "pivotal",
+        "pressure",
+        "renewed",
+        "sensex",
+        "stock",
+        "stocks",
+        "symposium",
+        "today",
+        "under"
+      ],
+      "developing": true,
+      "developing_since": "2026-08-24",
+      "category": "monetary_policy",
+      "analysis": {
+        "tldr": "When global stock markets move together overnight, it dictates whether big foreign investors will pump money into India or pull it out, directly swaying your mutual fund returns.",
+        "what_happened": "Major stock markets around the world—from the US to Japan and South Korea—are flashing mixed signals on their performance scoreboards before the Indian market opens. This happens because global investors constantly react to overnight news about US interest rates, company earnings, and world events, shifting their money from country to country.",
+        "analogy": "It is like a large apartment building where if the lights flicker in the lobby, all the residents inside start checking their own switches.",
+        "why_it_matters_india": [
+          "Global stock markets move up or down based on overnight news.",
+          "Big foreign investors (FIIs) look at these global trends to decide where to park their cash.",
+          "If global markets look risky, these investors pull money out of Indian stocks, causing local indices to drop.",
+          "Your mutual fund and stock portfolios go up or down based on these daily shifts in investor mood."
+        ],
+        "impacts": [
+          {
+            "target": "Nifty 50 (India's main stock index)",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "days",
+            "rationale": "If global markets are green, foreign investors feel confident and buy Indian shares, pushing your local stock investments higher—which is good for your wealth."
+          },
+          {
+            "target": "The rupee (vs the US dollar)",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "days",
+            "rationale": "When foreign investors pull money out of India to chase safer global bets, the rupee weakens (each rupee buys fewer dollars), making imported items like crude oil more expensive for us."
+          },
+          {
+            "target": "Gold price in India",
+            "direction": "up",
+            "probability": "Low",
+            "horizon": "days",
+            "rationale": "If global stock heatmaps turn red with fear, investors rush to safe gold, driving up prices—good if you own gold, bad if you want to buy jewellery."
+          }
+        ],
+        "watch_next": [
+          "The opening numbers of the GIFT Nifty (an early indicator of how the Indian market will open)",
+          "Overnight closing movements of the US Dow Jones index"
+        ],
+        "confidence": "Medium",
+        "caveats": "A sudden local corporate earnings report or domestic news in India can completely override what global markets are doing.",
+        "engine": "gemini",
+        "category": "monetary_policy",
+        "matched_linkage": "fed_dovish"
+      },
+      "importance": 6.7,
+      "is_top": false
+    },
+    {
+      "headline": "Rupee may cling to subdued rhythm, improved portfolio inflows lend support",
+      "relevance": 5.5,
+      "items": [
+        {
+          "title": "Rupee may cling to subdued rhythm, improved portfolio inflows lend support",
+          "url": "https://www.thehindubusinessline.com/markets/forex/rupee-may-cling-to-subdued-rhythm-improved-portfolio-inflows-lend-support/article71387184.ece",
+          "source": "The Hindu BusinessLine",
+          "published": "2026-08-25T03:36:41+00:00",
+          "summary": "The rupee is expected to open in the 95.70-95.75 range, per traders, ‌having settled at 95.7450 to the dollar on Monday",
+          "region": "india",
+          "origin": "rss",
+          "relevance": 5.5
+        }
+      ],
+      "sources": [
+        "The Hindu BusinessLine"
+      ],
+      "urls": [
+        "https://www.thehindubusinessline.com/markets/forex/rupee-may-cling-to-subdued-rhythm-improved-portfolio-inflows-lend-support/article71387184.ece"
+      ],
+      "item_count": 1,
+      "coverage_boost": 0.0,
+      "id": "2e6a0c1d49",
+      "keywords": [
+        "7450",
+        "cling",
+        "dollar",
+        "expected",
+        "having",
+        "improved",
+        "inflows",
+        "lend",
+        "may",
+        "monday",
+        "open",
+        "per",
+        "portfolio",
+        "range",
+        "rhythm",
+        "rupee",
+        "settled",
+        "subdued",
+        "support",
+        "traders"
+      ],
+      "developing": true,
+      "developing_since": "2026-08-24",
+      "category": "general",
+      "analysis": {
+        "tldr": "Your money stays relatively steady against the US dollar because foreign investors are pumping cash into Indian stocks, protecting us from sudden currency crashes.",
+        "what_happened": "The Indian rupee (our country's currency) is staying calm and not bouncing around too wildly. This happens because FIIs (big foreign investors) are pouring money into Indian stock markets, creating a steady demand for our currency and keeping it afloat.",
+        "analogy": "It is like a small boat in the sea; even though global waves are splashing around, a heavy anchor of foreign money is keeping the boat steady in one place.",
+        "why_it_matters_india": [
+          "Foreign investors bring dollars into India to buy local shares",
+          "They convert those dollars into rupees, creating strong demand for our currency",
+          "This high demand stops the rupee from falling too sharply against the US dollar",
+          "A steady rupee keeps the cost of imported goods like crude oil stable, protecting ordinary people from sudden price spikes"
+        ],
+        "impacts": [
+          {
+            "target": "The rupee (vs the US dollar)",
+            "direction": "down",
+            "probability": "High",
+            "horizon": "weeks",
+            "rationale": "It moves in a very tight, controlled range because incoming foreign money balances out global pressures — generally good because it prevents sudden imported inflation."
+          },
+          {
+            "target": "Nifty 50 (India's main stock index)",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "More foreign money entering the stock market pushes share prices up, which is good for people who own shares or mutual funds."
+          },
+          {
+            "target": "Imported goods (like crude oil and electronics)",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "months",
+            "rationale": "A stable rupee means we don't pay extra to buy things from abroad, keeping household budgets safe from sudden fuel or gadget price hikes."
+          }
+        ],
+        "watch_next": [
+          "Whether foreign investors continue pumping money into Indian shares",
+          "Global crude oil prices in the international market"
+        ],
+        "confidence": "High",
+        "caveats": "If global markets suddenly panic, foreign investors can pull their money out overnight, which would quickly weaken the rupee.",
+        "engine": "gemini",
+        "category": "general",
+        "matched_linkage": null
+      },
+      "importance": 6.7,
+      "is_top": false
+    },
+    {
+      "headline": "India lifts export ban on wheat flour, related products with immediate effect",
+      "relevance": 5.5,
+      "items": [
+        {
+          "title": "India lifts export ban on wheat flour, related products with immediate effect",
+          "url": "https://economictimes.indiatimes.com/news/economy/foreign-trade/centre-announces-amendment-to-wheat-flour-and-related-products-export-policy/articleshow/133458255.cms",
+          "source": "Economic Times Economy",
+          "published": "2026-08-24T08:35:49+00:00",
+          "summary": "The Central Government has lifted the export ban on wheat flour and related products. This policy amendment allows for immediate overseas shipments of these items. Previously, India had halted wheat exports in July 2022 due to rising local prices. Global price skyrocketed when the Russia-Ukraine conflict had impacted wheat trade significantly. The government had previously set a 5 million tonne export limit earlier this year.",
+          "region": "india",
+          "origin": "rss",
+          "relevance": 5.5
+        }
+      ],
+      "sources": [
+        "Economic Times Economy"
+      ],
+      "urls": [
+        "https://economictimes.indiatimes.com/news/economy/foreign-trade/centre-announces-amendment-to-wheat-flour-and-related-products-export-policy/articleshow/133458255.cms"
+      ],
+      "item_count": 1,
+      "coverage_boost": 0.0,
+      "id": "393dcbdb0f",
+      "keywords": [
+        "allows",
+        "amendment",
+        "ban",
+        "central",
+        "effect",
+        "export",
+        "flour",
+        "government",
+        "had",
+        "halted",
+        "immediate",
+        "items",
+        "lifted",
+        "lifts",
+        "overseas",
+        "policy",
+        "previously",
+        "products",
+        "related",
+        "shipments",
+        "these",
+        "wheat"
+      ],
+      "category": "commodities",
+      "analysis": {
+        "tldr": "Lifting the ban on wheat flour exports can put extra money into farmers' and millers' pockets, but it might push up everyday food prices for your household kitchen.",
+        "what_happened": "The Indian government has allowed companies to freely sell wheat flour (atta) and related products to foreign buyers again. This rule change happened because domestic wheat harvests have stabilized and government warehouses currently have enough food stock stored to feed the country.",
+        "analogy": "It is like a local grocery shop owner who finally has enough rice stored in the back room to feed his own family comfortably, so he is now allowed to start selling extra bags to people in the next town over for a profit.",
+        "why_it_matters_india": [
+          "The government lifts the export ban on wheat flour because local food storage tanks are full",
+          "Indian flour mills and food companies can now sell their products abroad to make more money",
+          "With more demand from foreign buyers, wheat and flour prices inside India can start creeping up",
+          "Higher local wheat costs mean your monthly grocery bill for flour, bread, and biscuits gets a bit heavier"
+        ],
+        "impacts": [
+          {
+            "target": "India's food inflation rate (the speed at which grocery prices rise)",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "months",
+            "rationale": "When food leaves the country and foreign demand goes up, local staples get pricier, which is bad for a regular family's monthly budget."
+          },
+          {
+            "target": "Stocks of Indian wheat milling and consumer food companies",
+            "direction": "up",
+            "probability": "High",
+            "horizon": "weeks",
+            "rationale": "Being able to sell products to foreign buyers opens up new money streams for these businesses, which generally cheers up stock investors."
+          }
+        ],
+        "watch_next": [
+          "Updates on how much wheat flour is actually getting shipped abroad",
+          "Upcoming weather reports and rain forecasts for the next farming season"
+        ],
+        "confidence": "Medium",
+        "caveats": "If sudden bad weather or unseasonal rains ruin the next crop harvest, the government could quickly reverse its decision and ban exports again.",
+        "engine": "gemini",
+        "category": "commodities",
+        "matched_linkage": "wheat_foodgrain_up"
+      },
+      "importance": 6.3,
+      "is_top": false
+    },
+    {
+      "headline": "Gold and silver prices drop on the MCX ahead of US inflation, Jackson Hole Symposium this week",
+      "relevance": 4.5,
+      "items": [
+        {
+          "title": "Gold and silver prices drop on the MCX ahead of US inflation, Jackson Hole Symposium this week",
+          "url": "https://www.livemint.com/market/commodities/gold-and-silver-prices-mixed-on-the-mcx-ahead-of-us-inflation-jackson-hole-symposium-this-week-11787628975454.html",
+          "source": "Livemint Markets",
+          "published": "2026-08-25T03:42:36+00:00",
+          "summary": "Gold and silver prices dropped on the MCX ahead of US inflation, Jackson Hole Symposium this week",
+          "region": "india",
+          "origin": "rss",
+          "relevance": 4.5
+        }
+      ],
+      "sources": [
+        "Livemint Markets"
+      ],
+      "urls": [
+        "https://www.livemint.com/market/commodities/gold-and-silver-prices-mixed-on-the-mcx-ahead-of-us-inflation-jackson-hole-symposium-this-week-11787628975454.html"
+      ],
+      "item_count": 1,
+      "coverage_boost": 0.0,
+      "id": "575cc6ab25",
+      "keywords": [
+        "ahead",
+        "drop",
+        "dropped",
+        "gold",
+        "hole",
+        "inflation",
+        "jackson",
+        "mcx",
+        "prices",
+        "silver",
+        "symposium"
+      ],
+      "developing": true,
+      "developing_since": "2026-08-24",
+      "category": "general",
+      "analysis": {
+        "tldr": "Gold and silver prices in India are dipping because global investors are waiting for big US economic meetings, making precious metals cheaper to buy temporarily.",
+        "what_happened": "Gold and silver prices on the MCX (Multi Commodity Exchange [a marketplace where commodities like gold and silver are bought and sold]) fell because big global investors are pausing their bets. They are waiting for US inflation (the rate at which prices rise) data and a major central banker meeting in Jackson Hole [a famous annual conference where top global monetary leaders discuss interest rates] to figure out what the US Federal Reserve (the US central bank) will do with interest rates next.",
+        "analogy": "It is like a local vegetable market freezing all buying and shouting before the government announces new fertilizer rules — nobody wants to make a big bet until they know the exact rules coming.",
+        "why_it_matters_india": [
+          "Traders in the US wait for inflation and interest rate clues",
+          "Global gold and silver prices dip as investors hold cash instead of buying metals",
+          "MCX prices in India follow global trends because India imports most of its gold",
+          "Gold and silver become temporarily cheaper for local buyers and jewelry shoppers in India"
+        ],
+        "impacts": [
+          {
+            "target": "Gold price in India",
+            "direction": "down",
+            "probability": "High",
+            "horizon": "days",
+            "rationale": "MCX prices drop following global trends, which is good if you want to buy wedding jewelry or physical gold."
+          },
+          {
+            "target": "Silver price in India",
+            "direction": "down",
+            "probability": "High",
+            "horizon": "days",
+            "rationale": "Silver follows gold's dip, making it cheaper for both investors and industrial users."
+          },
+          {
+            "target": "The rupee (vs the US dollar)",
+            "direction": "down",
+            "probability": "Low",
+            "horizon": "weeks",
+            "rationale": "Minor shifts in global metal prices do not change the Indian rupee much unless the US dollar swings wildly."
+          }
+        ],
+        "watch_next": [
+          "The US inflation numbers coming out later this week",
+          "Comments from the US Federal Reserve chief at the Jackson Hole meeting"
+        ],
+        "confidence": "High",
+        "caveats": "If the US inflation data shows prices rising faster than expected, gold prices could suddenly reverse and jump back up.",
+        "engine": "gemini",
+        "category": "general",
+        "matched_linkage": null
+      },
+      "importance": 5.7,
+      "is_top": false
+    },
+    {
+      "headline": "Sugar Futures Slump as Traders Parse India’s Import Potential",
+      "relevance": 4.5,
+      "items": [
+        {
+          "title": "Sugar Futures Slump as Traders Parse India’s Import Potential",
+          "url": "https://www.livemint.com/market/sugar-futures-slump-as-traders-parse-india-s-import-potential-11787621669060.html",
+          "source": "Livemint Markets",
+          "published": "2026-08-25T01:34:28+00:00",
+          "summary": "Sugar futures in both London and New York slumped as traders parsed a decision by the Indian government to allow mills and refiners to import duty-free raw sugar.",
+          "region": "india",
+          "origin": "rss",
+          "relevance": 4.5
+        }
+      ],
+      "sources": [
+        "Livemint Markets"
+      ],
+      "urls": [
+        "https://www.livemint.com/market/sugar-futures-slump-as-traders-parse-india-s-import-potential-11787621669060.html"
+      ],
+      "item_count": 1,
+      "coverage_boost": 0.0,
+      "id": "e61d4e99b8",
+      "keywords": [
+        "allow",
+        "both",
+        "decision",
+        "duty",
+        "free",
+        "futures",
+        "government",
+        "import",
+        "indian",
+        "london",
+        "mills",
+        "parse",
+        "parsed",
+        "potential",
+        "raw",
+        "refiners",
+        "slump",
+        "slumped",
+        "sugar",
+        "traders",
+        "york"
+      ],
+      "category": "trade",
+      "analysis": {
+        "tldr": "Global sugar prices are falling because traders think India might allow more sugar imports, which means your morning chai and sweets might stay comfortably priced.",
+        "what_happened": "Sugar futures (contracts to buy sugar at a later date) are sliding down in price. This happened because global traders are guessing that India—one of the world's biggest sugar players—might open up its doors to buy more sugar from abroad to keep local supplies steady, which adds more sugar to the global pool.",
+        "analogy": "It is like a local grocery shop lowering its prices on flour because word gets out that a massive truckload of fresh flour is about to arrive in town.",
+        "why_it_matters_india": [
+          "India is a massive producer and consumer of sugar, so local crop and policy talks sway global markets.",
+          "If global prices drop, importing sugar becomes cheaper for the government to manage local food supplies.",
+          "Plentiful sugar supplies keep local prices in check.",
+          "Lower sugar costs prevent sweet-makers and beverage companies from raising their prices, protecting your household grocery budget."
+        ],
+        "impacts": [
+          {
+            "target": "India's inflation rate",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "Cheaper sugar and stable food costs help keep overall inflation low, which is good for your household budget."
+          },
+          {
+            "target": "FMCG stocks like Hindustan Unilever & Nestle",
+            "direction": "up",
+            "probability": "Low",
+            "horizon": "months",
+            "rationale": "Lower raw material costs like sugar mean higher profit margins for companies that make packaged foods and chocolates, which generally pleases stock investors."
+          },
+          {
+            "target": "Sugar company stocks like EID Parry & Balrampur Chini",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "days",
+            "rationale": "Falling sugar prices mean lower revenues for domestic sugar mill owners, which can pull down their stock prices."
+          }
+        ],
+        "watch_next": [
+          "Official government announcements on whether India will actually allow duty-free sugar imports",
+          "Updates on the upcoming monsoon rains and domestic cane crop health"
+        ],
+        "confidence": "Medium",
+        "caveats": "If sudden bad weather ruins India's domestic cane crop, the government might change its mind and keep exports locked down, sending prices back up.",
+        "engine": "gemini",
+        "category": "trade",
+        "matched_linkage": "us_tariffs_tradewar"
+      },
+      "importance": 5.7,
+      "is_top": false
+    }
+  ]
+}

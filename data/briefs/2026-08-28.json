@@ -1,0 +1,945 @@
+{
+  "date": "2026-08-28",
+  "date_human": "Friday, 28 August 2026",
+  "generated_at": "2026-08-28T07:06:26+00:00",
+  "engine": "Gemini AI",
+  "macro": [],
+  "calendar": [
+    {
+      "name": "US jobs report (non-farm payrolls)",
+      "date_human": "Sat, 05 Sep",
+      "days_away": 8,
+      "category": "macro_data",
+      "why": "Strong US jobs means fewer rate cuts, a stronger dollar, and pressure on the rupee and gold."
+    },
+    {
+      "name": "OPEC+ output meeting",
+      "date_human": "Mon, 07 Sep",
+      "days_away": 10,
+      "category": "commodities",
+      "why": "Decides how much oil the world's big producers pump — swings crude prices, India's import bill, fuel costs and inflation."
+    },
+    {
+      "name": "US inflation report (CPI)",
+      "date_human": "Sat, 12 Sep",
+      "days_away": 15,
+      "category": "macro_data",
+      "why": "Hot US inflation can lift global interest rates and pull foreign money out of India; a cool reading does the reverse. A big driver of gold."
+    },
+    {
+      "name": "India inflation report (CPI)",
+      "date_human": "Sat, 12 Sep",
+      "days_away": 15,
+      "category": "macro_data",
+      "why": "Decides how soon the RBI can cut rates — moves bond yields, the rupee, and rate-sensitive stocks (banks, autos, real estate)."
+    },
+    {
+      "name": "US Fed rate decision (FOMC)",
+      "date_human": "Wed, 16 Sep",
+      "days_away": 19,
+      "category": "monetary_policy",
+      "why": "Sets US interest rates — the single biggest lever on the dollar, gold, and foreign flows into Indian stocks."
+    }
+  ],
+  "events": [
+    {
+      "headline": "Rupee opens 3 paise higher at 95.51 against US dollar",
+      "relevance": 14.5,
+      "items": [
+        {
+          "title": "Rupee opens 3 paise higher at 95.51 against US dollar",
+          "url": "https://www.livemint.com/market/stock-market-news/rupee-opens-3-paise-higher-at-95-51-against-us-dollar-11787887961189.html",
+          "source": "Livemint Markets",
+          "published": "2026-08-28T03:34:44+00:00",
+          "summary": "The Indian rupee opened at 95.51 against the US dollar, buoyed by importer demand and RBI intervention. The currency remains range-bound, with oil prices affecting market conditions. Experts predict potential depreciation, while upcoming US Federal Reserve signals may impact rupee stability.",
+          "region": "india",
+          "origin": "rss",
+          "relevance": 14.5
+        }
+      ],
+      "sources": [
+        "Livemint Markets"
+      ],
+      "urls": [
+        "https://www.livemint.com/market/stock-market-news/rupee-opens-3-paise-higher-at-95-51-against-us-dollar-11787887961189.html"
+      ],
+      "item_count": 1,
+      "coverage_boost": 0.0,
+      "id": "bc0044bfd0",
+      "keywords": [
+        "affecting",
+        "against",
+        "bound",
+        "buoyed",
+        "conditions",
+        "currency",
+        "demand",
+        "dollar",
+        "experts",
+        "higher",
+        "importer",
+        "indian",
+        "intervention",
+        "oil",
+        "opened",
+        "opens",
+        "paise",
+        "potential",
+        "predict",
+        "prices",
+        "range",
+        "rbi",
+        "remains",
+        "rupee"
+      ],
+      "category": "general",
+      "analysis": {
+        "tldr": "A slightly stronger rupee makes imported goods like electronics a tiny bit cheaper, but it does not change your daily budget much.",
+        "what_happened": "The Indian rupee (the money we use in India) gained a tiny bit of strength against the US dollar (the main global currency). This happened because foreign investors poured a little more money into Indian stock markets, meaning they needed to buy rupees, which pushed the price of the rupee up slightly.",
+        "analogy": "It is like a vegetable vendor giving you one extra chili for free because they have plenty today—nice, but it does not change the price of your weekly groceries.",
+        "why_it_matters_india": [
+          "Foreign investors put money into Indian stocks, increasing the demand for rupees",
+          "Higher demand for rupees makes the rupee rise slightly against the dollar",
+          "A stronger rupee makes buying things from other countries, like crude oil and electronics, slightly cheaper",
+          "Cheaper imports help keep inflation (rising prices of everyday goods) under control"
+        ],
+        "impacts": [
+          {
+            "target": "The rupee (vs the US dollar)",
+            "direction": "up",
+            "probability": "High",
+            "horizon": "days",
+            "rationale": "It moved up because more foreign money came into India, which is slightly good for people buying imported items."
+          },
+          {
+            "target": "India's inflation rate",
+            "direction": "down",
+            "probability": "Low",
+            "horizon": "months",
+            "rationale": "A stronger rupee makes imported goods cheaper, which is good because it keeps everyday price rises slow."
+          },
+          {
+            "target": "Petrol & diesel prices",
+            "direction": "down",
+            "probability": "Low",
+            "horizon": "weeks",
+            "rationale": "Crude oil becomes slightly cheaper to import when the rupee gains strength, though tax changes usually matter more."
+          }
+        ],
+        "watch_next": [
+          "Whether big foreign investors keep putting money into India or take it out",
+          "How the US dollar is performing against other world currencies"
+        ],
+        "confidence": "High",
+        "caveats": "This is a very tiny daily wiggle in price, not a major shift in the economy.",
+        "engine": "gemini",
+        "category": "general",
+        "matched_linkage": null
+      },
+      "importance": 15.7,
+      "is_top": true
+    },
+    {
+      "headline": "India 10-year yield at more than two-month peak on supply, Warsh speech",
+      "relevance": 12.5,
+      "items": [
+        {
+          "title": "India 10-year yield at more than two-month peak on supply, Warsh speech",
+          "url": "https://economictimes.indiatimes.com/markets/bonds/india-10-year-yield-at-more-than-two-month-peak-on-supply-warsh-speech/articleshow/133584847.cms",
+          "source": "Economic Times Markets",
+          "published": "2026-08-28T06:04:43+00:00",
+          "summary": "Indian government bonds extended losses, pushing the ten-year yield higher. Global markets await Federal Reserve Chair Kevin Warsh's speech for policy outlook signals. Hawkish minutes from India's central bank revived domestic rate hike expectations. New Delhi plans a significant sale of benchmark notes today. Easing crude oil futures offered some relief to markets.",
+          "region": "india",
+          "origin": "rss",
+          "relevance": 12.5
+        },
+        {
+          "title": "Indian government bonds: 10-yr yield at more than two-month peak on supply, Warsh speech",
+          "url": "https://www.thehindubusinessline.com/markets/indian-government-bonds-10-yr-yield-at-more-than-two-month-peak-on-supply-warsh-speech/article71399285.ece",
+          "source": "The Hindu BusinessLine",
+          "published": "2026-08-28T06:08:05+00:00",
+          "summary": "India’s benchmark 6.94% 2036 yield at 6.9079%",
+          "region": "india",
+          "origin": "rss",
+          "relevance": 4.5
+        }
+      ],
+      "sources": [
+        "Economic Times Markets",
+        "The Hindu BusinessLine"
+      ],
+      "urls": [
+        "https://economictimes.indiatimes.com/markets/bonds/india-10-year-yield-at-more-than-two-month-peak-on-supply-warsh-speech/articleshow/133584847.cms",
+        "https://www.thehindubusinessline.com/markets/indian-government-bonds-10-yr-yield-at-more-than-two-month-peak-on-supply-warsh-speech/article71399285.ece"
+      ],
+      "item_count": 2,
+      "coverage_boost": 0.5,
+      "id": "0f9bea62d5",
+      "keywords": [
+        "2036",
+        "9079",
+        "await",
+        "bank",
+        "benchmark",
+        "bonds",
+        "central",
+        "chair",
+        "extended",
+        "federal",
+        "global",
+        "government",
+        "hawkish",
+        "higher",
+        "indian",
+        "kevin",
+        "losses",
+        "minutes",
+        "month",
+        "outlook",
+        "peak",
+        "policy",
+        "pushing",
+        "reserve",
+        "revived",
+        "signals",
+        "speech",
+        "supply",
+        "ten",
+        "two",
+        "warsh",
+        "yield"
+      ],
+      "category": "monetary_policy",
+      "analysis": {
+        "tldr": "Because the government is borrowing more money and global interest rates look like they will stay high, loans in India could become slightly costlier for everyone.",
+        "what_happened": "The interest rate the Indian government pays when it borrows money for ten years has climbed to a two-month high. This happened because the government is selling a huge pile of new bonds (official paper promises to repay borrowed money), and at the same time, comments from US officials suggest global interest rates won't drop anytime soon.",
+        "analogy": "It is like a popular local shopkeeper suddenly needing to borrow a lot of cash from the neighbourhood; because he is asking for so much at once, lenders demand a higher interest rate to hand over their money.",
+        "why_it_matters_india": [
+          "The Indian government announces it needs to borrow massive amounts of money by selling lots of new bonds.",
+          "Because there is a sudden heavy supply of these bonds in the market, buyers demand a higher return, pushing up the 10-year bond yield (the interest rate the government pays to borrow).",
+          "At the same time, global commentary from figures like Kevin Warsh suggests US interest rates might stay high, making foreign investors prefer keeping their money safely in America.",
+          "Higher local borrowing costs push up overall interest rates in India, which eventually trickles down to make home, car, and business loans a bit more expensive."
+        ],
+        "impacts": [
+          {
+            "target": "10-year bond yield (interest India pays to borrow)",
+            "direction": "up",
+            "probability": "High",
+            "horizon": "weeks",
+            "rationale": "More government borrowing means investors have more options, so the government has to offer a higher return to find buyers. This is generally bad for borrowers as it drags other interest rates up."
+          },
+          {
+            "target": "The rupee (vs the US dollar)",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "days",
+            "rationale": "When global interest rates stay high, foreign investors pull money out of countries like India back to the US. A weaker rupee makes imported things like crude oil and electronics costlier for ordinary Indians."
+          },
+          {
+            "target": "Bank loan interest rates (home, car, personal)",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "months",
+            "rationale": "Banks base their loan rates on overall market yields. When government bond yields go up, banks raise their own lending rates, meaning higher monthly EMIs (equated monthly installments) for borrowers."
+          },
+          {
+            "target": "Nifty 50 (India's main stock index)",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "Higher bond yields make safe government bonds more attractive compared to risky stocks, which can cause foreign investors to sell Indian shares, temporarily slowing down the stock market."
+          }
+        ],
+        "watch_next": [
+          "Upcoming auctions where the government tries to sell its new bonds to see if buyers demand even higher interest.",
+          "Statements from the Reserve Bank of India (RBI) on whether they will step in to control these rising interest rates."
+        ],
+        "confidence": "High",
+        "caveats": "If global crude oil prices suddenly drop sharply, it could cool down inflation worries and help bring bond yields back down.",
+        "engine": "gemini",
+        "category": "monetary_policy",
+        "matched_linkage": "fed_hawkish"
+      },
+      "importance": 14.6,
+      "is_top": true
+    },
+    {
+      "headline": "Global Market: Japan’s Nikkei rises as tech stocks gain, Fed signals cap rally",
+      "relevance": 12.5,
+      "items": [
+        {
+          "title": "Global Market: Japan’s Nikkei rises as tech stocks gain, Fed signals cap rally",
+          "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-market-japans-nikkei-rises-as-tech-stocks-gain-fed-signals-cap-rally/articleshow/133584113.cms",
+          "source": "Economic Times Markets",
+          "published": "2026-08-28T05:39:45+00:00",
+          "summary": "Japan’s Nikkei rose 0.8% and Topix gained 0.9%, led by technology and chip stocks. Gains were supported by Wall Street’s semiconductor rally, while inflation concerns, higher oil prices and rising bond yields limited broader advances. Investors also awaited Fed Chair Kevin Warsh’s Jackson Hole speech for clues on US interest rates.",
+          "region": "india",
+          "origin": "rss",
+          "relevance": 12.5
+        }
+      ],
+      "sources": [
+        "Economic Times Markets"
+      ],
+      "urls": [
+        "https://economictimes.indiatimes.com/markets/us-stocks/news/global-market-japans-nikkei-rises-as-tech-stocks-gain-fed-signals-cap-rally/articleshow/133584113.cms"
+      ],
+      "item_count": 1,
+      "coverage_boost": 0.0,
+      "id": "8179c095d7",
+      "keywords": [
+        "cap",
+        "chip",
+        "concerns",
+        "fed",
+        "gain",
+        "gained",
+        "gains",
+        "global",
+        "higher",
+        "inflation",
+        "japan",
+        "led",
+        "nikkei",
+        "oil",
+        "prices",
+        "rally",
+        "rises",
+        "rising",
+        "rose",
+        "semiconductor",
+        "signals",
+        "stocks",
+        "street",
+        "supported",
+        "tech",
+        "technology",
+        "topix",
+        "wall",
+        "while"
+      ],
+      "category": "trade",
+      "analysis": {
+        "tldr": "When global tech stocks rise and the US Federal Reserve (the US central bank that sets interest rates) hints it might keep interest rates high, it can make foreign investors pull money out of Indian stocks.",
+        "what_happened": "Japan's stock market went up because tech companies did well, but the US central bank warned that it might not lower interest rates soon. The US central bank did this because inflation (rising prices) in America is still higher than they want, so they want to keep borrowing costs expensive to cool down the economy.",
+        "analogy": "It is like a neighbourhood bank offering a very high fixed interest rate on savings; suddenly, everyone wants to put their money there instead of investing in local businesses.",
+        "why_it_matters_india": [
+          "The US central bank keeps interest rates high to fight inflation.",
+          "Global investors demand higher returns, making US government bonds look safer and more attractive.",
+          "Foreign institutional investors (big foreign investors who put money in Indian markets) pull their money out of emerging markets like India to chase those safer US returns.",
+          "Less foreign money flowing in puts pressure on Indian stock markets and the local currency."
+        ],
+        "impacts": [
+          {
+            "target": "The rupee (vs the US dollar)",
+            "direction": "down",
+            "probability": "High",
+            "horizon": "weeks",
+            "rationale": "When foreign investors pull money out of India, they sell rupees to buy dollars, making the rupee weaken (each rupee buys fewer dollars), which is bad because it makes imported crude oil and electronics costlier for Indians."
+          },
+          {
+            "target": "Nifty 50 (India's main stock index)",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "days",
+            "rationale": "As big foreign investors pull money out of Indian shares, stock prices tend to dip, which can be unsettling for regular investors watching their portfolio values drop."
+          },
+          {
+            "target": "10-year bond yield (interest India pays to borrow)",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "Global borrowing costs rise when the US keeps rates high, pushing local Indian bond yields up, which is generally bad because it can eventually lead to costlier loans for home buyers and businesses."
+          },
+          {
+            "target": "Gold price in India",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "When global financial markets look uncertain due to shifting US interest rates, investors rush to safe assets like gold, driving up local prices which makes jewelry or investment buying more expensive."
+          }
+        ],
+        "watch_next": [
+          "Upcoming inflation reports and speeches from US central bank officials",
+          "Daily trading data showing whether big foreign investors are buying or selling Indian shares"
+        ],
+        "confidence": "High",
+        "caveats": "If upcoming US economic reports suddenly show a sharp slowdown, the US central bank might change its mind and cut interest rates faster than expected.",
+        "engine": "gemini",
+        "category": "trade",
+        "matched_linkage": "semiconductor_curbs"
+      },
+      "importance": 14.1,
+      "is_top": true
+    },
+    {
+      "headline": "Sensex today | Stock Market Live: Sensex off day's high, up 100 pts, Nifty near 24,100; HCL Tech, TCS top gainers; Nifty IT jumps 3%",
+      "relevance": 11.5,
+      "items": [
+        {
+          "title": "Sensex today | Stock Market Live: Sensex off day's high, up 100 pts, Nifty near 24,100; HCL Tech, TCS top gainers; Nifty IT jumps 3%",
+          "url": "https://www.thehindubusinessline.com/markets/sensex-nifty50-today-stock-market-live-updates-28th-august-2026/article71397068.ece",
+          "source": "The Hindu BusinessLine",
+          "published": "2026-08-28T06:53:40+00:00",
+          "summary": "Sensex, Nifty, Stock Price Live Updates: Indian equities traded higher on Friday, supported by positive global cues and gains in technology stocks, while investors remained cautious amid elevated crude oil prices, geopolitical uncertainties and expectations surrounding the Federal Reserve’s September policy outlook.",
+          "region": "india",
+          "origin": "rss",
+          "relevance": 11.5
+        },
+        {
+          "title": "IT stocks surge: Why Nifty IT is up today - Reason behind TCS, Infosys, Wipro, Tech Mahindra, HCL Tech share price jump",
+          "url": "https://www.livemint.com/market/stock-market-news/it-stocks-surge-why-nifty-it-is-up-today-reason-behind-tcs-infosys-wipro-tech-mahindra-hcl-tech-share-price-jump-11787893800810.html",
+          "source": "Livemint Markets",
+          "published": "2026-08-28T05:40:10+00:00",
+          "summary": "Tata Consultancy Services (TCS), HCL Technologies and Tech Mahindra emerged among the top gainers on the Nifty 50, on Friday, 28 August.",
+          "region": "india",
+          "origin": "rss",
+          "relevance": 2.5
+        }
+      ],
+      "sources": [
+        "Livemint Markets",
+        "The Hindu BusinessLine"
+      ],
+      "urls": [
+        "https://www.thehindubusinessline.com/markets/sensex-nifty50-today-stock-market-live-updates-28th-august-2026/article71397068.ece",
+        "https://www.livemint.com/market/stock-market-news/it-stocks-surge-why-nifty-it-is-up-today-reason-behind-tcs-infosys-wipro-tech-mahindra-hcl-tech-share-price-jump-11787893800810.html"
+      ],
+      "item_count": 2,
+      "coverage_boost": 0.5,
+      "id": "a770684d71",
+      "keywords": [
+        "100",
+        "among",
+        "august",
+        "behind",
+        "cautious",
+        "consultancy",
+        "crude",
+        "cues",
+        "elevated",
+        "emerged",
+        "equities",
+        "friday",
+        "gainers",
+        "gains",
+        "global",
+        "hcl",
+        "high",
+        "higher",
+        "indian",
+        "infosys",
+        "investors",
+        "jump",
+        "jumps",
+        "live",
+        "mahindra",
+        "near",
+        "nifty",
+        "off",
+        "oil",
+        "positive",
+        "price",
+        "pts",
+        "reason",
+        "remained",
+        "sensex",
+        "services",
+        "share",
+        "stock",
+        "stocks",
+        "supported",
+        "surge",
+        "tata",
+        "tcs",
+        "tech",
+        "technologies",
+        "technology",
+        "today",
+        "top",
+        "traded",
+        "updates",
+        "while",
+        "wipro"
+      ],
+      "developing": true,
+      "developing_since": "2026-08-25",
+      "category": "uncategorized",
+      "analysis": {
+        "tldr": "Flagged as market-relevant, but no clear India link yet.",
+        "analogy": "",
+        "what_happened": "Sensex today | Stock Market Live: Sensex off day's high, up 100 pts, Nifty near 24,100; HCL Tech, TCS top gainers; Nifty IT jumps 3%",
+        "why_it_matters_india": [
+          "This story was flagged as market-relevant, but it doesn't match a known transmission pattern yet.",
+          "Consider adding a linkage for it to knowledge/transmission_map.yaml so future coverage is explained automatically."
+        ],
+        "impacts": [],
+        "watch_next": [
+          "Watch for follow-up coverage that clarifies the market angle."
+        ],
+        "confidence": "Low",
+        "caveats": "No matching knowledge-base pattern; shown for awareness only.",
+        "category": "uncategorized",
+        "matched_linkage": null,
+        "engine": "rule_based"
+      },
+      "importance": 12.0,
+      "is_top": false
+    },
+    {
+      "headline": "Raghuram Rajan urges Fed to raise rates, says rupee is not in panic zone",
+      "relevance": 7.5,
+      "items": [
+        {
+          "title": "Raghuram Rajan urges Fed to raise rates, says rupee is not in panic zone",
+          "url": "https://www.thehindubusinessline.com/money-and-banking/raghuram-rajan-urges-fed-to-raise-rates-says-rupee-is-not-in-panic-zone/article71399367.ece",
+          "source": "The Hindu BusinessLine",
+          "published": "2026-08-28T06:34:06+00:00",
+          "summary": "Rajan’s comments come as investors await Kevin Warsh’s Jackson Hole speech for clues on the Federal Reserve’s policy direction and rate outlook",
+          "region": "india",
+          "origin": "rss",
+          "relevance": 7.5
+        },
+        {
+          "title": "Gold marginally higher a day ahead of Fed chief Warsh’s Jackson Hole speech",
+          "url": "https://www.investing.com/news/commodities-news/gold-steadies-near-4600-after-inflation-setback-as-warsh-speech-looms-4878233",
+          "source": "Investing.com Commodities",
+          "published": "2026-08-27T19:28:40+00:00",
+          "summary": "",
+          "region": "global",
+          "origin": "rss",
+          "relevance": 4.0
+        },
+        {
+          "title": "Dollar flat near one-week high as investors await Warsh’s Jackson Hole debut",
+          "url": "https://www.investing.com/news/economy-news/dollar-flat-near-oneweek-high-as-investors-await-warshs-jackson-hole-debut-4880465",
+          "source": "Investing.com Economy",
+          "published": "2026-08-28T02:43:13+00:00",
+          "summary": "",
+          "region": "global",
+          "origin": "rss",
+          "relevance": 2.0
+        },
+        {
+          "title": "Anxious investors hope for clarity on Warsh’s Fed plan at Jackson Hole",
+          "url": "https://www.investing.com/news/economy-news/anxious-investors-hope-for-clarity-on-warshs-fed-plan-at-jackson-hole-4876622",
+          "source": "Investing.com Economy",
+          "published": "2026-08-27T21:07:27+00:00",
+          "summary": "",
+          "region": "global",
+          "origin": "rss",
+          "relevance": 2.0
+        },
+        {
+          "title": "Gold dips ahead of Warsh’s Jackson Hole speech; set for weekly fall",
+          "url": "https://www.investing.com/news/commodities-news/gold-dips-ahead-of-warshs-jackson-hole-speech-set-for-weekly-fall-4880473",
+          "source": "Investing.com Commodities",
+          "published": "2026-08-28T03:18:06+00:00",
+          "summary": "",
+          "region": "global",
+          "origin": "rss",
+          "relevance": 2.0
+        }
+      ],
+      "sources": [
+        "Investing.com Commodities",
+        "Investing.com Economy",
+        "The Hindu BusinessLine"
+      ],
+      "urls": [
+        "https://www.thehindubusinessline.com/money-and-banking/raghuram-rajan-urges-fed-to-raise-rates-says-rupee-is-not-in-panic-zone/article71399367.ece",
+        "https://www.investing.com/news/commodities-news/gold-steadies-near-4600-after-inflation-setback-as-warsh-speech-looms-4878233",
+        "https://www.investing.com/news/economy-news/dollar-flat-near-oneweek-high-as-investors-await-warshs-jackson-hole-debut-4880465",
+        "https://www.investing.com/news/economy-news/anxious-investors-hope-for-clarity-on-warshs-fed-plan-at-jackson-hole-4876622",
+        "https://www.investing.com/news/commodities-news/gold-dips-ahead-of-warshs-jackson-hole-speech-set-for-weekly-fall-4880473"
+      ],
+      "item_count": 5,
+      "coverage_boost": 1.5,
+      "id": "f628e743c2",
+      "keywords": [
+        "ahead",
+        "anxious",
+        "await",
+        "chief",
+        "clarity",
+        "clues",
+        "come",
+        "comments",
+        "debut",
+        "dips",
+        "direction",
+        "dollar",
+        "fall",
+        "fed",
+        "federal",
+        "flat",
+        "gold",
+        "high",
+        "higher",
+        "hole",
+        "hope",
+        "investors",
+        "jackson",
+        "kevin",
+        "marginally",
+        "near",
+        "one",
+        "outlook",
+        "panic",
+        "plan",
+        "policy",
+        "raghuram",
+        "raise",
+        "rajan",
+        "rate",
+        "rates",
+        "reserve",
+        "rupee",
+        "set",
+        "speech",
+        "urges",
+        "warsh",
+        "weekly",
+        "zone"
+      ],
+      "category": "general",
+      "analysis": {
+        "tldr": "When global experts talk about interest rates in America, it shifts foreign money out of India, which can make things like imported fuel and electronics slightly costlier for you.",
+        "what_happened": "Raghuram Rajan, a former head of India's central bank, advised the US Federal Reserve (America's central bank that controls global interest rates) to raise its borrowing costs to fight stubborn inflation. At the same time, global financial markets are nervously waiting for a major speech by a top US economic official, hoping to guess what America will do with its interest rates next.",
+        "analogy": "It is like the US Federal Reserve being the biggest apartment landlord in town; when they raise their rent prices, people pull their money out of smaller neighborhoods like India to invest in America instead.",
+        "why_it_matters_india": [
+          "The US Fed considers raising its interest rates, making American investments look safer and more attractive to global money.",
+          "Big foreign investors (FIIs) pull their money out of developing countries like India to chase those higher US returns.",
+          "As foreign money leaves, the demand for US dollars goes up while the demand for Indian rupees goes down.",
+          "This causes the rupee to weaken, making everything India imports from abroad—especially crude oil—more expensive to buy."
+        ],
+        "impacts": [
+          {
+            "target": "The rupee (vs the US dollar)",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "A weaker rupee (each rupee buys fewer dollars) is generally bad for everyday Indians because it makes imported goods, travel, and crude oil costlier."
+          },
+          {
+            "target": "Gold price in India",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "days",
+            "rationale": "Global gold prices often dip when US interest rates stay high because gold does not pay interest, making it less attractive than holding US cash—which is good if you are planning to buy gold soon."
+          },
+          {
+            "target": "Nifty 50 (India's main stock index)",
+            "direction": "down",
+            "probability": "Low",
+            "horizon": "weeks",
+            "rationale": "When foreign investors pull money out of Indian stocks due to rising US interest rates, local stock markets can face temporary downward pressure."
+          }
+        ],
+        "watch_next": [
+          "The final statements from the US Federal Reserve meeting about their future interest rate plans",
+          "How quickly foreign investors are pulling money out of or putting money into Indian stock markets"
+        ],
+        "confidence": "Medium",
+        "caveats": "If US inflation numbers suddenly drop on their own, the US central bank might not need to raise rates at all, keeping global markets calm.",
+        "engine": "gemini",
+        "category": "general",
+        "matched_linkage": null
+      },
+      "importance": 10.2,
+      "is_top": false
+    },
+    {
+      "headline": "India Inc revenue growth to moderate to 13-15 pc in Q2; margins to contract: Report",
+      "relevance": 6.5,
+      "items": [
+        {
+          "title": "India Inc revenue growth to moderate to 13-15 pc in Q2; margins to contract: Report",
+          "url": "https://economictimes.indiatimes.com/news/economy/indicators/india-inc-revenue-growth-to-moderate-to-13-15-pc-in-q2-margins-to-contract-report/articleshow/133566836.cms",
+          "source": "Economic Times Economy",
+          "published": "2026-08-27T11:32:04+00:00",
+          "summary": "India Inc's revenue growth is projected to contract to fifteen percent in the September quarter. Operating profit margins are expected to compress by over one percentage point. Domestic consumption sectors show better growth than export-linked ones. Below-normal monsoon may impact rural consumption and food inflation. Corporate earnings will show healthy revenue growth and constrained operating profit margins.",
+          "region": "india",
+          "origin": "rss",
+          "relevance": 6.5
+        }
+      ],
+      "sources": [
+        "Economic Times Economy"
+      ],
+      "urls": [
+        "https://economictimes.indiatimes.com/news/economy/indicators/india-inc-revenue-growth-to-moderate-to-13-15-pc-in-q2-margins-to-contract-report/articleshow/133566836.cms"
+      ],
+      "item_count": 1,
+      "coverage_boost": 0.0,
+      "id": "91dd1889b4",
+      "keywords": [
+        "compress",
+        "consumption",
+        "contract",
+        "domestic",
+        "expected",
+        "fifteen",
+        "growth",
+        "inc",
+        "margins",
+        "moderate",
+        "one",
+        "operating",
+        "percent",
+        "percentage",
+        "point",
+        "profit",
+        "projected",
+        "quarter",
+        "report",
+        "revenue",
+        "sectors",
+        "september"
+      ],
+      "category": "macro_data",
+      "analysis": {
+        "tldr": "Indian companies are seeing their sales growth slow down and profits shrink, which could mean fewer jobs, smaller salary hikes, and slower growth in the stock market.",
+        "what_happened": "Companies in India are making more money than before, but the speed of their growth is slowing down to about 13-15 percent. At the same time, their profit margins (the money left over after paying for materials and staff) are shrinking because raw materials are getting costlier and everyday shoppers are spending less money.",
+        "analogy": "It is like a neighborhood grocery shop that is selling more bags of rice than last year, but because rent and wholesale prices went up, the actual cash the owner takes home at night is smaller.",
+        "why_it_matters_india": [
+          "Everyday shoppers face high inflation (rising cost of daily goods) and are spending less money on extras like clothes or cars.",
+          "Because demand is slow, companies cannot raise prices easily, which squeezes their profits.",
+          "Lower company profits mean businesses might cut back on hiring new workers or giving big salary raises.",
+          "Disappointed big investors might pull money out of stocks, making the stock market wobble."
+        ],
+        "impacts": [
+          {
+            "target": "Nifty 50 (India's main stock index)",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "When company profits shrink, stock prices often fall because investors get worried — generally bad for everyday people who invest their savings in the share market."
+          },
+          {
+            "target": "Consumer goods company stocks like Hindustan Unilever & ITC",
+            "direction": "down",
+            "probability": "High",
+            "horizon": "days",
+            "rationale": "Slower sales growth directly hits everyday-item companies, making their stock values drop, which affects mutual funds that regular people hold."
+          },
+          {
+            "target": "India's inflation rate",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "months",
+            "rationale": "High costs for raw materials keep consumer inflation hot, meaning household budgets stay tight and groceries remain expensive."
+          }
+        ],
+        "watch_next": [
+          "Upcoming corporate earnings reports from big banks and tech firms",
+          "Festival season sales numbers to see if shoppers are opening their wallets"
+        ],
+        "confidence": "High",
+        "caveats": "If a sudden drop in global oil prices makes running factories cheaper, company profits could bounce back faster than expected.",
+        "engine": "gemini",
+        "category": "macro_data",
+        "matched_linkage": "india_cpi_high"
+      },
+      "importance": 7.7,
+      "is_top": false
+    },
+    {
+      "headline": "Fed's Hammack says 'now is the time to act' on raising interest rates",
+      "relevance": 6.0,
+      "items": [
+        {
+          "title": "Fed's Hammack says 'now is the time to act' on raising interest rates",
+          "url": "https://www.cnbc.com/2026/08/27/feds-hammack-says-now-is-the-time-to-act-on-raising-interest-rates.html",
+          "source": "CNBC Economy",
+          "published": "2026-08-27T17:31:09+00:00",
+          "summary": "She still thinks the Fed needs to take action against inflation that is straining household budgets.",
+          "region": "global",
+          "origin": "rss",
+          "relevance": 6.0
+        }
+      ],
+      "sources": [
+        "CNBC Economy"
+      ],
+      "urls": [
+        "https://www.cnbc.com/2026/08/27/feds-hammack-says-now-is-the-time-to-act-on-raising-interest-rates.html"
+      ],
+      "item_count": 1,
+      "coverage_boost": 0.0,
+      "id": "b2d8934b1e",
+      "keywords": [
+        "act",
+        "action",
+        "against",
+        "budgets",
+        "fed",
+        "hammack",
+        "household",
+        "inflation",
+        "interest",
+        "needs",
+        "now",
+        "raising",
+        "rates",
+        "she",
+        "still",
+        "straining",
+        "take",
+        "thinks",
+        "time"
+      ],
+      "category": "general",
+      "analysis": {
+        "tldr": "When the US central bank talks about raising interest rates, it makes foreign money pull out of India, which can weaken our currency and make imported goods costlier.",
+        "what_happened": "A top official at the US Federal Reserve (the US central bank that sets borrowing costs) suggested it might be time to raise interest rates again to fight persistent price rises in America. Central banks usually raise rates to slow down spending when prices are climbing too fast.",
+        "analogy": "It is like the neighborhood money lender suddenly raising his interest rates because everyone wants to borrow from him. People stop borrowing and start pulling their savings back to give it to him for better returns.",
+        "why_it_matters_india": [
+          "The US Fed hints at raising interest rates to control American inflation (rising prices of everyday goods).",
+          "Higher US interest rates make safe US investments look more attractive to big global investors.",
+          "FIIs (big foreign investors) pull their money out of developing countries like India to put it safely in the US.",
+          "This massive outflow of dollars puts downward pressure on the rupee (each rupee buys fewer dollars)."
+        ],
+        "impacts": [
+          {
+            "target": "The rupee (vs the US dollar)",
+            "direction": "down",
+            "probability": "High",
+            "horizon": "days",
+            "rationale": "As foreign investors pull money out to chase higher US returns, demand for dollars rises, making the rupee weaken — bad for everyday folks because imported items like crude oil and electronics become more expensive."
+          },
+          {
+            "target": "Nifty 50 (India's main stock index)",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "When foreign investors sell Indian shares to move money to America, local stock prices can drop, which feels unsettling for anyone watching their investments."
+          },
+          {
+            "target": "Gold price in India",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "A weaker rupee makes imported gold costlier in local currency, pushing domestic gold prices higher even if global gold stays flat — generally good if you already own gold, bad if you want to buy."
+          },
+          {
+            "target": "10-year bond yield (interest India pays to borrow)",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "Global borrowing costs rising often spill over, pushing up local bond yields (the interest rate the government pays to borrow) which can eventually nudge up loan costs for everyone."
+          }
+        ],
+        "watch_next": [
+          "Upcoming official statements from other US Federal Reserve officials to see if they agree",
+          "Daily data on whether foreign investors are pulling money out of Indian stock markets"
+        ],
+        "confidence": "Medium",
+        "caveats": "This is just one official speaking; if upcoming US economic reports show inflation cooling down quickly, the Fed might change its mind and keep rates steady.",
+        "engine": "gemini",
+        "category": "general",
+        "matched_linkage": null
+      },
+      "importance": 7.6,
+      "is_top": false
+    },
+    {
+      "headline": "In Graphics: Kitchen basket inflation is back",
+      "relevance": 5.5,
+      "items": [
+        {
+          "title": "In Graphics: Kitchen basket inflation is back",
+          "url": "https://economictimes.indiatimes.com/news/economy/indicators/in-graphics-kitchen-basket-inflation-is-back/articleshow/133577464.cms",
+          "source": "Economic Times Economy",
+          "published": "2026-08-27T19:15:18+00:00",
+          "summary": "Edible oils and eggs are also seeing higher prices. Demand for most commodities is elevated amid the onset of the festival season, even as poor monsoon rainfall and the second-order effects of the West Asia crisis continue to add pressure.",
+          "region": "india",
+          "origin": "rss",
+          "relevance": 5.5
+        }
+      ],
+      "sources": [
+        "Economic Times Economy"
+      ],
+      "urls": [
+        "https://economictimes.indiatimes.com/news/economy/indicators/in-graphics-kitchen-basket-inflation-is-back/articleshow/133577464.cms"
+      ],
+      "item_count": 1,
+      "coverage_boost": 0.0,
+      "id": "3de6cb3ac9",
+      "keywords": [
+        "also",
+        "back",
+        "basket",
+        "commodities",
+        "demand",
+        "edible",
+        "eggs",
+        "elevated",
+        "even",
+        "festival",
+        "graphics",
+        "higher",
+        "inflation",
+        "kitchen",
+        "monsoon",
+        "most",
+        "oils",
+        "onset",
+        "order",
+        "poor",
+        "prices",
+        "rainfall",
+        "season",
+        "second",
+        "seeing"
+      ],
+      "category": "commodities",
+      "analysis": {
+        "tldr": "Rising vegetable and cooking oil prices mean your monthly household grocery bill is going to pinch a little harder.",
+        "what_happened": "The cost of everyday kitchen items like tomatoes, onions, and cooking oil has started climbing up again. This happened because of bad weather hurting farm crops and sudden export restrictions or supply problems in other countries from where India buys its cooking oil.",
+        "analogy": "It is like running a household kitchen when the local vegetable vendor suddenly raises prices because bad rain ruined the crop, forcing you to cut back on snacks to pay for dal and roti.",
+        "why_it_matters_india": [
+          "Bad weather or poor harvests abroad disrupt supplies of items like cooking oil and pulses.",
+          "Because India imports more than half of its cooking oil, expensive global prices directly raise bills at our ports.",
+          "Higher prices at local vegetable markets and grocery stores immediately increase household food expenses.",
+          "When food costs shoot up, families have less leftover money to save or spend on other things like clothes or movies."
+        ],
+        "impacts": [
+          {
+            "target": "India's inflation rate",
+            "direction": "up",
+            "probability": "High",
+            "horizon": "weeks",
+            "rationale": "Higher food and cooking oil prices push the overall inflation rate (how fast general prices rise) higher, which is bad because it erodes the purchasing power of your savings."
+          },
+          {
+            "target": "Edible oil & grocery expenses",
+            "direction": "up",
+            "probability": "High",
+            "horizon": "days",
+            "rationale": "Costlier imports and local crop damage mean you pay more at checkout counters — a direct negative hit to every household budget."
+          },
+          {
+            "target": "Consumer goods stocks (FMCG companies like Hindustan Unilever)",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "months",
+            "rationale": "When raw materials like cooking oil become expensive, companies face higher production costs, which can temporarily hurt their profits and stock prices."
+          }
+        ],
+        "watch_next": [
+          "Monsoon rainfall reports and how they affect local vegetable crops",
+          "Government decisions on importing cheaper edible oils or cutting import taxes"
+        ],
+        "confidence": "High",
+        "caveats": "If the monsoon suddenly improves or global supplies recover quickly, these price spikes could cool down faster than expected.",
+        "engine": "gemini",
+        "category": "commodities",
+        "matched_linkage": "edible_oil_up"
+      },
+      "importance": 6.7,
+      "is_top": false
+    }
+  ]
+}

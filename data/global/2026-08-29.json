@@ -47,20 +47,20 @@
       "india_angle": "US rate cuts push money toward India; a US sell-off drags Nifty down with it via FII outflows. The US is the tide that moves India's boat.",
       "news": [
         {
-          "title": "Gold drops 3% as Fed's Warsh comments lift rate hike bets",
-          "url": "https://economictimes.indiatimes.com/markets/commodities/news/gold-drops-3-as-feds-warsh-comments-lift-rate-hike-bets/articleshow/133603651.cms"
+          "title": "Investors heartened by Warsh inflation talk, still uncertain about Fed action",
+          "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/investors-heartened-by-warsh-inflation-talk-still-uncertain-about-fed-action/articleshow/133603732.cms"
         },
         {
-          "title": "Wall Street Week Ahead: Jobs report, Broadcom results pose next hurdles for stock market rally",
-          "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/wall-steet-week-ahead-jobs-report-broadcom-results-pose-next-hurdles-for-stock-market-rally/articleshow/133603682.cms"
+          "title": "Fed Chairman Warsh expresses concern about inflation, advocates for 'quieter' central bank",
+          "url": "https://www.cnbc.com/2026/08/28/kevin-warsh-jackson-hole-federal-reserve-inflation.html"
         },
         {
           "title": "Fed’s preferred inflation gauge shows core prices rose 3.3% annually in July",
           "url": "https://www.cnbc.com/2026/08/26/feds-preferred-inflation-gauge-shows-core-prices-rose-3point3percent-annually-in-july.html"
         },
         {
-          "title": "Fed Chairman Warsh expresses concern about inflation, advocates for 'quieter' central bank",
-          "url": "https://www.cnbc.com/2026/08/28/kevin-warsh-jackson-hole-federal-reserve-inflation.html"
+          "title": "Warsh signals Fed may need to hike rates if above-target inflation persists",
+          "url": "https://www.investing.com/news/economy-news/will-warshs-jackson-hole-speech-be-a-course-correction-or-detour-4880496"
         }
       ]
     },
@@ -322,12 +322,7 @@
       "outlook": "Home to some of the world's best consumer-brand moats, priced slightly above its own average.",
       "verdict": "Genuinely great franchises (the luxury names have enviable pricing power) at a full-ish price. It's a back-door bet on the Chinese consumer.",
       "india_angle": "Broad European risk appetite drives global EM flows, India included.",
-      "news": [
-        {
-          "title": "Global Markets | European shares rise as French stocks rebound; markets digest Warsh speech",
-          "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-markets-european-shares-rise-as-french-stocks-rebound-markets-digest-warsh-speech/articleshow/133603603.cms"
-        }
-      ]
+      "news": []
     },
     {
       "code": "IN",
@@ -377,8 +372,12 @@
           "url": "https://economictimes.indiatimes.com/news/economy/foreign-trade/india-sees-canada-export-opening-as-us-trade-tensions-reshape-imports-report/articleshow/133591581.cms"
         },
         {
-          "title": "Tech leads D-Street bound, FPI play in focus",
-          "url": "https://economictimes.indiatimes.com/markets/stocks/news/tech-leads-d-street-bound-fpi-play-in-focus/articleshow/133603509.cms"
+          "title": "Warsh signals Fed may need to hike rates if above-target inflation persists",
+          "url": "https://www.investing.com/news/economy-news/will-warshs-jackson-hole-speech-be-a-course-correction-or-detour-4880496"
+        },
+        {
+          "title": "Today’s Gold Rate, Aug 29: Check gold rates in Delhi, Mumbai, Chennai",
+          "url": "https://www.thehindubusinessline.com/gold-rate-today/gold-price-today-in-delhi-mumbai-kolkata-chennai-bengaluru-hyderabad-pune-gold-rates-metro-cities-august-29-2026/article71403967.ece"
         }
       ]
     },
@@ -424,12 +423,7 @@
       "outlook": "Genuinely cheap, genuinely troubled. The gap between its industrial strength and its stock-market performance is the puzzle.",
       "verdict": "The classic value trap question: is it cheap, or is it cheap for good reason? Munger famously owned China — and equally famously, the risk here isn't the business, it's whether shareholders are allowed to keep the gains.",
       "india_angle": "China stimulus lifts metals (Tata Steel, Hindalco). Global 'sell expensive India, buy cheap China' rotations are a real and recurring pressure on Nifty.",
-      "news": [
-        {
-          "title": "India sees Canada export opening as US trade tensions reshape imports: Report",
-          "url": "https://economictimes.indiatimes.com/news/economy/foreign-trade/india-sees-canada-export-opening-as-us-trade-tensions-reshape-imports-report/articleshow/133591581.cms"
-        }
-      ]
+      "news": []
     },
     {
       "code": "JP",
@@ -1112,6 +1106,6 @@
   "current": {
     "mood": "mixed",
     "summary": "Money is split between crowded, expensive US tech and record-high gold — investors want growth but are hedging their bets. The thing to watch is whether it broadens toward cheaper markets.",
-    "mood_today": "mixed"
+    "mood_today": "risk-off"
   }
 }

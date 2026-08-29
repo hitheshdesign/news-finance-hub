@@ -1,7 +1,7 @@
 {
   "date": "2026-08-29",
   "date_human": "Saturday, 29 August 2026",
-  "generated_at": "2026-08-29T07:57:59+00:00",
+  "generated_at": "2026-08-29T09:13:25+00:00",
   "engine": "Gemini AI",
   "macro": [],
   "calendar": [
@@ -128,102 +128,106 @@
   ],
   "events": [
     {
-      "headline": "Gold drops 3% as Fed's Warsh comments lift rate hike bets",
-      "relevance": 14.5,
+      "headline": "Investors heartened by Warsh inflation talk, still uncertain about Fed action",
+      "relevance": 10.5,
       "items": [
         {
-          "title": "Gold drops 3% as Fed's Warsh comments lift rate hike bets",
-          "url": "https://economictimes.indiatimes.com/markets/commodities/news/gold-drops-3-as-feds-warsh-comments-lift-rate-hike-bets/articleshow/133603651.cms",
+          "title": "Investors heartened by Warsh inflation talk, still uncertain about Fed action",
+          "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/investors-heartened-by-warsh-inflation-talk-still-uncertain-about-fed-action/articleshow/133603732.cms",
           "source": "Economic Times Markets",
-          "published": "2026-08-29T04:14:54+00:00",
-          "summary": "On Friday, gold prices plummeted by more than three percent due to comments from Federal Reserve Chairman Kevin Warsh regarding inflation. As a result, traders heightened their expectations for a possible interest rate increase in September. Consequently, gold futures closed lower, retreating from their recent peaks, while a stronger dollar made gold less accessible to foreign investors.",
+          "published": "2026-08-29T04:21:39+00:00",
+          "summary": "Federal Reserve Chair Kevin Warsh made it clear that inflation control is a top priority. He suggested that to combat escalating price pressures, interest rate hikes may soon be necessary. This announcement sent the markets into a hawkish frenzy, heightening expectations for a rate increase come September. Investors remain cautious, eagerly anticipating key economic data on jobs and inflation for guidance on potential Fed actions.",
           "region": "india",
           "origin": "rss",
-          "relevance": 14.5
+          "relevance": 10.5
         }
       ],
       "sources": [
         "Economic Times Markets"
       ],
       "urls": [
-        "https://economictimes.indiatimes.com/markets/commodities/news/gold-drops-3-as-feds-warsh-comments-lift-rate-hike-bets/articleshow/133603651.cms"
+        "https://economictimes.indiatimes.com/markets/us-stocks/news/investors-heartened-by-warsh-inflation-talk-still-uncertain-about-fed-action/articleshow/133603732.cms"
       ],
       "item_count": 1,
       "coverage_boost": 0.0,
-      "id": "e4da7f2d86",
+      "id": "e06c026090",
       "keywords": [
-        "bets",
-        "chairman",
-        "comments",
-        "drops",
-        "due",
-        "expectations",
+        "about",
+        "action",
+        "chair",
+        "clear",
+        "combat",
+        "control",
+        "escalating",
         "fed",
         "federal",
-        "friday",
-        "gold",
-        "heightened",
-        "hike",
+        "heartened",
+        "hikes",
         "inflation",
+        "interest",
+        "investors",
         "kevin",
-        "lift",
-        "percent",
-        "plummeted",
-        "prices",
+        "made",
+        "may",
+        "necessary",
+        "pressures",
+        "price",
+        "priority",
         "rate",
-        "regarding",
         "reserve",
-        "result",
-        "their",
-        "three",
-        "traders",
+        "soon",
+        "still",
+        "suggested",
+        "talk",
+        "top",
+        "uncertain",
         "warsh"
       ],
       "category": "monetary_policy",
       "analysis": {
-        "tldr": "Because big US financial leaders hinted at keeping interest rates high, global investors are ditching gold for cash, making the precious metal cheaper in your local market too.",
-        "what_happened": "Global gold prices fell by 3 percent. This happened because a prominent US financial official named Warsh suggested the US central bank might keep interest rates high or even raise them further to fight inflation (rising prices). When official interest rates go up, safe cash starts paying better returns, so people sell off gold, which pays no regular income.",
-        "analogy": "It is like a local bank suddenly offering a very high interest rate on fixed deposits. People holding gold jewelry or coins in their locker suddenly think, 'I'd rather sell this metal and put the cash in the bank to earn interest,' causing gold prices to drop as everyone tries to sell.",
+        "tldr": "When people in America talk about keeping a tight grip on inflation, global money markets wobble, which can make things like fuel and imported goods slightly pricier in India.",
+        "what_happened": "Investors in the US were cheered by comments from Kevin Warsh, a candidate linked to financial policy, talking about controlling inflation (rising everyday prices). However, people are still confused about what the Fed (the US Federal Reserve, which acts like the central bank of America) will do next with interest rates.",
+        "analogy": "It is like waiting for the head of your apartment society to announce whether maintenance charges are going up or down—until they finally speak, everyone holds onto their wallets tightly.",
         "why_it_matters_india": [
-          "The US central bank hints at keeping interest rates high.",
-          "Global investors pull their money out of gold and shift it into US dollars and US government bonds.",
-          "Global gold prices drop sharply in international markets.",
-          "Because India imports most of its gold, local gold prices in Indian shops and markets drop by a similar margin."
+          "US inflation talks change what investors expect US interest rates to do",
+          "If US rates stay high, global investors prefer keeping their money safely in America instead of emerging markets",
+          "Foreign investors pull cash out of Indian stocks, putting pressure on Indian share prices",
+          "As dollars leave India, the local currency faces downward pressure against the US dollar"
         ],
         "impacts": [
-          {
-            "target": "Gold price in India",
-            "direction": "down",
-            "probability": "High",
-            "horizon": "days",
-            "rationale": "Good news if you are planning to buy wedding jewelry soon, as the precious metal becomes cheaper."
-          },
           {
             "target": "The rupee (vs the US dollar)",
             "direction": "down",
             "probability": "Medium",
             "horizon": "weeks",
-            "rationale": "Higher US interest rates attract global money back to America, weakening the rupee (each rupee buys fewer dollars), which makes imported items like crude oil costlier for India."
+            "rationale": "If foreign money leaves India for the US, our currency weakens—making things we buy from abroad, like crude oil, more expensive for us."
           },
           {
-            "target": "10-year bond yield (interest India pays to borrow)",
+            "target": "Nifty 50 (India's main stock index)",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "days",
+            "rationale": "When big foreign investors pull money out, Indian stock market prices can dip, which might worry everyday mutual fund investors."
+          },
+          {
+            "target": "Gold price in India",
             "direction": "up",
             "probability": "Medium",
             "horizon": "weeks",
-            "rationale": "Global borrowing costs rise, pushing up local yields, which can eventually mean slightly higher interest rates on your loans."
+            "rationale": "Global uncertainty makes people buy gold as a safe hideout, pushing up prices for weddings and savings in India."
           }
         ],
         "watch_next": [
-          "Future speeches by US central bank officials for hints on interest rate cuts or hikes",
-          "Upcoming inflation data from the US"
+          "Official statements from US Federal Reserve meetings",
+          "Daily trading data showing whether foreign investors are buying or selling Indian shares"
         ],
-        "confidence": "High",
-        "caveats": "If a sudden geopolitical crisis or war breaks out somewhere in the world, people will rush back to buy gold for safety, instantly reversing this price drop.",
+        "confidence": "Medium",
+        "caveats": "If new economic data from America shows inflation is cooling faster than expected, this market mood could flip overnight.",
         "engine": "gemini",
         "category": "monetary_policy",
         "matched_linkage": "fed_hawkish"
       },
-      "importance": 15.7,
+      "importance": 11.7,
       "is_top": true
     },
     {
@@ -286,14 +290,14 @@
       ],
       "category": "geopolitics",
       "analysis": {
-        "tldr": "Petrol and diesel prices might get some relief, and the cost of bringing goods into India could drop.",
-        "what_happened": "Crude oil (raw petroleum pumped from the ground) prices fell for the first time in nearly a month. This happened because traders stopped worrying as much about supply getting cut off by wars in the Middle East, and realized there is actually plenty of oil to go around right now.",
-        "analogy": "It is like buying vegetables: when worries about bad weather fade and trucks start arriving smoothly again, the price of tomatoes in your local market drops.",
+        "tldr": "Petrol and cooking gas prices might become easier on your pocket because global oil prices have finally dipped after rising for weeks.",
+        "what_happened": "Crude oil (raw petroleum pumped from the earth) prices went down over the past week for the first time in nearly a month. This happened because traders stopped worrying as much about supply getting cut off, and realized there is still plenty of oil to go around globally.",
+        "analogy": "It is like a vegetable market where prices spiked because everyone feared bad weather would ruin the crops, but when the weather stayed fine, vegetable vendors quietly lowered their prices back down.",
         "why_it_matters_india": [
-          "Global crude oil prices fall because fears of sudden supply shortages fade.",
-          "India imports (buys from other countries) most of its oil, so cheaper crude means less money leaves the country.",
-          "The Indian rupee (our currency) gets a little breathing room because we need fewer dollars to buy oil.",
-          "Lower crude costs reduce manufacturing and transport expenses, which helps keep inflation (general rise in prices) in check."
+          "India imports (buys from other countries) over 80 percent of its crude oil needs.",
+          "When global oil prices fall, it costs less to bring that oil into the country.",
+          "Cheaper oil means the government spends fewer dollars to buy it, which helps keep the rupee (our national currency) stable.",
+          "Lower oil import costs eventually reduce the pressure on inflation (general rise in prices of everyday goods)."
         ],
         "impacts": [
           {
@@ -301,41 +305,34 @@
             "direction": "down",
             "probability": "Medium",
             "horizon": "weeks",
-            "rationale": "Cheaper raw oil lowers the cost for companies making fuel, which is generally good for household budgets if passed on."
+            "rationale": "Lower crude costs give oil companies breathing room, which is good for everyday commuters and transporters if savings are passed on."
           },
           {
             "target": "India's inflation rate",
             "direction": "down",
             "probability": "Medium",
             "horizon": "months",
-            "rationale": "When transport and energy costs drop, everyday goods and services become cheaper to make and move, which is good for consumers."
+            "rationale": "Cheaper energy keeps transport and manufacturing costs low, meaning everyday goods at the grocery store don't get as expensive—good for household budgets."
           },
           {
             "target": "The rupee (vs the US dollar)",
             "direction": "up",
-            "probability": "Medium",
-            "horizon": "weeks",
-            "rationale": "India spends fewer dollars buying oil, which helps strengthen the rupee, making foreign travel and imported gadgets slightly cheaper."
-          },
-          {
-            "target": "Aviation turbine fuel (jet fuel) prices",
-            "direction": "down",
-            "probability": "High",
+            "probability": "Low",
             "horizon": "days",
-            "rationale": "Jet fuel is directly made from crude oil, so cheaper oil means lower operating costs for airlines, which is good for travel."
+            "rationale": "India needs fewer dollars to pay for imported oil, which helps the rupee hold its ground against the dollar—good for keeping imported electronics and travel affordable."
           }
         ],
         "watch_next": [
-          "Official statements from oil-producing countries about whether they will pump more or less oil",
-          "Weekly reports on how much oil is stored in the US"
+          "Updates on Middle-East tensions which can quickly push oil prices back up",
+          "Decisions by OPEC (an international group of oil-producing countries) on whether to pump more or less oil"
         ],
-        "confidence": "High",
-        "caveats": "If a sudden new conflict flares up in the Middle East, oil prices could shoot right back up.",
+        "confidence": "Medium",
+        "caveats": "A sudden flare-up in global conflicts could reverse this price drop overnight.",
         "engine": "gemini",
         "category": "geopolitics",
         "matched_linkage": "mideast_escalation"
       },
-      "importance": 11.1,
+      "importance": 10.7,
       "is_top": true
     },
     {
@@ -391,14 +388,14 @@
       ],
       "category": "trade",
       "analysis": {
-        "tldr": "When big countries like the US put heavy taxes on imported goods, global companies start buying more from India, which brings in business for local factories and exporters.",
-        "what_happened": "Trade tensions and new taxes in the US are forcing global companies to find suppliers outside of traditional trade partners like China. This shift creates a fresh opportunity for Indian manufacturers and exporters to step in and sell their goods abroad.",
-        "analogy": "It is like a local grocery shop getting new customers because the big supermarket down the street suddenly started fighting with its suppliers and raised its prices.",
+        "tldr": "Trade fights between bigger countries can open new doors for Indian factories to sell more goods abroad, creating more local jobs.",
+        "what_happened": "When countries like the US put heavy taxes on imports from rivals, global supply chains get shaken up. Because of this reshuffling, global buyers are looking for alternative places to buy products, creating a fresh chance for Indian businesses to step in.",
+        "analogy": "It is like a local grocery shop getting new customers because the supermarket across the street got into a fight with its main suppliers and ran out of stock.",
         "why_it_matters_india": [
-          "The US and other big economies put heavy taxes or restrictions on certain imports.",
-          "Global buyers panic and look for safer, alternative places to buy their goods, following a strategy called 'China+1' (finding suppliers outside China).",
-          "India emerges as a reliable alternative because of its large manufacturing base.",
-          "Indian factories receive more export orders, increasing their revenues and creating more local jobs."
+          "Global trade tensions rise between major economic powers -> US and other nations rethink who they buy from",
+          "Buyers look for reliable alternatives -> Indian factories and exporters get a chance to fill the gap left behind",
+          "More export orders arrive in India -> Factories make more goods and hire more local workers",
+          "Higher business earnings -> Boosts confidence in Indian manufacturing companies"
         ],
         "impacts": [
           {
@@ -406,99 +403,87 @@
             "direction": "up",
             "probability": "Medium",
             "horizon": "months",
-            "rationale": "Higher profits for Indian manufacturing and export companies push stock prices up, which is good for investors."
+            "rationale": "Higher profits for manufacturing and exporting companies can lift the overall stock market, which is generally good for investors."
           },
           {
             "target": "The rupee (vs the US dollar)",
             "direction": "up",
             "probability": "Medium",
             "horizon": "months",
-            "rationale": "More exports mean more foreign money flowing into India, strengthening our currency (each rupee buys more dollars) — generally good for lowering import costs."
-          },
-          {
-            "target": "Manufacturing & Export stocks (like engineering and textiles)",
-            "direction": "up",
-            "probability": "High",
-            "horizon": "weeks",
-            "rationale": "Direct business boom for these specific sectors as foreign buyers shift their orders to Indian firms."
+            "rationale": "More dollars coming into India from increased exports strengthens the rupee (each rupee buys more dollars), making foreign goods slightly cheaper."
           }
         ],
         "watch_next": [
-          "New trade agreements or announcements between India and Western countries",
-          "Quarterly export earnings reports from Indian manufacturing and textile companies"
+          "New trade deals or tax announcements between India and Western nations",
+          "Monthly export data released by the Indian government"
         ],
         "confidence": "Medium",
-        "caveats": "If global demand drops overall due to a recession, even countries looking for alternatives might buy less.",
+        "caveats": "If global demand slows down altogether due to high inflation, even open doors won't lead to more sales.",
         "engine": "gemini",
         "category": "trade",
         "matched_linkage": "us_tariffs_tradewar"
       },
-      "importance": 8.7,
+      "importance": 8.3,
       "is_top": true
     },
     {
-      "headline": "Wall Street Week Ahead: Jobs report, Broadcom results pose next hurdles for stock market rally",
-      "relevance": 6.5,
+      "headline": "Fed Chairman Warsh expresses concern about inflation, advocates for 'quieter' central bank",
+      "relevance": 4.0,
       "items": [
         {
-          "title": "Wall Street Week Ahead: Jobs report, Broadcom results pose next hurdles for stock market rally",
-          "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/wall-steet-week-ahead-jobs-report-broadcom-results-pose-next-hurdles-for-stock-market-rally/articleshow/133603682.cms",
-          "source": "Economic Times Markets",
-          "published": "2026-08-29T04:17:45+00:00",
-          "summary": "In the coming week, the U.S. jobs data will be a focal point for investors, potentially impacting the Federal Reserve's interest rate strategies. Broadcom's quarterly results are anticipated right after Nvidia's stellar performance. The sustained rise in corporate profits is driving a bullish phase in U.S. equities, with optimism fueled by robust activities in the manufacturing and services sectors.",
-          "region": "india",
+          "title": "Fed Chairman Warsh expresses concern about inflation, advocates for 'quieter' central bank",
+          "url": "https://www.cnbc.com/2026/08/28/kevin-warsh-jackson-hole-federal-reserve-inflation.html",
+          "source": "CNBC Economy",
+          "published": "2026-08-28T16:11:51+00:00",
+          "summary": "He used the speech to outline his philosophy on policymaking while carefully sidestepping any signals",
+          "region": "global",
           "origin": "rss",
-          "relevance": 6.5
+          "relevance": 4.0
         }
       ],
       "sources": [
-        "Economic Times Markets"
+        "CNBC Economy"
       ],
       "urls": [
-        "https://economictimes.indiatimes.com/markets/us-stocks/news/wall-steet-week-ahead-jobs-report-broadcom-results-pose-next-hurdles-for-stock-market-rally/articleshow/133603682.cms"
+        "https://www.cnbc.com/2026/08/28/kevin-warsh-jackson-hole-federal-reserve-inflation.html"
       ],
       "item_count": 1,
       "coverage_boost": 0.0,
-      "id": "f05ec01d6c",
+      "id": "6137b7f819",
       "keywords": [
-        "ahead",
-        "anticipated",
-        "broadcom",
-        "coming",
-        "data",
-        "federal",
-        "focal",
-        "hurdles",
-        "impacting",
-        "interest",
-        "investors",
-        "jobs",
-        "next",
-        "point",
-        "pose",
-        "potentially",
-        "quarterly",
-        "rally",
-        "rate",
-        "report",
-        "reserve",
-        "results",
-        "right",
-        "stock",
-        "strategies",
-        "street",
-        "wall"
+        "about",
+        "advocates",
+        "any",
+        "bank",
+        "carefully",
+        "central",
+        "chairman",
+        "concern",
+        "expresses",
+        "fed",
+        "his",
+        "inflation",
+        "outline",
+        "philosophy",
+        "policymaking",
+        "quieter",
+        "sidestepping",
+        "signals",
+        "speech",
+        "used",
+        "warsh",
+        "while"
       ],
-      "category": "macro_data",
+      "category": "general",
       "analysis": {
-        "tldr": "Strong US job growth could keep US interest rates high for longer, making foreign investors pull money out of India and weakening the rupee.",
-        "what_happened": "The US is about to release its monthly jobs report, which shows how many people got new jobs. If US companies hired way more workers than expected, the US economy is running very hot, which usually pushes the US central bank (the Federal Reserve) to keep interest rates high to stop prices from rising too fast.",
-        "analogy": "It is like a local restaurant that is so crowded it can afford to raise its prices because everyone still wants to eat there.",
+        "tldr": "If the US central bank keeps interest rates high to fight inflation, it could make borrowing costlier globally and put pressure on the Indian rupee.",
+        "what_happened": "The head of the US Federal Reserve (the US central bank that manages American money and interest rates) warned that inflation (rising prices) is still a worry. To fix this, he wants the bank to speak less and focus strictly on keeping price hikes under control, which usually means keeping interest rates higher for longer to slow down the economy.",
+        "analogy": "It is like a strict parent slowing down their kids' pocket money because they are spending too fast and causing shop prices to go up. Everyone else has to tighten their budgets too.",
         "why_it_matters_india": [
-          "US companies add more jobs than expected, meaning the US economy is booming",
-          "A booming US economy pushes the US central bank to keep interest rates high",
-          "Global investors take their money out of developing countries like India to earn those higher US returns",
-          "FIIs (big foreign investors) sell Indian stocks, reducing money flowing into our markets"
+          "The US central bank signals it wants to keep interest rates high to fight inflation.",
+          "Global investors demand higher interest to keep their money in safer places like the US.",
+          "Big foreign investors (FIIs) pull some money out of developing countries like India to put it in the US.",
+          "This sudden outflow of money makes the rupee weaken (each rupee buys fewer dollars), making imported items like crude oil costlier for India."
         ],
         "impacts": [
           {
@@ -506,235 +491,41 @@
             "direction": "down",
             "probability": "High",
             "horizon": "weeks",
-            "rationale": "When foreign investors pull money out of India, they convert rupees back to dollars, making the rupee weaken — which makes imported items like crude oil more expensive for us."
-          },
-          {
-            "target": "Nifty 50 (India's main stock index)",
-            "direction": "down",
-            "probability": "Medium",
-            "horizon": "days",
-            "rationale": "Selling by big foreign investors tends to pull down major Indian stock prices, which can temporarily reduce the value of your mutual funds."
+            "rationale": "When US interest rates stay high, foreign money flows back to America, which weakens the rupee — generally bad for Indians because imported goods like petrol and electronics become more expensive."
           },
           {
             "target": "10-year bond yield (interest India pays to borrow)",
             "direction": "up",
             "probability": "Medium",
             "horizon": "weeks",
-            "rationale": "When US interest rates stay high, Indian bond yields often edge up to keep investors interested, which can eventually make loans a bit costlier for everyone."
-          }
-        ],
-        "watch_next": [
-          "The actual US jobs numbers coming out this week",
-          "Daily trading data showing whether big foreign investors are buying or selling Indian shares"
-        ],
-        "confidence": "High",
-        "caveats": "If the US jobs report turns out much weaker than expected, global markets could quickly flip and start celebrating lower US interest rates instead.",
-        "engine": "gemini",
-        "category": "macro_data",
-        "matched_linkage": "us_jobs_strong"
-      },
-      "importance": 7.7,
-      "is_top": false
-    },
-    {
-      "headline": "Global Markets | European shares rise as French stocks rebound; markets digest Warsh speech",
-      "relevance": 6.5,
-      "items": [
-        {
-          "title": "Global Markets | European shares rise as French stocks rebound; markets digest Warsh speech",
-          "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-markets-european-shares-rise-as-french-stocks-rebound-markets-digest-warsh-speech/articleshow/133603603.cms",
-          "source": "Economic Times Markets",
-          "published": "2026-08-29T04:11:13+00:00",
-          "summary": "European stock markets experienced a slight uptick this week, buoyed by a notable recovery in French equities. Investors keenly scrutinized remarks from Federal Reserve Chair Kevin Warsh for insights into future monetary policies. With a downward revision in French GDP growth, concerns loom over the economy, prompting traders to adjust expectations for European Central Bank interest rate shifts. Positive earnings reports from various companies also contributed to stock value increases.",
-          "region": "india",
-          "origin": "rss",
-          "relevance": 6.5
-        }
-      ],
-      "sources": [
-        "Economic Times Markets"
-      ],
-      "urls": [
-        "https://economictimes.indiatimes.com/markets/us-stocks/news/global-markets-european-shares-rise-as-french-stocks-rebound-markets-digest-warsh-speech/articleshow/133603603.cms"
-      ],
-      "item_count": 1,
-      "coverage_boost": 0.0,
-      "id": "e888faa76a",
-      "keywords": [
-        "buoyed",
-        "chair",
-        "digest",
-        "equities",
-        "european",
-        "experienced",
-        "federal",
-        "french",
-        "global",
-        "insights",
-        "investors",
-        "keenly",
-        "kevin",
-        "notable",
-        "rebound",
-        "recovery",
-        "remarks",
-        "reserve",
-        "rise",
-        "scrutinized",
-        "shares",
-        "slight",
-        "speech",
-        "stock",
-        "stocks",
-        "uptick",
-        "warsh"
-      ],
-      "category": "general",
-      "analysis": {
-        "tldr": "Global stock markets are cheering up after a political scare in France calmed down and a prominent American financial leader gave comforting speeches, which usually keeps money flowing into Indian stocks too.",
-        "what_happened": "European stock markets went up because French shares bounced back after a scary political drop, and global investors are carefully listening to speeches by Kevin Warsh (a former US financial official) about where interest rates are heading. Markets rose because investors feel relieved that things in Europe are less messy than feared and that future money rules in the US might not be too harsh.",
-        "analogy": "It is like a group of apartment residents who panic when they hear a loud noise outside, but once they look out the window and see it is just a neighbor moving furniture, everyone relaxes and goes back to drinking tea.",
-        "why_it_matters_india": [
-          "Big global investors feel safer when European and US markets are calm.",
-          "When these big investors feel safe, they pull money out of piggy banks in the West and invest some of it in Indian shares.",
-          "This extra foreign money flowing in pushes Indian share prices higher.",
-          "A stable global mood also helps keep the Indian rupee steady against the US dollar."
-        ],
-        "impacts": [
-          {
-            "target": "Nifty 50 (India's main stock index)",
-            "direction": "up",
-            "probability": "Medium",
-            "horizon": "days",
-            "rationale": "When global markets rise and feel relaxed, foreign investors are more willing to buy Indian shares, which is generally good for everyday investors in India."
-          },
-          {
-            "target": "The rupee (vs the US dollar)",
-            "direction": "up",
-            "probability": "Medium",
-            "horizon": "days",
-            "rationale": "A calm global market means fewer people rush to buy safe US dollars, helping the Indian rupee hold its ground — making imported items like crude oil slightly cheaper for India."
+            "rationale": "Global borrowing costs rise when the US keeps rates high, which pushes local Indian interest rates up slightly — meaning home and car loans can become a bit costlier."
           },
           {
             "target": "Gold price in India",
             "direction": "down",
-            "probability": "Low",
+            "probability": "Medium",
             "horizon": "days",
-            "rationale": "When investors feel happy and safe about the stock market, they stop rushing to buy safe-gold, which can sometimes cause gold prices to dip slightly — good news if you are planning to buy jewelry."
-          }
-        ],
-        "watch_next": [
-          "More speeches or news about interest rates from the US Federal Reserve (the US central bank)",
-          "Updates on political news and elections in European countries like France"
-        ],
-        "confidence": "Medium",
-        "caveats": "Global moods change very fast, and a single unexpected piece of political or economic news can reverse these stock market gains overnight.",
-        "engine": "gemini",
-        "category": "general",
-        "matched_linkage": null
-      },
-      "importance": 7.7,
-      "is_top": false
-    },
-    {
-      "headline": "Tech leads D-Street bound, FPI play in focus",
-      "relevance": 5.5,
-      "items": [
-        {
-          "title": "Tech leads D-Street bound, FPI play in focus",
-          "url": "https://economictimes.indiatimes.com/markets/stocks/news/tech-leads-d-street-bound-fpi-play-in-focus/articleshow/133603509.cms",
-          "source": "Economic Times Markets",
-          "published": "2026-08-29T04:07:46+00:00",
-          "summary": "On Friday, Indian equities bounced back, driven predominantly by a surge in technology stocks. Investors showed renewed interest in undervalued IT shares, aided by a decline in crude oil prices. After a prolonged period of selling, foreign investors reversed their trend, becoming net buyers in July and August. Broader market indices also benefited from this trend, as mid and small-cap stocks appreciated.",
-          "region": "india",
-          "origin": "rss",
-          "relevance": 5.5
-        }
-      ],
-      "sources": [
-        "Economic Times Markets"
-      ],
-      "urls": [
-        "https://economictimes.indiatimes.com/markets/stocks/news/tech-leads-d-street-bound-fpi-play-in-focus/articleshow/133603509.cms"
-      ],
-      "item_count": 1,
-      "coverage_boost": 0.0,
-      "id": "615745ddc0",
-      "keywords": [
-        "aided",
-        "back",
-        "bounced",
-        "bound",
-        "crude",
-        "decline",
-        "driven",
-        "equities",
-        "focus",
-        "fpi",
-        "friday",
-        "indian",
-        "interest",
-        "investors",
-        "leads",
-        "oil",
-        "play",
-        "predominantly",
-        "prices",
-        "renewed",
-        "shares",
-        "showed",
-        "stocks",
-        "street",
-        "surge",
-        "tech",
-        "technology",
-        "undervalued"
-      ],
-      "category": "general",
-      "analysis": {
-        "tldr": "When big foreign investors pump money into Indian technology shares, it pushes up your stock investments and gives the rupee a bit more muscle.",
-        "what_happened": "Technology stocks on Dalal Street (India's main stock market hub) led a strong market rally today. This happened because FPIs (big foreign investors from overseas) started pouring fresh money back into Indian tech companies, expecting steady earnings and a stable economic environment.",
-        "analogy": "It is like a group of wealthy relatives suddenly deciding to invest big money in your local family bakery because they trust it will grow, which immediately makes the bakery's shares worth more.",
-        "why_it_matters_india": [
-          "Foreign investors decide to put money into Indian stock markets",
-          "They heavily buy shares of top technology companies",
-          "High demand pushes tech share prices and overall market indexes higher",
-          "More foreign money entering India strengthens the rupee (each rupee buys fewer dollars)"
-        ],
-        "impacts": [
+            "rationale": "High US interest rates make the US dollar stronger, which usually dampens the global price of gold — a welcome relief for Indian wedding shoppers if local prices dip."
+          },
           {
             "target": "Nifty 50 (India's main stock index)",
-            "direction": "up",
-            "probability": "High",
-            "horizon": "days",
-            "rationale": "More money coming into big companies pushes the overall market index up — good news if you own mutual funds or stocks."
-          },
-          {
-            "target": "IT stocks like TCS & Infosys",
-            "direction": "up",
-            "probability": "High",
-            "horizon": "days",
-            "rationale": "Foreign investors are specifically buying tech shares, making these company prices rise."
-          },
-          {
-            "target": "The rupee (vs the US dollar)",
-            "direction": "up",
+            "direction": "down",
             "probability": "Medium",
             "horizon": "weeks",
-            "rationale": "When foreign investors bring money into India, they must convert dollars to rupees, which strengthens our currency and makes imported goods like crude oil slightly cheaper."
+            "rationale": "When foreign investors pull money out of Indian markets to chase higher US returns, local stock prices can face temporary downward pressure."
           }
         ],
         "watch_next": [
-          "Whether foreign investors continue buying Indian stocks for the rest of the week",
-          "Upcoming earnings reports from major US technology clients"
+          "Upcoming US inflation data reports to see if prices are actually cooling down",
+          "Statements from the Reserve Bank of India (RBI - India's central bank) on how they plan to handle local interest rates"
         ],
-        "confidence": "High",
-        "caveats": "If global news turns negative, foreign investors can pull their money out just as quickly as they put it in.",
+        "confidence": "Medium",
+        "caveats": "If upcoming US job and business reports suddenly turn very weak, the US central bank might panic and cut interest rates anyway, changing the game completely.",
         "engine": "gemini",
         "category": "general",
         "matched_linkage": null
       },
-      "importance": 6.7,
+      "importance": 5.6,
       "is_top": false
     },
     {
@@ -790,14 +581,14 @@
       ],
       "category": "general",
       "analysis": {
-        "tldr": "US inflation is cooling down, which means the US central bank will likely lower interest rates soon, making global money cheaper and pushing foreign investors toward Indian markets.",
-        "what_happened": "America's preferred inflation gauge (a tool to track how fast prices are rising) showed that yearly price increases slowed down to 3.3% in July. This happened because supply chain issues from past years have finally settled down and people are spending a bit more carefully, causing price hikes to lose steam.",
-        "analogy": "It is like a car that was speeding down the highway; it is not stopping, but the driver has finally taken their foot off the gas pedal and the car is slowing down to a safer speed.",
+        "tldr": "US inflation is cooling down, which means big global banks will likely lower borrowing costs soon, making it cheaper for companies and governments to get money.",
+        "what_happened": "Prices in America rose by 3.3% over the past year, which is a slightly slower pace than before. This happened because consumers and businesses are finally spending a bit less as the high cost of living forces them to slow down, easing the pressure on prices.",
+        "analogy": "It is like a car that was speeding too fast; the driver has finally taken their foot slightly off the accelerator, so the speed is still going up, but much more slowly.",
         "why_it_matters_india": [
-          "US inflation cools down -> US Federal Reserve (America's central bank) feels confident that price rises are under control",
-          "US Fed plans to cut interest rates -> Global investors look for better returns outside the US because American safe investments pay lower interest",
-          "Foreign money flows into India -> FIIs (big foreign investors) buy Indian stocks and bonds in search of higher growth",
-          "Demand for Indian assets rises -> The rupee strengthens (each rupee buys more dollars) and local financial markets get a boost"
+          "US inflation slows down -> US Federal Reserve (the US central bank) feels safe to cut interest rates",
+          "US interest rates fall -> Global investors look outside the US for better returns",
+          "Investors bring money to India -> FIIs (big foreign investors) buy Indian stocks and bonds",
+          "Foreign money flows in -> The rupee (each rupee buys fewer dollars) strengthens against the dollar and bond yields drop"
         ],
         "impacts": [
           {
@@ -805,36 +596,36 @@
             "direction": "up",
             "probability": "High",
             "horizon": "weeks",
-            "rationale": "A stronger rupee is good because it makes imported goods like crude oil slightly cheaper for India, helping keep everyday inflation down."
+            "rationale": "As foreign money flows into India seeking better returns, the demand for Indian rupees goes up, which is good because it makes imported goods like crude oil slightly cheaper."
+          },
+          {
+            "target": "10-year bond yield (interest India pays to borrow)",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "days",
+            "rationale": "Global interest rates dropping usually pulls local bond yields down too, which is generally good for everyday people because it means cheaper loans for banks and consumers."
+          },
+          {
+            "target": "Gold price in India",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "When US inflation cools, the US dollar and global markets often stabilize, reducing the rush to safety which can cause gold prices to dip slightly—good news for buyers."
           },
           {
             "target": "Nifty 50 (India's main stock index)",
             "direction": "up",
             "probability": "Medium",
             "horizon": "weeks",
-            "rationale": "When global investors bring money into India, stock prices generally rise, which is good for everyday investors holding mutual funds."
-          },
-          {
-            "target": "10-year bond yield (interest India pays to borrow)",
-            "direction": "down",
-            "probability": "Medium",
-            "horizon": "weeks",
-            "rationale": "Lower yields mean the government and companies can borrow money cheaper, which eventually trickles down to cheaper home and car loans for regular people."
-          },
-          {
-            "target": "Gold price in India",
-            "direction": "down",
-            "probability": "Low",
-            "horizon": "days",
-            "rationale": "If global markets feel safer and US interest rates drop, gold loses a bit of its shine as a panic asset, making it slightly cheaper for local buyers."
+            "rationale": "Lower US interest rates mean global money is cheaper and more likely to flow into emerging markets like India, pushing local stocks up—generally good for investors."
           }
         ],
         "watch_next": [
-          "Upcoming US jobs reports to see if America's economy is staying healthy",
-          "Statements from US Federal Reserve officials about their exact timeline for cutting interest rates"
+          "Upcoming speeches from US central bank officials about when interest rate cuts will start",
+          "Monthly employment and job numbers coming out of the US"
         ],
         "confidence": "High",
-        "caveats": "If a sudden global shock like a new supply crisis or conflict breaks out, US prices could shoot back up and change everything.",
+        "caveats": "If a sudden global crisis happens, oil prices could spike again and push inflation back up, changing the entire picture.",
         "engine": "gemini",
         "category": "general",
         "matched_linkage": null
@@ -843,63 +634,52 @@
       "is_top": false
     },
     {
-      "headline": "Fed Chairman Warsh expresses concern about inflation, advocates for 'quieter' central bank",
+      "headline": "Warsh signals Fed may need to hike rates if above-target inflation persists",
       "relevance": 4.0,
       "items": [
         {
-          "title": "Fed Chairman Warsh expresses concern about inflation, advocates for 'quieter' central bank",
-          "url": "https://www.cnbc.com/2026/08/28/kevin-warsh-jackson-hole-federal-reserve-inflation.html",
-          "source": "CNBC Economy",
-          "published": "2026-08-28T16:11:51+00:00",
-          "summary": "He used the speech to outline his philosophy on policymaking while carefully sidestepping any signals",
+          "title": "Warsh signals Fed may need to hike rates if above-target inflation persists",
+          "url": "https://www.investing.com/news/economy-news/will-warshs-jackson-hole-speech-be-a-course-correction-or-detour-4880496",
+          "source": "Investing.com Economy",
+          "published": "2026-08-29T05:18:55+00:00",
+          "summary": "",
           "region": "global",
           "origin": "rss",
           "relevance": 4.0
         }
       ],
       "sources": [
-        "CNBC Economy"
+        "Investing.com Economy"
       ],
       "urls": [
-        "https://www.cnbc.com/2026/08/28/kevin-warsh-jackson-hole-federal-reserve-inflation.html"
+        "https://www.investing.com/news/economy-news/will-warshs-jackson-hole-speech-be-a-course-correction-or-detour-4880496"
       ],
       "item_count": 1,
       "coverage_boost": 0.0,
-      "id": "6137b7f819",
+      "id": "1dc2cdc326",
       "keywords": [
-        "about",
-        "advocates",
-        "any",
-        "bank",
-        "carefully",
-        "central",
-        "chairman",
-        "concern",
-        "expresses",
+        "above",
         "fed",
-        "his",
+        "hike",
         "inflation",
-        "outline",
-        "philosophy",
-        "policymaking",
-        "quieter",
-        "sidestepping",
+        "may",
+        "need",
+        "persists",
+        "rates",
         "signals",
-        "speech",
-        "used",
-        "warsh",
-        "while"
+        "target",
+        "warsh"
       ],
       "category": "general",
       "analysis": {
-        "tldr": "If the US central bank keeps interest rates high to fight inflation, it makes borrowing costlier globally, which can pull money out of India and weaken our rupee.",
-        "what_happened": "The head of the US Federal Reserve (America's central bank that controls US money supply) warned that price rises (inflation) are still a worry and suggested the bank should speak less and focus strictly on keeping prices stable. This cautious stance means the US might not rush to lower its interest rates, causing global markets to rethink how easy money will be.",
-        "analogy": "It is like the head of your apartment building's committee announcing that maintenance fees might stay high because prices of everything are going up, so everyone in the building needs to tighten their belts.",
+        "tldr": "If the US raises interest rates, money will rush out of India, making your loans costlier and the rupee weaker.",
+        "what_happened": "Kevin Warsh, a top economic voice linked to the US central bank (the Fed [the US body that decides money supply and interest rates]), warned that US interest rates might need to go up again because prices in America are still rising too fast. When US interest rates go up, global investors prefer to keep their money safely in America rather than in developing countries like India.",
+        "analogy": "It is like a local neighbourhood shop suddenly offering a much higher interest rate on your savings than the bank does; naturally, everyone runs to put their money in that shop instead.",
         "why_it_matters_india": [
-          "The US Fed signals it wants to keep interest rates high to control US inflation ->",
-          "Global investors find safe US government bonds more attractive than investing in developing countries like India ->",
-          "FIIs (big foreign investors) pull their money out of the Indian stock market to chase higher returns in America ->",
-          "This sudden outflow of foreign money creates less demand for our currency, causing the rupee to drop ->"
+          "US interest rates go up -> big foreign investors pull their money out of Indian stock markets to earn safer returns in America",
+          "FIIs (big foreign investors) sell Indian stocks -> they convert their rupees back into US dollars",
+          "Demand for US dollars shoots up in India -> the rupee weakens (each rupee buys fewer dollars)",
+          "A weaker rupee makes imported items like crude oil expensive -> petrol, diesel, and overall inflation (general rise in prices) go up in India"
         ],
         "impacts": [
           {
@@ -907,34 +687,245 @@
             "direction": "down",
             "probability": "High",
             "horizon": "weeks",
-            "rationale": "When foreign investors pull money out of India back to the US, our currency gets weaker, making imported items like crude oil more expensive for everyday Indians."
-          },
-          {
-            "target": "10-year bond yield (interest India pays to borrow)",
-            "direction": "up",
-            "probability": "Medium",
-            "horizon": "days",
-            "rationale": "Global interest rates staying high usually pushes up local borrowing costs, which can mean slightly higher loan rates for companies and the government."
+            "rationale": "A weaker rupee is generally bad for ordinary Indians because it makes imported goods, electronics, and foreign travel much more expensive."
           },
           {
             "target": "Nifty 50 (India's main stock index)",
             "direction": "down",
             "probability": "Medium",
             "horizon": "days",
-            "rationale": "When big foreign investors take their money out of India, local stock prices often dip, which can temporarily shrink the value of your mutual funds."
+            "rationale": "When foreign investors pull money out of India, the overall stock market usually drops, which can temporarily shrink the value of your mutual funds."
+          },
+          {
+            "target": "Petrol & diesel prices",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "India buys most of its oil from abroad, and a weaker rupee plus shifting global prices means higher fuel costs, which is bad for your household budget."
+          },
+          {
+            "target": "Gold price in India",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "When the rupee falls, importing gold into India becomes costlier, pushing up local gold prices—good if you already own gold, bad if you want to buy."
           }
         ],
         "watch_next": [
-          "Upcoming US inflation data reports to see if prices are actually cooling down",
-          "Daily trading updates on whether foreign investors are buying or selling Indian shares"
+          "Upcoming US inflation data reports to see if prices are actually cooling down or staying high",
+          "Daily movement of foreign money flowing in or out of Indian shares"
         ],
         "confidence": "Medium",
-        "caveats": "If upcoming US jobs or inflation data suddenly turn out much weaker than expected, the US Fed might change its mind and cut interest rates faster.",
+        "caveats": "If upcoming US economic reports show that inflation is slowing down faster than expected, this warning will be forgotten and markets will bounce right back.",
         "engine": "gemini",
         "category": "general",
         "matched_linkage": null
       },
-      "importance": 5.2,
+      "importance": 5.6,
+      "is_top": false
+    },
+    {
+      "headline": "F&O Talk: Traders should maintain caution amid CAS volatility, says Sudeep Shah; picks 6 stocks for next week",
+      "relevance": 3.5,
+      "items": [
+        {
+          "title": "F&O Talk: Traders should maintain caution amid CAS volatility, says Sudeep Shah; picks 6 stocks for next week",
+          "url": "https://economictimes.indiatimes.com/markets/expert-view/fo-talk-traders-should-maintain-caution-amid-cas-volatility-says-sudeep-shah-picks-6-stocks-for-next-week/articleshow/133606328.cms",
+          "source": "Economic Times Markets",
+          "published": "2026-08-29T07:02:04+00:00",
+          "summary": "The Indian stock market ended higher on Friday, but heightened volatility and sharp index divergences amid the Closing Auction Session (CAS) have kept traders cautious. Technical analyst Sudeep Shah expects Nifty and Sensex to remain range-bound, while highlighting key support and resistance levels and identifying six stocks that could outperform in the coming week.",
+          "region": "india",
+          "origin": "rss",
+          "relevance": 3.5
+        },
+        {
+          "title": "F&O Talk: Traders should maintain caution amid CAS volatility, says Sudeep Shah; picks 6 stocks for next week",
+          "url": "https://economictimes.indiatimes.com/markets/expert-view/fo-talk-traders-should-maintain-caution-amid-cas-volatility-says-sudeep-shah-picks-6-stocks-for-next-week/articleshow/133606328.cms",
+          "source": "Zerodha Pulse",
+          "published": "2026-08-29T07:02:04+00:00",
+          "summary": "The Indian stock market ended higher on Friday, but heightened volatility and sharp index divergences amid the Closing Auction Session (CAS) have kept traders cautious. Technical analyst Sudeep Shah expects Nifty and Sensex to remain range-bound, while highlighting key support and resistance levels and identifying six stocks that could outperform in the coming week.",
+          "region": "india",
+          "origin": "rss",
+          "relevance": 3.5
+        }
+      ],
+      "sources": [
+        "Economic Times Markets",
+        "Zerodha Pulse"
+      ],
+      "urls": [
+        "https://economictimes.indiatimes.com/markets/expert-view/fo-talk-traders-should-maintain-caution-amid-cas-volatility-says-sudeep-shah-picks-6-stocks-for-next-week/articleshow/133606328.cms",
+        "https://economictimes.indiatimes.com/markets/expert-view/fo-talk-traders-should-maintain-caution-amid-cas-volatility-says-sudeep-shah-picks-6-stocks-for-next-week/articleshow/133606328.cms"
+      ],
+      "item_count": 2,
+      "coverage_boost": 0.5,
+      "id": "eb8dda06f7",
+      "keywords": [
+        "analyst",
+        "auction",
+        "cas",
+        "caution",
+        "cautious",
+        "closing",
+        "divergences",
+        "ended",
+        "expects",
+        "friday",
+        "heightened",
+        "higher",
+        "index",
+        "indian",
+        "kept",
+        "maintain",
+        "next",
+        "picks",
+        "session",
+        "shah",
+        "sharp",
+        "should",
+        "stock",
+        "stocks",
+        "sudeep",
+        "talk",
+        "technical",
+        "traders",
+        "volatility"
+      ],
+      "category": "general",
+      "analysis": {
+        "tldr": "If you are trading in the derivatives market, sudden rules and high swings mean you should risk less money to avoid losing your savings.",
+        "what_happened": "Experts are warning traders to be very careful because of something called CAS volatility (sudden, wild price swings and changing market rules). This happens when a lot of people make big, risky bets using borrowed money, causing prices to jump up and down unpredictably.",
+        "analogy": "It is like driving a sports car on a wet, winding mountain road—if you drive too fast or take sharp turns, you are likely to crash, so you need to slow down.",
+        "why_it_matters_india": [
+          "Traders make big, risky bets in the F&O market (Futures and Options, which are bets on where stock prices will go in the future).",
+          "Market rules and prices start swinging wildly, causing sudden losses for regular people.",
+          "Experts advise playing it safe and picking only strong, reliable companies instead of risky ones.",
+          "This caution cools down the wild gambling in the stock market, protecting everyday investors from sudden shocks."
+        ],
+        "impacts": [
+          {
+            "target": "Nifty 50 (India's main stock index)",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "When traders get cautious and reduce risky bets, the overall market can see a short-term dip, which makes stock values cheaper for long-term investors."
+          },
+          {
+            "target": "Selected large-cap stocks (like top Indian companies)",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "months",
+            "rationale": "Money moves away from risky bets into stable, strong companies, helping those solid businesses grow steadily—which is good for regular long-term investors."
+          }
+        ],
+        "watch_next": [
+          "Changes in government or exchange rules regarding risky stock trading",
+          "How much money foreign investors are taking out or putting into India"
+        ],
+        "confidence": "Medium",
+        "caveats": "If global markets suddenly crash or boom, local trading caution can be completely ignored by panicked or excited crowds.",
+        "engine": "gemini",
+        "category": "general",
+        "matched_linkage": null
+      },
+      "importance": 4.8,
+      "is_top": false
+    },
+    {
+      "headline": "Today’s Gold Rate, Aug 29: Check gold rates in Delhi, Mumbai, Chennai",
+      "relevance": 3.5,
+      "items": [
+        {
+          "title": "Today’s Gold Rate, Aug 29: Check gold rates in Delhi, Mumbai, Chennai",
+          "url": "https://www.thehindubusinessline.com/gold-rate-today/gold-price-today-in-delhi-mumbai-kolkata-chennai-bengaluru-hyderabad-pune-gold-rates-metro-cities-august-29-2026/article71403967.ece",
+          "source": "The Hindu BusinessLine",
+          "published": "2026-08-29T08:35:53+00:00",
+          "summary": "22, 24 carat Gold prices down across metro cities on August 29",
+          "region": "india",
+          "origin": "rss",
+          "relevance": 3.5
+        },
+        {
+          "title": "Today’s Gold Rate: Latest gold prices in Coimbatore, Nagpur, Jaipur & other cities",
+          "url": "https://www.thehindubusinessline.com/gold-rate-today/gold-price-today-in-coimbatore-nagpur-visakhapatnam-surat-jaipur-lucknow-chandigarh-gold-rates-other-cities-august-29-2026/article71403968.ece",
+          "source": "The Hindu BusinessLine",
+          "published": "2026-08-29T08:38:05+00:00",
+          "summary": "22, 24 carat Gold prices down across other cities on August 29",
+          "region": "india",
+          "origin": "rss",
+          "relevance": 2.5
+        }
+      ],
+      "sources": [
+        "The Hindu BusinessLine"
+      ],
+      "urls": [
+        "https://www.thehindubusinessline.com/gold-rate-today/gold-price-today-in-delhi-mumbai-kolkata-chennai-bengaluru-hyderabad-pune-gold-rates-metro-cities-august-29-2026/article71403967.ece",
+        "https://www.thehindubusinessline.com/gold-rate-today/gold-price-today-in-coimbatore-nagpur-visakhapatnam-surat-jaipur-lucknow-chandigarh-gold-rates-other-cities-august-29-2026/article71403968.ece"
+      ],
+      "item_count": 2,
+      "coverage_boost": 0.5,
+      "id": "0f41fe793a",
+      "keywords": [
+        "across",
+        "aug",
+        "august",
+        "carat",
+        "check",
+        "chennai",
+        "cities",
+        "coimbatore",
+        "delhi",
+        "gold",
+        "jaipur",
+        "latest",
+        "metro",
+        "mumbai",
+        "nagpur",
+        "other",
+        "prices",
+        "rate",
+        "rates",
+        "today"
+      ],
+      "category": "commodities",
+      "analysis": {
+        "tldr": "Global uncertainty is pushing gold prices higher, meaning weddings and jewelry will cost more for Indian families.",
+        "what_happened": "Gold prices in major Indian cities are seeing daily updates because global buyers are rushing to buy gold as a safe space for their money. This happens when people get nervous about world events or expect central banks to lower interest rates.",
+        "analogy": "It is like everyone rushing to buy umbrellas when the sky turns dark and cloudy, because they are scared it might rain — and when everyone wants an umbrella at once, the price goes up.",
+        "why_it_matters_india": [
+          "Global buyers get nervous and buy gold as a safe shelter",
+          "Global gold prices go up",
+          "India imports almost all its gold from abroad",
+          "Local jewelers in Delhi, Mumbai, and Chennai raise prices to match the global rate"
+        ],
+        "impacts": [
+          {
+            "target": "Gold price in India",
+            "direction": "up",
+            "probability": "High",
+            "horizon": "days",
+            "rationale": "Higher global demand directly pushes up local gold rates, which is bad for families planning weddings or buying jewelry."
+          },
+          {
+            "target": "The rupee (vs the US dollar)",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "When India imports more expensive gold, it needs more dollars to pay for it, which can slightly weaken our currency and make imported goods costlier."
+          }
+        ],
+        "watch_next": [
+          "Global news about wars or major economic trouble",
+          "Announcements from the US central bank about changing interest rates"
+        ],
+        "confidence": "High",
+        "caveats": "If global fears suddenly disappear, gold prices can drop just as quickly as they went up.",
+        "engine": "gemini",
+        "category": "commodities",
+        "matched_linkage": "gold_up_riskoff"
+      },
+      "importance": 4.8,
       "is_top": false
     }
   ],

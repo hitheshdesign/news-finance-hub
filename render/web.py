@@ -8,6 +8,7 @@ Never needs a server: it's plain HTML the browser opens directly.
 
 from __future__ import annotations
 import json
+import shutil
 from pathlib import Path
 from jinja2 import Environment
 from markupsafe import Markup
@@ -20,6 +21,8 @@ from render.glossary import annotate
 # does not turn quotes inside selectors/content rules into &#34; (which breaks
 # [data-theme="light"] selectors and every content:"" pseudo-element).
 _CSS = Markup(templates.CSS)
+_ICON = Markup(templates.HEAD_ICON)      # favicon / theme-color tags
+_LOGO = Markup(templates.LOGO_SVG)       # inline brand mark
 
 
 def _nav(active: str, prefix: str = "") -> Markup:
@@ -85,7 +88,7 @@ def render_page(brief: dict) -> str:
     brief["archive"] = _archive_list(brief["date"])
     page = env.from_string(templates.PAGE)
     return page.render(brief=brief, css=_CSS, fonts=templates.FONTS,
-                       nav=_nav("news"))
+                       nav=_nav("news"), icon=_ICON, logo=_LOGO)
 
 
 def render_patterns() -> str:
@@ -104,7 +107,7 @@ def render_patterns() -> str:
     page = env.from_string(templates.PATTERNS_PAGE)
     return page.render(groups=groups, total=total,
                        css=_CSS, fonts=templates.FONTS,
-                       nav=_nav("learn"))
+                       nav=_nav("learn"), icon=_ICON, logo=_LOGO)
 
 
 # Markets too small to appear on a 110m-resolution map — drawn as a dot instead.
@@ -182,7 +185,7 @@ def render_global(gdata: dict) -> str:
     page = env.from_string(global_page.GLOBAL_PAGE)
     return page.render(g=view, map_countries=map_countries, map_dots=map_dots,
                        g_json=_json_safe(js_map), rot_json=_json_safe(rot_json),
-                       css=_CSS, fonts=templates.FONTS, nav=_nav("global"))
+                       css=_CSS, fonts=templates.FONTS, nav=_nav("global"), icon=_ICON, logo=_LOGO)
 
 
 def write_global_page(gdata: dict) -> Path:
@@ -208,9 +211,25 @@ def write_patterns_page() -> Path:
     return path
 
 
+def _copy_assets() -> None:
+    """Copy static brand assets (favicon.ico, apple-touch-icon.png, favicon.svg)
+    to the site root. Browsers request /favicon.ico and /apple-touch-icon.png
+    from the domain root automatically, so these need no <link> tag and work
+    from every page depth — including the dated archive pages."""
+    src = config.ROOT / "assets"
+    if not src.exists():
+        return
+    config.SITE_DIR.mkdir(parents=True, exist_ok=True)
+    for name in ("favicon.ico", "favicon.svg", "apple-touch-icon.png"):
+        f = src / name
+        if f.exists():
+            shutil.copyfile(f, config.SITE_DIR / name)
+
+
 def write_site(brief: dict) -> Path:
     site = config.SITE_DIR
     (site / "briefs").mkdir(parents=True, exist_ok=True)
+    _copy_assets()
 
     # index.html (latest)
     html = render_page(brief)

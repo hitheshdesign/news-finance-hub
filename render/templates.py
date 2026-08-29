@@ -8,6 +8,35 @@ Design language (from the ui-ux-pro-max design system):
   * Every card leads with a plain-English takeaway; jargon is tap-to-define.
 """
 
+from urllib.parse import quote as _urlquote
+
+# ---------------------------------------------------------------------------
+# Brand mark: incoming waves from the wider world arriving at a single gold
+# point — India. The product in one image. Drawn as plain geometry so it stays
+# crisp at 16px (browser tab) and needs no font or external file.
+# ---------------------------------------------------------------------------
+LOGO_SVG = (
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" '
+    'role="img" aria-label="The India Impact Brief">'
+    '<rect width="64" height="64" rx="14" fill="#0f172a"/>'
+    '<g fill="none" stroke="#6ea8fe" stroke-linecap="round" stroke-width="5">'
+    '<path d="M39.1 22.2A12 12 0 0 0 39.1 41.8" opacity=".95"/>'
+    '<path d="M34.5 15.6A20 20 0 0 0 34.5 48.4" opacity=".62"/>'
+    '<path d="M29.9 9.1A28 28 0 0 0 29.9 54.9" opacity=".34"/>'
+    '</g>'
+    '<circle cx="46" cy="32" r="6" fill="#e0a94a"/>'
+    '</svg>'
+)
+
+# Inline data-URI favicon: self-contained, so it also works for local previews
+# and file:// copies (no separate asset to 404).
+_FAVICON_HREF = "data:image/svg+xml," + _urlquote(LOGO_SVG, safe="")
+HEAD_ICON = (
+    f'<link rel="icon" type="image/svg+xml" href="{_FAVICON_HREF}">'
+    f'<link rel="apple-touch-icon" href="{_FAVICON_HREF}">'
+    '<meta name="theme-color" content="#0f172a">'
+)
+
 FONTS = (
     "https://fonts.googleapis.com/css2?"
     "family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&"
@@ -53,6 +82,11 @@ body{margin:0;background:var(--bg);color:var(--ink);
 .mast .date{font-size:15px;color:var(--ink2);}
 .mast .date b{color:var(--ink);}
 .mast .engine{color:var(--muted);}
+.brandrow{display:flex;align-items:center;gap:13px;}
+.brandrow svg{width:40px;height:40px;flex:none;border-radius:10px;
+  box-shadow:0 2px 8px rgba(0,0,0,.18);}
+.brandrow h1{margin-bottom:0;}
+@media (max-width:520px){.brandrow svg{width:33px;height:33px;}}
 
 /* ---------- Tabs (News · Global Finance · Learn) ---------- */
 .tabs{display:flex;gap:4px;margin:16px 0 4px;border-bottom:1px solid var(--line);}
@@ -518,12 +552,13 @@ PAGE = """<!doctype html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="{{ fonts }}" rel="stylesheet">
+{{ icon }}
 <style>{{ css }}</style>
 </head><body><div class="wrap">
 
 <header class="mast">
   <div class="kicker">World news, decoded for Indian markets</div>
-  <h1>The India Impact Brief</h1>
+  <div class="brandrow">{{ logo }}<h1>The India Impact Brief</h1></div>
   <div class="date"><b>{{ brief.date_human }}</b> · {{ brief.events|length }} signals ·
     <span class="engine">analysis by {{ brief.engine }}</span></div>
 </header>
@@ -607,12 +642,13 @@ PATTERNS_PAGE = """<!doctype html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="{{ fonts }}" rel="stylesheet">
+{{ icon }}
 <style>{{ css }}</style>
 </head><body><div class="wrap">
 
 <header class="mast">
   <div class="kicker">World news, decoded for Indian markets</div>
-  <h1>The Pattern Library</h1>
+  <div class="brandrow">{{ logo }}<h1>The Pattern Library</h1></div>
   <div class="date">How global events tend to ripple into Indian markets —
     <b>{{ total }}</b> patterns the engine watches for</div>
 </header>

@@ -17,12 +17,13 @@ GLOBAL_PAGE = """<!doctype html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="{{ fonts }}" rel="stylesheet">
+{{ icon }}
 <style>{{ css }}</style>
 </head><body><div class="wrap">
 
 <header class="mast">
   <div class="kicker">World news, decoded for Indian markets</div>
-  <h1>Global Finance</h1>
+  <div class="brandrow">{{ logo }}<h1>Global Finance</h1></div>
   <div class="date">Where the world's markets are cheap or expensive, and where the
     big money has been moving · <span class="engine">updated {{ g.updated_human }}</span></div>
 </header>

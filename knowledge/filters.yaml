@@ -27,8 +27,12 @@ cross_day_similarity: 0.7
 developing_similarity: 0.45
 
 # --- Forward calendar ---
-# Show calendar events falling within this many days ahead.
-calendar_lookahead_days: 21
+# Show calendar events falling within this many days ahead (the section is
+# collapsed by default, so a long horizon costs no space on the page).
+calendar_lookahead_days: 120
+# The calendar is collapsed by default; if any event is within this many days,
+# an alert badge appears on its header so you know to open it.
+calendar_alert_days: 4
 
 # Words that, if present, ADD to relevance (these touch India-transmission
 # channels). Weighted: strong signals score higher.

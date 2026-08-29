@@ -43,6 +43,18 @@ rss_feeds:
   - name: "Moneycontrol Business"
     url: "https://www.moneycontrol.com/rss/business.xml"
     region: india
+  # Explainer-style / aggregated feeds (plain-English, beginner-friendly)
+  - name: "Finshots"
+    url: "https://finshots.in/rss/"
+    region: india
+  - name: "Zerodha Pulse"
+    url: "https://pulse.zerodha.com/feed.php"
+    region: india
+  # The Ken publishes one deep story/weekday, but full articles are paywalled —
+  # we surface its headlines; the "read source" link may hit a subscriber wall.
+  - name: "The Ken"
+    url: "https://the-ken.com/feed/"
+    region: india
 
 # --- GDELT (global events firehose, free, no API key) ---
 # We query recent English articles matching macro/market themes.

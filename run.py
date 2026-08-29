@@ -22,7 +22,7 @@ from pathlib import Path
 import config
 from ingest import rss, gdelt, fred
 from screen import relevance, cluster, history
-from analyze import engine, track
+from analyze import engine, track, globe
 from analyze.knowledge_match import match_linkages
 from render import web, emailer, telegram
 
@@ -36,6 +36,29 @@ def _load_sample() -> list[dict]:
     path = config.KNOWLEDGE_DIR / "sample_items.json"
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
+
+
+# Explainer/aggregator sources whose original articles we surface directly.
+_DEEPER_SOURCES = {"finshots", "the ken"}
+
+
+def _collect_deeper_reads(raw: list[dict], limit: int = 6) -> list[dict]:
+    """Pick out today's explainer articles (Finshots / The Ken) so we can link
+    their originals, not just our reprocessed cards."""
+    seen: set[str] = set()
+    out: list[dict] = []
+    for it in raw:
+        src = (it.get("source") or "").strip()
+        if src.lower() not in _DEEPER_SOURCES:
+            continue
+        title = (it.get("title") or "").strip()
+        if not title or title.lower() in seen:
+            continue
+        seen.add(title.lower())
+        out.append({"title": title, "url": it.get("url", ""), "source": src})
+        if len(out) >= limit:
+            break
+    return out
 
 
 def _select_balanced(events: list[dict], max_events: int, max_per_topic: int) -> list[dict]:
@@ -106,28 +129,38 @@ def _upcoming_calendar(lookahead_days: int) -> list[dict]:
     today = datetime.now(timezone.utc).date()
     horizon = today + timedelta(days=max(lookahead_days, 0))
     out: list[dict] = []
+
+    def _add(d: date, ev: dict) -> None:
+        out.append({
+            "name": ev.get("name", ""),
+            "date_human": d.strftime("%a, %d %b"),
+            "month_label": d.strftime("%B %Y"),
+            "days_away": (d - today).days,
+            "category": ev.get("category", "general"),
+            "why": ev.get("why", ""),
+        })
+
     for ev in config.CALENDAR:
-        d: date | None = None
         if ev.get("date"):
             try:
                 d = date.fromisoformat(str(ev["date"]))
             except Exception:
-                d = None
+                continue
+            if today <= d <= horizon:
+                _add(d, ev)
         elif ev.get("recurs") == "monthly" and ev.get("day"):
+            # Emit EVERY monthly occurrence inside the horizon, not just the next
+            # one, so opening the calendar shows the months ahead.
             day = int(ev["day"])
-            d = _safe_date(today.year, today.month, day)
-            if d < today:                       # this month's is past -> next month
-                y = today.year + (1 if today.month == 12 else 0)
-                m = 1 if today.month == 12 else today.month + 1
+            y, m = today.year, today.month
+            for _ in range(24):                      # safety bound
                 d = _safe_date(y, m, day)
-        if d and today <= d <= horizon:
-            out.append({
-                "name": ev.get("name", ""),
-                "date_human": d.strftime("%a, %d %b"),
-                "days_away": (d - today).days,
-                "category": ev.get("category", "general"),
-                "why": ev.get("why", ""),
-            })
+                if d > horizon:
+                    break
+                if d >= today:
+                    _add(d, ev)
+                y, m = (y + 1, 1) if m == 12 else (y, m + 1)
+
     out.sort(key=lambda e: e["days_away"])
     return out
 
@@ -155,6 +188,16 @@ def store_brief(brief: dict) -> None:
     md_path = config.DATA_DIR / f"{brief['date']}.md"
     md_path.write_text(_to_markdown(brief), encoding="utf-8")
     print(f"[store] saved {json_path.name} and {md_path.name}")
+
+
+def _store_global(gdata: dict) -> None:
+    """Persist the Global Finance snapshot (history / future scoring)."""
+    out_dir = config.DATA_DIR.parent / "global"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    path = out_dir / f"{gdata.get('updated', 'latest')}.json"
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(gdata, f, indent=2, ensure_ascii=False)
+    print(f"  [global] saved {path.name}")
 
 
 def _to_markdown(brief: dict) -> str:
@@ -190,6 +233,7 @@ def main() -> None:
 
     # 1. INGEST
     raw = ingest_all(use_sample=args.sample)
+    deeper_reads = _collect_deeper_reads(raw)
 
     # 2. SCREEN (relevance + cluster into distinct events)
     print("[screen] applying ground rules...")
@@ -227,13 +271,20 @@ def main() -> None:
 
     # 4. ASSEMBLE + STORE
     brief = build_brief(events, macro, upcoming)
+    alert_days = int(config.FILTERS.get("calendar_alert_days", 4))
+    brief["calendar_alert_days"] = alert_days
+    brief["calendar_alert"] = sum(1 for c in upcoming if c["days_away"] <= alert_days)
+    brief["deeper_reads"] = deeper_reads
     store_brief(brief)
     track.record_predictions(brief)
 
-    # 5. RENDER web page + the pattern-library study page
+    # 5. RENDER web page + the pattern-library and global-finance pages
     print("[render] building web page...")
     index_path = web.write_site(brief)
     web.write_patterns_page()
+    gdata = globe.build_global(events)
+    _store_global(gdata)
+    web.write_global_page(gdata)
 
     # 6. DELIVER
     if args.dry_run:

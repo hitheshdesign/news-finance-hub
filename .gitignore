@@ -10,3 +10,6 @@ venv/
 # OS junk
 .DS_Store
 Thumbs.db
+
+# Local preview renders (not part of the published site)
+_preview/

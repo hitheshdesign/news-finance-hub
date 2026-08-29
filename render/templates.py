@@ -53,11 +53,16 @@ body{margin:0;background:var(--bg);color:var(--ink);
 .mast .date{font-size:15px;color:var(--ink2);}
 .mast .date b{color:var(--ink);}
 .mast .engine{color:var(--muted);}
-.mast .nav{margin-top:12px;font-size:13.5px;}
-.mast .nav a{color:var(--link);text-decoration:none;font-weight:600;}
-.mast .nav a:hover{text-decoration:underline;}
 
-/* ---------- Reading guide ---------- */
+/* ---------- Tabs (News · Global Finance · Learn) ---------- */
+.tabs{display:flex;gap:4px;margin:16px 0 4px;border-bottom:1px solid var(--line);}
+.tabs a{padding:9px 14px;font-size:14px;font-weight:600;color:var(--muted);
+  text-decoration:none;border-bottom:2px solid transparent;margin-bottom:-1px;
+  border-radius:8px 8px 0 0;}
+.tabs a:hover{color:var(--ink2);background:var(--panel2);}
+.tabs a.on{color:var(--ink);border-bottom-color:var(--link);}
+
+/* ---------- Reading guide (used on the Learn / Global pages) ---------- */
 .guide{margin:18px 0 4px;padding:12px 15px;background:var(--panel2);
   border:1px solid var(--line);border-radius:12px;font-size:13.5px;color:var(--ink2);}
 .guide b{color:var(--ink);}
@@ -69,16 +74,32 @@ body{margin:0;background:var(--bg);color:var(--ink);
   padding:7px 11px;font-size:12.5px;color:var(--muted);}
 .macro .m b{color:var(--ink);font-weight:600;}
 
-/* ---------- Forward calendar ("what to watch") ---------- */
+/* ---------- Forward calendar ("what to watch") — collapsible accordion ---------- */
 .cal{margin-top:16px;border:1px solid var(--line);border-radius:12px;
   background:var(--panel);overflow:hidden;}
-.cal h3{font-family:var(--font-sans);font-size:12.5px;font-weight:700;
+.cal>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:11px;
+  font-family:var(--font-sans);font-size:12.5px;font-weight:700;
   text-transform:uppercase;letter-spacing:.1em;color:var(--muted);
-  margin:0;padding:12px 15px;border-bottom:1px solid var(--line2);}
+  padding:15px 18px;border-radius:12px;}
+/* Hide the browser's own ▶ marker (both engines) so only our chevron shows. */
+.cal>summary::-webkit-details-marker{display:none;}
+.cal>summary::marker{content:"";font-size:0;}
+.cal>summary:hover{color:var(--ink2);background:var(--panel2);}
+.cal>summary .chev{margin-left:auto;transition:transform .18s ease;color:var(--faint);
+  font-size:10px;font-weight:700;}
+.cal[open]>summary .chev{transform:rotate(180deg);}
+.cal[open]>summary{border-bottom:1px solid var(--line2);border-radius:12px 12px 0 0;}
+.cal .calmonth{font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--faint);padding:11px 18px 5px;background:var(--panel2);
+  border-bottom:1px solid var(--line2);}
+.cal .alert{font-size:11px;font-weight:700;letter-spacing:.02em;text-transform:none;
+  color:#8a4b00;background:#ffe6b8;padding:2px 9px;border-radius:999px;}
+@media (prefers-color-scheme:dark){.cal .alert{color:#ffcf8a;background:#3a2a10;}}
 .cal ul{list-style:none;margin:0;padding:0;}
-.cal li{display:flex;gap:13px;align-items:baseline;padding:11px 15px;
+.cal li{display:flex;gap:14px;align-items:baseline;padding:13px 18px;
   border-bottom:1px solid var(--line2);}
 .cal li:last-child{border-bottom:none;}
+.cal li.soon{background:var(--panel2);}
 .cal .when{flex:0 0 88px;font-weight:600;color:var(--ink);font-size:13.5px;}
 .cal .when .in{display:block;font-weight:400;color:var(--faint);font-size:11.5px;}
 .cal .ev{flex:1;}
@@ -190,6 +211,218 @@ body{margin:0;background:var(--bg);color:var(--ink);
   transition:opacity .15s ease,transform .15s ease;pointer-events:none;}
 .term:hover::after,.term:focus::after{opacity:1;visibility:visible;transform:translateY(0);}
 
+/* Deeper reads — original explainer links (Finshots / The Ken) */
+.deeper{display:flex;flex-direction:column;gap:8px;margin-bottom:8px;}
+.deeper .dr{display:flex;flex-wrap:wrap;gap:6px 11px;align-items:baseline;
+  padding:12px 14px;background:var(--panel);border:1px solid var(--line);
+  border-radius:11px;text-decoration:none;}
+.deeper .dr:hover{border-color:var(--link);}
+.deeper .src{font-size:11px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.04em;color:var(--link);white-space:nowrap;}
+.deeper .t{color:var(--ink2);font-size:15px;}
+.deeper .dr:hover .t{color:var(--ink);}
+
+/* ============ GLOBAL FINANCE ============ */
+:root{
+  --c-cheap:#2f9e5f; --c-fair:#d99a2b; --c-exp:#d1483f; --c-none:#dcd8d1;
+  --cb-cheap:#e9f6ee; --cb-fair:#faf1db; --cb-exp:#fbebe9;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --c-cheap:#3fbe79; --c-fair:#e0a94a; --c-exp:#ef5f5b; --c-none:#28303c;
+    --cb-cheap:#12271c; --cb-fair:#33280f; --cb-exp:#2a1514;
+  }
+}
+.v-cheap{--vc:var(--c-cheap);--vb:var(--cb-cheap);}
+.v-fair{--vc:var(--c-fair);--vb:var(--cb-fair);}
+.v-exp{--vc:var(--c-exp);--vb:var(--cb-exp);}
+
+/* View switch (Valuation | Market Movers) */
+.gf-switch{display:inline-flex;gap:3px;background:var(--panel2);border:1px solid var(--line);
+  border-radius:11px;padding:4px;margin:18px 0 6px;}
+.gf-switch button{font-family:var(--font-sans);font-size:13.5px;font-weight:600;
+  color:var(--muted);background:transparent;border:0;border-radius:8px;
+  padding:9px 16px;cursor:pointer;}
+.gf-switch button:hover{color:var(--ink2);}
+.gf-switch button.on{color:var(--ink);background:var(--panel);
+  box-shadow:0 1px 3px rgba(0,0,0,.12);}
+.gf-view[hidden]{display:none;}
+
+.gf-note{background:var(--panel2);border:1px dashed var(--line);border-radius:12px;
+  padding:12px 15px;color:var(--muted);font-size:13px;margin:14px 0 12px;}
+.gf-note b{color:var(--ink2);}
+.gf-legend{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px;align-items:center;}
+.gf-legend .lg{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;
+  color:var(--ink2);background:var(--panel);border:1px solid var(--line);
+  border-radius:999px;padding:5px 12px;}
+.gf-legend .sw{width:11px;height:11px;border-radius:3px;background:var(--vc);}
+.gf-legend .hintx{color:var(--faint);font-size:12.5px;}
+
+/* ---- Choropleth world map ---- */
+.map-wrap{position:relative;background:var(--panel);border:1px solid var(--line);
+  border-radius:14px;overflow:hidden;}
+.map-wrap svg{display:block;width:100%;height:auto;cursor:grab;touch-action:none;
+  background:var(--panel2);}
+.map-wrap svg.drag{cursor:grabbing;}
+.cty{fill:var(--c-none);stroke:var(--panel);stroke-width:.4;
+  transition:fill .15s ease,opacity .15s ease;}
+.cty.cheap{fill:var(--c-cheap);}
+.cty.fair{fill:var(--c-fair);}
+.cty.expensive{fill:var(--c-exp);}
+.cty.has{cursor:pointer;}
+.cty.has:hover{opacity:.78;}
+.cty.sel{stroke:var(--ink);stroke-width:1.4;}
+.dot{pointer-events:none;}
+.dot circle{stroke:var(--panel);stroke-width:1.2;}
+.mapctl{position:absolute;top:10px;right:10px;display:flex;flex-direction:column;gap:5px;}
+.mapctl button{width:32px;height:32px;font-size:15px;font-weight:700;line-height:1;
+  color:var(--ink2);background:var(--panel);border:1px solid var(--line);
+  border-radius:8px;cursor:pointer;}
+.mapctl button:hover{color:var(--ink);border-color:var(--link);}
+.maptip{position:absolute;pointer-events:none;z-index:30;background:var(--tip-bg);
+  color:var(--tip-ink);font-size:12.5px;line-height:1.4;padding:7px 10px;
+  border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,.25);opacity:0;
+  transition:opacity .12s ease;white-space:nowrap;}
+.maptip.on{opacity:1;}
+.maptip b{display:block;font-size:13.5px;}
+
+/* ---- Two-column: table + sticky detail ---- */
+.gf-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,400px);
+  gap:16px;margin-top:16px;align-items:start;}
+.gf-panelwrap{position:sticky;top:14px;}
+@media (max-width:900px){
+  .gf-grid{grid-template-columns:1fr;}
+  .gf-panelwrap{position:static;order:-1;}
+}
+
+/* Country table */
+.ctable{background:var(--panel);border:1px solid var(--line);border-radius:14px;
+  overflow:hidden;}
+.ctable .thead{display:flex;font-size:11px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.06em;color:var(--muted);border-bottom:1px solid var(--line2);
+  background:var(--panel2);}
+.ctable .thead span{padding:11px 10px;cursor:pointer;user-select:none;}
+.ctable .thead span:hover{color:var(--ink2);}
+.ctable .thead span.sorted{color:var(--ink);}
+.ctable .row{display:flex;align-items:center;border-bottom:1px solid var(--line2);
+  cursor:pointer;font-size:13.5px;}
+.ctable .row:last-child{border-bottom:none;}
+.ctable .row:hover{background:var(--panel2);}
+.ctable .row.sel{background:var(--panel2);box-shadow:inset 3px 0 0 var(--vc);}
+.ctable .row>span{padding:11px 10px;}
+.c-name{flex:1 1 auto;min-width:0;display:flex;align-items:center;gap:9px;
+  color:var(--ink);font-weight:600;}
+.c-name .sw{width:9px;height:9px;border-radius:3px;background:var(--vc);flex:none;}
+.c-name i{font-style:normal;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.c-val{flex:0 0 96px;color:var(--vc);font-weight:600;font-size:12px;
+  text-transform:uppercase;letter-spacing:.03em;}
+.c-cape{flex:0 0 74px;color:var(--ink2);text-align:right;}
+.c-er{flex:0 0 78px;text-align:right;font-weight:600;}
+@media (max-width:520px){.c-val{display:none;}}
+
+/* Detail panel */
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;
+  padding:18px;max-height:calc(100vh - 28px);overflow-y:auto;}
+.panel .hint{color:var(--muted);font-size:14px;margin:0;}
+.panel h3{font-family:var(--font-serif);font-size:23px;font-weight:600;margin:0 0 2px;
+  color:var(--ink);line-height:1.2;}
+.panel .sub{color:var(--muted);font-size:13px;margin-bottom:12px;}
+.gf-vpill{display:inline-block;font-family:var(--font-sans);font-size:11px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.05em;color:var(--vc);background:var(--vb);
+  padding:3px 10px;border-radius:999px;vertical-align:middle;margin-left:8px;}
+.verdict{background:var(--panel2);border-left:3px solid var(--vc);border-radius:0 10px 10px 0;
+  padding:12px 14px;margin:0 0 14px;color:var(--ink);font-size:15px;line-height:1.5;}
+.verdict b{color:var(--vc);display:block;font-size:11px;text-transform:uppercase;
+  letter-spacing:.07em;margin-bottom:4px;}
+.pblock{margin:0 0 14px;}
+.pblock h4{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;
+  color:var(--muted);margin:0 0 7px;padding-bottom:5px;border-bottom:1px solid var(--line2);}
+.kv{display:flex;flex-wrap:wrap;gap:6px;}
+.kv .k{flex:1 1 88px;background:var(--panel2);border:1px solid var(--line2);
+  border-radius:9px;padding:8px 10px;font-size:11px;color:var(--muted);}
+.kv .k b{display:block;color:var(--ink);font-size:15px;font-weight:600;margin-top:1px;}
+.kv .k b.sm{font-size:12.5px;font-weight:500;line-height:1.45;}
+.kv .k.wide{flex:1 1 100%;}
+.maptip .wrapline{display:block;max-width:280px;white-space:normal;margin-top:3px;
+  font-weight:400;}
+/* Expected-return bar */
+.erbar{display:flex;flex-direction:column;gap:7px;}
+.erow{display:flex;align-items:center;gap:9px;font-size:13px;}
+.erow .lbl{flex:0 0 108px;color:var(--ink2);}
+.erow .track{flex:1;height:8px;background:var(--line2);border-radius:99px;position:relative;
+  overflow:hidden;}
+.erow .fill{position:absolute;top:0;bottom:0;border-radius:99px;}
+.erow .fill.pos{background:var(--c-cheap);}
+.erow .fill.neg{background:var(--c-exp);}
+.erow .num{flex:0 0 52px;text-align:right;font-weight:600;color:var(--ink);}
+.erow.total{border-top:1px solid var(--line2);padding-top:7px;margin-top:2px;}
+.erow.total .lbl,.erow.total .num{font-weight:700;}
+.plist{list-style:none;margin:0;padding:0;}
+.plist li{position:relative;padding:3px 0 3px 16px;color:var(--ink2);font-size:13.5px;
+  line-height:1.5;}
+.plist li::before{content:"";position:absolute;left:2px;top:11px;width:5px;height:5px;
+  border-radius:50%;background:var(--faint);}
+.plist.good li::before{background:var(--c-cheap);}
+.plist.bad li::before{background:var(--c-exp);}
+.pnote{color:var(--ink2);font-size:13.5px;line-height:1.55;margin:0;}
+.pnote em{color:var(--muted);font-style:normal;}
+.gf-india{padding:11px 13px;background:var(--panel2);border-left:3px solid var(--link);
+  border-radius:0 10px 10px 0;font-size:13.5px;color:var(--ink2);line-height:1.5;}
+.gf-india b{color:var(--link);}
+.gf-news a{display:block;color:var(--link);text-decoration:none;font-size:13.5px;
+  padding:4px 0;line-height:1.45;}
+.gf-news a:hover{text-decoration:underline;}
+
+/* ---- Market movers: heat-map ---- */
+.rot-now{background:var(--panel);border:1px solid var(--line);border-radius:14px;
+  padding:16px 18px;margin-bottom:14px;}
+.rot-now .mood{font-size:12px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.06em;color:var(--link);}
+.rot-now p{margin:6px 0 0;color:var(--ink2);font-size:15.5px;line-height:1.5;}
+.heatwrap{background:var(--panel);border:1px solid var(--line);border-radius:14px;
+  padding:14px;overflow-x:auto;}
+.heat{border-collapse:separate;border-spacing:3px;width:100%;min-width:640px;}
+.heat th{font-size:11px;font-weight:700;color:var(--muted);text-align:left;padding:4px 6px;
+  white-space:nowrap;}
+.heat th.per{writing-mode:horizontal-tb;text-align:center;font-size:11px;}
+.heat td{height:30px;border-radius:6px;cursor:pointer;position:relative;
+  transition:transform .1s ease;}
+.heat td:hover{transform:scale(1.13);z-index:5;}
+.heat .rowlbl{font-size:12.5px;font-weight:600;color:var(--ink2);white-space:nowrap;
+  padding-right:8px;width:1%;}
+.heat .rowlbl.gold{color:var(--c-fair);}
+.s2{background:var(--c-cheap);}
+.s1{background:var(--c-cheap);opacity:.5;}
+.s0{background:var(--line2);}
+.sm1{background:var(--c-exp);opacity:.5;}
+.sm2{background:var(--c-exp);}
+.heatlegend{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:12px;
+  font-size:12px;color:var(--muted);}
+.heatlegend .sc{display:inline-flex;align-items:center;gap:6px;}
+.heatlegend .box{width:15px;height:15px;border-radius:4px;display:inline-block;}
+
+/* Money rotation narrative timeline */
+.rot{position:relative;list-style:none;margin:0;padding:0;}
+.rot li{position:relative;padding:0 0 16px 26px;}
+.rot li::before{content:"";position:absolute;left:6px;top:6px;width:9px;height:9px;
+  border-radius:50%;background:var(--link);}
+.rot li::after{content:"";position:absolute;left:10px;top:15px;bottom:0;width:1px;
+  background:var(--line);}
+.rot li:last-child::after{display:none;}
+.rot li.hl::before{background:var(--c-fair);box-shadow:0 0 0 4px var(--cb-fair);}
+.rot .per{font-weight:700;color:var(--ink);font-size:15px;}
+.rot .mood-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;
+  padding:2px 8px;border-radius:999px;margin-left:8px;}
+.rot .mood-on{color:var(--up);background:var(--up-bg);}
+.rot .mood-off{color:var(--down);background:var(--down-bg);}
+.rot .mood-mixed{color:var(--muted);background:var(--panel2);}
+.rot .flows{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0;}
+.rot .into,.rot .outof{font-size:12.5px;padding:3px 9px;border-radius:7px;}
+.rot .into{color:var(--up);background:var(--up-bg);}
+.rot .outof{color:var(--down);background:var(--down-bg);}
+.rot .into.gold{color:var(--c-fair);background:var(--cb-fair);font-weight:600;}
+.rot .rwhy{color:var(--muted);font-size:13.5px;line-height:1.5;margin-top:2px;}
+
 /* Disclaimer + footer */
 .disclaimer{background:var(--panel2);border:1px dashed var(--line);border-radius:12px;
   padding:14px 16px;color:var(--muted);font-size:13px;margin-top:28px;}
@@ -293,15 +526,9 @@ PAGE = """<!doctype html>
   <h1>The India Impact Brief</h1>
   <div class="date"><b>{{ brief.date_human }}</b> · {{ brief.events|length }} signals ·
     <span class="engine">analysis by {{ brief.engine }}</span></div>
-  <div class="nav"><a href="patterns.html">📚 Learn the patterns — how the world moves India</a></div>
 </header>
 
-<div class="guide">
-  <b>How to read this:</b> <span class="flow">each card goes what happened →
-  why it matters to India → what could move (and how likely) → what to watch.</span>
-  Any <span class="term" tabindex="0" role="button" data-def="Tap or hover an underlined word to see a simple definition.">underlined word</span>
-  has a plain-English meaning — hover or tap it.
-</div>
+{{ nav }}
 
 {% if brief.macro %}
 <div class="macro">
@@ -313,11 +540,19 @@ PAGE = """<!doctype html>
 {% endif %}
 
 {% if brief.calendar %}
-<div class="cal">
-  <h3>Mark your calendar — what to watch</h3>
+<details class="cal">
+  <summary>Mark your calendar — what to watch
+    {% if brief.calendar_alert %}<span class="alert">🔔 {{ brief.calendar_alert }} within {{ brief.calendar_alert_days }} days</span>{% endif %}
+    <span class="chev">▼</span>
+  </summary>
   <ul>
+    {% set ns = namespace(month='') %}
     {% for c in brief.calendar %}
-    <li>
+      {% if c.month_label != ns.month %}
+        {% set ns.month = c.month_label %}
+        <li class="calmonth" style="display:block">{{ c.month_label }}</li>
+      {% endif %}
+    <li class="{{ 'soon' if c.days_away <= brief.calendar_alert_days else '' }}">
       <span class="when">{{ c.date_human }}
         <span class="in">{% if c.days_away==0 %}today{% elif c.days_away==1 %}tomorrow{% else %}in {{ c.days_away }} days{% endif %}</span>
       </span>
@@ -325,7 +560,7 @@ PAGE = """<!doctype html>
     </li>
     {% endfor %}
   </ul>
-</div>
+</details>
 {% endif %}
 
 {% set tops = brief.events|selectattr('is_top')|list %}
@@ -336,6 +571,17 @@ PAGE = """<!doctype html>
 
 {% if rest %}<div class="section">Also on the radar</div>{% endif %}
 {% for ev in rest %}{{ card(ev) }}{% endfor %}
+
+{% if brief.deeper_reads %}
+<div class="section">Deeper reads</div>
+<div class="deeper">
+  {% for r in brief.deeper_reads %}
+  <a class="dr" href="{{ r.url }}" target="_blank" rel="noopener">
+    <span class="src">{{ r.source }}</span><span class="t">{{ r.title }}</span>
+  </a>
+  {% endfor %}
+</div>
+{% endif %}
 
 <div class="disclaimer">
   <b>Learning tool, not advice.</b> This brief explains how world events <i>tend</i> to
@@ -369,8 +615,9 @@ PATTERNS_PAGE = """<!doctype html>
   <h1>The Pattern Library</h1>
   <div class="date">How global events tend to ripple into Indian markets —
     <b>{{ total }}</b> patterns the engine watches for</div>
-  <div class="nav"><a href="index.html">← Back to today's brief</a></div>
 </header>
+
+{{ nav }}
 
 <div class="guide">
   <b>How to use this:</b> <span class="flow">each pattern shows a cause → how it
@@ -433,3 +680,4 @@ PATTERNS_PAGE = """<!doctype html>
 </footer>
 </div></body></html>
 """
+

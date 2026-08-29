@@ -1,0 +1,117 @@
+# =============================================================================
+# MONEY ROTATION — an INDICATIVE, EDUCATIONAL map of where the world's big money
+# has rotated over the years, and when it ran to GOLD for safety.
+#
+# Built from market history and well-documented flows — NOT precise fund-flow
+# data (which isn't free). It's here so you can SEE the pattern: money rotates
+# between risk (equities, the hot market of the day) and safety (gold, the
+# dollar, bonds) as fear and greed take turns.
+#
+# `signals` drives the heat-map. One entry per bucket:
+#    2 = strongly favoured (money piling in)      1 = mildly favoured
+#    0 = neutral                                 -1 = out of favour
+#   -2 = heavily sold
+# =============================================================================
+
+note: "Indicative rotation read from market history — a learning tool, not fund-flow data."
+
+# Buckets shown as rows in the heat-map, in display order.
+buckets:
+  - {key: US,     label: "US equities"}
+  - {key: EU,     label: "Europe"}
+  - {key: JP,     label: "Japan"}
+  - {key: EM,     label: "Emerging markets"}
+  - {key: IN,     label: "India"}
+  - {key: COMMOD, label: "Commodities / energy"}
+  - {key: GOLD,   label: "Gold"}
+  - {key: CASH,   label: "Cash & US dollar"}
+
+periods:
+  - period: "2011–12"
+    mood: risk-off
+    into: ["Gold", "US Treasuries", "US dollar"]
+    out_of: ["Europe", "Emerging markets"]
+    why: "Euro-zone debt crisis. Gold hit then-record highs (~$1,900) as investors fled anything risky."
+    signals: {US: 0, EU: -2, JP: 0, EM: -1, IN: -1, COMMOD: 0, GOLD: 2, CASH: 1}
+
+  - period: "2013"
+    mood: risk-off
+    into: ["US equities", "US dollar"]
+    out_of: ["Emerging markets", "Gold"]
+    why: "The 'taper tantrum' — the Fed hinted it would slow stimulus. Money rushed home to the US; the rupee crashed and gold fell hard."
+    signals: {US: 2, EU: 0, JP: 1, EM: -2, IN: -2, COMMOD: -1, GOLD: -2, CASH: 1}
+
+  - period: "2014–15"
+    mood: risk-on
+    into: ["US equities", "US dollar"]
+    out_of: ["Commodities", "Emerging markets", "Gold"]
+    why: "A strong-dollar US bull market. Oil collapsed from $100 to under $30, commodity exporters suffered, gold drifted lower."
+    signals: {US: 2, EU: 0, JP: 1, EM: -2, IN: 0, COMMOD: -2, GOLD: -1, CASH: 1}
+
+  - period: "2016–17"
+    mood: risk-on
+    into: ["Emerging markets", "Commodities", "Global equities"]
+    out_of: ["Cash", "US dollar"]
+    why: "Synchronised global growth — the rare year everything worked. Money spread out into EM and cyclicals; India rallied hard."
+    signals: {US: 1, EU: 1, JP: 1, EM: 2, IN: 2, COMMOD: 2, GOLD: 0, CASH: -2}
+
+  - period: "2018"
+    mood: risk-off
+    into: ["Cash", "US dollar"]
+    out_of: ["Emerging markets", "Tech"]
+    why: "The Fed hiked four times and the US–China trade war began. Risk assets sold off; investors hid in cash and the dollar."
+    signals: {US: -1, EU: -1, JP: -1, EM: -2, IN: -1, COMMOD: -1, GOLD: 0, CASH: 2}
+
+  - period: "2019"
+    mood: risk-on
+    into: ["Equities", "Gold"]
+    out_of: ["Cash"]
+    why: "The Fed pivoted to cutting rates. Both stocks AND gold rose — falling rates lift gold by making cash less rewarding to hold."
+    signals: {US: 2, EU: 1, JP: 0, EM: 1, IN: 1, COMMOD: 0, GOLD: 2, CASH: -1}
+
+  - period: "2020"
+    mood: mixed
+    into: ["US big-tech", "Gold", "Everything (stimulus)"]
+    out_of: ["Cash", "Value stocks"]
+    why: "COVID crash, then a flood of central-bank money. A barbell year: money piled into US tech AND gold (a record ~$2,075)."
+    signals: {US: 2, EU: 0, JP: 0, EM: 1, IN: 1, COMMOD: -1, GOLD: 2, CASH: -1}
+
+  - period: "2021"
+    mood: risk-on
+    into: ["Cyclicals", "Commodities", "Crypto"]
+    out_of: ["Bonds", "Safe havens"]
+    why: "Reopening and reflation. Money chased value, commodities and speculative assets; gold went sideways all year."
+    signals: {US: 2, EU: 1, JP: 0, EM: 1, IN: 2, COMMOD: 2, GOLD: -1, CASH: -2}
+
+  - period: "2022"
+    mood: risk-off
+    into: ["US dollar", "Energy", "Cash"]
+    out_of: ["Tech", "Bonds", "Emerging markets"]
+    why: "The worst inflation in 40 years and the fastest Fed hikes in decades. Almost everything fell except the dollar and energy."
+    signals: {US: -2, EU: -2, JP: -1, EM: -2, IN: 0, COMMOD: 2, GOLD: 0, CASH: 2}
+
+  - period: "2023"
+    mood: risk-on
+    into: ["US mega-cap tech (the 'Magnificent 7')", "Gold"]
+    out_of: ["Small caps", "China"]
+    why: "The AI boom. Leadership narrowed to a handful of US giants, while gold quietly climbed on rate-cut hopes."
+    signals: {US: 2, EU: 0, JP: 2, EM: -1, IN: 1, COMMOD: -1, GOLD: 1, CASH: 0}
+
+  - period: "2024"
+    mood: mixed
+    into: ["Gold", "US tech", "Japan"]
+    out_of: ["Cash (as rate cuts began)", "China"]
+    why: "Rate cuts began and central banks bought gold in record size. Gold hit fresh highs alongside US tech — a risk-and-safety barbell."
+    signals: {US: 2, EU: 0, JP: 2, EM: -1, IN: 1, COMMOD: 0, GOLD: 2, CASH: -1}
+
+  - period: "2025–26"
+    mood: mixed
+    into: ["Gold", "Cheap markets / EM value", "Broadening beyond US tech"]
+    out_of: ["Over-concentrated US mega-caps"]
+    why: "Record gold on central-bank buying and de-dollarisation, plus early signs of money broadening out toward cheaper markets away from crowded US tech."
+    signals: {US: 0, EU: 1, JP: 1, EM: 1, IN: 0, COMMOD: 1, GOLD: 2, CASH: -1}
+
+# Curated 'now' snapshot (the live news overlay can nuance the mood each day).
+current:
+  mood: mixed
+  summary: "Money is split between crowded, expensive US tech and record-high gold — investors want growth but are hedging their bets. The thing to watch is whether it broadens toward cheaper markets."

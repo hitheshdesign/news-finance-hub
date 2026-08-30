@@ -1,21 +1,20 @@
 # =============================================================================
-# MONEY ROTATION — an INDICATIVE, EDUCATIONAL map of where the world's big money
-# has rotated over the years, and when it ran to GOLD for safety.
+# MONEY ROTATION — where the world's big money moved, and WHY.
 #
-# Built from market history and well-documented flows — NOT precise fund-flow
-# data (which isn't free). It's here so you can SEE the pattern: money rotates
-# between risk (equities, the hot market of the day) and safety (gold, the
-# dollar, bonds) as fear and greed take turns.
+# INDICATIVE & EDUCATIONAL. Built from market history and well-documented
+# flows, not from paid fund-flow data. Each period answers four questions:
+#   trigger   — what actually happened
+#   mechanism — WHY that made capital move (the cause-and-effect chain)
+#   india     — what it meant here at home
+#   lesson    — the repeatable pattern to remember
 #
-# `signals` drives the heat-map. One entry per bucket:
-#    2 = strongly favoured (money piling in)      1 = mildly favoured
-#    0 = neutral                                 -1 = out of favour
-#   -2 = heavily sold
+# `signals` drives the heat-map:
+#    2 = money piling in   1 = favoured   0 = neutral
+#   -1 = out of favour    -2 = heavily sold
 # =============================================================================
 
-note: "Indicative rotation read from market history — a learning tool, not fund-flow data."
+note: "Indicative reading of market history — a learning tool, not fund-flow data."
 
-# Buckets shown as rows in the heat-map, in display order.
 buckets:
   - {key: US,     label: "US equities"}
   - {key: EU,     label: "Europe"}
@@ -27,91 +26,150 @@ buckets:
   - {key: CASH,   label: "Cash & US dollar"}
 
 periods:
-  - period: "2011–12"
+  - period: "2011-12"
     mood: risk-off
+    headline: "Europe nearly broke apart, and gold became the world's panic button"
     into: ["Gold", "US Treasuries", "US dollar"]
     out_of: ["Europe", "Emerging markets"]
-    why: "Euro-zone debt crisis. Gold hit then-record highs (~$1,900) as investors fled anything risky."
+    trigger: "Greece could not pay its debts, and investors began asking whether Italy and Spain could either. For a while it looked like the euro itself might not survive."
+    mechanism: "When people doubt whether a government will repay - or whether a currency will even exist - they stop hunting for returns and start hunting for safety. Money left European bank shares and government bonds for the three things with no default risk: gold, US government debt, and dollars. Gold has no government behind it that can go bankrupt, which is precisely why it gets bought when governments look shaky. It hit a then-record of about $1,900."
+    india: "India was hit sideways. In a panic, foreign investors sell their riskier holdings first, and India sits in that bucket. Money left Indian stocks and the rupee weakened past 50 to the dollar for the first time."
+    lesson: "Fear does not spread evenly, but it does spread widely. When trouble hits one region, money still leaves ALL risky markets - including ones with nothing to do with the problem. That is why India can fall on European news."
     signals: {US: 0, EU: -2, JP: 0, EM: -1, IN: -1, COMMOD: 0, GOLD: 2, CASH: 1}
 
   - period: "2013"
     mood: risk-off
+    headline: "The Fed hinted it would print less, and emerging markets were punished first"
     into: ["US equities", "US dollar"]
     out_of: ["Emerging markets", "Gold"]
-    why: "The 'taper tantrum' — the Fed hinted it would slow stimulus. Money rushed home to the US; the rupee crashed and gold fell hard."
+    trigger: "The US Federal Reserve suggested it might slow the money-printing programme it had run since the 2008 crisis. It did not actually stop - it merely said it might. Markets convulsed anyway. The episode was nicknamed the 'taper tantrum'."
+    mechanism: "Years of cheap US money had flowed abroad hunting better returns, and much of it landed in emerging markets. The moment US interest rates looked like they might rise, that trade reversed: why hold Indian or Brazilian risk if safe US bonds will soon pay more? Money rushed home to America. Gold fell hard for the same reason - it pays no interest, so it looks worse the instant safe bonds start paying more."
+    india: "India was labelled one of the 'Fragile Five' - the economies most dependent on foreign money. The rupee collapsed from about 55 to 68 per dollar within months, and the RBI had to raise rates sharply to defend it."
+    lesson: "This is the single most important pattern for an Indian investor: US rates up, dollar stronger, foreign money leaves India, rupee falls. The Fed does not even have to act - a hint is enough."
     signals: {US: 2, EU: 0, JP: 1, EM: -2, IN: -2, COMMOD: -1, GOLD: -2, CASH: 1}
 
-  - period: "2014–15"
+  - period: "2014-15"
     mood: risk-on
+    headline: "Oil collapsed and the dollar surged - a gift for India, brutal for exporters"
     into: ["US equities", "US dollar"]
     out_of: ["Commodities", "Emerging markets", "Gold"]
-    why: "A strong-dollar US bull market. Oil collapsed from $100 to under $30, commodity exporters suffered, gold drifted lower."
+    trigger: "American shale drilling flooded the world with oil and OPEC refused to cut production to defend the price. Crude fell from over $100 to under $30 a barrel, while the US economy recovered as Europe and Japan were still printing money."
+    mechanism: "When one economy strengthens while others still stimulate, money flows to the strong one - so the dollar rose against nearly everything. A rising dollar mechanically drags commodities down, because they are priced in dollars: a stronger dollar buys more oil, so the oil price falls. Countries that sell commodities - Brazil, Russia, South Africa - lost their main source of income at the same time their currencies fell."
+    india: "One of the best macro windows India has ever had. India imports about 85% of its oil, so collapsing crude shrank the import bill, cooled inflation and let the RBI cut rates. India strongly outperformed other emerging markets - proof that 'emerging markets' is not one single trade."
+    lesson: "Cheap oil is a direct transfer of wealth from the countries that sell it to the countries that buy it. India is one of the world's biggest buyers, so falling crude works like a free stimulus for us."
     signals: {US: 2, EU: 0, JP: 1, EM: -2, IN: 0, COMMOD: -2, GOLD: -1, CASH: 1}
 
-  - period: "2016–17"
+  - period: "2016-17"
     mood: risk-on
+    headline: "The one stretch where everything worked, and money finally spread out"
     into: ["Emerging markets", "Commodities", "Global equities"]
     out_of: ["Cash", "US dollar"]
-    why: "Synchronised global growth — the rare year everything worked. Money spread out into EM and cyclicals; India rallied hard."
+    trigger: "For the first time since 2008, the US, Europe, China and Japan all grew together. Interest rates were still near zero and inflation stayed low."
+    mechanism: "When growth is broad and money is cheap, investors stop hiding. Cash pays nothing, so holding it actually costs you. Capital fans out from the safest assets into riskier, higher-return ones - smaller markets, cyclical industries, commodities. This is the textbook 'risk-on' phase, and emerging markets usually lead it because they were the most beaten-down going in."
+    india: "Indian markets rallied strongly and foreign inflows returned in size. Domestic reforms - GST and the bankruptcy code - gave foreign investors an extra reason to prefer India within the emerging-market basket."
+    lesson: "Emerging markets do best when global growth is broad and the dollar is flat or weak. Check the dollar's direction before assuming an India rally is purely about India."
     signals: {US: 1, EU: 1, JP: 1, EM: 2, IN: 2, COMMOD: 2, GOLD: 0, CASH: -2}
 
   - period: "2018"
     mood: risk-off
+    headline: "Rate rises plus a trade war pushed money back into cash"
     into: ["Cash", "US dollar"]
     out_of: ["Emerging markets", "Tech"]
-    why: "The Fed hiked four times and the US–China trade war began. Risk assets sold off; investors hid in cash and the dollar."
+    trigger: "The Fed raised interest rates four times in a single year while withdrawing money from the system, and the US began imposing tariffs on Chinese goods."
+    mechanism: "Two forces squeezed at once. Higher US rates made safe cash genuinely rewarding again, so there was less reason to hold anything risky. The trade war added a problem investors could not price: tariffs threaten the profits of any company that manufactures in one country and sells in another - which is most large companies. When a risk is political rather than financial, investors tend to reduce exposure rather than try to forecast it."
+    india: "Foreign investors were net sellers of Indian equities. Crude also climbed to about $85, widening India's trade gap and pushing the rupee to a then-record low near 74."
+    lesson: "Tightening money and rising political risk together are the worst combination for emerging markets. Cash stops being 'dead money' the moment rates rise."
     signals: {US: -1, EU: -1, JP: -1, EM: -2, IN: -1, COMMOD: -1, GOLD: 0, CASH: 2}
 
   - period: "2019"
     mood: risk-on
+    headline: "The Fed reversed course, and shares AND gold rose together"
     into: ["Equities", "Gold"]
     out_of: ["Cash"]
-    why: "The Fed pivoted to cutting rates. Both stocks AND gold rose — falling rates lift gold by making cash less rewarding to hold."
+    trigger: "After the 2018 sell-off, and with the trade war dragging on, the Fed stopped raising rates and began cutting them instead."
+    mechanism: "Rate cuts help two very different assets at once, which is why this year confuses people. Shares rise because borrowing gets cheaper and future profits are valued more highly today. Gold rises because it competes with cash and bonds: when safe assets pay less interest, holding gold - which pays none - costs you less. So falling rates can lift the risky asset and the safe haven simultaneously."
+    india: "Indian large caps did well, though a crisis among shadow banks (NBFCs, lenders that are not full banks) kept domestic credit tight and held mid- and small-caps back."
+    lesson: "'Shares up' and 'gold up' are not a contradiction. Ask what interest rates are doing - falling rates can lift both at the same time."
     signals: {US: 2, EU: 1, JP: 0, EM: 1, IN: 1, COMMOD: 0, GOLD: 2, CASH: -1}
 
   - period: "2020"
     mood: mixed
+    headline: "A crash, then the largest money-printing in history - money split between tech and gold"
     into: ["US big-tech", "Gold", "Everything (stimulus)"]
     out_of: ["Cash", "Value stocks"]
-    why: "COVID crash, then a flood of central-bank money. A barbell year: money piled into US tech AND gold (a record ~$2,075)."
+    trigger: "COVID shut down the world economy and markets fell about a third in five weeks. Central banks and governments then responded with the biggest stimulus ever attempted."
+    mechanism: "All that new money had to go somewhere, and it split in two directions. Half chased the few businesses that actually benefited from lockdowns - software, e-commerce, streaming - pushing US technology to extreme valuations. The other half feared that printing this much money would eventually erode the currency's value, and bought gold as insurance, taking it to a record of about $2,075. Holding both at once is called a barbell: one end bets on growth, the other insures against the cost of creating it."
+    india: "The Nifty fell about 38% in March and fully recovered within the year. More importantly, this is when millions of new Indian retail investors began SIPs - building a domestic buying base that has cushioned every foreign sell-off since."
+    lesson: "Printing money lifts almost all assets, but never equally. It rewards whoever is closest to the new money and quietly punishes anyone holding plain cash."
     signals: {US: 2, EU: 0, JP: 0, EM: 1, IN: 1, COMMOD: -1, GOLD: 2, CASH: -1}
 
   - period: "2021"
     mood: risk-on
+    headline: "Reopening euphoria - money chased anything cyclical or speculative"
     into: ["Cyclicals", "Commodities", "Crypto"]
     out_of: ["Bonds", "Safe havens"]
-    why: "Reopening and reflation. Money chased value, commodities and speculative assets; gold went sideways all year."
+    trigger: "Vaccines arrived, economies reopened, and enormous stimulus was still in the system. Supply chains could not keep up with the rebound in demand."
+    mechanism: "Reopening favours the opposite companies to lockdown: banks, energy, travel and industrials - the 'cyclicals' whose profits swing with the economy. Shortages pushed commodity prices sharply higher. With rates still near zero, savers had no safe income anywhere, which pushed money into steadily more speculative corners. Gold went sideways all year despite rising inflation, because expectations of rate rises were building - the tug-of-war that usually decides gold's direction."
+    india: "A blockbuster year: the Nifty rose about 24%, a record number of companies listed, and retail participation exploded. Valuations moved well above their historical averages and have largely stayed there since."
+    lesson: "Cheap money inflates the most speculative assets the most. When safe savings pay nothing, risk gets systematically underpriced."
     signals: {US: 2, EU: 1, JP: 0, EM: 1, IN: 2, COMMOD: 2, GOLD: -1, CASH: -2}
 
   - period: "2022"
     mood: risk-off
+    headline: "Inflation returned, rates rose fastest in 40 years, and almost everything fell"
     into: ["US dollar", "Energy", "Cash"]
     out_of: ["Tech", "Bonds", "Emerging markets"]
-    why: "The worst inflation in 40 years and the fastest Fed hikes in decades. Almost everything fell except the dollar and energy."
+    trigger: "Inflation hit 40-year highs, the Fed raised rates at the fastest pace in decades, and Russia invaded Ukraine, sending energy prices soaring."
+    mechanism: "This was the year the usual safety net failed. Normally when shares fall, bonds rise and cushion the blow. In 2022 rising rates crushed both at once - the worst year for a balanced portfolio in generations. Higher rates hurt fast-growing technology companies most, because their value rests on profits far in the future, and future profits are worth less when rates are high. The dollar surged as US rates outpaced everyone else's, and energy was the only major winner."
+    india: "India held up remarkably well in local terms - the Nifty was roughly flat while global markets fell more than 20% - because steady domestic SIP inflows absorbed heavy foreign selling. But the rupee fell past 83, so returns measured in dollars were far worse than they looked in rupees."
+    lesson: "Interest rates are gravity for asset prices. When they rise fast, almost everything falls together - and spreading money across shares and bonds may not save you."
     signals: {US: -2, EU: -2, JP: -1, EM: -2, IN: 0, COMMOD: 2, GOLD: 0, CASH: 2}
 
   - period: "2023"
     mood: risk-on
+    headline: "AI narrowed the whole market down to a handful of giants"
     into: ["US mega-cap tech (the 'Magnificent 7')", "Gold"]
     out_of: ["Small caps", "China"]
-    why: "The AI boom. Leadership narrowed to a handful of US giants, while gold quietly climbed on rate-cut hopes."
+    trigger: "ChatGPT triggered a scramble to invest in artificial intelligence, while China's post-COVID recovery failed to arrive and its property crisis deepened."
+    mechanism: "Investors decided only a few very large companies had the chips, data and cash to win at AI, so money concentrated into roughly seven US names that drove most of the index's gain. The rest of the market barely moved. Gold climbed quietly too - partly on expectations that rate rises were ending, and partly because central banks, especially in Asia, were buying it in record size to reduce their dependence on the dollar."
+    india: "India became the preferred emerging market as investors trimmed China exposure - the 'China+1' idea expressed through portfolios. Indian mid- and small-caps ran hard, pushing valuations to demanding levels."
+    lesson: "An index going up does not mean the market is going up. Check whether gains are broad or concentrated in a few names, because narrow rallies are far more fragile."
     signals: {US: 2, EU: 0, JP: 2, EM: -1, IN: 1, COMMOD: -1, GOLD: 1, CASH: 0}
 
   - period: "2024"
     mood: mixed
+    headline: "Rate cuts began and central banks bought gold in record size"
     into: ["Gold", "US tech", "Japan"]
     out_of: ["Cash (as rate cuts began)", "China"]
-    why: "Rate cuts began and central banks bought gold in record size. Gold hit fresh highs alongside US tech — a risk-and-safety barbell."
+    trigger: "Inflation cooled enough for central banks to start cutting rates, while central banks themselves - led by China, India, Turkey and Poland - bought gold at the fastest pace on record."
+    mechanism: "Two very different buyers pushed gold to fresh highs. Ordinary investors bought because falling rates reduce the appeal of holding cash. Central banks bought for another reason entirely: after Russia's foreign reserves were frozen in 2022, countries realised that dollar reserves can be switched off by another government. Gold cannot be frozen, so they have been swapping dollars for it - steady buying that is indifferent to the daily price. Japan meanwhile rose on genuine corporate reform."
+    india: "India kept attracting strong domestic flows. Gold in rupee terms hit repeated records, helped both by the global price and by a gently weakening rupee - a reminder that Indian gold returns combine two moving parts."
+    lesson: "Gold is no longer driven only by fear and interest rates. Central-bank buying to reduce dollar dependence is a slow, structural bid sitting underneath the price."
     signals: {US: 2, EU: 0, JP: 2, EM: -1, IN: 1, COMMOD: 0, GOLD: 2, CASH: -1}
 
-  - period: "2025–26"
+  - period: "2025-26"
     mood: mixed
+    headline: "Record gold, crowded US tech, and the first signs of money broadening out"
     into: ["Gold", "Cheap markets / EM value", "Broadening beyond US tech"]
     out_of: ["Over-concentrated US mega-caps"]
-    why: "Record gold on central-bank buying and de-dollarisation, plus early signs of money broadening out toward cheaper markets away from crowded US tech."
+    trigger: "US valuations reached levels seen only in 1929 and 1999, tariffs and trade barriers returned as everyday policy tools, and central banks kept buying gold while questions grew about the scale of US government debt."
+    mechanism: "Two opposite forces are running at once, which is why the picture looks contradictory. Money keeps flowing to US technology because that is where the profits and the AI investment are - but the price being paid is now extreme. The same investors are simultaneously hedging, buying gold in case inflation, debt or currency trouble returns. When a market becomes this concentrated, even a modest rotation out of the giants can move a lot of money into cheaper markets quickly - which makes the crowding itself the main risk."
+    india: "India sits awkwardly in the middle: an excellent long-term growth story, but one of the world's most expensive markets. Domestic SIP flows keep supporting prices, while foreign investors increasingly ask whether the growth justifies the premium over much cheaper Asian markets."
+    lesson: "When money chases and hedges at the same time, it is telling you conviction is low. The real danger in a crowded trade is not that the story is wrong - it is that everyone already owns it."
     signals: {US: 0, EU: 1, JP: 1, EM: 1, IN: 0, COMMOD: 1, GOLD: 2, CASH: -1}
 
-# Curated 'now' snapshot (the live news overlay can nuance the mood each day).
+# Where things stand now, and what would change the picture.
 current:
   mood: mixed
-  summary: "Money is split between crowded, expensive US tech and record-high gold — investors want growth but are hedging their bets. The thing to watch is whether it broadens toward cheaper markets."
+  summary: "Money is split between crowded, expensive US technology and record-high gold - investors want the growth but are hedging their bets. The open question is whether it broadens toward cheaper markets."
+  where_we_are: "US shares are near their most expensive levels in a century, and a handful of AI companies drive most of the gains. At the same time gold keeps setting records - a combination that says investors are chasing returns and buying insurance at once. India is expensive too, held up by strong domestic SIP flows rather than by foreign buying."
+  what_could_change:
+    - "Rate cuts continue and inflation stays calm: money usually broadens out from the giants into cheaper markets and smaller companies. Historically good for India and other emerging markets."
+    - "Inflation returns and rate cuts stop: the 2022 pattern repeats - expensive, fast-growing shares fall hardest, the dollar strengthens, and foreign money leaves India."
+    - "Tariffs and trade barriers widen: global supply chains get costlier and exporters suffer, while money favours economies driven by their own domestic demand. India's large home market is a relative shelter here."
+    - "A geopolitical or debt shock: gold and the dollar rise, everything risky falls together, and India falls with the rest regardless of its own fundamentals."
+  what_to_watch:
+    - "The US 10-year bond yield - the best single gauge of whether money is being pulled back toward safety"
+    - "Whether foreign investors turn net buyers of Indian equities again, or keep selling while domestic SIPs absorb it"
+    - "Central-bank gold buying - steady purchases put a floor under the price"
+    - "Whether US gains broaden beyond the handful of AI names, or narrow even further"

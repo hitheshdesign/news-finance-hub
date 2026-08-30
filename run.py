@@ -42,9 +42,18 @@ def _load_sample() -> list[dict]:
 _DEEPER_SOURCES = {"finshots", "the ken"}
 
 
-def _collect_deeper_reads(raw: list[dict], limit: int = 6) -> list[dict]:
-    """Pick out today's explainer articles (Finshots / The Ken) so we can link
-    their originals, not just our reprocessed cards."""
+def _collect_deeper_reads(raw: list[dict], events: list[dict], limit: int = 6) -> list[dict]:
+    """Explainer articles (Finshots / The Ken) that did NOT become a card.
+
+    These sources flow through the normal pipeline: if a story clears the
+    relevance bar and gets selected, it appears as a full India-impact card in
+    our own words. Whatever is left over is surfaced here as a plain link, so
+    the original write-up is still one tap away and nothing is shown twice.
+    """
+    used_urls = {u for ev in events for u in (ev.get("urls") or [])}
+    used_titles = {(it.get("title") or "").strip().lower()
+                   for ev in events for it in (ev.get("items") or [])}
+
     seen: set[str] = set()
     out: list[dict] = []
     for it in raw:
@@ -52,9 +61,12 @@ def _collect_deeper_reads(raw: list[dict], limit: int = 6) -> list[dict]:
         if src.lower() not in _DEEPER_SOURCES:
             continue
         title = (it.get("title") or "").strip()
-        if not title or title.lower() in seen:
+        key = title.lower()
+        if not title or key in seen or key in used_titles:
             continue
-        seen.add(title.lower())
+        if it.get("url") and it["url"] in used_urls:
+            continue                      # already covered as a card
+        seen.add(key)
         out.append({"title": title, "url": it.get("url", ""), "source": src})
         if len(out) >= limit:
             break
@@ -233,7 +245,6 @@ def main() -> None:
 
     # 1. INGEST
     raw = ingest_all(use_sample=args.sample)
-    deeper_reads = _collect_deeper_reads(raw)
 
     # 2. SCREEN (relevance + cluster into distinct events)
     print("[screen] applying ground rules...")
@@ -274,7 +285,7 @@ def main() -> None:
     alert_days = int(config.FILTERS.get("calendar_alert_days", 4))
     brief["calendar_alert_days"] = alert_days
     brief["calendar_alert"] = sum(1 for c in upcoming if c["days_away"] <= alert_days)
-    brief["deeper_reads"] = deeper_reads
+    brief["deeper_reads"] = _collect_deeper_reads(raw, events)
     store_brief(brief)
     track.record_predictions(brief)
 

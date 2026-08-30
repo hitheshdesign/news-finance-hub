@@ -122,8 +122,8 @@ _PANEL_FIELDS = (
     "name", "index", "region", "valuation", "cape_now", "cape_avg", "cape_pct",
     "pb", "div_yield", "roe", "top10_weight", "govt_debt_gdp", "rule_of_law",
     "demographics", "worst_drawdown", "er_growth", "er_dividend", "er_valuation",
-    "er_currency", "currency_note", "access", "risks", "tailwinds", "headwinds",
-    "outlook", "verdict", "india_angle", "news",
+    "er_currency", "currency_note", "access", "economy", "sectors",
+    "upside", "downside", "outlook", "verdict", "india_angle", "news",
 )
 
 
@@ -180,7 +180,8 @@ def render_global(gdata: dict) -> str:
 
     js_map = {code: {k: c.get(k) for k in _PANEL_FIELDS}
               for code, c in covered.items()}
-    rot_json = [{"period": p.get("period"), "why": p.get("why")} for p in rotation]
+    rot_json = [{"period": p.get("period"),
+                 "why": p.get("headline") or p.get("trigger", "")} for p in rotation]
 
     page = env.from_string(global_page.GLOBAL_PAGE)
     return page.render(g=view, map_countries=map_countries, map_dots=map_dots,

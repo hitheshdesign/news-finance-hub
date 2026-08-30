@@ -2,22 +2,22 @@
 # GLOBAL MARKETS — curated country data for the Global Finance world map.
 #
 # INDICATIVE, EDUCATIONAL DATA — not live, not trading advice. Numbers are
-# rounded, curated estimates meant to teach the SHAPE of each market, not to
-# be traded on. Refresh CAPE periodically from a free source (Siblis Research).
+# rounded, curated estimates meant to teach the SHAPE of each market, not to be
+# traded on. Refresh CAPE periodically from a free source (Siblis Research).
 #
-# The fields follow the checklist a value investor (think Munger/Buffett)
-# runs before buying a whole country's index:
-#   1. What am I paying?          cape_now vs cape_avg, cape_pct, pb, div_yield
-#   2. What do I get back?        expected-return decomposition (er_*)
-#   3. In MY currency?            er_inr, currency_note  <- crucial for an Indian
-#   4. Is the business any good?  roe, top10_weight (concentration)
-#   5. Can they take it from me?  rule_of_law, governance
-#   6. What could go wrong?       risks, worst_drawdown, govt_debt_gdp
-#   7. Which way is the wind?     tailwinds / headwinds / demographics
-#   8. Can I even buy it?         access
-#   9. So what?                   verdict, india_angle
+# The fields follow the checklist a value investor runs before buying a whole
+# country's index — written so a beginner can follow the reasoning:
+#   1. What business am I actually buying?   economy, sectors
+#   2. What am I paying for it?              cape_now vs cape_avg, cape_pct, pb, div_yield
+#   3. What might I get back, in rupees?     er_* decomposition, currency_note
+#   4. Are these good businesses?            roe, top10_weight
+#   5. Can they take it from me?             rule_of_law
+#   6. What breaks it / what lifts it?       downside, upside, worst_drawdown
+#   7. Can I even buy it?                    access
+#   8. So what?                              verdict, india_angle
 #
 # valuation: cheap | fair | expensive  -> drives the map colour
+# sectors:   weights are approximate index weights, biggest first
 # =============================================================================
 
 updated: "2026-08 (indicative; refresh CAPE periodically)"
@@ -37,21 +37,34 @@ markets:
     roe: 19
     top10_weight: 38
     govt_debt_gdp: 123
-    rule_of_law: "Very strong — deep legal protection for minority shareholders"
-    demographics: "Slow growth, propped up by immigration — better than most rich countries"
-    worst_drawdown: "−57% (2007–09)"
+    rule_of_law: "Very strong. Courts protect small shareholders, and company accounts are trustworthy."
+    demographics: "Growing slowly, helped by immigration — better than most rich countries."
+    worst_drawdown: "Fell 57% in 2007-09; took about 5 years to recover"
+    economy: "The world's innovation engine. It sells software, chips, medicines, films and financial services — high-margin things the rest of the world struggles to replace."
+    sectors:
+      - {name: "Technology & AI", weight: 34, note: "Apple, Microsoft, Nvidia — the profit engine, and the concentration risk"}
+      - {name: "Financials", weight: 13, note: "Big banks and insurers; do well when rates are high but stable"}
+      - {name: "Healthcare", weight: 11, note: "Drug makers with patents — steady, defensive earnings"}
+      - {name: "Consumer", weight: 20, note: "Amazon, Walmart, Tesla — rides on US consumer spending"}
+      - {name: "Industrials & energy", weight: 16, note: "Aerospace, machinery, oil majors"}
     er_growth: 6.0
     er_dividend: 1.2
     er_valuation: -4.0
     er_currency: -1.5
-    currency_note: "The rupee has weakened ~3%/yr vs the dollar over decades, which ADDS to an Indian investor's dollar returns. That tailwind is the main reason US exposure has worked so well from India."
-    access: "Easy — via Indian international mutual funds/FoFs, or directly under the RBI's $250k/yr LRS window."
-    risks: ["Roughly a third of the index sits in a handful of AI/tech giants", "Valuation is in its top ~2% ever — little room for error", "Government debt at 123% of GDP", "Profit margins are at record highs and may mean-revert"]
-    tailwinds: ["The world's best businesses and deepest capital markets", "AI-driven earnings and capex boom", "Dollar's reserve-currency status"]
-    headwinds: ["Near-record CAPE historically precedes weak 10-yr returns", "Extreme concentration risk", "High bar for further re-rating"]
-    outlook: "Superb businesses at a demanding price. You are paying for quality and for the AI story — expect the next decade's returns to come from earnings, not from the multiple going higher."
-    verdict: "Wonderful companies, unwonderful price. Own it for quality, not for value — and size the position knowing a de-rating would hurt."
-    india_angle: "US rate cuts push money toward India; a US sell-off drags Nifty down with it via FII outflows. The US is the tide that moves India's boat."
+    currency_note: "The rupee has weakened roughly 3% a year against the dollar for decades. For you that is a BONUS on top of US returns: the same dollars buy more rupees later. This currency tailwind is the main reason US funds have worked so well from India."
+    access: "Easy. Indian mutual funds that invest in US indices, or directly under the RBI's $250,000-a-year overseas limit (called LRS)."
+    upside:
+      - "AI genuinely raises company profits, justifying today's prices"
+      - "Interest rates fall while the economy avoids a recession"
+      - "Its best businesses keep earning far more on each rupee invested than rivals"
+    downside:
+      - "A third of the index sits in a handful of AI names — if that story stumbles, the whole index falls"
+      - "Profit margins are at record highs and could drift back to normal"
+      - "At this price, even good news may already be paid for"
+      - "Government debt at 123% of GDP could eventually force higher taxes or rates"
+    outlook: "Superb businesses at a demanding price. Over the next decade the returns are likely to come from profits growing, not from investors agreeing to pay even more."
+    verdict: "You are buying the world's best companies — but at one of the highest prices in history. Buffett's rule applies here: a wonderful business at a poor price is still a poor investment. Own it for quality and for the rupee tailwind, not because it looks cheap, and expect a bumpy decade rather than a repeat of the last one."
+    india_angle: "When US rates fall, money flows toward India; when the US sells off, foreign investors pull money out of Nifty too. The US is the tide that moves India's boat."
 
   - code: CA
     name: "Canada"
@@ -66,25 +79,34 @@ markets:
     roe: 13
     top10_weight: 36
     govt_debt_gdp: 106
-    rule_of_law: "Very strong"
-    demographics: "Growing via high immigration — a rarity in the developed world"
-    worst_drawdown: "−50% (2008)"
+    rule_of_law: "Very strong. Stable institutions and reliable company accounts."
+    demographics: "Growing through high immigration — unusual for a rich country."
+    worst_drawdown: "Fell about 50% in 2008"
+    economy: "Sells raw materials to the world — oil, gas, timber, potash — and runs a highly protected banking system at home."
+    sectors:
+      - {name: "Banks & financials", weight: 32, note: "Five big banks dominate; very profitable, but tied to house prices"}
+      - {name: "Energy", weight: 18, note: "Oil sands and gas — earnings swing with the crude price"}
+      - {name: "Materials & mining", weight: 12, note: "Gold, potash, timber"}
+      - {name: "Industrials", weight: 13, note: "Railways moving all those commodities"}
     er_growth: 4.5
     er_dividend: 2.9
     er_valuation: -1.0
     er_currency: -1.0
-    currency_note: "The Canadian dollar tracks oil. A commodity slump hits both the index and the currency at once — a double blow for a foreign holder."
-    access: "Easy via global/international funds; rarely a standalone allocation."
-    risks: ["Some of the world's highest household debt and stretched housing", "Banks + energy are most of the index", "Fortunes tied to US demand"]
-    tailwinds: ["Strong dividends", "Resource wealth", "Rule of law and stable institutions"]
-    headwinds: ["Housing-led consumer slowdown", "Commodity-cycle exposure"]
-    outlook: "A steady, dividend-rich, resource-and-banks market. Fairly priced, unlikely to shoot the lights out either way."
-    verdict: "Reasonable and boring — the kind of market you own for income, not excitement. Watch the housing debt."
-    india_angle: "A useful read on global oil/commodity demand, which flows straight into India's import bill and inflation."
+    currency_note: "The Canadian dollar rises and falls with oil. If crude slumps, you lose twice — the shares fall AND the currency falls."
+    access: "Usually inside a global fund rather than as a standalone holding."
+    upside:
+      - "Higher oil and commodity prices lift both earnings and the currency"
+      - "Immigration keeps the economy growing while other rich countries shrink"
+    downside:
+      - "Households carry some of the world's heaviest debt — a housing wobble would hit the banks that dominate the index"
+      - "Almost everything depends on US demand"
+    outlook: "A steady, dividend-paying, resources-and-banks market. Fairly priced, unlikely to surprise dramatically in either direction."
+    verdict: "A sensible, slightly dull market you would own for income rather than growth. The one thing to keep an eye on is household debt: the banks are the biggest part of the index, and their fortunes are tied to Canadian house prices."
+    india_angle: "A useful gauge of global oil demand — the same crude prices that decide India's import bill and inflation."
 
   - code: BR
     name: "Brazil"
-    index: "Bovespa (Ibovespa)"
+    index: "Ibovespa"
     region: "Americas"
     valuation: cheap
     cape_now: 11
@@ -95,21 +117,32 @@ markets:
     roe: 14
     top10_weight: 48
     govt_debt_gdp: 88
-    rule_of_law: "Moderate — functioning courts, but政 policy risk and corruption history"
-    demographics: "Young-ish but ageing faster than expected"
-    worst_drawdown: "−60%+ in dollar terms (2010s commodity bust)"
+    rule_of_law: "Moderate. Courts work, but politics interferes with state-controlled companies and corruption has a long history."
+    demographics: "Still young, but ageing faster than expected."
+    worst_drawdown: "Lost over 60% in dollar terms during the 2010s commodity bust"
+    economy: "A farm-and-mine superpower. Sells iron ore, soybeans, beef, coffee and oil — mostly to China."
+    sectors:
+      - {name: "Materials & mining", weight: 22, note: "Vale — iron ore; rises and falls with Chinese construction"}
+      - {name: "Energy", weight: 15, note: "Petrobras, state-controlled — profitable but politically steered"}
+      - {name: "Banks & financials", weight: 30, note: "Very profitable, protected by high interest rates"}
+      - {name: "Consumer & utilities", weight: 20, note: "Domestic demand, sensitive to inflation"}
     er_growth: 6.0
     er_dividend: 6.5
     er_valuation: 1.5
     er_currency: -4.0
-    currency_note: "THE catch. The real has been a serial destroyer of foreign returns — a cheap market that keeps getting cheaper in dollar terms. High local returns have repeatedly been wiped out by the currency."
-    access: "Via EM/global funds; a direct standalone position is unusual for retail."
-    risks: ["Currency depreciation eating foreign returns", "Fiscal deficits and political cycles", "Heavy commodity dependence", "Concentrated index"]
-    tailwinds: ["Genuinely cheap on every measure", "Very high dividend yields", "High real interest rates", "Commodity export wealth"]
-    headwinds: ["Fiscal worries", "Political unpredictability"]
-    outlook: "Statistically one of the cheapest markets on earth, with high yields — and a currency that has historically taken much of that away."
-    verdict: "Cheap for a reason. The business math works; the currency and politics are what you're really underwriting. Munger would ask whether you trust the government more than the discount."
-    india_angle: "A commodity exporter — it tends to prosper when India (an importer) is squeezed by high oil and metals prices."
+    currency_note: "This is the catch. The Brazilian real has destroyed foreign investors' returns for decades. Local investors made money; foreigners often did not, because their gains were wiped out converting back. A cheap market that keeps getting cheaper in your currency is not a bargain."
+    access: "Through emerging-market funds; a standalone position is unusual for Indian retail investors."
+    upside:
+      - "Commodity prices rise — earnings and the currency improve together"
+      - "Interest rates fall from very high levels, lifting local shares"
+      - "One of the highest dividend yields in the world if the currency merely holds steady"
+    downside:
+      - "Currency depreciation quietly eats your returns even when the shares rise"
+      - "Government overspending and political cycles hit state-run companies like Petrobras"
+      - "A China slowdown removes its biggest customer"
+    outlook: "Statistically one of the cheapest markets on earth with genuinely high dividends — and a currency that has repeatedly taken most of it away."
+    verdict: "Cheap for real reasons. The businesses are sound and the dividends are large; what you are really underwriting is the currency and the government. Munger would ask whether you trust the state more than you like the discount — and here that is a hard question."
+    india_angle: "A commodity exporter, so it tends to do well exactly when India (a commodity importer) is being squeezed by high oil and metal prices."
 
   - code: MX
     name: "Mexico"
@@ -124,21 +157,31 @@ markets:
     roe: 15
     top10_weight: 60
     govt_debt_gdp: 53
-    rule_of_law: "Moderate — improving markets, but security and policy concerns"
-    demographics: "Young and growing — a real advantage"
-    worst_drawdown: "−55% (2008)"
+    rule_of_law: "Moderate. Business-friendly in practice, but security problems and sudden policy changes in energy."
+    demographics: "Young and growing — a genuine advantage."
+    worst_drawdown: "Fell about 55% in 2008"
+    economy: "The factory floor next door to America. Makes cars, appliances and electronics for the US, and receives huge remittances from Mexicans working there."
+    sectors:
+      - {name: "Consumer staples", weight: 30, note: "Walmex, drinks giants — steady domestic demand"}
+      - {name: "Banks & financials", weight: 20, note: "Benefit from high interest rates"}
+      - {name: "Industrials & materials", weight: 30, note: "Cement, factories — the nearshoring beneficiaries"}
+      - {name: "Telecom", weight: 12, note: "America Movil dominates"}
     er_growth: 6.0
     er_dividend: 3.4
     er_valuation: 0.0
     er_currency: -2.0
-    currency_note: "The peso is volatile but has been surprisingly resilient, supported by high interest rates and remittances."
-    access: "Via EM funds."
-    risks: ["Extremely concentrated index (top 10 ≈ 60%)", "Almost entirely dependent on US demand", "Policy and security risks"]
-    tailwinds: ["Prime nearshoring beneficiary as supply chains leave China", "Young workforce", "Low government debt"]
-    headwinds: ["US-cycle dependence", "Political interference in key sectors"]
-    outlook: "The clearest winner from factories relocating closer to the US — priced reasonably, but a narrow, US-dependent market."
-    verdict: "A good story at a fair price, but you're really making one bet: American demand. Concentration is the hidden risk."
-    india_angle: "Competes with India for the same 'China+1' manufacturing capital."
+    currency_note: "The peso is volatile but has held up better than most emerging currencies, supported by high interest rates and money sent home by workers abroad."
+    access: "Through emerging-market funds."
+    upside:
+      - "Companies keep moving factories from China to Mexico to be near US customers"
+      - "Low government debt leaves room to spend if growth slows"
+    downside:
+      - "Extremely concentrated — the ten largest companies are about 60% of the index"
+      - "If the US economy sneezes, Mexico catches a cold; there is no second customer"
+      - "Government interference in energy has spooked investors before"
+    outlook: "The clearest winner from factories relocating closer to America — reasonably priced, but a narrow market riding on a single customer."
+    verdict: "A good story at a fair price, but be honest about what you are buying: one bet on American demand, in a market where ten companies are most of the index. The nearshoring theme is real; the concentration is the hidden risk nobody mentions."
+    india_angle: "Competes with India for the same 'China+1' factory investment that both countries are chasing."
 
   # -------------------------------- EUROPE --------------------------------
   - code: GB
@@ -154,21 +197,31 @@ markets:
     roe: 13
     top10_weight: 45
     govt_debt_gdp: 101
-    rule_of_law: "Very strong — centuries of shareholder-protection law"
-    demographics: "Slow growth, ageing"
-    worst_drawdown: "−48% (2007–09)"
+    rule_of_law: "Very strong. Centuries of shareholder-protection law; the global benchmark."
+    demographics: "Slow growth, ageing population."
+    worst_drawdown: "Fell about 48% in 2007-09"
+    economy: "A global, not a British, index. Most FTSE 100 profits come from outside the UK — oil, mining, banking, tobacco and consumer brands sold worldwide."
+    sectors:
+      - {name: "Energy & materials", weight: 25, note: "Shell, BP, Rio Tinto — moves with oil and metals, not with Britain"}
+      - {name: "Financials", weight: 20, note: "HSBC and Standard Chartered earn mostly in Asia"}
+      - {name: "Consumer staples", weight: 20, note: "Unilever, Diageo — dependable global brands"}
+      - {name: "Healthcare", weight: 12, note: "AstraZeneca, GSK"}
     er_growth: 3.5
     er_dividend: 3.8
     er_valuation: -0.5
     er_currency: -1.0
-    currency_note: "Sterling is volatile but not a chronic decliner. Note the FTSE's earnings are largely global, so a weak pound often LIFTS the index."
-    access: "Via global/international funds."
-    risks: ["Sluggish domestic economy", "Old-economy index — little tech", "Commodity exposure"]
-    tailwinds: ["Cheap versus the US", "High, well-covered dividends", "Global (not just UK) earnings", "Excellent legal protections"]
-    headwinds: ["Low structural growth", "Chronic investor apathy"]
-    outlook: "A cheap, high-dividend, globally-earning developed market that the world has ignored for a decade."
-    verdict: "The classic value investor's developed market: dull, unloved, cash-generative, and cheap. Returns come from dividends, not from growth."
-    india_angle: "The FTSE is commodity- and energy-heavy, so it moves with the same oil and metal prices that drive India's inflation."
+    currency_note: "The pound moves around but is not a chronic decliner. Note the quirk: because FTSE earnings are mostly foreign, a WEAK pound often pushes the index UP."
+    access: "Through global or international funds."
+    upside:
+      - "Cheap versus the US, with dependable dividends that are well covered by profits"
+      - "Commodity prices rise, lifting the energy and mining giants"
+      - "A takeover wave — cheap, cash-generative British companies are frequent targets"
+    downside:
+      - "Very little technology and slow structural growth — this index rarely re-rates upward"
+      - "A commodity slump hits a quarter of the index directly"
+    outlook: "A cheap, high-dividend, globally-earning developed market the world has ignored for a decade."
+    verdict: "The classic value investor's developed market: unfashionable, cash-generative and cheap. Your returns will come mostly from dividends rather than growth — which is fine, provided you buy it for income and are not expecting excitement."
+    india_angle: "Commodity- and energy-heavy, so it moves with the same oil and metal prices that drive Indian inflation."
 
   - code: DE
     name: "Germany"
@@ -183,20 +236,30 @@ markets:
     roe: 12
     top10_weight: 55
     govt_debt_gdp: 63
-    rule_of_law: "Very strong"
-    demographics: "Ageing and shrinking workforce — a genuine long-term drag"
-    worst_drawdown: "−55% (2007–09)"
+    rule_of_law: "Very strong."
+    demographics: "Ageing and shrinking workforce — a real long-term drag."
+    worst_drawdown: "Fell about 55% in 2007-09"
+    economy: "Europe's factory. Sells cars, industrial machinery and chemicals — heavily to China and the US. Its model depended on cheap Russian gas, which is now gone."
+    sectors:
+      - {name: "Industrials & autos", weight: 35, note: "Siemens, Mercedes, BMW — extremely sensitive to Chinese demand"}
+      - {name: "Technology", weight: 18, note: "SAP is the standout performer"}
+      - {name: "Chemicals", weight: 10, note: "BASF — hit hardest by expensive energy"}
+      - {name: "Financials & insurance", weight: 20, note: "Allianz, Munich Re"}
     er_growth: 4.0
     er_dividend: 3.0
     er_valuation: -0.5
     er_currency: -1.0
-    currency_note: "Euro exposure; broadly stable versus the rupee over long periods."
-    access: "Via European/global funds."
-    risks: ["Export and manufacturing dependence", "High energy costs since losing cheap Russian gas", "Deep exposure to Chinese demand", "Ageing workforce"]
-    tailwinds: ["World-class industrial and engineering firms", "Low government debt", "Reasonable valuation"]
-    headwinds: ["Structural energy-cost disadvantage", "China slowdown hits its exporters hardest"]
-    outlook: "Fairly priced world-class industrials facing real structural headwinds in energy and demographics."
-    verdict: "Good companies, difficult neighbourhood. The energy-cost problem is structural, not cyclical — that's the thing to watch."
+    currency_note: "Euro exposure; broadly stable against the rupee over long periods."
+    access: "Through European or global funds."
+    upside:
+      - "China's economy recovers, reviving demand for German machinery and cars"
+      - "Energy prices fall back, restoring the profit margins the model was built on"
+    downside:
+      - "Expensive energy since losing cheap Russian gas is a structural, not temporary, disadvantage"
+      - "Chinese carmakers now compete directly with German ones — in China and in Europe"
+      - "A shrinking workforce caps how fast the economy can grow"
+    outlook: "Fairly priced world-class industrials facing genuine structural headwinds in energy and demographics."
+    verdict: "Excellent engineering companies in a difficult neighbourhood. The key thing most commentary misses: the energy-cost disadvantage is permanent, not cyclical, and Chinese competitors are now beating German carmakers at their own game."
     india_angle: "German industrial demand pulls Indian auto-component and engineering exporters along with it."
 
   - code: FR
@@ -212,21 +275,30 @@ markets:
     roe: 13
     top10_weight: 58
     govt_debt_gdp: 112
-    rule_of_law: "Very strong"
-    demographics: "Better birth rate than most of Europe, still ageing"
-    worst_drawdown: "−55% (2007–09)"
+    rule_of_law: "Very strong."
+    demographics: "Better birth rate than most of Europe, but still ageing."
+    worst_drawdown: "Fell about 55% in 2007-09"
+    economy: "Luxury goods, aerospace and energy. Its biggest companies sell prestige brands to wealthy consumers worldwide — increasingly Chinese ones."
+    sectors:
+      - {name: "Luxury & consumer", weight: 30, note: "LVMH, Hermes, L'Oreal — real pricing power, but tied to Chinese shoppers"}
+      - {name: "Industrials & aerospace", weight: 22, note: "Airbus, Schneider"}
+      - {name: "Energy & utilities", weight: 14, note: "TotalEnergies"}
+      - {name: "Financials", weight: 15, note: "BNP, AXA"}
     er_growth: 4.0
     er_dividend: 3.1
     er_valuation: -1.0
     er_currency: -1.0
     currency_note: "Euro exposure."
-    access: "Via European/global funds."
-    risks: ["High government debt and recurring fiscal/political friction", "Luxury demand heavily tied to Chinese consumers", "Concentrated index"]
-    tailwinds: ["Global luxury and industrial champions with real pricing power", "Strong brands and moats"]
-    headwinds: ["Fiscal strain", "China consumer weakness hits luxury"]
-    outlook: "Home to some of the world's best consumer-brand moats, priced slightly above its own average."
-    verdict: "Genuinely great franchises (the luxury names have enviable pricing power) at a full-ish price. It's a back-door bet on the Chinese consumer."
-    india_angle: "Broad European risk appetite drives global EM flows, India included."
+    access: "Through European or global funds."
+    upside:
+      - "Chinese consumers start spending on luxury again"
+      - "Its luxury brands can raise prices every year without losing customers — the definition of a strong moat"
+    downside:
+      - "Government debt at 112% of GDP with recurring political deadlock"
+      - "Luxury demand is far more cyclical than it looks — it falls hard in downturns"
+    outlook: "Home to some of the world's strongest consumer brands, priced a little above its own history."
+    verdict: "Genuinely great franchises — the luxury houses can raise prices yearly and customers still queue, which is exactly the moat Buffett looks for. Just recognise that buying France today is largely a back-door bet on the Chinese consumer."
+    india_angle: "European risk appetite drives global emerging-market flows, India included."
 
   # --------------------------------- ASIA ---------------------------------
   - code: IN
@@ -242,21 +314,33 @@ markets:
     roe: 15
     top10_weight: 45
     govt_debt_gdp: 82
-    rule_of_law: "Moderate-to-good — solid company law, slow courts, improving regulator (SEBI)"
-    demographics: "The world's best — a young, growing workforce for decades"
-    worst_drawdown: "−60% (2008)"
+    rule_of_law: "Moderate-to-good. Solid company law and an improving regulator (SEBI), but slow courts."
+    demographics: "The best in the world — a young, growing workforce for decades."
+    worst_drawdown: "Fell about 60% in 2008"
+    economy: "Driven by its own people, not by exports. Domestic banking, consumption and infrastructure do the heavy lifting; software services are the main export earner."
+    sectors:
+      - {name: "Banks & financials", weight: 33, note: "HDFC, ICICI — the single biggest bet in any India fund; a play on domestic credit growth"}
+      - {name: "IT services", weight: 13, note: "TCS, Infosys — earn in dollars, so a weak rupee helps them"}
+      - {name: "Energy & materials", weight: 15, note: "Reliance, oil marketers — squeezed when crude rises"}
+      - {name: "Consumer", weight: 20, note: "HUL, ITC — rides on rural and urban spending"}
+      - {name: "Autos & industrials", weight: 15, note: "Maruti, L&T — geared to the domestic capex cycle"}
     er_growth: 11.0
     er_dividend: 1.1
     er_valuation: -4.0
     er_currency: 0.0
-    currency_note: "Home currency — no FX risk for you. (Note the flip side: the rupee's long slide is exactly what boosts your foreign holdings.)"
+    currency_note: "Your home currency, so no exchange-rate risk here. Worth noticing the flip side: the rupee's long slow decline is exactly what boosts your foreign investments."
     access: "Direct — this is your home market."
-    risks: ["One of the most expensive large markets in the world", "Priced for years of flawless earnings delivery", "Vulnerable to FII outflows when the dollar strengthens", "Oil import dependence"]
-    tailwinds: ["Unmatched demographics", "Powerful domestic SIP inflows cushioning foreign selling", "Fast nominal GDP growth", "Formalisation and digital infrastructure"]
-    headwinds: ["Rich valuations leave no margin for error", "Crude and rupee sensitivity"]
-    outlook: "The best long-run growth story in the world, trading at a price that already assumes a lot of it comes true."
-    verdict: "Great story, high price. Growth must be delivered, not just hoped for — at this CAPE, a stumble in earnings hurts twice (lower profits AND a lower multiple)."
-    india_angle: "Home. Everything else on this map is judged against what you can already get here — and the bar is high."
+    upside:
+      - "Company profits genuinely grow at 11-13% a year, which would justify the price over time"
+      - "Domestic SIP flows keep growing, reducing dependence on foreign investors"
+      - "Crude oil stays cheap, easing inflation and the import bill"
+    downside:
+      - "One of the most expensive large markets in the world — a lot of good news is already in the price"
+      - "At this level, an earnings disappointment hurts twice: lower profits AND investors willing to pay less for them"
+      - "Oil above $100 or a sharply stronger dollar pulls foreign money out fast"
+    outlook: "The best long-run growth story in the world, trading at a price that already assumes much of it comes true."
+    verdict: "Great country, demanding price. India deserves a premium — the demographics and domestic demand are genuinely world-class — but at this level growth has to be delivered, not merely hoped for. The honest framing: you are unlikely to get rich buying India at these valuations; you get rich by owning it through the years when it is cheap and boring."
+    india_angle: "Home. Everything else on this map is judged against what you can already get here — and that bar is high."
 
   - code: CN
     name: "China"
@@ -271,21 +355,33 @@ markets:
     roe: 11
     top10_weight: 25
     govt_debt_gdp: 88
-    rule_of_law: "Weak for outside shareholders — the state can and does override company interests"
-    demographics: "Shrinking and ageing fast — a serious structural headwind"
-    worst_drawdown: "−70%+ (2007–08, and again 2021–24)"
+    rule_of_law: "Weak for outside shareholders. The state can override a company's interests, and has done so without warning."
+    demographics: "Shrinking and ageing fast — a serious structural problem."
+    worst_drawdown: "Fell over 70% in 2007-08, and again from 2021-24"
+    economy: "The world's factory, moving up the value chain. Now leads globally in electric vehicles, batteries and solar panels — while its property sector, once a third of the economy, is still deflating."
+    sectors:
+      - {name: "Financials", weight: 22, note: "State-controlled banks; cheap, but lend where the state directs"}
+      - {name: "Consumer", weight: 25, note: "Kweichow Moutai, appliance makers — waiting on a confidence recovery"}
+      - {name: "Industrials & EV", weight: 25, note: "BYD, CATL — genuinely world-leading businesses"}
+      - {name: "Technology", weight: 15, note: "Under tighter state supervision since 2021"}
     er_growth: 6.0
     er_dividend: 3.0
     er_valuation: 4.0
     er_currency: -1.0
-    currency_note: "The yuan is managed by the state — less volatile day to day, but its level is a policy decision, not a market one."
-    access: "Via EM/China funds; direct access is restricted."
-    risks: ["Property-sector debt crisis still unresolved", "Policy can wipe out an industry overnight (as education did)", "Deflation and weak consumer confidence", "Shrinking population", "Ownership often via offshore structures, not real equity"]
-    tailwinds: ["Extremely low valuations", "Vast room for stimulus", "World-leading manufacturing, EV and battery industries"]
-    headwinds: ["A deep investor-trust deficit", "Geopolitical and tariff overhang"]
-    outlook: "Genuinely cheap, genuinely troubled. The gap between its industrial strength and its stock-market performance is the puzzle."
-    verdict: "The classic value trap question: is it cheap, or is it cheap for good reason? Munger famously owned China — and equally famously, the risk here isn't the business, it's whether shareholders are allowed to keep the gains."
-    india_angle: "China stimulus lifts metals (Tata Steel, Hindalco). Global 'sell expensive India, buy cheap China' rotations are a real and recurring pressure on Nifty."
+    currency_note: "The yuan is managed by the state. Less volatile day to day, but its level is a policy decision rather than a market one."
+    access: "Through emerging-market or China funds; direct access is restricted."
+    upside:
+      - "Large-scale stimulus finally revives consumer confidence"
+      - "Valuations are so low that even modest good news could re-rate the market sharply"
+      - "Its EV, battery and solar industries are genuinely world-beating"
+    downside:
+      - "The property debt crisis is unresolved and still dragging on confidence"
+      - "Policy can destroy an industry overnight — as it did to private education in 2021"
+      - "A shrinking population caps long-term growth"
+      - "Foreign investors often own offshore shell structures, not the real company"
+    outlook: "Genuinely cheap and genuinely troubled. The gap between its industrial strength and its stock-market performance is the puzzle."
+    verdict: "The textbook value-trap question: is it cheap, or cheap for good reason? The businesses are often excellent — China builds the world's best batteries and EVs. The risk is not the business at all; it is whether shareholders are allowed to keep the profits. Munger owned China and still called governance its central issue."
+    india_angle: "China stimulus lifts metal prices and Indian steel producers. Global 'sell expensive India, buy cheap China' rotations are a real and recurring pressure on Nifty."
 
   - code: JP
     name: "Japan"
@@ -300,21 +396,32 @@ markets:
     roe: 10
     top10_weight: 30
     govt_debt_gdp: 250
-    rule_of_law: "Very strong"
-    demographics: "The developed world's worst — shrinking, rapidly ageing"
-    worst_drawdown: "−80% (1989–2003, took 34 years to recover)"
+    rule_of_law: "Very strong."
+    demographics: "The developed world's worst — shrinking and rapidly ageing."
+    worst_drawdown: "Fell 80% from 1989 and took 34 years to recover — the ultimate lesson in overpaying"
+    economy: "Precision manufacturing and automation. Sells robots, machine tools, car parts and camera sensors — the equipment other countries' factories are built from."
+    sectors:
+      - {name: "Industrials & robotics", weight: 25, note: "Fanuc, Keyence — near-monopolies in factory automation"}
+      - {name: "Autos", weight: 15, note: "Toyota — profits rise when the yen is weak"}
+      - {name: "Technology & electronics", weight: 20, note: "Sony, Tokyo Electron — critical to chip manufacturing"}
+      - {name: "Financials", weight: 15, note: "Banks finally benefiting as interest rates turn positive"}
     er_growth: 5.0
     er_dividend: 2.2
     er_valuation: 1.0
     er_currency: -1.0
-    currency_note: "The yen is the big swing factor. A weak yen flatters exporters' profits but erodes what a foreign holder actually takes home."
-    access: "Via Japan/global funds."
-    risks: ["Government debt at ~250% of GDP", "Shrinking population", "Yen volatility", "Rate normalisation could unwind global carry trades"]
-    tailwinds: ["A genuine corporate-governance revolution — buybacks, unwinding cross-holdings, pressure to raise returns", "The end of deflation", "Still below its own long-run valuation"]
-    headwinds: ["Demographic decline", "Export exposure to a global slowdown"]
-    outlook: "A rare developed market that is NOT expensive, in the middle of the most meaningful corporate reform in its modern history."
-    verdict: "The most interesting developed market right now: improving returns on capital, cheap versus its own history, and management finally being told to care about shareholders. The debt and demographics are the price of admission."
-    india_angle: "A yen carry-trade unwind can jolt global risk appetite and pull money out of EM — including India — very fast."
+    currency_note: "The yen is the big swing factor. A weak yen flatters exporters' profits but erodes what you actually take home when you convert back."
+    access: "Through Japan or global funds."
+    upside:
+      - "A real corporate governance revolution — companies are being pushed to buy back shares and stop hoarding cash"
+      - "Cheaper than its own long-run average, which is rare in the developed world today"
+      - "The end of deflation lets companies raise prices for the first time in a generation"
+    downside:
+      - "Government debt at 250% of GDP — the highest in the developed world"
+      - "A shrinking population limits how much the domestic economy can grow"
+      - "Rising Japanese rates could unwind global carry trades and jolt every market"
+    outlook: "A rare developed market that is NOT expensive, in the middle of the most meaningful corporate reform of its modern history."
+    verdict: "Arguably the most interesting developed market right now. Companies that sat on cash for thirty years are finally being forced to return it to shareholders, and the market is still cheap against its own history. The debt and demographics are the price of admission — but this is the rare case where things are getting better, not worse."
+    india_angle: "If Japanese rates rise, the global carry trade can unwind and pull money out of emerging markets — India included — very fast."
 
   - code: KR
     name: "South Korea"
@@ -329,21 +436,32 @@ markets:
     roe: 9
     top10_weight: 45
     govt_debt_gdp: 55
-    rule_of_law: "Good on paper; the 'Korea discount' comes from chaebol governance that has historically shortchanged minority holders"
-    demographics: "The world's lowest birth rate — a severe long-term problem"
-    worst_drawdown: "−73% (1997 Asian crisis)"
+    rule_of_law: "Good on paper. The 'Korea discount' comes from family-controlled conglomerates that have historically favoured the founding family over ordinary shareholders."
+    demographics: "The world's lowest birth rate — a severe long-term problem."
+    worst_drawdown: "Fell 73% in the 1997 Asian crisis"
+    economy: "Memory chips, ships, cars and culture. Samsung and SK Hynix make much of the world's memory, so the whole market swings with the chip cycle."
+    sectors:
+      - {name: "Technology & semiconductors", weight: 40, note: "Samsung and SK Hynix — the index effectively IS the memory-chip cycle"}
+      - {name: "Autos", weight: 12, note: "Hyundai, Kia — increasingly competitive globally"}
+      - {name: "Financials", weight: 12, note: "Cheap, and central to the governance-reform push"}
+      - {name: "Industrials & shipbuilding", weight: 15, note: "World leaders in LNG carriers"}
     er_growth: 7.0
     er_dividend: 2.3
     er_valuation: 2.0
     er_currency: -1.5
-    currency_note: "The won is highly cyclical — it falls hard in global risk-off episodes, exactly when the index is already falling."
-    access: "Via EM/Asia funds."
-    risks: ["Boom-bust memory-chip cycle", "The 'Korea discount' — family-controlled conglomerates and weak minority protections", "North Korea and China/US trade tension", "The lowest fertility rate on earth"]
-    tailwinds: ["Trades near book value — very cheap", "World leader in memory chips, riding AI demand", "Government-backed 'value-up' governance reform push"]
-    headwinds: ["Cyclical earnings", "Governance track record"]
+    currency_note: "The won is highly cyclical — it falls hard in global panics, exactly when the index is already falling. Two losses at once."
+    access: "Through emerging-market or Asia funds."
+    upside:
+      - "Trades near book value — you are paying roughly what the assets are worth"
+      - "AI demand keeps memory-chip prices high"
+      - "Government-backed 'value-up' reforms could finally close the governance discount"
+    downside:
+      - "Memory chips are a brutal boom-bust business; profits can halve in a year"
+      - "The governance discount has persisted for decades — reform has been promised before"
+      - "The lowest birth rate on earth caps long-term domestic growth"
     outlook: "World-class technology companies at near-book-value prices, with governance reform as the potential unlock."
-    verdict: "Cheap assets with a governance problem — if the 'value-up' reforms stick, the discount closes. That's the whole thesis, and it's a bet on culture changing."
-    india_angle: "Korea and Taiwan absorb much of the tech allocation in EM funds — the same pool of money India competes for."
+    verdict: "Cheap assets with a governance problem. The entire investment case rests on one question: will the families that control these companies start treating outside shareholders fairly? If the reforms stick, the discount closes and you do very well. That is a bet on a culture changing — which is slow and never guaranteed."
+    india_angle: "Korea and Taiwan absorb much of the technology allocation in emerging-market funds — the same pool of money India competes for."
 
   - code: TW
     name: "Taiwan"
@@ -358,21 +476,31 @@ markets:
     roe: 16
     top10_weight: 55
     govt_debt_gdp: 28
-    rule_of_law: "Strong"
-    demographics: "Ageing, very low birth rate"
-    worst_drawdown: "−60% (2000 dot-com bust)"
+    rule_of_law: "Strong."
+    demographics: "Ageing, with a very low birth rate."
+    worst_drawdown: "Fell about 60% in the 2000 dot-com bust"
+    economy: "Makes the world's most advanced computer chips. TSMC alone manufactures the processors that Apple, Nvidia and almost every AI system depend on — something no other country can currently replicate."
+    sectors:
+      - {name: "Semiconductors", weight: 55, note: "TSMC is roughly half the index by itself — this is a one-company market"}
+      - {name: "Electronics manufacturing", weight: 20, note: "Foxconn assembles the world's gadgets"}
+      - {name: "Financials", weight: 12, note: "Domestic banks and insurers"}
     er_growth: 8.0
     er_dividend: 2.7
     er_valuation: -3.0
     er_currency: -1.0
-    currency_note: "Stable currency, low government debt — financially well run."
-    access: "Via EM/Asia funds."
-    risks: ["Cross-strait geopolitical risk — a genuine tail risk with no hedge", "TSMC alone is a huge share of the index", "AI-cycle dependence"]
-    tailwinds: ["The irreplaceable heart of the world's semiconductor supply chain", "Enormous pricing power in advanced chips", "Very low government debt"]
-    headwinds: ["Rich valuation on AI optimism", "Extreme single-company concentration"]
-    outlook: "Owns the most strategically important manufacturing on earth, priced for the AI boom to continue."
-    verdict: "A wonderful business (chip-making at the frontier) with a risk you cannot diversify away or insure against. Size accordingly — this is where geopolitics, not valuation, decides the outcome."
-    india_angle: "Competes directly with India for EM tech allocations; any cross-strait scare would trigger a global risk-off that hits Nifty too."
+    currency_note: "A stable currency and very low government debt — financially one of the best-run economies anywhere."
+    access: "Through emerging-market or Asia funds."
+    upside:
+      - "AI demand keeps growing and TSMC has effectively no competitor at the cutting edge"
+      - "Enormous pricing power — customers cannot easily go elsewhere"
+      - "Very low government debt gives real financial resilience"
+    downside:
+      - "The China invasion risk is real, unhedgeable and uninsurable — no amount of analysis prices it"
+      - "One company is half the index; a TSMC stumble is a market stumble"
+      - "Already expensive on the assumption the AI boom continues"
+    outlook: "Owns the most strategically important manufacturing on earth, priced for the AI boom to keep running."
+    verdict: "A wonderful business facing a risk you cannot diversify away or insure against. Buffett bought TSMC and then sold almost immediately — and said plainly it was about location, not the business. That tells you the essential thing: here geopolitics, not valuation, decides the outcome. Size the position accordingly."
+    india_angle: "Competes with India for emerging-market technology money, and any cross-strait scare would trigger a global risk-off that hits Nifty too."
 
   - code: HK
     name: "Hong Kong"
@@ -387,21 +515,31 @@ markets:
     roe: 9
     top10_weight: 50
     govt_debt_gdp: 10
-    rule_of_law: "Weakening — historically excellent common law, but increasingly under mainland influence"
-    demographics: "Ageing, with emigration outflows"
-    worst_drawdown: "−65% (2007–08); a long grind lower 2021–24"
+    rule_of_law: "Weakening. Historically excellent British-style common law, but increasingly under mainland influence."
+    demographics: "Ageing, with people emigrating."
+    worst_drawdown: "Fell 65% in 2007-08, then ground lower from 2021-24"
+    economy: "China's financial window. The listing venue for China's biggest internet companies, plus local property and banking."
+    sectors:
+      - {name: "Technology & internet", weight: 30, note: "Tencent, Alibaba, Meituan — China's internet giants list here"}
+      - {name: "Financials", weight: 30, note: "HSBC, AIA and Chinese banks"}
+      - {name: "Property", weight: 12, note: "Local developers, hurt by high rates and weak demand"}
     er_growth: 5.0
     er_dividend: 4.0
     er_valuation: 4.5
     er_currency: -1.5
-    currency_note: "Pegged to the US dollar, so it imports US interest-rate policy whether or not that suits its economy."
-    access: "Via China/Asia funds."
-    risks: ["Effectively a leveraged bet on China's fortunes", "Erosion of legal and institutional independence", "Property-market weakness"]
-    tailwinds: ["Among the cheapest major markets in the world", "Very high dividend yields", "The listing venue for China's best-known companies"]
-    headwinds: ["The China trust deficit", "Dollar peg forces tight money at the wrong times"]
+    currency_note: "Pegged to the US dollar, so it is forced to copy US interest-rate policy whether or not that suits its own economy."
+    access: "Through China or Asia funds."
+    upside:
+      - "Among the very cheapest major markets in the world, with high dividends"
+      - "You get China's best-known internet companies at a large discount"
+      - "Any China recovery shows up here first and hardest"
+    downside:
+      - "Effectively a leveraged bet on China's fortunes and policy"
+      - "The legal independence that once justified a premium is visibly eroding"
+      - "The dollar peg forces tight money at exactly the wrong moments"
     outlook: "Deep-value pricing on China's biggest names, with the institutional advantages that once justified a premium now fading."
-    verdict: "Statistically the cheapest thing on this map. The question isn't the price — it's whether the rules stay the same for shareholders."
-    india_angle: "Cheap China/HK versus expensive India is one of the most common rotation trades in global EM portfolios."
+    verdict: "Statistically the cheapest thing on this map. The question is not the price — it is whether the rules stay the same for shareholders. Cheapness only pays if the rules that let you collect your profits hold, and that is precisely what is in question here."
+    india_angle: "Cheap China and Hong Kong versus expensive India is one of the most common rotation trades in global emerging-market portfolios."
 
   - code: ID
     name: "Indonesia"
@@ -416,21 +554,32 @@ markets:
     roe: 15
     top10_weight: 50
     govt_debt_gdp: 39
-    rule_of_law: "Moderate — improving, with resource-nationalism policy risk"
-    demographics: "Young, growing, urbanising — excellent"
-    worst_drawdown: "−65% (1997–98 Asian crisis)"
+    rule_of_law: "Moderate and improving, though resource nationalism means rules can change for foreign miners."
+    demographics: "Young, growing and urbanising — excellent."
+    worst_drawdown: "Fell 65% in the 1997-98 Asian crisis"
+    economy: "The world's nickel superpower, plus coal and palm oil. Now forcing miners to process metals locally instead of exporting raw ore, to capture more of the EV battery chain."
+    sectors:
+      - {name: "Banks & financials", weight: 45, note: "Very profitable banks — this index is mostly a bet on Indonesian lending"}
+      - {name: "Materials & mining", weight: 15, note: "Nickel for EV batteries; coal for exports"}
+      - {name: "Consumer", weight: 20, note: "Rides a young, fast-urbanising population"}
+      - {name: "Telecom", weight: 10, note: "Domestic operators"}
     er_growth: 8.0
     er_dividend: 4.2
     er_valuation: 1.5
     er_currency: -2.5
-    currency_note: "The rupiah has a long history of depreciation and crisis-time collapses — the 1998 memory is why foreign investors demand a discount."
-    access: "Via EM/ASEAN funds."
-    risks: ["Commodity-price dependence (coal, nickel, palm oil)", "Currency vulnerability in global risk-off episodes", "Resource-nationalism and policy shifts", "Bank-heavy, concentrated index"]
-    tailwinds: ["Demographics nearly as good as India's", "Central to the EV battery supply chain via nickel", "Low government debt", "High dividend yields"]
-    headwinds: ["Commodity-cycle exposure", "Currency risk"]
-    outlook: "The closest thing to 'India ten years ago' — young, growing, resource-rich, and considerably cheaper."
-    verdict: "The strongest value-plus-growth combination in Asia if you can tolerate the currency. Munger's test would be the quality of the banks and whether the state respects contracts."
-    india_angle: "The main 'other India' in EM portfolios — when India looks expensive, this is where the money often goes."
+    currency_note: "The rupiah has a long history of depreciation and crisis-time collapses. The 1998 memory is exactly why foreign investors demand a discount here."
+    access: "Through emerging-market or ASEAN funds."
+    upside:
+      - "Demographics nearly as good as India's, at a much lower price"
+      - "Central to the EV battery supply chain through nickel"
+      - "Low government debt and high dividends"
+    downside:
+      - "Commodity-price dependence — coal and nickel drive the economy"
+      - "The currency falls hard in global panics"
+      - "Sudden resource-nationalism rule changes can hit foreign investors"
+    outlook: "The closest thing available to 'India ten years ago' — young, growing, resource-rich, and considerably cheaper."
+    verdict: "Probably the strongest combination of value and growth in Asia, if you can live with the currency. The test Munger would apply: are the banks — which are nearly half this index — well run, and does the state honour its contracts? Both answers have been improving."
+    india_angle: "The main 'other India' in emerging-market portfolios. When India looks expensive, this is often where the money goes instead."
 
   - code: VN
     name: "Vietnam"
@@ -445,21 +594,32 @@ markets:
     roe: 14
     top10_weight: 45
     govt_debt_gdp: 35
-    rule_of_law: "Weak-to-moderate — one-party state, opaque, but pro-business in practice"
-    demographics: "Young and growing"
-    worst_drawdown: "−78% (2007–09)"
+    rule_of_law: "Weak-to-moderate. A one-party state and opaque disclosure, though highly pro-business in practice."
+    demographics: "Young and growing."
+    worst_drawdown: "Fell 78% in 2007-09"
+    economy: "The biggest winner from factories leaving China. Assembles phones, electronics and textiles — Samsung alone makes a large share of its exports."
+    sectors:
+      - {name: "Banks & financials", weight: 40, note: "Fast credit growth, but exposed to property developers"}
+      - {name: "Property", weight: 20, note: "Where the recent debt stress has been concentrated"}
+      - {name: "Industrials & consumer", weight: 25, note: "The export manufacturing base"}
     er_growth: 11.0
     er_dividend: 1.8
     er_valuation: 1.0
     er_currency: -3.0
-    currency_note: "The dong is managed and steadily devalued — a persistent, predictable drag on foreign returns."
-    access: "Hard — frontier-market status; limited fund options and foreign-ownership caps."
-    risks: ["Frontier-market liquidity and governance", "Property-developer debt stress", "Foreign ownership limits", "Managed currency devaluation", "Heavy dependence on export demand"]
-    tailwinds: ["The single biggest winner from 'China+1' factory relocation", "Young workforce and rising wages", "Fast GDP growth"]
-    headwinds: ["Small, less liquid market", "Opaque governance"]
-    outlook: "The fastest-growing manufacturing story in Asia, in a market that is still hard for outsiders to own properly."
-    verdict: "Great macro story, weak shareholder infrastructure. The growth is real; the ability to actually capture it as a minority foreign holder is the open question."
-    india_angle: "India's most direct competitor for 'China+1' factory investment."
+    currency_note: "The dong is managed and steadily devalued to keep exports competitive — a persistent, predictable drag on your returns."
+    access: "Hard. Frontier-market status, limited fund options, and caps on how much foreigners may own."
+    upside:
+      - "The single biggest beneficiary of 'China+1' factory relocation"
+      - "Fast growth from a low base with a young workforce"
+      - "Possible upgrade from 'frontier' to 'emerging' status, which would force index funds to buy"
+    downside:
+      - "Property-developer debt stress and a banking system exposed to it"
+      - "Foreign ownership limits mean you often cannot buy the best companies"
+      - "Steady currency devaluation quietly erodes returns"
+      - "Opaque governance and disclosure by global standards"
+    outlook: "The fastest-growing manufacturing story in Asia, in a market that is still difficult for outsiders to own properly."
+    verdict: "A great macro story wrapped in weak shareholder infrastructure. The growth is real — but ask the harder question: as a minority foreign investor, can you actually capture it? Ownership caps, currency devaluation and disclosure standards all take a slice before you see a rupee."
+    india_angle: "India's most direct competitor for the factory investment leaving China."
 
   - code: SA
     name: "Saudi Arabia"
@@ -474,21 +634,30 @@ markets:
     roe: 14
     top10_weight: 60
     govt_debt_gdp: 30
-    rule_of_law: "Weak by Western standards — absolute monarchy; property rights depend on the state's goodwill"
-    demographics: "Young and growing"
-    worst_drawdown: "−60% (2006 local crash)"
+    rule_of_law: "Weak by Western standards. An absolute monarchy, where property rights ultimately depend on the state's goodwill."
+    demographics: "Young and growing."
+    worst_drawdown: "Fell about 60% in the 2006 local crash"
+    economy: "Oil, and a state-funded attempt to become something other than oil. Vision 2030 is spending petrodollars on tourism, sport and new cities."
+    sectors:
+      - {name: "Energy", weight: 40, note: "Aramco — the world's most profitable company, but the state decides output"}
+      - {name: "Banks & financials", weight: 30, note: "Funding the Vision 2030 construction boom"}
+      - {name: "Materials", weight: 15, note: "Petrochemicals, which are just oil in another form"}
     er_growth: 5.0
     er_dividend: 3.6
     er_valuation: 0.5
     er_currency: 0.0
-    currency_note: "Pegged to the US dollar — so for an Indian investor it behaves like dollar exposure."
-    access: "Via EM/Gulf funds; direct access is limited."
-    risks: ["Fortunes rise and fall with the oil price", "Extremely concentrated (Aramco and banks dominate)", "Governance and geopolitical risk", "Reform plans depend on oil revenue"]
-    tailwinds: ["Enormous sovereign wealth funding Vision 2030 diversification", "Very low government debt", "Young population"]
-    headwinds: ["Single-commodity economy", "Concentration"]
-    outlook: "An oil-funded national transformation project you can buy shares in — with all the concentration and governance caveats that implies."
-    verdict: "You're underwriting one commodity and one royal family's plan. Interesting, but it fails the 'do I understand and trust the rules?' test for most investors."
-    india_angle: "Gulf oil policy sets crude prices — the single biggest external lever on Indian inflation, the rupee, and OMC/paint/aviation stocks."
+    currency_note: "Pegged to the US dollar, so for you it behaves like dollar exposure."
+    access: "Through emerging-market or Gulf funds; direct access is limited."
+    upside:
+      - "High oil prices fund enormous state investment across the whole economy"
+      - "Very low government debt and a young population"
+    downside:
+      - "Everything ultimately depends on one commodity's price"
+      - "Extremely concentrated — Aramco and the banks are most of the index"
+      - "The state, not the market, decides how much oil Aramco pumps"
+    outlook: "An oil-funded national transformation you can buy shares in — with all the concentration and governance caveats that implies."
+    verdict: "You are underwriting one commodity and one royal family's plan. For most investors this fails the simplest Buffett test — do I understand this, and do I trust the rules? — regardless of how attractive the growth spending looks."
+    india_angle: "Gulf oil policy sets crude prices, the single biggest external lever on Indian inflation, the rupee, and oil-marketing, paint and aviation stocks."
 
   # ------------------------- AFRICA & OCEANIA -------------------------
   - code: ZA
@@ -504,21 +673,31 @@ markets:
     roe: 14
     top10_weight: 55
     govt_debt_gdp: 75
-    rule_of_law: "Moderate — strong courts and a genuinely independent central bank, weak state capacity"
-    demographics: "Young, but with very high unemployment"
-    worst_drawdown: "−45% (2008)"
+    rule_of_law: "Moderate. Strong courts and a genuinely independent central bank, but weak state capacity and a history of corruption."
+    demographics: "Young, but with extremely high unemployment."
+    worst_drawdown: "Fell about 45% in 2008"
+    economy: "Digs up gold, platinum and other precious metals for the world, while its domestic economy is throttled by an electricity grid that cannot meet demand."
+    sectors:
+      - {name: "Materials & mining", weight: 30, note: "Gold and platinum miners — a leveraged bet on the gold price"}
+      - {name: "Financials", weight: 25, note: "Well-run banks in a weak economy"}
+      - {name: "Consumer & retail", weight: 25, note: "Naspers, which is largely a stake in China's Tencent"}
     er_growth: 5.0
     er_dividend: 4.5
     er_valuation: 2.0
     er_currency: -4.0
-    currency_note: "The rand is one of the world's most volatile currencies and a chronic depreciator — historically the single biggest destroyer of foreign investors' returns here."
-    access: "Via EM funds."
-    risks: ["Chronic electricity shortages constraining the whole economy", "Currency depreciation", "Very high unemployment and inequality", "State-capacity and corruption issues"]
-    tailwinds: ["Cheap", "World-class gold and platinum miners", "High dividends", "Credible, independent central bank"]
-    headwinds: ["Structural growth constraints", "Infrastructure decay"]
-    outlook: "Deep-value pricing on a market with excellent mining assets bolted to a struggling domestic economy."
-    verdict: "Good businesses, difficult country. The rand means your local gains can vanish in rupee terms — a lesson in why currency IS part of the investment."
-    india_angle: "A heavy gold and platinum producer — it moves with the same safe-haven demand Indian gold investors track."
+    currency_note: "The rand is one of the world's most volatile currencies and a chronic decliner — historically the single biggest destroyer of foreign investors' returns here."
+    access: "Through emerging-market funds."
+    upside:
+      - "A rising gold price lifts the miners sharply — they move more than gold itself"
+      - "Genuinely cheap, with high dividends"
+      - "Fixing the electricity grid would unlock the whole domestic economy"
+    downside:
+      - "Chronic power cuts constrain every business in the country"
+      - "The currency can wipe out good local returns before you see them"
+      - "Very high unemployment limits domestic demand"
+    outlook: "Deep-value pricing on excellent mining assets bolted to a struggling domestic economy."
+    verdict: "Good businesses in a difficult country. The most useful lesson here is about currency: local investors have made money in rand terms while foreigners lost it converting back. Currency is not a footnote to the investment — it IS part of the investment."
+    india_angle: "A big gold and platinum producer, so it moves with the same safe-haven demand Indian gold buyers track."
 
   - code: AU
     name: "Australia"
@@ -533,18 +712,29 @@ markets:
     roe: 13
     top10_weight: 45
     govt_debt_gdp: 50
-    rule_of_law: "Very strong"
-    demographics: "Growing through immigration"
-    worst_drawdown: "−50% (2008)"
+    rule_of_law: "Very strong."
+    demographics: "Growing through immigration."
+    worst_drawdown: "Fell about 50% in 2008"
+    economy: "A quarry attached to a housing market. Sells iron ore and coal to China, and lends the proceeds against Australian property."
+    sectors:
+      - {name: "Banks & financials", weight: 32, note: "Four big banks, heavily exposed to home loans"}
+      - {name: "Materials & mining", weight: 25, note: "BHP, Rio Tinto — iron ore sold almost entirely to China"}
+      - {name: "Healthcare", weight: 10, note: "CSL, a genuine global leader in blood plasma"}
+      - {name: "Consumer & industrials", weight: 20, note: "Domestic retail and services"}
     er_growth: 4.0
     er_dividend: 4.0
     er_valuation: -1.0
     er_currency: -1.5
-    currency_note: "The Aussie dollar is effectively a proxy for Chinese demand — it falls when China slows, adding to losses at the worst moment."
-    access: "Via global/Asia-Pacific funds."
-    risks: ["Iron-ore revenue depends almost entirely on China", "Extremely stretched housing market and household debt", "Banks + miners are most of the index"]
-    tailwinds: ["High, franked dividend yields", "World-class mining assets", "Strong institutions and low debt"]
-    headwinds: ["China-demand concentration", "Housing leverage"]
+    currency_note: "The Australian dollar is effectively a bet on Chinese demand — it falls when China slows, adding to your losses at the worst possible moment."
+    access: "Through global or Asia-Pacific funds."
+    upside:
+      - "High dividend yields, with tax credits that make them even better for local investors"
+      - "Chinese construction demand lifts iron ore prices and miner profits"
+      - "Strong institutions and low government debt"
+    downside:
+      - "Iron-ore revenue depends almost entirely on one customer: China"
+      - "One of the world's most stretched housing markets, and the banks are a third of the index"
+      - "Two bets — Chinese ore and Australian mortgages — that can go wrong together"
     outlook: "A high-yield miners-and-banks market that is, in practice, the cleanest listed proxy for Chinese raw-material demand."
-    verdict: "Well-run country, income-friendly market, but only two real bets: Chinese iron ore and Australian mortgages. Know that before you buy the 'diversification'."
+    verdict: "A well-run country whose index is far less diversified than it looks: essentially Chinese iron ore plus Australian mortgages. Know that before you buy it believing you are getting broad developed-market diversification."
     india_angle: "Australian iron ore and coking coal prices feed directly into Indian steelmakers' input costs."

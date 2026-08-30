@@ -92,7 +92,12 @@ body{margin:0;background:var(--bg);color:var(--ink);
 .cal .alert{font-size:11px;font-weight:700;letter-spacing:.02em;text-transform:none;
   color:#8a4b00;background:#ffe6b8;padding:2px 9px;border-radius:999px;}
 @media (prefers-color-scheme:dark){.cal .alert{color:#ffcf8a;background:#3a2a10;}}
-.cal ul{list-style:none;margin:0;padding:0;}
+.cal ul{list-style:none;margin:0;padding:0;max-height:360px;overflow-y:auto;
+  overscroll-behavior:contain;scrollbar-width:thin;}
+.cal ul::-webkit-scrollbar{width:9px;}
+.cal ul::-webkit-scrollbar-thumb{background:var(--line);border-radius:9px;
+  border:2px solid var(--panel);}
+.cal .calmonth{position:sticky;top:0;z-index:2;}
 .cal li{display:flex;gap:14px;align-items:baseline;padding:13px 18px;
   border-bottom:1px solid var(--line2);}
 .cal li:last-child{border-bottom:none;}
@@ -207,6 +212,10 @@ body{margin:0;background:var(--bg);color:var(--ink);
   opacity:0;visibility:hidden;transform:translateY(-3px);
   transition:opacity .15s ease,transform .15s ease;pointer-events:none;}
 .term:hover::after,.term:focus::after{opacity:1;visibility:visible;transform:translateY(0);}
+/* Tooltips inside the narrow detail panel must not spill off its right edge. */
+.panel .term::after{width:min(290px,72vw);}
+.panel .kv .term::after,.panel .erow .term::after{left:0;}
+
 
 /* Deeper reads — original explainer links (Finshots / The Ken) */
 .deeper{display:flex;flex-direction:column;gap:8px;margin-bottom:8px;}
@@ -241,13 +250,16 @@ body{margin:0;background:var(--bg);color:var(--ink);
   color:var(--muted);background:transparent;border:0;border-radius:8px;
   padding:9px 16px;cursor:pointer;}
 .gf-switch button:hover{color:var(--ink2);}
-.gf-switch button.on{color:var(--ink);background:var(--panel);
-  box-shadow:0 1px 3px rgba(0,0,0,.12);}
+.gf-switch button.on{color:var(--bg);background:var(--ink);
+  box-shadow:0 1px 4px rgba(0,0,0,.22);}
+.gf-switch button.on:hover{color:var(--bg);}
 .gf-view[hidden]{display:none;}
 
 .gf-note{background:var(--panel2);border:1px dashed var(--line);border-radius:12px;
   padding:12px 15px;color:var(--muted);font-size:13px;margin:14px 0 12px;}
 .gf-note b{color:var(--ink2);}
+.gf-note .freshness{display:block;margin-top:9px;padding-top:9px;
+  border-top:1px solid var(--line2);font-size:12.5px;}
 .gf-legend{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px;align-items:center;}
 .gf-legend .lg{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;
   color:var(--ink2);background:var(--panel);border:1px solid var(--line);
@@ -290,6 +302,9 @@ body{margin:0;background:var(--bg);color:var(--ink);
 @media (max-width:900px){
   .gf-grid{grid-template-columns:1fr;}
   .gf-panelwrap{position:static;order:-1;}
+  /* On phones the panel must flow with the page — a nested scroll box inside
+     an already-scrolling page is horrible to use. */
+  .gf-panelwrap .panel{max-height:none;overflow:visible;}
 }
 
 /* Country table */
@@ -338,8 +353,16 @@ body{margin:0;background:var(--bg);color:var(--ink);
 .kv .k{flex:1 1 88px;background:var(--panel2);border:1px solid var(--line2);
   border-radius:9px;padding:8px 10px;font-size:11px;color:var(--muted);}
 .kv .k b{display:block;color:var(--ink);font-size:15px;font-weight:600;margin-top:1px;}
-.kv .k b.sm{font-size:12.5px;font-weight:500;line-height:1.45;}
 .kv .k.wide{flex:1 1 100%;}
+/* Prose facts (rule of law, demographics...) read as sentences, not as stats —
+   so they get one consistent body size instead of big bold numbers. */
+.qrows{margin-top:10px;border-top:1px solid var(--line2);}
+.qrow{display:flex;gap:14px;padding:10px 0;border-bottom:1px solid var(--line2);}
+.qrow:last-child{border-bottom:none;}
+.qrow .qk{flex:0 0 128px;font-size:11px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.06em;color:var(--muted);line-height:1.45;padding-top:1px;}
+.qrow .qv{flex:1;min-width:0;font-size:13.5px;color:var(--ink2);line-height:1.55;}
+@media (max-width:560px){.qrow{flex-direction:column;gap:3px;}.qrow .qk{flex:none;}}
 .maptip .wrapline{display:block;max-width:280px;white-space:normal;margin-top:3px;
   font-weight:400;}
 /* Expected-return bar */
@@ -352,8 +375,29 @@ body{margin:0;background:var(--bg);color:var(--ink);
 .erow .fill.pos{background:var(--c-cheap);}
 .erow .fill.neg{background:var(--c-exp);}
 .erow .num{flex:0 0 52px;text-align:right;font-weight:600;color:var(--ink);}
-.erow.total{border-top:1px solid var(--line2);padding-top:7px;margin-top:2px;}
+.erow.total{border-top:1px solid var(--line2);padding-top:9px;margin-top:4px;}
 .erow.total .lbl,.erow.total .num{font-weight:700;}
+.erow{align-items:center;}
+.erow .lbl{line-height:1.35;}
+
+/* Plain-English explainer paragraphs inside the panel */
+.explain{margin:10px 0 0;padding:10px 12px;background:var(--panel2);
+  border-radius:9px;color:var(--muted);font-size:12.5px;line-height:1.55;}
+.explain b{color:var(--ink2);}
+.explain i{font-style:italic;}
+
+/* Sector composition bars — "what you'd actually own" */
+.secs{margin-top:12px;}
+.secshead{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;
+  color:var(--faint);margin-bottom:8px;}
+.sec{display:flex;gap:10px;align-items:flex-start;margin-bottom:9px;}
+.secbar{flex:0 0 46px;height:7px;margin-top:6px;background:var(--line2);
+  border-radius:99px;overflow:hidden;}
+.secbar span{display:block;height:100%;background:var(--vc,var(--link));border-radius:99px;}
+.sectxt{flex:1;min-width:0;}
+.sectxt b{color:var(--ink);font-size:13.5px;font-weight:600;}
+.sectxt .pct{color:var(--muted);font-size:12px;margin-left:6px;}
+.sectxt p{margin:1px 0 0;color:var(--muted);font-size:12.5px;line-height:1.45;}
 .plist{list-style:none;margin:0;padding:0;}
 .plist li{position:relative;padding:3px 0 3px 16px;color:var(--ink2);font-size:13.5px;
   line-height:1.5;}
@@ -386,7 +430,12 @@ body{margin:0;background:var(--bg);color:var(--ink);
   transition:transform .1s ease;}
 .heat td:hover{transform:scale(1.13);z-index:5;}
 .heat .rowlbl{font-size:12.5px;font-weight:600;color:var(--ink2);white-space:nowrap;
-  padding-right:8px;width:1%;}
+  padding:0 12px 0 2px;width:1%;position:sticky;left:0;z-index:3;background:var(--panel);
+  /* the flat left shadow fills the border-spacing gap so cells cannot peek through */
+  box-shadow:-14px 0 0 var(--panel),1px 0 0 var(--line2);}
+.heat thead th:first-child{position:sticky;left:0;z-index:4;background:var(--panel);
+  box-shadow:-14px 0 0 var(--panel);}
+.heatwrap{padding-left:14px;}
 .heat .rowlbl.gold{color:var(--c-fair);}
 .s2{background:var(--c-cheap);}
 .s1{background:var(--c-cheap);opacity:.5;}
@@ -419,6 +468,31 @@ body{margin:0;background:var(--bg);color:var(--ink);
 .rot .outof{color:var(--down);background:var(--down-bg);}
 .rot .into.gold{color:var(--c-fair);background:var(--cb-fair);font-weight:600;}
 .rot .rwhy{color:var(--muted);font-size:13.5px;line-height:1.5;margin-top:2px;}
+.rot li{padding-bottom:26px;}
+.rothead{display:flex;align-items:center;gap:9px;flex-wrap:wrap;}
+.rotline{font-family:var(--font-serif);font-size:18.5px;font-weight:600;color:var(--ink);
+  line-height:1.3;margin:5px 0 9px;}
+.rotblk{margin:0 0 10px;}
+.rotblk h5{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;
+  color:var(--faint);margin:0 0 3px;}
+.rotblk p{margin:0;color:var(--ink2);font-size:14.5px;line-height:1.6;}
+.rotlesson{margin-top:12px;padding:11px 14px;background:var(--panel2);
+  border-left:3px solid var(--c-fair);border-radius:0 10px 10px 0;
+  color:var(--ink2);font-size:14px;line-height:1.55;}
+.rotlesson b{display:block;font-size:10.5px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.09em;color:var(--c-fair);margin-bottom:4px;}
+
+/* "What would change the picture" / "What to watch" */
+.scenarios{background:var(--panel);border:1px solid var(--line);border-radius:14px;
+  padding:15px 18px;margin-bottom:14px;}
+.scenarios h4{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;
+  color:var(--muted);margin:0 0 9px;}
+.scenarios ul{list-style:none;margin:0;padding:0;}
+.scenarios li{position:relative;padding:5px 0 5px 20px;color:var(--ink2);font-size:14.5px;
+  line-height:1.55;}
+.scenarios li::before{content:"";position:absolute;left:2px;top:13px;width:7px;height:7px;
+  border-radius:2px;background:var(--link);}
+.scenarios.watch li::before{border-radius:50%;background:var(--c-fair);}
 
 /* Disclaimer + footer */
 .disclaimer{background:var(--panel2);border:1px dashed var(--line);border-radius:12px;

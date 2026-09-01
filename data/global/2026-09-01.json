@@ -1,0 +1,1467 @@
+{
+  "updated": "2026-09-01",
+  "updated_human": "Tuesday, 01 September 2026",
+  "note": "Indicative reading of market history — a learning tool, not fund-flow data.",
+  "countries": [
+    {
+      "code": "US",
+      "name": "United States",
+      "index": "S&P 500",
+      "region": "Americas",
+      "valuation": "expensive",
+      "cape_now": 41,
+      "cape_avg": 27,
+      "cape_pct": 98,
+      "pb": 5.2,
+      "div_yield": 1.2,
+      "roe": 19,
+      "top10_weight": 38,
+      "govt_debt_gdp": 123,
+      "rule_of_law": "Very strong. Courts protect small shareholders, and company accounts are trustworthy.",
+      "demographics": "Growing slowly, helped by immigration — better than most rich countries.",
+      "worst_drawdown": "Fell 57% in 2007-09; took about 5 years to recover",
+      "economy": "The world's innovation engine. It sells software, chips, medicines, films and financial services — high-margin things the rest of the world struggles to replace.",
+      "sectors": [
+        {
+          "name": "Technology & AI",
+          "weight": 34,
+          "note": "Apple, Microsoft, Nvidia — the profit engine, and the concentration risk"
+        },
+        {
+          "name": "Financials",
+          "weight": 13,
+          "note": "Big banks and insurers; do well when rates are high but stable"
+        },
+        {
+          "name": "Healthcare",
+          "weight": 11,
+          "note": "Drug makers with patents — steady, defensive earnings"
+        },
+        {
+          "name": "Consumer",
+          "weight": 20,
+          "note": "Amazon, Walmart, Tesla — rides on US consumer spending"
+        },
+        {
+          "name": "Industrials & energy",
+          "weight": 16,
+          "note": "Aerospace, machinery, oil majors"
+        }
+      ],
+      "er_growth": 6.0,
+      "er_dividend": 1.2,
+      "er_valuation": -4.0,
+      "er_currency": -1.5,
+      "currency_note": "The rupee has weakened roughly 3% a year against the dollar for decades. For you that is a BONUS on top of US returns: the same dollars buy more rupees later. This currency tailwind is the main reason US funds have worked so well from India.",
+      "access": "Easy. Indian mutual funds that invest in US indices, or directly under the RBI's $250,000-a-year overseas limit (called LRS).",
+      "upside": [
+        "AI genuinely raises company profits, justifying today's prices",
+        "Interest rates fall while the economy avoids a recession",
+        "Its best businesses keep earning far more on each rupee invested than rivals"
+      ],
+      "downside": [
+        "A third of the index sits in a handful of AI names — if that story stumbles, the whole index falls",
+        "Profit margins are at record highs and could drift back to normal",
+        "At this price, even good news may already be paid for",
+        "Government debt at 123% of GDP could eventually force higher taxes or rates"
+      ],
+      "outlook": "Superb businesses at a demanding price. Over the next decade the returns are likely to come from profits growing, not from investors agreeing to pay even more.",
+      "verdict": "You are buying the world's best companies — but at one of the highest prices in history. Buffett's rule applies here: a wonderful business at a poor price is still a poor investment. Own it for quality and for the rupee tailwind, not because it looks cheap, and expect a bumpy decade rather than a repeat of the last one.",
+      "india_angle": "When US rates fall, money flows toward India; when the US sells off, foreign investors pull money out of Nifty too. The US is the tide that moves India's boat.",
+      "news": [
+        {
+          "title": "Longer-dated US Treasury yields climb as Iran and US restart military attacks",
+          "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/longer-dated-us-treasury-yields-climb-as-iran-and-us-restart-military-attacks/articleshow/133660629.cms"
+        },
+        {
+          "title": "US 10-year Treasury yield tops 19-month high as oil prices fuel rate-hike bets",
+          "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-10-year-treasury-yield-tops-19-month-high-as-oil-prices-fuel-rate-hike-bets/articleshow/133661626.cms"
+        },
+        {
+          "title": "Gold Slips as Renewed Mideast Tensions Keep Fed Hike Bets Alive",
+          "url": "https://www.livemint.com/market/gold-slips-as-renewed-mideast-tensions-keep-fed-hike-bets-alive-11788207528743.html"
+        }
+      ]
+    },
+    {
+      "code": "CA",
+      "name": "Canada",
+      "index": "S&P/TSX Composite",
+      "region": "Americas",
+      "valuation": "fair",
+      "cape_now": 23,
+      "cape_avg": 20,
+      "cape_pct": 65,
+      "pb": 2.1,
+      "div_yield": 2.9,
+      "roe": 13,
+      "top10_weight": 36,
+      "govt_debt_gdp": 106,
+      "rule_of_law": "Very strong. Stable institutions and reliable company accounts.",
+      "demographics": "Growing through high immigration — unusual for a rich country.",
+      "worst_drawdown": "Fell about 50% in 2008",
+      "economy": "Sells raw materials to the world — oil, gas, timber, potash — and runs a highly protected banking system at home.",
+      "sectors": [
+        {
+          "name": "Banks & financials",
+          "weight": 32,
+          "note": "Five big banks dominate; very profitable, but tied to house prices"
+        },
+        {
+          "name": "Energy",
+          "weight": 18,
+          "note": "Oil sands and gas — earnings swing with the crude price"
+        },
+        {
+          "name": "Materials & mining",
+          "weight": 12,
+          "note": "Gold, potash, timber"
+        },
+        {
+          "name": "Industrials",
+          "weight": 13,
+          "note": "Railways moving all those commodities"
+        }
+      ],
+      "er_growth": 4.5,
+      "er_dividend": 2.9,
+      "er_valuation": -1.0,
+      "er_currency": -1.0,
+      "currency_note": "The Canadian dollar rises and falls with oil. If crude slumps, you lose twice — the shares fall AND the currency falls.",
+      "access": "Usually inside a global fund rather than as a standalone holding.",
+      "upside": [
+        "Higher oil and commodity prices lift both earnings and the currency",
+        "Immigration keeps the economy growing while other rich countries shrink"
+      ],
+      "downside": [
+        "Households carry some of the world's heaviest debt — a housing wobble would hit the banks that dominate the index",
+        "Almost everything depends on US demand"
+      ],
+      "outlook": "A steady, dividend-paying, resources-and-banks market. Fairly priced, unlikely to surprise dramatically in either direction.",
+      "verdict": "A sensible, slightly dull market you would own for income rather than growth. The one thing to keep an eye on is household debt: the banks are the biggest part of the index, and their fortunes are tied to Canadian house prices.",
+      "india_angle": "A useful gauge of global oil demand — the same crude prices that decide India's import bill and inflation.",
+      "news": []
+    },
+    {
+      "code": "BR",
+      "name": "Brazil",
+      "index": "Ibovespa",
+      "region": "Americas",
+      "valuation": "cheap",
+      "cape_now": 11,
+      "cape_avg": 13,
+      "cape_pct": 22,
+      "pb": 1.5,
+      "div_yield": 6.5,
+      "roe": 14,
+      "top10_weight": 48,
+      "govt_debt_gdp": 88,
+      "rule_of_law": "Moderate. Courts work, but politics interferes with state-controlled companies and corruption has a long history.",
+      "demographics": "Still young, but ageing faster than expected.",
+      "worst_drawdown": "Lost over 60% in dollar terms during the 2010s commodity bust",
+      "economy": "A farm-and-mine superpower. Sells iron ore, soybeans, beef, coffee and oil — mostly to China.",
+      "sectors": [
+        {
+          "name": "Materials & mining",
+          "weight": 22,
+          "note": "Vale — iron ore; rises and falls with Chinese construction"
+        },
+        {
+          "name": "Energy",
+          "weight": 15,
+          "note": "Petrobras, state-controlled — profitable but politically steered"
+        },
+        {
+          "name": "Banks & financials",
+          "weight": 30,
+          "note": "Very profitable, protected by high interest rates"
+        },
+        {
+          "name": "Consumer & utilities",
+          "weight": 20,
+          "note": "Domestic demand, sensitive to inflation"
+        }
+      ],
+      "er_growth": 6.0,
+      "er_dividend": 6.5,
+      "er_valuation": 1.5,
+      "er_currency": -4.0,
+      "currency_note": "This is the catch. The Brazilian real has destroyed foreign investors' returns for decades. Local investors made money; foreigners often did not, because their gains were wiped out converting back. A cheap market that keeps getting cheaper in your currency is not a bargain.",
+      "access": "Through emerging-market funds; a standalone position is unusual for Indian retail investors.",
+      "upside": [
+        "Commodity prices rise — earnings and the currency improve together",
+        "Interest rates fall from very high levels, lifting local shares",
+        "One of the highest dividend yields in the world if the currency merely holds steady"
+      ],
+      "downside": [
+        "Currency depreciation quietly eats your returns even when the shares rise",
+        "Government overspending and political cycles hit state-run companies like Petrobras",
+        "A China slowdown removes its biggest customer"
+      ],
+      "outlook": "Statistically one of the cheapest markets on earth with genuinely high dividends — and a currency that has repeatedly taken most of it away.",
+      "verdict": "Cheap for real reasons. The businesses are sound and the dividends are large; what you are really underwriting is the currency and the government. Munger would ask whether you trust the state more than you like the discount — and here that is a hard question.",
+      "india_angle": "A commodity exporter, so it tends to do well exactly when India (a commodity importer) is being squeezed by high oil and metal prices.",
+      "news": []
+    },
+    {
+      "code": "MX",
+      "name": "Mexico",
+      "index": "S&P/BMV IPC",
+      "region": "Americas",
+      "valuation": "fair",
+      "cape_now": 19,
+      "cape_avg": 18,
+      "cape_pct": 55,
+      "pb": 2.0,
+      "div_yield": 3.4,
+      "roe": 15,
+      "top10_weight": 60,
+      "govt_debt_gdp": 53,
+      "rule_of_law": "Moderate. Business-friendly in practice, but security problems and sudden policy changes in energy.",
+      "demographics": "Young and growing — a genuine advantage.",
+      "worst_drawdown": "Fell about 55% in 2008",
+      "economy": "The factory floor next door to America. Makes cars, appliances and electronics for the US, and receives huge remittances from Mexicans working there.",
+      "sectors": [
+        {
+          "name": "Consumer staples",
+          "weight": 30,
+          "note": "Walmex, drinks giants — steady domestic demand"
+        },
+        {
+          "name": "Banks & financials",
+          "weight": 20,
+          "note": "Benefit from high interest rates"
+        },
+        {
+          "name": "Industrials & materials",
+          "weight": 30,
+          "note": "Cement, factories — the nearshoring beneficiaries"
+        },
+        {
+          "name": "Telecom",
+          "weight": 12,
+          "note": "America Movil dominates"
+        }
+      ],
+      "er_growth": 6.0,
+      "er_dividend": 3.4,
+      "er_valuation": 0.0,
+      "er_currency": -2.0,
+      "currency_note": "The peso is volatile but has held up better than most emerging currencies, supported by high interest rates and money sent home by workers abroad.",
+      "access": "Through emerging-market funds.",
+      "upside": [
+        "Companies keep moving factories from China to Mexico to be near US customers",
+        "Low government debt leaves room to spend if growth slows"
+      ],
+      "downside": [
+        "Extremely concentrated — the ten largest companies are about 60% of the index",
+        "If the US economy sneezes, Mexico catches a cold; there is no second customer",
+        "Government interference in energy has spooked investors before"
+      ],
+      "outlook": "The clearest winner from factories relocating closer to America — reasonably priced, but a narrow market riding on a single customer.",
+      "verdict": "A good story at a fair price, but be honest about what you are buying: one bet on American demand, in a market where ten companies are most of the index. The nearshoring theme is real; the concentration is the hidden risk nobody mentions.",
+      "india_angle": "Competes with India for the same 'China+1' factory investment that both countries are chasing.",
+      "news": []
+    },
+    {
+      "code": "GB",
+      "name": "United Kingdom",
+      "index": "FTSE 100",
+      "region": "Europe",
+      "valuation": "fair",
+      "cape_now": 17,
+      "cape_avg": 15,
+      "cape_pct": 60,
+      "pb": 1.9,
+      "div_yield": 3.8,
+      "roe": 13,
+      "top10_weight": 45,
+      "govt_debt_gdp": 101,
+      "rule_of_law": "Very strong. Centuries of shareholder-protection law; the global benchmark.",
+      "demographics": "Slow growth, ageing population.",
+      "worst_drawdown": "Fell about 48% in 2007-09",
+      "economy": "A global, not a British, index. Most FTSE 100 profits come from outside the UK — oil, mining, banking, tobacco and consumer brands sold worldwide.",
+      "sectors": [
+        {
+          "name": "Energy & materials",
+          "weight": 25,
+          "note": "Shell, BP, Rio Tinto — moves with oil and metals, not with Britain"
+        },
+        {
+          "name": "Financials",
+          "weight": 20,
+          "note": "HSBC and Standard Chartered earn mostly in Asia"
+        },
+        {
+          "name": "Consumer staples",
+          "weight": 20,
+          "note": "Unilever, Diageo — dependable global brands"
+        },
+        {
+          "name": "Healthcare",
+          "weight": 12,
+          "note": "AstraZeneca, GSK"
+        }
+      ],
+      "er_growth": 3.5,
+      "er_dividend": 3.8,
+      "er_valuation": -0.5,
+      "er_currency": -1.0,
+      "currency_note": "The pound moves around but is not a chronic decliner. Note the quirk: because FTSE earnings are mostly foreign, a WEAK pound often pushes the index UP.",
+      "access": "Through global or international funds.",
+      "upside": [
+        "Cheap versus the US, with dependable dividends that are well covered by profits",
+        "Commodity prices rise, lifting the energy and mining giants",
+        "A takeover wave — cheap, cash-generative British companies are frequent targets"
+      ],
+      "downside": [
+        "Very little technology and slow structural growth — this index rarely re-rates upward",
+        "A commodity slump hits a quarter of the index directly"
+      ],
+      "outlook": "A cheap, high-dividend, globally-earning developed market the world has ignored for a decade.",
+      "verdict": "The classic value investor's developed market: unfashionable, cash-generative and cheap. Your returns will come mostly from dividends rather than growth — which is fine, provided you buy it for income and are not expecting excitement.",
+      "india_angle": "Commodity- and energy-heavy, so it moves with the same oil and metal prices that drive Indian inflation.",
+      "news": []
+    },
+    {
+      "code": "DE",
+      "name": "Germany",
+      "index": "DAX 40",
+      "region": "Europe",
+      "valuation": "fair",
+      "cape_now": 19,
+      "cape_avg": 18,
+      "cape_pct": 58,
+      "pb": 1.7,
+      "div_yield": 3.0,
+      "roe": 12,
+      "top10_weight": 55,
+      "govt_debt_gdp": 63,
+      "rule_of_law": "Very strong.",
+      "demographics": "Ageing and shrinking workforce — a real long-term drag.",
+      "worst_drawdown": "Fell about 55% in 2007-09",
+      "economy": "Europe's factory. Sells cars, industrial machinery and chemicals — heavily to China and the US. Its model depended on cheap Russian gas, which is now gone.",
+      "sectors": [
+        {
+          "name": "Industrials & autos",
+          "weight": 35,
+          "note": "Siemens, Mercedes, BMW — extremely sensitive to Chinese demand"
+        },
+        {
+          "name": "Technology",
+          "weight": 18,
+          "note": "SAP is the standout performer"
+        },
+        {
+          "name": "Chemicals",
+          "weight": 10,
+          "note": "BASF — hit hardest by expensive energy"
+        },
+        {
+          "name": "Financials & insurance",
+          "weight": 20,
+          "note": "Allianz, Munich Re"
+        }
+      ],
+      "er_growth": 4.0,
+      "er_dividend": 3.0,
+      "er_valuation": -0.5,
+      "er_currency": -1.0,
+      "currency_note": "Euro exposure; broadly stable against the rupee over long periods.",
+      "access": "Through European or global funds.",
+      "upside": [
+        "China's economy recovers, reviving demand for German machinery and cars",
+        "Energy prices fall back, restoring the profit margins the model was built on"
+      ],
+      "downside": [
+        "Expensive energy since losing cheap Russian gas is a structural, not temporary, disadvantage",
+        "Chinese carmakers now compete directly with German ones — in China and in Europe",
+        "A shrinking workforce caps how fast the economy can grow"
+      ],
+      "outlook": "Fairly priced world-class industrials facing genuine structural headwinds in energy and demographics.",
+      "verdict": "Excellent engineering companies in a difficult neighbourhood. The key thing most commentary misses: the energy-cost disadvantage is permanent, not cyclical, and Chinese competitors are now beating German carmakers at their own game.",
+      "india_angle": "German industrial demand pulls Indian auto-component and engineering exporters along with it.",
+      "news": []
+    },
+    {
+      "code": "FR",
+      "name": "France",
+      "index": "CAC 40",
+      "region": "Europe",
+      "valuation": "fair",
+      "cape_now": 22,
+      "cape_avg": 19,
+      "cape_pct": 68,
+      "pb": 1.9,
+      "div_yield": 3.1,
+      "roe": 13,
+      "top10_weight": 58,
+      "govt_debt_gdp": 112,
+      "rule_of_law": "Very strong.",
+      "demographics": "Better birth rate than most of Europe, but still ageing.",
+      "worst_drawdown": "Fell about 55% in 2007-09",
+      "economy": "Luxury goods, aerospace and energy. Its biggest companies sell prestige brands to wealthy consumers worldwide — increasingly Chinese ones.",
+      "sectors": [
+        {
+          "name": "Luxury & consumer",
+          "weight": 30,
+          "note": "LVMH, Hermes, L'Oreal — real pricing power, but tied to Chinese shoppers"
+        },
+        {
+          "name": "Industrials & aerospace",
+          "weight": 22,
+          "note": "Airbus, Schneider"
+        },
+        {
+          "name": "Energy & utilities",
+          "weight": 14,
+          "note": "TotalEnergies"
+        },
+        {
+          "name": "Financials",
+          "weight": 15,
+          "note": "BNP, AXA"
+        }
+      ],
+      "er_growth": 4.0,
+      "er_dividend": 3.1,
+      "er_valuation": -1.0,
+      "er_currency": -1.0,
+      "currency_note": "Euro exposure.",
+      "access": "Through European or global funds.",
+      "upside": [
+        "Chinese consumers start spending on luxury again",
+        "Its luxury brands can raise prices every year without losing customers — the definition of a strong moat"
+      ],
+      "downside": [
+        "Government debt at 112% of GDP with recurring political deadlock",
+        "Luxury demand is far more cyclical than it looks — it falls hard in downturns"
+      ],
+      "outlook": "Home to some of the world's strongest consumer brands, priced a little above its own history.",
+      "verdict": "Genuinely great franchises — the luxury houses can raise prices yearly and customers still queue, which is exactly the moat Buffett looks for. Just recognise that buying France today is largely a back-door bet on the Chinese consumer.",
+      "india_angle": "European risk appetite drives global emerging-market flows, India included.",
+      "news": []
+    },
+    {
+      "code": "IN",
+      "name": "India",
+      "index": "Nifty 50 / Sensex",
+      "region": "Asia",
+      "valuation": "expensive",
+      "cape_now": 34,
+      "cape_avg": 22,
+      "cape_pct": 92,
+      "pb": 3.8,
+      "div_yield": 1.1,
+      "roe": 15,
+      "top10_weight": 45,
+      "govt_debt_gdp": 82,
+      "rule_of_law": "Moderate-to-good. Solid company law and an improving regulator (SEBI), but slow courts.",
+      "demographics": "The best in the world — a young, growing workforce for decades.",
+      "worst_drawdown": "Fell about 60% in 2008",
+      "economy": "Driven by its own people, not by exports. Domestic banking, consumption and infrastructure do the heavy lifting; software services are the main export earner.",
+      "sectors": [
+        {
+          "name": "Banks & financials",
+          "weight": 33,
+          "note": "HDFC, ICICI — the single biggest bet in any India fund; a play on domestic credit growth"
+        },
+        {
+          "name": "IT services",
+          "weight": 13,
+          "note": "TCS, Infosys — earn in dollars, so a weak rupee helps them"
+        },
+        {
+          "name": "Energy & materials",
+          "weight": 15,
+          "note": "Reliance, oil marketers — squeezed when crude rises"
+        },
+        {
+          "name": "Consumer",
+          "weight": 20,
+          "note": "HUL, ITC — rides on rural and urban spending"
+        },
+        {
+          "name": "Autos & industrials",
+          "weight": 15,
+          "note": "Maruti, L&T — geared to the domestic capex cycle"
+        }
+      ],
+      "er_growth": 11.0,
+      "er_dividend": 1.1,
+      "er_valuation": -4.0,
+      "er_currency": 0.0,
+      "currency_note": "Your home currency, so no exchange-rate risk here. Worth noticing the flip side: the rupee's long slow decline is exactly what boosts your foreign investments.",
+      "access": "Direct — this is your home market.",
+      "upside": [
+        "Company profits genuinely grow at 11-13% a year, which would justify the price over time",
+        "Domestic SIP flows keep growing, reducing dependence on foreign investors",
+        "Crude oil stays cheap, easing inflation and the import bill"
+      ],
+      "downside": [
+        "One of the most expensive large markets in the world — a lot of good news is already in the price",
+        "At this level, an earnings disappointment hurts twice: lower profits AND investors willing to pay less for them",
+        "Oil above $100 or a sharply stronger dollar pulls foreign money out fast"
+      ],
+      "outlook": "The best long-run growth story in the world, trading at a price that already assumes much of it comes true.",
+      "verdict": "Great country, demanding price. India deserves a premium — the demographics and domestic demand are genuinely world-class — but at this level growth has to be delivered, not merely hoped for. The honest framing: you are unlikely to get rich buying India at these valuations; you get rich by owning it through the years when it is cheap and boring.",
+      "india_angle": "Home. Everything else on this map is judged against what you can already get here — and that bar is high.",
+      "news": [
+        {
+          "title": "Economy Stable Despite Global Turbulence; El Nino Risks Loom: Finance Ministry report",
+          "url": "https://economictimes.indiatimes.com/news/economy/indicators/economy-stable-despite-global-turbulence-el-nino-risks-loom-finance-ministry-report/articleshow/133662503.cms"
+        },
+        {
+          "title": "Food inflation composition shifts as protein-rich items, processed foods drive price pressures: Finance Ministry Report",
+          "url": "https://economictimes.indiatimes.com/news/economy/indicators/food-inflation-composition-shifts-as-protein-rich-items-processed-foods-drive-price-pressures-finance-ministry-report/articleshow/133657745.cms"
+        },
+        {
+          "title": "India's strong economic momentum continues despite global uncertainties, says Chief Economic Adviser",
+          "url": "https://economictimes.indiatimes.com/news/economy/indicators/indias-strong-economic-momentum-continues-despite-global-uncertainties-says-chief-economic-adviser/articleshow/133662607.cms"
+        }
+      ]
+    },
+    {
+      "code": "CN",
+      "name": "China",
+      "index": "CSI 300",
+      "region": "Asia",
+      "valuation": "cheap",
+      "cape_now": 11,
+      "cape_avg": 16,
+      "cape_pct": 8,
+      "pb": 1.4,
+      "div_yield": 3.0,
+      "roe": 11,
+      "top10_weight": 25,
+      "govt_debt_gdp": 88,
+      "rule_of_law": "Weak for outside shareholders. The state can override a company's interests, and has done so without warning.",
+      "demographics": "Shrinking and ageing fast — a serious structural problem.",
+      "worst_drawdown": "Fell over 70% in 2007-08, and again from 2021-24",
+      "economy": "The world's factory, moving up the value chain. Now leads globally in electric vehicles, batteries and solar panels — while its property sector, once a third of the economy, is still deflating.",
+      "sectors": [
+        {
+          "name": "Financials",
+          "weight": 22,
+          "note": "State-controlled banks; cheap, but lend where the state directs"
+        },
+        {
+          "name": "Consumer",
+          "weight": 25,
+          "note": "Kweichow Moutai, appliance makers — waiting on a confidence recovery"
+        },
+        {
+          "name": "Industrials & EV",
+          "weight": 25,
+          "note": "BYD, CATL — genuinely world-leading businesses"
+        },
+        {
+          "name": "Technology",
+          "weight": 15,
+          "note": "Under tighter state supervision since 2021"
+        }
+      ],
+      "er_growth": 6.0,
+      "er_dividend": 3.0,
+      "er_valuation": 4.0,
+      "er_currency": -1.0,
+      "currency_note": "The yuan is managed by the state. Less volatile day to day, but its level is a policy decision rather than a market one.",
+      "access": "Through emerging-market or China funds; direct access is restricted.",
+      "upside": [
+        "Large-scale stimulus finally revives consumer confidence",
+        "Valuations are so low that even modest good news could re-rate the market sharply",
+        "Its EV, battery and solar industries are genuinely world-beating"
+      ],
+      "downside": [
+        "The property debt crisis is unresolved and still dragging on confidence",
+        "Policy can destroy an industry overnight — as it did to private education in 2021",
+        "A shrinking population caps long-term growth",
+        "Foreign investors often own offshore shell structures, not the real company"
+      ],
+      "outlook": "Genuinely cheap and genuinely troubled. The gap between its industrial strength and its stock-market performance is the puzzle.",
+      "verdict": "The textbook value-trap question: is it cheap, or cheap for good reason? The businesses are often excellent — China builds the world's best batteries and EVs. The risk is not the business at all; it is whether shareholders are allowed to keep the profits. Munger owned China and still called governance its central issue.",
+      "india_angle": "China stimulus lifts metal prices and Indian steel producers. Global 'sell expensive India, buy cheap China' rotations are a real and recurring pressure on Nifty.",
+      "news": []
+    },
+    {
+      "code": "JP",
+      "name": "Japan",
+      "index": "Nikkei 225 / TOPIX",
+      "region": "Asia",
+      "valuation": "fair",
+      "cape_now": 24,
+      "cape_avg": 30,
+      "cape_pct": 40,
+      "pb": 1.6,
+      "div_yield": 2.2,
+      "roe": 10,
+      "top10_weight": 30,
+      "govt_debt_gdp": 250,
+      "rule_of_law": "Very strong.",
+      "demographics": "The developed world's worst — shrinking and rapidly ageing.",
+      "worst_drawdown": "Fell 80% from 1989 and took 34 years to recover — the ultimate lesson in overpaying",
+      "economy": "Precision manufacturing and automation. Sells robots, machine tools, car parts and camera sensors — the equipment other countries' factories are built from.",
+      "sectors": [
+        {
+          "name": "Industrials & robotics",
+          "weight": 25,
+          "note": "Fanuc, Keyence — near-monopolies in factory automation"
+        },
+        {
+          "name": "Autos",
+          "weight": 15,
+          "note": "Toyota — profits rise when the yen is weak"
+        },
+        {
+          "name": "Technology & electronics",
+          "weight": 20,
+          "note": "Sony, Tokyo Electron — critical to chip manufacturing"
+        },
+        {
+          "name": "Financials",
+          "weight": 15,
+          "note": "Banks finally benefiting as interest rates turn positive"
+        }
+      ],
+      "er_growth": 5.0,
+      "er_dividend": 2.2,
+      "er_valuation": 1.0,
+      "er_currency": -1.0,
+      "currency_note": "The yen is the big swing factor. A weak yen flatters exporters' profits but erodes what you actually take home when you convert back.",
+      "access": "Through Japan or global funds.",
+      "upside": [
+        "A real corporate governance revolution — companies are being pushed to buy back shares and stop hoarding cash",
+        "Cheaper than its own long-run average, which is rare in the developed world today",
+        "The end of deflation lets companies raise prices for the first time in a generation"
+      ],
+      "downside": [
+        "Government debt at 250% of GDP — the highest in the developed world",
+        "A shrinking population limits how much the domestic economy can grow",
+        "Rising Japanese rates could unwind global carry trades and jolt every market"
+      ],
+      "outlook": "A rare developed market that is NOT expensive, in the middle of the most meaningful corporate reform of its modern history.",
+      "verdict": "Arguably the most interesting developed market right now. Companies that sat on cash for thirty years are finally being forced to return it to shareholders, and the market is still cheap against its own history. The debt and demographics are the price of admission — but this is the rare case where things are getting better, not worse.",
+      "india_angle": "If Japanese rates rise, the global carry trade can unwind and pull money out of emerging markets — India included — very fast.",
+      "news": []
+    },
+    {
+      "code": "KR",
+      "name": "South Korea",
+      "index": "KOSPI",
+      "region": "Asia",
+      "valuation": "cheap",
+      "cape_now": 14,
+      "cape_avg": 15,
+      "cape_pct": 30,
+      "pb": 1.0,
+      "div_yield": 2.3,
+      "roe": 9,
+      "top10_weight": 45,
+      "govt_debt_gdp": 55,
+      "rule_of_law": "Good on paper. The 'Korea discount' comes from family-controlled conglomerates that have historically favoured the founding family over ordinary shareholders.",
+      "demographics": "The world's lowest birth rate — a severe long-term problem.",
+      "worst_drawdown": "Fell 73% in the 1997 Asian crisis",
+      "economy": "Memory chips, ships, cars and culture. Samsung and SK Hynix make much of the world's memory, so the whole market swings with the chip cycle.",
+      "sectors": [
+        {
+          "name": "Technology & semiconductors",
+          "weight": 40,
+          "note": "Samsung and SK Hynix — the index effectively IS the memory-chip cycle"
+        },
+        {
+          "name": "Autos",
+          "weight": 12,
+          "note": "Hyundai, Kia — increasingly competitive globally"
+        },
+        {
+          "name": "Financials",
+          "weight": 12,
+          "note": "Cheap, and central to the governance-reform push"
+        },
+        {
+          "name": "Industrials & shipbuilding",
+          "weight": 15,
+          "note": "World leaders in LNG carriers"
+        }
+      ],
+      "er_growth": 7.0,
+      "er_dividend": 2.3,
+      "er_valuation": 2.0,
+      "er_currency": -1.5,
+      "currency_note": "The won is highly cyclical — it falls hard in global panics, exactly when the index is already falling. Two losses at once.",
+      "access": "Through emerging-market or Asia funds.",
+      "upside": [
+        "Trades near book value — you are paying roughly what the assets are worth",
+        "AI demand keeps memory-chip prices high",
+        "Government-backed 'value-up' reforms could finally close the governance discount"
+      ],
+      "downside": [
+        "Memory chips are a brutal boom-bust business; profits can halve in a year",
+        "The governance discount has persisted for decades — reform has been promised before",
+        "The lowest birth rate on earth caps long-term domestic growth"
+      ],
+      "outlook": "World-class technology companies at near-book-value prices, with governance reform as the potential unlock.",
+      "verdict": "Cheap assets with a governance problem. The entire investment case rests on one question: will the families that control these companies start treating outside shareholders fairly? If the reforms stick, the discount closes and you do very well. That is a bet on a culture changing — which is slow and never guaranteed.",
+      "india_angle": "Korea and Taiwan absorb much of the technology allocation in emerging-market funds — the same pool of money India competes for.",
+      "news": []
+    },
+    {
+      "code": "TW",
+      "name": "Taiwan",
+      "index": "TAIEX",
+      "region": "Asia",
+      "valuation": "expensive",
+      "cape_now": 27,
+      "cape_avg": 20,
+      "cape_pct": 88,
+      "pb": 2.8,
+      "div_yield": 2.7,
+      "roe": 16,
+      "top10_weight": 55,
+      "govt_debt_gdp": 28,
+      "rule_of_law": "Strong.",
+      "demographics": "Ageing, with a very low birth rate.",
+      "worst_drawdown": "Fell about 60% in the 2000 dot-com bust",
+      "economy": "Makes the world's most advanced computer chips. TSMC alone manufactures the processors that Apple, Nvidia and almost every AI system depend on — something no other country can currently replicate.",
+      "sectors": [
+        {
+          "name": "Semiconductors",
+          "weight": 55,
+          "note": "TSMC is roughly half the index by itself — this is a one-company market"
+        },
+        {
+          "name": "Electronics manufacturing",
+          "weight": 20,
+          "note": "Foxconn assembles the world's gadgets"
+        },
+        {
+          "name": "Financials",
+          "weight": 12,
+          "note": "Domestic banks and insurers"
+        }
+      ],
+      "er_growth": 8.0,
+      "er_dividend": 2.7,
+      "er_valuation": -3.0,
+      "er_currency": -1.0,
+      "currency_note": "A stable currency and very low government debt — financially one of the best-run economies anywhere.",
+      "access": "Through emerging-market or Asia funds.",
+      "upside": [
+        "AI demand keeps growing and TSMC has effectively no competitor at the cutting edge",
+        "Enormous pricing power — customers cannot easily go elsewhere",
+        "Very low government debt gives real financial resilience"
+      ],
+      "downside": [
+        "The China invasion risk is real, unhedgeable and uninsurable — no amount of analysis prices it",
+        "One company is half the index; a TSMC stumble is a market stumble",
+        "Already expensive on the assumption the AI boom continues"
+      ],
+      "outlook": "Owns the most strategically important manufacturing on earth, priced for the AI boom to keep running.",
+      "verdict": "A wonderful business facing a risk you cannot diversify away or insure against. Buffett bought TSMC and then sold almost immediately — and said plainly it was about location, not the business. That tells you the essential thing: here geopolitics, not valuation, decides the outcome. Size the position accordingly.",
+      "india_angle": "Competes with India for emerging-market technology money, and any cross-strait scare would trigger a global risk-off that hits Nifty too.",
+      "news": []
+    },
+    {
+      "code": "HK",
+      "name": "Hong Kong",
+      "index": "Hang Seng",
+      "region": "Asia",
+      "valuation": "cheap",
+      "cape_now": 11,
+      "cape_avg": 18,
+      "cape_pct": 10,
+      "pb": 1.0,
+      "div_yield": 4.0,
+      "roe": 9,
+      "top10_weight": 50,
+      "govt_debt_gdp": 10,
+      "rule_of_law": "Weakening. Historically excellent British-style common law, but increasingly under mainland influence.",
+      "demographics": "Ageing, with people emigrating.",
+      "worst_drawdown": "Fell 65% in 2007-08, then ground lower from 2021-24",
+      "economy": "China's financial window. The listing venue for China's biggest internet companies, plus local property and banking.",
+      "sectors": [
+        {
+          "name": "Technology & internet",
+          "weight": 30,
+          "note": "Tencent, Alibaba, Meituan — China's internet giants list here"
+        },
+        {
+          "name": "Financials",
+          "weight": 30,
+          "note": "HSBC, AIA and Chinese banks"
+        },
+        {
+          "name": "Property",
+          "weight": 12,
+          "note": "Local developers, hurt by high rates and weak demand"
+        }
+      ],
+      "er_growth": 5.0,
+      "er_dividend": 4.0,
+      "er_valuation": 4.5,
+      "er_currency": -1.5,
+      "currency_note": "Pegged to the US dollar, so it is forced to copy US interest-rate policy whether or not that suits its own economy.",
+      "access": "Through China or Asia funds.",
+      "upside": [
+        "Among the very cheapest major markets in the world, with high dividends",
+        "You get China's best-known internet companies at a large discount",
+        "Any China recovery shows up here first and hardest"
+      ],
+      "downside": [
+        "Effectively a leveraged bet on China's fortunes and policy",
+        "The legal independence that once justified a premium is visibly eroding",
+        "The dollar peg forces tight money at exactly the wrong moments"
+      ],
+      "outlook": "Deep-value pricing on China's biggest names, with the institutional advantages that once justified a premium now fading.",
+      "verdict": "Statistically the cheapest thing on this map. The question is not the price — it is whether the rules stay the same for shareholders. Cheapness only pays if the rules that let you collect your profits hold, and that is precisely what is in question here.",
+      "india_angle": "Cheap China and Hong Kong versus expensive India is one of the most common rotation trades in global emerging-market portfolios.",
+      "news": []
+    },
+    {
+      "code": "ID",
+      "name": "Indonesia",
+      "index": "IDX Composite",
+      "region": "Asia",
+      "valuation": "fair",
+      "cape_now": 15,
+      "cape_avg": 19,
+      "cape_pct": 32,
+      "pb": 2.0,
+      "div_yield": 4.2,
+      "roe": 15,
+      "top10_weight": 50,
+      "govt_debt_gdp": 39,
+      "rule_of_law": "Moderate and improving, though resource nationalism means rules can change for foreign miners.",
+      "demographics": "Young, growing and urbanising — excellent.",
+      "worst_drawdown": "Fell 65% in the 1997-98 Asian crisis",
+      "economy": "The world's nickel superpower, plus coal and palm oil. Now forcing miners to process metals locally instead of exporting raw ore, to capture more of the EV battery chain.",
+      "sectors": [
+        {
+          "name": "Banks & financials",
+          "weight": 45,
+          "note": "Very profitable banks — this index is mostly a bet on Indonesian lending"
+        },
+        {
+          "name": "Materials & mining",
+          "weight": 15,
+          "note": "Nickel for EV batteries; coal for exports"
+        },
+        {
+          "name": "Consumer",
+          "weight": 20,
+          "note": "Rides a young, fast-urbanising population"
+        },
+        {
+          "name": "Telecom",
+          "weight": 10,
+          "note": "Domestic operators"
+        }
+      ],
+      "er_growth": 8.0,
+      "er_dividend": 4.2,
+      "er_valuation": 1.5,
+      "er_currency": -2.5,
+      "currency_note": "The rupiah has a long history of depreciation and crisis-time collapses. The 1998 memory is exactly why foreign investors demand a discount here.",
+      "access": "Through emerging-market or ASEAN funds.",
+      "upside": [
+        "Demographics nearly as good as India's, at a much lower price",
+        "Central to the EV battery supply chain through nickel",
+        "Low government debt and high dividends"
+      ],
+      "downside": [
+        "Commodity-price dependence — coal and nickel drive the economy",
+        "The currency falls hard in global panics",
+        "Sudden resource-nationalism rule changes can hit foreign investors"
+      ],
+      "outlook": "The closest thing available to 'India ten years ago' — young, growing, resource-rich, and considerably cheaper.",
+      "verdict": "Probably the strongest combination of value and growth in Asia, if you can live with the currency. The test Munger would apply: are the banks — which are nearly half this index — well run, and does the state honour its contracts? Both answers have been improving.",
+      "india_angle": "The main 'other India' in emerging-market portfolios. When India looks expensive, this is often where the money goes instead.",
+      "news": []
+    },
+    {
+      "code": "VN",
+      "name": "Vietnam",
+      "index": "VN-Index",
+      "region": "Asia",
+      "valuation": "fair",
+      "cape_now": 15,
+      "cape_avg": 18,
+      "cape_pct": 35,
+      "pb": 1.7,
+      "div_yield": 1.8,
+      "roe": 14,
+      "top10_weight": 45,
+      "govt_debt_gdp": 35,
+      "rule_of_law": "Weak-to-moderate. A one-party state and opaque disclosure, though highly pro-business in practice.",
+      "demographics": "Young and growing.",
+      "worst_drawdown": "Fell 78% in 2007-09",
+      "economy": "The biggest winner from factories leaving China. Assembles phones, electronics and textiles — Samsung alone makes a large share of its exports.",
+      "sectors": [
+        {
+          "name": "Banks & financials",
+          "weight": 40,
+          "note": "Fast credit growth, but exposed to property developers"
+        },
+        {
+          "name": "Property",
+          "weight": 20,
+          "note": "Where the recent debt stress has been concentrated"
+        },
+        {
+          "name": "Industrials & consumer",
+          "weight": 25,
+          "note": "The export manufacturing base"
+        }
+      ],
+      "er_growth": 11.0,
+      "er_dividend": 1.8,
+      "er_valuation": 1.0,
+      "er_currency": -3.0,
+      "currency_note": "The dong is managed and steadily devalued to keep exports competitive — a persistent, predictable drag on your returns.",
+      "access": "Hard. Frontier-market status, limited fund options, and caps on how much foreigners may own.",
+      "upside": [
+        "The single biggest beneficiary of 'China+1' factory relocation",
+        "Fast growth from a low base with a young workforce",
+        "Possible upgrade from 'frontier' to 'emerging' status, which would force index funds to buy"
+      ],
+      "downside": [
+        "Property-developer debt stress and a banking system exposed to it",
+        "Foreign ownership limits mean you often cannot buy the best companies",
+        "Steady currency devaluation quietly erodes returns",
+        "Opaque governance and disclosure by global standards"
+      ],
+      "outlook": "The fastest-growing manufacturing story in Asia, in a market that is still difficult for outsiders to own properly.",
+      "verdict": "A great macro story wrapped in weak shareholder infrastructure. The growth is real — but ask the harder question: as a minority foreign investor, can you actually capture it? Ownership caps, currency devaluation and disclosure standards all take a slice before you see a rupee.",
+      "india_angle": "India's most direct competitor for the factory investment leaving China.",
+      "news": []
+    },
+    {
+      "code": "SA",
+      "name": "Saudi Arabia",
+      "index": "Tadawul All Share",
+      "region": "Middle East",
+      "valuation": "fair",
+      "cape_now": 20,
+      "cape_avg": 22,
+      "cape_pct": 45,
+      "pb": 2.3,
+      "div_yield": 3.6,
+      "roe": 14,
+      "top10_weight": 60,
+      "govt_debt_gdp": 30,
+      "rule_of_law": "Weak by Western standards. An absolute monarchy, where property rights ultimately depend on the state's goodwill.",
+      "demographics": "Young and growing.",
+      "worst_drawdown": "Fell about 60% in the 2006 local crash",
+      "economy": "Oil, and a state-funded attempt to become something other than oil. Vision 2030 is spending petrodollars on tourism, sport and new cities.",
+      "sectors": [
+        {
+          "name": "Energy",
+          "weight": 40,
+          "note": "Aramco — the world's most profitable company, but the state decides output"
+        },
+        {
+          "name": "Banks & financials",
+          "weight": 30,
+          "note": "Funding the Vision 2030 construction boom"
+        },
+        {
+          "name": "Materials",
+          "weight": 15,
+          "note": "Petrochemicals, which are just oil in another form"
+        }
+      ],
+      "er_growth": 5.0,
+      "er_dividend": 3.6,
+      "er_valuation": 0.5,
+      "er_currency": 0.0,
+      "currency_note": "Pegged to the US dollar, so for you it behaves like dollar exposure.",
+      "access": "Through emerging-market or Gulf funds; direct access is limited.",
+      "upside": [
+        "High oil prices fund enormous state investment across the whole economy",
+        "Very low government debt and a young population"
+      ],
+      "downside": [
+        "Everything ultimately depends on one commodity's price",
+        "Extremely concentrated — Aramco and the banks are most of the index",
+        "The state, not the market, decides how much oil Aramco pumps"
+      ],
+      "outlook": "An oil-funded national transformation you can buy shares in — with all the concentration and governance caveats that implies.",
+      "verdict": "You are underwriting one commodity and one royal family's plan. For most investors this fails the simplest Buffett test — do I understand this, and do I trust the rules? — regardless of how attractive the growth spending looks.",
+      "india_angle": "Gulf oil policy sets crude prices, the single biggest external lever on Indian inflation, the rupee, and oil-marketing, paint and aviation stocks.",
+      "news": []
+    },
+    {
+      "code": "ZA",
+      "name": "South Africa",
+      "index": "JSE Top 40",
+      "region": "Africa",
+      "valuation": "cheap",
+      "cape_now": 14,
+      "cape_avg": 18,
+      "cape_pct": 25,
+      "pb": 1.8,
+      "div_yield": 4.5,
+      "roe": 14,
+      "top10_weight": 55,
+      "govt_debt_gdp": 75,
+      "rule_of_law": "Moderate. Strong courts and a genuinely independent central bank, but weak state capacity and a history of corruption.",
+      "demographics": "Young, but with extremely high unemployment.",
+      "worst_drawdown": "Fell about 45% in 2008",
+      "economy": "Digs up gold, platinum and other precious metals for the world, while its domestic economy is throttled by an electricity grid that cannot meet demand.",
+      "sectors": [
+        {
+          "name": "Materials & mining",
+          "weight": 30,
+          "note": "Gold and platinum miners — a leveraged bet on the gold price"
+        },
+        {
+          "name": "Financials",
+          "weight": 25,
+          "note": "Well-run banks in a weak economy"
+        },
+        {
+          "name": "Consumer & retail",
+          "weight": 25,
+          "note": "Naspers, which is largely a stake in China's Tencent"
+        }
+      ],
+      "er_growth": 5.0,
+      "er_dividend": 4.5,
+      "er_valuation": 2.0,
+      "er_currency": -4.0,
+      "currency_note": "The rand is one of the world's most volatile currencies and a chronic decliner — historically the single biggest destroyer of foreign investors' returns here.",
+      "access": "Through emerging-market funds.",
+      "upside": [
+        "A rising gold price lifts the miners sharply — they move more than gold itself",
+        "Genuinely cheap, with high dividends",
+        "Fixing the electricity grid would unlock the whole domestic economy"
+      ],
+      "downside": [
+        "Chronic power cuts constrain every business in the country",
+        "The currency can wipe out good local returns before you see them",
+        "Very high unemployment limits domestic demand"
+      ],
+      "outlook": "Deep-value pricing on excellent mining assets bolted to a struggling domestic economy.",
+      "verdict": "Good businesses in a difficult country. The most useful lesson here is about currency: local investors have made money in rand terms while foreigners lost it converting back. Currency is not a footnote to the investment — it IS part of the investment.",
+      "india_angle": "A big gold and platinum producer, so it moves with the same safe-haven demand Indian gold buyers track.",
+      "news": []
+    },
+    {
+      "code": "AU",
+      "name": "Australia",
+      "index": "S&P/ASX 200",
+      "region": "Oceania",
+      "valuation": "fair",
+      "cape_now": 20,
+      "cape_avg": 17,
+      "cape_pct": 70,
+      "pb": 2.2,
+      "div_yield": 4.0,
+      "roe": 13,
+      "top10_weight": 45,
+      "govt_debt_gdp": 50,
+      "rule_of_law": "Very strong.",
+      "demographics": "Growing through immigration.",
+      "worst_drawdown": "Fell about 50% in 2008",
+      "economy": "A quarry attached to a housing market. Sells iron ore and coal to China, and lends the proceeds against Australian property.",
+      "sectors": [
+        {
+          "name": "Banks & financials",
+          "weight": 32,
+          "note": "Four big banks, heavily exposed to home loans"
+        },
+        {
+          "name": "Materials & mining",
+          "weight": 25,
+          "note": "BHP, Rio Tinto — iron ore sold almost entirely to China"
+        },
+        {
+          "name": "Healthcare",
+          "weight": 10,
+          "note": "CSL, a genuine global leader in blood plasma"
+        },
+        {
+          "name": "Consumer & industrials",
+          "weight": 20,
+          "note": "Domestic retail and services"
+        }
+      ],
+      "er_growth": 4.0,
+      "er_dividend": 4.0,
+      "er_valuation": -1.0,
+      "er_currency": -1.5,
+      "currency_note": "The Australian dollar is effectively a bet on Chinese demand — it falls when China slows, adding to your losses at the worst possible moment.",
+      "access": "Through global or Asia-Pacific funds.",
+      "upside": [
+        "High dividend yields, with tax credits that make them even better for local investors",
+        "Chinese construction demand lifts iron ore prices and miner profits",
+        "Strong institutions and low government debt"
+      ],
+      "downside": [
+        "Iron-ore revenue depends almost entirely on one customer: China",
+        "One of the world's most stretched housing markets, and the banks are a third of the index",
+        "Two bets — Chinese ore and Australian mortgages — that can go wrong together"
+      ],
+      "outlook": "A high-yield miners-and-banks market that is, in practice, the cleanest listed proxy for Chinese raw-material demand.",
+      "verdict": "A well-run country whose index is far less diversified than it looks: essentially Chinese iron ore plus Australian mortgages. Know that before you buy it believing you are getting broad developed-market diversification.",
+      "india_angle": "Australian iron ore and coking coal prices feed directly into Indian steelmakers' input costs.",
+      "news": []
+    }
+  ],
+  "stats": {
+    "cheap": 5,
+    "fair": 10,
+    "expensive": 3
+  },
+  "rotation": [
+    {
+      "period": "2011-12",
+      "mood": "risk-off",
+      "headline": "Europe nearly broke apart, and gold became the world's panic button",
+      "into": [
+        "Gold",
+        "US Treasuries",
+        "US dollar"
+      ],
+      "out_of": [
+        "Europe",
+        "Emerging markets"
+      ],
+      "trigger": "Greece could not pay its debts, and investors began asking whether Italy and Spain could either. For a while it looked like the euro itself might not survive.",
+      "mechanism": "When people doubt whether a government will repay - or whether a currency will even exist - they stop hunting for returns and start hunting for safety. Money left European bank shares and government bonds for the three things with no default risk: gold, US government debt, and dollars. Gold has no government behind it that can go bankrupt, which is precisely why it gets bought when governments look shaky. It hit a then-record of about $1,900.",
+      "india": "India was hit sideways. In a panic, foreign investors sell their riskier holdings first, and India sits in that bucket. Money left Indian stocks and the rupee weakened past 50 to the dollar for the first time.",
+      "lesson": "Fear does not spread evenly, but it does spread widely. When trouble hits one region, money still leaves ALL risky markets - including ones with nothing to do with the problem. That is why India can fall on European news.",
+      "signals": {
+        "US": 0,
+        "EU": -2,
+        "JP": 0,
+        "EM": -1,
+        "IN": -1,
+        "COMMOD": 0,
+        "GOLD": 2,
+        "CASH": 1
+      }
+    },
+    {
+      "period": "2013",
+      "mood": "risk-off",
+      "headline": "The Fed hinted it would print less, and emerging markets were punished first",
+      "into": [
+        "US equities",
+        "US dollar"
+      ],
+      "out_of": [
+        "Emerging markets",
+        "Gold"
+      ],
+      "trigger": "The US Federal Reserve suggested it might slow the money-printing programme it had run since the 2008 crisis. It did not actually stop - it merely said it might. Markets convulsed anyway. The episode was nicknamed the 'taper tantrum'.",
+      "mechanism": "Years of cheap US money had flowed abroad hunting better returns, and much of it landed in emerging markets. The moment US interest rates looked like they might rise, that trade reversed: why hold Indian or Brazilian risk if safe US bonds will soon pay more? Money rushed home to America. Gold fell hard for the same reason - it pays no interest, so it looks worse the instant safe bonds start paying more.",
+      "india": "India was labelled one of the 'Fragile Five' - the economies most dependent on foreign money. The rupee collapsed from about 55 to 68 per dollar within months, and the RBI had to raise rates sharply to defend it.",
+      "lesson": "This is the single most important pattern for an Indian investor: US rates up, dollar stronger, foreign money leaves India, rupee falls. The Fed does not even have to act - a hint is enough.",
+      "signals": {
+        "US": 2,
+        "EU": 0,
+        "JP": 1,
+        "EM": -2,
+        "IN": -2,
+        "COMMOD": -1,
+        "GOLD": -2,
+        "CASH": 1
+      }
+    },
+    {
+      "period": "2014-15",
+      "mood": "risk-on",
+      "headline": "Oil collapsed and the dollar surged - a gift for India, brutal for exporters",
+      "into": [
+        "US equities",
+        "US dollar"
+      ],
+      "out_of": [
+        "Commodities",
+        "Emerging markets",
+        "Gold"
+      ],
+      "trigger": "American shale drilling flooded the world with oil and OPEC refused to cut production to defend the price. Crude fell from over $100 to under $30 a barrel, while the US economy recovered as Europe and Japan were still printing money.",
+      "mechanism": "When one economy strengthens while others still stimulate, money flows to the strong one - so the dollar rose against nearly everything. A rising dollar mechanically drags commodities down, because they are priced in dollars: a stronger dollar buys more oil, so the oil price falls. Countries that sell commodities - Brazil, Russia, South Africa - lost their main source of income at the same time their currencies fell.",
+      "india": "One of the best macro windows India has ever had. India imports about 85% of its oil, so collapsing crude shrank the import bill, cooled inflation and let the RBI cut rates. India strongly outperformed other emerging markets - proof that 'emerging markets' is not one single trade.",
+      "lesson": "Cheap oil is a direct transfer of wealth from the countries that sell it to the countries that buy it. India is one of the world's biggest buyers, so falling crude works like a free stimulus for us.",
+      "signals": {
+        "US": 2,
+        "EU": 0,
+        "JP": 1,
+        "EM": -2,
+        "IN": 0,
+        "COMMOD": -2,
+        "GOLD": -1,
+        "CASH": 1
+      }
+    },
+    {
+      "period": "2016-17",
+      "mood": "risk-on",
+      "headline": "The one stretch where everything worked, and money finally spread out",
+      "into": [
+        "Emerging markets",
+        "Commodities",
+        "Global equities"
+      ],
+      "out_of": [
+        "Cash",
+        "US dollar"
+      ],
+      "trigger": "For the first time since 2008, the US, Europe, China and Japan all grew together. Interest rates were still near zero and inflation stayed low.",
+      "mechanism": "When growth is broad and money is cheap, investors stop hiding. Cash pays nothing, so holding it actually costs you. Capital fans out from the safest assets into riskier, higher-return ones - smaller markets, cyclical industries, commodities. This is the textbook 'risk-on' phase, and emerging markets usually lead it because they were the most beaten-down going in.",
+      "india": "Indian markets rallied strongly and foreign inflows returned in size. Domestic reforms - GST and the bankruptcy code - gave foreign investors an extra reason to prefer India within the emerging-market basket.",
+      "lesson": "Emerging markets do best when global growth is broad and the dollar is flat or weak. Check the dollar's direction before assuming an India rally is purely about India.",
+      "signals": {
+        "US": 1,
+        "EU": 1,
+        "JP": 1,
+        "EM": 2,
+        "IN": 2,
+        "COMMOD": 2,
+        "GOLD": 0,
+        "CASH": -2
+      }
+    },
+    {
+      "period": "2018",
+      "mood": "risk-off",
+      "headline": "Rate rises plus a trade war pushed money back into cash",
+      "into": [
+        "Cash",
+        "US dollar"
+      ],
+      "out_of": [
+        "Emerging markets",
+        "Tech"
+      ],
+      "trigger": "The Fed raised interest rates four times in a single year while withdrawing money from the system, and the US began imposing tariffs on Chinese goods.",
+      "mechanism": "Two forces squeezed at once. Higher US rates made safe cash genuinely rewarding again, so there was less reason to hold anything risky. The trade war added a problem investors could not price: tariffs threaten the profits of any company that manufactures in one country and sells in another - which is most large companies. When a risk is political rather than financial, investors tend to reduce exposure rather than try to forecast it.",
+      "india": "Foreign investors were net sellers of Indian equities. Crude also climbed to about $85, widening India's trade gap and pushing the rupee to a then-record low near 74.",
+      "lesson": "Tightening money and rising political risk together are the worst combination for emerging markets. Cash stops being 'dead money' the moment rates rise.",
+      "signals": {
+        "US": -1,
+        "EU": -1,
+        "JP": -1,
+        "EM": -2,
+        "IN": -1,
+        "COMMOD": -1,
+        "GOLD": 0,
+        "CASH": 2
+      }
+    },
+    {
+      "period": "2019",
+      "mood": "risk-on",
+      "headline": "The Fed reversed course, and shares AND gold rose together",
+      "into": [
+        "Equities",
+        "Gold"
+      ],
+      "out_of": [
+        "Cash"
+      ],
+      "trigger": "After the 2018 sell-off, and with the trade war dragging on, the Fed stopped raising rates and began cutting them instead.",
+      "mechanism": "Rate cuts help two very different assets at once, which is why this year confuses people. Shares rise because borrowing gets cheaper and future profits are valued more highly today. Gold rises because it competes with cash and bonds: when safe assets pay less interest, holding gold - which pays none - costs you less. So falling rates can lift the risky asset and the safe haven simultaneously.",
+      "india": "Indian large caps did well, though a crisis among shadow banks (NBFCs, lenders that are not full banks) kept domestic credit tight and held mid- and small-caps back.",
+      "lesson": "'Shares up' and 'gold up' are not a contradiction. Ask what interest rates are doing - falling rates can lift both at the same time.",
+      "signals": {
+        "US": 2,
+        "EU": 1,
+        "JP": 0,
+        "EM": 1,
+        "IN": 1,
+        "COMMOD": 0,
+        "GOLD": 2,
+        "CASH": -1
+      }
+    },
+    {
+      "period": "2020",
+      "mood": "mixed",
+      "headline": "A crash, then the largest money-printing in history - money split between tech and gold",
+      "into": [
+        "US big-tech",
+        "Gold",
+        "Everything (stimulus)"
+      ],
+      "out_of": [
+        "Cash",
+        "Value stocks"
+      ],
+      "trigger": "COVID shut down the world economy and markets fell about a third in five weeks. Central banks and governments then responded with the biggest stimulus ever attempted.",
+      "mechanism": "All that new money had to go somewhere, and it split in two directions. Half chased the few businesses that actually benefited from lockdowns - software, e-commerce, streaming - pushing US technology to extreme valuations. The other half feared that printing this much money would eventually erode the currency's value, and bought gold as insurance, taking it to a record of about $2,075. Holding both at once is called a barbell: one end bets on growth, the other insures against the cost of creating it.",
+      "india": "The Nifty fell about 38% in March and fully recovered within the year. More importantly, this is when millions of new Indian retail investors began SIPs - building a domestic buying base that has cushioned every foreign sell-off since.",
+      "lesson": "Printing money lifts almost all assets, but never equally. It rewards whoever is closest to the new money and quietly punishes anyone holding plain cash.",
+      "signals": {
+        "US": 2,
+        "EU": 0,
+        "JP": 0,
+        "EM": 1,
+        "IN": 1,
+        "COMMOD": -1,
+        "GOLD": 2,
+        "CASH": -1
+      }
+    },
+    {
+      "period": "2021",
+      "mood": "risk-on",
+      "headline": "Reopening euphoria - money chased anything cyclical or speculative",
+      "into": [
+        "Cyclicals",
+        "Commodities",
+        "Crypto"
+      ],
+      "out_of": [
+        "Bonds",
+        "Safe havens"
+      ],
+      "trigger": "Vaccines arrived, economies reopened, and enormous stimulus was still in the system. Supply chains could not keep up with the rebound in demand.",
+      "mechanism": "Reopening favours the opposite companies to lockdown: banks, energy, travel and industrials - the 'cyclicals' whose profits swing with the economy. Shortages pushed commodity prices sharply higher. With rates still near zero, savers had no safe income anywhere, which pushed money into steadily more speculative corners. Gold went sideways all year despite rising inflation, because expectations of rate rises were building - the tug-of-war that usually decides gold's direction.",
+      "india": "A blockbuster year: the Nifty rose about 24%, a record number of companies listed, and retail participation exploded. Valuations moved well above their historical averages and have largely stayed there since.",
+      "lesson": "Cheap money inflates the most speculative assets the most. When safe savings pay nothing, risk gets systematically underpriced.",
+      "signals": {
+        "US": 2,
+        "EU": 1,
+        "JP": 0,
+        "EM": 1,
+        "IN": 2,
+        "COMMOD": 2,
+        "GOLD": -1,
+        "CASH": -2
+      }
+    },
+    {
+      "period": "2022",
+      "mood": "risk-off",
+      "headline": "Inflation returned, rates rose fastest in 40 years, and almost everything fell",
+      "into": [
+        "US dollar",
+        "Energy",
+        "Cash"
+      ],
+      "out_of": [
+        "Tech",
+        "Bonds",
+        "Emerging markets"
+      ],
+      "trigger": "Inflation hit 40-year highs, the Fed raised rates at the fastest pace in decades, and Russia invaded Ukraine, sending energy prices soaring.",
+      "mechanism": "This was the year the usual safety net failed. Normally when shares fall, bonds rise and cushion the blow. In 2022 rising rates crushed both at once - the worst year for a balanced portfolio in generations. Higher rates hurt fast-growing technology companies most, because their value rests on profits far in the future, and future profits are worth less when rates are high. The dollar surged as US rates outpaced everyone else's, and energy was the only major winner.",
+      "india": "India held up remarkably well in local terms - the Nifty was roughly flat while global markets fell more than 20% - because steady domestic SIP inflows absorbed heavy foreign selling. But the rupee fell past 83, so returns measured in dollars were far worse than they looked in rupees.",
+      "lesson": "Interest rates are gravity for asset prices. When they rise fast, almost everything falls together - and spreading money across shares and bonds may not save you.",
+      "signals": {
+        "US": -2,
+        "EU": -2,
+        "JP": -1,
+        "EM": -2,
+        "IN": 0,
+        "COMMOD": 2,
+        "GOLD": 0,
+        "CASH": 2
+      }
+    },
+    {
+      "period": "2023",
+      "mood": "risk-on",
+      "headline": "AI narrowed the whole market down to a handful of giants",
+      "into": [
+        "US mega-cap tech (the 'Magnificent 7')",
+        "Gold"
+      ],
+      "out_of": [
+        "Small caps",
+        "China"
+      ],
+      "trigger": "ChatGPT triggered a scramble to invest in artificial intelligence, while China's post-COVID recovery failed to arrive and its property crisis deepened.",
+      "mechanism": "Investors decided only a few very large companies had the chips, data and cash to win at AI, so money concentrated into roughly seven US names that drove most of the index's gain. The rest of the market barely moved. Gold climbed quietly too - partly on expectations that rate rises were ending, and partly because central banks, especially in Asia, were buying it in record size to reduce their dependence on the dollar.",
+      "india": "India became the preferred emerging market as investors trimmed China exposure - the 'China+1' idea expressed through portfolios. Indian mid- and small-caps ran hard, pushing valuations to demanding levels.",
+      "lesson": "An index going up does not mean the market is going up. Check whether gains are broad or concentrated in a few names, because narrow rallies are far more fragile.",
+      "signals": {
+        "US": 2,
+        "EU": 0,
+        "JP": 2,
+        "EM": -1,
+        "IN": 1,
+        "COMMOD": -1,
+        "GOLD": 1,
+        "CASH": 0
+      }
+    },
+    {
+      "period": "2024",
+      "mood": "mixed",
+      "headline": "Rate cuts began and central banks bought gold in record size",
+      "into": [
+        "Gold",
+        "US tech",
+        "Japan"
+      ],
+      "out_of": [
+        "Cash (as rate cuts began)",
+        "China"
+      ],
+      "trigger": "Inflation cooled enough for central banks to start cutting rates, while central banks themselves - led by China, India, Turkey and Poland - bought gold at the fastest pace on record.",
+      "mechanism": "Two very different buyers pushed gold to fresh highs. Ordinary investors bought because falling rates reduce the appeal of holding cash. Central banks bought for another reason entirely: after Russia's foreign reserves were frozen in 2022, countries realised that dollar reserves can be switched off by another government. Gold cannot be frozen, so they have been swapping dollars for it - steady buying that is indifferent to the daily price. Japan meanwhile rose on genuine corporate reform.",
+      "india": "India kept attracting strong domestic flows. Gold in rupee terms hit repeated records, helped both by the global price and by a gently weakening rupee - a reminder that Indian gold returns combine two moving parts.",
+      "lesson": "Gold is no longer driven only by fear and interest rates. Central-bank buying to reduce dollar dependence is a slow, structural bid sitting underneath the price.",
+      "signals": {
+        "US": 2,
+        "EU": 0,
+        "JP": 2,
+        "EM": -1,
+        "IN": 1,
+        "COMMOD": 0,
+        "GOLD": 2,
+        "CASH": -1
+      }
+    },
+    {
+      "period": "2025-26",
+      "mood": "mixed",
+      "headline": "Record gold, crowded US tech, and the first signs of money broadening out",
+      "into": [
+        "Gold",
+        "Cheap markets / EM value",
+        "Broadening beyond US tech"
+      ],
+      "out_of": [
+        "Over-concentrated US mega-caps"
+      ],
+      "trigger": "US valuations reached levels seen only in 1929 and 1999, tariffs and trade barriers returned as everyday policy tools, and central banks kept buying gold while questions grew about the scale of US government debt.",
+      "mechanism": "Two opposite forces are running at once, which is why the picture looks contradictory. Money keeps flowing to US technology because that is where the profits and the AI investment are - but the price being paid is now extreme. The same investors are simultaneously hedging, buying gold in case inflation, debt or currency trouble returns. When a market becomes this concentrated, even a modest rotation out of the giants can move a lot of money into cheaper markets quickly - which makes the crowding itself the main risk.",
+      "india": "India sits awkwardly in the middle: an excellent long-term growth story, but one of the world's most expensive markets. Domestic SIP flows keep supporting prices, while foreign investors increasingly ask whether the growth justifies the premium over much cheaper Asian markets.",
+      "lesson": "When money chases and hedges at the same time, it is telling you conviction is low. The real danger in a crowded trade is not that the story is wrong - it is that everyone already owns it.",
+      "signals": {
+        "US": 0,
+        "EU": 1,
+        "JP": 1,
+        "EM": 1,
+        "IN": 0,
+        "COMMOD": 1,
+        "GOLD": 2,
+        "CASH": -1
+      }
+    }
+  ],
+  "current": {
+    "mood": "mixed",
+    "summary": "Money is split between crowded, expensive US technology and record-high gold - investors want the growth but are hedging their bets. The open question is whether it broadens toward cheaper markets.",
+    "where_we_are": "US shares are near their most expensive levels in a century, and a handful of AI companies drive most of the gains. At the same time gold keeps setting records - a combination that says investors are chasing returns and buying insurance at once. India is expensive too, held up by strong domestic SIP flows rather than by foreign buying.",
+    "what_could_change": [
+      "Rate cuts continue and inflation stays calm: money usually broadens out from the giants into cheaper markets and smaller companies. Historically good for India and other emerging markets.",
+      "Inflation returns and rate cuts stop: the 2022 pattern repeats - expensive, fast-growing shares fall hardest, the dollar strengthens, and foreign money leaves India.",
+      "Tariffs and trade barriers widen: global supply chains get costlier and exporters suffer, while money favours economies driven by their own domestic demand. India's large home market is a relative shelter here.",
+      "A geopolitical or debt shock: gold and the dollar rise, everything risky falls together, and India falls with the rest regardless of its own fundamentals."
+    ],
+    "what_to_watch": [
+      "The US 10-year bond yield - the best single gauge of whether money is being pulled back toward safety",
+      "Whether foreign investors turn net buyers of Indian equities again, or keep selling while domestic SIPs absorb it",
+      "Central-bank gold buying - steady purchases put a floor under the price",
+      "Whether US gains broaden beyond the handful of AI names, or narrow even further"
+    ],
+    "mood_today": "risk-off"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "date": "2026-09-13",
   "date_human": "Sunday, 13 September 2026",
-  "generated_at": "2026-09-13T01:42:29+00:00",
+  "generated_at": "2026-09-13T06:16:52+00:00",
   "engine": "Gemini AI",
   "macro": [],
   "calendar": [
@@ -104,112 +104,122 @@
   ],
   "events": [
     {
-      "headline": "Gold rate today under pressure as soaring crude oil price fuels US Fed rate hike buzz | Resistance, support to outlook",
-      "relevance": 10.5,
+      "headline": "Weekly Market Outlook: Can Nifty find its footing as crude, Fed policy drive markets?",
+      "relevance": 11.5,
       "items": [
         {
-          "title": "Gold rate today under pressure as soaring crude oil price fuels US Fed rate hike buzz | Resistance, support to outlook",
-          "url": "https://www.livemint.com/market/commodities/gold-rate-today-under-pressure-as-soaring-crude-oil-price-fuels-us-fed-rate-hike-buzz-resistance-support-to-outlook-11789190426224.html",
-          "source": "Livemint Markets",
-          "published": "2026-09-12T06:45:47+00:00",
-          "summary": "Gold price today: The COMEX gold price closed the week on a negative note at $4,408.9, pulling back sharply from the $4,500 zone after touching a high of $4,488.80",
+          "title": "Weekly Market Outlook: Can Nifty find its footing as crude, Fed policy drive markets?",
+          "url": "https://economictimes.indiatimes.com/markets/stocks/news/weekly-market-outlook-can-nifty-find-its-footing-as-crude-fed-policy-drive-markets/articleshow/134178071.cms",
+          "source": "Economic Times Markets",
+          "published": "2026-09-13T04:35:56+00:00",
+          "summary": "Indian equities enter a holiday-shortened week with the Nifty at a crucial support zone after five consecutive weekly declines. The US Fed’s policy decision, FOMC projections, crude oil prices, global bond yields and foreign flows will drive near-term sentiment. Analysts expect volatility to remain elevated but see scope for buying at lower levels, with the Nifty’s 23,000–23,300 zone in focus.",
           "region": "india",
           "origin": "rss",
-          "relevance": 10.5
+          "relevance": 11.5
+        },
+        {
+          "title": "Weekly Market Outlook: Can Nifty find its footing as crude, Fed policy drive markets?",
+          "url": "https://economictimes.indiatimes.com/markets/stocks/news/weekly-market-outlook-can-nifty-find-its-footing-as-crude-fed-policy-drive-markets/articleshow/134178071.cms",
+          "source": "Zerodha Pulse",
+          "published": "2026-09-13T04:35:56+00:00",
+          "summary": "Indian equities enter a holiday-shortened week with the Nifty at a crucial support zone after five consecutive weekly declines. The US Fed’s policy decision, FOMC projections, crude oil prices, global bond yields and foreign flows will drive near-term sentiment. Analysts expect volatility to remain elevated but see scope for buying at lower levels, with the Nifty’s 23,000–23,300 zone in focus.",
+          "region": "india",
+          "origin": "rss",
+          "relevance": 11.5
         }
       ],
       "sources": [
-        "Livemint Markets"
+        "Economic Times Markets",
+        "Zerodha Pulse"
       ],
       "urls": [
-        "https://www.livemint.com/market/commodities/gold-rate-today-under-pressure-as-soaring-crude-oil-price-fuels-us-fed-rate-hike-buzz-resistance-support-to-outlook-11789190426224.html"
+        "https://economictimes.indiatimes.com/markets/stocks/news/weekly-market-outlook-can-nifty-find-its-footing-as-crude-fed-policy-drive-markets/articleshow/134178071.cms",
+        "https://economictimes.indiatimes.com/markets/stocks/news/weekly-market-outlook-can-nifty-find-its-footing-as-crude-fed-policy-drive-markets/articleshow/134178071.cms"
       ],
-      "item_count": 1,
-      "coverage_boost": 0.0,
-      "id": "6a5b5edcd1",
+      "item_count": 2,
+      "coverage_boost": 0.5,
+      "id": "bef70ce8d6",
       "keywords": [
-        "408",
-        "488",
-        "500",
-        "back",
-        "buzz",
-        "closed",
-        "comex",
+        "can",
+        "consecutive",
+        "crucial",
         "crude",
+        "decision",
+        "declines",
+        "drive",
+        "enter",
+        "equities",
         "fed",
-        "fuels",
-        "gold",
-        "high",
-        "hike",
-        "negative",
-        "note",
+        "find",
+        "five",
+        "fomc",
+        "footing",
+        "global",
+        "holiday",
+        "indian",
+        "nifty",
         "oil",
         "outlook",
-        "pressure",
-        "price",
-        "pulling",
-        "rate",
-        "resistance",
-        "sharply",
-        "soaring",
+        "policy",
+        "prices",
+        "projections",
+        "shortened",
         "support",
-        "today",
-        "touching",
-        "under",
+        "weekly",
         "zone"
       ],
       "category": "monetary_policy",
       "analysis": {
-        "tldr": "Rising oil prices are making people worry about US inflation, which means the US might keep interest rates high and push gold prices down.",
-        "what_happened": "Crude oil (unrefined petroleum) prices have gone up sharply. When oil gets expensive, everything else gets more expensive, so people worry that US inflation (the rate at which prices rise) will bounce back. Because of this, traders think the US Fed (the US central bank) will keep interest rates higher for longer to cool things down, which makes gold less attractive because gold doesn't pay regular interest.",
-        "analogy": "It is like having two people trying to borrow from you: if one starts offering a very high interest rate, you will take your money out of your shiny gold coins and lend it to them instead, making people care less about the gold.",
+        "tldr": "If global oil prices stay high and the US central bank keeps interest rates elevated, foreign money will leave India, making the rupee weaker and imported goods costlier for you.",
+        "what_happened": "Stock markets in India are anxiously watching two big global puzzle pieces: the price of crude oil and the future moves of the Fed (the US Federal Reserve, which is America's central bank that controls interest rates). Investors are worried because if the US keeps interest rates high and oil prices climb, it changes how global money flows around the world.",
+        "analogy": "It is like a giant global playground: when the biggest kid (the US) offers higher interest rewards on piggy banks, other kids start pulling their toys out of the Indian playground to run over there.",
         "why_it_matters_india": [
-          "Crude oil prices go up globally.",
-          "US inflation fears rise, causing the US Fed (the US central bank) to signal it will keep interest rates high.",
-          "Global investors move their money back to the US where it earns high interest, pulling money out of emerging markets like India.",
-          "Gold prices face downward pressure globally, which flows into local gold rates in India."
+          "The US Federal Reserve signals it might keep interest rates high for a longer time.",
+          "Global investors look at those high US rates and decide to pull their money out of emerging markets like India to chase safer US returns.",
+          "These big foreign investors (FIIs, which means foreign institutional investors like massive global funds) sell their Indian shares.",
+          "Selling pressure hits the Indian stock market, while fewer dollars in India cause our currency to lose value against the US dollar."
         ],
         "impacts": [
           {
-            "target": "Gold price in India",
-            "direction": "down",
-            "probability": "Medium",
-            "horizon": "weeks",
-            "rationale": "Global gold prices are dipping due to strong US interest rates, which is generally good if you are planning to buy jewellery or investment gold soon."
-          },
-          {
             "target": "The rupee (vs the US dollar)",
             "direction": "down",
-            "probability": "Medium",
-            "horizon": "days",
-            "rationale": "As global money flows back to the US, the rupee weakens (each rupee buys fewer dollars), which makes imported items like electronics and petrol costlier for us."
+            "probability": "High",
+            "horizon": "weeks",
+            "rationale": "As foreign money leaves India for the US, demand for dollars rises and demand for rupees falls, making the rupee weaker. This is bad for you because imported things like crude oil and electronics become more expensive."
           },
           {
             "target": "Nifty 50 (India's main stock index)",
             "direction": "down",
-            "probability": "Low",
+            "probability": "Medium",
             "horizon": "days",
-            "rationale": "When global investors pull money out of India to chase higher US returns, local stock markets can feel a bit sluggish — bad for regular investors holding stocks."
+            "rationale": "When big foreign investors pull their money out of India, stock prices take a hit. This can be stressful if you hold mutual funds or shares, though it can also create buying opportunities for long-term investors."
           },
           {
             "target": "Petrol & diesel prices",
             "direction": "up",
             "probability": "Medium",
             "horizon": "weeks",
-            "rationale": "Since crude oil is soaring globally, fuel costs can creep up, hitting household budgets and making transport more expensive."
+            "rationale": "India imports most of its crude oil. When oil prices stay high and the rupee weakens, it costs oil companies more rupees to buy that oil, which eventually trickles down to higher fuel prices at the pump for you."
+          },
+          {
+            "target": "10-year bond yield (interest India pays to borrow)",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "When global interest rates go up, India must also offer higher returns to attract lenders, pushing local bond yields up. Higher yields usually mean costlier loans for home and car buyers."
           }
         ],
         "watch_next": [
-          "Upcoming US inflation data reports",
-          "Statements from US Fed officials on interest rate cuts"
+          "Statements from US central bank officials about future interest rate cuts or hikes",
+          "Global crude oil price movements in the international market"
         ],
-        "confidence": "Medium",
-        "caveats": "If crude oil prices suddenly drop due to a sudden peace deal or unexpected economic slowdown, this whole chain reaction could reverse quickly.",
+        "confidence": "High",
+        "caveats": "If unexpected global news causes crude oil prices to suddenly crash, this pressure on Indian markets could ease very quickly.",
         "engine": "gemini",
         "category": "monetary_policy",
         "matched_linkage": "fed_hawkish"
       },
-      "importance": 12.1,
+      "importance": 13.6,
       "is_top": true
     },
     {
@@ -272,14 +282,14 @@
       ],
       "category": "currency",
       "analysis": {
-        "tldr": "When the main stock market index slips below key levels, it signals that nervous investors are selling more than buying, which can lead to further short-term bumps in your investments.",
-        "what_happened": "The Nifty 50 (India's main stock index of top 50 companies) dropped below what experts call a 'crucial support' level. This means the price point where buyers usually step in to stop a fall was broken, driven by cautious market sentiment and traders cutting their positions.",
-        "analogy": "It is like a game of tug-of-war where the team pulling backward suddenly loses their footing, causing everyone to slide a few feet down the hill before they can find a new grip.",
+        "tldr": "When the stock market drops below safety lines, big investors often panic and sell more, which can make your mutual fund values swing wildly.",
+        "what_happened": "The Nifty 50 (India's main stock index of top 50 companies) has fallen below a major 'support level' (a price floor where stock prices usually stop falling because buyers step in). Experts call this because traders who bet using derivatives (F&O, meaning futures and options, or contracts that let you bet on stock prices without owning them) are selling off their holdings in a hurry.",
+        "analogy": "It is like a game of musical chairs where everyone suddenly rushes for the last few remaining seats because the floor beneath them feels shaky.",
         "why_it_matters_india": [
-          "Stock market technical levels break -> Traders and automated systems panic-sell",
-          "Selling pressure builds up -> Overall market mood turns negative for the short term",
-          "FIIs (big foreign investors) might hesitate to put fresh money into Indian stocks",
-          "Regular retail investors see their portfolio values fluctuate more wildly day-to-day"
+          "Technical stock support breaks -> stock market experts and computers trigger automatic selling",
+          "Automatic selling -> big foreign investors and local mutual funds pull back money to avoid losses",
+          "Heavy selling -> share prices of major Indian companies go down",
+          "Falling share prices -> regular people see their mutual fund and stock values dip in the short term"
         ],
         "impacts": [
           {
@@ -287,129 +297,34 @@
             "direction": "down",
             "probability": "High",
             "horizon": "days",
-            "rationale": "Breaking support levels usually invites more selling in the short term, which can be unsettling for regular investors watching their portfolio values drop."
-          },
-          {
-            "target": "The rupee (vs the US dollar)",
-            "direction": "down",
-            "probability": "Medium",
-            "horizon": "weeks",
-            "rationale": "If foreign investors pull money out of Indian stocks, they sell rupees to buy dollars, making the rupee weaker and imported goods like electronics slightly pricier."
-          },
-          {
-            "target": "Volatility index (a measure of market fear and panic)",
-            "direction": "up",
-            "probability": "High",
-            "horizon": "days",
-            "rationale": "A falling market naturally brings higher uncertainty and fear, meaning stock prices will swing up and down more sharply each day."
-          }
-        ],
-        "watch_next": [
-          "Whether the market manages to bounce back above that broken support level soon",
-          "Global stock market trends, especially how US markets are behaving"
-        ],
-        "confidence": "Medium",
-        "caveats": "Markets often fake out traders, so a sudden positive global headline could easily reverse this drop by tomorrow.",
-        "engine": "gemini",
-        "category": "currency",
-        "matched_linkage": "us_yields_up"
-      },
-      "importance": 11.7,
-      "is_top": true
-    },
-    {
-      "headline": "De-dollarisation and its impact on commodities and global trade",
-      "relevance": 9.5,
-      "items": [
-        {
-          "title": "De-dollarisation and its impact on commodities and global trade",
-          "url": "https://economictimes.indiatimes.com/markets/forex/forex-news/de-dollarisation-and-its-impact-on-commodities-and-global-trade/articleshow/134109334.cms",
-          "source": "Economic Times Markets",
-          "published": "2026-09-12T05:04:02+00:00",
-          "summary": "For decades, the US dollar has dominated global trade and commodity markets. Most commodities, including crude oil, natural gas, gold, industrial metals, and agricultural products, are priced and traded in dollars.",
-          "region": "india",
-          "origin": "rss",
-          "relevance": 9.5
-        }
-      ],
-      "sources": [
-        "Economic Times Markets"
-      ],
-      "urls": [
-        "https://economictimes.indiatimes.com/markets/forex/forex-news/de-dollarisation-and-its-impact-on-commodities-and-global-trade/articleshow/134109334.cms"
-      ],
-      "item_count": 1,
-      "coverage_boost": 0.0,
-      "id": "6a6b2484aa",
-      "keywords": [
-        "agricultural",
-        "commodities",
-        "commodity",
-        "crude",
-        "decades",
-        "dollar",
-        "dollarisation",
-        "dominated",
-        "gas",
-        "global",
-        "gold",
-        "impact",
-        "including",
-        "industrial",
-        "metals",
-        "most",
-        "natural",
-        "oil",
-        "priced",
-        "products",
-        "trade",
-        "traded"
-      ],
-      "category": "commodities",
-      "analysis": {
-        "tldr": "Countries trying to trade using currencies other than the US dollar could make global trade messier and spark higher volatility in the prices of things India buys from abroad.",
-        "what_happened": "Countries like China and Russia are trying to bypass the US dollar (the global currency used for most international trade) by settling trades in their own local currencies. This is happening because the US has used the dollar's dominance to place heavy financial punishments on certain nations, making others nervous about relying too much on it.",
-        "analogy": "It is like a local market where everyone previously agreed to trade using only one trusted brand of gift vouchers. Suddenly, a few shopkeepers start accepting different coupons, making it harder to calculate prices and trade smoothly.",
-        "why_it_matters_india": [
-          "Countries trade less in US dollars and more in local currencies",
-          "Global trade transactions become slower and more expensive because currency exchange is complex",
-          "Commodities like crude oil and natural gas see volatile price swings due to changing currency demand",
-          "India, being a major importer of energy and goods, has to navigate shifting payment systems and potential cost spikes"
-        ],
-        "impacts": [
-          {
-            "target": "The rupee (vs the US dollar)",
-            "direction": "down",
-            "probability": "Medium",
-            "horizon": "months",
-            "rationale": "If global trust in the dollar slowly drops, exchange rates will wobble, which can make the rupee (each rupee buys fewer dollars) weaker, making imported goods costlier for Indians."
-          },
-          {
-            "target": "Crude oil prices",
-            "direction": "up",
-            "probability": "Low",
-            "horizon": "months",
-            "rationale": "Complex new payment systems for oil can add friction and risk premiums, pushing up fuel import costs—bad for household budgets and inflation."
+            "rationale": "When a crucial support level breaks, short-term panic usually pushes the index lower, making regular investors see red in their portfolios."
           },
           {
             "target": "Gold price in India",
             "direction": "up",
             "probability": "Medium",
-            "horizon": "months",
-            "rationale": "Central banks worldwide buying alternative assets like gold instead of holding US dollars drives up global gold prices, making jewelry and investments pricier in India."
+            "horizon": "weeks",
+            "rationale": "When the stock market gets shaky and risky, investors traditionally run to buy gold as a safe hiding place for their money, raising its price."
+          },
+          {
+            "target": "FIIs (big foreign investors) money flow into India",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "Foreign funds prefer stable or rising markets; when trends break downward, they often take their money out to safer places like the US."
           }
         ],
         "watch_next": [
-          "Whether more countries sign bilateral trade pacts in rupees or local currencies",
-          "Changes in central bank gold reserves globally"
+          "Whether the stock market manages to bounce back quickly from this lower level",
+          "Global stock market moods, especially in the US"
         ],
-        "confidence": "Medium",
-        "caveats": "The US dollar is deeply entrenched in global finance, so any shift away from it will happen very slowly over many years rather than overnight.",
+        "confidence": "High",
+        "caveats": "Markets can sometimes fake a breakdown just to trick traders before shooting right back up.",
         "engine": "gemini",
-        "category": "commodities",
-        "matched_linkage": "natgas_lng_up"
+        "category": "currency",
+        "matched_linkage": "us_yields_up"
       },
-      "importance": 10.7,
+      "importance": 11.7,
       "is_top": true
     },
     {
@@ -457,46 +372,142 @@
       ],
       "category": "commodities",
       "analysis": {
-        "tldr": "When the US reports its inflation numbers, it decides whether your bank loans and your investments will become more expensive or cheaper soon.",
-        "what_happened": "Everyone in the global financial market is waiting for the US CPI report (Consumer Price Index, a measure of how fast everyday prices are rising). Traders are watching this closely because it will decide if the US Federal Reserve (the US central bank that controls interest rates) will cut or raise borrowing costs next.",
-        "analogy": "It is like waiting for your apartment building's landlord to announce if maintenance charges are going up. If the landlord's bills went up, everyone in the building prepares to pay more.",
+        "tldr": "When the US reports its inflation numbers, it decides whether your home loans in India might become cheaper or stay costly.",
+        "what_happened": "Everyone in the global money world is waiting for the US CPI report (a regular report tracking how fast everyday prices are rising in America). Traders and experts are watching it closely because it tells us if prices are finally cooling down, which pushes the US central bank to decide whether to cut its interest rates.",
+        "analogy": "It is like waiting for your apartment building's landlord to announce if rent is going up or down next month before you decide whether you can afford to buy a new sofa.",
         "why_it_matters_india": [
-          "US inflation data is released -> Global investors guess what the US Federal Reserve will do with interest rates -> Money flows out of or into emerging markets like India -> Indian stock markets and the rupee react to these massive shifts in global money."
+          "The US CPI report comes out, showing how fast US prices are rising.",
+          "If US inflation is low, global markets expect the US central bank to cut interest rates.",
+          "Lower US interest rates make global investors pull money out of the US and send it to growing markets like India looking for better returns.",
+          "This sudden flood of foreign money strengthens the Indian rupee and pushes Indian stock markets higher."
         ],
         "impacts": [
           {
-            "target": "The rupee (vs the US dollar)",
-            "direction": "down",
-            "probability": "Medium",
-            "horizon": "days",
-            "rationale": "If US inflation comes in higher than expected, US interest rates stay high, making the dollar stronger and pushing the rupee down, which makes imported things like crude oil costlier for us."
-          },
-          {
             "target": "Nifty 50 (India's main stock index)",
-            "direction": "down",
-            "probability": "Medium",
-            "horizon": "days",
-            "rationale": "Higher US inflation usually spooks big foreign investors, causing them to pull money out of Indian stocks, which can make the stock market dip — a tough time for existing investors."
-          },
-          {
-            "target": "Gold price in India",
             "direction": "up",
             "probability": "Medium",
             "horizon": "days",
-            "rationale": "If inflation turns out sticky or messy, global investors rush to buy gold as a safe shield, driving up the price of gold in local Indian jewellers as well."
+            "rationale": "If US inflation is lower than feared, global investors get happy and pour money into Indian stocks, which is generally good for local investors."
+          },
+          {
+            "target": "The rupee (vs the US dollar)",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "days",
+            "rationale": "A softer US inflation report weakens the US dollar, helping the Indian rupee strengthen (each rupee buys more dollars), which makes imported items like crude oil slightly cheaper."
+          },
+          {
+            "target": "10-year bond yield (interest India pays to borrow)",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "Softer global inflation pressure lets Indian borrowing costs ease down, which is good because it can eventually lead to cheaper home and car loans."
           }
         ],
         "watch_next": [
-          "The actual US inflation percentage number compared to what experts guessed",
-          "How the US stock market reacts right after the news comes out"
+          "The exact US inflation percentage number released on Friday",
+          "Statements from the US central bank about their next interest rate decision"
         ],
         "confidence": "High",
-        "caveats": "If inflation matches what experts already guessed, the markets might barely move at all.",
+        "caveats": "If US inflation comes out higher than expected, global markets could panic and pull money back out of India quickly.",
         "engine": "gemini",
         "category": "commodities",
         "matched_linkage": "fertilizer_up"
       },
       "importance": 7.2,
+      "is_top": true
+    },
+    {
+      "headline": "Pick of BL commodities -September 13, 2026",
+      "relevance": 5.5,
+      "items": [
+        {
+          "title": "Pick of BL commodities -September 13, 2026",
+          "url": "https://www.thehindubusinessline.com/newsletter/pick-of-bl-commodities/pick-of-bl-commodities-september-13-2026/article71460827.ece",
+          "source": "The Hindu BusinessLine",
+          "published": "2026-09-13T04:25:54+00:00",
+          "summary": "Last week, sugar continued to be in the limelight. The Indian government has indicated that it will begin tracking sugar production every month from October, when the new season begins. Uttar Pradesh could spoil the sugar party next season, while its millers have been reluctant to cut prices after they soared to record highs. Kharif sowing has almost ended, with the acreage being 2 per cent lower. Indian Agriculture Minister has an interesting take on extending irrigation - he says it has led to a drop in production of pulses, oilseeds and millets. Copper has soared to a new high, and this wil",
+          "region": "india",
+          "origin": "rss",
+          "relevance": 5.5
+        }
+      ],
+      "sources": [
+        "The Hindu BusinessLine"
+      ],
+      "urls": [
+        "https://www.thehindubusinessline.com/newsletter/pick-of-bl-commodities/pick-of-bl-commodities-september-13-2026/article71460827.ece"
+      ],
+      "item_count": 1,
+      "coverage_boost": 0.0,
+      "id": "b6e0a1608d",
+      "keywords": [
+        "2026",
+        "begin",
+        "begins",
+        "commodities",
+        "continued",
+        "every",
+        "government",
+        "indian",
+        "indicated",
+        "last",
+        "limelight",
+        "month",
+        "october",
+        "pick",
+        "production",
+        "season",
+        "september",
+        "sugar",
+        "tracking",
+        "when"
+      ],
+      "category": "commodities",
+      "analysis": {
+        "tldr": "Global commodity price swings mean everyday household groceries and festival gold shopping are about to get costlier for your family budget.",
+        "what_happened": "Global commodity prices for items like gold and sugar are shifting up and down due to changing weather patterns in farming countries and shifting global demand. When weather ruins crops abroad or global fears make people nervous, the buying and selling prices of these physical goods change rapidly in world markets.",
+        "analogy": "It is like a local vegetable mandi (market) where sudden bad weather in a distant village ruins the tomato crop, instantly making tomatoes more expensive at your local street corner cart.",
+        "why_it_matters_india": [
+          "Bad weather or poor harvests in big farming nations reduce the global supply of food commodities like sugar.",
+          "Lower global supply pushes world prices up, which naturally lifts local prices inside India as well.",
+          "At the same time, global economic worries send investors running to buy gold for safety, driving up domestic gold prices.",
+          "Higher prices for imported foods and precious metals feed straight into domestic inflation (rising cost of living) and household expenses."
+        ],
+        "impacts": [
+          {
+            "target": "Gold price in India",
+            "direction": "up",
+            "probability": "High",
+            "horizon": "weeks",
+            "rationale": "Global uncertainty pushes up safe-haven buying, which is bad for regular families planning jewellery purchases as it makes gold costlier."
+          },
+          {
+            "target": "India's inflation rate",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "months",
+            "rationale": "Costlier food commodities like sugar and edible items filter down to grocery stores, which is bad because it raises the daily cost of running a household."
+          },
+          {
+            "target": "FMCG stocks like Hindustan Unilever & Nestle",
+            "direction": "down",
+            "probability": "Medium",
+            "horizon": "months",
+            "rationale": "When raw ingredient prices like sugar and agriculture goods rise, companies face higher costs to make packaged foods, which can squeeze their profits."
+          }
+        ],
+        "watch_next": [
+          "Monsoon progress and crop yield reports from major agricultural regions",
+          "Global news on safe-haven buying and central bank interest rate decisions"
+        ],
+        "confidence": "Medium",
+        "caveats": "If unexpected government interventions or sudden export restrictions are announced, local commodity prices could move independently of global trends.",
+        "engine": "gemini",
+        "category": "commodities",
+        "matched_linkage": "gold_up_riskoff"
+      },
+      "importance": 6.7,
       "is_top": false
     },
     {
@@ -549,147 +560,56 @@
       ],
       "category": "trade",
       "analysis": {
-        "tldr": "When the US restricts trade with its neighbors, global supply chains get disrupted, which can either hurt Indian factory exports or create new chances for India to sell more abroad.",
-        "what_happened": "The United States government has banned imports of several goods coming from Canada. This happened because political tensions over trade rules and taxes escalated between the two neighboring countries, leading the US to use trade restrictions as a weapon.",
-        "analogy": "It is like two neighboring shopkeepers who used to share customers suddenly stopping talking and refusing to sell each other's goods, forcing buyers to walk down the street to your shop instead.",
+        "tldr": "When the US and Canada fight over trade, global supply chains reshuffle, which can either hurt Indian exporters who share supply lines or help Indian factories pick up new business as buyers look outside North America.",
+        "what_happened": "The US government put a ban on bringing in several products made in Canada because of a growing trade fight between the two neighbors. Governments do this by slapping heavy import taxes or outright bans to protect local factories, which triggers retaliation and breaks old supply chains.",
+        "analogy": "It is like two busy neighborhood grocery shops starting a public fight; customers suddenly stop going to both and start knocking on your door instead.",
         "why_it_matters_india": [
-          "The US government puts bans or extra taxes on Canadian goods ->",
-          "American companies scramble to find other countries to buy from so their supply chains don't break ->",
-          "Indian manufacturing and chemical companies look like safe alternative suppliers ->",
-          "More global orders flow into India, boosting domestic factories and jobs."
+          "The US government blocks Canadian goods, forcing American companies to urgently search for items from other countries.",
+          "Global supply chains get disrupted as factories scramble to find new places to buy raw materials and finished goods.",
+          "International buyers look at India as a stable alternative to make products, boosting local manufacturing and export orders.",
+          "However, if global trade slows down too much, overall world demand drops, which can hurt Indian companies that sell goods abroad."
         ],
         "impacts": [
           {
-            "target": "Nifty 50 (India's main stock index)",
-            "direction": "up",
-            "probability": "Medium",
-            "horizon": "weeks",
-            "rationale": "Global trade fights can rattle worldwide markets, but if investors think Indian companies will grab lost Canadian market share, local stocks could rise — which is generally good for Indian investors."
-          },
-          {
-            "target": "The rupee (vs the US dollar)",
+            "target": "IT stocks like TCS & Infosys",
             "direction": "down",
             "probability": "Low",
-            "horizon": "months",
-            "rationale": "Global trade panic often makes investors run to the US dollar for safety, causing the rupee to weaken (each rupee buys fewer dollars), making imported crude oil costlier for India."
+            "horizon": "weeks",
+            "rationale": "If trade fights hurt North American business profits, they might spend less on tech consulting, which is bad for Indian tech earnings."
           },
           {
-            "target": "IT and manufacturing stocks in India",
-            "direction": "up",
+            "target": "Nifty 50 (India's main stock index)",
+            "direction": "down",
             "probability": "Medium",
-            "horizon": "weeks",
-            "rationale": "When Western nations look away from traditional trade partners due to fights, Indian export firms often pick up new contracts — bringing in more revenue."
-          }
-        ],
-        "watch_next": [
-          "Whether Canada puts retaliatory bans on US goods",
-          "Statements from Indian export promotion councils about new US buyer inquiries"
-        ],
-        "confidence": "Medium",
-        "caveats": "If this trade fight drags down the entire US economy, everyday Americans will have less money to spend, which would eventually hurt Indian exports too.",
-        "engine": "gemini",
-        "category": "trade",
-        "matched_linkage": "us_tariffs_tradewar"
-      },
-      "importance": 6.2,
-      "is_top": false
-    },
-    {
-      "headline": "Gem, jewellery exports rise 3.14% to $2.30 bn in August despite weak demand",
-      "relevance": 4.5,
-      "items": [
-        {
-          "title": "Gem, jewellery exports rise 3.14% to $2.30 bn in August despite weak demand",
-          "url": "https://economictimes.indiatimes.com/news/economy/foreign-trade/gem-jewellery-exports-rise-3-14-to-2-30-bn-in-august-despite-weak-demand/articleshow/134137597.cms",
-          "source": "Economic Times Economy",
-          "published": "2026-09-12T14:21:52+00:00",
-          "summary": "India's gem and jewellery exports grew in August, with studded gold jewellery exports surging significantly. Cut and polished diamond exports saw volume increases, though realisations remained a pressure point. Plain gold jewellery exports declined sharply due to higher gold prices and input costs. Other value-added categories like platinum and lab-grown diamonds also recorded strong growth. This trend highlights a shift towards finished and value-added jewellery in India's export profile.",
-          "region": "india",
-          "origin": "rss",
-          "relevance": 4.5
-        }
-      ],
-      "sources": [
-        "Economic Times Economy"
-      ],
-      "urls": [
-        "https://economictimes.indiatimes.com/news/economy/foreign-trade/gem-jewellery-exports-rise-3-14-to-2-30-bn-in-august-despite-weak-demand/articleshow/134137597.cms"
-      ],
-      "item_count": 1,
-      "coverage_boost": 0.0,
-      "id": "b34df92738",
-      "keywords": [
-        "august",
-        "cut",
-        "demand",
-        "despite",
-        "diamond",
-        "exports",
-        "gem",
-        "gold",
-        "grew",
-        "increases",
-        "jewellery",
-        "plain",
-        "point",
-        "polished",
-        "pressure",
-        "realisations",
-        "remained",
-        "rise",
-        "saw",
-        "significantly",
-        "studded",
-        "surging",
-        "though",
-        "volume",
-        "weak"
-      ],
-      "category": "commodities",
-      "analysis": {
-        "tldr": "Jewellery exports from India are growing even though global buyers are holding back, which brings in foreign money and helps support local businesses and jobs.",
-        "what_happened": "India's gem and jewellery exports grew by 3.14% to reach $2.30 billion in August. This happened because Indian sellers found new buyers and worked harder to push sales in tough global markets where people are generally spending less money.",
-        "analogy": "It is like a local sweet shop selling more laddus during a festival month even when people in the neighborhood are cutting back on treats, simply because the shopkeeper reached out to customers in the next town over.",
-        "why_it_matters_india": [
-          "Indian jewellery makers sell more items abroad -> more foreign money comes into India",
-          "Higher foreign earnings -> strengthens the rupee (each rupee buys fewer dollars)",
-          "More export business -> creates more jobs in manufacturing hubs like Surat and Mumbai",
-          "Helps offset weak domestic demand -> keeps small and medium businesses afloat"
-        ],
-        "impacts": [
-          {
-            "target": "The rupee (vs the US dollar)",
-            "direction": "up",
-            "probability": "Medium",
-            "horizon": "weeks",
-            "rationale": "More dollars coming in from exports helps steady our currency, which is generally good because it keeps imported goods like electronics a bit cheaper."
+            "horizon": "days",
+            "rationale": "Global stock markets usually drop when big economies fight, as investors panic about worldwide economic slowdowns — bad for overall investor wealth."
           },
           {
             "target": "Gold price in India",
             "direction": "up",
             "probability": "Medium",
-            "horizon": "months",
-            "rationale": "High export demand for finished jewellery means local jewellers need raw gold, keeping domestic demand steady and pushing local prices up — mixed news if you plan to buy jewellery for a wedding."
+            "horizon": "days",
+            "rationale": "When global trade tension rises, investors run away from risky stocks and buy gold as a safe box, making jewelry and gold investments costlier for families."
           },
           {
-            "target": "Jewellery and export stocks like Titan & Kalyan Jewellers",
+            "target": "Indian manufacturing export companies",
             "direction": "up",
             "probability": "Medium",
-            "horizon": "weeks",
-            "rationale": "Better export numbers show these companies can grow sales even when times are tough, which usually pleases stock market investors."
+            "horizon": "months",
+            "rationale": "Global buyers looking away from North America often place new factory orders in India, which is good for local industrial growth and jobs."
           }
         ],
         "watch_next": [
-          "Upcoming festive and wedding season demand inside India",
-          "Global inflation trends in the US and Europe affecting luxury spending"
+          "Whether Canada fights back with its own bans on US goods",
+          "Statements from American companies about where they plan to buy goods instead"
         ],
         "confidence": "Medium",
-        "caveats": "If global buyers suddenly stop spending altogether due to a sudden economic slowdown abroad, these export gains could quickly reverse.",
+        "caveats": "If the US and Canada quickly settle their dispute, the ripple effects on global supply chains will fade away just as fast.",
         "engine": "gemini",
-        "category": "commodities",
-        "matched_linkage": "gold_up_riskoff"
+        "category": "trade",
+        "matched_linkage": "us_tariffs_tradewar"
       },
-      "importance": 5.7,
+      "importance": 6.6,
       "is_top": false
     },
     {
@@ -745,49 +665,56 @@
       ],
       "category": "general",
       "analysis": {
-        "tldr": "Smoother trade with China can mean cheaper raw materials for Indian factories and lower prices for everyday goods, but too much reliance on Chinese imports can hurt local manufacturing jobs.",
-        "what_happened": "Leaders of India and China are meeting in Delhi to discuss ways to ease trade and border tensions. This diplomatic visit is happening because both nations want to keep their massive economic relationship running smoothly despite political differences, driven by India's heavy demand for Chinese machinery, electronics, and chemicals.",
-        "analogy": "It is like two rival neighborhood shopkeepers who hate each other's guts, but still buy cheap milk and sugar from each other because their customers demand it.",
+        "tldr": "Closer economic ties or trade tensions with China directly hit the prices of your mobile phones, medicines, and solar panels, while shifting job opportunities in Indian manufacturing.",
+        "what_happened": "Trade ties between India and China are back in the spotlight during high-level diplomatic visits. This relationship is driven by India buying massive amounts of electronics, machinery, and raw ingredients for medicines (called APIs or active pharmaceutical ingredients) from China, while selling raw materials like iron ore back.",
+        "analogy": "It is like a local grocery shop owner who hates buying from a moody wholesaler, but has no choice because that wholesaler sells the cheapest sugar and flour in town.",
         "why_it_matters_india": [
-          "India imports massive amounts of electronics, solar panels, and raw chemicals from China.",
-          "If trade ties improve, the cost of making goods in India can drop because raw materials become cheaper.",
-          "Cheaper production helps Indian companies keep prices low for everyday consumers.",
-          "However, if cheap Chinese goods flood the market, it makes it hard for local Indian factories to compete and create jobs."
+          "India imports huge amounts of electronics and raw chemicals from China.",
+          "If trade flows smoothly, raw material costs stay low for Indian factories.",
+          "Lower factory costs keep prices stable for things like mobile phones and medicines.",
+          "If tensions rise, import hurdles can make everyday electronics and medicines suddenly more expensive for you."
         ],
         "impacts": [
           {
-            "target": "Electronics and mobile phone parts costs",
+            "target": "Prices of electronic gadgets (smartphones, appliances)",
             "direction": "down",
             "probability": "Medium",
             "horizon": "months",
-            "rationale": "Easier trade with China makes imported components cheaper, which is generally good for gadget buyers as prices may stay low."
+            "rationale": "Stable trade with China keeps cheap parts flowing, meaning affordable gadgets for shoppers — which is good for your wallet."
           },
           {
-            "target": "Solar energy equipment prices",
+            "target": "Medicine & drug prices in India (pharmaceutical costs)",
             "direction": "down",
             "probability": "High",
-            "horizon": "weeks",
-            "rationale": "India relies heavily on Chinese solar panels; smoother trade keeps these prices lower, helping India build clean energy faster."
+            "horizon": "months",
+            "rationale": "India buys most of its raw medicine ingredients from China; steady imports keep healthcare costs lower for ordinary people."
           },
           {
-            "target": "Indian manufacturing stocks like local electronics and chemical makers",
+            "target": "Nifty 50 (India's main stock index)",
+            "direction": "up",
+            "probability": "Low",
+            "horizon": "weeks",
+            "rationale": "Good trade news can boost market mood, but geopolitical risks also keep investors cautious, affecting your mutual fund returns."
+          },
+          {
+            "target": "The rupee (vs the US dollar)",
             "direction": "down",
-            "probability": "Medium",
-            "horizon": "months",
-            "rationale": "If cheap Chinese goods arrive too easily, local factories face tough competition, which can be bad for their profits and stock prices."
+            "probability": "Low",
+            "horizon": "weeks",
+            "rationale": "If India imports heavily without balancing exports, a trade deficit can put pressure on the rupee (each rupee buys fewer dollars), making imported goods pricier."
           }
         ],
         "watch_next": [
-          "Official statements on specific trade deals or import duty changes",
-          "Updates on business visas for Chinese engineers helping set up Indian factories"
+          "Official announcements on new trade pacts or import restrictions",
+          "Changes in the cost of raw materials for Indian drug and phone makers"
         ],
         "confidence": "Medium",
-        "caveats": "Political tensions between India and China can flare up suddenly, instantly reversing any friendliness seen during diplomatic visits.",
+        "caveats": "Geopolitics changes overnight, and a sudden political fallout can flip trade policies instantly.",
         "engine": "gemini",
         "category": "general",
         "matched_linkage": null
       },
-      "importance": 5.7,
+      "importance": 6.1,
       "is_top": false
     },
     {
@@ -847,14 +774,14 @@
       ],
       "category": "general",
       "analysis": {
-        "tldr": "When the stock market drops, the value of your mutual funds and retirement savings temporarily dips, but it also creates a chance to buy good companies cheaper if you are investing for the long term.",
-        "what_happened": "The Nifty 50 (India's main stock index containing the fifty biggest companies) is sliding down toward a risky zone. This is happening because foreign investors are pulling their money out of India to invest elsewhere, and companies are reporting earnings that are not as strong as people hoped.",
-        "analogy": "It is like a popular neighborhood market where houses were selling at record-high prices; now, buyers are suddenly waiting on the side and refusing to pay top rupee, so sellers are forced to drop their asking prices.",
+        "tldr": "When the stock market drops, the value of your mutual funds and retirement savings temporarily shrinks, which can feel scary but is normal.",
+        "what_happened": "Stock prices are falling because big foreign investors are taking their money out of India to invest in safer places. This happens when people worry about global economic trouble and want to keep their money safe.",
+        "analogy": "It is like a crowded cricket stadium where a few people suddenly rush towards the exit, causing everyone else to panic and start running too.",
         "why_it_matters_india": [
-          "Foreign investors sell their Indian shares and take their money back to the US",
-          "This sudden rush of selling pushes down the prices of big Indian stocks",
-          "The overall Nifty 50 index (India's main stock index) drops below important safety lines",
-          "Local investors panic a little, but long-term SIPs (automatic monthly mutual fund investments) buy more units for the same money"
+          "Foreign investors sell their shares in Indian companies",
+          "This sudden selling causes stock prices to drop",
+          "The main market index goes down",
+          "Your mutual fund values drop on your app, making you feel poorer"
         ],
         "impacts": [
           {
@@ -862,29 +789,116 @@
             "direction": "down",
             "probability": "High",
             "horizon": "weeks",
-            "rationale": "Stock prices are falling due to heavy selling by big foreign investors, which can feel worrying for your portfolio value in the short term."
+            "rationale": "Prices are falling because sellers outnumber buyers, which is bad if you need to withdraw your money right now."
           },
           {
-            "target": "The rupee (vs the US dollar)",
+            "target": "Mutual fund values in India",
             "direction": "down",
-            "probability": "Medium",
-            "horizon": "days",
-            "rationale": "When foreign investors pull money out of India, they convert rupees back to dollars, making the rupee weaken (each rupee buys fewer dollars), which makes imported goods like electronics costlier."
+            "probability": "High",
+            "horizon": "weeks",
+            "rationale": "Since mutual funds invest in these stocks, your savings balance will look smaller, though you only actually lose money if you sell."
           },
           {
             "target": "Gold price in India",
             "direction": "up",
             "probability": "Medium",
-            "horizon": "weeks",
-            "rationale": "When the stock market looks shaky, scared investors rush to buy gold as a safe hideout, pushing up prices for weddings and savings."
+            "horizon": "days",
+            "rationale": "When stocks fall, people rush to buy gold as a safe hiding place, making gold pricier."
           }
         ],
         "watch_next": [
-          "Whether big foreign investors stop pulling their money out of India",
-          "Upcoming company quarterly results to see if businesses are actually making a profit"
+          "Whether big foreign investors stop taking their money out",
+          "If global stock markets recover or keep falling"
         ],
         "confidence": "Medium",
-        "caveats": "If global news suddenly turns positive, stock markets can bounce back just as fast as they fell.",
+        "caveats": "Markets can bounce back just as fast as they fall if good economic news suddenly arrives.",
+        "engine": "gemini",
+        "category": "general",
+        "matched_linkage": null
+      },
+      "importance": 5.7,
+      "is_top": false
+    },
+    {
+      "headline": "Crack spread – what is it? What does it say about oil market?",
+      "relevance": 4.5,
+      "items": [
+        {
+          "title": "Crack spread – what is it? What does it say about oil market?",
+          "url": "https://www.thehindubusinessline.com/portfolio/personal-finance/crack-spread-what-is-it-what-does-it-say-about-oil-market/article71456511.ece",
+          "source": "The Hindu BusinessLine",
+          "published": "2026-09-13T03:56:11+00:00",
+          "summary": "Crude may be the headline but crack spreads flash an early warning on fuel inflation",
+          "region": "india",
+          "origin": "rss",
+          "relevance": 4.5
+        }
+      ],
+      "sources": [
+        "The Hindu BusinessLine"
+      ],
+      "urls": [
+        "https://www.thehindubusinessline.com/portfolio/personal-finance/crack-spread-what-is-it-what-does-it-say-about-oil-market/article71456511.ece"
+      ],
+      "item_count": 1,
+      "coverage_boost": 0.0,
+      "id": "616dd58c80",
+      "keywords": [
+        "about",
+        "crack",
+        "crude",
+        "does",
+        "early",
+        "flash",
+        "fuel",
+        "headline",
+        "inflation",
+        "may",
+        "oil",
+        "spread",
+        "spreads",
+        "warning"
+      ],
+      "category": "general",
+      "analysis": {
+        "tldr": "When the price gap between raw crude oil and finished petrol widens, Indian fuel costs and company profits can feel the pinch.",
+        "what_happened": "The news explains the 'crack spread' (the profit margin oil refineries make by turning crude oil into usable fuels like petrol and diesel). This spread widens when the demand for driving fuel shoots up much faster than the supply of refined products, or when refineries face operational bottlenecks.",
+        "analogy": "It is like buying raw flour to bake bread: if the price of bread in the market shoots up way higher than the cost of the flour, the baker's profit margin (the spread) gets much fatter.",
+        "why_it_matters_india": [
+          "Refineries buy crude oil from abroad and turn it into petrol, diesel, and aviation fuel.",
+          "When crack spreads rise, it means the cost to process fuel is getting more expensive globally.",
+          "Indian oil refining companies make more money per barrel, but consumers face higher import and refining costs.",
+          "If global refining margins stay high, the government may hesitate to cut retail fuel prices in India."
+        ],
+        "impacts": [
+          {
+            "target": "Petrol & diesel prices",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "weeks",
+            "rationale": "wider crack spreads mean higher processing costs, which can eventually keep retail fuel prices elevated for ordinary drivers."
+          },
+          {
+            "target": "Oil refining stocks like Reliance & IOCL",
+            "direction": "up",
+            "probability": "High",
+            "horizon": "days",
+            "rationale": "higher crack spreads mean bigger profit margins for companies that turn crude oil into finished fuel — generally good for their stock prices."
+          },
+          {
+            "target": "India's inflation rate",
+            "direction": "up",
+            "probability": "Medium",
+            "horizon": "months",
+            "rationale": "costlier fuel makes transporting goods more expensive, pushing up the daily price of food and household items for everyone."
+          }
+        ],
+        "watch_next": [
+          "Global fuel inventory reports from countries like the US",
+          "Changes in fuel demand from major economies like China and the US"
+        ],
+        "confidence": "High",
+        "caveats": "If a sudden global economic slowdown hits, fuel demand will drop quickly, crushing these spreads back down.",
         "engine": "gemini",
         "category": "general",
         "matched_linkage": null

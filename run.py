@@ -20,9 +20,9 @@ from datetime import datetime, timezone, date, timedelta
 from pathlib import Path
 
 import config
-from ingest import rss, gdelt, fred
+from ingest import rss, gdelt, fred, quotes
 from screen import relevance, cluster, history
-from analyze import engine, track, globe
+from analyze import engine, track, globe, assets
 from analyze.knowledge_match import match_linkages
 from render import web, emailer, telegram
 
@@ -202,14 +202,15 @@ def store_brief(brief: dict) -> None:
     print(f"[store] saved {json_path.name} and {md_path.name}")
 
 
-def _store_global(gdata: dict) -> None:
-    """Persist the Global Finance snapshot (history / future scoring)."""
-    out_dir = config.DATA_DIR.parent / "global"
+def _store_snapshot(kind: str, data: dict) -> None:
+    """Persist a curated-page snapshot (history / future scoring).
+    kind is the folder under data/ — e.g. "global", "assets"."""
+    out_dir = config.DATA_DIR.parent / kind
     out_dir.mkdir(parents=True, exist_ok=True)
-    path = out_dir / f"{gdata.get('updated', 'latest')}.json"
+    path = out_dir / f"{data.get('updated', 'latest')}.json"
     with open(path, "w", encoding="utf-8") as f:
-        json.dump(gdata, f, indent=2, ensure_ascii=False)
-    print(f"  [global] saved {path.name}")
+        json.dump(data, f, indent=2, ensure_ascii=False)
+    print(f"  [{kind}] saved {path.name}")
 
 
 def _to_markdown(brief: dict) -> str:
@@ -289,13 +290,18 @@ def main() -> None:
     store_brief(brief)
     track.record_predictions(brief)
 
-    # 5. RENDER web page + the pattern-library and global-finance pages
+    # 5. RENDER the brief plus the three reference pages
     print("[render] building web page...")
     index_path = web.write_site(brief)
     web.write_patterns_page()
     gdata = globe.build_global(events)
-    _store_global(gdata)
+    _store_snapshot("global", gdata)
     web.write_global_page(gdata)
+    qdata = quotes.fetch()
+    quotes.store(qdata)
+    adata = assets.build_assets(events, qdata)
+    _store_snapshot("assets", adata)
+    web.write_assets_page(adata)
 
     # 6. DELIVER
     if args.dry_run:

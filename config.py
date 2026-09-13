@@ -47,6 +47,7 @@ GLOSSARY = _load_yaml("glossary.yaml").get("terms", {})
 CALENDAR = _load_yaml_optional("calendar.yaml").get("events", [])
 GLOBAL_MARKETS = _load_yaml_optional("global_markets.yaml").get("markets", [])
 MONEY_ROTATION = _load_yaml_optional("money_rotation.yaml")
+ASSET_CLASSES = _load_yaml_optional("asset_classes.yaml")
 
 # --- Secrets / keys (all optional; missing keys just disable that feature) ---
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip()

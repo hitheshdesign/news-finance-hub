@@ -55,8 +55,10 @@ CSS = """
   --tip-bg:#1c2430; --tip-ink:#f2f5f9;
   --top-bg:#fbf7ec; --top-line:#ecdcae;
 }
+/* Dark palette. Defined twice on purpose: once for "follow the system" and
+   once for an explicit dark choice, so the toggle wins in both directions. */
 @media (prefers-color-scheme:dark){
-  :root{
+  :root:not([data-theme="light"]){
     --bg:#0b0e14; --panel:#141a22; --panel2:#111721;
     --ink:#e8edf3; --ink2:#c3ccd8; --muted:#93a0af; --faint:#6b7788;
     --line:#232c38; --line2:#1c2430;
@@ -66,12 +68,55 @@ CSS = """
     --top-bg:#1c1a12; --top-line:#4a4022;
   }
 }
+:root[data-theme="dark"]{
+  --bg:#0b0e14; --panel:#141a22; --panel2:#111721;
+  --ink:#e8edf3; --ink2:#c3ccd8; --muted:#93a0af; --faint:#6b7788;
+  --line:#232c38; --line2:#1c2430;
+  --brand:#e8edf3; --link:#6ea8fe;
+  --up:#42c17d; --up-bg:#12271c; --down:#f2726f; --down-bg:#2a1514;
+  --tip-bg:#e9edf2; --tip-ink:#10151d;
+  --top-bg:#1c1a12; --top-line:#4a4022;
+}
+:root{color-scheme:light;}
+:root[data-theme="dark"]{color-scheme:dark;}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;}}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;overflow-x:hidden;}
 body{margin:0;background:var(--bg);color:var(--ink);
   font-family:var(--font-sans);font-size:17px;line-height:1.62;
   -webkit-font-smoothing:antialiased;overflow-x:hidden;}
 .wrap{max-width:720px;margin:0 auto;padding:28px 20px 72px;}
+/* The news and Learn pages are a 720px editorial reading column. The data pages
+   (Global Finance, Asset Classes) carry a map/board + a table + a detail panel
+   side by side, which needs real width — at 720px the table's name column got
+   squeezed to nothing. */
+.wrap.wide{max-width:1140px;}
+
+
+/* Light / dark toggle. The site used to follow the operating system with no way
+   to override it, which left readers stuck with whatever their device decided. */
+.themebtn{position:absolute;top:0;right:0;display:inline-flex;align-items:center;
+  gap:6px;font-family:var(--font-sans);font-size:12px;font-weight:600;
+  color:var(--muted);background:var(--panel);border:1px solid var(--line);
+  border-radius:999px;padding:6px 12px;cursor:pointer;line-height:1;}
+.themebtn:hover{color:var(--ink);border-color:var(--link);}
+.themebtn svg{width:14px;height:14px;fill:currentColor;}
+.themebtn .sun{display:none;}
+:root[data-theme="dark"] .themebtn .sun{display:inline;}
+:root[data-theme="dark"] .themebtn .moon{display:none;}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .themebtn .sun{display:inline;}
+  :root:not([data-theme="light"]) .themebtn .moon{display:none;}
+}
+.themebtn .lbl-d{display:none;}
+:root[data-theme="dark"] .themebtn .lbl-d{display:inline;}
+:root[data-theme="dark"] .themebtn .lbl-l{display:none;}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .themebtn .lbl-d{display:inline;}
+  :root:not([data-theme="light"]) .themebtn .lbl-l{display:none;}
+}
+@media (max-width:520px){.themebtn span{display:none;}.themebtn{padding:7px 9px;}}
+.mast{position:relative;}
 
 /* ---------- Masthead ---------- */
 .mast{padding-bottom:20px;border-bottom:2px solid var(--ink);margin-bottom:8px;}
@@ -89,10 +134,13 @@ body{margin:0;background:var(--bg);color:var(--ink);
 @media (max-width:520px){.brandrow svg{width:33px;height:33px;}}
 
 /* ---------- Tabs (News · Global Finance · Learn) ---------- */
-.tabs{display:flex;gap:4px;margin:16px 0 4px;border-bottom:1px solid var(--line);}
+.tabs{display:flex;gap:4px;margin:16px 0 4px;border-bottom:1px solid var(--line);
+  overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;}
+.tabs::-webkit-scrollbar{display:none;}
 .tabs a{padding:9px 14px;font-size:14px;font-weight:600;color:var(--muted);
   text-decoration:none;border-bottom:2px solid transparent;margin-bottom:-1px;
-  border-radius:8px 8px 0 0;}
+  border-radius:8px 8px 0 0;white-space:nowrap;flex:none;}
+@media (max-width:520px){.tabs a{padding:9px 10px;font-size:13.5px;}}
 .tabs a:hover{color:var(--ink2);background:var(--panel2);}
 .tabs a.on{color:var(--ink);border-bottom-color:var(--link);}
 
@@ -128,7 +176,8 @@ body{margin:0;background:var(--bg);color:var(--ink);
   border-bottom:1px solid var(--line2);}
 .cal .alert{font-size:11px;font-weight:700;letter-spacing:.02em;text-transform:none;
   color:#8a4b00;background:#ffe6b8;padding:2px 9px;border-radius:999px;}
-@media (prefers-color-scheme:dark){.cal .alert{color:#ffcf8a;background:#3a2a10;}}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .cal .alert{color:#ffcf8a;background:#3a2a10;}}
+:root[data-theme="dark"] .cal .alert{color:#ffcf8a;background:#3a2a10;}
 .cal ul{list-style:none;margin:0;padding:0;max-height:360px;overflow-y:auto;
   overscroll-behavior:contain;scrollbar-width:thin;}
 .cal ul::-webkit-scrollbar{width:9px;}
@@ -163,9 +212,11 @@ body{margin:0;background:var(--bg);color:var(--ink);
 .badge{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:700;
   letter-spacing:.04em;text-transform:uppercase;color:#7a5b00;background:#f6e7bd;
   padding:3px 9px;border-radius:999px;}
-@media (prefers-color-scheme:dark){.badge{color:#ffdf8a;background:#3a3216;}}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .badge{color:#ffdf8a;background:#3a3216;}}
+:root[data-theme="dark"] .badge{color:#ffdf8a;background:#3a3216;}
 .badge.dev{color:#2f52b8;background:#e6ecfb;}
-@media (prefers-color-scheme:dark){.badge.dev{color:#a9c2ff;background:#1c2740;}}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .badge.dev{color:#a9c2ff;background:#1c2740;}}
+:root[data-theme="dark"] .badge.dev{color:#a9c2ff;background:#1c2740;}
 .card h2{font-family:var(--font-serif);font-weight:600;letter-spacing:-.01em;
   font-size:24px;line-height:1.22;margin:0 0 14px;color:var(--ink);}
 
@@ -249,9 +300,12 @@ body{margin:0;background:var(--bg);color:var(--ink);
   opacity:0;visibility:hidden;transform:translateY(-3px);
   transition:opacity .15s ease,transform .15s ease;pointer-events:none;}
 .term:hover::after,.term:focus::after{opacity:1;visibility:visible;transform:translateY(0);}
-/* Tooltips inside the narrow detail panel must not spill off its right edge. */
+/* Tooltips inside the narrow detail panel must not spill off its right edge.
+   The panel is its own scroll box, so anything wider than the space left gets
+   clipped — TIP_JS below flips those to right-anchored. */
 .panel .term::after{width:min(290px,72vw);}
 .panel .kv .term::after,.panel .erow .term::after{left:0;}
+.term.tip-right::after{left:auto;right:0;}
 
 
 /* Deeper reads — original explainer links (Finshots / The Ken) */
@@ -275,6 +329,10 @@ body{margin:0;background:var(--bg);color:var(--ink);
     --c-cheap:#3fbe79; --c-fair:#e0a94a; --c-exp:#ef5f5b; --c-none:#28303c;
     --cb-cheap:#12271c; --cb-fair:#33280f; --cb-exp:#2a1514;
   }
+}
+:root[data-theme="dark"]{
+  --c-cheap:#3fbe79; --c-fair:#e0a94a; --c-exp:#ef5f5b; --c-none:#28303c;
+  --cb-cheap:#12271c; --cb-fair:#33280f; --cb-exp:#2a1514;
 }
 .v-cheap{--vc:var(--c-cheap);--vb:var(--cb-cheap);}
 .v-fair{--vc:var(--c-fair);--vb:var(--cb-fair);}
@@ -333,7 +391,7 @@ body{margin:0;background:var(--bg);color:var(--ink);
 .maptip b{display:block;font-size:13.5px;}
 
 /* ---- Two-column: table + sticky detail ---- */
-.gf-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,400px);
+.gf-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,460px);
   gap:16px;margin-top:16px;align-items:start;}
 .gf-panelwrap{position:sticky;top:14px;}
 @media (max-width:900px){
@@ -347,31 +405,44 @@ body{margin:0;background:var(--bg);color:var(--ink);
 /* Country table */
 .ctable{background:var(--panel);border:1px solid var(--line);border-radius:14px;
   overflow:hidden;}
-.ctable .thead{display:flex;font-size:11px;font-weight:700;text-transform:uppercase;
+/* thead and rows share ONE grid template, so the columns always line up and
+   the name column can never be squeezed out of existence (it was: the fixed
+   columns used to add up to more than the whole track on desktop). */
+.ctable .thead,.ctable .row{display:grid;
+  grid-template-columns:minmax(0,1fr) 92px 62px 104px;align-items:center;}
+.ctable .thead{font-size:11px;font-weight:700;text-transform:uppercase;
   letter-spacing:.06em;color:var(--muted);border-bottom:1px solid var(--line2);
   background:var(--panel2);}
-.ctable .thead span{padding:11px 10px;cursor:pointer;user-select:none;}
+.ctable .thead span{padding:11px 10px;cursor:pointer;user-select:none;
+  min-width:0;line-height:1.25;align-self:end;}
 .ctable .thead span:hover{color:var(--ink2);}
 .ctable .thead span.sorted{color:var(--ink);}
-.ctable .row{display:flex;align-items:center;border-bottom:1px solid var(--line2);
-  cursor:pointer;font-size:13.5px;}
+.ctable .row{border-bottom:1px solid var(--line2);cursor:pointer;font-size:13.5px;}
 .ctable .row:last-child{border-bottom:none;}
 .ctable .row:hover{background:var(--panel2);}
 .ctable .row.sel{background:var(--panel2);box-shadow:inset 3px 0 0 var(--vc);}
-.ctable .row>span{padding:11px 10px;}
-.c-name{flex:1 1 auto;min-width:0;display:flex;align-items:center;gap:9px;
-  color:var(--ink);font-weight:600;}
+.ctable .row>span{padding:11px 10px;min-width:0;}
+.c-name{display:flex;align-items:center;gap:9px;color:var(--ink);font-weight:600;}
 .c-name .sw{width:9px;height:9px;border-radius:3px;background:var(--vc);flex:none;}
 .c-name i{font-style:normal;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-.c-val{flex:0 0 96px;color:var(--vc);font-weight:600;font-size:12px;
+.c-val{color:var(--vc);font-weight:600;font-size:12px;
   text-transform:uppercase;letter-spacing:.03em;}
-.c-cape{flex:0 0 74px;color:var(--ink2);text-align:right;}
-.c-er{flex:0 0 78px;text-align:right;font-weight:600;}
-@media (max-width:520px){.c-val{display:none;}}
+.c-cape{color:var(--ink2);text-align:right;font-variant-numeric:tabular-nums;}
+.c-er{text-align:right;font-weight:600;font-variant-numeric:tabular-nums;}
+/* Below this width the colour dot alone carries the cheap/fair/dear reading,
+   so the word can go and the name keeps its room. */
+@media (max-width:560px){
+  .ctable .thead,.ctable .row{grid-template-columns:minmax(0,1fr) 58px 84px;}
+  .c-val{display:none;}
+}
 
 /* Detail panel */
 .panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;
-  padding:18px;max-height:calc(100vh - 28px);overflow-y:auto;}
+  padding:18px;max-height:calc(100vh - 28px);overflow-y:auto;
+  /* overflow-x must be stated. A hidden .term::after tooltip is 290px wide and
+     still occupies layout, so leaving this to default (auto) gave the panel a
+     permanent horizontal scrollbar with nothing visible to scroll to. */
+  overflow-x:hidden;}
 .panel .hint{color:var(--muted);font-size:14px;margin:0;}
 .panel h3{font-family:var(--font-serif);font-size:23px;font-weight:600;margin:0 0 2px;
   color:var(--ink);line-height:1.2;}
@@ -531,6 +602,210 @@ body{margin:0;background:var(--bg);color:var(--ink);
   border-radius:2px;background:var(--link);}
 .scenarios.watch li::before{border-radius:50%;background:var(--c-fair);}
 
+/* =========================================================================
+   ASSET CLASSES page
+   Reuses the Global Finance panel components (.pblock/.kv/.erbar/.plist/.term)
+   so the two data pages read as one product. What is new here: the valuation
+   board of tiles, the "how you can actually buy it" routes, the relative-value
+   gauges, and the what-wins-when regime cards.
+   ========================================================================= */
+/* An asset with no honest way to value it (crypto) gets the neutral colour —
+   grey is the point, not a fallback. */
+.v-none{--vc:var(--muted);--vb:var(--panel2);}
+
+
+/* An explainer that can be folded away. The text matters on a first read and
+   is in the way on every read after that, so the headline stays visible and
+   the rest collapses. */
+details.gf-acc{padding:0;margin:14px 0 12px;}
+details.gf-acc>summary{list-style:none;cursor:pointer;display:flex;
+  align-items:center;gap:10px;padding:11px 15px;font-size:12.5px;
+  font-weight:600;color:var(--ink2);border-radius:12px;}
+details.gf-acc>summary::-webkit-details-marker{display:none;}
+details.gf-acc>summary::marker{content:"";font-size:0;}
+details.gf-acc>summary:hover{color:var(--ink);background:var(--panel);}
+details.gf-acc>summary .more{font-weight:400;color:var(--muted);}
+details.gf-acc>summary::after{content:"";flex:none;width:7px;height:7px;
+  margin-left:auto;border-right:1.5px solid var(--muted);
+  border-bottom:1.5px solid var(--muted);transform:rotate(45deg) translate(-2px,-2px);
+  transition:transform .18s ease;}
+details.gf-acc[open]>summary::after{transform:rotate(-135deg) translate(-2px,-2px);}
+details.gf-acc .acc-body{padding:2px 15px 13px;}
+details.gf-acc .acc-body .freshness{margin-top:9px;}
+
+/* Live vs curated, stated on the number itself rather than buried in a note. */
+.livepill{display:inline-flex;align-items:center;gap:5px;font-size:10px;
+  font-weight:700;text-transform:uppercase;letter-spacing:.06em;
+  border-radius:999px;padding:3px 9px;white-space:nowrap;}
+.livepill.on{color:var(--c-cheap);background:var(--cb-cheap);}
+.livepill.off{color:var(--muted);background:var(--panel2);
+  border:1px solid var(--line2);}
+.livepill.on::before{content:"";width:6px;height:6px;border-radius:50%;
+  background:var(--c-cheap);}
+.reading{margin:0 0 10px;font-size:13px;color:var(--ink2);line-height:1.5;
+  padding:9px 12px;background:var(--panel2);border-radius:9px;}
+.reading b{color:var(--ink);}
+.vsnow .vhead{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+
+/* ---- Valuation board ---- */
+.board{display:flex;flex-direction:column;gap:4px;}
+.fam{margin-top:4px;}
+.fam:first-child{margin-top:0;}
+.famhead{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;
+  margin:16px 0 3px;}
+.famhead h3{font-family:var(--font-sans);font-size:12.5px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.1em;color:var(--ink2);margin:0;}
+.famhead .count{font-size:11px;color:var(--faint);}
+.famnote{color:var(--muted);font-size:12.5px;line-height:1.5;margin:0 0 10px;
+  max-width:76ch;}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(164px,1fr));
+  gap:9px;}
+.tile{display:block;width:100%;text-align:left;font:inherit;cursor:pointer;
+  background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--vc);
+  border-radius:11px;padding:11px 12px 12px;transition:background .12s ease;}
+.tile:hover{background:var(--panel2);border-color:var(--vc);}
+.tile.sel{background:var(--panel2);border-color:var(--vc);
+  box-shadow:0 0 0 1px var(--vc);}
+/* Every line in a tile is single-line and clipped, so a long metric name can
+   never make one tile taller than its neighbours. The full name, with its
+   explanation, lives in the detail panel. */
+.tile .tname,.tile .tnum,.tile .tavg{display:block;white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis;}
+.tile .tname{font-size:13.5px;font-weight:600;color:var(--ink);line-height:1.35;}
+.tile .tnum{margin-top:5px;line-height:1.25;font-variant-numeric:tabular-nums;}
+.tile .tnum b{font-size:16px;font-weight:600;color:var(--vc);}
+.tile .tnum em{font-style:normal;font-size:11px;color:var(--muted);margin-left:5px;}
+.tile .tavg{font-size:11px;color:var(--faint);margin-top:2px;
+  font-variant-numeric:tabular-nums;}
+.tile .tavg em{font-style:normal;opacity:.85;}
+/* Where today sits inside this asset's OWN history. The centre tick is its
+   normal level, so left of centre is cheaper than usual and right is dearer. */
+/* display:block matters — the tiles use a <span> for this, and an inline
+   element ignores height, which collapses the track and pins every marker to
+   the left edge instead of its real position. */
+.hist{display:block;position:relative;width:100%;height:6px;
+  background:var(--line);border-radius:99px;margin-top:10px;}
+.hist .tick{position:absolute;left:50%;top:-3px;bottom:-3px;width:2px;
+  margin-left:-1px;background:var(--faint);opacity:.75;border-radius:2px;}
+.hist .pin{position:absolute;top:-3px;width:12px;height:12px;border-radius:50%;
+  background:var(--vc);border:2px solid var(--panel);transform:translateX(-50%);
+  box-shadow:0 0 0 1px var(--line);}
+.tile.sel .hist .pin,.panel .hist .pin{border-color:var(--panel2);}
+.hist.none{background:repeating-linear-gradient(90deg,var(--line2) 0 5px,transparent 5px 10px);}
+.histscale{display:flex;justify-content:space-between;font-size:9.5px;
+  text-transform:uppercase;letter-spacing:.07em;color:var(--faint);margin-top:5px;}
+
+/* The table cell version of the history bar — right-aligned and compact. */
+.hist.mini{width:58px;height:5px;margin:0 0 0 auto;}
+.hist.mini .pin{width:10px;height:10px;top:-2.5px;}
+.hist.mini .tick{top:-2px;bottom:-2px;}
+
+/* ---- The long-run record (view 2) ---- */
+.records{display:flex;flex-direction:column;gap:8px;}
+.rec{background:var(--panel);border:1px solid var(--line);
+  border-left:3px solid var(--vc);border-radius:11px;padding:12px 14px;}
+.rec .rtop{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;}
+.rec .rname{font-size:14.5px;font-weight:600;color:var(--ink);}
+.rec .rband{font-size:10.5px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.05em;color:var(--vc);}
+.rec .rer{margin-left:auto;font-size:11px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.06em;color:var(--faint);font-variant-numeric:tabular-nums;}
+.rec .rer b{font-size:13px;font-weight:600;text-transform:none;letter-spacing:0;
+  color:var(--ink2);margin-left:5px;}
+.rec .rhist{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px;}
+.rec .rh{font-size:11.5px;color:var(--ink2);background:var(--panel2);
+  border:1px solid var(--line2);border-radius:7px;padding:3px 9px;line-height:1.5;}
+.rec .rh b{color:var(--faint);font-weight:700;font-size:9.5px;
+  text-transform:uppercase;letter-spacing:.06em;margin-right:5px;}
+.rec .rfall{margin:9px 0 0;font-size:12.5px;color:var(--muted);line-height:1.5;}
+.rec .rfall b{color:var(--down);font-weight:600;}
+
+/* ---- Assets table: same grid machinery as the country table, own columns ---- */
+.ctable.acols .thead,.ctable.acols .row{
+  grid-template-columns:minmax(0,1fr) 92px 92px 100px;}
+@media (max-width:560px){
+  .ctable.acols .thead,.ctable.acols .row{
+    grid-template-columns:minmax(0,1fr) 78px 84px;}
+}
+.c-met{color:var(--ink2);text-align:right;font-variant-numeric:tabular-nums;}
+
+/* ---- Headline "what it costs now versus its own normal" ---- */
+.vsnow{display:flex;align-items:center;gap:16px;background:var(--panel2);
+  border:1px solid var(--line2);border-radius:12px;padding:13px 15px;margin:0 0 14px;}
+.vsnow .vbig{font-family:var(--font-serif);font-size:31px;font-weight:600;
+  color:var(--vc);line-height:1;letter-spacing:-.01em;}
+.vsnow .vmid{flex:1;min-width:0;}
+.vsnow .vlbl{font-size:10.5px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.07em;color:var(--muted);}
+.vsnow .vavg{font-size:13px;color:var(--ink2);line-height:1.45;margin-top:2px;}
+.vsnow .vavg b{color:var(--ink);font-weight:600;}
+
+/* ---- "How you can actually buy it" — the routes ---- */
+.howto{display:flex;flex-direction:column;gap:9px;}
+.route{background:var(--panel2);border:1px solid var(--line2);border-radius:11px;
+  padding:11px 13px;}
+.route .rname{font-size:13.5px;font-weight:600;color:var(--ink);}
+.route .rex{display:block;font-size:12px;color:var(--muted);margin-top:1px;}
+.route .rchips{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0 7px;}
+.route .chip{font-size:11.5px;color:var(--ink2);background:var(--panel);
+  border:1px solid var(--line2);border-radius:7px;padding:3px 9px;line-height:1.5;}
+.route .chip b{color:var(--faint);font-weight:700;font-size:9.5px;
+  text-transform:uppercase;letter-spacing:.06em;margin-right:5px;}
+.route p{margin:0;font-size:12.5px;color:var(--ink2);line-height:1.55;}
+
+/* ---- Relative-value gauges ---- */
+.gauges{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:12px;}
+.gauge{background:var(--panel);border:1px solid var(--line);
+  border-top:3px solid var(--vc);border-radius:12px;padding:15px 17px;}
+.gauge h4{font-family:var(--font-serif);font-size:19px;font-weight:600;
+  color:var(--ink);margin:0 0 3px;line-height:1.25;}
+.gauge .gmet{font-size:12px;color:var(--muted);line-height:1.45;}
+.gauge .gnums{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 11px;}
+.gauge .gn{flex:1 1 120px;background:var(--panel2);border:1px solid var(--line2);
+  border-radius:9px;padding:8px 10px;font-size:10.5px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.06em;color:var(--muted);}
+.gauge .gn span{display:block;font-family:var(--font-sans);font-size:14px;
+  font-weight:600;text-transform:none;letter-spacing:0;margin-top:2px;
+  color:var(--ink);}
+.gauge .gn.now span{color:var(--vc);}
+.gauge p{margin:0 0 9px;font-size:13.5px;color:var(--ink2);line-height:1.6;}
+.gauge .gmean{margin:0;padding:10px 12px;background:var(--panel2);
+  border-left:3px solid var(--vc);border-radius:0 9px 9px 0;font-size:13px;
+  color:var(--ink2);line-height:1.55;}
+
+/* ---- What wins when: the five regimes ---- */
+.regimes{display:flex;flex-direction:column;gap:13px;}
+.regime{background:var(--panel);border:1px solid var(--line);border-radius:14px;
+  padding:16px 18px;}
+.regime.on{border-color:var(--link);box-shadow:0 0 0 1px var(--link);}
+.regime .rgtop{display:flex;align-items:baseline;justify-content:space-between;
+  gap:10px;flex-wrap:wrap;}
+.regime h4{font-family:var(--font-serif);font-size:20px;font-weight:600;
+  color:var(--ink);margin:0;line-height:1.25;}
+.regime .now{font-size:10.5px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.06em;color:var(--bg);background:var(--link);
+  border-radius:999px;padding:3px 10px;white-space:nowrap;}
+.regime .tell{display:block;font-size:12.5px;color:var(--muted);margin-top:4px;
+  line-height:1.5;}
+.regime .tell b{color:var(--ink2);font-weight:600;}
+.regime .wl{display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;margin:13px 0 3px;}
+@media (max-width:640px){.regime .wl{grid-template-columns:1fr;}}
+.regime .wl h5{font-size:10.5px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.08em;margin:0 0 4px;padding-bottom:4px;
+  border-bottom:1px solid var(--line2);}
+.regime .wl .w h5{color:var(--up);}
+.regime .wl .l h5{color:var(--down);}
+.regime .rgblk{margin-top:12px;}
+.regime .rgblk h5{font-size:10.5px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.09em;color:var(--faint);margin:0 0 3px;}
+.regime .rgblk p{margin:0;color:var(--ink2);font-size:14px;line-height:1.6;}
+.regime .rgindia{margin-top:11px;padding:11px 13px;background:var(--panel2);
+  border-left:3px solid var(--link);border-radius:0 10px 10px 0;font-size:13.5px;
+  color:var(--ink2);line-height:1.55;}
+.regime .rgindia b{color:var(--link);display:block;font-size:10.5px;
+  font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px;}
+
 /* Disclaimer + footer */
 .disclaimer{background:var(--panel2);border:1px dashed var(--line);border-radius:12px;
   padding:14px 16px;color:var(--muted);font-size:13px;margin-top:28px;}
@@ -550,6 +825,60 @@ body{margin:0;background:var(--bg);color:var(--ink);
 """
 
 # One event card (used by web + email). `gloss` and `dots` are Jinja filters.
+# ---------------------------------------------------------------------------
+# Shared behaviour for the tap-to-define labels. The tooltip is a ::after on
+# .term, so CSS cannot know how much room is left inside the detail panel —
+# this measures it and flips the tooltip to right-anchored when it would be
+# clipped. Included by the two data pages, which have narrow panels.
+# ---------------------------------------------------------------------------
+TIP_FIT_JS = """
+(function(){
+  var W=290;
+  function fit(e){
+    var t=e.target.closest&&e.target.closest('.term');
+    if(!t)return;
+    var box=t.closest('.panel'), r=t.getBoundingClientRect();
+    var limit=box?box.getBoundingClientRect().right-10:window.innerWidth-10;
+    var w=Math.min(W,window.innerWidth*0.72);
+    t.classList.toggle('tip-right',r.left+w>limit);
+  }
+  document.addEventListener('pointerover',fit,true);
+  document.addEventListener('focusin',fit,true);
+})();
+"""
+
+
+# ---------------------------------------------------------------------------
+# Light / dark toggle, shared by every page. THEME_BOOT runs in <head> before
+# the body paints so a stored choice never flashes the wrong colours first.
+# ---------------------------------------------------------------------------
+THEME_BOOT = """<script>
+(function(){try{var t=localStorage.getItem('nfh-theme');
+if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();
+</script>"""
+
+THEME_BTN = """<button class="themebtn" id="themebtn" type="button"
+  aria-label="Switch between light and dark">
+<svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+<svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 1.8v3M12 19.2v3M1.8 12h3M19.2 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M19.4 4.6l-2.1 2.1M6.7 17.3l-2.1 2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+<span class="lbl-l">Light</span><span class="lbl-d">Dark</span></button>"""
+
+THEME_JS = """
+(function(){
+  var b=document.getElementById('themebtn'); if(!b)return;
+  b.addEventListener('click',function(){
+    var root=document.documentElement, cur=root.getAttribute('data-theme');
+    if(!cur){  /* still following the system: flip away from whatever it shows */
+      cur=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';
+    }
+    var next=cur==='dark'?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('nfh-theme',next);}catch(e){}
+  });
+})();
+"""
+
+
 CARD = """
 <article class="card {{ 'top' if ev.is_top else '' }}">
   <div class="tags">
@@ -626,13 +955,14 @@ PAGE = """<!doctype html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="{{ fonts }}" rel="stylesheet">
-{{ icon }}
+{{ icon }}{{ themeboot }}
 <style>{{ css }}</style>
 </head><body><div class="wrap">
 
 <header class="mast">
   <div class="kicker">World news, decoded for Indian markets</div>
   <div class="brandrow">{{ logo }}<h1>The India Impact Brief</h1></div>
+  {{ themebtn }}
   <div class="date"><b>{{ brief.date_human }}</b> · {{ brief.events|length }} signals ·
     <span class="engine">analysis by {{ brief.engine }}</span></div>
 </header>
@@ -705,6 +1035,8 @@ PAGE = """<!doctype html>
   </div>{% endif %}
   <p>Generated automatically by your News Finance Hub · {{ brief.generated_at }}</p>
 </footer>
+
+<script>{{ themejs }}</script>
 </div></body></html>
 """
 
@@ -716,13 +1048,14 @@ PATTERNS_PAGE = """<!doctype html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="{{ fonts }}" rel="stylesheet">
-{{ icon }}
+{{ icon }}{{ themeboot }}
 <style>{{ css }}</style>
 </head><body><div class="wrap">
 
 <header class="mast">
   <div class="kicker">World news, decoded for Indian markets</div>
   <div class="brandrow">{{ logo }}<h1>The Pattern Library</h1></div>
+  {{ themebtn }}
   <div class="date">How global events tend to ripple into Indian markets —
     <b>{{ total }}</b> patterns the engine watches for</div>
 </header>
@@ -788,6 +1121,8 @@ PATTERNS_PAGE = """<!doctype html>
   <div class="archive"><a href="index.html">← Back to today's brief</a></div>
   <p>News Finance Hub · the pattern library grows as new linkages are added.</p>
 </footer>
+
+<script>{{ themejs }}</script>
 </div></body></html>
 """
 

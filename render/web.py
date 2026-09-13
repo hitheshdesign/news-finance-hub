@@ -14,7 +14,7 @@ from jinja2 import Environment
 from markupsafe import Markup
 
 import config
-from render import templates, global_page, worldmap
+from render import templates, global_page, assets_page, worldmap
 from render.glossary import annotate
 
 # CSS is trusted, pre-written stylesheet text. Mark it safe so Jinja's autoescape
@@ -23,15 +23,20 @@ from render.glossary import annotate
 _CSS = Markup(templates.CSS)
 _ICON = Markup(templates.HEAD_ICON)      # favicon / theme-color tags
 _LOGO = Markup(templates.LOGO_SVG)       # inline brand mark
+_TIPJS = Markup(templates.TIP_FIT_JS)    # keeps panel tooltips on-screen
+_THEMEBOOT = Markup(templates.THEME_BOOT)   # applies a stored theme pre-paint
+_THEMEBTN = Markup(templates.THEME_BTN)     # the light/dark button
+_THEMEJS = Markup(templates.THEME_JS)       # its click handler
 
 
 def _nav(active: str, prefix: str = "") -> Markup:
     """Shared top-tab navigation used by every page. `active` is one of
-    news|global|learn; `prefix` (e.g. '../') fixes links for archived pages
+    news|global|assets|learn; `prefix` (e.g. '../') fixes links for archived pages
     that live one folder deeper."""
     tabs = [
         ("news", "index.html", "News"),
         ("global", "global.html", "Global Finance"),
+        ("assets", "assets.html", "Asset Classes"),
         ("learn", "patterns.html", "Learn"),
     ]
     items = "".join(
@@ -88,7 +93,8 @@ def render_page(brief: dict) -> str:
     brief["archive"] = _archive_list(brief["date"])
     page = env.from_string(templates.PAGE)
     return page.render(brief=brief, css=_CSS, fonts=templates.FONTS,
-                       nav=_nav("news"), icon=_ICON, logo=_LOGO)
+                       nav=_nav("news"), icon=_ICON, logo=_LOGO, themeboot=_THEMEBOOT,
+                       themebtn=_THEMEBTN, themejs=_THEMEJS)
 
 
 def render_patterns() -> str:
@@ -107,7 +113,8 @@ def render_patterns() -> str:
     page = env.from_string(templates.PATTERNS_PAGE)
     return page.render(groups=groups, total=total,
                        css=_CSS, fonts=templates.FONTS,
-                       nav=_nav("learn"), icon=_ICON, logo=_LOGO)
+                       nav=_nav("learn"), icon=_ICON, logo=_LOGO, themeboot=_THEMEBOOT,
+                       themebtn=_THEMEBTN, themejs=_THEMEJS)
 
 
 # Markets too small to appear on a 110m-resolution map — drawn as a dot instead.
@@ -186,7 +193,9 @@ def render_global(gdata: dict) -> str:
     page = env.from_string(global_page.GLOBAL_PAGE)
     return page.render(g=view, map_countries=map_countries, map_dots=map_dots,
                        g_json=_json_safe(js_map), rot_json=_json_safe(rot_json),
-                       css=_CSS, fonts=templates.FONTS, nav=_nav("global"), icon=_ICON, logo=_LOGO)
+                       css=_CSS, fonts=templates.FONTS, nav=_nav("global"),
+                       icon=_ICON, logo=_LOGO, themeboot=_THEMEBOOT,
+                       themebtn=_THEMEBTN, themejs=_THEMEJS, tipjs=_TIPJS)
 
 
 def write_global_page(gdata: dict) -> Path:
@@ -194,6 +203,106 @@ def write_global_page(gdata: dict) -> Path:
     site.mkdir(parents=True, exist_ok=True)
     html = render_global(gdata)
     path = site / "global.html"
+    path.write_text(html, encoding="utf-8")
+    print(f"  [web] wrote {path}")
+    return path
+
+
+# ---------------------------------------------------------------- Asset Classes
+# Human-facing labels for the four valuation bands. "no_anchor" is deliberate:
+# some things (crypto) have no earnings, rent or interest to value them against.
+_BAND_LABEL = {
+    "cheap": "Cheap vs its past", "fair": "Fairly priced",
+    "expensive": "Dear vs its past", "no_anchor": "Cannot be valued",
+}
+_BAND_SHORT = {
+    "cheap": "Cheap", "fair": "Fair", "expensive": "Dear", "no_anchor": "No anchor",
+}
+_BAND_CLS = {
+    "cheap": "v-cheap", "fair": "v-fair", "expensive": "v-exp", "no_anchor": "v-none",
+}
+
+# Fields the client-side detail panel needs (keeps the inline JSON lean).
+_ASSET_FIELDS = (
+    "code", "name", "short", "proxy", "family_label", "valuation", "vc",
+    "band_label", "band_short", "metric_label", "metric_def", "metric_now",
+    "metric_avg", "metric_avg_label", "metric_show", "metric_avg_show",
+    "metric_pct", "metric_avg_short", "pin", "dear", "reading", "live_ok",
+    "live_source", "live_as_of", "extras", "what_it_is", "own", "composition",
+    "returns", "return_note", "total_return", "total_show", "history", "worst_fall",
+    "drivers_up", "drivers_down", "wins_when", "role", "how_to_invest",
+    "tax", "watch", "verdict", "news",
+)
+
+
+def _num(v) -> str:
+    """2.8 -> '2.8', 148.0 -> '148'. Keeps the tiles from reading '148.0'."""
+    if v is None:
+        return ""
+    f = float(v)
+    return str(int(f)) if f == int(f) else f"{f:g}"
+
+
+def _decorate_asset(a: dict, family_labels: dict[str, str]) -> dict:
+    """Add the display-only fields the template and the detail panel read."""
+    band = a.get("valuation", "fair")
+    unit = a.get("metric_unit") or ""
+    rec = dict(a)
+    rec["vc"] = _BAND_CLS.get(band, "v-fair")
+    rec["band_label"] = _BAND_LABEL.get(band, band)
+    rec["band_short"] = _BAND_SHORT.get(band, band)
+    rec["family_label"] = family_labels.get(a.get("family", ""), "")
+    rec["metric_show"] = (_num(a.get("metric_now")) + unit
+                          if a.get("metric_now") is not None else "—")
+    rec["metric_avg_show"] = (_num(a.get("metric_avg")) + unit
+                              if a.get("metric_avg") is not None else "—")
+    # analyze/assets.py already places the marker — from the live gap to this
+    # asset's own normal where we have live data, from the curated percentile
+    # otherwise. Only fall back if it somehow did not.
+    if rec.get("pin") is None:
+        pct = a.get("metric_pct")
+        rec["pin"] = max(3, min(97, int(pct))) if pct is not None else 50
+    total = a.get("total_return")
+    rec["total_show"] = ("—" if total is None
+                         else f"{'+' if total > 0 else ''}{total:.1f}%")
+    return rec
+
+
+def render_assets(adata: dict) -> str:
+    env = _env()
+    family_labels = {f.get("key"): f.get("label", "") for f in adata.get("families", [])}
+
+    assets = [_decorate_asset(a, family_labels) for a in adata.get("assets", [])]
+    by_code = {a["code"]: a for a in assets}
+
+    families = []
+    for f in adata.get("families", []):
+        members = [by_code[a["code"]] for a in f.get("assets", []) if a["code"] in by_code]
+        families.append({**f, "assets": members})
+
+    view = dict(adata)
+    view["families"] = families
+    # The record list reads best strongest-first, with anything that has no
+    # honest estimate (crypto) at the end rather than sorted as a zero.
+    view["by_return"] = sorted(
+        assets,
+        key=lambda x: (x.get("total_return") is None, -(x.get("total_return") or 0)))
+    view["gauges"] = [{**g, "vc": _BAND_CLS.get(g.get("verdict", "fair"), "v-fair")}
+                      for g in adata.get("gauges", [])]
+
+    js = {a["code"]: {k: a.get(k) for k in _ASSET_FIELDS} for a in assets}
+    page = env.from_string(assets_page.ASSETS_PAGE)
+    return page.render(a=view, a_json=_json_safe(js), css=_CSS,
+                       fonts=templates.FONTS, nav=_nav("assets"),
+                       icon=_ICON, logo=_LOGO, themeboot=_THEMEBOOT,
+                       themebtn=_THEMEBTN, themejs=_THEMEJS, tipjs=_TIPJS)
+
+
+def write_assets_page(adata: dict) -> Path:
+    site = config.SITE_DIR
+    site.mkdir(parents=True, exist_ok=True)
+    html = render_assets(adata)
+    path = site / "assets.html"
     path.write_text(html, encoding="utf-8")
     print(f"  [web] wrote {path}")
     return path
@@ -244,6 +353,7 @@ def write_site(brief: dict) -> Path:
                   .replace('href="briefs/', 'href="')
                   .replace('href="index.html"', 'href="../index.html"')
                   .replace('href="global.html"', 'href="../global.html"')
+                  .replace('href="assets.html"', 'href="../assets.html"')
                   .replace('href="patterns.html"', 'href="../patterns.html"'))
     dated_path = site / "briefs" / f"{brief['date']}.html"
     dated_path.write_text(dated_html, encoding="utf-8")

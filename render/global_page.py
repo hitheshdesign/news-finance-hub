@@ -17,13 +17,14 @@ GLOBAL_PAGE = """<!doctype html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="{{ fonts }}" rel="stylesheet">
-{{ icon }}
+{{ icon }}{{ themeboot }}
 <style>{{ css }}</style>
-</head><body><div class="wrap">
+</head><body><div class="wrap wide">
 
 <header class="mast">
   <div class="kicker">World news, decoded for Indian markets</div>
   <div class="brandrow">{{ logo }}<h1>Global Finance</h1></div>
+  {{ themebtn }}
   <div class="date">Where the world's markets are cheap or expensive, and where the
     big money has been moving · <span class="engine">updated {{ g.updated_human }}</span></div>
 </header>
@@ -37,8 +38,11 @@ GLOBAL_PAGE = """<!doctype html>
 
 <!-- ==================== VIEW 1: VALUATIONS ==================== -->
 <section id="view-val" class="gf-view">
-  <div class="gf-note">
-    <b>Indicative &amp; educational — not trading advice.</b> Colours show how each market is
+  <details class="gf-note gf-acc">
+    <summary>Indicative &amp; educational — not trading advice
+      <span class="more">· how to read this map, and what updates when</span></summary>
+    <div class="acc-body">
+      Colours show how each market is
     priced on
     <span class="term" tabindex="0" role="button" data-def="Cyclically-Adjusted PE: a market's price divided by its average inflation-adjusted earnings over 10 years. Compared with its OWN long-run average, it shows whether a market is dear or cheap.">CAPE</span>
     versus its own long-run average. Any
@@ -48,7 +52,8 @@ GLOBAL_PAGE = """<!doctype html>
     today's market mood refresh <b>every morning with the brief</b>. The valuations, sector
     breakdowns and history are <b>hand-curated</b> and change only when the underlying data is
     refreshed — they are not live prices.</span>
-  </div>
+    </div>
+  </details>
 
   <div class="gf-legend">
     <span class="lg v-cheap"><span class="sw"></span>Cheap · {{ g.stats.cheap }}</span>
@@ -111,11 +116,15 @@ GLOBAL_PAGE = """<!doctype html>
   </div>
   {% endif %}
 
-  <div class="gf-note">
-    <b>How to read the grid.</b> Each column is a period, each row an asset. Green = money
-    flowing in (that asset was winning); red = money leaving. Watch the <b>Gold</b> row — it
-    turns green almost every time the world gets scared. Hover any square for the story.
-  </div>
+  <details class="gf-note gf-acc">
+    <summary>How to read the grid
+      <span class="more">· green is money flowing in</span></summary>
+    <div class="acc-body">
+      Each column is a period, each row an asset. Green = money flowing in (that asset was
+      winning); red = money leaving. Watch the <b>Gold</b> row — it turns green almost every
+      time the world gets scared. Hover any square for the story.
+    </div>
+  </details>
 
   <div class="heatwrap">
     <table class="heat">
@@ -175,7 +184,7 @@ GLOBAL_PAGE = """<!doctype html>
   <p>News Finance Hub · Global Finance</p>
 </footer>
 
-<script>
+<script>{{ tipjs }}{{ themejs }}
 var GF = {{ g_json }};
 var ROT = {{ rot_json }};
 (function(){

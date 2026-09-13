@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-30",
-  "updated_human": "Sunday, 30 August 2026",
+  "updated": "2026-09-03",
+  "updated_human": "Thursday, 03 September 2026",
   "note": "Indicative reading of market history — a learning tool, not fund-flow data.",
   "countries": [
     {
@@ -70,20 +70,12 @@
       "india_angle": "When US rates fall, money flows toward India; when the US sells off, foreign investors pull money out of Nifty too. The US is the tide that moves India's boat.",
       "news": [
         {
-          "title": "FPIs turn buyers for second straight month, invest Rs 30,919 cr in August",
-          "url": "https://economictimes.indiatimes.com/markets/stocks/news/fpis-turn-buyers-for-second-straight-month-invest-rs-30919-cr-in-august/articleshow/133624069.cms"
+          "title": "New York Fed's Williams says yield surge due to strong economic prospects",
+          "url": "https://www.cnbc.com/2026/09/02/new-york-feds-williams-says-yield-surge-due-to-strong-economic-prospects.html"
         },
         {
-          "title": "Kansas City Fed's Schmid says inflation 'stubborn' and 'sticky,' policy rate not restrictive",
-          "url": "https://www.cnbc.com/2026/08/27/kansas-city-feds-schmid-says-inflation-stubborn-and-sticky-policy-rate-not-restrictive.html"
-        },
-        {
-          "title": "Kevin Warsh Speech | Is the US Fed Chairman driving the bond markets? Explained with three reasons",
-          "url": "https://www.livemint.com/market/bonds/kevin-warsh-speech-is-the-us-fed-chairman-driving-the-bond-markets-explained-with-three-reasons-11787988182162.html"
-        },
-        {
-          "title": "China needs U.S. dollars but is building a hedge against Washington’s sanctions",
-          "url": "https://www.cnbc.com/2026/08/25/china-iran-us-sanctions-banks-cips.html"
+          "title": "Gold holds near $4,400 after rebound as Trump, Fed remarks ease inflation fears",
+          "url": "https://www.investing.com/news/commodities-news/gold-holds-near-4400-after-rebound-as-trump-fed-remarks-ease-inflation-fears-4886908"
         }
       ]
     },
@@ -512,20 +504,12 @@
       "india_angle": "Home. Everything else on this map is judged against what you can already get here — and that bar is high.",
       "news": [
         {
-          "title": "FPIs turn buyers for second straight month, invest Rs 30,919 cr in August",
-          "url": "https://economictimes.indiatimes.com/markets/stocks/news/fpis-turn-buyers-for-second-straight-month-invest-rs-30919-cr-in-august/articleshow/133624069.cms"
+          "title": "New York Fed's Williams says yield surge due to strong economic prospects",
+          "url": "https://www.cnbc.com/2026/09/02/new-york-feds-williams-says-yield-surge-due-to-strong-economic-prospects.html"
         },
         {
-          "title": "GDP data, crude prices among 7 factors likely to steer D-Street this week",
-          "url": "https://economictimes.indiatimes.com/markets/stocks/news/gdp-data-crude-prices-among-7-factors-likely-to-steer-d-street-this-week/articleshow/133622736.cms"
-        },
-        {
-          "title": "Indian govt bond yields to remain range-bound at 6.6-6.9%, limiting near-term trading windows: Motilal Oswal",
-          "url": "https://www.thehindubusinessline.com/markets/indian-govt-bond-yields-to-remain-range-bound-at-66-69-limiting-near-term-trading-windows-motilal-oswal/article71407137.ece"
-        },
-        {
-          "title": "Hairline Fix: India wants to snip China’s growth",
-          "url": "https://economictimes.indiatimes.com/news/economy/foreign-trade/hairline-fix-india-wants-to-snip-chinas-growth-ships-human-hair-conflict-ridden-myanmar-processes-and-profits/articleshow/133617460.cms"
+          "title": "Rupee holds firm at 94.97 on RBI dollar sales",
+          "url": "https://economictimes.indiatimes.com/markets/forex/forex-news/rupee-holds-firm-at-94-97-as-rbi-intervenes-with-dollar-sales/articleshow/133722826.cms"
         }
       ]
     },
@@ -589,16 +573,7 @@
       "outlook": "Genuinely cheap and genuinely troubled. The gap between its industrial strength and its stock-market performance is the puzzle.",
       "verdict": "The textbook value-trap question: is it cheap, or cheap for good reason? The businesses are often excellent — China builds the world's best batteries and EVs. The risk is not the business at all; it is whether shareholders are allowed to keep the profits. Munger owned China and still called governance its central issue.",
       "india_angle": "China stimulus lifts metal prices and Indian steel producers. Global 'sell expensive India, buy cheap China' rotations are a real and recurring pressure on Nifty.",
-      "news": [
-        {
-          "title": "China needs U.S. dollars but is building a hedge against Washington’s sanctions",
-          "url": "https://www.cnbc.com/2026/08/25/china-iran-us-sanctions-banks-cips.html"
-        },
-        {
-          "title": "Hairline Fix: India wants to snip China’s growth",
-          "url": "https://economictimes.indiatimes.com/news/economy/foreign-trade/hairline-fix-india-wants-to-snip-chinas-growth-ships-human-hair-conflict-ridden-myanmar-processes-and-profits/articleshow/133617460.cms"
-        }
-      ]
+      "news": []
     },
     {
       "code": "JP",
@@ -659,7 +634,12 @@
       "outlook": "A rare developed market that is NOT expensive, in the middle of the most meaningful corporate reform of its modern history.",
       "verdict": "Arguably the most interesting developed market right now. Companies that sat on cash for thirty years are finally being forced to return it to shareholders, and the market is still cheap against its own history. The debt and demographics are the price of admission — but this is the rare case where things are getting better, not worse.",
       "india_angle": "If Japanese rates rise, the global carry trade can unwind and pull money out of emerging markets — India included — very fast.",
-      "news": []
+      "news": [
+        {
+          "title": "Global Market Today: Asian stocks advance as oil slips, yen in focus",
+          "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-market-today-asian-stocks-advance-as-oil-slips-yen-in-focus/articleshow/133722814.cms"
+        }
+      ]
     },
     {
       "code": "KR",
@@ -1479,6 +1459,6 @@
       "Central-bank gold buying - steady purchases put a floor under the price",
       "Whether US gains broaden beyond the handful of AI names, or narrow even further"
     ],
-    "mood_today": "risk-off"
+    "mood_today": "risk-on"
   }
 }

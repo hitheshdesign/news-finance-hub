@@ -1,6 +1,6 @@
 {
-  "updated": "2026-09-13",
-  "updated_human": "Sunday, 13 September 2026",
+  "updated": "2026-09-24",
+  "updated_human": "Thursday, 24 September 2026",
   "note": "Indicative reading of market history — a learning tool, not fund-flow data.",
   "countries": [
     {
@@ -70,12 +70,12 @@
       "india_angle": "When US rates fall, money flows toward India; when the US sells off, foreign investors pull money out of Nifty too. The US is the tide that moves India's boat.",
       "news": [
         {
-          "title": "Weekly Market Outlook: Can Nifty find its footing as crude, Fed policy drive markets?",
-          "url": "https://economictimes.indiatimes.com/markets/stocks/news/weekly-market-outlook-can-nifty-find-its-footing-as-crude-fed-policy-drive-markets/articleshow/134178071.cms"
+          "title": "Global Market: Chinese yuan dips as dollar gains on Fed hike bets; Trump-Xi talks eyed",
+          "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-market-chinese-yuan-dips-as-dollar-gains-on-fed-hike-bets-trump-xi-talks-eyed/articleshow/134452322.cms"
         },
         {
-          "title": "U.S. reveals import ban on slew of Canadian goods as trade war escalates",
-          "url": "https://www.cnbc.com/2026/09/09/us-canada-trade-war-import-ban.html"
+          "title": "Rupee falls 11 paise to 95.84 against U.S. dollar in early trade",
+          "url": "https://www.thehindu.com/business/markets/rupee-falls-11-paise-to-9584-against-us-dollar-in-early-trade/article71502800.ece"
         }
       ]
     },
@@ -136,12 +136,7 @@
       "outlook": "A steady, dividend-paying, resources-and-banks market. Fairly priced, unlikely to surprise dramatically in either direction.",
       "verdict": "A sensible, slightly dull market you would own for income rather than growth. The one thing to keep an eye on is household debt: the banks are the biggest part of the index, and their fortunes are tied to Canadian house prices.",
       "india_angle": "A useful gauge of global oil demand — the same crude prices that decide India's import bill and inflation.",
-      "news": [
-        {
-          "title": "U.S. reveals import ban on slew of Canadian goods as trade war escalates",
-          "url": "https://www.cnbc.com/2026/09/09/us-canada-trade-war-import-ban.html"
-        }
-      ]
+      "news": []
     },
     {
       "code": "BR",
@@ -509,20 +504,20 @@
       "india_angle": "Home. Everything else on this map is judged against what you can already get here — and that bar is high.",
       "news": [
         {
-          "title": "Weekly Market Outlook: Can Nifty find its footing as crude, Fed policy drive markets?",
-          "url": "https://economictimes.indiatimes.com/markets/stocks/news/weekly-market-outlook-can-nifty-find-its-footing-as-crude-fed-policy-drive-markets/articleshow/134178071.cms"
+          "title": "Stock market crash: Nifty 50, Sensex fall 1% as crude tops $102; financial, insurance stocks slide on IRDAI proposal",
+          "url": "https://www.livemint.com/market/stock-market-news/stock-market-crash-nifty-50-sensex-fall-1-as-crude-tops-102-financial-insurance-stocks-slide-on-irdai-proposal-11790221859967.html"
         },
         {
-          "title": "F&O Talk: Nifty has slipped below its crucial support, says Sudeep Shah; picks 5 stocks for next week",
-          "url": "https://economictimes.indiatimes.com/markets/expert-view/fo-talk-nifty-has-slipped-below-its-crucial-support-says-sudeep-shah-picks-5-stocks-for-next-week/articleshow/134119208.cms"
+          "title": "Sensex today | Stock Market Live Updates: Sensex falls 650 points, Nifty slips below 23,230 as crude oil tops $100",
+          "url": "https://www.thehindubusinessline.com/markets/sensex-nifty50-today-stock-market-live-updates-24-september-2026/article71499498.ece"
         },
         {
-          "title": "India-China trade: The numbers behind the relationship as Xi visits Delhi",
-          "url": "https://economictimes.indiatimes.com/news/economy/foreign-trade/india-china-trade-the-numbers-behind-the-relationship-as-xi-visits-delhi/articleshow/134114107.cms"
+          "title": "Global agencies see India’s growth ringing louder; raise FY27 GDP forecasts on upbeat demand and investment sentiment",
+          "url": "https://economictimes.indiatimes.com/news/economy/indicators/global-agencies-see-indias-growth-ringing-louder-raise-fy27-gdp-forecasts-on-upbeat-demand-and-investment-sentiment/articleshow/134445433.cms"
         },
         {
-          "title": "Nifty 50 in danger zone? Here’s where the index could head next - Check key levels",
-          "url": "https://www.livemint.com/market/stock-market-news/nifty-50-in-danger-zone-here-s-where-the-index-could-head-next-check-key-levels-11789124083087.html"
+          "title": "Rupee may not just stabilise, but appreciate from current levels: RBI Dy Guv Poonam Gupta",
+          "url": "https://economictimes.indiatimes.com/news/economy/finance/rupee-may-not-just-stabilise-but-appreciate-from-current-levels-rbi-dy-guv-poonam-gupta/articleshow/134442756.cms"
         }
       ]
     },
@@ -588,8 +583,12 @@
       "india_angle": "China stimulus lifts metal prices and Indian steel producers. Global 'sell expensive India, buy cheap China' rotations are a real and recurring pressure on Nifty.",
       "news": [
         {
-          "title": "India-China trade: The numbers behind the relationship as Xi visits Delhi",
-          "url": "https://economictimes.indiatimes.com/news/economy/foreign-trade/india-china-trade-the-numbers-behind-the-relationship-as-xi-visits-delhi/articleshow/134114107.cms"
+          "title": "Global Market: Chinese yuan dips as dollar gains on Fed hike bets; Trump-Xi talks eyed",
+          "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-market-chinese-yuan-dips-as-dollar-gains-on-fed-hike-bets-trump-xi-talks-eyed/articleshow/134452322.cms"
+        },
+        {
+          "title": "China, Hong Kong stocks decline as Trump-Xi talks face investor scepticism",
+          "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/china-hong-kong-stocks-decline-as-trump-xi-talks-face-investor-scepticism/articleshow/134452880.cms"
         }
       ]
     },
@@ -652,7 +651,12 @@
       "outlook": "A rare developed market that is NOT expensive, in the middle of the most meaningful corporate reform of its modern history.",
       "verdict": "Arguably the most interesting developed market right now. Companies that sat on cash for thirty years are finally being forced to return it to shareholders, and the market is still cheap against its own history. The debt and demographics are the price of admission — but this is the rare case where things are getting better, not worse.",
       "india_angle": "If Japanese rates rise, the global carry trade can unwind and pull money out of emerging markets — India included — very fast.",
-      "news": []
+      "news": [
+        {
+          "title": "SoftBank taps bond market for $11.1 billion to fund AI bets",
+          "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/softbank-taps-bond-market-for-11-1-billion-to-fund-ai-bets/articleshow/134452531.cms"
+        }
+      ]
     },
     {
       "code": "KR",
@@ -825,7 +829,12 @@
       "outlook": "Deep-value pricing on China's biggest names, with the institutional advantages that once justified a premium now fading.",
       "verdict": "Statistically the cheapest thing on this map. The question is not the price — it is whether the rules stay the same for shareholders. Cheapness only pays if the rules that let you collect your profits hold, and that is precisely what is in question here.",
       "india_angle": "Cheap China and Hong Kong versus expensive India is one of the most common rotation trades in global emerging-market portfolios.",
-      "news": []
+      "news": [
+        {
+          "title": "China, Hong Kong stocks decline as Trump-Xi talks face investor scepticism",
+          "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/china-hong-kong-stocks-decline-as-trump-xi-talks-face-investor-scepticism/articleshow/134452880.cms"
+        }
+      ]
     },
     {
       "code": "ID",

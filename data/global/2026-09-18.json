@@ -1,6 +1,6 @@
 {
-  "updated": "2026-09-13",
-  "updated_human": "Sunday, 13 September 2026",
+  "updated": "2026-09-18",
+  "updated_human": "Friday, 18 September 2026",
   "note": "Indicative reading of market history — a learning tool, not fund-flow data.",
   "countries": [
     {
@@ -70,12 +70,8 @@
       "india_angle": "When US rates fall, money flows toward India; when the US sells off, foreign investors pull money out of Nifty too. The US is the tide that moves India's boat.",
       "news": [
         {
-          "title": "Weekly Market Outlook: Can Nifty find its footing as crude, Fed policy drive markets?",
-          "url": "https://economictimes.indiatimes.com/markets/stocks/news/weekly-market-outlook-can-nifty-find-its-footing-as-crude-fed-policy-drive-markets/articleshow/134178071.cms"
-        },
-        {
-          "title": "U.S. reveals import ban on slew of Canadian goods as trade war escalates",
-          "url": "https://www.cnbc.com/2026/09/09/us-canada-trade-war-import-ban.html"
+          "title": "RBI rate hike imminent? Fed's move pressures India to tighten monetary policy amid rising inflation",
+          "url": "https://economictimes.indiatimes.com/news/economy/indicators/rbi-rate-hike-imminent-feds-move-pressures-india-to-tighten-monetary-policy-amid-rising-inflation/articleshow/134320527.cms"
         }
       ]
     },
@@ -136,12 +132,7 @@
       "outlook": "A steady, dividend-paying, resources-and-banks market. Fairly priced, unlikely to surprise dramatically in either direction.",
       "verdict": "A sensible, slightly dull market you would own for income rather than growth. The one thing to keep an eye on is household debt: the banks are the biggest part of the index, and their fortunes are tied to Canadian house prices.",
       "india_angle": "A useful gauge of global oil demand — the same crude prices that decide India's import bill and inflation.",
-      "news": [
-        {
-          "title": "U.S. reveals import ban on slew of Canadian goods as trade war escalates",
-          "url": "https://www.cnbc.com/2026/09/09/us-canada-trade-war-import-ban.html"
-        }
-      ]
+      "news": []
     },
     {
       "code": "BR",
@@ -322,7 +313,12 @@
       "outlook": "A cheap, high-dividend, globally-earning developed market the world has ignored for a decade.",
       "verdict": "The classic value investor's developed market: unfashionable, cash-generative and cheap. Your returns will come mostly from dividends rather than growth — which is fine, provided you buy it for income and are not expecting excitement.",
       "india_angle": "Commodity- and energy-heavy, so it moves with the same oil and metal prices that drive Indian inflation.",
-      "news": []
+      "news": [
+        {
+          "title": "Global Market: J.P. Morgan sees BoE rates rising amid renewed inflation risks",
+          "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/global-market-j-p-morgan-sees-boe-rates-rising-amid-renewed-inflation-risks/articleshow/134326027.cms"
+        }
+      ]
     },
     {
       "code": "DE",
@@ -509,20 +505,20 @@
       "india_angle": "Home. Everything else on this map is judged against what you can already get here — and that bar is high.",
       "news": [
         {
-          "title": "Weekly Market Outlook: Can Nifty find its footing as crude, Fed policy drive markets?",
-          "url": "https://economictimes.indiatimes.com/markets/stocks/news/weekly-market-outlook-can-nifty-find-its-footing-as-crude-fed-policy-drive-markets/articleshow/134178071.cms"
+          "title": "Rupee rises 16 paise to 95.73 against US dollar in early trade",
+          "url": "https://economictimes.indiatimes.com/markets/forex/rupee-rises-16-paise-to-95-73-against-us-dollar-in-early-trade/articleshow/134326642.cms"
         },
         {
-          "title": "F&O Talk: Nifty has slipped below its crucial support, says Sudeep Shah; picks 5 stocks for next week",
-          "url": "https://economictimes.indiatimes.com/markets/expert-view/fo-talk-nifty-has-slipped-below-its-crucial-support-says-sudeep-shah-picks-5-stocks-for-next-week/articleshow/134119208.cms"
+          "title": "RBI rate hike imminent? Fed's move pressures India to tighten monetary policy amid rising inflation",
+          "url": "https://economictimes.indiatimes.com/news/economy/indicators/rbi-rate-hike-imminent-feds-move-pressures-india-to-tighten-monetary-policy-amid-rising-inflation/articleshow/134320527.cms"
         },
         {
-          "title": "India-China trade: The numbers behind the relationship as Xi visits Delhi",
-          "url": "https://economictimes.indiatimes.com/news/economy/foreign-trade/india-china-trade-the-numbers-behind-the-relationship-as-xi-visits-delhi/articleshow/134114107.cms"
+          "title": "Sensex rises 200 points, Nifty above 23,300 as oil prices cool down. What lies ahead?",
+          "url": "https://economictimes.indiatimes.com/markets/stocks/news/sensex-rises-200-points-nifty-above-23300-as-oil-prices-cool-down-what-lies-ahead/articleshow/134326491.cms"
         },
         {
-          "title": "Nifty 50 in danger zone? Here’s where the index could head next - Check key levels",
-          "url": "https://www.livemint.com/market/stock-market-news/nifty-50-in-danger-zone-here-s-where-the-index-could-head-next-check-key-levels-11789124083087.html"
+          "title": "India bonds little changed, debt auction cutoff to guide",
+          "url": "https://economictimes.indiatimes.com/markets/bonds/india-bonds-little-changed-debt-auction-cutoff-to-guide/articleshow/134326777.cms"
         }
       ]
     },
@@ -586,12 +582,7 @@
       "outlook": "Genuinely cheap and genuinely troubled. The gap between its industrial strength and its stock-market performance is the puzzle.",
       "verdict": "The textbook value-trap question: is it cheap, or cheap for good reason? The businesses are often excellent — China builds the world's best batteries and EVs. The risk is not the business at all; it is whether shareholders are allowed to keep the profits. Munger owned China and still called governance its central issue.",
       "india_angle": "China stimulus lifts metal prices and Indian steel producers. Global 'sell expensive India, buy cheap China' rotations are a real and recurring pressure on Nifty.",
-      "news": [
-        {
-          "title": "India-China trade: The numbers behind the relationship as Xi visits Delhi",
-          "url": "https://economictimes.indiatimes.com/news/economy/foreign-trade/india-china-trade-the-numbers-behind-the-relationship-as-xi-visits-delhi/articleshow/134114107.cms"
-        }
-      ]
+      "news": []
     },
     {
       "code": "JP",

@@ -686,6 +686,91 @@ details.gf-acc .acc-body .freshness{margin-top:9px;}
 .rec .rfall{margin:9px 0 0;font-size:12.5px;color:var(--muted);line-height:1.5;}
 .rec .rfall b{color:var(--down);font-weight:600;}
 
+
+/* ---- Heat map: the whole board in one glance ----
+   Five steps either side of "normal". Deliberately NOT the same greens and
+   reds as the up/down arrows elsewhere on the site: those mean "went up
+   today", these mean "cheap against its own history", and conflating the two
+   is how people end up buying whatever rose yesterday.
+
+   Text colour flips with the shade rather than being white throughout —
+   white on a mid-green is around 2.5:1, which is unreadable and fails
+   contrast. Dark ink on the light shades, white only on the deep ones. */
+:root{
+  --h-c2:#15794a; --h-c2i:#ffffff;
+  --h-c1:#86c9a2; --h-c1i:#0e2c1d;
+  --h-n :#d2ccc0; --h-ni :#2b2721;
+  --h-d1:#f0a58c; --h-d1i:#3d1610;
+  --h-d2:#b8332b; --h-d2i:#ffffff;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --h-c2:#2f9c64; --h-c2i:#06170e;
+    --h-c1:#255740; --h-c1i:#d9eadf;
+    --h-n :#343c48; --h-ni :#cdd5df;
+    --h-d1:#5f2c26; --h-d1i:#f2ccc5;
+    --h-d2:#c8483b; --h-d2i:#1a0705;
+  }
+}
+:root[data-theme="dark"]{
+  --h-c2:#2f9c64; --h-c2i:#06170e;
+  --h-c1:#255740; --h-c1i:#d9eadf;
+  --h-n :#343c48; --h-ni :#cdd5df;
+  --h-d1:#5f2c26; --h-d1i:#f2ccc5;
+  --h-d2:#c8483b; --h-d2i:#1a0705;
+}
+.heatgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));
+  gap:3px;}
+.hcell{position:relative;display:flex;flex-direction:column;justify-content:center;
+  min-height:74px;padding:9px 10px;border:0;border-radius:5px;cursor:pointer;
+  font:inherit;text-align:left;color:var(--h-ni);background:var(--h-n);
+  transition:transform .1s ease,outline-color .1s ease;
+  outline:2px solid transparent;outline-offset:-2px;}
+.hcell:hover{transform:scale(1.04);z-index:3;outline-color:var(--ink);}
+.hcell.sel{outline-color:var(--ink);z-index:2;}
+.hcell.c2{background:var(--h-c2);color:var(--h-c2i);}
+.hcell.c1{background:var(--h-c1);color:var(--h-c1i);}
+.hcell.n {background:var(--h-n); color:var(--h-ni);}
+.hcell.d1{background:var(--h-d1);color:var(--h-d1i);}
+.hcell.d2{background:var(--h-d2);color:var(--h-d2i);}
+.hcell.na{color:var(--h-ni);}
+/* "No way to value it" is not a shade of cheap or dear — hatch it instead. */
+.hcell.na{background:repeating-linear-gradient(135deg,var(--h-n) 0 6px,
+  color-mix(in srgb,var(--h-n) 80%,#000) 6px 12px);}
+.hcell .hname{font-size:12px;font-weight:600;line-height:1.25;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.hcell .hval{font-size:15px;font-weight:700;line-height:1.2;margin-top:3px;
+  font-variant-numeric:tabular-nums;}
+.hcell .hgap{font-size:10.5px;opacity:.88;line-height:1.3;margin-top:1px;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+@media (max-width:520px){
+  .heatgrid{grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:2px;}
+  .hcell{min-height:66px;padding:7px 8px;}
+  .hcell .hval{font-size:14px;}
+}
+/* the scale, shown once */
+.heatkey{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:12px 0 4px;
+  font-size:11.5px;color:var(--muted);}
+.heatkey .bar{display:flex;border-radius:4px;overflow:hidden;}
+.heatkey .bar i{width:26px;height:12px;display:block;}
+.heatkey .lbl{font-weight:600;color:var(--ink2);}
+.famhead .famkey{margin-left:auto;font-size:11px;color:var(--faint);}
+
+/* the sortable table, now folded away under the map */
+details.tablefold{margin-top:16px;}
+details.tablefold>summary{list-style:none;cursor:pointer;display:inline-flex;
+  align-items:center;gap:8px;font-size:12.5px;font-weight:600;color:var(--ink2);
+  background:var(--panel);border:1px solid var(--line);border-radius:10px;
+  padding:9px 14px;}
+details.tablefold>summary::-webkit-details-marker{display:none;}
+details.tablefold>summary::marker{content:"";font-size:0;}
+details.tablefold>summary:hover{border-color:var(--link);color:var(--ink);}
+details.tablefold>summary::after{content:"";width:6px;height:6px;
+  border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);
+  transform:rotate(45deg) translate(-2px,-2px);transition:transform .18s ease;}
+details.tablefold[open]>summary::after{transform:rotate(-135deg) translate(-2px,-2px);}
+details.tablefold .ctable{margin-top:10px;}
+
 /* ---- Assets table: same grid machinery as the country table, own columns ---- */
 .ctable.acols .thead,.ctable.acols .row{
   grid-template-columns:minmax(0,1fr) 92px 92px 100px;}
@@ -771,6 +856,48 @@ details.gf-acc .acc-body .freshness{margin-top:9px;}
   color:var(--ink2);line-height:1.55;}
 .regime .rgindia b{color:var(--link);display:block;font-size:10.5px;
   font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px;}
+
+
+/* ---------- Pattern from history ----------
+   One past episode a day, at the foot of the brief. Deliberately styled apart
+   from the news cards: this is not something that happened today, it is the
+   shape today's news will probably turn out to have had. */
+.histcard{background:var(--panel);border:1px solid var(--line);border-radius:16px;
+  padding:22px 22px 20px;margin-top:6px;border-top:3px solid var(--c-fair);}
+.histcard .hkick{font-size:11px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.1em;color:var(--c-fair);}
+.histcard h3{font-family:var(--font-serif);font-size:25px;font-weight:600;
+  line-height:1.2;color:var(--ink);margin:7px 0 0;letter-spacing:-.01em;}
+.histcard .hlede{font-size:16px;line-height:1.6;color:var(--ink2);margin:10px 0 0;}
+/* the causal chain, numbered and joined by a line down the left */
+.hchain{list-style:none;counter-reset:hstep;margin:18px 0 0;padding:0;position:relative;}
+.hchain li{position:relative;padding:0 0 16px 38px;counter-increment:hstep;}
+.hchain li::before{content:counter(hstep);position:absolute;left:0;top:0;
+  width:24px;height:24px;border-radius:50%;background:var(--panel2);
+  border:1px solid var(--line);color:var(--muted);font-size:11.5px;
+  font-weight:700;display:flex;align-items:center;justify-content:center;}
+.hchain li::after{content:"";position:absolute;left:12px;top:26px;bottom:2px;
+  width:1px;background:var(--line);}
+.hchain li:last-child{padding-bottom:4px;}
+.hchain li:last-child::after{display:none;}
+.hchain h5{font-size:10.5px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.09em;color:var(--faint);margin:4px 0 4px;}
+.hchain p{margin:0;font-size:14.5px;line-height:1.62;color:var(--ink2);}
+.hpattern,.hindia,.hwatch{margin-top:12px;padding:12px 15px;font-size:14px;
+  line-height:1.6;color:var(--ink2);border-radius:0 11px 11px 0;}
+.hpattern{background:var(--cb-fair);border-left:3px solid var(--c-fair);
+  color:var(--ink);}
+.hindia{background:var(--panel2);border-left:3px solid var(--link);}
+.hwatch{background:var(--panel2);border-left:3px solid var(--muted);}
+.hpattern b,.hindia b,.hwatch b{display:block;font-size:10.5px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.09em;margin-bottom:4px;}
+.hpattern b{color:var(--c-fair);}
+.hindia b{color:var(--link);}
+.hwatch b{color:var(--muted);}
+@media (max-width:520px){
+  .histcard{padding:18px 16px 16px;border-radius:14px;}
+  .histcard h3{font-size:22px;}
+}
 
 /* Disclaimer + footer */
 .disclaimer{background:var(--panel2);border:1px dashed var(--line);border-radius:12px;

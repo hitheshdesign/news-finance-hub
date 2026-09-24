@@ -1,0 +1,753 @@
+# =============================================================================
+# MARKET HISTORY — one episode a day, at the foot of the brief.
+#
+# The point of this section is pattern recognition. Today's news is always
+# unprecedented in its details and almost never unprecedented in its shape.
+# Every entry follows the same five steps, deliberately, so that after a month
+# of reading them the shape becomes familiar:
+#
+#   why        -> what actually caused it (not what the headlines blamed)
+#   impact     -> what it did to prices, jobs and savings
+#   policy     -> what was introduced to stop it
+#   consequence-> what that policy then led to, including what nobody intended
+#   pattern    -> the transferable lesson, stated so you can spot it early
+#
+# india_echo ties it back: either how it hit India, or where India has run its
+# own version of the same story.
+#
+# Episodes rotate by date, so the list cycles roughly once a month. Add more
+# and the cycle lengthens automatically. Nothing here is a prediction, and
+# nothing here is advice — it is the historical record and what followed.
+# =============================================================================
+
+episodes:
+
+  - id: nixon-1971
+    title: "The day the dollar stopped being gold"
+    when: "August 1971"
+    where: "United States"
+    what: >-
+      President Nixon went on television on a Sunday evening and announced that
+      the United States would no longer convert dollars into gold for foreign
+      governments. The system that had governed world money since 1944 ended in
+      a fifteen-minute broadcast, and it was never restored.
+    why: >-
+      Under the Bretton Woods agreement every currency was pegged to the dollar
+      and the dollar was pegged to gold at $35 an ounce. That worked only while
+      America held enough gold to honour the promise. Spending on the Vietnam war
+      and on domestic programmes meant far more dollars circulating abroad than
+      America had gold to back. France and Britain began asking for the gold. The
+      promise was arithmetically impossible to keep, and everyone could see it.
+    impact: >-
+      Currencies began floating against each other for the first time in modern
+      history, which is why exchange rates move every day now. The dollar fell
+      about a third against major currencies over two years. Gold, freed from its
+      fixed price, went from $35 to $850 by 1980. Inflation across the rich world
+      moved into double digits, because the external discipline that had capped
+      money creation was simply gone.
+    policy: >-
+      The immediate response was wage and price controls — which failed within
+      two years. The durable answer took another decade: central banks were made
+      independent of elected governments and given an explicit inflation target,
+      so that the discipline gold had imposed from outside was rebuilt inside the
+      institutions instead.
+    consequence: >-
+      We live in that world now. Money is a promise backed by an institution's
+      credibility rather than by metal, which is precisely why central bank
+      independence is defended so fiercely and why any political interference
+      with a central bank frightens markets so much. It also made currencies a
+      permanent variable in every cross-border investment — the reason a rupee
+      investor has to think about the dollar at all.
+    pattern: >-
+      When a fixed promise becomes arithmetically impossible, it does not get
+      renegotiated gradually. It gets abandoned suddenly, usually on a weekend,
+      and the people who prepared for the possibility do far better than the ones
+      who trusted the promise because it had always held.
+    india_echo: >-
+      India's own version came twenty years later, in 1991, for the same
+      underlying reason: a promise the reserves could not fund. Today the echo is
+      quieter but constant — the rupee's long slide against the dollar is the
+      background weather of every Indian portfolio, and it exists because 1971
+      made currencies float.
+    watch_for: >-
+      Any peg or price cap that requires ever-larger reserves to defend. Currency
+      pegs, fuel price freezes, and support levels that "will always hold" all
+      end the same way.
+
+  - id: volcker-1979
+    title: "The cure that caused a recession on purpose"
+    when: "1979 to 1982"
+    where: "United States"
+    what: >-
+      Paul Volcker, newly in charge of the US Federal Reserve, raised interest
+      rates to nearly 20% to break an inflation that had run for a decade. He
+      knew it would cause a severe recession. He did it anyway.
+    why: >-
+      Through the 1970s the Fed had repeatedly raised rates, seen unemployment
+      rise, lost its nerve and cut again. Each cycle ended with inflation higher
+      than before. Americans had stopped believing inflation would ever be
+      controlled, so they demanded bigger pay rises and firms raised prices
+      pre-emptively — which made the inflation self-fulfilling. The problem was no
+      longer economic; it was that nobody believed the promise.
+    impact: >-
+      Unemployment reached nearly 11%, the worst since the Depression. Farm
+      foreclosures and factory closures spread across the American Midwest. But
+      inflation fell from about 14% to under 3%. The bond market, which had been
+      a graveyard for a decade, began a bull run that lasted forty years — and
+      shares followed it.
+    policy: >-
+      The policy was simply to keep rates punishingly high until expectations
+      broke, and to say so publicly and repeatedly. What it established was the
+      doctrine that a central bank's credibility is its most valuable asset, and
+      is worth a recession to protect.
+    consequence: >-
+      Every inflation-fighting central bank since has followed the same script,
+      including India's RBI and every bank that raised rates sharply in 2022.
+      The forty-year fall in interest rates that followed also inflated the price
+      of nearly every asset on earth — shares, bonds, property — which is a large
+      part of why the generation that invested after 1982 did so well, and why
+      repeating their returns from today's starting point is harder.
+    pattern: >-
+      Inflation is beaten by breaking what people expect, not by any single rate
+      decision. That is why central bankers sound repetitive and stern: the words
+      are the policy. When a central bank starts caring more about growth than
+      about its own credibility, the inflation problem is about to get longer.
+    india_echo: >-
+      The RBI made the same choice in 2013-14 under Raghuram Rajan, raising rates
+      into a slowdown to defend the rupee and break inflation, and then adopting a
+      formal inflation target in 2016. India's inflation has been far better
+      behaved since — the policy worked, and the mechanism was credibility.
+    watch_for: >-
+      Central bankers talking about expectations becoming "unanchored". That is
+      the technical phrase for the 1970s problem, and it signals they are
+      prepared to tolerate real pain.
+
+  - id: india-1991
+    title: "India pledged its gold and changed course"
+    when: "June to July 1991"
+    where: "India"
+    what: >-
+      With foreign reserves down to about two weeks of imports, India physically
+      flew 47 tonnes of gold to the Bank of England as collateral for an
+      emergency loan. Within weeks the government devalued the rupee twice and
+      began dismantling the licensing system that had governed Indian industry
+      since independence.
+    why: >-
+      Decades of import substitution had produced an economy that could not earn
+      enough foreign exchange. The Gulf war spiked oil prices and cut remittances
+      from Indians working in the Gulf simultaneously. The Soviet Union, a major
+      trading partner, was collapsing. Political instability meant credit lines
+      were pulled. Several slow problems arrived together with one fast shock —
+      the usual anatomy of a crisis.
+    impact: >-
+      The rupee fell about 20% in two days. Inflation hit 13%. But what followed
+      was the most consequential economic change in modern Indian history:
+      industrial licensing was abolished, import tariffs that reached 300% began
+      falling, and foreign investment was allowed in.
+    policy: >-
+      Liberalisation — of licensing, trade and investment — plus a managed
+      floating rupee instead of a fixed one, and a deliberate policy of
+      accumulating foreign exchange reserves so it could never happen again.
+    consequence: >-
+      India's growth rate roughly doubled over the following two decades. The
+      companies that dominate the Nifty today — the private banks, the IT
+      exporters, the consumer giants — are largely creatures of the post-1991
+      settlement. And the reserve-hoarding instinct stuck: India now holds well
+      over a year of import cover, which is why rupee wobbles since have been
+      uncomfortable rather than existential.
+    pattern: >-
+      Crises are when structural reform becomes politically possible. Changes
+      that were unthinkable for forty years were passed in weeks because the
+      alternative was default. The investment lesson is the flip side: the point
+      of maximum fear is often the start of the best decade.
+    india_echo: >-
+      This is the founding event of the market you invest in. Every time you read
+      that foreign investors are selling, remember that they were only allowed to
+      buy at all because of a fortnight in 1991 when the country nearly ran out of
+      dollars.
+    watch_for: >-
+      Import cover measured in months of reserves. It is the single number that
+      separates a currency having a bad week from a country having a crisis.
+
+  - id: harshad-1992
+    title: "The scam that built India's market plumbing"
+    when: "April 1992"
+    where: "India"
+    what: >-
+      A journalist revealed that broker Harshad Mehta had been using forged bank
+      receipts to divert money from the interbank government bond market into
+      shares, driving the Sensex up over 140% in a year. When the mechanism was
+      exposed the index fell roughly 40%.
+    why: >-
+      The bond settlement system relied on paper receipts and personal trust
+      between banks. There was no electronic record, no central depository, and no
+      regulator with real teeth. Shares settled fortnightly, which let a broker
+      build enormous positions with no money down. The fraud was not clever so
+      much as inevitable given the plumbing.
+    impact: >-
+      About ₹4,000 crore of public bank money was diverted — enormous for the
+      time. Several bank chairmen were arrested. Retail investors who had bought
+      into the boom lost heavily, and Indian equity took years to recover its
+      reputation with ordinary savers.
+    policy: >-
+      SEBI, which had existed only as an advisory body, was given statutory
+      powers in 1992. The National Stock Exchange was created as an electronic,
+      screen-based competitor to the broker-controlled BSE. Shares were
+      dematerialised into depositories, and physical certificates disappeared.
+    consequence: >-
+      This is why buying a share in India today is instant, electronic and safe,
+      settled by a central depository with a regulator behind it — infrastructure
+      that many richer countries took longer to build. The scandal's cost bought
+      the market's plumbing.
+    pattern: >-
+      Financial scandals almost never come from exotic instruments. They come
+      from a settlement gap, a trust-based process, or a regulator without
+      authority. Ask where the paperwork is manual and who checks it.
+    india_echo: >-
+      The sequel arrived in 2001 with Ketan Parekh, exploiting the remaining
+      carry-forward settlement system; that ended badla trading and brought in
+      rolling settlement. Two scandals, two upgrades — the pattern of Indian
+      market reform.
+    watch_for: >-
+      Any market where the same institution executes, settles and audits. The
+      crypto exchange failures of 2022 were this exact structure, rediscovered.
+
+  - id: asian-1997
+    title: "The crisis that taught Asia to hoard dollars"
+    when: "July 1997 to 1998"
+    where: "Thailand, Indonesia, South Korea, Malaysia"
+    what: >-
+      Thailand ran out of reserves defending its currency peg and let the baht
+      float. It fell 50% in months. The panic spread through Indonesia, South
+      Korea and Malaysia within weeks, becoming the worst emerging market crisis
+      of the era.
+    why: >-
+      These economies had borrowed heavily in dollars while earning in local
+      currency — a mismatch that is invisible while the exchange rate is fixed
+      and fatal the moment it moves. Their central banks had promised stable
+      pegs, which encouraged still more dollar borrowing. When growth slowed and
+      the dollar strengthened, speculators tested the pegs and the reserves ran
+      out.
+    impact: >-
+      Indonesia's economy shrank 13% in a year and its government fell. South
+      Korea, a developed economy, needed the largest IMF bailout in history to
+      that point. Millions fell back into poverty. Asian shares lost 60-80% in
+      dollar terms.
+    policy: >-
+      IMF bailouts with severe conditions, which remain bitterly resented in the
+      region. More durably, the affected countries abandoned rigid pegs, let
+      their currencies float, and began accumulating enormous foreign exchange
+      reserves as self-insurance so they would never have to ask again.
+    consequence: >-
+      Asia's reserve hoard is the direct descendant of 1997. Those reserves were
+      recycled into US government bonds, which helped hold global interest rates
+      down for two decades — one of the quiet forces behind the cheap money of
+      the 2000s, and therefore behind the housing bubble that followed.
+    pattern: >-
+      Borrowing in a currency you do not earn is the most reliable way to turn a
+      slowdown into a collapse. It is invisible in good times and decisive in bad
+      ones. Check what currency a country, a company or a project owes in.
+    india_echo: >-
+      India was barely touched, because the capital account was still largely
+      closed and the rupee was not freely convertible. The lesson Indian
+      policymakers drew — open up slowly, keep reserves large — still shapes RBI
+      policy today, and explains why India has weathered every emerging market
+      scare since with discomfort rather than disaster.
+    watch_for: >-
+      Countries with large dollar debts, thin reserves and a currency the central
+      bank insists is stable. The combination is the setup, every time.
+
+  - id: dotcom-2000
+    title: "When a real revolution was still a terrible investment"
+    when: "March 2000 to October 2002"
+    where: "United States, globally"
+    what: >-
+      The Nasdaq fell 78% over two and a half years. Companies that had listed
+      with no profits and enormous valuations went to zero in their hundreds. The
+      internet, meanwhile, continued to transform the world exactly as promised.
+    why: >-
+      The story was true and the price was wrong — which is the hardest lesson in
+      investing. Capital flooded in because the technology was genuinely
+      revolutionary, so valuations stopped referring to earnings at all and began
+      referring to page views and "eyeballs". Cheap money after the 1998 crisis
+      supplied the fuel; investment bank research supplied the justification.
+    impact: >-
+      About $5 trillion of market value vanished. It took the Nasdaq fifteen
+      years to regain its 2000 peak. Yet Amazon, which fell 94%, went on to become
+      one of the most valuable companies on earth. Both facts are true at once.
+    policy: >-
+      Sarbanes-Oxley in 2002 forced chief executives to personally certify their
+      accounts and made auditors independent of consulting arms. Rules were
+      introduced to separate investment bank research from the deal-making desks
+      that had been quietly paying for it.
+    consequence: >-
+      Corporate accounts became more trustworthy and the cost of going public rose
+      sharply — which is part of why companies now stay private for far longer and
+      list only when they are already large. The Fed also cut rates hard to cushion
+      the bust, which fed the housing boom that broke in 2008.
+    pattern: >-
+      A transformative technology and a good investment are different questions.
+      The revolution can be entirely real while the shares are still priced for a
+      future that arrives ten years late. Ask what you are paying for the growth,
+      not whether the growth is coming.
+    india_echo: >-
+      India had its own version. The Sensex IT index collapsed with the Nasdaq and
+      Indian software stocks lost 80%. But Infosys and TCS were real businesses with
+      real dollar earnings, and they compounded for the next twenty years. Today's
+      Indian AI and new-age tech listings are the same question in new clothes.
+    watch_for: >-
+      Valuation measures being replaced by engagement measures. When you are shown
+      users instead of profits, someone has decided profits are inconvenient.
+
+  - id: gfc-2008
+    title: "When the safest thing in finance turned out not to be"
+    when: "2007 to 2009"
+    where: "United States, then everywhere"
+    what: >-
+      American house prices fell, mortgage securities that were rated as safe as
+      government bonds proved worthless, and Lehman Brothers was allowed to fail.
+      Global credit markets stopped functioning within days.
+    why: >-
+      Mortgages were bundled into securities, sliced into tranches, and rated AAA
+      on the assumption that house prices would never fall across the whole
+      country at once. That assumption had held for decades, so it was treated as
+      a law. Banks held these with very little of their own capital behind them,
+      and insured each other through derivatives — which concentrated the risk
+      rather than spreading it.
+    impact: >-
+      Global shares fell more than 50%. World trade collapsed faster than in 1929.
+      Unemployment doubled in the US and Europe. India's Sensex fell about 60% and
+      the rupee slid sharply, despite Indian banks holding almost none of the toxic
+      assets — a pure demonstration that a foreign-funded market imports foreign
+      panic.
+    policy: >-
+      Bank bailouts, then zero interest rates and quantitative easing — central
+      banks creating money to buy bonds — on a scale never attempted before.
+      Regulation followed: Basel III forced banks to hold far more capital, and
+      Dodd-Frank restricted what they could trade with their own money.
+    consequence: >-
+      Banks became safer and far less profitable, and much risky lending simply
+      migrated to less-regulated non-bank lenders — where it still sits. A decade
+      of near-zero rates inflated the price of every asset and widened wealth
+      inequality sharply, which reshaped the politics of the following decade.
+    pattern: >-
+      The dangerous asset is never the one everybody calls risky. It is the one
+      everybody calls safe, because that is where leverage accumulates
+      unexamined. Ask what today's "obviously safe" holding is, and what would have
+      to be true for it not to be.
+    india_echo: >-
+      India's own version arrived in 2018 when IL&FS, rated AAA, defaulted and
+      froze the entire non-bank lending sector. Same shape: a AAA rating, heavy
+      short-term borrowing funding long-term assets, and a regulator watching the
+      wrong institution.
+    watch_for: >-
+      Ratings doing the thinking for investors. When a security is bought because
+      of its rating rather than its cash flows, the rating is the risk.
+
+  - id: taper-2013
+    title: "A speech that cost India 20% of its currency"
+    when: "May to September 2013"
+    where: "United States, felt hardest in India"
+    what: >-
+      Fed chairman Ben Bernanke suggested in testimony that the Fed might slow
+      its bond buying "in the next few meetings". He did not change any policy.
+      Within four months the rupee had fallen from 55 to 68 per dollar and India
+      was labelled one of the "Fragile Five".
+    why: >-
+      Years of near-zero US rates had pushed investors into emerging markets
+      hunting for yield. India ran a large current account deficit — importing far
+      more than it exported, with gold and oil the biggest items — and was
+      therefore dependent on that foreign money continuing to arrive. The hint
+      that the tide might turn was enough; no actual policy change was needed.
+    impact: >-
+      The rupee fell about 20% in four months. Indian bond yields spiked, the
+      stock market fell sharply, and the RBI raised rates into an already slowing
+      economy to defend the currency.
+    policy: >-
+      The RBI opened a special concessional window to attract dollar deposits from
+      Indians abroad, raising about $34 billion. Gold import duties were raised
+      steeply to curb the import bill. And in 2016 India adopted a formal
+      inflation-targeting framework, which addressed the underlying cause.
+    consequence: >-
+      India's current account deficit narrowed sharply and reserves were rebuilt to
+      levels that made the 2018 and 2022 dollar shocks far less painful. The gold
+      import duty also created a large smuggling industry — an unintended
+      consequence that took years to unwind.
+    pattern: >-
+      An economy dependent on foreign capital is hostage to a foreign central
+      bank's tone, not just its decisions. The vulnerability is built during the
+      good years, when the money is arriving and nobody asks why.
+    india_echo: >-
+      This is the single clearest lesson for an Indian investor about why the Fed
+      matters here. Nothing changed in India that summer. The Nifty fell anyway,
+      because the marginal buyer of Indian shares sits in New York.
+    watch_for: >-
+      India's current account deficit as a share of GDP, and the share of the
+      market owned by foreign investors. Together they size the exposure.
+
+  - id: covid-2020
+    title: "The fastest crash and the fastest rescue"
+    when: "February to April 2020"
+    where: "Globally"
+    what: >-
+      Global shares fell about 35% in five weeks — the fastest crash of that size
+      ever recorded. Then, within months, they made new highs, while the real
+      economy was still shut.
+    why: >-
+      A genuine shock met an economy with no slack. But the crash's speed came
+      from its mechanics: everything was sold at once to raise cash, including
+      gold and government bonds. The rescue's speed came from central banks
+      having the 2008 playbook ready and choosing to use it at a scale and pace
+      nobody expected.
+    impact: >-
+      India's Nifty fell 38% in a month and recovered within the year. Oil futures
+      briefly traded below zero. Meanwhile millions lost work and informal
+      economies were devastated — the gap between the market and the economy was
+      the widest most investors had ever seen.
+    policy: >-
+      Interest rates to near zero, unlimited bond buying, and — the genuine
+      novelty — enormous direct fiscal transfers to households and firms. Money was
+      put into people's hands rather than only into the banking system, which is
+      what 2008 had done.
+    consequence: >-
+      The recovery was far faster than after 2008, and the inflation that followed
+      in 2021-23 was far larger — the first serious inflation in the rich world in
+      forty years, and the reason interest rates rose so sharply afterwards. It
+      also drew a whole generation of new retail investors into markets, in India
+      especially, whose first experience was a V-shaped recovery.
+    pattern: >-
+      Markets price the future, not the present. They bottomed while the news was
+      at its worst because the rescue was visible before the recovery was. Waiting
+      for the news to improve means buying after the move.
+    india_echo: >-
+      India's retail investing boom dates from this crash — SIP accounts and demat
+      openings multiplied. Most of that money has never seen a long bear market,
+      which is a genuine risk factor for Indian small and mid caps.
+    watch_for: >-
+      A policy response arriving faster than the damage. When the rescue is
+      credible and immediate, the market stops waiting for the data.
+
+  - id: japan-1990
+    title: "The bubble that took thirty years to repay"
+    when: "1989 to 2024"
+    where: "Japan"
+    what: >-
+      At its 1989 peak the Tokyo stock market was worth more than the American
+      one, and the land under the Imperial Palace was said to be worth more than
+      all of California. The Nikkei then fell about 80% and did not regain its
+      1989 high until 2024 — thirty-five years later.
+    why: >-
+      The 1985 Plaza Accord pushed the yen sharply higher, hurting exporters. The
+      Bank of Japan cut rates hard to compensate, and the cheap money went into
+      land and shares rather than into business investment. Banks lent against
+      property using property as collateral, so rising prices justified more
+      lending, which raised prices further. A closed loop, and everyone inside it
+      could point to a rational-sounding reason.
+    impact: >-
+      Households and banks spent two decades repairing balance sheets instead of
+      spending and lending. Growth flatlined, prices actually fell for years, and
+      a generation entered a frozen job market. Japan's share of world output fell
+      from roughly 15% to under 5%.
+    policy: >-
+      Rates went to zero and later below it. Japan invented quantitative easing in
+      2001 — a central bank creating money to buy government bonds — because
+      conventional rate cuts had run out of room. Banks were eventually forced to
+      recognise bad loans instead of rolling them over.
+    consequence: >-
+      Every major central bank used Japan's playbook in 2008 and again in 2020,
+      which is why zero rates and bond-buying stopped being exotic. Japan also
+      proved an economy can stagnate for decades without a dramatic collapse — the
+      danger is not always a crash.
+    pattern: >-
+      When an asset is bought with debt secured against that same asset, the cycle
+      feeds itself upward and then downward with equal force. Ask what the
+      collateral is; if the collateral is the thing being bought, you are looking
+      at the mechanism.
+    india_echo: >-
+      Indian property lending and promoter share-pledging are the same shape on a
+      smaller scale. It is why the RBI watches loan-to-value ratios, and why a
+      promoter pledging shares to buy more shares deserves real suspicion.
+    watch_for: >-
+      Lending growth running far ahead of income growth, with the asset itself as
+      the security. That combination has never ended gently.
+
+  - id: ilfs-2018
+    title: "The AAA company that could not pay"
+    when: "September 2018"
+    where: "India"
+    what: >-
+      IL&FS, an infrastructure lender rated AAA weeks earlier, missed payments on
+      its short-term borrowings. India's entire non-bank lending sector froze
+      within days, and debt mutual funds holding its paper had to mark down
+      investors' money.
+    why: >-
+      It borrowed short-term at low rates to fund infrastructure that would pay
+      back over decades — a maturity mismatch that works perfectly until the day
+      nobody rolls over your short-term borrowing. Its group ran to roughly 350
+      subsidiaries, which made the true debt load nearly impossible to see from
+      outside. And the rating agencies that called it AAA were paid by it.
+    impact: >-
+      Non-bank lenders' funding costs jumped. Housing finance companies stopped
+      lending, which hit developers, which hit construction jobs. This is a large
+      part of why Indian growth slowed through 2019, well before Covid. Several
+      debt funds gated withdrawals.
+    policy: >-
+      The government superseded the board. The RBI brought large non-bank lenders
+      under far closer supervision, imposed liquidity coverage requirements on
+      them, and limited how much short-term money they could rely on. SEBI
+      tightened what debt funds were allowed to hold.
+    consequence: >-
+      Indian non-bank lending is meaningfully safer and slower than it was, and
+      credit-risk funds never recovered their popularity. It also drove
+      consolidation: weak lenders were absorbed and the survivors, mostly
+      bank-backed, took the market.
+    pattern: >-
+      Maturity mismatch is the oldest failure in finance, and a credit rating is an
+      opinion bought by the borrower. When an institution borrows short to lend
+      long, the question is not whether it is profitable but who refinances it on a
+      bad day.
+    india_echo: >-
+      This is India's own 2008 in miniature, ten years later. It is why the bad-loan
+      line matters more for Indian banks than any valuation ratio.
+    watch_for: >-
+      Any lender whose borrowings are much shorter-dated than its loans, and any
+      AAA rating sitting on a complicated group structure.
+
+  - id: franklin-2020
+    title: "When a 'safe' debt fund locked the doors"
+    when: "April 2020"
+    where: "India"
+    what: >-
+      Franklin Templeton abruptly shut six debt schemes holding about ₹26,000
+      crore. Roughly 300,000 investors could not withdraw their money, and it took
+      more than two years to return most of it.
+    why: >-
+      The schemes had reached for yield by holding lower-rated corporate bonds —
+      paper that is easy to buy and extremely hard to sell in a panic. When Covid
+      hit and investors rushed for the exit, the funds faced selling into a market
+      with no buyers. The only alternative to a fire-sale was to stop redemptions.
+    impact: >-
+      Confidence collapsed across the whole debt-fund category, not just
+      Franklin's. A great many Indian investors learned for the first time that a
+      debt fund is not a fixed deposit, and that it can both fall and freeze.
+    policy: >-
+      SEBI imposed mandatory liquidity buffers on open-ended debt schemes,
+      tightened concentration limits, required stress testing, and introduced
+      swing pricing so that investors who rush out bear more of the cost of their
+      own exit.
+    consequence: >-
+      Debt funds became more boring and more honest. Money moved decisively toward
+      target-maturity funds and government-backed paper, which is why those are now
+      the sensible default for Indian debt investing.
+    pattern: >-
+      Liquidity is not a property of an asset; it is a property of the market on
+      the day you need to sell. Anything promising both a high yield and instant
+      access is making a promise about other people's future behaviour.
+    india_echo: >-
+      Directly behind the warning on the debt section of the Asset Classes page.
+      An extra 2% of yield has never once compensated for a gate.
+    watch_for: >-
+      A fund yielding noticeably more than its peers. The extra is always paid for
+      by extra credit risk or extra illiquidity — work out which.
+
+  - id: uk-2022
+    title: "A budget that broke the pension system in three days"
+    when: "September 2022"
+    where: "United Kingdom"
+    what: >-
+      A new British government announced large unfunded tax cuts. Within three days
+      UK government bond yields spiked so violently that pension funds faced
+      collapse, and the Bank of England had to step in with emergency bond buying.
+      The Prime Minister resigned within seven weeks.
+    why: >-
+      Pension funds had used a strategy called liability-driven investing, which
+      borrows against bonds to match long-term obligations. It works while yields
+      move gradually. When yields jumped, the funds faced collateral calls, and the
+      only way to meet them was to sell the very bonds that were falling — pushing
+      yields higher still. Hidden leverage almost nobody outside the industry had
+      noticed.
+    impact: >-
+      The pound hit an all-time low against the dollar. Mortgage rates jumped and
+      hundreds of mortgage products were pulled within days. The government's
+      entire fiscal plan was reversed.
+    policy: >-
+      The Bank of England bought long-dated bonds for a strictly limited window to
+      break the loop, then regulators forced pension funds to hold far larger
+      liquidity buffers against exactly this scenario.
+    consequence: >-
+      It established that a rich, stable country with its own currency can still be
+      disciplined by the bond market within days. Finance ministers everywhere
+      became noticeably more careful about announcing unfunded spending.
+    pattern: >-
+      The dangerous leverage is the leverage nobody discusses, usually because it
+      sits inside an institution everyone considers boring. Ask who is forced to
+      sell when prices fall — forced sellers turn a move into a spiral.
+    india_echo: >-
+      India's fiscal deficit and government borrowing programme are worth watching
+      for this reason. A bond market's patience is not infinite, and when it runs
+      out it runs out in days rather than quarters.
+    watch_for: >-
+      Bond yields rising while the currency falls. Normally higher yields support a
+      currency; when both move the wrong way together, the market is questioning
+      the government's credibility rather than its interest rates.
+
+  - id: demonetisation-2016
+    title: "Most of a country's cash cancelled overnight"
+    when: "November 2016"
+    where: "India"
+    what: >-
+      At 8pm on 8 November, ₹500 and ₹1,000 notes — about 86% of India's currency
+      by value — ceased to be legal tender at midnight. Queues formed outside banks
+      for weeks.
+    why: >-
+      The stated aims were to destroy unaccounted wealth, counterfeit notes and
+      terror financing. The underlying logic was that illicit cash hoards would
+      simply never be deposited, and would therefore be extinguished.
+    impact: >-
+      Nearly 99% of the cancelled notes came back into the banking system, so the
+      black-money aim largely failed. But the cash-dependent informal economy —
+      small traders, daily-wage labour, farm markets — was badly disrupted, and
+      growth slowed for several quarters.
+    policy: >-
+      What followed mattered far more than the disruption itself. Digital payments
+      were pushed hard: UPI, launched months earlier, was given enormous impetus,
+      and bank account penetration jumped.
+    consequence: >-
+      India now runs the largest real-time payments system in the world by volume.
+      Household savings shifted out of cash and gold and into bank deposits and
+      mutual funds — the beginning of the monthly SIP flows that now support the
+      Indian equity market. Almost nobody predicted that from the announcement.
+    pattern: >-
+      A policy's stated aim and its lasting effect are often different things, and
+      the lasting effect usually comes from the infrastructure built around it.
+      Judge policies by what they permanently changed, not by whether they hit
+      their stated target.
+    india_echo: >-
+      The monthly SIP flow that cushions every Nifty selloff traces partly back to
+      this. It is the clearest case on this list of a disruptive policy producing a
+      durable change in where Indian savings go.
+    watch_for: >-
+      Infrastructure being laid alongside a policy. The rails usually outlive the
+      reason they were built.
+
+  - id: china-2015
+    title: "A state-encouraged bubble and a surprise devaluation"
+    when: "June to August 2015"
+    where: "China"
+    what: >-
+      Chinese shares doubled in a year, partly on state media encouragement, then
+      fell about 40% in three months. In August the central bank unexpectedly
+      devalued the yuan, and world markets fell sharply over two days.
+    why: >-
+      Retail investors, many with newly opened accounts and little experience, had
+      bought heavily on margin loans. When prices turned, margin calls forced
+      selling, which forced more margin calls. The devaluation then signalled that
+      China's slowdown was worse than official figures admitted, which hit
+      everyone selling into Chinese demand.
+    impact: >-
+      Commodities collapsed — copper, iron ore and oil all fell hard, since China
+      consumed roughly half the world's industrial metals. Emerging market
+      currencies including the rupee weakened. Indian metal shares fell sharply
+      despite nothing changing in India.
+    policy: >-
+      Trading halts, a ban on large shareholders selling, state funds instructed to
+      buy, and tighter capital controls to stop money leaving. Later, a managed and
+      better-communicated currency mechanism.
+    consequence: >-
+      It exposed the limits of administrative intervention in a market: the
+      measures slowed the fall but damaged foreign investors' trust in Chinese
+      market access for years. That trust deficit is part of why global money has
+      been reallocating toward India since.
+    pattern: >-
+      Retail leverage is the accelerant. A market where ordinary investors are
+      buying with borrowed money does not correct gently, because the selling is
+      involuntary. Margin data is one of the few genuinely predictive warnings.
+    india_echo: >-
+      Worth watching Indian margin funding and futures-and-options participation,
+      both of which have grown enormously since 2020. For that risk, 2015 China is
+      the more relevant precedent than 2008 America.
+    watch_for: >-
+      Rapid growth in new trading accounts alongside rising borrowed positions.
+      That pair has preceded every retail-driven unwind.
+
+  - id: opec-1973
+    title: "The embargo that rewired the world economy"
+    when: "October 1973"
+    where: "Middle East, felt globally"
+    what: >-
+      Arab oil producers cut output and embargoed several countries during the Yom
+      Kippur war. Oil went from about $3 a barrel to $12 within months, and the
+      industrial world discovered how completely it depended on a resource it did
+      not control.
+    why: >-
+      Oil demand had grown for two decades on the assumption of permanently cheap
+      supply, so there was no spare capacity and no stockpile anywhere. The
+      producers realised they had collective pricing power and used it. A political
+      event became an economic one because no buffer existed.
+    impact: >-
+      Stagflation — high inflation and high unemployment together, which economists
+      had thought nearly impossible. US shares fell about 48%. Petrol rationing
+      across the West. For oil-importing India, the import bill and inflation both
+      surged.
+    policy: >-
+      Strategic petroleum reserves were created so a political shock could not
+      immediately become a price shock. Fuel-efficiency standards were imposed on
+      cars. Nuclear and, much later, renewable programmes were accelerated. The
+      International Energy Agency was founded to coordinate responses.
+    consequence: >-
+      Rich-world oil consumption per unit of output has more than halved since. The
+      reserves and efficiency rules genuinely worked, which is why later oil shocks
+      — including 2022 — hurt considerably less than 1973 did.
+    pattern: >-
+      A concentrated supply of something essential is a standing political risk,
+      whatever the price chart says. The response is always the same — build a
+      buffer, use less, find alternatives — and it takes about a decade to work.
+    india_echo: >-
+      India imports over 85% of its crude, so this is the permanent structural
+      weakness behind the rupee, inflation and the current account deficit. It is
+      also why India's solar push and its own strategic reserve are macro stories,
+      not environmental ones.
+    watch_for: >-
+      Any critical input where a handful of countries control most of the supply.
+      Rare earths, advanced chips and lithium are today's version of the question.
+
+  - id: svb-2023
+    title: "A bank run at the speed of a smartphone"
+    when: "March 2023"
+    where: "United States"
+    what: >-
+      Silicon Valley Bank lost $42 billion of deposits in a single day and was shut
+      by regulators within about 48 hours of the first sign of trouble — the fastest
+      bank run in history.
+    why: >-
+      The bank had taken enormous deposits during the technology boom and put them
+      into long-dated government bonds, which carry no credit risk at all. When
+      rates rose sharply in 2022, those bonds lost market value. The holdings were
+      fine if held to maturity and not if it had to sell — and over 90% of its
+      deposits were above the insured limit, so depositors had every reason to run
+      first and ask later. Word spread through group chats.
+    impact: >-
+      Two more US banks failed within days, and Credit Suisse — unrelated but
+      fragile — was forced into a shotgun merger. Bank shares fell worldwide. Gold
+      rose, as it does whenever people start questioning banks.
+    policy: >-
+      US regulators guaranteed all deposits at the failed banks, insured or not, and
+      opened a facility letting banks borrow against bonds at face value rather than
+      market value. Supervision of mid-sized banks was tightened.
+    consequence: >-
+      The rule that only insured deposits are protected was effectively suspended in
+      practice, which stores up its own future problem. It also made interest-rate
+      risk, rather than credit risk, the first thing bank supervisors now ask about.
+    pattern: >-
+      A government bond has no default risk and plenty of price risk, and that
+      distinction stays invisible until somebody is forced to sell. Meanwhile
+      concentrated, uninsured depositors are the modern queue outside the door — and
+      they move in minutes now, not days.
+    india_echo: >-
+      Indian deposits are insured only to ₹5 lakh per bank, which is exactly why
+      that limit is flagged under cash on the Asset Classes page. Indian banks hold
+      large government bond portfolios too, though with far stickier retail deposits
+      behind them.
+    watch_for: >-
+      Banks with depositors concentrated in one industry, and large unrealised losses
+      on bonds held to maturity. Both are disclosed if you look for them.

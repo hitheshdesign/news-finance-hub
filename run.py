@@ -74,39 +74,83 @@ def _collect_deeper_reads(raw: list[dict], events: list[dict], limit: int = 6) -
 
 
 def _select_balanced(events: list[dict], max_events: int, max_per_topic: int) -> list[dict]:
-    """Pick up to `max_events` with variety across themes, so one loud topic
-    (e.g. the Fed) can't crowd out everything else.
+    """Pick up to `max_events` that actually span different subjects.
 
-    Topic is pre-tagged cheaply from the knowledge base (no Gemini cost) via
-    analyze.knowledge_match. We then round-robin: the strongest story from each
-    topic first, then the second, and so on — never more than `max_per_topic`
-    from any one theme. Events arrive already sorted by relevance, so each
-    topic contributes its highest-signal items first.
+    There are two independent axes of sameness, and the brief needs guarding on
+    both:
+
+      * SUBJECT — the feed's topic (policy, climate, geopolitics, energy...).
+        This is the one that matters most. Without it the brief drifts into
+        being the same rates-and-crude story every day, because that is what
+        the high-volume market wires publish most of.
+      * MECHANISM — the knowledge-base linkage a story matches (e.g. "Fed
+        raises rates -> FII outflows"). Two different stories can share one
+        mechanism and read as a repeat even if their subjects differ.
+
+    Events arrive sorted by relevance, so each bucket contributes its strongest
+    story first. We round-robin across subjects, then fill any remaining slots
+    by score — relaxing the subject cap last, since a thin news day should
+    still produce a full brief.
     """
-    groups: dict[str, list[dict]] = {}
-    order: list[str] = []                # topic keys, in importance order
+    per_subject = int(config.FILTERS.get("max_per_source_topic", 2))
+    min_subjects = int(config.FILTERS.get("min_topics_per_brief", 4))
+
+    # Tag every event with its mechanism, cheaply and with no Gemini cost.
     for i, ev in enumerate(events):
         links = match_linkages(ev, top_n=1)
         if links:
             ev["category"] = links[0].get("category", "general")
-            key = links[0].get("id") or f"_uniq_{i}"
+            ev["_mech"] = links[0].get("id") or f"_uniq_{i}"
         else:
-            ev["category"] = "general"
-            key = f"_uniq_{i}"          # unmatched stories are each their own topic
-        if key not in groups:
-            groups[key] = []
+            ev["category"] = ev.get("topic", "general")
+            ev["_mech"] = f"_uniq_{i}"
+
+    subjects: dict[str, list[dict]] = {}
+    order: list[str] = []
+    for ev in events:
+        key = ev.get("topic") or "general"
+        if key not in subjects:
+            subjects[key] = []
             order.append(key)
-        groups[key].append(ev)
+        subjects[key].append(ev)
 
     selected: list[dict] = []
-    for rnd in range(max_per_topic):
+    used_mech: dict[str, int] = {}
+
+    def take(ev) -> bool:
+        m = ev.get("_mech", "")
+        if used_mech.get(m, 0) >= max_per_topic:
+            return False
+        selected.append(ev)
+        used_mech[m] = used_mech.get(m, 0) + 1
+        return True
+
+    # Pass 1 — one story from each subject, then a second, and so on.
+    for rnd in range(per_subject):
         for key in order:
             if len(selected) >= max_events:
                 break
-            if len(groups[key]) > rnd:
-                selected.append(groups[key][rnd])
+            for ev in subjects[key]:
+                if ev in selected:
+                    continue
+                if sum(1 for s in selected if s.get("topic") == key) > rnd:
+                    break
+                if take(ev):
+                    break
         if len(selected) >= max_events:
             break
+
+    # Pass 2 — fill any slots left by score, subject cap relaxed.
+    if len(selected) < max_events:
+        for ev in events:
+            if len(selected) >= max_events:
+                break
+            if ev not in selected:
+                take(ev)
+
+    got = len({ev.get("topic") for ev in selected})
+    print(f"  [screen] selected {len(selected)} cards across {got} subject(s)"
+          f"{' — thin news day' if got < min_subjects else ''}")
     return selected[:max_events]
 
 
@@ -175,6 +219,21 @@ def _upcoming_calendar(lookahead_days: int) -> list[dict]:
 
     out.sort(key=lambda e: e["days_away"])
     return out
+
+
+def _todays_history() -> dict | None:
+    """One episode from knowledge/market_history.yaml, rotating by date.
+
+    Keyed off the date rather than randomly, so the same day always shows the
+    same episode (a re-run does not shuffle it) and the library cycles through
+    in order instead of repeating by chance. Add episodes and the cycle
+    lengthens on its own.
+    """
+    eps = config.MARKET_HISTORY or []
+    if not eps:
+        return None
+    day = datetime.now(timezone.utc).date()
+    return dict(eps[(day.toordinal()) % len(eps)])
 
 
 def build_brief(events: list[dict], macro: list[dict], calendar: list[dict]) -> dict:
@@ -287,6 +346,9 @@ def main() -> None:
     brief["calendar_alert_days"] = alert_days
     brief["calendar_alert"] = sum(1 for c in upcoming if c["days_away"] <= alert_days)
     brief["deeper_reads"] = _collect_deeper_reads(raw, events)
+    brief["history"] = _todays_history()
+    if brief["history"]:
+        print(f"  [history] today's pattern: {brief['history'].get('title')}")
     store_brief(brief)
     track.record_predictions(brief)
 

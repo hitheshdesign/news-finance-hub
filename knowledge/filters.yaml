@@ -5,10 +5,10 @@
 # =============================================================================
 
 # An item must score at least this to survive. Higher = stricter.
-min_relevance_score: 2.0
+min_relevance_score: 3.0
 
 # Maximum number of events in a daily brief (after ranking).
-max_events_per_brief: 8
+max_events_per_brief: 9
 
 # How many go in the "Top — what matters most" highlight band.
 top_highlights: 3
@@ -33,6 +33,130 @@ calendar_lookahead_days: 120
 # The calendar is collapsed by default; if any event is within this many days,
 # an alert badge appears on its header so you know to open it.
 calendar_alert_days: 4
+
+
+# --- Variety across TOPICS, not just patterns ---------------------------------
+# The old quota worked on matched knowledge-base patterns, but ~40% of stories
+# matched none and all landed in one "general" bucket — which is how the brief
+# drifted into being the same rates/crude/gold story every day. Each source
+# carries a topic in sources.yaml; this caps how many cards one topic can take,
+# so policy, climate, geopolitics and technology each get a seat.
+max_per_source_topic: 2
+# At least this many DIFFERENT topics must appear, if the day's news allows it.
+min_topics_per_brief: 4
+
+# --- Legitimacy: how much a source's standing is worth ------------------------
+# tier 1 = the institution itself (a central bank, a regulator, a treaty body)
+# tier 2 = analysis and long-form journalism
+# tier 3 = mainstream wires — no bonus; this is where the daily churn lives
+source_tier_bonus:
+  1: 2.0
+  2: 1.5
+  3: 0.0
+
+# A story must show at least this much genuine macro/thematic content on its own
+# merits. Stops a high-tier source carrying something with no market relevance
+# into the brief on its reputation alone.
+min_topical_score: 2.0
+
+# --- Noise: price-tick churn, tips and speculation ----------------------------
+# These are regular expressions matched against "headline + summary", lower-cased.
+# A match DROPS the item outright. This is the single biggest lever on quality:
+# it removes the "Sensex up 200 pts", "top 5 stocks to buy" layer that made every
+# day read the same. Add patterns here to kill anything you never want to see.
+noise_patterns:
+  # daily index churn — the score, not the story
+  - "(sensex|nifty|bank nifty|dow|nasdaq)[^.]{0,50}\\b(pts|points|ends|closes?|opens?|settles?|snaps|extends)\\b"
+  - "\\b(market|markets|sensex|nifty)\\s+(wrap|roundup|recap|at close|live updates?)\\b"
+  - "\\b(opening|closing)\\s+bell\\b"
+  - "\\b(top|best|worst)\\s+\\d*\\s*(gainers|losers|picks|bets|stocks|ideas)\\b"
+  - "\\bstocks?\\s+to\\s+(watch|buy|sell|track|avoid)\\b"
+  # tipping and punting, not analysis
+  - "\\b(buy|sell|hold)\\s+(call|rating|recommendation)s?\\b"
+  - "\\btarget\\s+price\\b"
+  - "\\bshould\\s+you\\s+(buy|sell|invest|subscribe)\\b"
+  - "\\b(multibagger|penny stock|intraday|technical (view|picks)|chart(s)? to watch)\\b"
+  - "\\b(f&o|futures and options)\\s+(ban|strategy|picks)\\b"
+  - "\\bgmp\\b|\\bgrey market premium\\b"
+  - "\\b(share price|stock price)\\s+(today|target|live)\\b"
+  # rupee tick-by-tick
+  - "\\brupee\\b[^.]{0,40}\\b\\d+\\s*paise\\b"
+  # lifestyle / irrelevant
+  - "\\b(horoscope|astrology|box office|recipe|cricket|bollywood|celebrity)\\b"
+  # Regulators' administrative housekeeping. These come from tier-1 feeds and
+  # were scoring near the top on the source's standing alone — a bank merger
+  # approval or a penalty against one ex-employee is not macro news.
+  - "\\b(enforcement action|civil money penalty|cease and desist)\\b"
+  - "\\bapproval of (the )?application by\\b"
+  - "\\btermination of enforcement\\b"
+  - "\\bannounces? (the )?(appointment|retirement|resignation|departure)\\b"
+  - "\\b(names|appoints)\\b[^.]{0,40}\\b(as|to)\\b[^.]{0,30}\\b(chief|head|director|president|officer)\\b"
+  - "\\b(speech|remarks|testimony) by\\b[^.]{0,40}\\bat the\\b"
+
+# Hedging language that marks a story as speculation rather than fact. Penalised
+# rather than dropped, because careful reporting sometimes uses these honestly.
+speculation_markers:   # -2.0 each
+  - sources say
+  - sources said
+  - people familiar with
+  - reportedly
+  - rumour
+  - rumor
+  - speculat
+  - may consider
+  - could soon
+  - is said to
+  - is likely to announce
+  - buzz around
+  - in talks to
+
+# Language that marks a story as being about a DECISION or a STRUCTURAL SHIFT —
+# the kind of thing that changes the rules and shows up in prices for years.
+# This is what the brief is meant to be made of.
+signal_keywords:   # +1.0 each, capped at +3.0
+  - policy
+  - regulation
+  - regulator
+  - legislation
+  - bill passed
+  - ordinance
+  - notification
+  - guidelines
+  - ruling
+  - verdict
+  - court
+  - tribunal
+  - treaty
+  - agreement
+  - pact
+  - accord
+  - approved
+  - approval
+  - ban
+  - restriction
+  - quota
+  - licence
+  - license
+  - reform
+  - budget
+  - fiscal
+  - stimulus
+  - bailout
+  - subsidy
+  - incentive
+  - scheme
+  - investment plan
+  - capacity
+  - shortage
+  - supply chain
+  - bottleneck
+  - stockpile
+  - reserves
+  - election
+  - summit
+  - sanction
+  - tariff
+  - deal signed
 
 # Words that, if present, ADD to relevance (these touch India-transmission
 # channels). Weighted: strong signals score higher.
@@ -67,6 +191,41 @@ relevance_keywords:
     - copper
     - aluminium
     - aluminum
+    # economy-wide readings
+    - gdp
+    - growth forecast
+    - recession
+    - unemployment
+    - fiscal deficit
+    - current account
+    - trade deficit
+    # policy & geopolitics that reprice whole sectors
+    - export ban
+    - import duty
+    - free trade
+    - trade deal
+    - supply chain
+    - rare earth
+    - critical mineral
+    - semiconductor
+    - chip export
+    - sanction
+    - war
+    - conflict
+    - strait
+    - shipping route
+    # nature, which is where Indian food inflation actually starts
+    - monsoon
+    - el nino
+    - la nina
+    - drought
+    - heatwave
+    - flood
+    - cyclone
+    - crop
+    - harvest
+    - kharif
+    - rabi
   medium:   # +1.0 each (sectors / linked themes)
     - metals
     - steel
@@ -92,7 +251,35 @@ relevance_keywords:
     - export ban
     - urea
     - commodity
-    - crop
+    # structural themes that move Indian sectors over years
+    - manufacturing
+    - electronics
+    - renewable
+    - solar
+    - battery
+    - electric vehicle
+    - data centre
+    - data center
+    - artificial intelligence
+    - pharmaceutical
+    - textile
+    - defence
+    - defense
+    - infrastructure
+    - logistics
+    - port
+    - railway
+    - power demand
+    - electricity
+    - climate
+    - emissions
+    - carbon
+    - water
+    - population
+    - migration
+    - labour
+    - wages
+    - urbanisation
   india_bonus: # +1.0 extra if any appear (direct India relevance)
     - india
     - indian

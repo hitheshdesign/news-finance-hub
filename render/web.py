@@ -227,7 +227,8 @@ _ASSET_FIELDS = (
     "code", "name", "short", "proxy", "family_label", "valuation", "vc",
     "band_label", "band_short", "metric_label", "metric_def", "metric_now",
     "metric_avg", "metric_avg_label", "metric_show", "metric_avg_show",
-    "metric_pct", "metric_avg_short", "pin", "dear", "reading", "live_ok",
+    "metric_pct", "metric_avg_short", "pin", "heat", "gap_show", "dear",
+    "reading", "live_ok",
     "live_source", "live_as_of", "extras", "what_it_is", "own", "composition",
     "returns", "return_note", "total_return", "total_show", "history", "worst_fall",
     "drivers_up", "drivers_down", "wins_when", "role", "how_to_invest",
@@ -262,6 +263,28 @@ def _decorate_asset(a: dict, family_labels: dict[str, str]) -> dict:
     if rec.get("pin") is None:
         pct = a.get("metric_pct")
         rec["pin"] = max(3, min(97, int(pct))) if pct is not None else 50
+    # Five-step colour, from the same distance-from-normal that places the
+    # marker. Kept here rather than in CSS so the thresholds are visible and
+    # arguable in one place.
+    pin = rec["pin"]
+    if band == "no_anchor" or a.get("metric_now") is None:
+        rec["heat"] = "na"
+        rec["gap_show"] = "cannot be valued"
+    else:
+        rec["heat"] = ("c2" if pin < 20 else "c1" if pin < 38 else
+                       "n" if pin <= 62 else "d1" if pin <= 80 else "d2")
+        now_v, avg_v = a.get("metric_now"), a.get("metric_avg")
+        if avg_v:
+            direction = a.get("metric_dir", "high_dear")
+            dear = (avg_v / now_v) if direction == "high_cheap" else (now_v / avg_v)
+            pct = abs(dear - 1) * 100
+            if pct < 3:
+                rec["gap_show"] = "about normal"
+            else:
+                rec["gap_show"] = f"{pct:.0f}% {'dearer' if dear > 1 else 'cheaper'}"
+        else:
+            rec["gap_show"] = ""
+
     total = a.get("total_return")
     rec["total_show"] = ("—" if total is None
                          else f"{'+' if total > 0 else ''}{total:.1f}%")

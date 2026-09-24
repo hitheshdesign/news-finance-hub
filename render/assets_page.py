@@ -66,13 +66,11 @@ ASSETS_PAGE = """<!doctype html>
     </div>
   </details>
 
-  <div class="gf-legend">
-    <span class="lg v-cheap"><span class="sw"></span>Cheap vs its past · {{ a.stats.cheap }}</span>
-    <span class="lg v-fair"><span class="sw"></span>Fair · {{ a.stats.fair }}</span>
-    <span class="lg v-exp"><span class="sw"></span>Dear vs its past · {{ a.stats.expensive }}</span>
-    <span class="lg v-none"><span class="sw"></span>No way to value it · {{ a.stats.no_anchor }}</span>
-    <span class="hintx">The dot on each bar shows where today sits in that asset's own
-      history — left of the tick is cheaper than usual, right is dearer.</span>
+  <div class="heatkey">
+    <span class="lbl">Cheaper than its own normal</span>
+    <span class="bar"><i style="background:var(--h-c2)"></i><i style="background:var(--h-c1)"></i><i style="background:var(--h-n)"></i><i style="background:var(--h-d1)"></i><i style="background:var(--h-d2)"></i></span>
+    <span class="lbl">Dearer</span>
+    <span>· {{ a.stats.cheap }} cheap · {{ a.stats.fair }} fair · {{ a.stats.expensive }} dear{% if a.stats.no_anchor %} · {{ a.stats.no_anchor }} that cannot be valued (hatched){% endif %}</span>
   </div>
 
   <div class="board">
@@ -82,17 +80,13 @@ ASSETS_PAGE = """<!doctype html>
         <h3>{{ f.label }}</h3><span class="count">{{ f.assets|length }} options</span>
       </div>
       <p class="famnote">{{ f.note }}</p>
-      <div class="tiles">
+      <div class="heatgrid">
         {% for x in f.assets %}
-        <button class="tile {{ x.vc }}" data-code="{{ x.code }}" type="button">
-          <span class="tname">{{ x.short or x.name }}</span>
-          <span class="tnum"><b>{{ x.metric_show }}</b><em>{{ x.metric_short }}</em></span>
-          <span class="tavg">{% if x.metric_avg is not none %}normally {{ x.metric_avg_show }} <em>({{ x.metric_avg_short }})</em>{% else %}nothing to compare it with{% endif %}</span>
-          {% if x.metric_pct is not none %}
-          <span class="hist"><i class="tick"></i><i class="pin" style="left:{{ x.pin }}%"></i></span>
-          {% else %}
-          <span class="hist none"></span>
-          {% endif %}
+        <button class="hcell {{ x.heat }}" data-code="{{ x.code }}" type="button"
+                title="{{ x.name }} — {{ x.metric_label }} {{ x.metric_show }}{% if x.metric_avg is not none %}, normally {{ x.metric_avg_show }} ({{ x.metric_avg_label }}){% endif %}">
+          <span class="hname">{{ x.short or x.name }}</span>
+          <span class="hval">{{ x.metric_show }}</span>
+          <span class="hgap">{{ x.gap_show }}</span>
         </button>
         {% endfor %}
       </div>
@@ -101,6 +95,8 @@ ASSETS_PAGE = """<!doctype html>
   </div>
 
   <div class="gf-grid">
+    <details class="tablefold">
+      <summary>Show every asset as a sortable table</summary>
     <div class="ctable acols" id="atable">
       <div class="thead">
         <span class="c-name" data-sort="name">Asset</span>
@@ -110,6 +106,7 @@ ASSETS_PAGE = """<!doctype html>
       </div>
       <div id="arows"></div>
     </div>
+    </details>
     <div class="gf-panelwrap">
       <div class="panel" id="apanel">
         <p class="hint">Pick anything above to see what you would actually own, what it costs
@@ -375,7 +372,7 @@ var AC = {{ a_json }};
       +block('What to watch',list(c.watch))
       +news;
 
-    var tiles=document.querySelectorAll('.tile');
+    var tiles=document.querySelectorAll('.hcell');
     for(var i=0;i<tiles.length;i++){tiles[i].classList.toggle('sel',tiles[i].getAttribute('data-code')===code);}
     var rows=document.querySelectorAll('#arows .row');
     for(var j=0;j<rows.length;j++){rows[j].classList.toggle('sel',rows[j].getAttribute('data-code')===code);}

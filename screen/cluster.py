@@ -8,6 +8,7 @@ the shared screen/textsim.py helpers. No ML, no cost.
 
 from __future__ import annotations
 import hashlib
+from collections import Counter
 
 import config
 from screen import textsim
@@ -55,6 +56,16 @@ def cluster(items: list[dict]) -> list[dict]:
     # cross-day de-duplication (screen/history.py reads it back from the brief).
     for ev in events:
         ev["sources"] = sorted({i["source"] for i in ev["items"]})
+        # Carry the best standing and the dominant subject of the underlying
+        # items up onto the event. The selector uses the topic to keep the
+        # brief spread across themes; the tier tells the reader how primary
+        # the reporting behind a card is.
+        tiers = [int(i.get("tier", 3)) for i in ev["items"]]
+        ev["tier"] = min(tiers) if tiers else 3
+        topics = [i.get("topic", "general") for i in ev["items"]
+                  if i.get("topic") and i.get("topic") != "general"]
+        ev["topic"] = (Counter(topics).most_common(1)[0][0] if topics
+                       else "general")
         ev["urls"] = [i["url"] for i in ev["items"] if i.get("url")][:5]
         ev["item_count"] = len(ev["items"])
         # Boost importance a bit when many outlets cover the same story.

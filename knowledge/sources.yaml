@@ -1,91 +1,307 @@
 # =============================================================================
-# SOURCES — where the raw news and data come from (all free)
-# Add/remove RSS feeds freely. Keep them reputable to reduce noise.
+# SOURCES — where the raw news comes from (all free RSS, no keys).
+#
+# Every feed here was checked live before being added. Two fields do real work
+# in the pipeline, so fill them in when you add a feed:
+#
+#   tier   1 = PRIMARY. The institution itself speaking — a central bank, a
+#              regulator, a treaty body. Nothing is second-hand, so this is the
+#              highest-legitimacy material there is. Scored up hard.
+#          2 = ANALYSIS. Outlets whose business is explaining rather than
+#              breaking — think tanks, research desks, long-form journalism.
+#              Slower, deeper, far less likely to be noise.
+#          3 = WIRE. Mainstream business press. Fast and useful for knowing
+#              WHAT happened, but this is also where the daily price-tick
+#              churn lives ("Sensex up 200 pts"), so it earns no bonus and
+#              gets filtered hard by the noise rules in filters.yaml.
+#
+#   topic  Drives the variety quota in run.py, so the brief spans several
+#          themes instead of five versions of the same rate story. Use one of:
+#          policy · geopolitics · climate · energy · trade · technology ·
+#          economy · markets · india_depth
+#
+# max_items (optional) caps how many headlines we take from one feed per run.
+# High-volume wires get a smaller cap so they cannot crowd out the slow,
+# thoughtful sources purely by publishing more.
 # =============================================================================
 
-# --- Curated RSS feeds (free, structured, reliable) ---
 rss_feeds:
-  # Global business / markets
-  - name: "Reuters Business"
-    url: "https://feeds.reuters.com/reuters/businessNews"
+
+  # ---------------------------------------------------------------- TIER 1
+  # Primary sources. The institution's own words, before anyone interprets it.
+  - name: "US Federal Reserve"
+    url: "https://www.federalreserve.gov/feeds/press_all.xml"
     region: global
-  - name: "Reuters Markets"
-    url: "https://feeds.reuters.com/reuters/marketsNews"
+    tier: 1
+    topic: policy
+  - name: "European Central Bank"
+    url: "https://www.ecb.europa.eu/rss/press.html"
     region: global
-  - name: "CNBC Economy"
-    url: "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=20910258"
+    tier: 1
+    topic: policy
+  - name: "SEBI"
+    url: "https://www.sebi.gov.in/sebirss.xml"
+    region: india
+    tier: 1
+    topic: policy
+  - name: "World Trade Organization"
+    url: "https://www.wto.org/library/rss/latest_news_e.xml"
     region: global
-  - name: "CNBC Finance"
-    url: "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000664"
+    tier: 1
+    topic: trade
+
+  # ---------------------------------------------------------------- TIER 2
+  # Analysis and long-form. This is the half of the brief that should make you
+  # think rather than just inform you what moved.
+  - name: "The Diplomat"
+    url: "https://thediplomat.com/feed/"
     region: global
-  - name: "Investing.com Economy"
-    url: "https://www.investing.com/rss/news_14.rss"
+    tier: 2
+    topic: geopolitics
+    max_items: 12
+  - name: "Lowy Interpreter"
+    url: "https://www.lowyinstitute.org/the-interpreter/rss.xml"
     region: global
-  - name: "Investing.com Commodities"
-    url: "https://www.investing.com/rss/news_11.rss"
+    tier: 2
+    topic: geopolitics
+    max_items: 10
+  - name: "Council on Foreign Relations"
+    url: "https://feeds.cfr.org/publication/rss.xml"
     region: global
-  # India business / markets
-  - name: "Economic Times Markets"
-    url: "https://economictimes.indiatimes.com/markets/rssfeeds/1977021501.cms"
+    tier: 2
+    topic: geopolitics
+    max_items: 10
+  - name: "War on the Rocks"
+    url: "https://warontherocks.com/feed/"
+    region: global
+    tier: 2
+    topic: geopolitics
+    max_items: 8
+  - name: "Carbon Brief"
+    url: "https://www.carbonbrief.org/feed/"
+    region: global
+    tier: 2
+    topic: climate
+    max_items: 10
+  - name: "Mongabay India"
+    url: "https://india.mongabay.com/feed/"
     region: india
-  - name: "Economic Times Economy"
-    url: "https://economictimes.indiatimes.com/news/economy/rssfeeds/1373380680.cms"
+    tier: 2
+    topic: climate
+    max_items: 10
+  - name: "Yale Environment 360"
+    url: "https://e360.yale.edu/feed.xml"
+    region: global
+    tier: 2
+    topic: climate
+    max_items: 8
+  - name: "Rest of World"
+    url: "https://restofworld.org/feed/latest/"
+    region: global
+    tier: 2
+    topic: technology
+    max_items: 10
+  - name: "MIT Technology Review"
+    url: "https://www.technologyreview.com/feed/"
+    region: global
+    tier: 2
+    topic: technology
+    max_items: 8
+  - name: "OilPrice"
+    url: "https://oilprice.com/rss/main"
+    region: global
+    tier: 2
+    topic: energy
+    max_items: 10
+  - name: "Frontline"
+    url: "https://frontline.thehindu.com/feeder/default.rss"
     region: india
-  - name: "Business Standard Markets"
-    url: "https://www.business-standard.com/rss/markets-106.rss"
+    tier: 2
+    topic: india_depth
+    max_items: 10
+  - name: "Mint Opinion"
+    url: "https://www.livemint.com/rss/opinion"
     region: india
-  - name: "Livemint Markets"
-    url: "https://www.livemint.com/rss/markets"
+    tier: 2
+    topic: india_depth
+    max_items: 10
+  - name: "Business Standard Opinion"
+    url: "https://www.business-standard.com/rss/opinion-105.rss"
     region: india
-  - name: "The Hindu BusinessLine"
-    url: "https://www.thehindubusinessline.com/feeder/default.rss"
-    region: india
-  - name: "Moneycontrol Business"
-    url: "https://www.moneycontrol.com/rss/business.xml"
-    region: india
-  # Explainer-style / aggregated feeds (plain-English, beginner-friendly)
+    tier: 2
+    topic: india_depth
+    max_items: 10
+  # Explainer-style, plain-English — the register this brief aims for.
   - name: "Finshots"
     url: "https://finshots.in/rss/"
     region: india
-  - name: "Zerodha Pulse"
-    url: "https://pulse.zerodha.com/feed.php"
-    region: india
-  # The Ken publishes one deep story/weekday, but full articles are paywalled —
-  # we surface its headlines; the "read source" link may hit a subscriber wall.
+    tier: 2
+    topic: india_depth
+  # The Ken publishes one deep story a weekday; full articles are paywalled,
+  # so we surface the headline and the "read source" link may hit that wall.
   - name: "The Ken"
     url: "https://the-ken.com/feed/"
     region: india
+    tier: 2
+    topic: india_depth
+
+  # ---------------------------------------------------------------- TIER 3
+  # Mainstream business press. Kept for coverage of what actually happened,
+  # capped and de-noised so the daily churn cannot dominate the brief.
+  - name: "Economic Times Policy"
+    url: "https://economictimes.indiatimes.com/news/economy/policy/rssfeeds/1286551815.cms"
+    region: india
+    tier: 3
+    topic: policy
+    max_items: 12
+  - name: "Economic Times Economy"
+    url: "https://economictimes.indiatimes.com/news/economy/rssfeeds/1373380680.cms"
+    region: india
+    tier: 3
+    topic: economy
+    max_items: 10
+  - name: "Mint Economy"
+    url: "https://www.livemint.com/rss/economy"
+    region: india
+    tier: 3
+    topic: economy
+    max_items: 10
+  - name: "Mint Industry"
+    url: "https://www.livemint.com/rss/industry"
+    region: india
+    tier: 3
+    topic: economy
+    max_items: 10
+  - name: "Business Standard Economy"
+    url: "https://www.business-standard.com/rss/economy-102.rss"
+    region: india
+    tier: 3
+    topic: economy
+    max_items: 10
+  - name: "Business Standard Industry"
+    url: "https://www.business-standard.com/rss/industry-217.rss"
+    region: india
+    tier: 3
+    topic: economy
+    max_items: 10
+  - name: "BusinessLine Agriculture"
+    url: "https://www.thehindubusinessline.com/economy/agri-business/feeder/default.rss"
+    region: india
+    tier: 3
+    topic: climate
+    max_items: 12
+  - name: "BusinessLine Economy"
+    url: "https://www.thehindubusinessline.com/economy/feeder/default.rss"
+    region: india
+    tier: 3
+    topic: economy
+    max_items: 10
+  - name: "Economic Times Markets"
+    url: "https://economictimes.indiatimes.com/markets/rssfeeds/1977021501.cms"
+    region: india
+    tier: 3
+    topic: markets
+    max_items: 8
+  - name: "Business Standard Markets"
+    url: "https://www.business-standard.com/rss/markets-106.rss"
+    region: india
+    tier: 3
+    topic: markets
+    max_items: 8
+  - name: "CNBC Economy"
+    url: "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=20910258"
+    region: global
+    tier: 3
+    topic: economy
+    max_items: 10
+  - name: "Investing.com Commodities"
+    url: "https://www.investing.com/rss/news_11.rss"
+    region: global
+    tier: 3
+    topic: energy
+    max_items: 10
+  # Zerodha Pulse aggregates the Indian market wires. High volume, mostly
+  # price-tick, so it is capped tightly and leaned on only for breadth.
+  - name: "Zerodha Pulse"
+    url: "https://pulse.zerodha.com/feed.php"
+    region: india
+    tier: 3
+    topic: markets
+    max_items: 8
+
+# REMOVED, and why — so nobody re-adds them by accident:
+#   Reuters Business / Reuters Markets — feeds.reuters.com no longer resolves;
+#     Reuters retired its public RSS. Was silently contributing nothing.
+#   Moneycontrol Business — feed still responds but its newest item is from
+#     April 2024. A stale feed is worse than no feed.
+#   PIB (Press Information Bureau) — the English endpoints return empty; only
+#     the Hindi feed has content. Worth revisiting if they fix it, since it is
+#     the Indian government speaking directly (tier 1).
+#   IMF / World Bank / BIS / OECD / PIIE / VoxEU — all 403 or 404 to a script.
+#     Their analysis would be ideal tier-1/2 material; no free RSS available.
 
 # --- GDELT (global events firehose, free, no API key) ---
-# We query recent English articles matching macro/market themes.
+# Broadened well beyond rates-and-gold: the point is to catch the CAUSE of a
+# market move — a policy, a shortage, a drought, a shipping route closing —
+# rather than only its price.
 gdelt:
   enabled: true
-  # Themes/keywords OR-joined into the GDELT query. Kept focused to cut noise.
   query_terms:
-    - "federal reserve"
+    # monetary & macro
+    - "central bank"
     - "interest rate"
     - "inflation"
-    - "crude oil"
-    - "gold price"
-    - "rupee"
-    - "sanctions"
+    # policy & regulation — decisions that change the rules of the game
+    - "trade policy"
+    - "export ban"
+    - "import duty"
     - "tariff"
-    - "central bank"
-    # commodities & agriculture — so the CAUSE of a commodity move (weather,
-    # export bans, supply shocks) is actually fetched, not just its price
+    - "sanctions"
+    - "subsidy"
+    - "industrial policy"
+    - "free trade agreement"
+    - "antitrust"
+    - "capital controls"
+    # geopolitics with a supply-chain edge
+    - "supply chain"
+    - "rare earths"
+    - "semiconductor export"
+    - "shipping route"
+    - "red sea shipping"
+    - "strait of hormuz"
+    - "port congestion"
+    # nature & agriculture — the real driver of Indian food inflation
+    - "monsoon"
+    - "el nino"
+    - "la nina"
+    - "drought"
+    - "heatwave"
+    - "crop failure"
+    - "food prices"
+    - "wheat prices"
     - "sugar prices"
     - "edible oil"
     - "palm oil"
-    - "wheat prices"
-    - "food prices"
-    - "export ban"
     - "fertilizer"
-    - "copper prices"
-    - "aluminium"
+    # energy & materials
+    - "crude oil"
+    - "opec"
     - "natural gas"
-  timespan: "1d"        # look back 1 day
-  max_records: 80
+    - "copper prices"
+    - "lithium"
+    - "critical minerals"
+    - "power shortage"
+    # India-specific structural
+    - "india manufacturing"
+    - "india exports"
+    - "reserve bank of india"
+  timespan: "1d"
+  max_records: 120
   language: "english"
+  # GDELT answers a long OR-query with a 429, so the terms above are requested
+  # in batches of this size with a short pause between them.
+  batch_size: 10
+  batch_pause_seconds: 2.0
 
 # --- FRED (US macro data series, free API key needed) ---
 # Optional context signals. Skipped automatically if no FRED_API_KEY is set.

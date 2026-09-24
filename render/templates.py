@@ -892,6 +892,21 @@ details.tablefold .ctable{margin-top:10px;}
   font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px;}
 
 
+
+/* ---------- "What the article actually says" ----------
+   The reported substance, kept visually distinct from the India analysis below
+   it. Square markers here, round ones on the causal chain: one is what is known,
+   the other is what follows from it. */
+.story{list-style:none;margin:0 0 4px;padding:0;}
+.story li{position:relative;padding:5px 0 5px 20px;color:var(--ink);
+  font-size:15.5px;line-height:1.62;}
+.story li::before{content:"";position:absolute;left:1px;top:13px;width:6px;
+  height:6px;border-radius:2px;background:var(--ink2);}
+.readsrc{display:inline-block;margin:2px 0 4px;font-size:13px;color:var(--link);
+  text-decoration:none;}
+.readsrc:hover{text-decoration:underline;}
+@media (max-width:520px){.story li{font-size:15px;}}
+
 /* ---------- Pattern from history ----------
    One past episode a day, at the foot of the brief. Deliberately styled apart
    from the news cards: this is not something that happened today, it is the
@@ -1026,6 +1041,16 @@ CARD = """
 
   {% if ev.analysis.what_happened and ev.analysis.what_happened != ev.headline %}
     <p class="what">{{ ev.analysis.what_happened|gloss }}</p>
+  {% endif %}
+
+  {% if ev.analysis.the_story %}
+    <div class="blocklabel">What the article actually says</div>
+    <ul class="story">
+      {% for point in ev.analysis.the_story %}<li>{{ point|gloss }}</li>{% endfor %}
+    </ul>
+    {% if ev.article_url %}
+      <a class="readsrc" href="{{ ev.article_url }}" target="_blank" rel="noopener">Read the full article →</a>
+    {% endif %}
   {% endif %}
 
   {% if ev.analysis.analogy %}

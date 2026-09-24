@@ -38,6 +38,7 @@ def _rule_based(event: dict) -> dict:
         return {
             "tldr": "Flagged as market-relevant, but no clear India link yet.",
             "analogy": "",
+        "the_story": [],
             "what_happened": event.get("headline", ""),
             "why_it_matters_india": [
                 "This story was flagged as market-relevant, but it doesn't match a "
@@ -59,6 +60,7 @@ def _rule_based(event: dict) -> dict:
     return {
         "tldr": _rule_tldr(link, impacts),
         "analogy": "",
+        "the_story": [],
         "what_happened": event.get("headline", ""),
         "why_it_matters_india": list(link.get("chain", [])),
         "impacts": impacts,
@@ -78,11 +80,32 @@ def _rule_based(event: dict) -> dict:
 # GEMINI backend (free tier)
 # --------------------------------------------------------------------------
 _SYSTEM = """You explain world news to a COMPLETE BEGINNER Indian investor who knows
-almost no finance jargon. Your job is NOT to summarise the article — a beginner can read
-the headline themselves. Your job is to explain what it MEANS: the cause behind it, how it
-ripples through to India (inflation, the rupee, sectors, specific stocks, gold), and why a
-regular person should care. You explain HOW and WHY with rough probabilities. You NEVER
-give buy/sell advice or price targets.
+almost no finance jargon. You do two jobs, in this order:
+
+  FIRST, tell them what the article actually reports — the substance, in plain
+  language. Who did what, the real numbers, the actual decision, the named
+  countries and companies. The reader should finish this part genuinely informed
+  about the story itself, without having to open the link.
+
+  SECOND, explain what it MEANS for India — the cause behind it, how it ripples
+  through to inflation, the rupee, sectors, specific stocks and gold, and why a
+  regular person should care, with rough probabilities.
+
+You NEVER give buy/sell advice or price targets.
+
+GROUNDING — THE MOST IMPORTANT RULE:
+- You are given the article's text. Every fact you state MUST come from it.
+- Use the specifics: the figures, the dates, the names, the quotes, the stated
+  reasons. A card that could have been written from the headline alone is a
+  FAILURE, even if everything in it is true. If the article says Iran supplied
+  13.2% of South Korea's oil, say that — do not write "South Korea depends on
+  Middle East oil".
+- NEVER invent detail to fill a gap. If the text does not say why something
+  happened, do not supply a plausible reason.
+- If the article text is missing or too thin (paywalled, unreadable), work only
+  from the headline, keep "the_story" to what the headline genuinely
+  establishes, say plainly in "caveats" that only the headline was available,
+  and set "confidence" to "Low".
 
 WRITING RULES (very important):
 - Write like you're explaining to a smart friend with zero finance background.
@@ -95,6 +118,16 @@ WRITING RULES (very important):
   rose, yields fell), say WHAT PUSHED IT there — e.g. "the RBI bought up dollars", "foreign
   investors poured money in", "traders expect the US to cut rates". A beginner's first
   question is "but HOW did that happen?" — always answer it.
+
+THE "the_story" FIELD — what the article actually reports:
+- 3 to 5 short points, each a specific thing the article says. Numbers, names,
+  dates, decisions, stated reasons.
+- Plain language, but do not strip out the substance to achieve it. Explain a
+  term in brackets rather than deleting the fact that needed it.
+- This is reporting, not interpretation. Save the "what it means" for the rest
+  of the card.
+- Order them so they build: what happened, then the detail that makes it make
+  sense, then what is at stake.
 
 THE "tldr" FIELD — this is the most important sentence you write:
 - It must say what the news MEANS for the reader, not restate the headline.
@@ -124,6 +157,7 @@ THE "impacts" LIST — STRICT RULE:
 Return ONLY valid JSON (no markdown fences) with exactly this shape:
 {
   "tldr": "ONE plain sentence on what this MEANS for the reader (not a summary)",
+  "the_story": ["specific point from the article", "another", "another"],
   "what_happened": "2-3 very plain sentences explaining the news AND what caused it",
   "analogy": "one everyday comparison that makes it click, or \\"\\" if none fits",
   "why_it_matters_india": ["cause -> effect step 1", "step 2", "step 3", "step 4"],
@@ -150,10 +184,28 @@ def _gemini(event: dict) -> dict | None:
             grounding += f"- {link.get('name')}: " + " -> ".join(link.get("chain", [])) + "\n"
 
     headlines = "\n".join(f"- {it.get('title','')}" for it in event.get("items", [])[:5])
+
+    body = (event.get("article_text") or "").strip()
+    if body:
+        source_block = (
+            "FULL ARTICLE TEXT (this is your source — every fact must come from "
+            "here):\n\"\"\"\n" + body + "\n\"\"\"\n\n"
+        )
+    else:
+        # Say so explicitly. Silence here is what produced generic cards written
+        # from nothing but a headline.
+        source_block = (
+            "ARTICLE TEXT: NOT AVAILABLE (paywalled or unreadable). You have only "
+            "the headline. Do NOT invent details. Keep \"the_story\" to what the "
+            "headline genuinely establishes, set confidence to Low, and say in "
+            "caveats that only the headline was available.\n\n"
+        )
+
     user = (
         f"NEWS EVENT (from {', '.join(event.get('sources', []))}):\n"
         f"Main headline: {event.get('headline','')}\n"
         f"Related headlines:\n{headlines}\n\n"
+        f"{source_block}"
         f"{grounding}\n"
         "Produce the India-impact JSON card."
     )
@@ -213,6 +265,7 @@ def _gemini(event: dict) -> dict | None:
     parsed.setdefault("caveats", "")
     parsed.setdefault("tldr", "")
     parsed.setdefault("analogy", "")
+    parsed.setdefault("the_story", [])
     return parsed
 
 

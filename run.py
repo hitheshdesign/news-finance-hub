@@ -20,7 +20,7 @@ from datetime import datetime, timezone, date, timedelta
 from pathlib import Path
 
 import config
-from ingest import rss, gdelt, fred, quotes
+from ingest import rss, gdelt, fred, quotes, article
 from screen import relevance, cluster, history
 from analyze import engine, track, globe, assets
 from analyze.knowledge_match import match_linkages
@@ -329,6 +329,12 @@ def main() -> None:
     max_events = args.max or int(config.FILTERS.get("max_events_per_brief", 8))
     events = _select_balanced(
         events, max_events, int(config.FILTERS.get("max_per_topic", 2)))
+
+    # 2d. Read the actual articles. Only the handful that made the brief, so
+    #     it is a few polite requests — but it is the difference between a card
+    #     that reports what was written and one that guesses from a headline.
+    print("[article] fetching the full text of the selected stories...")
+    events = article.enrich(events)
 
     # 3. ANALYZE (India-impact cards)
     print("[analyze] generating India-impact cards...")

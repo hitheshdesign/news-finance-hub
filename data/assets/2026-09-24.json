@@ -6,7 +6,7 @@
   "live_count": 14,
   "live_as_of": "2026-09-24",
   "usd_inr": 95.96,
-  "gold_inr": 132376.0,
+  "gold_inr": 132999.0,
   "note": "Every number on this page is a curated, rounded estimate kept to teach the shape of each asset, not to trade on. Ratios move every day; the lesson — where a return comes from and what breaks it — does not.",
   "assets": [
     {
@@ -2285,7 +2285,7 @@
       "metric_label": "Gold-to-silver ratio",
       "metric_short": "Gold:silver",
       "metric_def": "How many ounces of silver one ounce of gold buys. The long-run average is roughly 66. A HIGH number means silver is cheap relative to gold — so here, unusually for this page, a big number is the good news.",
-      "metric_now": 67.4,
+      "metric_now": 67.1,
       "metric_avg": 66.0,
       "metric_avg_label": "Long-run average",
       "metric_avg_short": "long-run",
@@ -2299,12 +2299,12 @@
       "extras": [
         {
           "label": "Silver today",
-          "value": "₹196,418 a kg",
+          "value": "₹198,331 a kg",
           "def": "Spot silver converted into rupees at today's exchange rate."
         },
         {
           "label": "Gold today",
-          "value": "₹132,376 per 10g",
+          "value": "₹132,999 per 10g",
           "def": "Spot gold converted into rupees at today's exchange rate."
         },
         {
@@ -2425,7 +2425,7 @@
       "total_return": 8.1,
       "dear": false,
       "pin": 47,
-      "reading": "Today: Gold-to-silver ratio of 67.4:1 against a long-run average of 66:1 — almost exactly its normal level."
+      "reading": "Today: Gold-to-silver ratio of 67.1:1 against a long-run average of 66:1 — almost exactly its normal level."
     },
     {
       "code": "COPPER",
@@ -6057,7 +6057,7 @@
           "metric_label": "Gold-to-silver ratio",
           "metric_short": "Gold:silver",
           "metric_def": "How many ounces of silver one ounce of gold buys. The long-run average is roughly 66. A HIGH number means silver is cheap relative to gold — so here, unusually for this page, a big number is the good news.",
-          "metric_now": 67.4,
+          "metric_now": 67.1,
           "metric_avg": 66.0,
           "metric_avg_label": "Long-run average",
           "metric_avg_short": "long-run",
@@ -6071,12 +6071,12 @@
           "extras": [
             {
               "label": "Silver today",
-              "value": "₹196,418 a kg",
+              "value": "₹198,331 a kg",
               "def": "Spot silver converted into rupees at today's exchange rate."
             },
             {
               "label": "Gold today",
-              "value": "₹132,376 per 10g",
+              "value": "₹132,999 per 10g",
               "def": "Spot gold converted into rupees at today's exchange rate."
             },
             {
@@ -6197,7 +6197,7 @@
           "total_return": 8.1,
           "dear": false,
           "pin": 47,
-          "reading": "Today: Gold-to-silver ratio of 67.4:1 against a long-run average of 66:1 — almost exactly its normal level."
+          "reading": "Today: Gold-to-silver ratio of 67.1:1 against a long-run average of 66:1 — almost exactly its normal level."
         },
         {
           "code": "COPPER",
@@ -7626,7 +7626,7 @@
       ],
       "why": "Inflation is the tax that nobody votes for. It punishes anything promising you a FIXED number of rupees later, and rewards anything whose price rises with the general price level.",
       "india": "India's inflation is still mostly a food and fuel story. A bad monsoon or a crude spike does more to your portfolio than any Fed meeting, because it forces the RBI to keep rates high and squeezes the consumer companies that dominate the index.",
-      "signals": 0
+      "signals": 1
     },
     {
       "name": "Interest rates come down",
@@ -7643,7 +7643,7 @@
       ],
       "why": "A falling interest rate raises the value of every future rupee. Assets whose payoff is far in the future — growth shares, long bonds, property — gain the most, which is why rate-cut cycles feel like everything works at once.",
       "india": "In India, rate cuts usually arrive when inflation is beaten and growth is soft. The market front-runs them by six months, so the money is made while the news still sounds bad.",
-      "signals": 0
+      "signals": 1
     },
     {
       "name": "The rupee weakens fast",
@@ -7676,7 +7676,7 @@
       ],
       "why": "In a panic, correlations go to one: things that normally move separately all fall together, because the seller is not choosing on merit — they simply need cash. Only genuinely different assets protect you, and there are very few.",
       "india": "India is fundamentally a domestic economy but a foreign-funded market. That is why a Nifty fall can have nothing to do with India: the seller is an overseas fund meeting redemptions in New York.",
-      "signals": 2
+      "signals": 4
     },
     {
       "name": "Growth is strong and boring",

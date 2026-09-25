@@ -1,5 +1,5 @@
 {
-  "fetched": "2026-09-24T16:59:51+00:00",
+  "fetched": "2026-09-25T06:31:56+00:00",
   "nse_date": "2026-09-24",
   "indices": {
     "NIFTY 50": {
@@ -639,6 +639,20 @@
       "pb": 3.71,
       "div_yield": 1.03
     },
+    "NIFTY COMMERCIAL & TRANSPORT SERVICES": {
+      "close": 13459.73,
+      "change_pct": -1.36,
+      "pe": 38.53,
+      "pb": 4.66,
+      "div_yield": 0.55
+    },
+    "NIFTY NEXT 100": {
+      "close": 5858.46,
+      "change_pct": -1.56,
+      "pe": 21.47,
+      "pb": 3.31,
+      "div_yield": 0.87
+    },
     "NIFTY INDIA INFRASTRUCTURE & LOGISTICS": {
       "close": 11655.85,
       "change_pct": -1.44,
@@ -652,6 +666,20 @@
       "pe": 21.28,
       "pb": 3.16,
       "div_yield": 1.09
+    },
+    "NIFTY NBFC": {
+      "close": 55508.2,
+      "change_pct": -3.68,
+      "pe": 21.37,
+      "pb": 3.35,
+      "div_yield": 0.58
+    },
+    "NIFTY SMALL FINANCE BANKS & MICROFINANCE INSTITUTIONS": {
+      "close": 1339.04,
+      "change_pct": -3.73,
+      "pe": 39.78,
+      "pb": 1.55,
+      "div_yield": 0.06
     },
     "NIFTY WAVES": {
       "close": 1866.1,
@@ -681,6 +709,48 @@
       "pb": 2.48,
       "div_yield": 3.58
     },
+    "NIFTY CONSTRUCTION": {
+      "close": 11657.46,
+      "change_pct": -1.86,
+      "pe": 19.15,
+      "pb": 2.4,
+      "div_yield": 0.92
+    },
+    "NIFTY HOSPITALS": {
+      "close": 4505.81,
+      "change_pct": -1.03,
+      "pe": 70.54,
+      "pb": 9.44,
+      "div_yield": 0.15
+    },
+    "NIFTY HOUSING FINANCE": {
+      "close": 725.22,
+      "change_pct": -2.69,
+      "pe": 31.41,
+      "pb": 1.46,
+      "div_yield": 0.86
+    },
+    "NIFTY INSURANCE": {
+      "close": 1796.55,
+      "change_pct": -2.38,
+      "pe": 24.94,
+      "pb": 7.66,
+      "div_yield": 0.24
+    },
+    "NIFTY POWER": {
+      "close": 8371.62,
+      "change_pct": -1.32,
+      "pe": 19.03,
+      "pb": 2.34,
+      "div_yield": 1.57
+    },
+    "NIFTY RETAIL": {
+      "close": 3116.02,
+      "change_pct": -2.22,
+      "pe": 213.15,
+      "pb": 7.81,
+      "div_yield": 0.1
+    },
     "NIFTY500 HEALTHCARE": {
       "close": 21933.75,
       "change_pct": -0.61,
@@ -695,12 +765,68 @@
       "pb": 3.76,
       "div_yield": 0.58
     },
+    "NIFTY CONSUMER SERVICES": {
+      "close": 3634.25,
+      "change_pct": -2.02,
+      "pe": 114.92,
+      "pb": 7.39,
+      "div_yield": 0.18
+    },
+    "NIFTY CAPITAL GOODS": {
+      "close": 16759.14,
+      "change_pct": -1.46,
+      "pe": 44.46,
+      "pb": 8.9,
+      "div_yield": 0.6
+    },
+    "NIFTY TELECOMMUNICATIONS": {
+      "close": 3709.61,
+      "change_pct": -2.4,
+      "pe": 14.69,
+      "pb": 7.84,
+      "div_yield": 0.48
+    },
+    "NIFTY SUGAR & ETHANOL": {
+      "close": 2564.51,
+      "change_pct": -1.06,
+      "pe": 26.1,
+      "pb": 2.32,
+      "div_yield": 0.48
+    },
+    "NIFTY500 AHIMSA": {
+      "close": 3604.86,
+      "change_pct": -1.6,
+      "pe": 22.58,
+      "pb": 3.64,
+      "div_yield": 1.24
+    },
+    "NIFTY REITS & INVITS 90:10": {
+      "close": 1423.1,
+      "change_pct": 0.12,
+      "pe": 64.38,
+      "pb": 2.19,
+      "div_yield": 5.26
+    },
+    "NIFTY AI CATALYSTS": {
+      "close": 1067.49,
+      "change_pct": -1.39,
+      "pe": 26.79,
+      "pb": 4.33,
+      "div_yield": 0.93
+    },
     "NIFTY TOP 15 EQUAL WEIGHT": {
       "close": 9198.25,
       "change_pct": -1.87,
       "pe": 17.98,
       "pb": 2.96,
       "div_yield": 1.36
+    },
+    "NIFTY500 GROWTH 50": {
+      "close": 33542.86,
+      "change_pct": -1.66,
+      "pe": 41.58,
+      "pb": 7.69,
+      "div_yield": 0.24
     },
     "NIFTY100 LOW VOLATILITY 30": {
       "close": 19194.25,
@@ -940,6 +1066,13 @@
       "pb": 3.22,
       "div_yield": 1.3
     },
+    "NIFTY INDIA DEFENCE EQUAL WEIGHT": {
+      "close": 8872.58,
+      "change_pct": -1.2,
+      "pe": 77.84,
+      "pb": 10.47,
+      "div_yield": 0.35
+    },
     "NIFTY 8-13 YR G-SEC": {
       "close": 3021.43,
       "change_pct": -0.43,
@@ -1023,17 +1156,24 @@
       "pe": null,
       "pb": null,
       "div_yield": null
+    },
+    "NIFTY50 USD": {
+      "close": 8327.48,
+      "change_pct": -1.86,
+      "pe": null,
+      "pb": null,
+      "div_yield": null
     }
   },
   "spot_usd": {
-    "GOLD": 4310.9,
-    "SILVER": 64.285,
-    "COPPER": 6.7955
+    "GOLD": 4315.0,
+    "SILVER": 64.275,
+    "COPPER": 6.768
   },
   "usd_inr": 95.96,
   "derived": {
-    "GOLD_INR_10G": 132999.0,
-    "SILVER_INR_KG": 198331.0,
+    "GOLD_INR_10G": 133126.0,
+    "SILVER_INR_KG": 198300.0,
     "GOLD_SILVER_RATIO": 67.1
   },
   "ok": {

@@ -1,5 +1,5 @@
 {
-  "fetched": "2026-10-04T07:20:20+00:00",
+  "fetched": "2026-10-05T07:34:24+00:00",
   "nse_date": "2026-10-01",
   "indices": {
     "NIFTY 50": {
@@ -1173,15 +1173,15 @@
     }
   },
   "spot_usd": {
-    "GOLD": 4162.3,
-    "SILVER": 60.415,
-    "COPPER": 6.549
+    "GOLD": 4180.2,
+    "SILVER": 61.64,
+    "COPPER": 6.573
   },
   "usd_inr": 96.32,
   "derived": {
-    "GOLD_INR_10G": 128896.0,
-    "SILVER_INR_KG": 187091.0,
-    "GOLD_SILVER_RATIO": 68.9
+    "GOLD_INR_10G": 129451.0,
+    "SILVER_INR_KG": 190884.0,
+    "GOLD_SILVER_RATIO": 67.8
   },
   "ok": {
     "nse": true,

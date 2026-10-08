@@ -1,12 +1,12 @@
 {
-  "updated": "2026-09-24",
-  "updated_human": "Thursday, 24 September 2026",
+  "updated": "2026-09-29",
+  "updated_human": "Tuesday, 29 September 2026",
   "as_of": "September 2026",
   "live_ok": true,
   "live_count": 14,
-  "live_as_of": "2026-09-24",
-  "usd_inr": 95.96,
-  "gold_inr": 132999.0,
+  "live_as_of": "2026-09-28",
+  "usd_inr": 95.98,
+  "gold_inr": 128849.0,
   "note": "Every number on this page is a curated, rounded estimate kept to teach the shape of each asset, not to trade on. Ratios move every day; the lesson — where a return comes from and what breaks it — does not.",
   "assets": [
     {
@@ -19,7 +19,7 @@
       "metric_label": "PE ratio",
       "metric_short": "PE ratio",
       "metric_def": "Price divided by one year's profit. A PE of 22 means you are paying ₹22 for every ₹1 the companies earn in a year — so, at today's profits, about 22 years of earnings to buy the business outright.",
-      "metric_now": 19.5,
+      "metric_now": 19.26,
       "metric_avg": 23.5,
       "metric_avg_label": "10-year average",
       "metric_avg_short": "10-yr",
@@ -34,17 +34,17 @@
       "extras": [
         {
           "label": "Price to book",
-          "value": "2.79x",
+          "value": "2.75x",
           "def": "What you pay for each rupee of the companies' net assets on paper. Live from the NSE."
         },
         {
           "label": "Dividend yield",
-          "value": "1.23%",
+          "value": "1.24%",
           "def": "Cash paid out each year as a percentage of the price you pay. Live from the NSE."
         },
         {
           "label": "Index level",
-          "value": "23,063  (-1.64% today)",
+          "value": "22,780  (-1.56% today)",
           "def": "Where the index closed on the last trading day."
         },
         {
@@ -177,12 +177,12 @@
       "verdict": "India's large companies earn about 15% on shareholders' capital, which is genuinely world-class, and that quality is the reason to own them — not any particular day's price. Over a decade the return here comes overwhelmingly from profits growing rather than from investors agreeing to pay a higher multiple, so the PE you pay mainly decides how much of that growth you keep. The honest expectation is around 11-12% a year, arriving as three flat years and one spectacular one, in an order nobody can predict. The mistake is rarely buying this; it is expecting the last decade's pace and giving up during the flat stretch.",
       "live_ok": true,
       "live_source": "NSE",
-      "live_as_of": "2026-09-24",
+      "live_as_of": "2026-09-28",
       "news": [],
       "total_return": 13.4,
       "dear": false,
-      "pin": 22,
-      "reading": "Today: PE ratio of 19.5x against a 10-year average of 23.5x — about 17% cheaper than usual."
+      "pin": 20,
+      "reading": "Today: PE ratio of 19.26x against a 10-year average of 23.5x — about 18% cheaper than usual."
     },
     {
       "code": "MIDCAP",
@@ -194,7 +194,7 @@
       "metric_label": "PE ratio",
       "metric_short": "PE ratio",
       "metric_def": "Price divided by one year's profit. Mid caps normally trade a little dearer than large caps because they can grow faster — the question is always how much dearer.",
-      "metric_now": 28.1,
+      "metric_now": 27.6,
       "metric_avg": 29.0,
       "metric_avg_label": "10-year average",
       "metric_avg_short": "10-yr",
@@ -209,22 +209,22 @@
       "extras": [
         {
           "label": "Price to book",
-          "value": "4.18x",
+          "value": "4.11x",
           "def": "What you pay for each rupee of the companies' net assets on paper. Live from the NSE."
         },
         {
           "label": "Dividend yield",
-          "value": "0.59%",
+          "value": "0.6%",
           "def": "Cash paid out each year as a percentage of the price you pay. Live from the NSE."
         },
         {
           "label": "Index level",
-          "value": "22,470  (-2.00% today)",
+          "value": "22,071  (-1.63% today)",
           "def": "Where the index closed on the last trading day."
         },
         {
           "label": "Premium to large caps",
-          "value": "1.44x",
+          "value": "1.43x",
           "def": "This segment's PE divided by the Nifty 50's. The long-run normal is about 1.25x; well above it means you are paying for growth twice over. Computed from today's live numbers."
         }
       ],
@@ -275,7 +275,7 @@
         },
         {
           "label": "Valuation drift",
-          "value": 0.2,
+          "value": 0.3,
           "def": "Today's reading sits below this asset's own normal, so the price tag may drift back up, which adds to returns. Worked out fresh each morning from the live number, assuming only about 60% of the gap closes over ten years — markets can stay mispriced for a long time."
         }
       ],
@@ -344,12 +344,12 @@
       "verdict": "Mid caps genuinely grow faster than large caps — smaller companies from a smaller base — and they genuinely deserve to cost more for it. The whole game is how much more. The number worth watching is not the PE itself but the premium over the Nifty: its long- run normal is about 1.25x, and every time that premium has stretched far beyond it, the following years handed mid caps a fall roughly one and a half times deeper than the Nifty's. Own some, keep the share deliberate rather than letting it drift up after a good year, and add far more enthusiastically after a crash than during a run.",
       "live_ok": true,
       "live_source": "NSE",
-      "live_as_of": "2026-09-24",
+      "live_as_of": "2026-09-28",
       "news": [],
-      "total_return": 15.0,
+      "total_return": 15.1,
       "dear": false,
-      "pin": 45,
-      "reading": "Today: PE ratio of 28.1x against a 10-year average of 29x — about 3% cheaper than usual."
+      "pin": 42,
+      "reading": "Today: PE ratio of 27.6x against a 10-year average of 29x — about 5% cheaper than usual."
     },
     {
       "code": "SMALLCAP",
@@ -361,7 +361,7 @@
       "metric_label": "PE ratio",
       "metric_short": "PE ratio",
       "metric_def": "Price divided by one year's profit. For small companies this number is unreliable — profits are volatile, so a single good year can make the whole segment look cheap.",
-      "metric_now": 33.5,
+      "metric_now": 32.96,
       "metric_avg": 30.0,
       "metric_avg_label": "10-year average",
       "metric_avg_short": "10-yr",
@@ -376,7 +376,7 @@
       "extras": [
         {
           "label": "Price to book",
-          "value": "3.43x",
+          "value": "3.38x",
           "def": "What you pay for each rupee of the companies' net assets on paper. Live from the NSE."
         },
         {
@@ -386,12 +386,12 @@
         },
         {
           "label": "Index level",
-          "value": "18,156  (-1.39% today)",
+          "value": "17,863  (-1.63% today)",
           "def": "Where the index closed on the last trading day."
         },
         {
           "label": "Premium to large caps",
-          "value": "1.72x",
+          "value": "1.71x",
           "def": "This segment's PE divided by the Nifty 50's. The long-run normal is about 1.10x; well above it means you are paying for growth twice over. Computed from today's live numbers."
         }
       ],
@@ -511,12 +511,12 @@
       "verdict": "The highest long-run returns in Indian equity, and the highest chance you personally never collect them. The faster profit growth is real. So is the fact that this segment falls 60% or more twice a decade and takes years — not months — to recover, precisely when your confidence is lowest. Small-cap valuations are also the most brutally mean- reverting thing in Indian markets, so what you pay matters more here than anywhere else on this page. Hold it in a size where a 60% fall would be annoying rather than life-changing, and buy it when the headlines are grim rather than when your neighbour is boasting.",
       "live_ok": true,
       "live_source": "NSE",
-      "live_as_of": "2026-09-24",
+      "live_as_of": "2026-09-28",
       "news": [],
       "total_return": 15.1,
       "dear": true,
-      "pin": 69,
-      "reading": "Today: PE ratio of 33.5x against a 10-year average of 30x — about 12% dearer than usual."
+      "pin": 66,
+      "reading": "Today: PE ratio of 32.96x against a 10-year average of 30x — about 10% dearer than usual."
     },
     {
       "code": "BROAD",
@@ -528,7 +528,7 @@
       "metric_label": "PE ratio",
       "metric_short": "PE ratio",
       "metric_def": "Price divided by one year's profit, across almost every listed Indian company — the closest thing to 'what India Inc costs'.",
-      "metric_now": 21.85,
+      "metric_now": 21.54,
       "metric_avg": 24.5,
       "metric_avg_label": "10-year average",
       "metric_avg_short": "10-yr",
@@ -543,17 +543,17 @@
       "extras": [
         {
           "label": "Price to book",
-          "value": "3.12x",
+          "value": "3.08x",
           "def": "What you pay for each rupee of the companies' net assets on paper. Live from the NSE."
         },
         {
           "label": "Dividend yield",
-          "value": "0.99%",
+          "value": "1.01%",
           "def": "Cash paid out each year as a percentage of the price you pay. Live from the NSE."
         },
         {
           "label": "Index level",
-          "value": "22,553  (-1.67% today)",
+          "value": "22,232  (-1.64% today)",
           "def": "Where the index closed on the last trading day."
         },
         {
@@ -599,7 +599,7 @@
         },
         {
           "label": "Valuation drift",
-          "value": 0.7,
+          "value": 0.8,
           "def": "Today's reading sits below this asset's own normal, so the price tag may drift back up, which adds to returns. Worked out fresh each morning from the live number, assuming only about 60% of the gap closes over ten years — markets can stay mispriced for a long time."
         }
       ],
@@ -663,12 +663,12 @@
       "verdict": "The most sensible single thing an Indian investor can own. You get the entire market for 0.2-0.35% a year and you never have to answer the question that trips most people up — large, mid or small — because the fund holds each at its natural weight and rebalances itself as companies grow and shrink. The expected return is around 11-12% a year, essentially the same as the Nifty, but with better odds because no part of it is a concentrated bet. Almost nobody regrets owning this; plenty of people regret the clever alternatives they chose instead.",
       "live_ok": true,
       "live_source": "NSE",
-      "live_as_of": "2026-09-24",
+      "live_as_of": "2026-09-28",
       "news": [],
-      "total_return": 13.3,
+      "total_return": 13.4,
       "dear": false,
-      "pin": 32,
-      "reading": "Today: PE ratio of 21.85x against a 10-year average of 24.5x — about 11% cheaper than usual."
+      "pin": 30,
+      "reading": "Today: PE ratio of 21.54x against a 10-year average of 24.5x — about 12% cheaper than usual."
     },
     {
       "code": "BANKS",
@@ -680,7 +680,7 @@
       "metric_label": "Price to book",
       "metric_short": "Price to book",
       "metric_def": "For a bank, price-to-book matters more than PE. A bank's 'book' is its net worth — what is left after every loan and deposit is settled. Paying 2.4x book means paying ₹2.40 for each ₹1 of that net worth, on the bet the bank keeps earning well on it.",
-      "metric_now": 1.66,
+      "metric_now": 1.63,
       "metric_avg": 2.4,
       "metric_avg_label": "10-year average",
       "metric_avg_short": "10-yr",
@@ -695,17 +695,17 @@
       "extras": [
         {
           "label": "PE ratio",
-          "value": "13.12x",
+          "value": "12.89x",
           "def": "Price divided by one year's profit, published by the NSE with today's close."
         },
         {
           "label": "Dividend yield",
-          "value": "0.71%",
+          "value": "0.72%",
           "def": "Cash paid out each year as a percentage of the price you pay. Live from the NSE."
         },
         {
           "label": "Index level",
-          "value": "55,438  (-1.96% today)",
+          "value": "54,472  (-1.99% today)",
           "def": "Where the index closed on the last trading day."
         },
         {
@@ -751,7 +751,7 @@
         },
         {
           "label": "Valuation drift",
-          "value": 2.4,
+          "value": 2.5,
           "def": "Today's reading sits below this asset's own normal, so the price tag may drift back up, which adds to returns. Worked out fresh each morning from the live number, assuming only about 60% of the gap closes over ten years — markets can stay mispriced for a long time."
         }
       ],
@@ -819,17 +819,12 @@
       "verdict": "The Indian market's most examinable business, and its most geared. A bank borrows at one rate and lends at a higher one using roughly ₹9 of other people's money for every ₹1 of its own — which is why banks compound beautifully for years and then occasionally lose half their value in months. Judge them on price-to-book against their own history rather than on PE, and on the two things underneath it: whether bad loans are rising, and whether margins are being squeezed by competition for deposits. Credit quality is the one that matters — a margin squeeze is survivable, a bad-loan cycle is what destroys a bank's net worth. You already own a lot of this through any Nifty fund, so a separate bank fund is a deliberate second helping.",
       "live_ok": true,
       "live_source": "NSE",
-      "live_as_of": "2026-09-24",
-      "news": [
-        {
-          "title": "Nifty hits over five-month low as banks, NBFCs slide amid high oil prices",
-          "url": "https://www.business-standard.com/markets/news/nifty-hits-over-five-month-low-as-banks-nbfcs-slide-amid-high-oil-prices-126092401078_1.html"
-        }
-      ],
-      "total_return": 15.4,
+      "live_as_of": "2026-09-28",
+      "news": [],
+      "total_return": 15.5,
       "dear": false,
       "pin": 3,
-      "reading": "Today: Price to book of 1.66x against a 10-year average of 2.4x — about 31% cheaper than usual."
+      "reading": "Today: Price to book of 1.63x against a 10-year average of 2.4x — about 32% cheaper than usual."
     },
     {
       "code": "IT",
@@ -840,7 +835,7 @@
       "valuation": "cheap",
       "metric_label": "PE ratio",
       "metric_short": "PE ratio",
-      "metric_now": 18.0,
+      "metric_now": 17.92,
       "metric_avg": 24.0,
       "metric_avg_label": "10-year average",
       "metric_avg_short": "10-yr",
@@ -856,17 +851,17 @@
       "extras": [
         {
           "label": "Price to book",
-          "value": "4.95x",
+          "value": "4.93x",
           "def": "What you pay for each rupee of the companies' net assets on paper. Live from the NSE."
         },
         {
           "label": "Dividend yield",
-          "value": "2.84%",
+          "value": "2.86%",
           "def": "Cash paid out each year as a percentage of the price you pay. Live from the NSE."
         },
         {
           "label": "Index level",
-          "value": "28,209  (-0.44% today)",
+          "value": "28,086  (-0.26% today)",
           "def": "Where the index closed on the last trading day."
         },
         {
@@ -912,7 +907,7 @@
         },
         {
           "label": "Valuation drift",
-          "value": 1.8,
+          "value": 1.9,
           "def": "Today's reading sits below this asset's own normal, so the price tag may drift back up, which adds to returns. Worked out fresh each morning from the live number, assuming only about 60% of the gap closes over ten years — markets can stay mispriced for a long time."
         },
         {
@@ -986,12 +981,12 @@
       "verdict": "The best capital-efficient businesses India has, with an honest question hanging over them. They earn about 27% on shareholders' capital, pay real dividends, and collect in dollars while paying salaries in rupees — which makes them the natural hedge inside an Indian portfolio, rising when foreign money leaves and the rupee slides. The question is whether AI is a new market to serve or a threat to the routine coding and testing work that still pays the bills; nobody knows yet, and the price reflects that uncertainty. Own this for the rupee hedge and the cash it throws off, and watch headcount alongside revenue — falling employee numbers with flat revenue is that question being answered.",
       "live_ok": true,
       "live_source": "NSE",
-      "live_as_of": "2026-09-24",
+      "live_as_of": "2026-09-28",
       "news": [],
-      "total_return": 14.1,
+      "total_return": 14.2,
       "dear": false,
       "pin": 8,
-      "reading": "Today: PE ratio of 18x against a 10-year average of 24x — about 25% cheaper than usual."
+      "reading": "Today: PE ratio of 17.92x against a 10-year average of 24x — about 25% cheaper than usual."
     },
     {
       "code": "FMCG",
@@ -1002,7 +997,7 @@
       "valuation": "cheap",
       "metric_label": "PE ratio",
       "metric_short": "PE ratio",
-      "metric_now": 31.75,
+      "metric_now": 31.4,
       "metric_avg": 38.0,
       "metric_avg_label": "10-year average",
       "metric_avg_short": "10-yr",
@@ -1018,17 +1013,17 @@
       "extras": [
         {
           "label": "Price to book",
-          "value": "7.6x",
+          "value": "7.52x",
           "def": "What you pay for each rupee of the companies' net assets on paper. Live from the NSE."
         },
         {
           "label": "Dividend yield",
-          "value": "1.03%",
+          "value": "1.05%",
           "def": "Cash paid out each year as a percentage of the price you pay. Live from the NSE."
         },
         {
           "label": "Index level",
-          "value": "45,759  (-1.08% today)",
+          "value": "45,264  (-1.47% today)",
           "def": "Where the index closed on the last trading day."
         },
         {
@@ -1079,7 +1074,7 @@
         },
         {
           "label": "Valuation drift",
-          "value": 1.1,
+          "value": 1.2,
           "def": "Today's reading sits below this asset's own normal, so the price tag may drift back up, which adds to returns. Worked out fresh each morning from the live number, assuming only about 60% of the gap closes over ten years — markets can stay mispriced for a long time."
         }
       ],
@@ -1148,12 +1143,12 @@
       "verdict": "The quiet compounder. Nobody gets rich quickly on soap and biscuits, but 38% return on shareholders' capital and earnings that barely notice a recession are genuinely rare, and this sector falls least in a crash — which is exactly when you want something you can sell without regret to buy what has collapsed. It will always look expensive on PE; 30-40x is normal here because the earnings are so reliable, so only the comparison with its own history tells you anything. The threat worth taking seriously is not the monsoon, it is distribution: quick-commerce and new direct-to-consumer brands are chipping at the moat that justified the premium. Judge it on volume growth rather than revenue — revenue can rise on price increases while people quietly buy less.",
       "live_ok": true,
       "live_source": "NSE",
-      "live_as_of": "2026-09-24",
+      "live_as_of": "2026-09-28",
       "news": [],
-      "total_return": 12.8,
+      "total_return": 12.9,
       "dear": false,
-      "pin": 23,
-      "reading": "Today: PE ratio of 31.75x against a 10-year average of 38x — about 16% cheaper than usual."
+      "pin": 21,
+      "reading": "Today: PE ratio of 31.4x against a 10-year average of 38x — about 17% cheaper than usual."
     },
     {
       "code": "PHARMA",
@@ -1164,7 +1159,7 @@
       "valuation": "expensive",
       "metric_label": "PE ratio",
       "metric_short": "PE ratio",
-      "metric_now": 41.85,
+      "metric_now": 41.44,
       "metric_avg": 32.0,
       "metric_avg_label": "10-year average",
       "metric_avg_short": "10-yr",
@@ -1180,17 +1175,17 @@
       "extras": [
         {
           "label": "Price to book",
-          "value": "5.08x",
+          "value": "5.03x",
           "def": "What you pay for each rupee of the companies' net assets on paper. Live from the NSE."
         },
         {
           "label": "Dividend yield",
-          "value": "0.52%",
+          "value": "0.53%",
           "def": "Cash paid out each year as a percentage of the price you pay. Live from the NSE."
         },
         {
           "label": "Index level",
-          "value": "27,029  (-0.45% today)",
+          "value": "26,762  (-0.89% today)",
           "def": "Where the index closed on the last trading day."
         },
         {
@@ -1315,12 +1310,12 @@
       "verdict": "A genuinely useful diversifier, with a warning written into its own recent past. India's cost advantage in making medicines is real, and the world's wish to depend less on Chinese ingredients is a real tailwind. But this sector spent four years falling while everything else rose, purely because US generic prices collapsed and American regulators banned plants — and neither risk has gone away. That behaviour is the point: its worst period happened while the rest of the market did well, which is exactly what you want from a diversifier even though it feels awful at the time. The domestic hospital and diagnostics half is the better business and the quieter story.",
       "live_ok": true,
       "live_source": "NSE",
-      "live_as_of": "2026-09-24",
+      "live_as_of": "2026-09-28",
       "news": [],
       "total_return": 11.4,
       "dear": true,
       "pin": 97,
-      "reading": "Today: PE ratio of 41.85x against a 10-year average of 32x — about 31% dearer than usual."
+      "reading": "Today: PE ratio of 41.44x against a 10-year average of 32x — about 29% dearer than usual."
     },
     {
       "code": "AUTO",
@@ -1331,7 +1326,7 @@
       "valuation": "expensive",
       "metric_label": "PE ratio",
       "metric_short": "PE ratio",
-      "metric_now": 31.06,
+      "metric_now": 30.82,
       "metric_avg": 27.0,
       "metric_avg_label": "10-year average",
       "metric_avg_short": "10-yr",
@@ -1347,7 +1342,7 @@
       "extras": [
         {
           "label": "Price to book",
-          "value": "4.08x",
+          "value": "4.05x",
           "def": "What you pay for each rupee of the companies' net assets on paper. Live from the NSE."
         },
         {
@@ -1357,7 +1352,7 @@
         },
         {
           "label": "Index level",
-          "value": "26,730  (-1.57% today)",
+          "value": "26,525  (-1.64% today)",
           "def": "Where the index closed on the last trading day."
         },
         {
@@ -1477,12 +1472,12 @@
       "verdict": "A well-run cyclical, and cyclicals are where a PE misleads most. Profits peak just as the shares look cheapest, so a low multiple on peak earnings is the standard way money is lost here — and a high multiple on depressed earnings has often been the buy. Indian autos are cash-generating and now globally competitive in two-wheelers, with the electric transition a genuine long-term opportunity for the bike makers and a genuine threat to the parts suppliers built around engines. The dashboard is unusually good: every maker publishes monthly sales in the first days of each month, and the two-wheeler numbers tell you more about rural India than most commentary does.",
       "live_ok": true,
       "live_source": "NSE",
-      "live_as_of": "2026-09-24",
+      "live_as_of": "2026-09-28",
       "news": [],
       "total_return": 11.5,
       "dear": true,
-      "pin": 75,
-      "reading": "Today: PE ratio of 31.06x against a 10-year average of 27x — about 15% dearer than usual."
+      "pin": 74,
+      "reading": "Today: PE ratio of 30.82x against a 10-year average of 27x — about 14% dearer than usual."
     },
     {
       "code": "ENERGY",
@@ -1493,7 +1488,7 @@
       "valuation": "fair",
       "metric_label": "PE ratio",
       "metric_short": "PE ratio",
-      "metric_now": 14.49,
+      "metric_now": 14.23,
       "metric_avg": 13.5,
       "metric_avg_label": "10-year average",
       "metric_avg_short": "10-yr",
@@ -1509,17 +1504,17 @@
       "extras": [
         {
           "label": "Price to book",
-          "value": "2.01x",
+          "value": "1.97x",
           "def": "What you pay for each rupee of the companies' net assets on paper. Live from the NSE."
         },
         {
           "label": "Dividend yield",
-          "value": "1.87%",
+          "value": "1.91%",
           "def": "Cash paid out each year as a percentage of the price you pay. Live from the NSE."
         },
         {
           "label": "Index level",
-          "value": "37,361  (-1.06% today)",
+          "value": "36,693  (-2.00% today)",
           "def": "Where the index closed on the last trading day."
         },
         {
@@ -1570,7 +1565,7 @@
         },
         {
           "label": "Valuation drift",
-          "value": -0.4,
+          "value": -0.3,
           "def": "Today's reading sits above this asset's own normal, so expect the price tag investors are willing to pay to drift back down — a drag on returns. Worked out fresh each morning from the live number, assuming only about 60% of the gap closes over ten years — markets can stay mispriced for a long time."
         }
       ],
@@ -1639,21 +1634,12 @@
       "verdict": "An income holding disguised as an equity sector, and the closest thing the Indian market has to an inflation hedge. The dividend is a large share of the total return here, which changes what this asset is for — you are being paid to wait rather than betting on growth. Note that the index is two opposite bets at once: refiners make money when crude is cheap, producers when it is dear. The genuine attraction is electricity, where India's demand is outrunning its supply and the grid needs enormous investment. The genuine risk is political: when fuel gets expensive the government has repeatedly chosen voters over shareholders, and it is the majority owner of much of this index.",
       "live_ok": true,
       "live_source": "NSE",
-      "live_as_of": "2026-09-24",
-      "news": [
-        {
-          "title": "India cuts import duty on palm, soybean oils to lower edible oil prices",
-          "url": "https://www.thehindubusinessline.com/economy/agri-business/centre-cuts-customs-duty-on-crude-refined-sunflower-soybean-and-palm-oils/article71501312.ece"
-        },
-        {
-          "title": "Nifty hits over five-month low as banks, NBFCs slide amid high oil prices",
-          "url": "https://www.business-standard.com/markets/news/nifty-hits-over-five-month-low-as-banks-nbfcs-slide-amid-high-oil-prices-126092401078_1.html"
-        }
-      ],
-      "total_return": 10.5,
+      "live_as_of": "2026-09-28",
+      "news": [],
+      "total_return": 10.6,
       "dear": true,
-      "pin": 62,
-      "reading": "Today: PE ratio of 14.49x against a 10-year average of 13.5x — about 7% dearer than usual."
+      "pin": 59,
+      "reading": "Today: PE ratio of 14.23x against a 10-year average of 13.5x — about 5% dearer than usual."
     },
     {
       "code": "METALS",
@@ -1664,7 +1650,7 @@
       "valuation": "expensive",
       "metric_label": "PE ratio",
       "metric_short": "PE ratio",
-      "metric_now": 15.88,
+      "metric_now": 15.65,
       "metric_avg": 14.0,
       "metric_avg_label": "10-year average",
       "metric_avg_short": "10-yr",
@@ -1680,17 +1666,17 @@
       "extras": [
         {
           "label": "Price to book",
-          "value": "2.59x",
+          "value": "2.55x",
           "def": "What you pay for each rupee of the companies' net assets on paper. Live from the NSE."
         },
         {
           "label": "Dividend yield",
-          "value": "1.26%",
+          "value": "1.28%",
           "def": "Cash paid out each year as a percentage of the price you pay. Live from the NSE."
         },
         {
           "label": "Index level",
-          "value": "13,042  (-1.96% today)",
+          "value": "12,854  (-1.78% today)",
           "def": "Where the index closed on the last trading day."
         },
         {
@@ -1810,17 +1796,12 @@
       "verdict": "A sector to rent, not to own. Over twenty years Indian metals returned roughly 10% a year against the Nifty's 13% — while delivering falls of 70% along the way — because these companies have no pricing power at all and add new capacity precisely when profits are best. Steel sells for the world steel price; their profit is the gap between that and their costs, which is why a 10% move in the metal can double or erase a year's earnings, and why the PE here tells you less than almost anywhere else. It does have one real use: it is among the few things that rise when inflation and global industrial demand run hot together. Size it as a hedge, and watch China rather than India.",
       "live_ok": true,
       "live_source": "NSE",
-      "live_as_of": "2026-09-24",
-      "news": [
-        {
-          "title": "Russian Federation notifies launch of safeguard investigation on certain flat steel products",
-          "url": "https://www.wto.org/english/news_e/news26_e/safe_rus_14sep26_485_e.htm"
-        }
-      ],
+      "live_as_of": "2026-09-28",
+      "news": [],
       "total_return": 7.9,
       "dear": true,
-      "pin": 72,
-      "reading": "Today: PE ratio of 15.88x against a 10-year average of 14x — about 13% dearer than usual."
+      "pin": 70,
+      "reading": "Today: PE ratio of 15.65x against a 10-year average of 14x — about 12% dearer than usual."
     },
     {
       "code": "REALTY",
@@ -1831,7 +1812,7 @@
       "valuation": "cheap",
       "metric_label": "PE ratio",
       "metric_short": "PE ratio",
-      "metric_now": 36.58,
+      "metric_now": 36.14,
       "metric_avg": 40.0,
       "metric_avg_label": "10-year average",
       "metric_avg_short": "10-yr",
@@ -1847,17 +1828,17 @@
       "extras": [
         {
           "label": "Price to book",
-          "value": "3.75x",
+          "value": "3.7x",
           "def": "What you pay for each rupee of the companies' net assets on paper. Live from the NSE."
         },
         {
           "label": "Dividend yield",
-          "value": "0.48%",
+          "value": "0.49%",
           "def": "Cash paid out each year as a percentage of the price you pay. Live from the NSE."
         },
         {
           "label": "Index level",
-          "value": "861  (-1.10% today)",
+          "value": "851  (-2.12% today)",
           "def": "Where the index closed on the last trading day."
         },
         {
@@ -1898,7 +1879,7 @@
         },
         {
           "label": "Valuation drift",
-          "value": 0.5,
+          "value": 0.6,
           "def": "Today's reading sits below this asset's own normal, so the price tag may drift back up, which adds to returns. Worked out fresh each morning from the live number, assuming only about 60% of the gap closes over ten years — markets can stay mispriced for a long time."
         }
       ],
@@ -1967,12 +1948,12 @@
       "verdict": "Real businesses with the worst long-run record on this page. Over twenty years Indian realty shares returned about 5% a year — worse than a fixed deposit — because the 2008 collapse took 90% off and thirteen years to repair. The current cycle is genuinely healthier: less debt, fewer competitors after the 2018 shake-out, real demand for larger homes. But this is the most interest-rate-sensitive sector in India, developers live on credit that disappears exactly when they need it, and reported profit arrives years after a flat is actually sold — so judge them on pre-sales bookings and net debt instead. If you want to own Indian property, rent through a REIT is the sober version of this trade; this is the leveraged one.",
       "live_ok": true,
       "live_source": "NSE",
-      "live_as_of": "2026-09-24",
+      "live_as_of": "2026-09-28",
       "news": [],
-      "total_return": 15.9,
+      "total_return": 16.0,
       "dear": false,
-      "pin": 36,
-      "reading": "Today: PE ratio of 36.58x against a 10-year average of 40x — about 9% cheaper than usual."
+      "pin": 34,
+      "reading": "Today: PE ratio of 36.14x against a 10-year average of 40x — about 10% cheaper than usual."
     },
     {
       "code": "PSU",
@@ -1983,7 +1964,7 @@
       "valuation": "fair",
       "metric_label": "PE ratio",
       "metric_short": "PE ratio",
-      "metric_now": 10.84,
+      "metric_now": 10.66,
       "metric_avg": 11.0,
       "metric_avg_label": "10-year average",
       "metric_avg_short": "10-yr",
@@ -1999,17 +1980,17 @@
       "extras": [
         {
           "label": "Price to book",
-          "value": "1.7x",
+          "value": "1.67x",
           "def": "What you pay for each rupee of the companies' net assets on paper. Live from the NSE."
         },
         {
           "label": "Dividend yield",
-          "value": "2.7%",
+          "value": "2.74%",
           "def": "Cash paid out each year as a percentage of the price you pay. Live from the NSE."
         },
         {
           "label": "Index level",
-          "value": "9,555  (-0.85% today)",
+          "value": "9,390  (-1.91% today)",
           "def": "Where the index closed on the last trading day."
         },
         {
@@ -2055,7 +2036,7 @@
         },
         {
           "label": "Valuation drift",
-          "value": 0.1,
+          "value": 0.2,
           "def": "Today's reading sits below this asset's own normal, so the price tag may drift back up, which adds to returns. Worked out fresh each morning from the live number, assuming only about 60% of the gap closes over ten years — markets can stay mispriced for a long time."
         }
       ],
@@ -2124,12 +2105,12 @@
       "verdict": "Good businesses whose majority shareholder is not you. The government's spending on defence, railways and the power grid is real and it genuinely transformed these order books. But PSUs have always traded at a discount for a reason that has not gone away, only been forgotten: the state can choose cheap fuel before an election, a strategic acquisition you would never approve, or a dividend timed to suit the budget rather than the business. Much of the last few years' return came from that discount narrowing rather than from profits — and a discount can only close once. The utilities in this basket remain sensible dividend holdings; the defence and railway names are priced as though order books never slip, which they always do.",
       "live_ok": true,
       "live_source": "NSE",
-      "live_as_of": "2026-09-24",
+      "live_as_of": "2026-09-28",
       "news": [],
-      "total_return": 12.2,
+      "total_return": 12.3,
       "dear": false,
-      "pin": 48,
-      "reading": "Today: PE ratio of 10.84x against a 10-year average of 11x — almost exactly its normal level."
+      "pin": 45,
+      "reading": "Today: PE ratio of 10.66x against a 10-year average of 11x — about 3% cheaper than usual."
     },
     {
       "code": "GOLD",
@@ -2285,7 +2266,7 @@
       "metric_label": "Gold-to-silver ratio",
       "metric_short": "Gold:silver",
       "metric_def": "How many ounces of silver one ounce of gold buys. The long-run average is roughly 66. A HIGH number means silver is cheap relative to gold — so here, unusually for this page, a big number is the good news.",
-      "metric_now": 67.1,
+      "metric_now": 68.2,
       "metric_avg": 66.0,
       "metric_avg_label": "Long-run average",
       "metric_avg_short": "long-run",
@@ -2299,12 +2280,12 @@
       "extras": [
         {
           "label": "Silver today",
-          "value": "₹198,331 a kg",
+          "value": "₹188,791 a kg",
           "def": "Spot silver converted into rupees at today's exchange rate."
         },
         {
           "label": "Gold today",
-          "value": "₹132,999 per 10g",
+          "value": "₹128,849 per 10g",
           "def": "Spot gold converted into rupees at today's exchange rate."
         },
         {
@@ -2338,7 +2319,7 @@
         },
         {
           "label": "Valuation drift",
-          "value": 0.1,
+          "value": 0.2,
           "def": "Today's reading sits below this asset's own normal, so the price tag may drift back up, which adds to returns. Worked out fresh each morning from the live number, assuming only about 60% of the gap closes over ten years — markets can stay mispriced for a long time."
         },
         {
@@ -2420,12 +2401,12 @@
       "verdict": "Gold's excitable younger sibling, with a growth story gold lacks. Over half of silver's demand is industrial — solar panels consume more of it every year — which gives it a genuine source of demand beyond fear, and also means it can fall hard in a recession while gold holds up. The number to watch is the gold-to-silver ratio: it has reverted toward its long-run average near 66 for a century, so a high reading has historically favoured silver and a low one favoured gold. The price of that opportunity is violence — silver moves about 70% more than gold and has twice in living memory fallen more than 70% and stayed down for twenty years. A small, deliberate satellite to gold, or nothing at all.",
       "live_ok": true,
       "live_source": "COMEX + ECB",
-      "live_as_of": "2026-09-24",
+      "live_as_of": "2026-09-28",
       "news": [],
-      "total_return": 8.1,
+      "total_return": 8.2,
       "dear": false,
-      "pin": 47,
-      "reading": "Today: Gold-to-silver ratio of 67.1:1 against a long-run average of 66:1 — almost exactly its normal level."
+      "pin": 45,
+      "reading": "Today: Gold-to-silver ratio of 68.2:1 against a long-run average of 66:1 — about 3% cheaper than usual."
     },
     {
       "code": "COPPER",
@@ -3639,7 +3620,16 @@
       ],
       "verdict": "Expensive, and still worth owning — for a reason that has nothing to do with returns. World shares at a CAPE of 30 against a long-run 22 point to about 8% a year in rupees, below Indian equity's 11-12%, so on the numbers alone you would skip this. The case is that every other thing you own is one bet: your salary, your home, your Nifty fund, your fixed deposit, all in a currency that has weakened about 3% a year for three decades. Fifteen to twenty-five per cent in dollar-earning assets is insurance against the one risk an Indian investor cannot diversify away locally. Buy it through a rupee SIP, check the fund is open, and lean toward the cheaper regions rather than piling further into the Nasdaq.",
       "live_ok": false,
-      "news": [],
+      "news": [
+        {
+          "title": "India’s kharif crops output may be lower, crops in winter season also at risk in rainfed areas",
+          "url": "https://www.thehindubusinessline.com/economy/agri-business/indias-kharif-crops-output-may-be-lower-crops-in-winter-season-also-at-risk-in-rainfed-areas/article71519209.ece"
+        },
+        {
+          "title": "Federal Reserve Board and Federal Open Market Committee release economic projections from the September 15-16 FOMC meeting",
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916b.htm"
+        }
+      ],
       "total_return": 7.8,
       "dear": true,
       "pin": 97,
@@ -3777,7 +3767,7 @@
           "metric_label": "PE ratio",
           "metric_short": "PE ratio",
           "metric_def": "Price divided by one year's profit. A PE of 22 means you are paying ₹22 for every ₹1 the companies earn in a year — so, at today's profits, about 22 years of earnings to buy the business outright.",
-          "metric_now": 19.5,
+          "metric_now": 19.26,
           "metric_avg": 23.5,
           "metric_avg_label": "10-year average",
           "metric_avg_short": "10-yr",
@@ -3792,17 +3782,17 @@
           "extras": [
             {
               "label": "Price to book",
-              "value": "2.79x",
+              "value": "2.75x",
               "def": "What you pay for each rupee of the companies' net assets on paper. Live from the NSE."
             },
             {
               "label": "Dividend yield",
-              "value": "1.23%",
+              "value": "1.24%",
               "def": "Cash paid out each year as a percentage of the price you pay. Live from the NSE."
             },
             {
               "label": "Index level",
-              "value": "23,063  (-1.64% today)",
+              "value": "22,780  (-1.56% today)",
               "def": "Where the index closed on the last trading day."
             },
             {
@@ -3935,12 +3925,12 @@
           "verdict": "India's large companies earn about 15% on shareholders' capital, which is genuinely world-class, and that quality is the reason to own them — not any particular day's price. Over a decade the return here comes overwhelmingly from profits growing rather than from investors agreeing to pay a higher multiple, so the PE you pay mainly decides how much of that growth you keep. The honest expectation is around 11-12% a year, arriving as three flat years and one spectacular one, in an order nobody can predict. The mistake is rarely buying this; it is expecting the last decade's pace and giving up during the flat stretch.",
           "live_ok": true,
           "live_source": "NSE",
-          "live_as_of": "2026-09-24",
+          "live_as_of": "2026-09-28",
           "news": [],
           "total_return": 13.4,
           "dear": false,
-          "pin": 22,
-          "reading": "Today: PE ratio of 19.5x against a 10-year average of 23.5x — about 17% cheaper than usual."
+          "pin": 20,
+          "reading": "Today: PE ratio of 19.26x against a 10-year average of 23.5x — about 18% cheaper than usual."
         },
         {
           "code": "MIDCAP",
@@ -3952,7 +3942,7 @@
           "metric_label": "PE ratio",
           "metric_short": "PE ratio",
           "metric_def": "Price divided by one year's profit. Mid caps normally trade a little dearer than large caps because they can grow faster — the question is always how much dearer.",
-          "metric_now": 28.1,
+          "metric_now": 27.6,
           "metric_avg": 29.0,
           "metric_avg_label": "10-year average",
           "metric_avg_short": "10-yr",
@@ -3967,22 +3957,22 @@
           "extras": [
             {
               "label": "Price to book",
-              "value": "4.18x",
+              "value": "4.11x",
               "def": "What you pay for each rupee of the companies' net assets on paper. Live from the NSE."
             },
             {
               "label": "Dividend yield",
-              "value": "0.59%",
+              "value": "0.6%",
               "def": "Cash paid out each year as a percentage of the price you pay. Live from the NSE."
             },
             {
               "label": "Index level",
-              "value": "22,470  (-2.00% today)",
+              "value": "22,071  (-1.63% today)",
               "def": "Where the index closed on the last trading day."
             },
             {
               "label": "Premium to large caps",
-              "value": "1.44x",
+              "value": "1.43x",
               "def": "This segment's PE divided by the Nifty 50's. The long-run normal is about 1.25x; well above it means you are paying for growth twice over. Computed from today's live numbers."
             }
           ],
@@ -4033,7 +4023,7 @@
             },
             {
               "label": "Valuation drift",
-              "value": 0.2,
+              "value": 0.3,
               "def": "Today's reading sits below this asset's own normal, so the price tag may drift back up, which adds to returns. Worked out fresh each morning from the live number, assuming only about 60% of the gap closes over ten years — markets can stay mispriced for a long time."
             }
           ],
@@ -4102,12 +4092,12 @@
           "verdict": "Mid caps genuinely grow faster than large caps — smaller companies from a smaller base — and they genuinely deserve to cost more for it. The whole game is how much more. The number worth watching is not the PE itself but the premium over the Nifty: its long- run normal is about 1.25x, and every time that premium has stretched far beyond it, the following years handed mid caps a fall roughly one and a half times deeper than the Nifty's. Own some, keep the share deliberate rather than letting it drift up after a good year, and add far more enthusiastically after a crash than during a run.",
           "live_ok": true,
           "live_source": "NSE",
-          "live_as_of": "2026-09-24",
+          "live_as_of": "2026-09-28",
           "news": [],
-          "total_return": 15.0,
+          "total_return": 15.1,
           "dear": false,
-          "pin": 45,
-          "reading": "Today: PE ratio of 28.1x against a 10-year average of 29x — about 3% cheaper than usual."
+          "pin": 42,
+          "reading": "Today: PE ratio of 27.6x against a 10-year average of 29x — about 5% cheaper than usual."
         },
         {
           "code": "SMALLCAP",
@@ -4119,7 +4109,7 @@
           "metric_label": "PE ratio",
           "metric_short": "PE ratio",
           "metric_def": "Price divided by one year's profit. For small companies this number is unreliable — profits are volatile, so a single good year can make the whole segment look cheap.",
-          "metric_now": 33.5,
+          "metric_now": 32.96,
           "metric_avg": 30.0,
           "metric_avg_label": "10-year average",
           "metric_avg_short": "10-yr",
@@ -4134,7 +4124,7 @@
           "extras": [
             {
               "label": "Price to book",
-              "value": "3.43x",
+              "value": "3.38x",
               "def": "What you pay for each rupee of the companies' net assets on paper. Live from the NSE."
             },
             {
@@ -4144,12 +4134,12 @@
             },
             {
               "label": "Index level",
-              "value": "18,156  (-1.39% today)",
+              "value": "17,863  (-1.63% today)",
               "def": "Where the index closed on the last trading day."
             },
             {
               "label": "Premium to large caps",
-              "value": "1.72x",
+              "value": "1.71x",
               "def": "This segment's PE divided by the Nifty 50's. The long-run normal is about 1.10x; well above it means you are paying for growth twice over. Computed from today's live numbers."
             }
           ],
@@ -4269,12 +4259,12 @@
           "verdict": "The highest long-run returns in Indian equity, and the highest chance you personally never collect them. The faster profit growth is real. So is the fact that this segment falls 60% or more twice a decade and takes years — not months — to recover, precisely when your confidence is lowest. Small-cap valuations are also the most brutally mean- reverting thing in Indian markets, so what you pay matters more here than anywhere else on this page. Hold it in a size where a 60% fall would be annoying rather than life-changing, and buy it when the headlines are grim rather than when your neighbour is boasting.",
           "live_ok": true,
           "live_source": "NSE",
-          "live_as_of": "2026-09-24",
+          "live_as_of": "2026-09-28",
           "news": [],
           "total_return": 15.1,
           "dear": true,
-          "pin": 69,
-          "reading": "Today: PE ratio of 33.5x against a 10-year average of 30x — about 12% dearer than usual."
+          "pin": 66,
+          "reading": "Today: PE ratio of 32.96x against a 10-year average of 30x — about 10% dearer than usual."
         },
         {
           "code": "BROAD",
@@ -4286,7 +4276,7 @@
           "metric_label": "PE ratio",
           "metric_short": "PE ratio",
           "metric_def": "Price divided by one year's profit, across almost every listed Indian company — the closest thing to 'what India Inc costs'.",
-          "metric_now": 21.85,
+          "metric_now": 21.54,
           "metric_avg": 24.5,
           "metric_avg_label": "10-year average",
           "metric_avg_short": "10-yr",
@@ -4301,17 +4291,17 @@
           "extras": [
             {
               "label": "Price to book",
-              "value": "3.12x",
+              "value": "3.08x",
               "def": "What you pay for each rupee of the companies' net assets on paper. Live from the NSE."
             },
             {
               "label": "Dividend yield",
-              "value": "0.99%",
+              "value": "1.01%",
               "def": "Cash paid out each year as a percentage of the price you pay. Live from the NSE."
             },
             {
               "label": "Index level",
-              "value": "22,553  (-1.67% today)",
+              "value": "22,232  (-1.64% today)",
               "def": "Where the index closed on the last trading day."
             },
             {
@@ -4357,7 +4347,7 @@
             },
             {
               "label": "Valuation drift",
-              "value": 0.7,
+              "value": 0.8,
               "def": "Today's reading sits below this asset's own normal, so the price tag may drift back up, which adds to returns. Worked out fresh each morning from the live number, assuming only about 60% of the gap closes over ten years — markets can stay mispriced for a long time."
             }
           ],
@@ -4421,12 +4411,12 @@
           "verdict": "The most sensible single thing an Indian investor can own. You get the entire market for 0.2-0.35% a year and you never have to answer the question that trips most people up — large, mid or small — because the fund holds each at its natural weight and rebalances itself as companies grow and shrink. The expected return is around 11-12% a year, essentially the same as the Nifty, but with better odds because no part of it is a concentrated bet. Almost nobody regrets owning this; plenty of people regret the clever alternatives they chose instead.",
           "live_ok": true,
           "live_source": "NSE",
-          "live_as_of": "2026-09-24",
+          "live_as_of": "2026-09-28",
           "news": [],
-          "total_return": 13.3,
+          "total_return": 13.4,
           "dear": false,
-          "pin": 32,
-          "reading": "Today: PE ratio of 21.85x against a 10-year average of 24.5x — about 11% cheaper than usual."
+          "pin": 30,
+          "reading": "Today: PE ratio of 21.54x against a 10-year average of 24.5x — about 12% cheaper than usual."
         }
       ]
     },
@@ -4445,7 +4435,7 @@
           "metric_label": "Price to book",
           "metric_short": "Price to book",
           "metric_def": "For a bank, price-to-book matters more than PE. A bank's 'book' is its net worth — what is left after every loan and deposit is settled. Paying 2.4x book means paying ₹2.40 for each ₹1 of that net worth, on the bet the bank keeps earning well on it.",
-          "metric_now": 1.66,
+          "metric_now": 1.63,
           "metric_avg": 2.4,
           "metric_avg_label": "10-year average",
           "metric_avg_short": "10-yr",
@@ -4460,17 +4450,17 @@
           "extras": [
             {
               "label": "PE ratio",
-              "value": "13.12x",
+              "value": "12.89x",
               "def": "Price divided by one year's profit, published by the NSE with today's close."
             },
             {
               "label": "Dividend yield",
-              "value": "0.71%",
+              "value": "0.72%",
               "def": "Cash paid out each year as a percentage of the price you pay. Live from the NSE."
             },
             {
               "label": "Index level",
-              "value": "55,438  (-1.96% today)",
+              "value": "54,472  (-1.99% today)",
               "def": "Where the index closed on the last trading day."
             },
             {
@@ -4516,7 +4506,7 @@
             },
             {
               "label": "Valuation drift",
-              "value": 2.4,
+              "value": 2.5,
               "def": "Today's reading sits below this asset's own normal, so the price tag may drift back up, which adds to returns. Worked out fresh each morning from the live number, assuming only about 60% of the gap closes over ten years — markets can stay mispriced for a long time."
             }
           ],
@@ -4584,17 +4574,12 @@
           "verdict": "The Indian market's most examinable business, and its most geared. A bank borrows at one rate and lends at a higher one using roughly ₹9 of other people's money for every ₹1 of its own — which is why banks compound beautifully for years and then occasionally lose half their value in months. Judge them on price-to-book against their own history rather than on PE, and on the two things underneath it: whether bad loans are rising, and whether margins are being squeezed by competition for deposits. Credit quality is the one that matters — a margin squeeze is survivable, a bad-loan cycle is what destroys a bank's net worth. You already own a lot of this through any Nifty fund, so a separate bank fund is a deliberate second helping.",
           "live_ok": true,
           "live_source": "NSE",
-          "live_as_of": "2026-09-24",
-          "news": [
-            {
-              "title": "Nifty hits over five-month low as banks, NBFCs slide amid high oil prices",
-              "url": "https://www.business-standard.com/markets/news/nifty-hits-over-five-month-low-as-banks-nbfcs-slide-amid-high-oil-prices-126092401078_1.html"
-            }
-          ],
-          "total_return": 15.4,
+          "live_as_of": "2026-09-28",
+          "news": [],
+          "total_return": 15.5,
           "dear": false,
           "pin": 3,
-          "reading": "Today: Price to book of 1.66x against a 10-year average of 2.4x — about 31% cheaper than usual."
+          "reading": "Today: Price to book of 1.63x against a 10-year average of 2.4x — about 32% cheaper than usual."
         },
         {
           "code": "IT",
@@ -4605,7 +4590,7 @@
           "valuation": "cheap",
           "metric_label": "PE ratio",
           "metric_short": "PE ratio",
-          "metric_now": 18.0,
+          "metric_now": 17.92,
           "metric_avg": 24.0,
           "metric_avg_label": "10-year average",
           "metric_avg_short": "10-yr",
@@ -4621,17 +4606,17 @@
           "extras": [
             {
               "label": "Price to book",
-              "value": "4.95x",
+              "value": "4.93x",
               "def": "What you pay for each rupee of the companies' net assets on paper. Live from the NSE."
             },
             {
               "label": "Dividend yield",
-              "value": "2.84%",
+              "value": "2.86%",
               "def": "Cash paid out each year as a percentage of the price you pay. Live from the NSE."
             },
             {
               "label": "Index level",
-              "value": "28,209  (-0.44% today)",
+              "value": "28,086  (-0.26% today)",
               "def": "Where the index closed on the last trading day."
             },
             {
@@ -4677,7 +4662,7 @@
             },
             {
               "label": "Valuation drift",
-              "value": 1.8,
+              "value": 1.9,
               "def": "Today's reading sits below this asset's own normal, so the price tag may drift back up, which adds to returns. Worked out fresh each morning from the live number, assuming only about 60% of the gap closes over ten years — markets can stay mispriced for a long time."
             },
             {
@@ -4751,12 +4736,12 @@
           "verdict": "The best capital-efficient businesses India has, with an honest question hanging over them. They earn about 27% on shareholders' capital, pay real dividends, and collect in dollars while paying salaries in rupees — which makes them the natural hedge inside an Indian portfolio, rising when foreign money leaves and the rupee slides. The question is whether AI is a new market to serve or a threat to the routine coding and testing work that still pays the bills; nobody knows yet, and the price reflects that uncertainty. Own this for the rupee hedge and the cash it throws off, and watch headcount alongside revenue — falling employee numbers with flat revenue is that question being answered.",
           "live_ok": true,
           "live_source": "NSE",
-          "live_as_of": "2026-09-24",
+          "live_as_of": "2026-09-28",
           "news": [],
-          "total_return": 14.1,
+          "total_return": 14.2,
           "dear": false,
           "pin": 8,
-          "reading": "Today: PE ratio of 18x against a 10-year average of 24x — about 25% cheaper than usual."
+          "reading": "Today: PE ratio of 17.92x against a 10-year average of 24x — about 25% cheaper than usual."
         },
         {
           "code": "FMCG",
@@ -4767,7 +4752,7 @@
           "valuation": "cheap",
           "metric_label": "PE ratio",
           "metric_short": "PE ratio",
-          "metric_now": 31.75,
+          "metric_now": 31.4,
           "metric_avg": 38.0,
           "metric_avg_label": "10-year average",
           "metric_avg_short": "10-yr",
@@ -4783,17 +4768,17 @@
           "extras": [
             {
               "label": "Price to book",
-              "value": "7.6x",
+              "value": "7.52x",
               "def": "What you pay for each rupee of the companies' net assets on paper. Live from the NSE."
             },
             {
               "label": "Dividend yield",
-              "value": "1.03%",
+              "value": "1.05%",
               "def": "Cash paid out each year as a percentage of the price you pay. Live from the NSE."
             },
             {
               "label": "Index level",
-              "value": "45,759  (-1.08% today)",
+              "value": "45,264  (-1.47% today)",
               "def": "Where the index closed on the last trading day."
             },
             {
@@ -4844,7 +4829,7 @@
             },
             {
               "label": "Valuation drift",
-              "value": 1.1,
+              "value": 1.2,
               "def": "Today's reading sits below this asset's own normal, so the price tag may drift back up, which adds to returns. Worked out fresh each morning from the live number, assuming only about 60% of the gap closes over ten years — markets can stay mispriced for a long time."
             }
           ],
@@ -4913,12 +4898,12 @@
           "verdict": "The quiet compounder. Nobody gets rich quickly on soap and biscuits, but 38% return on shareholders' capital and earnings that barely notice a recession are genuinely rare, and this sector falls least in a crash — which is exactly when you want something you can sell without regret to buy what has collapsed. It will always look expensive on PE; 30-40x is normal here because the earnings are so reliable, so only the comparison with its own history tells you anything. The threat worth taking seriously is not the monsoon, it is distribution: quick-commerce and new direct-to-consumer brands are chipping at the moat that justified the premium. Judge it on volume growth rather than revenue — revenue can rise on price increases while people quietly buy less.",
           "live_ok": true,
           "live_source": "NSE",
-          "live_as_of": "2026-09-24",
+          "live_as_of": "2026-09-28",
           "news": [],
-          "total_return": 12.8,
+          "total_return": 12.9,
           "dear": false,
-          "pin": 23,
-          "reading": "Today: PE ratio of 31.75x against a 10-year average of 38x — about 16% cheaper than usual."
+          "pin": 21,
+          "reading": "Today: PE ratio of 31.4x against a 10-year average of 38x — about 17% cheaper than usual."
         },
         {
           "code": "PHARMA",
@@ -4929,7 +4914,7 @@
           "valuation": "expensive",
           "metric_label": "PE ratio",
           "metric_short": "PE ratio",
-          "metric_now": 41.85,
+          "metric_now": 41.44,
           "metric_avg": 32.0,
           "metric_avg_label": "10-year average",
           "metric_avg_short": "10-yr",
@@ -4945,17 +4930,17 @@
           "extras": [
             {
               "label": "Price to book",
-              "value": "5.08x",
+              "value": "5.03x",
               "def": "What you pay for each rupee of the companies' net assets on paper. Live from the NSE."
             },
             {
               "label": "Dividend yield",
-              "value": "0.52%",
+              "value": "0.53%",
               "def": "Cash paid out each year as a percentage of the price you pay. Live from the NSE."
             },
             {
               "label": "Index level",
-              "value": "27,029  (-0.45% today)",
+              "value": "26,762  (-0.89% today)",
               "def": "Where the index closed on the last trading day."
             },
             {
@@ -5080,12 +5065,12 @@
           "verdict": "A genuinely useful diversifier, with a warning written into its own recent past. India's cost advantage in making medicines is real, and the world's wish to depend less on Chinese ingredients is a real tailwind. But this sector spent four years falling while everything else rose, purely because US generic prices collapsed and American regulators banned plants — and neither risk has gone away. That behaviour is the point: its worst period happened while the rest of the market did well, which is exactly what you want from a diversifier even though it feels awful at the time. The domestic hospital and diagnostics half is the better business and the quieter story.",
           "live_ok": true,
           "live_source": "NSE",
-          "live_as_of": "2026-09-24",
+          "live_as_of": "2026-09-28",
           "news": [],
           "total_return": 11.4,
           "dear": true,
           "pin": 97,
-          "reading": "Today: PE ratio of 41.85x against a 10-year average of 32x — about 31% dearer than usual."
+          "reading": "Today: PE ratio of 41.44x against a 10-year average of 32x — about 29% dearer than usual."
         },
         {
           "code": "AUTO",
@@ -5096,7 +5081,7 @@
           "valuation": "expensive",
           "metric_label": "PE ratio",
           "metric_short": "PE ratio",
-          "metric_now": 31.06,
+          "metric_now": 30.82,
           "metric_avg": 27.0,
           "metric_avg_label": "10-year average",
           "metric_avg_short": "10-yr",
@@ -5112,7 +5097,7 @@
           "extras": [
             {
               "label": "Price to book",
-              "value": "4.08x",
+              "value": "4.05x",
               "def": "What you pay for each rupee of the companies' net assets on paper. Live from the NSE."
             },
             {
@@ -5122,7 +5107,7 @@
             },
             {
               "label": "Index level",
-              "value": "26,730  (-1.57% today)",
+              "value": "26,525  (-1.64% today)",
               "def": "Where the index closed on the last trading day."
             },
             {
@@ -5242,12 +5227,12 @@
           "verdict": "A well-run cyclical, and cyclicals are where a PE misleads most. Profits peak just as the shares look cheapest, so a low multiple on peak earnings is the standard way money is lost here — and a high multiple on depressed earnings has often been the buy. Indian autos are cash-generating and now globally competitive in two-wheelers, with the electric transition a genuine long-term opportunity for the bike makers and a genuine threat to the parts suppliers built around engines. The dashboard is unusually good: every maker publishes monthly sales in the first days of each month, and the two-wheeler numbers tell you more about rural India than most commentary does.",
           "live_ok": true,
           "live_source": "NSE",
-          "live_as_of": "2026-09-24",
+          "live_as_of": "2026-09-28",
           "news": [],
           "total_return": 11.5,
           "dear": true,
-          "pin": 75,
-          "reading": "Today: PE ratio of 31.06x against a 10-year average of 27x — about 15% dearer than usual."
+          "pin": 74,
+          "reading": "Today: PE ratio of 30.82x against a 10-year average of 27x — about 14% dearer than usual."
         },
         {
           "code": "ENERGY",
@@ -5258,7 +5243,7 @@
           "valuation": "fair",
           "metric_label": "PE ratio",
           "metric_short": "PE ratio",
-          "metric_now": 14.49,
+          "metric_now": 14.23,
           "metric_avg": 13.5,
           "metric_avg_label": "10-year average",
           "metric_avg_short": "10-yr",
@@ -5274,17 +5259,17 @@
           "extras": [
             {
               "label": "Price to book",
-              "value": "2.01x",
+              "value": "1.97x",
               "def": "What you pay for each rupee of the companies' net assets on paper. Live from the NSE."
             },
             {
               "label": "Dividend yield",
-              "value": "1.87%",
+              "value": "1.91%",
               "def": "Cash paid out each year as a percentage of the price you pay. Live from the NSE."
             },
             {
               "label": "Index level",
-              "value": "37,361  (-1.06% today)",
+              "value": "36,693  (-2.00% today)",
               "def": "Where the index closed on the last trading day."
             },
             {
@@ -5335,7 +5320,7 @@
             },
             {
               "label": "Valuation drift",
-              "value": -0.4,
+              "value": -0.3,
               "def": "Today's reading sits above this asset's own normal, so expect the price tag investors are willing to pay to drift back down — a drag on returns. Worked out fresh each morning from the live number, assuming only about 60% of the gap closes over ten years — markets can stay mispriced for a long time."
             }
           ],
@@ -5404,21 +5389,12 @@
           "verdict": "An income holding disguised as an equity sector, and the closest thing the Indian market has to an inflation hedge. The dividend is a large share of the total return here, which changes what this asset is for — you are being paid to wait rather than betting on growth. Note that the index is two opposite bets at once: refiners make money when crude is cheap, producers when it is dear. The genuine attraction is electricity, where India's demand is outrunning its supply and the grid needs enormous investment. The genuine risk is political: when fuel gets expensive the government has repeatedly chosen voters over shareholders, and it is the majority owner of much of this index.",
           "live_ok": true,
           "live_source": "NSE",
-          "live_as_of": "2026-09-24",
-          "news": [
-            {
-              "title": "India cuts import duty on palm, soybean oils to lower edible oil prices",
-              "url": "https://www.thehindubusinessline.com/economy/agri-business/centre-cuts-customs-duty-on-crude-refined-sunflower-soybean-and-palm-oils/article71501312.ece"
-            },
-            {
-              "title": "Nifty hits over five-month low as banks, NBFCs slide amid high oil prices",
-              "url": "https://www.business-standard.com/markets/news/nifty-hits-over-five-month-low-as-banks-nbfcs-slide-amid-high-oil-prices-126092401078_1.html"
-            }
-          ],
-          "total_return": 10.5,
+          "live_as_of": "2026-09-28",
+          "news": [],
+          "total_return": 10.6,
           "dear": true,
-          "pin": 62,
-          "reading": "Today: PE ratio of 14.49x against a 10-year average of 13.5x — about 7% dearer than usual."
+          "pin": 59,
+          "reading": "Today: PE ratio of 14.23x against a 10-year average of 13.5x — about 5% dearer than usual."
         },
         {
           "code": "METALS",
@@ -5429,7 +5405,7 @@
           "valuation": "expensive",
           "metric_label": "PE ratio",
           "metric_short": "PE ratio",
-          "metric_now": 15.88,
+          "metric_now": 15.65,
           "metric_avg": 14.0,
           "metric_avg_label": "10-year average",
           "metric_avg_short": "10-yr",
@@ -5445,17 +5421,17 @@
           "extras": [
             {
               "label": "Price to book",
-              "value": "2.59x",
+              "value": "2.55x",
               "def": "What you pay for each rupee of the companies' net assets on paper. Live from the NSE."
             },
             {
               "label": "Dividend yield",
-              "value": "1.26%",
+              "value": "1.28%",
               "def": "Cash paid out each year as a percentage of the price you pay. Live from the NSE."
             },
             {
               "label": "Index level",
-              "value": "13,042  (-1.96% today)",
+              "value": "12,854  (-1.78% today)",
               "def": "Where the index closed on the last trading day."
             },
             {
@@ -5575,17 +5551,12 @@
           "verdict": "A sector to rent, not to own. Over twenty years Indian metals returned roughly 10% a year against the Nifty's 13% — while delivering falls of 70% along the way — because these companies have no pricing power at all and add new capacity precisely when profits are best. Steel sells for the world steel price; their profit is the gap between that and their costs, which is why a 10% move in the metal can double or erase a year's earnings, and why the PE here tells you less than almost anywhere else. It does have one real use: it is among the few things that rise when inflation and global industrial demand run hot together. Size it as a hedge, and watch China rather than India.",
           "live_ok": true,
           "live_source": "NSE",
-          "live_as_of": "2026-09-24",
-          "news": [
-            {
-              "title": "Russian Federation notifies launch of safeguard investigation on certain flat steel products",
-              "url": "https://www.wto.org/english/news_e/news26_e/safe_rus_14sep26_485_e.htm"
-            }
-          ],
+          "live_as_of": "2026-09-28",
+          "news": [],
           "total_return": 7.9,
           "dear": true,
-          "pin": 72,
-          "reading": "Today: PE ratio of 15.88x against a 10-year average of 14x — about 13% dearer than usual."
+          "pin": 70,
+          "reading": "Today: PE ratio of 15.65x against a 10-year average of 14x — about 12% dearer than usual."
         },
         {
           "code": "REALTY",
@@ -5596,7 +5567,7 @@
           "valuation": "cheap",
           "metric_label": "PE ratio",
           "metric_short": "PE ratio",
-          "metric_now": 36.58,
+          "metric_now": 36.14,
           "metric_avg": 40.0,
           "metric_avg_label": "10-year average",
           "metric_avg_short": "10-yr",
@@ -5612,17 +5583,17 @@
           "extras": [
             {
               "label": "Price to book",
-              "value": "3.75x",
+              "value": "3.7x",
               "def": "What you pay for each rupee of the companies' net assets on paper. Live from the NSE."
             },
             {
               "label": "Dividend yield",
-              "value": "0.48%",
+              "value": "0.49%",
               "def": "Cash paid out each year as a percentage of the price you pay. Live from the NSE."
             },
             {
               "label": "Index level",
-              "value": "861  (-1.10% today)",
+              "value": "851  (-2.12% today)",
               "def": "Where the index closed on the last trading day."
             },
             {
@@ -5663,7 +5634,7 @@
             },
             {
               "label": "Valuation drift",
-              "value": 0.5,
+              "value": 0.6,
               "def": "Today's reading sits below this asset's own normal, so the price tag may drift back up, which adds to returns. Worked out fresh each morning from the live number, assuming only about 60% of the gap closes over ten years — markets can stay mispriced for a long time."
             }
           ],
@@ -5732,12 +5703,12 @@
           "verdict": "Real businesses with the worst long-run record on this page. Over twenty years Indian realty shares returned about 5% a year — worse than a fixed deposit — because the 2008 collapse took 90% off and thirteen years to repair. The current cycle is genuinely healthier: less debt, fewer competitors after the 2018 shake-out, real demand for larger homes. But this is the most interest-rate-sensitive sector in India, developers live on credit that disappears exactly when they need it, and reported profit arrives years after a flat is actually sold — so judge them on pre-sales bookings and net debt instead. If you want to own Indian property, rent through a REIT is the sober version of this trade; this is the leveraged one.",
           "live_ok": true,
           "live_source": "NSE",
-          "live_as_of": "2026-09-24",
+          "live_as_of": "2026-09-28",
           "news": [],
-          "total_return": 15.9,
+          "total_return": 16.0,
           "dear": false,
-          "pin": 36,
-          "reading": "Today: PE ratio of 36.58x against a 10-year average of 40x — about 9% cheaper than usual."
+          "pin": 34,
+          "reading": "Today: PE ratio of 36.14x against a 10-year average of 40x — about 10% cheaper than usual."
         },
         {
           "code": "PSU",
@@ -5748,7 +5719,7 @@
           "valuation": "fair",
           "metric_label": "PE ratio",
           "metric_short": "PE ratio",
-          "metric_now": 10.84,
+          "metric_now": 10.66,
           "metric_avg": 11.0,
           "metric_avg_label": "10-year average",
           "metric_avg_short": "10-yr",
@@ -5764,17 +5735,17 @@
           "extras": [
             {
               "label": "Price to book",
-              "value": "1.7x",
+              "value": "1.67x",
               "def": "What you pay for each rupee of the companies' net assets on paper. Live from the NSE."
             },
             {
               "label": "Dividend yield",
-              "value": "2.7%",
+              "value": "2.74%",
               "def": "Cash paid out each year as a percentage of the price you pay. Live from the NSE."
             },
             {
               "label": "Index level",
-              "value": "9,555  (-0.85% today)",
+              "value": "9,390  (-1.91% today)",
               "def": "Where the index closed on the last trading day."
             },
             {
@@ -5820,7 +5791,7 @@
             },
             {
               "label": "Valuation drift",
-              "value": 0.1,
+              "value": 0.2,
               "def": "Today's reading sits below this asset's own normal, so the price tag may drift back up, which adds to returns. Worked out fresh each morning from the live number, assuming only about 60% of the gap closes over ten years — markets can stay mispriced for a long time."
             }
           ],
@@ -5889,12 +5860,12 @@
           "verdict": "Good businesses whose majority shareholder is not you. The government's spending on defence, railways and the power grid is real and it genuinely transformed these order books. But PSUs have always traded at a discount for a reason that has not gone away, only been forgotten: the state can choose cheap fuel before an election, a strategic acquisition you would never approve, or a dividend timed to suit the budget rather than the business. Much of the last few years' return came from that discount narrowing rather than from profits — and a discount can only close once. The utilities in this basket remain sensible dividend holdings; the defence and railway names are priced as though order books never slip, which they always do.",
           "live_ok": true,
           "live_source": "NSE",
-          "live_as_of": "2026-09-24",
+          "live_as_of": "2026-09-28",
           "news": [],
-          "total_return": 12.2,
+          "total_return": 12.3,
           "dear": false,
-          "pin": 48,
-          "reading": "Today: PE ratio of 10.84x against a 10-year average of 11x — almost exactly its normal level."
+          "pin": 45,
+          "reading": "Today: PE ratio of 10.66x against a 10-year average of 11x — about 3% cheaper than usual."
         }
       ]
     },
@@ -6057,7 +6028,7 @@
           "metric_label": "Gold-to-silver ratio",
           "metric_short": "Gold:silver",
           "metric_def": "How many ounces of silver one ounce of gold buys. The long-run average is roughly 66. A HIGH number means silver is cheap relative to gold — so here, unusually for this page, a big number is the good news.",
-          "metric_now": 67.1,
+          "metric_now": 68.2,
           "metric_avg": 66.0,
           "metric_avg_label": "Long-run average",
           "metric_avg_short": "long-run",
@@ -6071,12 +6042,12 @@
           "extras": [
             {
               "label": "Silver today",
-              "value": "₹198,331 a kg",
+              "value": "₹188,791 a kg",
               "def": "Spot silver converted into rupees at today's exchange rate."
             },
             {
               "label": "Gold today",
-              "value": "₹132,999 per 10g",
+              "value": "₹128,849 per 10g",
               "def": "Spot gold converted into rupees at today's exchange rate."
             },
             {
@@ -6110,7 +6081,7 @@
             },
             {
               "label": "Valuation drift",
-              "value": 0.1,
+              "value": 0.2,
               "def": "Today's reading sits below this asset's own normal, so the price tag may drift back up, which adds to returns. Worked out fresh each morning from the live number, assuming only about 60% of the gap closes over ten years — markets can stay mispriced for a long time."
             },
             {
@@ -6192,12 +6163,12 @@
           "verdict": "Gold's excitable younger sibling, with a growth story gold lacks. Over half of silver's demand is industrial — solar panels consume more of it every year — which gives it a genuine source of demand beyond fear, and also means it can fall hard in a recession while gold holds up. The number to watch is the gold-to-silver ratio: it has reverted toward its long-run average near 66 for a century, so a high reading has historically favoured silver and a low one favoured gold. The price of that opportunity is violence — silver moves about 70% more than gold and has twice in living memory fallen more than 70% and stayed down for twenty years. A small, deliberate satellite to gold, or nothing at all.",
           "live_ok": true,
           "live_source": "COMEX + ECB",
-          "live_as_of": "2026-09-24",
+          "live_as_of": "2026-09-28",
           "news": [],
-          "total_return": 8.1,
+          "total_return": 8.2,
           "dear": false,
-          "pin": 47,
-          "reading": "Today: Gold-to-silver ratio of 67.1:1 against a long-run average of 66:1 — almost exactly its normal level."
+          "pin": 45,
+          "reading": "Today: Gold-to-silver ratio of 68.2:1 against a long-run average of 66:1 — about 3% cheaper than usual."
         },
         {
           "code": "COPPER",
@@ -7432,7 +7403,16 @@
           ],
           "verdict": "Expensive, and still worth owning — for a reason that has nothing to do with returns. World shares at a CAPE of 30 against a long-run 22 point to about 8% a year in rupees, below Indian equity's 11-12%, so on the numbers alone you would skip this. The case is that every other thing you own is one bet: your salary, your home, your Nifty fund, your fixed deposit, all in a currency that has weakened about 3% a year for three decades. Fifteen to twenty-five per cent in dollar-earning assets is insurance against the one risk an Indian investor cannot diversify away locally. Buy it through a rupee SIP, check the fund is open, and lean toward the cheaper regions rather than piling further into the Nasdaq.",
           "live_ok": false,
-          "news": [],
+          "news": [
+            {
+              "title": "India’s kharif crops output may be lower, crops in winter season also at risk in rainfed areas",
+              "url": "https://www.thehindubusinessline.com/economy/agri-business/indias-kharif-crops-output-may-be-lower-crops-in-winter-season-also-at-risk-in-rainfed-areas/article71519209.ece"
+            },
+            {
+              "title": "Federal Reserve Board and Federal Open Market Committee release economic projections from the September 15-16 FOMC meeting",
+              "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916b.htm"
+            }
+          ],
           "total_return": 7.8,
           "dear": true,
           "pin": 97,
@@ -7626,7 +7606,7 @@
       ],
       "why": "Inflation is the tax that nobody votes for. It punishes anything promising you a FIXED number of rupees later, and rewards anything whose price rises with the general price level.",
       "india": "India's inflation is still mostly a food and fuel story. A bad monsoon or a crude spike does more to your portfolio than any Fed meeting, because it forces the RBI to keep rates high and squeezes the consumer companies that dominate the index.",
-      "signals": 1
+      "signals": 0
     },
     {
       "name": "Interest rates come down",
@@ -7643,7 +7623,7 @@
       ],
       "why": "A falling interest rate raises the value of every future rupee. Assets whose payoff is far in the future — growth shares, long bonds, property — gain the most, which is why rate-cut cycles feel like everything works at once.",
       "india": "In India, rate cuts usually arrive when inflation is beaten and growth is soft. The market front-runs them by six months, so the money is made while the news still sounds bad.",
-      "signals": 1
+      "signals": 0
     },
     {
       "name": "The rupee weakens fast",
@@ -7659,7 +7639,7 @@
       ],
       "why": "A currency is a price like any other. When the rupee falls, every rupee-earning asset you own is marked down against the world, and every dollar-earning asset is marked up. Most Indian portfolios are 100% on the losing side of that trade.",
       "india": "The rupee has slid roughly 3% a year against the dollar for three decades. Treat that as the baseline weather, not an emergency — and own some dollar earnings so you are not betting everything on one currency.",
-      "signals": 1
+      "signals": 0
     },
     {
       "name": "The world gets frightened",
@@ -7676,7 +7656,7 @@
       ],
       "why": "In a panic, correlations go to one: things that normally move separately all fall together, because the seller is not choosing on merit — they simply need cash. Only genuinely different assets protect you, and there are very few.",
       "india": "India is fundamentally a domestic economy but a foreign-funded market. That is why a Nifty fall can have nothing to do with India: the seller is an overseas fund meeting redemptions in New York.",
-      "signals": 4
+      "signals": 2
     },
     {
       "name": "Growth is strong and boring",
@@ -7692,11 +7672,11 @@
       ],
       "why": "This is the regime that pays owners of businesses, and it lasts longer than anyone expects. The mistake is not being absent — it is arriving late, after valuations have already priced in the good weather continuing forever.",
       "india": "India has had the longest stretches of this of any large market. It is also why Indian investors systematically underestimate how bad the other four regimes feel: most portfolios here have never been properly tested.",
-      "signals": 0
+      "signals": 1
     }
   ],
   "leading_regime": "The world gets frightened",
-  "mood_today": "risk-off",
+  "mood_today": "mixed",
   "stats": {
     "cheap": 9,
     "fair": 8,

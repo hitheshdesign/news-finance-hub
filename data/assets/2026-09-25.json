@@ -1,12 +1,12 @@
 {
-  "updated": "2026-09-24",
-  "updated_human": "Thursday, 24 September 2026",
+  "updated": "2026-09-25",
+  "updated_human": "Friday, 25 September 2026",
   "as_of": "September 2026",
   "live_ok": true,
   "live_count": 14,
   "live_as_of": "2026-09-24",
   "usd_inr": 95.96,
-  "gold_inr": 132999.0,
+  "gold_inr": 133126.0,
   "note": "Every number on this page is a curated, rounded estimate kept to teach the shape of each asset, not to trade on. Ratios move every day; the lesson — where a return comes from and what breaks it — does not.",
   "assets": [
     {
@@ -820,12 +820,7 @@
       "live_ok": true,
       "live_source": "NSE",
       "live_as_of": "2026-09-24",
-      "news": [
-        {
-          "title": "Nifty hits over five-month low as banks, NBFCs slide amid high oil prices",
-          "url": "https://www.business-standard.com/markets/news/nifty-hits-over-five-month-low-as-banks-nbfcs-slide-amid-high-oil-prices-126092401078_1.html"
-        }
-      ],
+      "news": [],
       "total_return": 15.4,
       "dear": false,
       "pin": 3,
@@ -1642,12 +1637,8 @@
       "live_as_of": "2026-09-24",
       "news": [
         {
-          "title": "India cuts import duty on palm, soybean oils to lower edible oil prices",
-          "url": "https://www.thehindubusinessline.com/economy/agri-business/centre-cuts-customs-duty-on-crude-refined-sunflower-soybean-and-palm-oils/article71501312.ece"
-        },
-        {
-          "title": "Nifty hits over five-month low as banks, NBFCs slide amid high oil prices",
-          "url": "https://www.business-standard.com/markets/news/nifty-hits-over-five-month-low-as-banks-nbfcs-slide-amid-high-oil-prices-126092401078_1.html"
+          "title": "Rupee, bonds witness sell-off as crude oil, US Treasury yields rise",
+          "url": "https://www.business-standard.com/economy/news/rupee-bonds-witness-sell-off-as-crude-oil-us-treasury-yields-rise-126092401267_1.html"
         }
       ],
       "total_return": 10.5,
@@ -1811,12 +1802,7 @@
       "live_ok": true,
       "live_source": "NSE",
       "live_as_of": "2026-09-24",
-      "news": [
-        {
-          "title": "Russian Federation notifies launch of safeguard investigation on certain flat steel products",
-          "url": "https://www.wto.org/english/news_e/news26_e/safe_rus_14sep26_485_e.htm"
-        }
-      ],
+      "news": [],
       "total_return": 7.9,
       "dear": true,
       "pin": 72,
@@ -2299,12 +2285,12 @@
       "extras": [
         {
           "label": "Silver today",
-          "value": "₹198,331 a kg",
+          "value": "₹198,300 a kg",
           "def": "Spot silver converted into rupees at today's exchange rate."
         },
         {
           "label": "Gold today",
-          "value": "₹132,999 per 10g",
+          "value": "₹133,126 per 10g",
           "def": "Spot gold converted into rupees at today's exchange rate."
         },
         {
@@ -3097,7 +3083,12 @@
       ],
       "verdict": "The most under-owned sensible asset in India, and currently priced well. You are being paid about 2.1% above inflation to take no default risk at all, against a twenty-year average nearer 1.2% — so on this measure bonds are the cheapest thing on this page. For a 30% taxpayer, tax eats much of it, which is exactly why the direct route through RBI Retail Direct or a target maturity fund matters. The real argument for owning these is not the return, though: it is that bonds go up when shares collapse, which is what makes it psychologically possible to keep holding equity through the worst year of your investing life. Most Indian portfolios have almost none of this and are far more fragile than their owners realise.",
       "live_ok": false,
-      "news": [],
+      "news": [
+        {
+          "title": "Bond Yields Hit Multi - Decade Highs As U . S . Stocks ( $SPX , $DOWI , $IUXX ) Slide On Oil Shock And Hawkish Fed",
+          "url": "https://www.foreignpolicyjournal.com/2026/09/24/bond-yields-hit-multi-decade-highs-as-u-s-stocks-spx-dowi-iuxx-slide-on-oil-shock-and-hawkish-fed/"
+        }
+      ],
       "total_return": 7.6,
       "dear": false,
       "pin": 3,
@@ -3639,7 +3630,16 @@
       ],
       "verdict": "Expensive, and still worth owning — for a reason that has nothing to do with returns. World shares at a CAPE of 30 against a long-run 22 point to about 8% a year in rupees, below Indian equity's 11-12%, so on the numbers alone you would skip this. The case is that every other thing you own is one bet: your salary, your home, your Nifty fund, your fixed deposit, all in a currency that has weakened about 3% a year for three decades. Fifteen to twenty-five per cent in dollar-earning assets is insurance against the one risk an Indian investor cannot diversify away locally. Buy it through a rupee SIP, check the fund is open, and lean toward the cheaper regions rather than piling further into the Nasdaq.",
       "live_ok": false,
-      "news": [],
+      "news": [
+        {
+          "title": "Federal Reserve Board requests public comment on two proposals related to establishing a regulatory framework for Board-supervised payment stablecoin issuers under the GENIUS Act",
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260924a.htm"
+        },
+        {
+          "title": "Bond Yields Hit Multi - Decade Highs As U . S . Stocks ( $SPX , $DOWI , $IUXX ) Slide On Oil Shock And Hawkish Fed",
+          "url": "https://www.foreignpolicyjournal.com/2026/09/24/bond-yields-hit-multi-decade-highs-as-u-s-stocks-spx-dowi-iuxx-slide-on-oil-shock-and-hawkish-fed/"
+        }
+      ],
       "total_return": 7.8,
       "dear": true,
       "pin": 97,
@@ -3754,7 +3754,12 @@
       ],
       "verdict": "The one asset here that cannot be valued, only priced — and India taxes it harder than anything else. That is not a verdict on whether it rises; it is the structural fact that matters. Every other asset on this page has something that anchors its price: profits, interest, rent, or five thousand years of real-price history. A token has none, which is why there is no number that tells you it is cheap and no floor when sentiment turns. Layer on India's rules — 30% flat, no loss set-off at all, 1% deducted on every sale — and the after-tax mathematics are worse than most holders realise. It is included here because it exists, people put real money into it, and you deserve the honest version rather than either the sales pitch or a lecture. If you want some, keep it to money you could watch go to zero without it changing your life.",
       "live_ok": false,
-      "news": [],
+      "news": [
+        {
+          "title": "Federal Reserve Board requests public comment on two proposals related to establishing a regulatory framework for Board-supervised payment stablecoin issuers under the GENIUS Act",
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260924a.htm"
+        }
+      ],
       "total_return": null,
       "dear": null,
       "pin": 50,
@@ -4585,12 +4590,7 @@
           "live_ok": true,
           "live_source": "NSE",
           "live_as_of": "2026-09-24",
-          "news": [
-            {
-              "title": "Nifty hits over five-month low as banks, NBFCs slide amid high oil prices",
-              "url": "https://www.business-standard.com/markets/news/nifty-hits-over-five-month-low-as-banks-nbfcs-slide-amid-high-oil-prices-126092401078_1.html"
-            }
-          ],
+          "news": [],
           "total_return": 15.4,
           "dear": false,
           "pin": 3,
@@ -5407,12 +5407,8 @@
           "live_as_of": "2026-09-24",
           "news": [
             {
-              "title": "India cuts import duty on palm, soybean oils to lower edible oil prices",
-              "url": "https://www.thehindubusinessline.com/economy/agri-business/centre-cuts-customs-duty-on-crude-refined-sunflower-soybean-and-palm-oils/article71501312.ece"
-            },
-            {
-              "title": "Nifty hits over five-month low as banks, NBFCs slide amid high oil prices",
-              "url": "https://www.business-standard.com/markets/news/nifty-hits-over-five-month-low-as-banks-nbfcs-slide-amid-high-oil-prices-126092401078_1.html"
+              "title": "Rupee, bonds witness sell-off as crude oil, US Treasury yields rise",
+              "url": "https://www.business-standard.com/economy/news/rupee-bonds-witness-sell-off-as-crude-oil-us-treasury-yields-rise-126092401267_1.html"
             }
           ],
           "total_return": 10.5,
@@ -5576,12 +5572,7 @@
           "live_ok": true,
           "live_source": "NSE",
           "live_as_of": "2026-09-24",
-          "news": [
-            {
-              "title": "Russian Federation notifies launch of safeguard investigation on certain flat steel products",
-              "url": "https://www.wto.org/english/news_e/news26_e/safe_rus_14sep26_485_e.htm"
-            }
-          ],
+          "news": [],
           "total_return": 7.9,
           "dear": true,
           "pin": 72,
@@ -6071,12 +6062,12 @@
           "extras": [
             {
               "label": "Silver today",
-              "value": "₹198,331 a kg",
+              "value": "₹198,300 a kg",
               "def": "Spot silver converted into rupees at today's exchange rate."
             },
             {
               "label": "Gold today",
-              "value": "₹132,999 per 10g",
+              "value": "₹133,126 per 10g",
               "def": "Spot gold converted into rupees at today's exchange rate."
             },
             {
@@ -6883,7 +6874,12 @@
           ],
           "verdict": "The most under-owned sensible asset in India, and currently priced well. You are being paid about 2.1% above inflation to take no default risk at all, against a twenty-year average nearer 1.2% — so on this measure bonds are the cheapest thing on this page. For a 30% taxpayer, tax eats much of it, which is exactly why the direct route through RBI Retail Direct or a target maturity fund matters. The real argument for owning these is not the return, though: it is that bonds go up when shares collapse, which is what makes it psychologically possible to keep holding equity through the worst year of your investing life. Most Indian portfolios have almost none of this and are far more fragile than their owners realise.",
           "live_ok": false,
-          "news": [],
+          "news": [
+            {
+              "title": "Bond Yields Hit Multi - Decade Highs As U . S . Stocks ( $SPX , $DOWI , $IUXX ) Slide On Oil Shock And Hawkish Fed",
+              "url": "https://www.foreignpolicyjournal.com/2026/09/24/bond-yields-hit-multi-decade-highs-as-u-s-stocks-spx-dowi-iuxx-slide-on-oil-shock-and-hawkish-fed/"
+            }
+          ],
           "total_return": 7.6,
           "dear": false,
           "pin": 3,
@@ -7432,7 +7428,16 @@
           ],
           "verdict": "Expensive, and still worth owning — for a reason that has nothing to do with returns. World shares at a CAPE of 30 against a long-run 22 point to about 8% a year in rupees, below Indian equity's 11-12%, so on the numbers alone you would skip this. The case is that every other thing you own is one bet: your salary, your home, your Nifty fund, your fixed deposit, all in a currency that has weakened about 3% a year for three decades. Fifteen to twenty-five per cent in dollar-earning assets is insurance against the one risk an Indian investor cannot diversify away locally. Buy it through a rupee SIP, check the fund is open, and lean toward the cheaper regions rather than piling further into the Nasdaq.",
           "live_ok": false,
-          "news": [],
+          "news": [
+            {
+              "title": "Federal Reserve Board requests public comment on two proposals related to establishing a regulatory framework for Board-supervised payment stablecoin issuers under the GENIUS Act",
+              "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260924a.htm"
+            },
+            {
+              "title": "Bond Yields Hit Multi - Decade Highs As U . S . Stocks ( $SPX , $DOWI , $IUXX ) Slide On Oil Shock And Hawkish Fed",
+              "url": "https://www.foreignpolicyjournal.com/2026/09/24/bond-yields-hit-multi-decade-highs-as-u-s-stocks-spx-dowi-iuxx-slide-on-oil-shock-and-hawkish-fed/"
+            }
+          ],
           "total_return": 7.8,
           "dear": true,
           "pin": 97,
@@ -7554,7 +7559,12 @@
           ],
           "verdict": "The one asset here that cannot be valued, only priced — and India taxes it harder than anything else. That is not a verdict on whether it rises; it is the structural fact that matters. Every other asset on this page has something that anchors its price: profits, interest, rent, or five thousand years of real-price history. A token has none, which is why there is no number that tells you it is cheap and no floor when sentiment turns. Layer on India's rules — 30% flat, no loss set-off at all, 1% deducted on every sale — and the after-tax mathematics are worse than most holders realise. It is included here because it exists, people put real money into it, and you deserve the honest version rather than either the sales pitch or a lecture. If you want some, keep it to money you could watch go to zero without it changing your life.",
           "live_ok": false,
-          "news": [],
+          "news": [
+            {
+              "title": "Federal Reserve Board requests public comment on two proposals related to establishing a regulatory framework for Board-supervised payment stablecoin issuers under the GENIUS Act",
+              "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260924a.htm"
+            }
+          ],
           "total_return": null,
           "dear": null,
           "pin": 50,
@@ -7626,7 +7636,7 @@
       ],
       "why": "Inflation is the tax that nobody votes for. It punishes anything promising you a FIXED number of rupees later, and rewards anything whose price rises with the general price level.",
       "india": "India's inflation is still mostly a food and fuel story. A bad monsoon or a crude spike does more to your portfolio than any Fed meeting, because it forces the RBI to keep rates high and squeezes the consumer companies that dominate the index.",
-      "signals": 1
+      "signals": 3
     },
     {
       "name": "Interest rates come down",
@@ -7643,7 +7653,7 @@
       ],
       "why": "A falling interest rate raises the value of every future rupee. Assets whose payoff is far in the future — growth shares, long bonds, property — gain the most, which is why rate-cut cycles feel like everything works at once.",
       "india": "In India, rate cuts usually arrive when inflation is beaten and growth is soft. The market front-runs them by six months, so the money is made while the news still sounds bad.",
-      "signals": 1
+      "signals": 0
     },
     {
       "name": "The rupee weakens fast",
@@ -7676,7 +7686,7 @@
       ],
       "why": "In a panic, correlations go to one: things that normally move separately all fall together, because the seller is not choosing on merit — they simply need cash. Only genuinely different assets protect you, and there are very few.",
       "india": "India is fundamentally a domestic economy but a foreign-funded market. That is why a Nifty fall can have nothing to do with India: the seller is an overseas fund meeting redemptions in New York.",
-      "signals": 4
+      "signals": 2
     },
     {
       "name": "Growth is strong and boring",
@@ -7695,7 +7705,7 @@
       "signals": 0
     }
   ],
-  "leading_regime": "The world gets frightened",
+  "leading_regime": "Inflation runs hot",
   "mood_today": "risk-off",
   "stats": {
     "cheap": 9,

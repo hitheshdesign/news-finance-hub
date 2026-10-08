@@ -22,7 +22,7 @@ from pathlib import Path
 import config
 from ingest import rss, gdelt, fred, quotes, article
 from screen import relevance, cluster, history
-from analyze import engine, track, globe, assets
+from analyze import engine, track, globe, assets, supply
 from analyze.knowledge_match import match_linkages
 from render import web, emailer, telegram
 
@@ -370,6 +370,9 @@ def main() -> None:
     adata = assets.build_assets(events, qdata)
     _store_snapshot("assets", adata)
     web.write_assets_page(adata)
+    sdata = supply.build_supply(events)
+    _store_snapshot("supply", sdata)
+    web.write_supply_page(sdata)
 
     # 6. DELIVER
     if args.dry_run:

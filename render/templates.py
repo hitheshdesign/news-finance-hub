@@ -948,6 +948,151 @@ details.tablefold .ctable{margin-top:10px;}
   .histcard h3{font-size:22px;}
 }
 
+/* =========================================================================
+   SUPPLY LINES page
+   Three states run through everything here — calm, watch, alert — so they get
+   one set of tokens and every component reads from it. These are deliberately
+   NOT the cheap/fair/dear colours used on the valuation pages: there, red
+   means expensive; here it means something is broken.
+   ========================================================================= */
+:root{
+  --st-calm:#5b8f74; --st-watch:#d99a2b; --st-alert:#d1483f;
+  --stb-calm:#eaf2ed; --stb-watch:#faf1db; --stb-alert:#fbebe9;
+  --map-base:#dcd8d1; --map-none:#e8e5df;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --st-calm:#4e9c76; --st-watch:#e0a94a; --st-alert:#ef5f5b;
+    --stb-calm:#13261d; --stb-watch:#33280f; --stb-alert:#2a1514;
+    --map-base:#232c38; --map-none:#1b222c;
+  }
+}
+:root[data-theme="dark"]{
+  --st-calm:#4e9c76; --st-watch:#e0a94a; --st-alert:#ef5f5b;
+  --stb-calm:#13261d; --stb-watch:#33280f; --stb-alert:#2a1514;
+  --map-base:#232c38; --map-none:#1b222c;
+}
+.st-calm {--sc:var(--st-calm); --sb:var(--stb-calm);}
+.st-watch{--sc:var(--st-watch);--sb:var(--stb-watch);}
+.st-alert{--sc:var(--st-alert);--sb:var(--stb-alert);}
+
+/* ---- "Happening now" ---- */
+.alertbar{background:var(--stb-alert);border:1px solid var(--st-alert);
+  border-radius:14px;padding:13px 15px;margin:14px 0 12px;}
+.alerthead{font-size:11px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.08em;color:var(--st-alert);margin-bottom:9px;}
+.alertlist{display:flex;flex-wrap:wrap;gap:7px;}
+.alertchip{display:inline-flex;align-items:center;gap:8px;font:inherit;
+  text-align:left;cursor:pointer;background:var(--panel);
+  border:1px solid var(--line);border-radius:10px;padding:8px 12px;}
+.alertchip:hover{border-color:var(--st-alert);}
+.alertchip b{font-size:13px;color:var(--ink);font-weight:600;}
+.alertchip span{font-size:12px;color:var(--muted);}
+.alertchip .livedot{width:7px;height:7px;border-radius:50%;flex:none;
+  background:var(--st-alert);box-shadow:0 0 0 3px var(--stb-alert);}
+
+.maplegend{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 11px;align-items:center;}
+.maplegend .lg{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;
+  color:var(--ink2);background:var(--panel);border:1px solid var(--line);
+  border-radius:999px;padding:5px 12px;}
+.maplegend .sw{width:11px;height:11px;border-radius:3px;background:var(--sc);}
+.maplegend .hintx{color:var(--faint);font-size:12.5px;}
+
+/* ---- the map ---- */
+#smap{--mz:1;}
+#smap .cty{fill:var(--map-none);stroke:var(--panel);stroke-width:.4;
+  transition:fill .15s ease;}
+#smap .cty.has{cursor:pointer;fill:var(--map-base);}
+#smap .cty.st-calm {fill:var(--st-calm);fill-opacity:.55;}
+#smap .cty.st-watch{fill:var(--st-watch);fill-opacity:.65;}
+#smap .cty.st-alert{fill:var(--st-alert);fill-opacity:.75;}
+#smap .cty.has:hover{fill-opacity:.95;}
+#smap .cty.sel{stroke:var(--ink);stroke-width:1.4;fill-opacity:1;}
+/* routes: a visible line plus a fat invisible one that is easy to click */
+#smap .route{fill:none;stroke:var(--sc);stroke-width:calc(2.2 * var(--mz));
+  stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:calc(7 * var(--mz)) calc(4 * var(--mz));}
+#smap .route.st-alert{stroke-dasharray:none;stroke-width:calc(3 * var(--mz));}
+#smap .routehit{fill:none;stroke:transparent;stroke-width:calc(13 * var(--mz));
+  cursor:pointer;stroke-linecap:round;}
+#smap .route.sel{stroke-dasharray:none;stroke-width:calc(3.6 * var(--mz));}
+#smap .rlabel{font-family:var(--font-sans);font-size:calc(9px * var(--mz));
+  font-weight:700;fill:var(--sc);text-anchor:middle;cursor:pointer;
+  paint-order:stroke;stroke:var(--panel);stroke-width:calc(2.5px * var(--mz));}
+/* commodity markers */
+#smap .mark{cursor:pointer;}
+#smap .mark rect{fill:var(--panel);stroke:var(--sc);
+  stroke-width:calc(1.4 * var(--mz));}
+#smap .mark text{font-size:calc(13px * var(--mz));text-anchor:middle;
+  dominant-baseline:central;pointer-events:none;}
+#smap .mark .more{font-family:var(--font-sans);font-size:calc(9.5px * var(--mz));
+  font-weight:700;fill:var(--sc);}
+#smap .mark.sel rect{stroke:var(--ink);stroke-width:calc(2.2 * var(--mz));}
+#smap .mark:hover rect{stroke-width:calc(2.4 * var(--mz));}
+
+/* ---- the list beside the panel ---- */
+.sllist{background:var(--panel);border:1px solid var(--line);border-radius:14px;
+  overflow:hidden;align-self:start;}
+.slhead{font-size:10.5px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.09em;color:var(--muted);background:var(--panel2);
+  padding:10px 14px;border-bottom:1px solid var(--line2);}
+.slhead:not(:first-child){border-top:1px solid var(--line2);}
+.slrow{display:flex;align-items:center;gap:10px;width:100%;font:inherit;
+  text-align:left;cursor:pointer;background:transparent;border:0;
+  border-bottom:1px solid var(--line2);padding:11px 14px;}
+.slrow:last-child{border-bottom:0;}
+.slrow:hover{background:var(--panel2);}
+.slrow.sel{background:var(--panel2);box-shadow:inset 3px 0 0 var(--sc);}
+.slrow .sldot{width:9px;height:9px;border-radius:50%;flex:none;background:var(--sc);}
+.slrow .sltext{flex:1;min-width:0;}
+.slrow .sltext b{display:block;font-size:13.5px;font-weight:600;color:var(--ink);
+  line-height:1.3;}
+.slrow .sltext em{display:block;font-style:normal;font-size:11.5px;
+  color:var(--muted);line-height:1.4;overflow:hidden;text-overflow:ellipsis;
+  white-space:nowrap;margin-top:1px;}
+.slrow .slemoji{flex:none;font-size:14px;letter-spacing:1px;}
+
+/* ---- the detail panel ---- */
+.pkind{font-size:10.5px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.09em;color:var(--sc);margin-bottom:4px;}
+.stpill{display:inline-block;font-family:var(--font-sans);font-size:10.5px;
+  font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--sc);
+  background:var(--sb);padding:3px 9px;border-radius:999px;
+  vertical-align:middle;margin-left:8px;}
+.panel .verdict{border-left-color:var(--sc);}
+.panel .verdict b{color:var(--sc);}
+.comchips{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px;}
+.comchip{font-size:12px;color:var(--ink2);background:var(--panel2);
+  border:1px solid var(--line2);border-radius:999px;padding:4px 11px;}
+
+/* one block per commodity a country supplies */
+.supply{border-top:1px solid var(--line2);margin-top:16px;padding-top:14px;}
+.supply:first-of-type{border-top:0;margin-top:6px;}
+.suphead{display:flex;align-items:flex-start;gap:11px;margin-bottom:4px;}
+.supemoji{font-size:26px;line-height:1.1;flex:none;}
+.suphead b{font-family:var(--font-serif);font-size:19px;font-weight:600;
+  color:var(--ink);}
+.supshare{display:block;font-size:12px;color:var(--muted);margin-top:2px;}
+
+/* a past episode, same five parts every time */
+.episode{background:var(--panel2);border:1px solid var(--line2);
+  border-radius:11px;padding:12px 14px;margin-bottom:9px;}
+.epwhen{font-size:10.5px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.08em;color:var(--sc);}
+.epwhat{margin:5px 0 9px;font-size:14px;line-height:1.6;color:var(--ink);}
+.eprow{font-size:13px;line-height:1.55;color:var(--ink2);margin-bottom:6px;}
+.eprow b{display:block;font-size:10px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.07em;color:var(--faint);margin-bottom:1px;}
+.eplesson{margin-top:9px;padding-top:9px;border-top:1px solid var(--line2);
+  font-size:13px;line-height:1.55;color:var(--ink);}
+.eplesson::before{content:"The pattern · ";font-weight:700;font-size:10px;
+  text-transform:uppercase;letter-spacing:.07em;color:var(--sc);}
+
+@media (max-width:520px){
+  .alertchip{width:100%;}
+  .supemoji{font-size:22px;}
+  .suphead b{font-size:17.5px;}
+}
+
 /* Disclaimer + footer */
 .disclaimer{background:var(--panel2);border:1px dashed var(--line);border-radius:12px;
   padding:14px 16px;color:var(--muted);font-size:13px;margin-top:28px;}

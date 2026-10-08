@@ -14,7 +14,7 @@ from jinja2 import Environment
 from markupsafe import Markup
 
 import config
-from render import templates, global_page, assets_page, worldmap
+from render import templates, global_page, assets_page, supply_page, worldmap
 from render.glossary import annotate
 
 # CSS is trusted, pre-written stylesheet text. Mark it safe so Jinja's autoescape
@@ -31,10 +31,11 @@ _THEMEJS = Markup(templates.THEME_JS)       # its click handler
 
 def _nav(active: str, prefix: str = "") -> Markup:
     """Shared top-tab navigation used by every page. `active` is one of
-    news|global|assets|learn; `prefix` (e.g. '../') fixes links for archived pages
+    news|supply|global|assets|learn; `prefix` (e.g. '../') fixes links for archived pages
     that live one folder deeper."""
     tabs = [
         ("news", "index.html", "News"),
+        ("supply", "supply.html", "Supply Lines"),
         ("global", "global.html", "Global Finance"),
         ("assets", "assets.html", "Asset Classes"),
         ("learn", "patterns.html", "Learn"),
@@ -331,6 +332,82 @@ def write_assets_page(adata: dict) -> Path:
     return path
 
 
+# ------------------------------------------------------------------ Supply Lines
+# Routes are drawn as polylines and producers as emoji markers, both projected
+# with the same _xy() the choropleth uses so everything lines up.
+_ST_CLS = {"calm": "st-calm", "watch": "st-watch", "alert": "st-alert"}
+# How many commodity emojis fit on one map marker before it is summarised.
+_MARK_MAX = 3
+
+
+def _points(path: list) -> str:
+    """[[lon,lat],...] -> an SVG points attribute."""
+    return " ".join("%s,%s" % _xy(float(lon), float(lat)) for lon, lat in path)
+
+
+def render_supply(sdata: dict) -> str:
+    env = _env()
+    by_code = {c["code"]: c for c in sdata.get("countries", [])}
+
+    # 1. Country shapes, tinted by the worst state of anything they supply.
+    map_countries = []
+    for iso, d in worldmap.PATHS.items():
+        c = by_code.get(iso)
+        cls = f"has {_ST_CLS.get(c['status'], 'st-calm')}" if c else ""
+        map_countries.append({"code": iso if c else "", "cls": cls, "d": d})
+
+    # 2. Shipping routes.
+    map_routes = []
+    for r in sdata.get("routes", []):
+        lx, ly = _xy(float(r["label"][0]), float(r["label"][1]))
+        map_routes.append({
+            "id": r["id"], "short": r.get("short", r["name"]),
+            "cls": _ST_CLS.get(r.get("status", "calm"), "st-calm"),
+            "points": _points(r.get("path", [])),
+            "lx": lx, "ly": ly - 9,
+        })
+
+    # 3. One marker per producer, carrying its commodity emojis.
+    map_marks = []
+    for c in sdata.get("countries", []):
+        at = c.get("at") or []
+        if len(at) != 2:
+            continue
+        cx, cy = _xy(float(at[0]), float(at[1]))
+        all_e = [e for e in c.get("emojis", []) if e]
+        # India supplies eight things. Showing eight emojis would blot out its
+        # neighbours, so the marker shows the first few and a count; the panel
+        # lists every one.
+        shown, extra = all_e[:_MARK_MAX], max(len(all_e) - _MARK_MAX, 0)
+        # A rough first width so the marker is not invisible before scripting
+        # runs; sizeMarkers() in the page measures the real text and corrects it.
+        w = 10 + 16 * len(shown) + (14 if extra else 0)
+        map_marks.append({
+            "code": c["code"], "cx": cx, "cy": cy,
+            "x": round(cx - w / 2, 1), "y": round(cy - 9, 1),
+            "w": w, "h": 18, "emojis": "".join(shown),
+            "more": f"+{extra}" if extra else "",
+            "cls": _ST_CLS.get(c.get("status", "calm"), "st-calm"),
+        })
+
+    page = env.from_string(supply_page.SUPPLY_PAGE)
+    return page.render(s=sdata, map_countries=map_countries, map_routes=map_routes,
+                       map_marks=map_marks, s_json=_json_safe(sdata), css=_CSS,
+                       fonts=templates.FONTS, nav=_nav("supply"),
+                       icon=_ICON, logo=_LOGO, tipjs=_TIPJS,
+                       themeboot=_THEMEBOOT, themebtn=_THEMEBTN, themejs=_THEMEJS)
+
+
+def write_supply_page(sdata: dict) -> Path:
+    site = config.SITE_DIR
+    site.mkdir(parents=True, exist_ok=True)
+    html = render_supply(sdata)
+    path = site / "supply.html"
+    path.write_text(html, encoding="utf-8")
+    print(f"  [web] wrote {path}")
+    return path
+
+
 def write_patterns_page() -> Path:
     """Write site/patterns.html (and a copy under site/briefs/ so links from the
     dated archive pages resolve too)."""
@@ -377,6 +454,7 @@ def write_site(brief: dict) -> Path:
                   .replace('href="index.html"', 'href="../index.html"')
                   .replace('href="global.html"', 'href="../global.html"')
                   .replace('href="assets.html"', 'href="../assets.html"')
+                  .replace('href="supply.html"', 'href="../supply.html"')
                   .replace('href="patterns.html"', 'href="../patterns.html"'))
     dated_path = site / "briefs" / f"{brief['date']}.html"
     dated_path.write_text(dated_html, encoding="utf-8")

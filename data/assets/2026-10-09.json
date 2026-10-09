@@ -6,7 +6,7 @@
   "live_count": 14,
   "live_as_of": "2026-10-08",
   "usd_inr": 96.78,
-  "gold_inr": 131015.0,
+  "gold_inr": 131307.0,
   "note": "Every number on this page is a curated, rounded estimate kept to teach the shape of each asset, not to trade on. Ratios move every day; the lesson — where a return comes from and what breaks it — does not.",
   "assets": [
     {
@@ -982,12 +982,7 @@
       "live_ok": true,
       "live_source": "NSE",
       "live_as_of": "2026-10-08",
-      "news": [
-        {
-          "title": "Rupee slips to record low against dollar as FII outflows accelerate",
-          "url": "https://example.com/rupee-low"
-        }
-      ],
+      "news": [],
       "total_return": 14.4,
       "dear": false,
       "pin": 5,
@@ -1149,12 +1144,7 @@
       "live_ok": true,
       "live_source": "NSE",
       "live_as_of": "2026-10-08",
-      "news": [
-        {
-          "title": "Weak monsoon and El Nino fears threaten India kharif crop and rural demand",
-          "url": "https://example.com/monsoon"
-        }
-      ],
+      "news": [],
       "total_return": 13.1,
       "dear": false,
       "pin": 17,
@@ -1647,8 +1637,8 @@
       "live_as_of": "2026-10-08",
       "news": [
         {
-          "title": "Brent crude surges past $90 as OPEC extends supply cuts amid Middle East tension",
-          "url": "https://example.com/oil-surge"
+          "title": "Brent Holds Above $100 as Hormuz Tanker Traffic Hits Two-Month Low",
+          "url": "https://oilprice.com/Latest-Energy-News/World-News/Brent-Holds-Above-100-as-Hormuz-Tanker-Traffic-Hits-Two-Month-Low.html"
         }
       ],
       "total_return": 10.6,
@@ -2267,8 +2257,8 @@
       "live_ok": false,
       "news": [
         {
-          "title": "Gold price hits record high as safe haven demand and rate cut hopes collide",
-          "url": "https://example.com/gold-record"
+          "title": "Gold may draw support from decline in Oct Fed rate hike bet: Mirae Asset",
+          "url": "https://www.business-standard.com/markets/news/gold-may-draw-support-from-decline-in-oct-fed-rate-hike-bet-mirae-asset-126100900485_1.html"
         }
       ],
       "total_return": 4.0,
@@ -2300,12 +2290,12 @@
       "extras": [
         {
           "label": "Silver today",
-          "value": "₹188,513 a kg",
+          "value": "₹188,886 a kg",
           "def": "Spot silver converted into rupees at today's exchange rate."
         },
         {
           "label": "Gold today",
-          "value": "₹131,015 per 10g",
+          "value": "₹131,307 per 10g",
           "def": "Spot gold converted into rupees at today's exchange rate."
         },
         {
@@ -3642,12 +3632,8 @@
       "live_ok": false,
       "news": [
         {
-          "title": "Fed signals higher-for-longer as Powell strikes hawkish tone on inflation",
-          "url": "https://example.com/fed-hawkish"
-        },
-        {
-          "title": "Rupee slips to record low against dollar as FII outflows accelerate",
-          "url": "https://example.com/rupee-low"
+          "title": "Gold may draw support from decline in Oct Fed rate hike bet: Mirae Asset",
+          "url": "https://www.business-standard.com/markets/news/gold-may-draw-support-from-decline-in-oct-fed-rate-hike-bet-mirae-asset-126100900485_1.html"
         }
       ],
       "total_return": 7.8,
@@ -4757,12 +4743,7 @@
           "live_ok": true,
           "live_source": "NSE",
           "live_as_of": "2026-10-08",
-          "news": [
-            {
-              "title": "Rupee slips to record low against dollar as FII outflows accelerate",
-              "url": "https://example.com/rupee-low"
-            }
-          ],
+          "news": [],
           "total_return": 14.4,
           "dear": false,
           "pin": 5,
@@ -4924,12 +4905,7 @@
           "live_ok": true,
           "live_source": "NSE",
           "live_as_of": "2026-10-08",
-          "news": [
-            {
-              "title": "Weak monsoon and El Nino fears threaten India kharif crop and rural demand",
-              "url": "https://example.com/monsoon"
-            }
-          ],
+          "news": [],
           "total_return": 13.1,
           "dear": false,
           "pin": 17,
@@ -5422,8 +5398,8 @@
           "live_as_of": "2026-10-08",
           "news": [
             {
-              "title": "Brent crude surges past $90 as OPEC extends supply cuts amid Middle East tension",
-              "url": "https://example.com/oil-surge"
+              "title": "Brent Holds Above $100 as Hormuz Tanker Traffic Hits Two-Month Low",
+              "url": "https://oilprice.com/Latest-Energy-News/World-News/Brent-Holds-Above-100-as-Hormuz-Tanker-Traffic-Hits-Two-Month-Low.html"
             }
           ],
           "total_return": 10.6,
@@ -6049,8 +6025,8 @@
           "live_ok": false,
           "news": [
             {
-              "title": "Gold price hits record high as safe haven demand and rate cut hopes collide",
-              "url": "https://example.com/gold-record"
+              "title": "Gold may draw support from decline in Oct Fed rate hike bet: Mirae Asset",
+              "url": "https://www.business-standard.com/markets/news/gold-may-draw-support-from-decline-in-oct-fed-rate-hike-bet-mirae-asset-126100900485_1.html"
             }
           ],
           "total_return": 4.0,
@@ -6082,12 +6058,12 @@
           "extras": [
             {
               "label": "Silver today",
-              "value": "₹188,513 a kg",
+              "value": "₹188,886 a kg",
               "def": "Spot silver converted into rupees at today's exchange rate."
             },
             {
               "label": "Gold today",
-              "value": "₹131,015 per 10g",
+              "value": "₹131,307 per 10g",
               "def": "Spot gold converted into rupees at today's exchange rate."
             },
             {
@@ -7445,12 +7421,8 @@
           "live_ok": false,
           "news": [
             {
-              "title": "Fed signals higher-for-longer as Powell strikes hawkish tone on inflation",
-              "url": "https://example.com/fed-hawkish"
-            },
-            {
-              "title": "Rupee slips to record low against dollar as FII outflows accelerate",
-              "url": "https://example.com/rupee-low"
+              "title": "Gold may draw support from decline in Oct Fed rate hike bet: Mirae Asset",
+              "url": "https://www.business-standard.com/markets/news/gold-may-draw-support-from-decline-in-oct-fed-rate-hike-bet-mirae-asset-126100900485_1.html"
             }
           ],
           "total_return": 7.8,
@@ -7646,7 +7618,7 @@
       ],
       "why": "Inflation is the tax that nobody votes for. It punishes anything promising you a FIXED number of rupees later, and rewards anything whose price rises with the general price level.",
       "india": "India's inflation is still mostly a food and fuel story. A bad monsoon or a crude spike does more to your portfolio than any Fed meeting, because it forces the RBI to keep rates high and squeezes the consumer companies that dominate the index.",
-      "signals": 3
+      "signals": 0
     },
     {
       "name": "Interest rates come down",
@@ -7663,7 +7635,7 @@
       ],
       "why": "A falling interest rate raises the value of every future rupee. Assets whose payoff is far in the future — growth shares, long bonds, property — gain the most, which is why rate-cut cycles feel like everything works at once.",
       "india": "In India, rate cuts usually arrive when inflation is beaten and growth is soft. The market front-runs them by six months, so the money is made while the news still sounds bad.",
-      "signals": 2
+      "signals": 0
     },
     {
       "name": "The rupee weakens fast",
@@ -7696,7 +7668,7 @@
       ],
       "why": "In a panic, correlations go to one: things that normally move separately all fall together, because the seller is not choosing on merit — they simply need cash. Only genuinely different assets protect you, and there are very few.",
       "india": "India is fundamentally a domestic economy but a foreign-funded market. That is why a Nifty fall can have nothing to do with India: the seller is an overseas fund meeting redemptions in New York.",
-      "signals": 2
+      "signals": 1
     },
     {
       "name": "Growth is strong and boring",
@@ -7712,11 +7684,11 @@
       ],
       "why": "This is the regime that pays owners of businesses, and it lasts longer than anyone expects. The mistake is not being absent — it is arriving late, after valuations have already priced in the good weather continuing forever.",
       "india": "India has had the longest stretches of this of any large market. It is also why Indian investors systematically underestimate how bad the other four regimes feel: most portfolios here have never been properly tested.",
-      "signals": 1
+      "signals": 0
     }
   ],
-  "leading_regime": "Inflation runs hot",
-  "mood_today": "mixed",
+  "leading_regime": null,
+  "mood_today": "risk-off",
   "stats": {
     "cheap": 9,
     "fair": 9,

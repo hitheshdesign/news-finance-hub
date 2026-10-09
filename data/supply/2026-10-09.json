@@ -228,7 +228,7 @@
           "commodity": "crude_oil",
           "share": "~11% of world output",
           "rank": "Largest exporter in the world",
-          "status": "watch",
+          "status": "calm",
           "what": "Saudi Arabia is the only producer holding meaningful spare capacity — roughly 2-3 million barrels a day it can switch on within weeks. That spare capacity, not its total output, is what makes it the world's shock absorber. When anyone else fails, Saudi Arabia is the reason the price does not go to the moon.",
           "dependents": [
             {
@@ -261,13 +261,8 @@
               "lesson": "The world had assumed the risk was a blocked shipping lane. It turned out a few drones hitting one processing plant could do more, faster, and more cheaply. Concentration inside a country matters as much as concentration between countries."
             }
           ],
-          "news": [
-            {
-              "title": "Brent crude surges past $90 as OPEC extends supply cuts amid Middle East tension",
-              "url": "https://example.com/oil-surge"
-            }
-          ],
-          "live": true,
+          "news": [],
+          "live": false,
           "info": {
             "name": "Crude oil",
             "emoji": "🛢️",
@@ -276,7 +271,7 @@
           }
         }
       ],
-      "status": "watch",
+      "status": "calm",
       "emojis": [
         "🛢️"
       ]
@@ -293,7 +288,7 @@
           "commodity": "crude_oil",
           "share": "~11% of world output",
           "rank": "Third largest producer",
-          "status": "watch",
+          "status": "calm",
           "what": "Russia's oil did not leave the market after 2022 — it changed direction. Barrels that went to Europe now go to India and China at a discount, carried by a 'shadow fleet' of older tankers outside Western insurance. The world learned that sanctioning a major producer reroutes oil rather than removing it.",
           "dependents": [
             {
@@ -326,13 +321,8 @@
               "lesson": "When a supplier is too large to remove, policy bends around them. The cap is an admission that the world could not afford to lose the barrels, and India was the main beneficiary of that arithmetic."
             }
           ],
-          "news": [
-            {
-              "title": "Brent crude surges past $90 as OPEC extends supply cuts amid Middle East tension",
-              "url": "https://example.com/oil-surge"
-            }
-          ],
-          "live": true,
+          "news": [],
+          "live": false,
           "info": {
             "name": "Crude oil",
             "emoji": "🛢️",
@@ -1494,7 +1484,7 @@
           "commodity": "gold",
           "share": "Not a producer — the second largest consumer",
           "rank": "Roughly a quarter of world jewellery demand",
-          "status": "watch",
+          "status": "calm",
           "what": "India is included here as the demand-side chokepoint. Indian wedding and festival buying is large enough to move the world gold price, and Indian import duty decisions change world flows.",
           "dependents": [
             {
@@ -1518,13 +1508,8 @@
               "lesson": "It worked on the trade deficit and created a large smuggling industry at the same time. Restricting something people genuinely want moves it out of sight rather than removing it."
             }
           ],
-          "news": [
-            {
-              "title": "Gold price hits record high as safe haven demand and rate cut hopes collide",
-              "url": "https://example.com/gold-record"
-            }
-          ],
-          "live": true,
+          "news": [],
+          "live": false,
           "info": {
             "name": "Gold",
             "emoji": "🥇",
@@ -2286,7 +2271,7 @@
           "commodity": "gold",
           "share": "Historically dominant; now modest, but a major platinum producer",
           "rank": "~70% of world platinum and most palladium outside Russia",
-          "status": "watch",
+          "status": "calm",
           "what": "South Africa's gold mines are the deepest in the world and long past their peak. The live story is platinum group metals, which go into catalytic converters that clean car exhaust — and the mines run on an electricity grid that has been failing for years.",
           "dependents": [
             {
@@ -2315,13 +2300,8 @@
               "lesson": "Infrastructure decay is a slow supply risk that nobody prices until it bites. Electricity is an input to mining as surely as the ore is."
             }
           ],
-          "news": [
-            {
-              "title": "Gold price hits record high as safe haven demand and rate cut hopes collide",
-              "url": "https://example.com/gold-record"
-            }
-          ],
-          "live": true,
+          "news": [],
+          "live": false,
           "info": {
             "name": "Gold",
             "emoji": "🥇",
@@ -2330,7 +2310,7 @@
           }
         }
       ],
-      "status": "watch",
+      "status": "calm",
       "emojis": [
         "🥇"
       ]
@@ -2540,7 +2520,7 @@
           "commodity": "crude_oil",
           "share": "~2% of world output, but Africa's largest producer",
           "rank": "Major supplier of light sweet crude",
-          "status": "watch",
+          "status": "calm",
           "what": "Nigeria is included not for volume but for grade. Its light, low-sulphur crude is exactly what European and Indian refineries are configured for, so it is not easily replaced by heavier Gulf barrels even when the barrel count works out.",
           "dependents": [
             {
@@ -2569,13 +2549,8 @@
               "lesson": "A country can hold a production quota it is physically unable to fill. Official capacity and actual output can diverge for years, which is why OPEC quota announcements often matter less than they appear to."
             }
           ],
-          "news": [
-            {
-              "title": "Brent crude surges past $90 as OPEC extends supply cuts amid Middle East tension",
-              "url": "https://example.com/oil-surge"
-            }
-          ],
-          "live": true,
+          "news": [],
+          "live": false,
           "info": {
             "name": "Crude oil",
             "emoji": "🛢️",
@@ -2584,7 +2559,7 @@
           }
         }
       ],
-      "status": "watch",
+      "status": "calm",
       "emojis": [
         "🛢️"
       ]
@@ -3173,7 +3148,7 @@
       "name": "Strait of Hormuz",
       "short": "Hormuz",
       "region": "Between Iran and Oman",
-      "status": "alert",
+      "status": "calm",
       "carries": [
         "crude_oil",
         "natural_gas"
@@ -3237,13 +3212,8 @@
           "lesson": "Most of the economic damage of a chokepoint scare arrives through insurance and freight costs long before any ship is actually stopped."
         }
       ],
-      "news": [
-        {
-          "title": "Middle East tension escalates as shipping through Strait of Hormuz faces disruption",
-          "url": "https://example.com/mideast"
-        }
-      ],
-      "live": true,
+      "news": [],
+      "live": false,
       "carries_detail": [
         {
           "key": "crude_oil",
@@ -3266,7 +3236,7 @@
       "name": "Suez Canal",
       "short": "Suez",
       "region": "Egypt",
-      "status": "watch",
+      "status": "calm",
       "carries": [
         "crude_oil",
         "natural_gas",
@@ -3447,7 +3417,7 @@
       "name": "Strait of Malacca",
       "short": "Malacca",
       "region": "Between Malaysia, Indonesia and Singapore",
-      "status": "watch",
+      "status": "calm",
       "carries": [
         "crude_oil",
         "natural_gas",
@@ -3703,7 +3673,7 @@
       "name": "Cape of Good Hope",
       "short": "The Cape",
       "region": "South Africa",
-      "status": "watch",
+      "status": "calm",
       "carries": [
         "shipping",
         "crude_oil"
@@ -3850,19 +3820,6 @@
   "alerts": [
     {
       "kind": "route",
-      "id": "hormuz",
-      "name": "Strait of Hormuz",
-      "what": "A fifth of the world's oil leaves through a gap 33 km wide",
-      "live": true,
-      "news": [
-        {
-          "title": "Middle East tension escalates as shipping through Strait of Hormuz faces disruption",
-          "url": "https://example.com/mideast"
-        }
-      ]
-    },
-    {
-      "kind": "route",
       "id": "bab_el_mandeb",
       "name": "Bab el-Mandeb & the Red Sea",
       "what": "The southern door to the Suez — and the one that has actually been shut",
@@ -3887,7 +3844,7 @@
     }
   ],
   "stats": {
-    "alert": 4,
-    "live_today": 1
+    "alert": 3,
+    "live_today": 0
   }
 }

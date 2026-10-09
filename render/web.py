@@ -22,7 +22,7 @@ from render.glossary import annotate
 # [data-theme="light"] selectors and every content:"" pseudo-element).
 _CSS = Markup(templates.CSS)
 _ICON = Markup(templates.HEAD_ICON)      # favicon / theme-color tags
-_LOGO = Markup(templates.LOGO_SVG)       # inline brand mark
+_LOGO = Markup(templates.LOGO_INLINE)    # brand mark, tinted per page
 _TIPJS = Markup(templates.TIP_FIT_JS)    # keeps panel tooltips on-screen
 _THEMEBOOT = Markup(templates.THEME_BOOT)   # applies a stored theme pre-paint
 _THEMEBTN = Markup(templates.THEME_BTN)     # the light/dark button
@@ -87,10 +87,23 @@ def _archive_list(current_date: str) -> list[dict]:
     return out[:14]
 
 
+# Keys the page template reads that older stored briefs may predate. Re-rendering
+# the archive after a design change replays every payload we have ever written,
+# so a field added in September must not break an August brief.
+_BRIEF_DEFAULTS = {
+    "calendar_alert_days": 4,
+    "calendar_alert": 0,
+    "calendar": [],
+    "deeper_reads": [],
+    "history": None,
+    "macro": None,
+}
+
+
 def render_page(brief: dict) -> str:
     env = _env()
     # archive links are relative to site/ root (index) — dated pages fix paths below
-    brief = dict(brief)
+    brief = {**_BRIEF_DEFAULTS, **brief}
     brief["archive"] = _archive_list(brief["date"])
     page = env.from_string(templates.PAGE)
     return page.render(brief=brief, css=_CSS, fonts=templates.FONTS,

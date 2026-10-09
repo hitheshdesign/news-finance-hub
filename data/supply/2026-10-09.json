@@ -228,7 +228,7 @@
           "commodity": "crude_oil",
           "share": "~11% of world output",
           "rank": "Largest exporter in the world",
-          "status": "calm",
+          "status": "watch",
           "what": "Saudi Arabia is the only producer holding meaningful spare capacity — roughly 2-3 million barrels a day it can switch on within weeks. That spare capacity, not its total output, is what makes it the world's shock absorber. When anyone else fails, Saudi Arabia is the reason the price does not go to the moon.",
           "dependents": [
             {
@@ -261,8 +261,13 @@
               "lesson": "The world had assumed the risk was a blocked shipping lane. It turned out a few drones hitting one processing plant could do more, faster, and more cheaply. Concentration inside a country matters as much as concentration between countries."
             }
           ],
-          "news": [],
-          "live": false,
+          "news": [
+            {
+              "title": "Brent crude surges past $90 as OPEC extends supply cuts amid Middle East tension",
+              "url": "https://example.com/oil-surge"
+            }
+          ],
+          "live": true,
           "info": {
             "name": "Crude oil",
             "emoji": "🛢️",
@@ -271,7 +276,7 @@
           }
         }
       ],
-      "status": "calm",
+      "status": "watch",
       "emojis": [
         "🛢️"
       ]
@@ -288,7 +293,7 @@
           "commodity": "crude_oil",
           "share": "~11% of world output",
           "rank": "Third largest producer",
-          "status": "calm",
+          "status": "watch",
           "what": "Russia's oil did not leave the market after 2022 — it changed direction. Barrels that went to Europe now go to India and China at a discount, carried by a 'shadow fleet' of older tankers outside Western insurance. The world learned that sanctioning a major producer reroutes oil rather than removing it.",
           "dependents": [
             {
@@ -321,8 +326,13 @@
               "lesson": "When a supplier is too large to remove, policy bends around them. The cap is an admission that the world could not afford to lose the barrels, and India was the main beneficiary of that arithmetic."
             }
           ],
-          "news": [],
-          "live": false,
+          "news": [
+            {
+              "title": "Brent crude surges past $90 as OPEC extends supply cuts amid Middle East tension",
+              "url": "https://example.com/oil-surge"
+            }
+          ],
+          "live": true,
           "info": {
             "name": "Crude oil",
             "emoji": "🛢️",
@@ -381,6 +391,7 @@
           "share": "~20-24% of world wheat exports",
           "rank": "Largest wheat exporter in the world",
           "status": "watch",
+          "why_now": "Wheat keeps flowing, but on terms that can change quickly. Russia has used export duties and informal price floors to steer shipments, and buyers face payment and shipping friction from sanctions even though food itself is exempt. Watch the export duty and any move to restrict volumes.",
           "what": "Russia overtook everyone to become the dominant wheat exporter, and its wheat goes overwhelmingly to countries that cannot easily pay more — Egypt, Turkey, Bangladesh, much of Africa. That makes its harvest a food security variable for a large part of the world.",
           "dependents": [
             {
@@ -423,6 +434,7 @@
           "share": "~40% of world palladium",
           "rank": "Largest producer, with South Africa",
           "status": "watch",
+          "why_now": "Supply has continued despite sanctions, but a large share of the world's palladium comes from one sanctioned country and buyers have been designing it out rather than risk it. The amber reflects a dependence being deliberately unwound, not a shortage today.",
           "what": "Palladium is mostly a by-product of Russian nickel mining, which means its supply does not respond to its own price — producers mine it because they are mining something else. That makes shortages unusually hard to fix.",
           "dependents": [
             {
@@ -477,6 +489,7 @@
           "share": "~60% of mining, ~85-90% of refining",
           "rank": "Overwhelming dominance of processing",
           "status": "alert",
+          "why_now": "China operates an export licensing regime on rare earths and the magnets made from them. Shipments have largely continued, but each one now needs approval, which means they can be slowed or stopped as leverage without any formal ban being announced — and approvals have been used that way during trade disputes. Buyers outside China are carrying the delay and the uncertainty. This clears only when alternative separation capacity exists at scale, which is a decade-long project.",
           "what": "The misleading thing about rare earths is that they are not rare. They are found in many countries, including India. What is concentrated is the refining — separating them is chemically difficult, dirty and unprofitable at small scale, and China spent thirty years building that capability while everyone else was glad not to.",
           "dependents": [
             {
@@ -607,6 +620,7 @@
           "share": "~65-80% of world output and nearly all battery-grade refining",
           "rank": "Overwhelming dominance",
           "status": "watch",
+          "why_now": "Graphite exports have required permits since 2023, introduced days after new Western restrictions on chip equipment. Material still moves, with added friction and delay. Because nearly all battery-grade processing is Chinese, there is no quick alternative to qualify.",
           "what": "Every lithium-ion battery has more graphite in it than lithium by weight, and almost nobody discusses it. China controls not just mining but the purification and shaping into anode material, which is the hard part.",
           "dependents": [
             {
@@ -648,6 +662,7 @@
           "share": "~40% of world medicine ingredients",
           "rank": "Dominant supplier of the chemicals inside medicines",
           "status": "watch",
+          "why_now": "No single incident. Environmental enforcement periodically closes Chinese chemical plants with little notice, and medicine ingredients have been caught in that before. The amber marks how thin the buffer is: the world holds very little inventory of these chemicals.",
           "what": "China makes the active ingredients; India turns many of them into tablets; the world takes the tablets. Two layers of concentration stacked on top of each other, and the lower one is nearly invisible to the patient.",
           "dependents": [
             {
@@ -913,6 +928,7 @@
           "share": "~50-55% of world mined nickel",
           "rank": "Dominant, and growing",
           "status": "watch",
+          "why_now": "Indonesia keeps adjusting the rules — royalties, permitted output and processing requirements have all changed recently — and because it now supplies over half the world's nickel, each change moves the global price. The risk here is policy, not geology.",
           "what": "Indonesia went from a modest producer to over half the world's supply in under a decade by banning raw ore exports and forcing smelters to be built on its own soil. It is the most successful resource-nationalism policy of recent times, and it worked exactly as intended.",
           "dependents": [
             {
@@ -1478,7 +1494,7 @@
           "commodity": "gold",
           "share": "Not a producer — the second largest consumer",
           "rank": "Roughly a quarter of world jewellery demand",
-          "status": "calm",
+          "status": "watch",
           "what": "India is included here as the demand-side chokepoint. Indian wedding and festival buying is large enough to move the world gold price, and Indian import duty decisions change world flows.",
           "dependents": [
             {
@@ -1502,8 +1518,13 @@
               "lesson": "It worked on the trade deficit and created a large smuggling industry at the same time. Restricting something people genuinely want moves it out of sight rather than removing it."
             }
           ],
-          "news": [],
-          "live": false,
+          "news": [
+            {
+              "title": "Gold price hits record high as safe haven demand and rate cut hopes collide",
+              "url": "https://example.com/gold-record"
+            }
+          ],
+          "live": true,
           "info": {
             "name": "Gold",
             "emoji": "🥇",
@@ -1638,6 +1659,7 @@
           "share": "~20% of world generic medicines by volume",
           "rank": "The largest supplier of generic drugs in the world",
           "status": "watch",
+          "why_now": "India's generic industry is running normally, but it buys a large share of its raw chemicals from China, so it inherits that exposure. The amber is for the dependency inside the strength, not for a current shortage.",
           "what": "India is called the pharmacy of the world and the description is accurate — but it buys a large share of the chemical ingredients it formulates from China. India makes the tablet; China often makes what is in it. That is the dependency inside the strength.",
           "dependents": [
             {
@@ -1784,6 +1806,7 @@
           "share": "~40% of world output",
           "rank": "Largest producer; with Ghana, about 60% of world supply",
           "status": "watch",
+          "why_now": "Prices came down from the 2024 record as the 2025 crop improved, but the underlying problem has not been fixed: the trees are old, swollen shoot disease is still spreading, and farmer payments have only recently risen enough to justify replanting — which takes years to show up as beans. Another poor season would move prices sharply again.",
           "what": "Most of the world's chocolate begins on smallholder farms in two neighbouring West African countries, grown on ageing trees by farmers earning very little. That combination — concentration plus poverty plus old trees — is why this supply is fragile.",
           "dependents": [
             {
@@ -1905,6 +1928,7 @@
           "share": "~90% of the world's most advanced chips",
           "rank": "Effectively a monopoly at the leading edge",
           "status": "watch",
+          "why_now": "Production is normal. The amber is for how much rests on it: the overwhelming majority of the world's most advanced chips are made on one seismically active island in a contested strait, using machines only one company makes. New plants elsewhere are being built precisely because this concentration is uncomfortable, and they are years from relieving it.",
           "what": "One company, TSMC, on one island, makes the overwhelming majority of the world's most advanced processors. Nothing else in the modern economy is this concentrated in this few buildings. The machines required come from a single Dutch supplier, which narrows it further.",
           "dependents": [
             {
@@ -2146,6 +2170,7 @@
           "share": "~8-10% of world wheat exports, plus ~45% of sunflower oil",
           "rank": "Among the top wheat exporters; dominant in sunflower oil",
           "status": "alert",
+          "why_now": "The war continues and it is being fought partly over export infrastructure. Ukraine ships grain through its own Black Sea corridor, which has worked better than expected, but port and power facilities are struck periodically and farmland remains mined. Output is well below pre- war levels and the labour to work it is not all coming back.",
           "what": "Ukraine's black soil is among the most fertile on earth, and the country feeds a large part of North Africa and the Middle East. Its sunflower oil share is the striking one — close to half the world's supply, which makes it a direct substitute market for palm oil.",
           "dependents": [
             {
@@ -2261,7 +2286,7 @@
           "commodity": "gold",
           "share": "Historically dominant; now modest, but a major platinum producer",
           "rank": "~70% of world platinum and most palladium outside Russia",
-          "status": "calm",
+          "status": "watch",
           "what": "South Africa's gold mines are the deepest in the world and long past their peak. The live story is platinum group metals, which go into catalytic converters that clean car exhaust — and the mines run on an electricity grid that has been failing for years.",
           "dependents": [
             {
@@ -2290,8 +2315,13 @@
               "lesson": "Infrastructure decay is a slow supply risk that nobody prices until it bites. Electricity is an input to mining as surely as the ore is."
             }
           ],
-          "news": [],
-          "live": false,
+          "news": [
+            {
+              "title": "Gold price hits record high as safe haven demand and rate cut hopes collide",
+              "url": "https://example.com/gold-record"
+            }
+          ],
+          "live": true,
           "info": {
             "name": "Gold",
             "emoji": "🥇",
@@ -2300,7 +2330,7 @@
           }
         }
       ],
-      "status": "calm",
+      "status": "watch",
       "emojis": [
         "🥇"
       ]
@@ -2510,7 +2540,7 @@
           "commodity": "crude_oil",
           "share": "~2% of world output, but Africa's largest producer",
           "rank": "Major supplier of light sweet crude",
-          "status": "calm",
+          "status": "watch",
           "what": "Nigeria is included not for volume but for grade. Its light, low-sulphur crude is exactly what European and Indian refineries are configured for, so it is not easily replaced by heavier Gulf barrels even when the barrel count works out.",
           "dependents": [
             {
@@ -2539,8 +2569,13 @@
               "lesson": "A country can hold a production quota it is physically unable to fill. Official capacity and actual output can diverge for years, which is why OPEC quota announcements often matter less than they appear to."
             }
           ],
-          "news": [],
-          "live": false,
+          "news": [
+            {
+              "title": "Brent crude surges past $90 as OPEC extends supply cuts amid Middle East tension",
+              "url": "https://example.com/oil-surge"
+            }
+          ],
+          "live": true,
           "info": {
             "name": "Crude oil",
             "emoji": "🛢️",
@@ -2549,7 +2584,7 @@
           }
         }
       ],
-      "status": "calm",
+      "status": "watch",
       "emojis": [
         "🛢️"
       ]
@@ -2567,6 +2602,7 @@
           "share": "~43% of world uranium production",
           "rank": "Largest producer by a wide margin",
           "status": "watch",
+          "why_now": "Mining is running, but two things keep this amber. Sulphuric acid — which the extraction method depends on — has been in short supply, and export routes historically ran through Russia, so shipments now take longer and costlier paths. Meanwhile demand is rising as countries restart nuclear programmes.",
           "what": "Kazakhstan mines more uranium than the next three countries combined, using a low-cost method that dissolves the ore underground rather than digging it out. As countries turn back to nuclear power for clean electricity, this is a dependence that is growing rather than shrinking.",
           "dependents": [
             {
@@ -2748,6 +2784,7 @@
           "share": "~45% of world soybean meal and oil exports",
           "rank": "Largest exporter of processed soy products",
           "status": "watch",
+          "why_now": "The crop recovered from the 2023 drought, but export taxes and a currency farmers do not trust mean beans sit in silo bags rather than reaching the market. The harvest existing and the harvest being sold are different things here, and policy decides which.",
           "what": "Argentina grows less soy than Brazil but crushes far more of it, exporting the oil and the animal feed rather than the raw bean. That makes it the world's largest supplier of the two things soy is actually used for.",
           "dependents": [
             {
@@ -2804,6 +2841,7 @@
           "share": "~100% of extreme-ultraviolet lithography machines",
           "rank": "A genuine monopoly",
           "status": "watch",
+          "why_now": "Export controls on the most advanced lithography machines remain in force, and licensing for the tier below keeps shifting. Nothing has stopped for buyers outside China; the amber is because a single company in a single country is now an instrument of trade policy, and the rules change.",
           "what": "One Dutch company, ASML, is the only firm on earth that makes the machines required to print the most advanced chips. Each costs upwards of $200 million, contains hundreds of thousands of parts, and ships in multiple aircraft. Taiwan makes the chips; the Netherlands makes the only machines that can make them.",
           "dependents": [
             {
@@ -2864,6 +2902,7 @@
           "share": "~25% of world bauxite output, largest reserves",
           "rank": "Largest bauxite exporter",
           "status": "watch",
+          "why_now": "Bauxite keeps loading, but Guinea has been pressing miners to build refining capacity locally — following Indonesia's nickel playbook — and has suspended some export permits to make the point. Politics there moves the aluminium price without a single tonne being lost.",
           "what": "Bauxite is the rock aluminium comes from, and Guinea has more of it than anywhere else. It is also one of the poorest countries in the world, with a history of coups, which is an uncomfortable combination for anyone depending on it.",
           "dependents": [
             {
@@ -2980,6 +3019,7 @@
           "share": "~35-40% of world robusta coffee",
           "rank": "Largest robusta producer; second largest coffee producer overall",
           "status": "watch",
+          "why_now": "Robusta is still recovering from the drought that drove record prices. Growing area has shrunk because farmers switched land to durian, which paid better, and trees planted now take three to four years to bear. Supply is tight until that replanting matures.",
           "what": "Brazil dominates arabica, the smoother bean. Vietnam dominates robusta, the stronger and cheaper one that goes into instant coffee and espresso blends. Between them they set the price of nearly every cup in the world.",
           "dependents": [
             {
@@ -3133,7 +3173,7 @@
       "name": "Strait of Hormuz",
       "short": "Hormuz",
       "region": "Between Iran and Oman",
-      "status": "calm",
+      "status": "alert",
       "carries": [
         "crude_oil",
         "natural_gas"
@@ -3197,8 +3237,13 @@
           "lesson": "Most of the economic damage of a chokepoint scare arrives through insurance and freight costs long before any ship is actually stopped."
         }
       ],
-      "news": [],
-      "live": false,
+      "news": [
+        {
+          "title": "Middle East tension escalates as shipping through Strait of Hormuz faces disruption",
+          "url": "https://example.com/mideast"
+        }
+      ],
+      "live": true,
       "carries_detail": [
         {
           "key": "crude_oil",
@@ -3221,7 +3266,7 @@
       "name": "Suez Canal",
       "short": "Suez",
       "region": "Egypt",
-      "status": "calm",
+      "status": "watch",
       "carries": [
         "crude_oil",
         "natural_gas",
@@ -3306,6 +3351,7 @@
       "short": "Bab el-Mandeb",
       "region": "Between Yemen and Djibouti",
       "status": "alert",
+      "why_now": "Shipping through the Red Sea is still running well below normal. Attacks on vessels from 2023 pushed most container lines onto the route around Africa, and although the threat has eased, war-risk insurance for the passage stayed expensive and the big carriers have been slow to come back — a routing decision, once made, is costly to reverse. This clears when the major lines publicly resume Suez transits and insurance prices fall back toward normal.",
       "carries": [
         "crude_oil",
         "natural_gas",
@@ -3401,7 +3447,7 @@
       "name": "Strait of Malacca",
       "short": "Malacca",
       "region": "Between Malaysia, Indonesia and Singapore",
-      "status": "calm",
+      "status": "watch",
       "carries": [
         "crude_oil",
         "natural_gas",
@@ -3565,6 +3611,7 @@
       "short": "Bosphorus",
       "region": "Turkey",
       "status": "watch",
+      "why_now": "Grain is moving out of Ukraine again through a corridor hugging the Romanian and Bulgarian coasts, but it runs without a formal agreement and depends on the war staying away from the ports. Strikes on Odesa's infrastructure have repeatedly interrupted loadings. This stays amber while the corridor rests on nothing more than restraint.",
       "carries": [
         "wheat",
         "crude_oil",
@@ -3656,7 +3703,7 @@
       "name": "Cape of Good Hope",
       "short": "The Cape",
       "region": "South Africa",
-      "status": "calm",
+      "status": "watch",
       "carries": [
         "shipping",
         "crude_oil"
@@ -3732,6 +3779,7 @@
       "short": "Taiwan Strait",
       "region": "Between Taiwan and mainland China",
       "status": "watch",
+      "why_now": "Nothing is physically interrupted. The amber is for concentration rather than an event: the overwhelming majority of the world's advanced chips cross this strait, military exercises around the island have become routine, and replacement capacity elsewhere is years from mattering. This is a standing exposure, not a developing incident.",
       "carries": [
         "semiconductors",
         "shipping"
@@ -3802,6 +3850,19 @@
   "alerts": [
     {
       "kind": "route",
+      "id": "hormuz",
+      "name": "Strait of Hormuz",
+      "what": "A fifth of the world's oil leaves through a gap 33 km wide",
+      "live": true,
+      "news": [
+        {
+          "title": "Middle East tension escalates as shipping through Strait of Hormuz faces disruption",
+          "url": "https://example.com/mideast"
+        }
+      ]
+    },
+    {
+      "kind": "route",
       "id": "bab_el_mandeb",
       "name": "Bab el-Mandeb & the Red Sea",
       "what": "The southern door to the Suez — and the one that has actually been shut",
@@ -3826,7 +3887,7 @@
     }
   ],
   "stats": {
-    "alert": 3,
-    "live_today": 0
+    "alert": 4,
+    "live_today": 1
   }
 }

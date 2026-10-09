@@ -70,16 +70,16 @@
       "india_angle": "When US rates fall, money flows toward India; when the US sells off, foreign investors pull money out of Nifty too. The US is the tide that moves India's boat.",
       "news": [
         {
-          "title": "Fuel, fertiliser costs strain American farmers' support for Republicans in midterms",
-          "url": "https://economictimes.indiatimes.com/news/economy/agriculture/fuel-fertiliser-costs-strain-american-farmers-support-for-republicans-in-midterms/articleshow/134807708.cms"
+          "title": "Fed signals higher-for-longer as Powell strikes hawkish tone on inflation",
+          "url": "https://example.com/fed-hawkish"
         },
         {
-          "title": "US Has Opened Direct Talks With Myanmar Government, Report Claims",
-          "url": "https://thediplomat.com/2026/10/us-has-opened-direct-talks-with-myanmar-government-report-claims/"
+          "title": "Powell hawkish comments lift dollar, pressure emerging market currencies",
+          "url": "https://example.com/dollar-up"
         },
         {
-          "title": "Not just AI. China is building technologies that challenge U.S. dominance",
-          "url": "https://restofworld.org/2026/china-america-tech-ai/?utm_source=rss&utm_medium=rss&utm_campaign=feeds"
+          "title": "US 10-year Treasury yield jumps to multi-month high after strong jobs report",
+          "url": "https://example.com/yields"
         }
       ]
     },
@@ -140,12 +140,7 @@
       "outlook": "A steady, dividend-paying, resources-and-banks market. Fairly priced, unlikely to surprise dramatically in either direction.",
       "verdict": "A sensible, slightly dull market you would own for income rather than growth. The one thing to keep an eye on is household debt: the banks are the biggest part of the index, and their fortunes are tied to Canadian house prices.",
       "india_angle": "A useful gauge of global oil demand — the same crude prices that decide India's import bill and inflation.",
-      "news": [
-        {
-          "title": "Fuel, fertiliser costs strain American farmers' support for Republicans in midterms",
-          "url": "https://economictimes.indiatimes.com/news/economy/agriculture/fuel-fertiliser-costs-strain-american-farmers-support-for-republicans-in-midterms/articleshow/134807708.cms"
-        }
-      ]
+      "news": []
     },
     {
       "code": "BR",
@@ -326,12 +321,7 @@
       "outlook": "A cheap, high-dividend, globally-earning developed market the world has ignored for a decade.",
       "verdict": "The classic value investor's developed market: unfashionable, cash-generative and cheap. Your returns will come mostly from dividends rather than growth — which is fine, provided you buy it for income and are not expecting excitement.",
       "india_angle": "Commodity- and energy-heavy, so it moves with the same oil and metal prices that drive Indian inflation.",
-      "news": [
-        {
-          "title": "Global Market: BoE’s Pill says central banks must stay focused on fighting inflation",
-          "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/global-market-boes-pill-says-central-banks-must-stay-focused-on-fighting-inflation/articleshow/134809242.cms"
-        }
-      ]
+      "news": []
     },
     {
       "code": "DE",
@@ -518,12 +508,16 @@
       "india_angle": "Home. Everything else on this map is judged against what you can already get here — and that bar is high.",
       "news": [
         {
-          "title": "Rupee sinks to two-month low amid FPI selling and rising US yields",
-          "url": "https://economictimes.indiatimes.com/news/economy/finance/rupee-hits-two-month-low-as-us-bond-yields-trigger-risk-off-trade/articleshow/134617960.cms"
+          "title": "Weak monsoon and El Nino fears threaten India kharif crop and rural demand",
+          "url": "https://example.com/monsoon"
         },
         {
-          "title": "Mint Quick Edit | India’s latest GST reforms should help turn production more competitive",
-          "url": "https://www.livemint.com/opinion/online-views/mint-quick-edit-india-latest-gst-reforms-should-help-turn-production-more-competitive-11791471234279.html"
+          "title": "India CPI inflation jumps on surging vegetable prices, dimming rate cut hopes",
+          "url": "https://example.com/india-cpi"
+        },
+        {
+          "title": "Rupee slips to record low against dollar as FII outflows accelerate",
+          "url": "https://example.com/rupee-low"
         }
       ]
     },
@@ -587,24 +581,7 @@
       "outlook": "Genuinely cheap and genuinely troubled. The gap between its industrial strength and its stock-market performance is the puzzle.",
       "verdict": "The textbook value-trap question: is it cheap, or cheap for good reason? The businesses are often excellent — China builds the world's best batteries and EVs. The risk is not the business at all; it is whether shareholders are allowed to keep the profits. Munger owned China and still called governance its central issue.",
       "india_angle": "China stimulus lifts metal prices and Indian steel producers. Global 'sell expensive India, buy cheap China' rotations are a real and recurring pressure on Nifty.",
-      "news": [
-        {
-          "title": "Fuel, fertiliser costs strain American farmers' support for Republicans in midterms",
-          "url": "https://economictimes.indiatimes.com/news/economy/agriculture/fuel-fertiliser-costs-strain-american-farmers-support-for-republicans-in-midterms/articleshow/134807708.cms"
-        },
-        {
-          "title": "US Has Opened Direct Talks With Myanmar Government, Report Claims",
-          "url": "https://thediplomat.com/2026/10/us-has-opened-direct-talks-with-myanmar-government-report-claims/"
-        },
-        {
-          "title": "China Restarts Fuel Exports",
-          "url": "https://oilprice.com/Latest-Energy-News/World-News/China-Restarts-Fuel-Exports.html"
-        },
-        {
-          "title": "Not just AI. China is building technologies that challenge U.S. dominance",
-          "url": "https://restofworld.org/2026/china-america-tech-ai/?utm_source=rss&utm_medium=rss&utm_campaign=feeds"
-        }
-      ]
+      "news": []
     },
     {
       "code": "JP",
@@ -1011,7 +988,12 @@
       "outlook": "An oil-funded national transformation you can buy shares in — with all the concentration and governance caveats that implies.",
       "verdict": "You are underwriting one commodity and one royal family's plan. For most investors this fails the simplest Buffett test — do I understand this, and do I trust the rules? — regardless of how attractive the growth spending looks.",
       "india_angle": "Gulf oil policy sets crude prices, the single biggest external lever on Indian inflation, the rupee, and oil-marketing, paint and aviation stocks.",
-      "news": []
+      "news": [
+        {
+          "title": "Brent crude surges past $90 as OPEC extends supply cuts amid Middle East tension",
+          "url": "https://example.com/oil-surge"
+        }
+      ]
     },
     {
       "code": "ZA",
@@ -1485,6 +1467,6 @@
       "Central-bank gold buying - steady purchases put a floor under the price",
       "Whether US gains broaden beyond the handful of AI names, or narrow even further"
     ],
-    "mood_today": "risk-off"
+    "mood_today": "mixed"
   }
 }

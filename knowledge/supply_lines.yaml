@@ -322,6 +322,14 @@ routes:
     short: "Bab el-Mandeb"
     region: "Between Yemen and Djibouti"
     status: alert
+    why_now: >-
+      Shipping through the Red Sea is still running well below normal. Attacks
+      on vessels from 2023 pushed most container lines onto the route around
+      Africa, and although the threat has eased, war-risk insurance for the
+      passage stayed expensive and the big carriers have been slow to come back
+      — a routing decision, once made, is costly to reverse. This clears when
+      the major lines publicly resume Suez transits and insurance prices fall
+      back toward normal.
     carries: [crude_oil, natural_gas, shipping]
     headline: "The southern door to the Suez — and the one that has actually been shut"
     volume: "Normally around 9 million barrels of oil a day and most Asia-Europe container traffic"
@@ -439,6 +447,12 @@ routes:
     short: "Bosphorus"
     region: "Turkey"
     status: watch
+    why_now: >-
+      Grain is moving out of Ukraine again through a corridor hugging the
+      Romanian and Bulgarian coasts, but it runs without a formal agreement and
+      depends on the war staying away from the ports. Strikes on Odesa's
+      infrastructure have repeatedly interrupted loadings. This stays amber
+      while the corridor rests on nothing more than restraint.
     carries: [wheat, crude_oil, fertiliser]
     headline: "The world's bread basket has one narrow way out"
     volume: "Normally around a quarter to a third of world wheat exports, plus sunflower oil and Russian crude"
@@ -515,6 +529,12 @@ routes:
     short: "Taiwan Strait"
     region: "Between Taiwan and mainland China"
     status: watch
+    why_now: >-
+      Nothing is physically interrupted. The amber is for concentration rather
+      than an event: the overwhelming majority of the world's advanced chips
+      cross this strait, military exercises around the island have become
+      routine, and replacement capacity elsewhere is years from mattering. This
+      is a standing exposure, not a developing incident.
     carries: [semiconductors, shipping]
     headline: "Where the world's advanced chips are made, and shipped"
     volume: "Roughly a fifth of all container traffic passes through, but the real cargo is irreplaceable"
@@ -675,6 +695,11 @@ countries:
         share: "~20-24% of world wheat exports"
         rank: "Largest wheat exporter in the world"
         status: watch
+        why_now: >-
+          Wheat keeps flowing, but on terms that can change quickly. Russia has used
+          export duties and informal price floors to steer shipments, and buyers
+          face payment and shipping friction from sanctions even though food itself
+          is exempt. Watch the export duty and any move to restrict volumes.
         what: >-
           Russia overtook everyone to become the dominant wheat exporter, and its
           wheat goes overwhelmingly to countries that cannot easily pay more —
@@ -706,6 +731,11 @@ countries:
         share: "~40% of world palladium"
         rank: "Largest producer, with South Africa"
         status: watch
+        why_now: >-
+          Supply has continued despite sanctions, but a large share of the world's
+          palladium comes from one sanctioned country and buyers have been designing
+          it out rather than risk it. The amber reflects a dependence being
+          deliberately unwound, not a shortage today.
         what: >-
           Palladium is mostly a by-product of Russian nickel mining, which means
           its supply does not respond to its own price — producers mine it because
@@ -738,6 +768,14 @@ countries:
         share: "~60% of mining, ~85-90% of refining"
         rank: "Overwhelming dominance of processing"
         status: alert
+        why_now: >-
+          China operates an export licensing regime on rare earths and the magnets
+          made from them. Shipments have largely continued, but each one now needs
+          approval, which means they can be slowed or stopped as leverage without
+          any formal ban being announced — and approvals have been used that way
+          during trade disputes. Buyers outside China are carrying the delay and the
+          uncertainty. This clears only when alternative separation capacity exists
+          at scale, which is a decade-long project.
         what: >-
           The misleading thing about rare earths is that they are not rare. They
           are found in many countries, including India. What is concentrated is
@@ -835,6 +873,11 @@ countries:
         share: "~65-80% of world output and nearly all battery-grade refining"
         rank: "Overwhelming dominance"
         status: watch
+        why_now: >-
+          Graphite exports have required permits since 2023, introduced days after
+          new Western restrictions on chip equipment. Material still moves, with
+          added friction and delay. Because nearly all battery-grade processing is
+          Chinese, there is no quick alternative to qualify.
         what: >-
           Every lithium-ion battery has more graphite in it than lithium by weight,
           and almost nobody discusses it. China controls not just mining but the
@@ -863,6 +906,11 @@ countries:
         share: "~40% of world medicine ingredients"
         rank: "Dominant supplier of the chemicals inside medicines"
         status: watch
+        why_now: >-
+          No single incident. Environmental enforcement periodically closes Chinese
+          chemical plants with little notice, and medicine ingredients have been
+          caught in that before. The amber marks how thin the buffer is: the world
+          holds very little inventory of these chemicals.
         what: >-
           China makes the active ingredients; India turns many of them into
           tablets; the world takes the tablets. Two layers of concentration
@@ -1037,6 +1085,11 @@ countries:
         share: "~50-55% of world mined nickel"
         rank: "Dominant, and growing"
         status: watch
+        why_now: >-
+          Indonesia keeps adjusting the rules — royalties, permitted output and
+          processing requirements have all changed recently — and because it now
+          supplies over half the world's nickel, each change moves the global price.
+          The risk here is policy, not geology.
         what: >-
           Indonesia went from a modest producer to over half the world's supply in
           under a decade by banning raw ore exports and forcing smelters to be
@@ -1540,6 +1593,10 @@ countries:
         share: "~20% of world generic medicines by volume"
         rank: "The largest supplier of generic drugs in the world"
         status: watch
+        why_now: >-
+          India's generic industry is running normally, but it buys a large share of
+          its raw chemicals from China, so it inherits that exposure. The amber is
+          for the dependency inside the strength, not for a current shortage.
         what: >-
           India is called the pharmacy of the world and the description is
           accurate — but it buys a large share of the chemical ingredients it
@@ -1634,6 +1691,12 @@ countries:
         share: "~40% of world output"
         rank: "Largest producer; with Ghana, about 60% of world supply"
         status: watch
+        why_now: >-
+          Prices came down from the 2024 record as the 2025 crop improved, but the
+          underlying problem has not been fixed: the trees are old, swollen shoot
+          disease is still spreading, and farmer payments have only recently risen
+          enough to justify replanting — which takes years to show up as beans.
+          Another poor season would move prices sharply again.
         what: >-
           Most of the world's chocolate begins on smallholder farms in two
           neighbouring West African countries, grown on ageing trees by farmers
@@ -1711,6 +1774,12 @@ countries:
         share: "~90% of the world's most advanced chips"
         rank: "Effectively a monopoly at the leading edge"
         status: watch
+        why_now: >-
+          Production is normal. The amber is for how much rests on it: the
+          overwhelming majority of the world's most advanced chips are made on one
+          seismically active island in a contested strait, using machines only one
+          company makes. New plants elsewhere are being built precisely because this
+          concentration is uncomfortable, and they are years from relieving it.
         what: >-
           One company, TSMC, on one island, makes the overwhelming majority of
           the world's most advanced processors. Nothing else in the modern
@@ -1871,6 +1940,12 @@ countries:
         share: "~8-10% of world wheat exports, plus ~45% of sunflower oil"
         rank: "Among the top wheat exporters; dominant in sunflower oil"
         status: alert
+        why_now: >-
+          The war continues and it is being fought partly over export
+          infrastructure. Ukraine ships grain through its own Black Sea corridor,
+          which has worked better than expected, but port and power facilities are
+          struck periodically and farmland remains mined. Output is well below pre-
+          war levels and the labour to work it is not all coming back.
         what: >-
           Ukraine's black soil is among the most fertile on earth, and the country
           feeds a large part of North Africa and the Middle East. Its sunflower
@@ -2139,6 +2214,12 @@ countries:
         share: "~43% of world uranium production"
         rank: "Largest producer by a wide margin"
         status: watch
+        why_now: >-
+          Mining is running, but two things keep this amber. Sulphuric acid — which
+          the extraction method depends on — has been in short supply, and export
+          routes historically ran through Russia, so shipments now take longer and
+          costlier paths. Meanwhile demand is rising as countries restart nuclear
+          programmes.
         what: >-
           Kazakhstan mines more uranium than the next three countries combined,
           using a low-cost method that dissolves the ore underground rather than
@@ -2252,6 +2333,11 @@ countries:
         share: "~45% of world soybean meal and oil exports"
         rank: "Largest exporter of processed soy products"
         status: watch
+        why_now: >-
+          The crop recovered from the 2023 drought, but export taxes and a currency
+          farmers do not trust mean beans sit in silo bags rather than reaching the
+          market. The harvest existing and the harvest being sold are different
+          things here, and policy decides which.
         what: >-
           Argentina grows less soy than Brazil but crushes far more of it,
           exporting the oil and the animal feed rather than the raw bean. That
@@ -2288,6 +2374,11 @@ countries:
         share: "~100% of extreme-ultraviolet lithography machines"
         rank: "A genuine monopoly"
         status: watch
+        why_now: >-
+          Export controls on the most advanced lithography machines remain in force,
+          and licensing for the tier below keeps shifting. Nothing has stopped for
+          buyers outside China; the amber is because a single company in a single
+          country is now an instrument of trade policy, and the rules change.
         what: >-
           One Dutch company, ASML, is the only firm on earth that makes the
           machines required to print the most advanced chips. Each costs upwards
@@ -2326,6 +2417,11 @@ countries:
         share: "~25% of world bauxite output, largest reserves"
         rank: "Largest bauxite exporter"
         status: watch
+        why_now: >-
+          Bauxite keeps loading, but Guinea has been pressing miners to build
+          refining capacity locally — following Indonesia's nickel playbook — and
+          has suspended some export permits to make the point. Politics there moves
+          the aluminium price without a single tonne being lost.
         what: >-
           Bauxite is the rock aluminium comes from, and Guinea has more of it than
           anywhere else. It is also one of the poorest countries in the world, with
@@ -2398,6 +2494,11 @@ countries:
         share: "~35-40% of world robusta coffee"
         rank: "Largest robusta producer; second largest coffee producer overall"
         status: watch
+        why_now: >-
+          Robusta is still recovering from the drought that drove record prices.
+          Growing area has shrunk because farmers switched land to durian, which
+          paid better, and trees planted now take three to four years to bear.
+          Supply is tight until that replanting matures.
         what: >-
           Brazil dominates arabica, the smoother bean. Vietnam dominates robusta,
           the stronger and cheaper one that goes into instant coffee and espresso

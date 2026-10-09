@@ -22,7 +22,7 @@ ASSETS_PAGE = """<!doctype html>
 <link href="{{ fonts }}" rel="stylesheet">
 {{ icon }}{{ themeboot }}
 <style>{{ css }}</style>
-</head><body><div class="wrap wide">
+</head><body class="page-assets"><div class="wrap wide">
 
 <header class="mast">
   <div class="kicker">World news, decoded for Indian markets</div>

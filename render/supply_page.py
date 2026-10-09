@@ -18,7 +18,7 @@ SUPPLY_PAGE = """<!doctype html>
 <link href="{{ fonts }}" rel="stylesheet">
 {{ icon }}{{ themeboot }}
 <style>{{ css }}</style>
-</head><body><div class="wrap wide">
+</head><body class="page-supply"><div class="wrap wide">
 
 <header class="mast">
   <div class="kicker">World news, decoded for Indian markets</div>
@@ -238,6 +238,15 @@ var SL = {{ s_json }};
       +'data-def="'+esc(def)+'">'+esc(label)+'</span>';
   }
   function block(title,inner){return inner?'<div class="pblock"><h4>'+title+'</h4>'+inner+'</div>':'';}
+  /* A status badge is a claim. This is the evidence for it, placed before
+     anything else so "Disrupted now" is never just a colour. */
+  function whyNow(rec){
+    if(!rec.why_now||rec.status==='calm')return '';
+    var head=rec.status==='alert'?'Why it is disrupted right now'
+                                 :'Why this is worth watching right now';
+    return '<div class="whynow st-'+rec.status+'"><b>'+esc(head)+'</b>'
+      +esc(rec.why_now)+'</div>';
+  }
   function list(arr,cls){if(!arr||!arr.length)return '';
     return '<ul class="plist '+(cls||'')+'">'+arr.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul>';}
   function pill(st){return '<span class="stpill st-'+st+'">'+esc(STATUS[st]||st)+'</span>';}
@@ -277,6 +286,7 @@ var SL = {{ s_json }};
       +'<h3>'+esc(r.name)+pill(r.status)+'</h3>'
       +'<div class="sub">'+esc(r.region)+'</div>'
       +'<div class="verdict"><b>Why it matters</b>'+esc(r.headline)+'</div>'
+      +whyNow(r)
       +newsBlock(r.news)
       +block('How much goes through','<p class="pnote">'+esc(r.volume)+'</p>'
         +(carries?'<div class="comchips">'+carries+'</div>':'')
@@ -306,6 +316,7 @@ var SL = {{ s_json }};
         +'<div><b>'+esc(info.name||s.commodity)+'</b>'+pill(s.status)
         +'<span class="supshare">'+esc(s.share)+' · '+esc(s.rank)+'</span></div></div>'
         +'<p class="explain"><b>What this turns into in your life.</b> '+esc(info.everyday||'')+'</p>'
+        +whyNow(s)
         +newsBlock(s.news)
         +block('What is actually going on here','<p class="pnote">'+esc(s.what)+'</p>')
         +block('Who depends on it',(deps?'<div class="qrows">'+deps+'</div>':''))

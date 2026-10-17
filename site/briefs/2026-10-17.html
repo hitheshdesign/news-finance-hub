@@ -1,0 +1,2071 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Saturday, 17 October 2026 — India Impact Brief</title>
+<meta name="description" content="What happened in the world today and how it reaches Indian inflation, the rupee, sectors and gold — in plain language.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&amp;family=Inter:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%20role%3D%22img%22%20aria-label%3D%22The%20India%20Impact%20Brief%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%2F%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%235fa8ff%22%20stroke-linecap%3D%22round%22%20stroke-width%3D%225%22%3E%3Cpath%20d%3D%22M39.1%2022.2A12%2012%200%200%200%2039.1%2041.8%22%20opacity%3D%22.95%22%2F%3E%3Cpath%20d%3D%22M34.5%2015.6A20%2020%200%200%200%2034.5%2048.4%22%20opacity%3D%22.62%22%2F%3E%3Cpath%20d%3D%22M29.9%209.1A28%2028%200%200%200%2029.9%2054.9%22%20opacity%3D%22.34%22%2F%3E%3C%2Fg%3E%3Ccircle%20cx%3D%2246%22%20cy%3D%2232%22%20r%3D%226%22%20fill%3D%22%23e0a94a%22%2F%3E%3C%2Fsvg%3E"><link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%20role%3D%22img%22%20aria-label%3D%22The%20India%20Impact%20Brief%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%230f172a%22%2F%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%235fa8ff%22%20stroke-linecap%3D%22round%22%20stroke-width%3D%225%22%3E%3Cpath%20d%3D%22M39.1%2022.2A12%2012%200%200%200%2039.1%2041.8%22%20opacity%3D%22.95%22%2F%3E%3Cpath%20d%3D%22M34.5%2015.6A20%2020%200%200%200%2034.5%2048.4%22%20opacity%3D%22.62%22%2F%3E%3Cpath%20d%3D%22M29.9%209.1A28%2028%200%200%200%2029.9%2054.9%22%20opacity%3D%22.34%22%2F%3E%3C%2Fg%3E%3Ccircle%20cx%3D%2246%22%20cy%3D%2232%22%20r%3D%226%22%20fill%3D%22%23e0a94a%22%2F%3E%3C%2Fsvg%3E"><meta name="theme-color" content="#0f172a">
+<style>/* ===========================================================================
+   NEWS FINANCE HUB — stylesheet
+   Dark only. One semantic colour scale. One spacing scale. One type scale.
+
+   The previous sheet had grown to four separate red/amber/green systems, 56
+   distinct padding values and 30 font sizes — which is why the pages drifted
+   apart and why every fix needed another fix. Everything below is built from
+   the tokens in section 1. Change a token, every page follows.
+
+   Sections
+     1  tokens          7  cards & panels
+     2  reset & base    8  meters, pills, chips
+     3  layout          9  tables & lists
+     4  type           10  maps & charts
+     5  keys           11  page-specific blocks
+     6  surfaces       12  motion & reduced motion
+   =========================================================================== */
+
+/* ---------------------------------------------------------------- 1 TOKENS */
+:root{
+  color-scheme:dark;
+
+  /* fonts */
+  --serif:'Newsreader',Georgia,'Times New Roman',serif;
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  --mono:'Geist Mono',ui-monospace,'SFMono-Regular',Menlo,monospace;
+
+  /* ---- elevation: one ladder, deepest at the back --------------------
+     Cards sit only a little above the page and stay genuinely dark, so
+     light text on them is high-contrast rather than washed out.          */
+  --bg:        #080a0e;
+  --surface-1: #0f131a;   /* cards, panels            */
+  --surface-2: #141922;   /* blocks nested in a card  */
+  --surface-3: #1b212c;   /* keys, chips              */
+  --well:      #05070a;   /* recessed: maps, tracks   */
+
+  /* ---- ink ----------------------------------------------------------- */
+  --ink:    #eef2f7;      /* headings, numbers        */
+  --ink-2:  #c6cedb;      /* body copy                */
+  --ink-3:  #96a1b2;      /* secondary                */
+  --ink-4:  #808c9b;      /* labels, captions         */
+
+  --line:   #1e2530;      /* hairline                 */
+  --line-2: #2a323f;      /* stronger divider         */
+
+  /* ---- THE semantic scale -------------------------------------------
+     Four meanings, used identically on every page:
+       pos   good / cheap / calm / rising-is-good
+       warn  caution / fair / worth watching
+       neg   bad / dear / disrupted / falling-is-bad
+       flat  neutral / no reading available
+     Nothing else may invent its own red or green.                        */
+  --pos:#45d19a;  --pos-bg:#0d2a1f;  --pos-line:#1c5f45;  --pos-ink:#062016;
+  --warn:#e8b53f; --warn-bg:#2c2211; --warn-line:#6a5321; --warn-ink:#211802;
+  --neg:#f5796c;  --neg-bg:#2e1614;  --neg-line:#6d2f29;  --neg-ink:#2a0906;
+  --flat:#848f9f; --flat-bg:#151a22; --flat-line:#2b333f; --flat-ink:#e8edf3;
+
+  /* heat ramp, derived from the same two hues so it can never drift */
+  --heat-pos-2:#1f7a52; --heat-pos-1:#215a43;
+  --heat-flat:#2c333f;
+  --heat-neg-1:#5d2a25; --heat-neg-2:#9e3a30;
+
+  /* ---- spacing: 4px base --------------------------------------------- */
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:20px;
+  --s6:24px; --s7:32px; --s8:40px; --s9:56px;
+
+  /* ---- padding: how much air each kind of container gets -------------
+     Declared once, here, for the same reason the colours are: so a chip on
+     one page cannot be tighter than the same chip on another. A pill needs
+     more side padding than a square box because the rounded ends eat into
+     the usable width.                                                    */
+  --pad-pill:4px var(--s3);
+  --pad-chip:var(--s1) var(--s3);
+  --pad-block:var(--s4) var(--s5);
+
+  /* ---- type: size paired with its line-height ------------------------ */
+  --t-display:34px;  --lh-display:1.16;
+  --t-h2:23px;       --lh-h2:1.3;
+  --t-h3:19px;       --lh-h3:1.36;
+  --t-body:16px;     --lh-body:1.68;   /* generous — this is a reading site */
+  --t-sm:14.5px;     --lh-sm:1.62;
+  --t-xs:13px;       --lh-xs:1.55;
+  --t-label:11px;    --lh-label:1.45;
+
+  /* ---- shape & depth -------------------------------------------------- */
+  --r-sm:8px; --r-md:12px; --r-lg:18px; --r-pill:999px;
+  --sh-1:0 1px 2px rgb(0 0 0/.55), 0 2px 6px rgb(0 0 0/.4);
+  --sh-2:2px 4px 12px rgb(0 0 0/.5), 1px 2px 4px rgb(0 0 0/.45);
+  --sh-3:8px 16px 40px rgb(0 0 0/.55), 3px 6px 14px rgb(0 0 0/.45);
+  --inset:inset 0 1px 3px rgb(0 0 0/.5);
+  --lit:inset 1px 1px 0 rgb(255 255 255/.055);
+
+  /* ---- motion --------------------------------------------------------- */
+  --ease:cubic-bezier(.22,1,.36,1);
+  --press:.14s cubic-bezier(.16,.84,.32,1);
+
+  /* accent is replaced per page in section 3 */
+  --accent:#5fa8ff;
+}
+
+/* ---- the semantic classes. Every status class on every page resolves to
+   one of four meanings, and components read --sem / --sem-bg / --sem-line. */
+.pos,.up,.good,.v-cheap,.st-calm,.cheap{
+  --sem:var(--pos); --sem-bg:var(--pos-bg); --sem-line:var(--pos-line);
+}
+.warn,.v-fair,.st-watch,.fair,.mood-mixed{
+  --sem:var(--warn); --sem-bg:var(--warn-bg); --sem-line:var(--warn-line);
+}
+.neg,.down,.bad,.v-exp,.st-alert,.expensive{
+  --sem:var(--neg); --sem-bg:var(--neg-bg); --sem-line:var(--neg-line);
+}
+.flat,.v-none,.none{
+  --sem:var(--flat); --sem-bg:var(--flat-bg); --sem-line:var(--flat-line);
+}
+.mood-on{--sem:var(--pos); --sem-bg:var(--pos-bg);}
+.mood-off{--sem:var(--neg); --sem-bg:var(--neg-bg);}
+/* older component code still reads these two names */
+:root,.pos,.warn,.neg,.flat{--vc:var(--sem,var(--flat)); --sc:var(--sem,var(--flat));
+  --vb:var(--sem-bg,var(--flat-bg));}
+*{--vc:var(--sem,var(--ink-3)); --sc:var(--sem,var(--ink-3));
+  --vb:var(--sem-bg,var(--surface-2));}
+
+/* legacy aliases kept so page code need not change */
+:root{
+  --panel:var(--surface-1); --panel2:var(--surface-2);
+  --ink2:var(--ink-2); --muted:var(--ink-3); --faint:var(--ink-4);
+  --line2:var(--line-2); --brand:var(--ink); --link:var(--accent);
+  --up:var(--pos); --up-bg:var(--pos-bg); --down:var(--neg); --down-bg:var(--neg-bg);
+  --c-cheap:var(--pos); --c-fair:var(--warn); --c-exp:var(--neg); --c-none:var(--flat-line);
+  --cb-cheap:var(--pos-bg); --cb-fair:var(--warn-bg); --cb-exp:var(--neg-bg);
+  --st-calm:var(--pos); --st-watch:var(--warn); --st-alert:var(--neg);
+  --stb-calm:var(--pos-bg); --stb-watch:var(--warn-bg); --stb-alert:var(--neg-bg);
+  --map-base:#232c38; --map-none:#141a22;
+  --tip-bg:#1d2430; --tip-ink:#f2f5f9;
+  --top-bg:#1f1a10; --top-line:#4a3f22;
+  --font-serif:var(--serif); --font-sans:var(--sans);
+}
+
+/* ------------------------------------------------------- 2 RESET & BASE */
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;overflow-x:hidden;}
+body{
+  margin:0;background:var(--bg);color:var(--ink-2);
+  font-family:var(--sans);font-size:var(--t-body);line-height:var(--lh-body);
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  font-variant-numeric:tabular-nums;
+}
+img{max-width:100%;}
+button{font:inherit;color:inherit;}
+a{color:var(--accent);}
+:where(a,button,summary,[tabindex]):focus-visible{
+  outline:2px solid var(--accent);outline-offset:2px;border-radius:var(--r-sm);
+}
+::selection{background:color-mix(in srgb,var(--accent) 35%,transparent);color:#fff;}
+
+/* ------------------------------------------------------------- 3 LAYOUT */
+.wrap{max-width:760px;margin:0 auto;padding:var(--s7) var(--s5) var(--s9);
+  position:relative;z-index:1;}
+.wrap.wide{max-width:1180px;}
+
+/* One accent per section, so you know where you are before reading a word.
+   Every one of them is deliberately OUTSIDE the red/amber/green band. The
+   semantic scale owns those hues: if a page accent were orange or green,
+   an accented heading would read as a status, and the same colour would
+   mean "you are on Supply Lines" here and "worth watching" there. Keeping
+   accents cool means a warm or green pixel anywhere on the site is always
+   a status and never decoration.                                          */
+body.page-global{--accent:#36c7d8;}   /* cyan       */
+body.page-news  {--accent:#5fa8ff;}   /* azure      */
+body.page-supply{--accent:#8f9bff;}   /* periwinkle */
+body.page-assets{--accent:#b388f9;}   /* violet     */
+body.page-learn {--accent:#8fa3bd;}   /* steel - the quiet reference page */
+
+/* atmosphere: a wash in the page's colour, and a whisper of graph paper.
+   Both fixed and non-interactive so they can never intercept a click. */
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(1000px 560px at 10% -10%,
+      color-mix(in srgb,var(--accent) 11%,transparent), transparent 70%),
+    radial-gradient(760px 440px at 95% 0%,
+      color-mix(in srgb,var(--accent) 6%,transparent), transparent 72%);
+}
+body::after{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    linear-gradient(rgb(255 255 255/.028) 1px,transparent 1px),
+    linear-gradient(90deg,rgb(255 255 255/.028) 1px,transparent 1px);
+  background-size:72px 72px;
+  -webkit-mask-image:radial-gradient(1200px 680px at 50% 0%,#000,transparent 76%);
+  mask-image:radial-gradient(1200px 680px at 50% 0%,#000,transparent 76%);
+}
+
+/* ------------------------------------------------------- 4 TYPOGRAPHY */
+h1,h2,h3,h4,h5{margin:0;color:var(--ink);font-weight:600;}
+p{margin:0 0 var(--s3);}
+p:last-child{margin-bottom:0;}
+
+.mast{padding-bottom:var(--s6);margin-bottom:var(--s2);position:relative;
+  border-bottom:1px solid var(--line);}
+.brandrow{display:flex;align-items:center;gap:var(--s3);}
+.brandrow svg{width:40px;height:40px;flex:none;border-radius:var(--r-md);
+  box-shadow:var(--sh-2),0 0 22px color-mix(in srgb,var(--accent) 26%,transparent);
+  transition:box-shadow .25s var(--ease);}
+.brandrow svg rect{fill:#060910;}
+.brandrow svg g{stroke:var(--accent);}
+.brandrow:hover svg{box-shadow:var(--sh-2),
+  0 0 30px color-mix(in srgb,var(--accent) 42%,transparent);}
+.mast h1{font-family:var(--serif);font-size:var(--t-display);
+  line-height:var(--lh-display);letter-spacing:-.02em;font-weight:700;}
+@media (max-width:520px){.mast h1{font-size:27px;}
+  .brandrow svg{width:33px;height:33px;}}
+
+.kicker{display:inline-flex;align-items:center;gap:var(--s2);
+  font-family:var(--mono);font-size:var(--t-label);font-weight:500;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink-4);
+  margin-bottom:var(--s3);}
+.kicker::before{content:"";width:6px;height:6px;border-radius:2px;flex:none;
+  background:var(--accent);
+  box-shadow:0 0 9px color-mix(in srgb,var(--accent) 75%,transparent);}
+.date{margin-top:var(--s3);font-size:var(--t-sm);line-height:var(--lh-sm);
+  color:var(--ink-3);}
+.date .engine,.engine{font-family:var(--mono);font-size:var(--t-xs);
+  color:var(--ink-4);}
+
+/* every small uppercase label on the site, one rule */
+.section,.blocklabel,.pblock h4,.slhead,.alerthead,.pkind,.epwhen,.hkick,
+.famhead h3,.secshead,.rotblk h5,.hchain h5,.rgblk h5,.eprow b,.wl h5,
+.hpattern b,.hindia b,.hwatch b,.rgindia b,.thead span,.qk,.lbl-cap,
+.heatkey .lbl,.gn,.rband,.rer,.chip b,.tag,.vlbl,.histscale,.count{
+  font-family:var(--mono);font-size:var(--t-label);line-height:var(--lh-label);
+  font-weight:600;letter-spacing:.09em;text-transform:uppercase;
+}
+.section{display:flex;align-items:center;gap:var(--s3);margin:var(--s7) 0 var(--s4);
+  color:color-mix(in srgb,var(--accent) 70%,var(--ink-2));}
+.section::after{content:"";flex:1;height:1px;
+  background:linear-gradient(90deg,
+    color-mix(in srgb,var(--accent) 38%,transparent),transparent);}
+.blocklabel,.pblock h4{color:color-mix(in srgb,var(--accent) 52%,var(--ink-3));
+  margin:var(--s5) 0 var(--s3);}
+.pblock h4{margin:0 0 var(--s3);padding-bottom:var(--s2);
+  border-bottom:1px solid var(--line);}
+
+/* ---------------------------------------------------------------- 5 KEYS */
+.key,.tabs a,.gf-switch button,.alertchip,.mapctl button,.slrow,
+details.tablefold>summary,details.gf-acc>summary,.cal>summary{
+  background:linear-gradient(145deg,var(--surface-3),var(--surface-1));
+  border:1px solid var(--line-2);
+  box-shadow:var(--sh-1),var(--lit);
+  transition:box-shadow var(--press),transform var(--press),
+             filter var(--press),color .15s var(--ease),
+             border-color .15s var(--ease);
+}
+.tabs a:hover,.gf-switch button:hover,.alertchip:hover,.mapctl button:hover,
+details.tablefold>summary:hover,details.gf-acc>summary:hover,.cal>summary:hover{
+  filter:brightness(1.18);border-color:color-mix(in srgb,var(--accent) 40%,var(--line-2));
+}
+.tabs a:active,.gf-switch button:active,.alertchip:active,.mapctl button:active,
+details.tablefold>summary:active,details.gf-acc>summary:active,.cal>summary:active{
+  transform:translateY(1px);box-shadow:inset 0 1px 2px rgb(0 0 0/.6);
+}
+
+.tabs{display:flex;gap:var(--s2);margin:var(--s4) 0 var(--s2);padding-bottom:var(--s1);
+  overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;}
+.tabs::-webkit-scrollbar{display:none;}
+.tabs a{display:inline-flex;align-items:center;flex:none;white-space:nowrap;
+  min-height:44px;padding:var(--s2) var(--s4);border-radius:var(--r-sm);
+  font-size:var(--t-xs);font-weight:600;color:var(--ink-3);text-decoration:none;}
+.tabs a.on{color:var(--ink);
+  border-color:color-mix(in srgb,var(--accent) 55%,transparent);
+  box-shadow:var(--sh-1),var(--lit),
+    0 0 14px color-mix(in srgb,var(--accent) 18%,transparent);}
+.tabs a.on::before{content:"";width:5px;height:5px;border-radius:50%;flex:none;
+  margin-right:var(--s2);background:var(--accent);
+  box-shadow:0 0 8px color-mix(in srgb,var(--accent) 80%,transparent);}
+
+.gf-switch{display:inline-flex;gap:var(--s1);padding:var(--s1);
+  margin:var(--s5) 0 var(--s3);border-radius:var(--r-md);
+  background:var(--well);border:1px solid var(--line);box-shadow:var(--inset);}
+.gf-switch button{border-radius:var(--r-sm);border:0;background:transparent;
+  box-shadow:none;padding:var(--s2) var(--s4);cursor:pointer;
+  font-size:var(--t-xs);font-weight:600;color:var(--ink-3);}
+.gf-switch button.on{color:var(--bg);background:var(--ink);box-shadow:var(--sh-2);}
+.gf-switch button.on:hover{filter:brightness(1.08);}
+.gf-view[hidden]{display:none;}
+
+.mapctl{position:absolute;top:var(--s3);right:var(--s3);display:flex;
+  flex-direction:column;gap:var(--s1);z-index:5;}
+.mapctl button{width:30px;height:30px;border-radius:var(--r-sm);cursor:pointer;
+  font-size:15px;font-weight:700;line-height:1;color:var(--ink-2);
+  backdrop-filter:blur(8px);}
+
+/* ------------------------------------------------------- 6/7 SURFACES */
+.card,.panel,.histcard,.gauge,.regime,.rec,.alertbar,.sllist,.ctable,
+.rot-now,.cal,.deeper .dr,.gf-note,.scenarios,.records .rec{
+  background:var(--surface-1);
+  border:1px solid var(--line);
+  border-radius:var(--r-lg);
+  box-shadow:var(--sh-1);
+}
+/* a lit top edge in the page's colour — the clearest "you are here" signal */
+.card,.panel,.histcard,.gauge,.regime,.alertbar{
+  border-top-color:color-mix(in srgb,var(--accent) 34%,var(--line));
+}
+.card{padding:var(--s6);margin-bottom:var(--s5);}
+.card:hover{box-shadow:var(--sh-2);
+  border-top-color:color-mix(in srgb,var(--accent) 58%,var(--line));}
+.card.top{background:linear-gradient(180deg,var(--top-bg),var(--surface-1));
+  border-color:var(--top-line);}
+@media (max-width:520px){.card{padding:var(--s5) var(--s4);border-radius:var(--r-md);}}
+
+.panel{padding:var(--s6);}
+/* blocks nested inside a card step up one level, never down */
+.pblock{margin:0 0 var(--s5);}
+.pblock:last-child{margin-bottom:0;}
+.tldr,.verdict,.analogy,.explain,.gf-india,.hpattern,.hindia,.hwatch,
+.rgindia,.rotlesson,.gmean,.reading,.caveat,.qrows,.kv .k,.route,.episode,
+.rh,.gn,.comchip,.chip,.supply,.impact,.heatkey,.maplegend,.gf-legend{
+  background:var(--surface-2);border:1px solid var(--line);
+  border-radius:var(--r-md);padding:var(--pad-block);
+}
+.tldr,.verdict,.gf-india,.hpattern,.hindia,.hwatch,.rgindia,.rotlesson,.gmean{
+  border-left:3px solid var(--sem,var(--accent));
+  border-radius:0 var(--r-md) var(--r-md) 0;
+  padding:var(--s4) var(--s5);margin:0 0 var(--s4);
+}
+.tldr{border-left-color:var(--accent);}
+.tldr .lbl,.verdict b,.hpattern b,.hindia b,.hwatch b,.rgindia b,.rotlesson b{
+  display:block;font-family:var(--mono);font-size:var(--t-label);font-weight:600;
+  letter-spacing:.09em;text-transform:uppercase;margin-bottom:var(--s2);
+  color:var(--sem,var(--accent));
+}
+.tldr .lbl{color:var(--accent);}
+.tldr p,.verdict{color:var(--ink);font-size:var(--t-body);line-height:var(--lh-body);}
+.tldr p{margin:0;}
+.explain,.analogy,.caveat{border-radius:var(--r-md);padding:var(--s4);
+  margin:var(--s3) 0 0;font-size:var(--t-xs);line-height:var(--lh-xs);
+  color:var(--ink-3);}
+.explain b,.analogy b,.caveat b{color:var(--ink-2);}
+.what,.pnote,.hlede,.rotblk p,.rgblk p,.hchain p,.gauge p{
+  color:var(--ink-2);font-size:var(--t-sm);line-height:var(--lh-sm);margin:0 0 var(--s3);}
+.hlede{font-size:var(--t-body);line-height:var(--lh-body);}
+
+.tags{display:flex;flex-wrap:wrap;gap:var(--s2);align-items:center;
+  margin-bottom:var(--s3);}
+.tag{color:var(--ink-4);}
+.tag.dot::before{content:"•";margin-right:var(--s2);color:var(--line-2);}
+.card h2{font-family:var(--serif);font-size:var(--t-h2);line-height:var(--lh-h2);
+  letter-spacing:-.01em;margin:0 0 var(--s4);}
+.panel h3,.gauge h4,.regime h4,.histcard h3,.rotline{
+  font-family:var(--serif);font-size:var(--t-h3);line-height:var(--lh-h3);
+  margin:0 0 var(--s2);}
+.histcard h3{font-size:25px;}
+.sub{color:var(--ink-4);font-size:var(--t-xs);margin:0 0 var(--s4);}
+.hint{color:var(--ink-3);font-size:var(--t-sm);margin:0;}
+
+/* lists of statements */
+.chain,.plist,.story,.scenarios ul,.wl ul{list-style:none;margin:0 0 var(--s4);padding:0;}
+.chain li,.plist li,.story li,.scenarios li,.wl li{
+  position:relative;padding:var(--s2) 0 var(--s2) var(--s5);
+  color:var(--ink-2);font-size:var(--t-sm);line-height:var(--lh-sm);}
+.chain li::before,.plist li::before,.scenarios li::before,.wl li::before{
+  content:"";position:absolute;left:3px;top:calc(var(--s2) + .62em);
+  width:6px;height:6px;border-radius:50%;background:var(--sem,var(--accent));}
+.story li::before{content:"";position:absolute;left:3px;
+  top:calc(var(--s2) + .6em);width:6px;height:6px;border-radius:2px;
+  background:var(--ink-4);}
+.story li{color:var(--ink);font-size:var(--t-body);line-height:var(--lh-body);}
+.plist.good li::before{background:var(--pos);}
+.plist.bad li::before{background:var(--neg);}
+
+/* key/value stat tiles */
+.kv{display:flex;flex-wrap:wrap;gap:var(--s2);}
+.kv .k{flex:1 1 120px;border-radius:var(--r-md);padding:var(--s3) var(--s4);
+  font-family:var(--mono);font-size:var(--t-label);letter-spacing:.07em;
+  text-transform:uppercase;color:var(--ink-4);}
+.kv .k b{display:block;margin-top:var(--s1);font-family:var(--sans);
+  font-size:17px;font-weight:600;letter-spacing:0;text-transform:none;
+  color:var(--ink);}
+.kv .k.wide{flex:1 1 100%;}
+
+/* prose facts, label beside value */
+.qrows{border-radius:var(--r-md);padding:var(--s2) var(--s4);margin-top:var(--s3);}
+.qrow{display:flex;gap:var(--s4);padding:var(--s3) 0;
+  border-bottom:1px solid var(--line);}
+.qrow:last-child{border-bottom:0;}
+.qk{flex:0 0 136px;color:var(--ink-4);padding-top:2px;}
+.qv{flex:1;min-width:0;color:var(--ink-2);font-size:var(--t-xs);
+  line-height:var(--lh-xs);}
+@media (max-width:560px){.qrow{flex-direction:column;gap:var(--s1);}
+  .qk{flex:none;}}
+
+/* --------------------------------------------- 8 METERS, PILLS, CHIPS */
+.badge,.gf-vpill,.stpill,.livepill,.conf,.mood-tag,.rband,.lvl{
+  display:inline-flex;align-items:center;gap:var(--s1);
+  font-family:var(--mono);font-size:var(--t-label);font-weight:600;
+  letter-spacing:.07em;text-transform:uppercase;white-space:nowrap;
+  padding:var(--pad-pill);border-radius:var(--r-pill);
+  color:var(--sem,var(--ink-3));background:var(--sem-bg,var(--surface-3));
+  border:1px solid color-mix(in srgb,var(--sem,var(--line-2)) 30%,transparent);
+}
+.badge{color:var(--warn);background:var(--warn-bg);border-color:var(--warn-line);}
+.badge.dev{color:var(--accent);
+  background:color-mix(in srgb,var(--accent) 14%,transparent);
+  border-color:color-mix(in srgb,var(--accent) 34%,transparent);}
+.gf-vpill,.stpill{margin-left:var(--s2);vertical-align:middle;}
+.livepill.on{color:var(--pos);background:var(--pos-bg);border-color:var(--pos-line);}
+.livepill.off{color:var(--ink-4);background:var(--surface-3);}
+.livepill.on::before{content:"";width:6px;height:6px;border-radius:50%;
+  background:var(--pos);}
+
+.chip,.comchip,.rh{display:inline-flex;align-items:baseline;gap:var(--s1);
+  border-radius:var(--r-sm);padding:var(--s1) var(--s3);
+  font-size:var(--t-xs);color:var(--ink-2);}
+.chip b,.rh b{color:var(--ink-4);margin-right:var(--s1);}
+
+/* meters: a recessed track with a lit fill */
+.track,.secbar,.hist,.meter{background:var(--well);border-radius:var(--r-pill);
+  box-shadow:var(--inset);position:relative;}
+.erow{display:flex;align-items:center;gap:var(--s3);margin-bottom:var(--s2);
+  font-size:var(--t-xs);}
+.erow .lbl{flex:0 0 118px;color:var(--ink-3);line-height:1.4;}
+.erow .track{flex:1;height:8px;overflow:visible;}
+.erow .fill{position:absolute;top:0;bottom:0;border-radius:var(--r-pill);}
+.erow .fill.pos{background:var(--pos);box-shadow:0 0 10px color-mix(in srgb,var(--pos) 45%,transparent);}
+.erow .fill.neg{background:var(--neg);box-shadow:0 0 10px color-mix(in srgb,var(--neg) 45%,transparent);}
+.erow .num{flex:0 0 58px;text-align:right;font-weight:600;color:var(--ink);}
+.erow.total{border-top:1px solid var(--line);padding-top:var(--s3);
+  margin-top:var(--s3);}
+.erow.total .lbl,.erow.total .num{font-weight:700;color:var(--ink);}
+.erbar{display:flex;flex-direction:column;gap:var(--s1);margin-top:var(--s3);}
+
+.secs{margin-top:var(--s4);}
+.sec{display:flex;gap:var(--s3);align-items:flex-start;margin-bottom:var(--s3);}
+.secbar{flex:0 0 48px;height:7px;margin-top:7px;overflow:hidden;}
+.secbar span{display:block;height:100%;border-radius:var(--r-pill);
+  background:var(--sem,var(--accent));
+  box-shadow:0 0 8px color-mix(in srgb,var(--sem,var(--accent)) 50%,transparent);}
+.sectxt{flex:1;min-width:0;}
+.sectxt b{color:var(--ink);font-size:var(--t-sm);font-weight:600;}
+.sectxt .pct{color:var(--ink-4);font-size:var(--t-xs);margin-left:var(--s2);}
+.sectxt p{margin:2px 0 0;color:var(--ink-3);font-size:var(--t-xs);
+  line-height:var(--lh-xs);}
+
+.hist{display:block;width:100%;height:6px;margin-top:var(--s3);}
+.hist .tick{position:absolute;left:50%;top:-3px;bottom:-3px;width:2px;
+  margin-left:-1px;background:var(--line-2);border-radius:2px;}
+.hist .pin{position:absolute;top:-3px;width:12px;height:12px;border-radius:50%;
+  background:var(--sem,var(--accent));border:2px solid var(--surface-1);
+  transform:translateX(-50%);
+  box-shadow:0 0 10px color-mix(in srgb,var(--sem,var(--accent)) 55%,transparent);}
+.hist.none{background:repeating-linear-gradient(90deg,
+  var(--line) 0 5px,transparent 5px 10px);box-shadow:none;}
+/* the caption under a history bar. Sentence case, not a tracked-out label:
+   at 11px uppercase these three phrases collide in a narrow column, and
+   they read as a sentence rather than a heading anyway. */
+.histscale{display:flex;justify-content:space-between;gap:var(--s2);
+  margin-top:var(--s2);color:var(--ink-3);font-size:var(--t-label);
+  line-height:var(--lh-label);letter-spacing:0;text-transform:none;
+  font-weight:500;}
+.histscale span:nth-child(2){text-align:center;}
+.histscale span:last-child{text-align:right;}
+
+.dots{display:inline-flex;gap:3px;}
+.dots i{width:5px;height:5px;border-radius:50%;background:var(--line-2);}
+.dots i.on{background:var(--ink-3);}
+
+/* ------------------------------------------------ 9 TABLES, LISTS, GRID */
+/* Both columns are the same height and scroll inside themselves, so the two
+   panes line up instead of one running on past the other. */
+.gf-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,460px);
+  gap:var(--s4);margin-top:var(--s4);align-items:stretch;}
+@media (min-width:901px){
+  .gf-grid{--pane:calc(100vh - var(--s9));}
+  .gf-panelwrap{position:sticky;top:var(--s4);height:var(--pane);}
+  .panel{height:100%;overflow-y:auto;overflow-x:hidden;}
+  .sllist,.ctable{max-height:var(--pane);overflow-y:auto;overflow-x:hidden;}
+}
+/* With the table folded away the left column holds one small button, which
+   left a large hole beside a very tall panel. Give the panel the full width
+   until the table is opened. */
+.gf-grid:has(details.tablefold:not([open])){grid-template-columns:minmax(0,1fr);}
+@media (max-width:900px){
+  .gf-grid{grid-template-columns:1fr;}
+  .gf-panelwrap{position:static;order:-1;height:auto;}
+  .gf-panelwrap .panel{height:auto;max-height:none;overflow:visible;}
+  .sllist,.ctable{max-height:none;overflow:visible;}
+}
+
+.ctable{overflow:hidden;}
+.ctable .thead,.ctable .row{display:grid;align-items:center;
+  grid-template-columns:minmax(0,1fr) 92px 62px 104px;}
+.ctable.acols .thead,.ctable.acols .row{
+  grid-template-columns:minmax(0,1fr) 92px 92px 100px;}
+.ctable .thead{position:sticky;top:0;z-index:2;background:var(--well);
+  border-bottom:1px solid var(--line-2);color:var(--ink-4);}
+.ctable .thead span{padding:var(--s3) var(--s3);cursor:pointer;user-select:none;
+  min-width:0;align-self:end;}
+.ctable .thead span:hover{color:var(--ink-2);}
+.ctable .thead span.sorted{color:var(--accent);}
+.ctable .row{border-bottom:1px solid var(--line);cursor:pointer;
+  font-size:var(--t-xs);}
+.ctable .row:last-child{border-bottom:0;}
+.ctable .row:hover{background:color-mix(in srgb,var(--accent) 7%,transparent);}
+.ctable .row.sel{background:color-mix(in srgb,var(--accent) 10%,transparent);
+  box-shadow:inset 3px 0 0 var(--sem,var(--accent));}
+.ctable .row>span{padding:var(--s3);min-width:0;}
+.c-name{display:flex;align-items:center;gap:var(--s2);color:var(--ink);
+  font-weight:600;}
+.c-name .sw{width:9px;height:9px;border-radius:3px;flex:none;
+  background:var(--sem,var(--flat));}
+.c-name i{font-style:normal;overflow:hidden;text-overflow:ellipsis;
+  white-space:nowrap;}
+.c-val{color:var(--sem,var(--ink-3));font-family:var(--mono);
+  font-size:var(--t-label);letter-spacing:.06em;text-transform:uppercase;}
+.c-cape,.c-met{color:var(--ink-3);text-align:right;}
+.c-er{text-align:right;font-weight:600;}
+@media (max-width:560px){
+  .ctable .thead,.ctable .row{grid-template-columns:minmax(0,1fr) 58px 84px;}
+  .ctable.acols .thead,.ctable.acols .row{
+    grid-template-columns:minmax(0,1fr) 78px 84px;}
+  .c-val{display:none;}
+}
+
+details.tablefold{margin:0;}
+details.tablefold>summary{list-style:none;cursor:pointer;display:inline-flex;
+  align-items:center;gap:var(--s2);padding:var(--s3) var(--s4);
+  border-radius:var(--r-md);font-size:var(--t-xs);font-weight:600;
+  color:var(--ink-2);}
+details.tablefold>summary::-webkit-details-marker{display:none;}
+details.tablefold>summary::marker{content:"";font-size:0;}
+details.tablefold>summary::after{content:"";width:6px;height:6px;
+  border-right:1.5px solid var(--ink-4);border-bottom:1.5px solid var(--ink-4);
+  transform:rotate(45deg) translate(-2px,-2px);transition:transform .2s var(--ease);}
+details.tablefold[open]>summary::after{transform:rotate(-135deg) translate(-2px,-2px);}
+details.tablefold .ctable{margin-top:var(--s3);}
+
+.sllist{overflow:hidden;}
+.slhead{padding:var(--s3) var(--s4);background:var(--well);
+  color:var(--ink-4);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:2;}
+.slhead:not(:first-child){border-top:1px solid var(--line);}
+.slrow{display:flex;align-items:center;gap:var(--s3);width:100%;
+  text-align:left;cursor:pointer;background:transparent;border:0;
+  border-bottom:1px solid var(--line);box-shadow:none;
+  padding:var(--s3) var(--s4);}
+.slrow:last-child{border-bottom:0;}
+.slrow:hover{background:color-mix(in srgb,var(--accent) 7%,transparent);}
+.slrow.sel{background:color-mix(in srgb,var(--accent) 11%,transparent);
+  box-shadow:inset 3px 0 0 var(--sem,var(--accent));}
+.sldot{width:9px;height:9px;border-radius:50%;flex:none;
+  background:var(--sem,var(--flat));
+  box-shadow:0 0 8px color-mix(in srgb,var(--sem,var(--flat)) 55%,transparent);}
+.sltext{flex:1;min-width:0;}
+.sltext b{display:block;font-size:var(--t-sm);font-weight:600;color:var(--ink);
+  line-height:1.35;}
+.sltext em{display:block;font-style:normal;font-size:var(--t-xs);
+  color:var(--ink-3);line-height:1.45;margin-top:2px;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.slemoji{flex:none;font-size:15px;letter-spacing:1px;}
+
+/* ------------------------------------------------- 10 MAPS & CHARTS */
+.map-wrap,.heatwrap{position:relative;background:var(--well);
+  border-radius:var(--r-lg);overflow:hidden;
+  box-shadow:var(--inset),inset 0 0 0 1px var(--line);}
+.map-wrap svg{display:block;width:100%;height:auto;cursor:grab;
+  touch-action:none;background:transparent;}
+.map-wrap svg.drag{cursor:grabbing;}
+.cty{fill:var(--map-none);stroke:var(--well);stroke-width:.45;
+  transition:fill .15s ease,opacity .15s ease;}
+.cty.has{cursor:pointer;fill:var(--map-base);}
+.cty.cheap,.cty.st-calm{fill:var(--pos);fill-opacity:.6;}
+.cty.fair,.cty.st-watch{fill:var(--warn);fill-opacity:.62;}
+.cty.expensive,.cty.st-alert{fill:var(--neg);fill-opacity:.7;}
+.cty.has:hover{fill-opacity:.95;}
+.cty.sel{stroke:var(--ink);stroke-width:1.4;fill-opacity:1;}
+#smap{--mz:1;}
+#smap .route{fill:none;stroke:var(--sem,var(--flat));
+  stroke-width:calc(2.2*var(--mz));stroke-linecap:round;stroke-linejoin:round;
+  stroke-dasharray:calc(7*var(--mz)) calc(4*var(--mz));}
+#smap .route.st-alert{stroke-dasharray:none;stroke-width:calc(3*var(--mz));}
+#smap .routehit{fill:none;stroke:transparent;stroke-width:calc(13*var(--mz));
+  cursor:pointer;stroke-linecap:round;}
+#smap .route.sel{stroke-dasharray:none;stroke-width:calc(3.6*var(--mz));}
+#smap .rlabel{font-family:var(--mono);font-size:calc(9px*var(--mz));
+  font-weight:600;fill:var(--sem,var(--flat));text-anchor:middle;cursor:pointer;
+  paint-order:stroke;stroke:var(--well);stroke-width:calc(2.5px*var(--mz));}
+#smap .mark{cursor:pointer;}
+#smap .mark rect{fill:var(--surface-1);stroke:var(--sem,var(--flat));
+  stroke-width:calc(1.4*var(--mz));}
+#smap .mark text{font-size:calc(13px*var(--mz));text-anchor:middle;
+  dominant-baseline:central;pointer-events:none;}
+#smap .mark .more{font-family:var(--mono);font-size:calc(9.5px*var(--mz));
+  font-weight:700;fill:var(--sem,var(--ink-3));}
+#smap .mark.sel rect,#smap .mark:hover rect{stroke:var(--ink);
+  stroke-width:calc(2.2*var(--mz));}
+
+.maptip{position:absolute;pointer-events:none;z-index:30;opacity:0;
+  background:var(--tip-bg);color:var(--tip-ink);border:1px solid var(--line-2);
+  font-size:var(--t-xs);line-height:1.45;padding:var(--s2) var(--s3);
+  border-radius:var(--r-md);box-shadow:var(--sh-3);
+  transition:opacity .12s ease;white-space:nowrap;max-width:280px;}
+.maptip.on{opacity:1;}
+.maptip b{display:block;color:#fff;}
+.maptip .wrapline{display:block;white-space:normal;margin-top:2px;font-weight:400;}
+
+.maplegend,.gf-legend,.heatkey,.heatlegend{display:flex;flex-wrap:wrap;
+  gap:var(--s2);align-items:center;margin:0 0 var(--s3);
+  background:transparent;border:0;padding:0;}
+.lg,.sc{display:inline-flex;align-items:center;gap:var(--s2);
+  font-size:var(--t-xs);color:var(--ink-2);background:var(--surface-2);
+  border:1px solid var(--line);border-radius:var(--r-pill);
+  padding:var(--s1) var(--s3);}
+.lg .sw,.sc .box{width:11px;height:11px;border-radius:3px;
+  background:var(--sem,var(--flat));}
+.hintx{color:var(--ink-4);font-size:var(--t-xs);}
+.heatkey .bar{display:flex;border-radius:var(--r-sm);overflow:hidden;}
+.heatkey .bar i{width:26px;height:12px;display:block;}
+
+/* valuation heat grid */
+.heatgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));
+  gap:var(--s1);}
+.hcell{display:flex;flex-direction:column;justify-content:center;min-height:78px;
+  padding:var(--s3);border:1px solid rgb(255 255 255/.06);
+  border-radius:var(--r-sm);cursor:pointer;text-align:left;
+  transition:transform .1s ease,box-shadow .1s ease;
+  outline:2px solid transparent;outline-offset:-2px;}
+.hcell:hover{transform:scale(1.03);z-index:3;box-shadow:var(--sh-2);}
+.hcell.sel{outline-color:var(--ink);z-index:2;}
+.hcell.c2{background:var(--heat-pos-2);color:#eafff5;}
+.hcell.c1{background:var(--heat-pos-1);color:#dcf2e7;}
+.hcell.n {background:var(--heat-flat); color:#d5dce6;}
+.hcell.d1{background:var(--heat-neg-1); color:#f6d9d4;}
+.hcell.d2{background:var(--heat-neg-2); color:#ffeae6;}
+.hcell.na{background:repeating-linear-gradient(135deg,
+  var(--heat-flat) 0 6px,#232a35 6px 12px);color:#d5dce6;}
+.hname{display:block;font-size:var(--t-xs);font-weight:600;line-height:1.3;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.hval{display:block;font-size:16px;font-weight:700;line-height:1.2;
+  margin-top:3px;}
+.hgap{display:block;font-size:var(--t-label);line-height:1.35;margin-top:2px;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+@media (max-width:520px){
+  .heatgrid{grid-template-columns:repeat(auto-fill,minmax(102px,1fr));}
+  .hcell{min-height:70px;padding:var(--s2);}
+}
+
+/* rotation heat table */
+.heatwrap{padding:var(--s4);overflow-x:auto;}
+.heat{border-collapse:separate;border-spacing:3px;width:100%;min-width:640px;}
+.heat th{font-family:var(--mono);font-size:var(--t-label);font-weight:600;
+  color:var(--ink-4);text-align:left;padding:var(--s1) var(--s2);
+  white-space:nowrap;}
+.heat td{height:30px;border-radius:7px;cursor:pointer;position:relative;
+  transition:transform .1s ease;}
+.heat td:hover{transform:scale(1.1);z-index:5;box-shadow:var(--sh-2);}
+.heat .rowlbl{position:sticky;left:0;z-index:3;background:var(--well);
+  color:var(--ink-2);font-size:var(--t-xs);font-weight:600;
+  padding:0 var(--s3) 0 2px;width:1%;
+  box-shadow:-16px 0 0 var(--well),1px 0 0 var(--line);}
+.heat thead th:first-child{position:sticky;left:0;z-index:4;
+  background:var(--well);box-shadow:-16px 0 0 var(--well);}
+.heat .rowlbl.gold{color:var(--warn);}
+.s2{background:var(--heat-pos-2);} .s1{background:var(--heat-pos-1);}
+.s0{background:var(--heat-flat);}
+.sm1{background:var(--heat-neg-1);} .sm2{background:var(--heat-neg-2);}
+
+/* ------------------------------------------- 11 PAGE-SPECIFIC BLOCKS */
+
+/* --- news: impacts ---------------------------------------------------- */
+.impacts{display:flex;flex-direction:column;gap:var(--s2);}
+.impact{display:flex;gap:var(--s3);align-items:flex-start;
+  border-radius:var(--r-md);padding:var(--s3) var(--s4);}
+.dir{flex:none;display:inline-flex;align-items:center;gap:var(--s1);
+  font-family:var(--mono);font-size:var(--t-label);font-weight:600;
+  letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;
+  padding:var(--pad-pill);border-radius:var(--r-sm);
+  color:var(--sem);background:var(--sem-bg);
+  border:1px solid color-mix(in srgb,var(--sem) 32%,transparent);}
+.impact-body{flex:1;min-width:0;}
+.impact-target{color:var(--ink);font-size:var(--t-sm);font-weight:600;
+  line-height:1.4;}
+.impact-why{color:var(--ink-3);font-size:var(--t-xs);line-height:var(--lh-xs);
+  margin-top:2px;}
+.impact-side{display:grid;grid-template-columns:112px minmax(0,1fr);
+  align-items:center;gap:var(--s2);flex:none;width:200px;
+  font-size:var(--t-xs);color:var(--ink-3);}
+.lvl{background:transparent;border:0;padding:0;color:var(--ink-3);}
+/* The confidence capsule in an impact row. It used to carry class="meter",
+   which section 8 styles as a recessed TRACK - a track needs no padding
+   because its fill is absolutely positioned, so the dots and the word ended
+   up flush against the capsule edge. It is a chip, so it is styled as one.
+   The fixed width keeps LOW / MEDIUM / HIGH aligned down the column instead
+   of each capsule sizing itself to its own word. */
+.plevel{display:inline-flex;align-items:center;gap:var(--s2);flex:none;
+  width:112px;padding:var(--pad-pill);border-radius:var(--r-pill);
+  font-family:var(--mono);font-size:var(--t-label);font-weight:600;
+  letter-spacing:.07em;text-transform:uppercase;white-space:nowrap;
+  color:var(--ink-3);background:var(--surface-3);
+  border:1px solid var(--line-2);}
+@media (max-width:520px){.plevel{width:auto;}}
+@media (max-width:520px){
+  .impact{flex-wrap:wrap;}
+  .impact-side{margin-left:0;width:100%;
+    grid-template-columns:auto auto;justify-content:start;}
+}
+
+/* --- news: calendar --------------------------------------------------- */
+.cal{overflow:hidden;margin-top:var(--s4);}
+.cal>summary{list-style:none;cursor:pointer;display:flex;align-items:center;
+  gap:var(--s3);padding:var(--s4) var(--s5);border-radius:var(--r-lg);
+  font-family:var(--mono);font-size:var(--t-label);font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);}
+.cal>summary::-webkit-details-marker{display:none;}
+.cal>summary::marker{content:"";font-size:0;}
+.cal>summary:hover{color:var(--ink);}
+.cal .chev{margin-left:auto;width:7px;height:7px;flex:none;
+  border-right:1.5px solid var(--ink-4);border-bottom:1.5px solid var(--ink-4);
+  transform:rotate(45deg) translate(-2px,-2px);transition:transform .2s var(--ease);}
+.cal[open] .chev{transform:rotate(-135deg) translate(-2px,-2px);}
+/* the bell badge must never wrap — it was breaking onto two lines */
+.cal .alert{display:inline-flex;align-items:center;gap:var(--s1);flex:none;
+  white-space:nowrap;color:var(--warn);background:var(--warn-bg);
+  border:1px solid var(--warn-line);border-radius:var(--r-pill);
+  padding:var(--pad-pill);letter-spacing:.04em;}
+.cal .lead{max-height:360px;overflow-y:auto;padding:0 var(--s5) var(--s4);}
+.calmonth{position:sticky;top:0;background:var(--surface-1);z-index:1;
+  font-family:var(--mono);font-size:var(--t-label);font-weight:600;
+  letter-spacing:.09em;text-transform:uppercase;color:var(--ink-4);
+  /* pulled out to the card edge so rows scroll UNDER it rather than through
+     the 20px gutter .lead leaves on either side */
+  margin:0 calc(var(--s5) * -1);padding:var(--s3) var(--s5) var(--s2);
+  border-bottom:1px solid var(--line);}
+.cal .ev{display:flex;gap:var(--s3);padding:var(--s3) 0;
+  border-bottom:1px solid var(--line);}
+.cal .ev:last-child{border-bottom:0;}
+.cal .when{flex:0 0 92px;font-family:var(--mono);font-size:var(--t-xs);
+  color:var(--ink-3);}
+.cal .what{flex:1;min-width:0;font-size:var(--t-sm);color:var(--ink-2);
+  line-height:var(--lh-sm);}
+.cal .ev.soon .when{color:var(--warn);}
+
+/* --- news: macro strip, deeper reads --------------------------------- */
+.macro{display:flex;flex-wrap:wrap;gap:var(--s2);margin-top:var(--s4);}
+.macro .m{background:var(--surface-2);border:1px solid var(--line);
+  border-radius:var(--r-md);padding:var(--s2) var(--s3);
+  font-size:var(--t-xs);color:var(--ink-3);}
+.macro .m b{color:var(--ink);font-weight:600;}
+.deeper{display:flex;flex-direction:column;gap:var(--s2);}
+.deeper .dr{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);
+  align-items:baseline;padding:var(--s3) var(--s4);text-decoration:none;
+  border-radius:var(--r-md);}
+.deeper .dr:hover{border-color:color-mix(in srgb,var(--accent) 45%,var(--line));}
+.deeper .src{font-family:var(--mono);font-size:var(--t-label);font-weight:600;
+  letter-spacing:.06em;text-transform:uppercase;color:var(--accent);
+  white-space:nowrap;}
+.deeper .t{color:var(--ink-2);font-size:var(--t-sm);}
+.deeper .dr:hover .t{color:var(--ink);}
+.readsrc{display:inline-block;margin:2px 0 var(--s2);font-family:var(--mono);
+  font-size:var(--t-xs);color:var(--accent);text-decoration:none;}
+.readsrc:hover{text-decoration:underline;}
+
+/* --- news: history card ---------------------------------------------- */
+.histcard{padding:var(--s6);border-top-color:var(--warn-line);}
+.hkick{color:var(--warn);}
+.hchain{list-style:none;margin:var(--s5) 0 0;padding:0;counter-reset:hstep;}
+.hchain li{position:relative;padding:0 0 var(--s4) var(--s8);counter-increment:hstep;}
+.hchain li::before{content:counter(hstep);position:absolute;left:0;top:0;
+  width:26px;height:26px;border-radius:50%;background:var(--surface-2);
+  border:1px solid var(--line-2);color:var(--ink-4);font-family:var(--mono);
+  font-size:var(--t-label);font-weight:700;display:flex;align-items:center;
+  justify-content:center;}
+.hchain li::after{content:"";position:absolute;left:13px;top:28px;bottom:2px;
+  width:1px;background:var(--line);}
+.hchain li:last-child{padding-bottom:0;}
+.hchain li:last-child::after{display:none;}
+.hchain h5{color:var(--ink-4);margin:var(--s1) 0 var(--s2);}
+.hpattern{border-left-color:var(--warn);background:var(--warn-bg);}
+.hpattern b{color:var(--warn);}
+.hindia{border-left-color:var(--accent);}
+.hindia b{color:var(--accent);}
+.hwatch b{color:var(--ink-3);}
+
+/* --- global finance: rotation ---------------------------------------- */
+.rot-now{padding:var(--s5);margin-bottom:var(--s4);}
+.rot-now .mood{font-family:var(--mono);font-size:var(--t-label);font-weight:600;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--accent);}
+.rot-now p{margin:var(--s2) 0 0;color:var(--ink-2);font-size:var(--t-body);}
+.scenarios{padding:var(--s4) var(--s5);margin-bottom:var(--s3);
+  border-radius:var(--r-md);}
+.scenarios h4{font-family:var(--mono);font-size:var(--t-label);font-weight:600;
+  letter-spacing:.09em;text-transform:uppercase;color:var(--accent);
+  margin:0 0 var(--s2);}
+.scenarios.watch h4{color:var(--warn);}
+.scenarios li::before{background:var(--accent);}
+.scenarios.watch li::before{background:var(--warn);}
+.rot{list-style:none;margin:0;padding:0;}
+.rot li{position:relative;padding:0 0 var(--s6) var(--s6);}
+.rot li::before{content:"";position:absolute;left:4px;top:6px;width:9px;height:9px;
+  border-radius:50%;background:var(--accent);}
+.rot li::after{content:"";position:absolute;left:8px;top:18px;bottom:0;width:1px;
+  background:var(--line);}
+.rot li:last-child::after{display:none;}
+.rot li.hl::before{background:var(--warn);
+  box-shadow:0 0 0 4px var(--warn-bg);}
+.rothead{display:flex;align-items:center;gap:var(--s2);flex-wrap:wrap;}
+.rot .per{font-family:var(--mono);font-weight:700;color:var(--ink);
+  font-size:var(--t-sm);}
+.rotline{margin:var(--s2) 0 var(--s3);}
+.rot .flows{display:flex;flex-wrap:wrap;gap:var(--s1);margin:var(--s2) 0;}
+.into,.outof{font-size:var(--t-xs);padding:3px var(--s2);border-radius:var(--r-sm);}
+.into{color:var(--pos);background:var(--pos-bg);}
+.outof{color:var(--neg);background:var(--neg-bg);}
+.into.gold{color:var(--warn);background:var(--warn-bg);font-weight:600;}
+.rotblk{margin:0 0 var(--s3);}
+.rotlesson{border-left-color:var(--warn);}
+.rotlesson b{color:var(--warn);}
+
+/* --- assets: valuation board & panel --------------------------------- */
+.board{display:flex;flex-direction:column;}
+.fam{margin-top:var(--s2);}
+.famhead{display:flex;align-items:baseline;gap:var(--s3);flex-wrap:wrap;
+  margin:var(--s5) 0 var(--s1);}
+.famhead h3{color:var(--ink-2);}
+.count{color:var(--ink-4);}
+.famnote{color:var(--ink-3);font-size:var(--t-xs);line-height:var(--lh-xs);
+  margin:0 0 var(--s3);max-width:76ch;}
+.vsnow{display:flex;align-items:center;gap:var(--s4);background:var(--surface-2);
+  border:1px solid var(--line);border-radius:var(--r-md);
+  padding:var(--s4);margin:0 0 var(--s4);}
+.vbig{font-family:var(--serif);font-size:32px;font-weight:600;line-height:1;
+  color:var(--sem,var(--ink));letter-spacing:-.01em;}
+.vmid{flex:1;min-width:0;}
+.vhead{display:flex;align-items:center;gap:var(--s2);flex-wrap:wrap;}
+.vlbl{color:var(--ink-4);}
+.vavg{font-size:var(--t-xs);color:var(--ink-2);line-height:1.5;margin-top:2px;}
+.vavg b{color:var(--ink);font-weight:600;}
+.reading{border-left:3px solid var(--accent);border-radius:0 var(--r-md) var(--r-md) 0;
+  padding:var(--s3) var(--s4);margin:0 0 var(--s3);font-size:var(--t-xs);
+  color:var(--ink-2);}
+.howto{display:flex;flex-direction:column;gap:var(--s2);}
+.route{border-radius:var(--r-md);padding:var(--s3) var(--s4);}
+.rname{font-size:var(--t-sm);font-weight:600;color:var(--ink);}
+.rex{display:block;font-size:var(--t-xs);color:var(--ink-3);margin-top:2px;}
+.rchips{display:flex;flex-wrap:wrap;gap:var(--s1);margin:var(--s2) 0;}
+.route p{margin:0;font-size:var(--t-xs);line-height:var(--lh-xs);
+  color:var(--ink-2);}
+.gauges{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:var(--s3);}
+.gauge{padding:var(--s5);}
+.gmet{display:block;font-size:var(--t-xs);color:var(--ink-3);
+  line-height:1.45;margin-bottom:var(--s3);}
+.gnums{display:flex;flex-wrap:wrap;gap:var(--s2);margin:var(--s3) 0;}
+.gn{flex:1 1 130px;border-radius:var(--r-md);padding:var(--s3);
+  color:var(--ink-4);}
+.gn span{display:block;font-family:var(--sans);font-size:var(--t-sm);
+  font-weight:600;letter-spacing:0;text-transform:none;margin-top:2px;
+  color:var(--ink);}
+.gn.now span{color:var(--sem,var(--accent));}
+.records{display:flex;flex-direction:column;gap:var(--s2);}
+.rec{padding:var(--s4);border-left:3px solid var(--sem,var(--flat));}
+.rtop{display:flex;align-items:baseline;gap:var(--s3);flex-wrap:wrap;}
+.rname,.rec .rname{font-size:var(--t-sm);font-weight:600;color:var(--ink);}
+.rband{color:var(--sem,var(--ink-3));background:transparent;border:0;padding:0;}
+.rer{margin-left:auto;color:var(--ink-4);background:transparent;border:0;padding:0;}
+.rer b{font-family:var(--sans);font-size:var(--t-sm);font-weight:600;
+  letter-spacing:0;text-transform:none;color:var(--ink-2);margin-left:var(--s1);}
+.rhist{display:flex;flex-wrap:wrap;gap:var(--s1);margin-top:var(--s3);}
+.rfall{margin:var(--s3) 0 0;font-size:var(--t-xs);color:var(--ink-3);
+  line-height:var(--lh-xs);}
+.rfall b{color:var(--neg);font-weight:600;}
+
+/* --- supply lines ----------------------------------------------------- */
+.alertbar{padding:var(--s4) var(--s5);margin:var(--s4) 0 var(--s3);
+  border-color:var(--neg-line);background:var(--neg-bg);}
+.alerthead{color:var(--neg);margin-bottom:var(--s3);}
+.alertlist{display:flex;flex-wrap:wrap;gap:var(--s2);}
+.alertchip{display:inline-flex;align-items:center;gap:var(--s2);
+  text-align:left;cursor:pointer;border-radius:var(--r-md);
+  padding:var(--s2) var(--s3);}
+.alertchip b{font-size:var(--t-xs);color:var(--ink);font-weight:600;}
+.alertchip span{font-size:var(--t-xs);color:var(--ink-3);}
+.livedot{width:7px;height:7px;border-radius:50%;flex:none;background:var(--neg);
+  box-shadow:0 0 0 3px var(--neg-bg);}
+@media (max-width:520px){.alertchip{width:100%;}}
+.pkind{color:var(--sem,var(--accent));margin-bottom:var(--s1);}
+.comchips{display:flex;flex-wrap:wrap;gap:var(--s1);margin-top:var(--s3);}
+.supply{border:0;border-top:1px solid var(--line);background:transparent;
+  border-radius:0;margin-top:var(--s5);padding:var(--s4) 0 0;}
+.supply:first-of-type{border-top:0;margin-top:var(--s2);padding-top:0;}
+.suphead{display:flex;align-items:flex-start;gap:var(--s3);
+  margin-bottom:var(--s2);}
+.supemoji{font-size:27px;line-height:1.1;flex:none;}
+.suphead b{font-family:var(--serif);font-size:var(--t-h3);font-weight:600;
+  color:var(--ink);}
+.supshare{display:block;font-size:var(--t-xs);color:var(--ink-3);margin-top:2px;}
+.episode{border-radius:var(--r-md);padding:var(--s4);margin-bottom:var(--s2);}
+.epwhen{color:var(--sem,var(--accent));}
+.epwhat{margin:var(--s2) 0 var(--s3);font-size:var(--t-sm);
+  line-height:var(--lh-sm);color:var(--ink);}
+.eprow{font-size:var(--t-xs);line-height:var(--lh-xs);color:var(--ink-2);
+  margin-bottom:var(--s2);}
+.eprow b{display:block;color:var(--ink-4);margin-bottom:1px;}
+.eplesson{margin-top:var(--s3);padding-top:var(--s3);
+  border-top:1px solid var(--line);font-size:var(--t-xs);
+  line-height:var(--lh-xs);color:var(--ink);}
+.eplesson::before{content:"The pattern · ";font-family:var(--mono);
+  font-size:var(--t-label);font-weight:600;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--sem,var(--accent));}
+.regimes{display:flex;flex-direction:column;gap:var(--s3);}
+.regime{padding:var(--s5);}
+.regime.on{border-color:var(--accent);
+  box-shadow:var(--sh-1),0 0 0 1px var(--accent);}
+.rgtop{display:flex;align-items:baseline;justify-content:space-between;
+  gap:var(--s3);flex-wrap:wrap;}
+.regime .now{color:var(--bg);background:var(--accent);border:0;}
+.tell{display:block;font-size:var(--t-xs);color:var(--ink-3);
+  margin-top:var(--s2);line-height:var(--lh-xs);}
+.tell b{color:var(--ink-2);}
+.wl{display:grid;grid-template-columns:1fr 1fr;gap:var(--s2) var(--s5);
+  margin:var(--s4) 0 0;}
+@media (max-width:640px){.wl{grid-template-columns:1fr;}}
+.wl h5{margin:0 0 var(--s2);padding-bottom:var(--s1);
+  border-bottom:1px solid var(--line);}
+.wl .w h5{color:var(--pos);}
+.wl .l h5{color:var(--neg);}
+.rgblk{margin-top:var(--s4);}
+.rgblk h5{color:var(--ink-4);margin-bottom:var(--s1);}
+
+/* --- learn / patterns page ------------------------------------------- */
+.guide{margin:var(--s5) 0 var(--s1);padding:var(--s3) var(--s4);
+  background:var(--surface-2);border:1px solid var(--line);
+  border-radius:var(--r-md);font-size:var(--t-xs);color:var(--ink-2);}
+.guide b{color:var(--ink);}
+.guide .flow{color:var(--ink-3);}
+.ev .lead,.trig,.triggers{font-size:var(--t-sm);}
+.triggers{display:flex;flex-wrap:wrap;gap:var(--s1);margin-top:var(--s2);}
+.trig{background:var(--surface-2);border:1px solid var(--line);
+  border-radius:var(--r-sm);padding:var(--pad-chip);font-size:var(--t-xs);
+  color:var(--ink-3);}
+
+/* the strip at the foot of a news card: confidence, sources, source link */
+.card .foot{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);
+  align-items:center;margin-top:var(--s5);padding-top:var(--s3);
+  border-top:1px solid var(--line);font-size:var(--t-xs);color:var(--ink-4);}
+.card .foot a{color:var(--accent);text-decoration:none;margin-left:auto;}
+.card .foot a:hover{text-decoration:underline;}
+.conf{display:inline-flex;align-items:center;gap:var(--s2);}
+.conf b{color:var(--ink-3);font-weight:600;}
+
+/* the reason behind a status badge — stated, not implied */
+.whynow{border-left:3px solid var(--sem,var(--warn));
+  background:var(--sem-bg,var(--warn-bg));border-radius:0 var(--r-md) var(--r-md) 0;
+  padding:var(--s4) var(--s5);margin:0 0 var(--s4);
+  font-size:var(--t-sm);line-height:var(--lh-sm);color:var(--ink);}
+.whynow b{display:block;font-family:var(--mono);font-size:var(--t-label);
+  font-weight:600;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--sem,var(--warn));margin-bottom:var(--s2);}
+
+/* --- shared notes, accordions, footer -------------------------------- */
+.gf-note{padding:var(--s4) var(--s5);color:var(--ink-3);font-size:var(--t-xs);
+  line-height:var(--lh-xs);margin:var(--s4) 0 var(--s3);
+  border-style:dashed;border-radius:var(--r-md);}
+.gf-note b{color:var(--ink-2);}
+.freshness{display:block;margin-top:var(--s3);padding-top:var(--s3);
+  border-top:1px solid var(--line);}
+details.gf-acc{padding:0;}
+details.gf-acc>summary{list-style:none;cursor:pointer;display:flex;
+  align-items:center;gap:var(--s3);padding:var(--s3) var(--s4);
+  border-radius:var(--r-md);font-size:var(--t-xs);font-weight:600;
+  color:var(--ink-2);}
+details.gf-acc>summary::-webkit-details-marker{display:none;}
+details.gf-acc>summary::marker{content:"";font-size:0;}
+details.gf-acc>summary .more{font-weight:400;color:var(--ink-4);}
+details.gf-acc>summary::after{content:"";flex:none;width:7px;height:7px;
+  margin-left:auto;border-right:1.5px solid var(--ink-4);
+  border-bottom:1.5px solid var(--ink-4);
+  transform:rotate(45deg) translate(-2px,-2px);transition:transform .2s var(--ease);}
+details.gf-acc[open]>summary::after{transform:rotate(-135deg) translate(-2px,-2px);}
+.acc-body{padding:var(--s1) var(--s4) var(--s4);}
+.gf-news a{display:block;color:var(--accent);text-decoration:none;
+  font-size:var(--t-xs);padding:var(--s1) 0;line-height:1.45;}
+.gf-news a:hover{text-decoration:underline;}
+.disclaimer{background:var(--well);border:1px dashed var(--line-2);
+  border-radius:var(--r-md);padding:var(--s4) var(--s5);color:var(--ink-3);
+  font-size:var(--t-xs);margin-top:var(--s7);}
+.disclaimer b{color:var(--ink-2);}
+.pagefoot{margin-top:var(--s7);padding-top:var(--s5);
+  border-top:1px solid var(--line);color:var(--ink-4);font-size:var(--t-xs);}
+.archive{margin-bottom:var(--s3);}
+.archive b{color:var(--ink-3);}
+.archive a{color:var(--accent);text-decoration:none;
+  margin:0 var(--s3) var(--s2) 0;display:inline-block;}
+.archive a:hover{text-decoration:underline;}
+
+/* --- glossary terms: the tooltip is a fixed layer, never clipped ------ */
+.term{border-bottom:1.5px dotted var(--ink-4);cursor:help;color:inherit;
+  transition:border-color .15s var(--ease),color .15s var(--ease);}
+.term:hover,.term:focus{border-bottom-color:var(--accent);color:var(--accent);
+  outline:none;}
+#tipbox{position:fixed;z-index:9999;max-width:300px;pointer-events:none;
+  opacity:0;visibility:hidden;transform:translateY(-3px);
+  background:var(--tip-bg);color:var(--tip-ink);border:1px solid var(--line-2);
+  font-family:var(--sans);font-size:var(--t-xs);line-height:1.5;font-weight:400;
+  padding:var(--s3) var(--s4);border-radius:var(--r-md);box-shadow:var(--sh-3);
+  transition:opacity .15s var(--ease),transform .15s var(--ease);}
+#tipbox.on{opacity:1;visibility:visible;transform:none;}
+
+/* ------------------------------------------------- 12 MOTION */
+@keyframes rise{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+@keyframes grow{from{transform:scaleX(0);}to{transform:scaleX(1);}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 3px var(--neg-bg);}
+  50%{box-shadow:0 0 0 7px color-mix(in srgb,var(--neg) 16%,transparent);}}
+.card,.histcard,.gauge,.regime,.rec{animation:rise .5s var(--ease) both;}
+.card:nth-of-type(1){animation-delay:.02s}
+.card:nth-of-type(2){animation-delay:.06s}
+.card:nth-of-type(3){animation-delay:.10s}
+.card:nth-of-type(n+4){animation-delay:.14s}
+.secbar span,.erow .fill{transform-origin:left center;
+  animation:grow .7s var(--ease) both .15s;}
+.erow .fill.neg{transform-origin:right center;}
+.livedot{animation:pulse 2.4s ease-in-out infinite;}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition-duration:.01ms!important;}
+}
+
+</style>
+</head><body class="page-news"><div class="wrap">
+
+<header class="mast">
+  <div class="kicker">World news, decoded for Indian markets</div>
+  <div class="brandrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="The India Impact Brief"><rect width="64" height="64" rx="14" fill="#0f172a"/><g fill="none" stroke="var(--accent)" stroke-linecap="round" stroke-width="5"><path d="M39.1 22.2A12 12 0 0 0 39.1 41.8" opacity=".95"/><path d="M34.5 15.6A20 20 0 0 0 34.5 48.4" opacity=".62"/><path d="M29.9 9.1A28 28 0 0 0 29.9 54.9" opacity=".34"/></g><circle cx="46" cy="32" r="6" fill="#e0a94a"/></svg><h1>The India Impact Brief</h1></div>
+  
+  <div class="date"><b>Saturday, 17 October 2026</b> · 9 signals ·
+    <span class="engine">analysis by Gemini AI</span></div>
+</header>
+
+<nav class="tabs"><a href="../index.html" class="tab on">News</a><a href="../supply.html" class="tab">Supply Lines</a><a href="../global.html" class="tab">Global Finance</a><a href="../assets.html" class="tab">Asset Classes</a><a href="../patterns.html" class="tab">Learn</a></nav>
+
+
+
+
+<details class="cal">
+  <summary>Mark your calendar — what to watch
+    
+    <span class="chev">▼</span>
+  </summary>
+  <ul>
+    
+    
+      
+        
+        <li class="calmonth" style="display:block">November 2026</li>
+      
+    <li class="">
+      <span class="when">Thu, 05 Nov
+        <span class="in">in 19 days</span>
+      </span>
+      <span class="ev"><b>US jobs report (non-farm payrolls)</b><p>Strong US jobs means fewer rate cuts, a stronger dollar, and pressure on the rupee and gold.</p></span>
+    </li>
+    
+      
+    <li class="">
+      <span class="when">Thu, 12 Nov
+        <span class="in">in 26 days</span>
+      </span>
+      <span class="ev"><b>US inflation report (CPI)</b><p>Hot US <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> can lift global interest rates and pull foreign money out of India; a cool reading does the reverse. A big driver of gold.</p></span>
+    </li>
+    
+      
+    <li class="">
+      <span class="when">Thu, 12 Nov
+        <span class="in">in 26 days</span>
+      </span>
+      <span class="ev"><b>India inflation report (CPI)</b><p>Decides how soon the <span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span> can cut rates — moves <span class="term" tabindex="0" role="button" aria-label="The return investors earn on bonds. Rising yields often pull money away from stocks and gold." data-def="The return investors earn on bonds. Rising yields often pull money away from stocks and gold.">bond yields</span>, the rupee, and <span class="term" tabindex="0" role="button" aria-label="Businesses whose sales depend heavily on loans — like housing, cars and lenders — so they rise and fall with interest rates." data-def="Businesses whose sales depend heavily on loans — like housing, cars and lenders — so they rise and fall with interest rates.">rate-sensitive</span> stocks (banks, autos, real estate).</p></span>
+    </li>
+    
+      
+        
+        <li class="calmonth" style="display:block">December 2026</li>
+      
+    <li class="">
+      <span class="when">Sat, 05 Dec
+        <span class="in">in 49 days</span>
+      </span>
+      <span class="ev"><b>US jobs report (non-farm payrolls)</b><p>Strong US jobs means fewer rate cuts, a stronger dollar, and pressure on the rupee and gold.</p></span>
+    </li>
+    
+      
+    <li class="">
+      <span class="when">Sat, 12 Dec
+        <span class="in">in 56 days</span>
+      </span>
+      <span class="ev"><b>US inflation report (CPI)</b><p>Hot US <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> can lift global interest rates and pull foreign money out of India; a cool reading does the reverse. A big driver of gold.</p></span>
+    </li>
+    
+      
+    <li class="">
+      <span class="when">Sat, 12 Dec
+        <span class="in">in 56 days</span>
+      </span>
+      <span class="ev"><b>India inflation report (CPI)</b><p>Decides how soon the <span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span> can cut rates — moves <span class="term" tabindex="0" role="button" aria-label="The return investors earn on bonds. Rising yields often pull money away from stocks and gold." data-def="The return investors earn on bonds. Rising yields often pull money away from stocks and gold.">bond yields</span>, the rupee, and <span class="term" tabindex="0" role="button" aria-label="Businesses whose sales depend heavily on loans — like housing, cars and lenders — so they rise and fall with interest rates." data-def="Businesses whose sales depend heavily on loans — like housing, cars and lenders — so they rise and fall with interest rates.">rate-sensitive</span> stocks (banks, autos, real estate).</p></span>
+    </li>
+    
+      
+        
+        <li class="calmonth" style="display:block">January 2027</li>
+      
+    <li class="">
+      <span class="when">Tue, 05 Jan
+        <span class="in">in 80 days</span>
+      </span>
+      <span class="ev"><b>US jobs report (non-farm payrolls)</b><p>Strong US jobs means fewer rate cuts, a stronger dollar, and pressure on the rupee and gold.</p></span>
+    </li>
+    
+      
+    <li class="">
+      <span class="when">Tue, 12 Jan
+        <span class="in">in 87 days</span>
+      </span>
+      <span class="ev"><b>US inflation report (CPI)</b><p>Hot US <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> can lift global interest rates and pull foreign money out of India; a cool reading does the reverse. A big driver of gold.</p></span>
+    </li>
+    
+      
+    <li class="">
+      <span class="when">Tue, 12 Jan
+        <span class="in">in 87 days</span>
+      </span>
+      <span class="ev"><b>India inflation report (CPI)</b><p>Decides how soon the <span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span> can cut rates — moves <span class="term" tabindex="0" role="button" aria-label="The return investors earn on bonds. Rising yields often pull money away from stocks and gold." data-def="The return investors earn on bonds. Rising yields often pull money away from stocks and gold.">bond yields</span>, the rupee, and <span class="term" tabindex="0" role="button" aria-label="Businesses whose sales depend heavily on loans — like housing, cars and lenders — so they rise and fall with interest rates." data-def="Businesses whose sales depend heavily on loans — like housing, cars and lenders — so they rise and fall with interest rates.">rate-sensitive</span> stocks (banks, autos, real estate).</p></span>
+    </li>
+    
+      
+        
+        <li class="calmonth" style="display:block">February 2027</li>
+      
+    <li class="">
+      <span class="when">Mon, 01 Feb
+        <span class="in">in 107 days</span>
+      </span>
+      <span class="ev"><b>Union Budget</b><p>India&#x27;s annual budget — capital spending, taxes and the <span class="term" tabindex="0" role="button" aria-label="The gap between what the government spends and what it earns. A large gap can worry investors and pressure the rupee." data-def="The gap between what the government spends and what it earns. A large gap can worry investors and pressure the rupee.">fiscal deficit</span> can move entire sectors in a day.</p></span>
+    </li>
+    
+      
+    <li class="">
+      <span class="when">Fri, 05 Feb
+        <span class="in">in 111 days</span>
+      </span>
+      <span class="ev"><b>US jobs report (non-farm payrolls)</b><p>Strong US jobs means fewer rate cuts, a stronger dollar, and pressure on the rupee and gold.</p></span>
+    </li>
+    
+      
+    <li class="">
+      <span class="when">Fri, 12 Feb
+        <span class="in">in 118 days</span>
+      </span>
+      <span class="ev"><b>US inflation report (CPI)</b><p>Hot US <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> can lift global interest rates and pull foreign money out of India; a cool reading does the reverse. A big driver of gold.</p></span>
+    </li>
+    
+      
+    <li class="">
+      <span class="when">Fri, 12 Feb
+        <span class="in">in 118 days</span>
+      </span>
+      <span class="ev"><b>India inflation report (CPI)</b><p>Decides how soon the <span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span> can cut rates — moves <span class="term" tabindex="0" role="button" aria-label="The return investors earn on bonds. Rising yields often pull money away from stocks and gold." data-def="The return investors earn on bonds. Rising yields often pull money away from stocks and gold.">bond yields</span>, the rupee, and <span class="term" tabindex="0" role="button" aria-label="Businesses whose sales depend heavily on loans — like housing, cars and lenders — so they rise and fall with interest rates." data-def="Businesses whose sales depend heavily on loans — like housing, cars and lenders — so they rise and fall with interest rates.">rate-sensitive</span> stocks (banks, autos, real estate).</p></span>
+    </li>
+    
+  </ul>
+</details>
+
+
+
+
+
+<div class="section">Today — what matters most</div>
+
+<article class="card top">
+  <div class="tags">
+    <span class="badge">★ Top signal</span>
+    
+    <span class="tag">Monetary Policy</span>
+    <span class="tag dot">2 sources</span>
+  </div>
+
+  <h2>Dollar heads for weekly loss as Fed hike bets fade, AI jitters linger</h2>
+
+  
+  <div class="tldr">
+    <span class="lbl">In plain English</span>
+    <p>A weakening US dollar makes imported items like <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> slightly costlier for India, but it can encourage foreign investors to put more money into Indian stock markets.</p>
+  </div>
+  
+
+  
+    <p class="what">The US dollar fell this week because traders think the <span class="term" tabindex="0" role="button" aria-label="America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India." data-def="America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India.">Federal Reserve</span> is less likely to raise interest rates soon. When US interest rate expectations cool down, the returns on safe US government bonds stabilize, reducing the rush to hold dollars. This caused global currencies like the euro and yen to rise while the dollar slipped.</p>
+  
+
+  
+    <div class="blocklabel">What the article actually says</div>
+    <ul class="story">
+      <li>The US dollar is heading for a weekly drop because people expect fewer interest rate increases from the <span class="term" tabindex="0" role="button" aria-label="America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India." data-def="America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India.">Federal Reserve</span> (the US central bank that manages American money and interest rates).</li><li>Comments from federal officials have steadied Treasury <span class="term" tabindex="0" role="button" aria-label="The return investors earn on bonds. Rising yields often pull money away from stocks and gold." data-def="The return investors earn on bonds. Rising yields often pull money away from stocks and gold.">yields</span> (the interest rate the US government pays when it borrows money from investors).</li><li>This steadying of <span class="term" tabindex="0" role="button" aria-label="The return investors earn on bonds. Rising yields often pull money away from stocks and gold." data-def="The return investors earn on bonds. Rising yields often pull money away from stocks and gold.">yields</span> has weakened the dollar&#x27;s position globally.</li><li>At the same time, other major currencies like the euro and the yen (Japan&#x27;s currency) have gained ground against the dollar.</li><li>Investors are also growing more cautious about fiscal risks (risks related to government spending and debt) as economic conditions change.</li>
+    </ul>
+    
+      <a class="readsrc" href="https://economictimes.indiatimes.com/markets/forex/forex-news/dollar-heads-for-weekly-loss-as-fed-hike-bets-fade-ai-jitters-linger/articleshow/135007121.cms" target="_blank" rel="noopener">Read the full article →</a>
+    
+  
+
+  
+    <div class="analogy"><b>Think of it like…</b> It is like a popular shop losing some of its exclusive appeal when people realize it won&#x27;t keep raising its prices, causing shoppers to look around and spend their money at other nearby stores instead.</div>
+  
+
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain">
+      <li>US <span class="term" tabindex="0" role="button" aria-label="America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India." data-def="America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India.">Federal Reserve</span> expectations cool down -&gt; US Treasury <span class="term" tabindex="0" role="button" aria-label="The return investors earn on bonds. Rising yields often pull money away from stocks and gold." data-def="The return investors earn on bonds. Rising yields often pull money away from stocks and gold.">yields</span> and the dollar weaken.</li><li>The global dollar index drops -&gt; Other currencies like the euro and yen rise, and international investors look beyond US assets.</li><li>Global investors seek better returns -&gt; Foreign funds flow out of safe US havens and into emerging markets like India.</li><li>Foreign money enters India -&gt; Indian stock markets and the rupee receive supportive backing.</li>
+    </ul>
+  
+
+  
+    <div class="blocklabel">What could move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">The rupee (vs the US dollar)</div>
+          <div class="impact-why">A softer US dollar usually helps the rupee hold its ground or strengthen slightly, which is good for consumers because it makes imports like <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> a bit cheaper.</div>
+        </div>
+        <div class="impact-side">
+          <span class="plevel"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Nifty 50 (India&#39;s main stock index)</div>
+          <div class="impact-why">When the US dollar weakens, global investors often put more money into emerging markets like India, pushing local stock indexes up — generally good for Indian investors.</div>
+        </div>
+        <div class="impact-side">
+          <span class="plevel"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Gold price in India</div>
+          <div class="impact-why">A weaker dollar makes gold cheaper for international buyers, raising global demand and driving up domestic prices, which is a mixed bag for everyday buyers.</div>
+        </div>
+        <div class="impact-side">
+          <span class="plevel"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+    </div>
+  
+
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch">
+      <li>Future statements from US <span class="term" tabindex="0" role="button" aria-label="America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India." data-def="America&#x27;s central bank. Its interest-rate decisions ripple across global markets, including India.">Federal Reserve</span> officials about interest rates</li><li>Movement of foreign investor money into and out of Indian stock markets</li>
+    </ul>
+  
+
+  <div class="foot">
+    <span class="conf">Confidence <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><b>High</b></span>
+    <span>Economic Times Markets, Zerodha Pulse</span>
+    <a href="https://economictimes.indiatimes.com/markets/forex/forex-news/dollar-heads-for-weekly-loss-as-fed-hike-bets-fade-ai-jitters-linger/articleshow/135007121.cms" target="_blank" rel="noopener">Read the source →</a>
+  </div>
+  <div class="caveat">Where this could be wrong: If unexpected economic data from the US causes <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> fears to spike again, the dollar could quickly reverse its drop.</div>
+</article>
+<article class="card top">
+  <div class="tags">
+    <span class="badge">★ Top signal</span>
+    
+    <span class="tag">General</span>
+    <span class="tag dot">1 source</span>
+  </div>
+
+  <h2>Wind Farm Approved in Victoria, Australia Would Be Largest in Southern Hemispher</h2>
+
+  
+  <div class="tldr">
+    <span class="lbl">In plain English</span>
+    <p>Australia&#x27;s push to build massive renewable energy projects shows how global clean energy is expanding, which could eventually lower green technology costs for India.</p>
+  </div>
+  
+
+  
+    <p class="what">Victoria&#x27;s Planning Minister Sonya Kilkenny signed off on a massive wind farm project proposed by WestWind Energy. This approval happened just before the state enters caretaker mode for an upcoming election, pushing the project forward to federal review.</p>
+  
+
+  
+    <div class="blocklabel">What the article actually says</div>
+    <ul class="story">
+      <li>State authorities in Victoria, Australia, approved the Warracknabeal Energy Park, which now goes to the federal environment minister for final checks.</li><li>WestWind Energy plans to build 219 turbines and two large 300-megawatt battery systems across 26,000 hectares of farmland.</li><li>The park will deliver 1.5 gigawatts [one gigawatt equals 1,000 megawatts, a measure of power capacity] of renewable energy, making it the largest wind farm in the Southern Hemisphere if completed.</li><li>Australia&#x27;s national data shows renewables made up 39.6% of generation in 2025, while coal still represented 42.7%.</li>
+    </ul>
+    
+      <a class="readsrc" href="https://oilprice.com/Alternative-Energy/Wind-Power/Wind-Farm-Approved-in-Victoria-Australia-Would-Be-Largest-in-Southern-Hemispher.html" target="_blank" rel="noopener">Read the full article →</a>
+    
+  
+
+  
+    <div class="analogy"><b>Think of it like…</b> It is like a large housing society getting local permission to build a giant solar rooftop system that powers a whole neighbourhood, moving one step closer to government approval.</div>
+  
+
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain">
+      <li>Australia approves a massive wind farm project to expand its renewable energy capacity.</li><li>Global investments in wind turbines and batteries rise, pushing manufacturers to scale up production.</li><li>Higher global production of green technology can lower equipment costs over time.</li><li>Indian companies importing clean energy gear or building domestic manufacturing could see shifting global supply chains.</li>
+    </ul>
+  
+
+  
+    <div class="blocklabel">What could move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Global renewable energy equipment and technology costs</div>
+          <div class="impact-why">More large projects worldwide drive up turbine production, which can eventually lower costs for clean energy projects globally, helping India&#x27;s green transition.</div>
+        </div>
+        <div class="impact-side">
+          <span class="plevel"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">months</span>
+        </div>
+      </div>
+      
+    </div>
+  
+
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch">
+      <li>Federal environmental approval decisions for the Warracknabeal Energy Park in Australia</li><li>Global supply and pricing trends for wind turbines and battery storage systems</li>
+    </ul>
+  
+
+  <div class="foot">
+    <span class="conf">Confidence <span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><b>Low</b></span>
+    <span>OilPrice</span>
+    <a href="https://oilprice.com/Alternative-Energy/Wind-Power/Wind-Farm-Approved-in-Victoria-Australia-Would-Be-Largest-in-Southern-Hemispher.html" target="_blank" rel="noopener">Read the source →</a>
+  </div>
+  <div class="caveat">Where this could be wrong: The article text focuses entirely on Australian local approvals and energy statistics, meaning the direct ripple effects to Indian financial markets are minimal and distant.</div>
+</article>
+<article class="card top">
+  <div class="tags">
+    <span class="badge">★ Top signal</span>
+    
+    <span class="tag">Trade</span>
+    <span class="tag dot">2 sources</span>
+  </div>
+
+  <h2>‘For global trade’s sake, hope our US deal is inked soon’: FM Nirmala Sitharaman</h2>
+
+  
+  <div class="tldr">
+    <span class="lbl">In plain English</span>
+    <p>A smoother trade deal with the US could help Indian exporters dodge global trade hurdles, while pushing more trade in rupees helps countries running short of US dollars.</p>
+  </div>
+  
+
+  
+    <p class="what">India&#x27;s Finance Minister Nirmala Sitharaman spoke about global trade ties, pushing for a quick trade deal with the US. She also highlighted problems exporting to China and suggested using the Indian rupee more widely for international trade to help countries low on US dollars.</p>
+  
+
+  
+    <div class="blocklabel">What the article actually says</div>
+    <ul class="story">
+      <li>Finance Minister Nirmala Sitharaman expressed hope for a speedy conclusion to the India-US trade agreement.</li><li>She pointed out that Indian exporters face challenges dealing with China due to non-tariff barriers (rules other than taxes that make it hard to sell goods).</li><li>She advocated for promoting rupee-denominated trade settlements (paying for goods in Indian rupees instead of US dollars) to help countries facing hard currency (globally accepted money like US dollars) shortages.</li><li>She also emphasized that public investment (money spent by the government) in infrastructure (roads, ports, and public facilities) is vital to keep the economy growing despite global disruptions.</li>
+    </ul>
+    
+      <a class="readsrc" href="https://economictimes.indiatimes.com/news/economy/foreign-trade/for-global-trades-sake-hope-our-us-deal-is-inked-soon-fm-nirmala-sitharaman/articleshow/135002357.cms" target="_blank" rel="noopener">Read the full article →</a>
+    
+  
+
+  
+    <div class="analogy"><b>Think of it like…</b> It is like trying to settle your neighborhood grocery bills using your local credit instead of always needing hard-to-get US dollars, making transactions smoother when cash is tight.</div>
+  
+
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain">
+      <li>India and the US work toward a trade agreement -&gt; export rules become clearer for Indian businesses.</li><li>More trade settled in rupees -&gt; less dependency on US dollars for international trade.</li><li>Government spends more on infrastructure -&gt; boosts domestic economic growth despite world troubles.</li><li>Fewer hurdles with trade partners -&gt; helps Indian exporters grow their overseas business.</li>
+    </ul>
+  
+
+  
+    <div class="blocklabel">What could move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">The rupee (vs the US dollar)</div>
+          <div class="impact-why">Promoting rupee-denominated trade could increase international demand for the rupee, helping currency stability.</div>
+        </div>
+        <div class="impact-side">
+          <span class="plevel"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">months</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Export-oriented stocks (like textiles, chemicals, and IT)</div>
+          <div class="impact-why">A successful trade deal with the US can give Indian exporters better market access, boosting their revenues — generally good for company growth.</div>
+        </div>
+        <div class="impact-side">
+          <span class="plevel"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">months</span>
+        </div>
+      </div>
+      
+    </div>
+  
+
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch">
+      <li>Progress updates on official India-US trade deal talks</li><li>Updates on rupee-denominated trade agreements with other nations</li>
+    </ul>
+  
+
+  <div class="foot">
+    <span class="conf">Confidence <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><b>Medium</b></span>
+    <span>Business Standard Economy, Economic Times Economy</span>
+    <a href="https://economictimes.indiatimes.com/news/economy/foreign-trade/for-global-trades-sake-hope-our-us-deal-is-inked-soon-fm-nirmala-sitharaman/articleshow/135002357.cms" target="_blank" rel="noopener">Read the source →</a>
+  </div>
+  <div class="caveat">Where this could be wrong: The article is brief and relies primarily on ministerial remarks rather than a finalized, signed trade agreement.</div>
+</article>
+
+<div class="section">Also on the radar</div>
+
+<article class="card ">
+  <div class="tags">
+    
+    
+    <span class="tag">General</span>
+    <span class="tag dot">2 sources</span>
+  </div>
+
+  <h2>Andy Mukherjee: Rupee defence—It shouldn’t be left to unconventional measures while regular policy tools gather dust</h2>
+
+  
+  <div class="tldr">
+    <span class="lbl">In plain English</span>
+    <p>Aggressive <span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span> moves to protect the rupee could push up borrowing costs and squeeze bank margins, affecting anyone with a loan or bank deposit.</p>
+  </div>
+  
+
+  
+    <p class="what">The Indian central bank is using unusual, heavy-handed measures to stop the rupee from falling too fast against the US dollar. These desperate steps are driven by high global oil prices, rising <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> at home, and foreign investors pulling their money out of emerging markets as US <span class="term" tabindex="0" role="button" aria-label="The return investors earn on bonds. Rising yields often pull money away from stocks and gold." data-def="The return investors earn on bonds. Rising yields often pull money away from stocks and gold.">bond yields</span> surge.</p>
+  
+
+  
+    <div class="blocklabel">What the article actually says</div>
+    <ul class="story">
+      <li>The Reserve Bank of India (<span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span>) nudged banks to borrow $133 billion from the diaspora (Indians living abroad) in under three months, a drive that ended in August.</li><li>The <span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span> raised lenders&#x27; currency hedging costs and directed oil importers to buy dollars directly from the central bank, bypassing the market exchange rate.</li><li>India&#x27;s foreign reserves have fallen by $50 billion since early September, sitting alongside a negative dollar forward book of $200 billion.</li><li>The <span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span> recently raised interest rates by 25 basis points (0.25 percentage points), with Governor Sanjay Malhotra having previously cut rates by 125 basis points after taking over in December 2024.</li><li>The 10-year yield spread between Indian and US government bonds has narrowed from 600 basis points in 2013 to about 200 today.</li>
+    </ul>
+    
+      <a class="readsrc" href="https://www.livemint.com/opinion/online-views/andy-mukherjee-rupee-defence-temper-tantrum-unconventional-methods-regular-policy-tools-gather-dust-11792140092090.html" target="_blank" rel="noopener">Read the full article →</a>
+    
+  
+
+  
+    <div class="analogy"><b>Think of it like…</b> It is like a shopkeeper trying to stop prices from dropping by raiding their emergency piggy bank and taking on expensive loans from relatives, instead of simply fixing the store&#x27;s underlying pricing and trust issues.</div>
+  
+
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain">
+      <li>External pressures like expensive <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> above $100 a barrel and high US <span class="term" tabindex="0" role="button" aria-label="The return investors earn on bonds. Rising yields often pull money away from stocks and gold." data-def="The return investors earn on bonds. Rising yields often pull money away from stocks and gold.">bond yields</span> cause foreign investors to pull money out of India.</li><li>To stop the rupee from falling, the <span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span> intervenes heavily, spending billions from its foreign reserves and taking on large future dollar obligations.</li><li>Unconventional currency controls and potential interest rate hikes to defend the rupee risk making domestic loans much more expensive.</li><li>Higher borrowing costs could hurt bank profit margins, stall business credit growth, and complicate government borrowing during times of rural distress.</li>
+    </ul>
+  
+
+  
+    <div class="blocklabel">What could move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">The rupee (vs the US dollar)</div>
+          <div class="impact-why"><span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span>&#x27;s heavy market interventions and dollar-buying directives have strengthened the rupee to around 95 to the dollar for now—good for importers, bad for exporters.</div>
+        </div>
+        <div class="impact-side">
+          <span class="plevel"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">10-year bond yield (interest India pays to borrow)</div>
+          <div class="impact-why">Selling bonds to mop up surplus liquidity would lift <span class="term" tabindex="0" role="button" aria-label="The return investors earn on bonds. Rising yields often pull money away from stocks and gold." data-def="The return investors earn on bonds. Rising yields often pull money away from stocks and gold.">yields</span>, making borrowing more expensive for the government and businesses.</div>
+        </div>
+        <div class="impact-side">
+          <span class="plevel"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">months</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Bank margins and credit growth</div>
+          <div class="impact-why">Higher short-term rates or forced hedging costs would squeeze bank profitability and slow down loans, which is bad for borrowers and banks.</div>
+        </div>
+        <div class="impact-side">
+          <span class="plevel"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">months</span>
+        </div>
+      </div>
+      
+    </div>
+  
+
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch">
+      <li>Whether the <span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span> shifts from unconventional currency controls to regular policy tools like raising interest rates.</li><li>The movement of India&#x27;s foreign exchange reserves and the negative dollar forward book.</li><li>Global Brent <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> prices and US <span class="term" tabindex="0" role="button" aria-label="The return investors earn on bonds. Rising yields often pull money away from stocks and gold." data-def="The return investors earn on bonds. Rising yields often pull money away from stocks and gold.">bond yields</span>.</li>
+    </ul>
+  
+
+  <div class="foot">
+    <span class="conf">Confidence <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><b>High</b></span>
+    <span>Mint Opinion, economictimes.indiatimes.com</span>
+    <a href="https://www.livemint.com/opinion/online-views/andy-mukherjee-rupee-defence-temper-tantrum-unconventional-methods-regular-policy-tools-gather-dust-11792140092090.html" target="_blank" rel="noopener">Read the source →</a>
+  </div>
+  <div class="caveat">Where this could be wrong: If global oil prices drop sharply or foreign capital flows back into emerging markets organically, the pressure on the rupee could ease without requiring aggressive domestic policy tightening.</div>
+</article>
+<article class="card ">
+  <div class="tags">
+    
+    
+    <span class="tag">General</span>
+    <span class="tag dot">1 source</span>
+  </div>
+
+  <h2>Rupee volatility in focus as Sitharaman signals more RBI action, weighs LTCG tax debate</h2>
+
+  
+  <div class="tldr">
+    <span class="lbl">In plain English</span>
+    <p>When the central bank steps in to steady the Indian currency, it can change the cost of imported goods and alter how foreign money moves through our markets.</p>
+  </div>
+  
+
+  
+    <p class="what">Finance Minister Nirmala Sitharaman indicated that India&#x27;s central bank could implement additional measures to manage sudden swings in the rupee&#x27;s exchange rate. This follows a recent market intervention where the central bank introduced rules to lower the demand for US dollars and sold dollars directly to support the local currency, which triggered the rupee&#x27;s largest single-day jump in half a year.</p>
+  
+
+  
+    <div class="blocklabel">What the article actually says</div>
+    <ul class="story">
+      <li>Finance Minister Nirmala Sitharaman stated that the <span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span> (Reserve Bank of India [India&#x27;s central bank that manages money and interest rates]) might take more steps to control rupee volatility (sharp ups and downs in currency value).</li><li>She clarified that the goal is to stabilise the currency rather than fix its exact value.</li><li>The rupee recently recorded its biggest single-day gain in six months after the central bank introduced curbs to reduce dollar demand and sold dollars in the market.</li>
+    </ul>
+    
+      <a class="readsrc" href="https://economictimes.indiatimes.com/news/economy/finance/rbi-may-take-further-measures-to-curb-rupee-volatility-fm-sitharaman/articleshow/134912758.cms" target="_blank" rel="noopener">Read the full article →</a>
+    
+  
+
+  
+    <div class="analogy"><b>Think of it like…</b> It is like a parent stepping in to steady a child on a bicycle so they don&#x27;t swerve wildly off the path, rather than forcing the bike to stay completely frozen in one spot.</div>
+  
+
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain">
+      <li>The <span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span> intervenes by selling US dollars and putting new rules in place to lower dollar demand.</li><li>This sudden action stops the rupee from falling too fast, causing it to register its biggest single-day gain in six months.</li><li>Because the currency becomes steadier, the cost of importing items like <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span> becomes more predictable for businesses.</li><li>Ongoing debates around taxes like the LTCG (Long Term Capital Gains tax [tax on profits made from selling investments held for a long time]) also influence how investors view Indian markets.</li>
+    </ul>
+  
+
+  
+    <div class="blocklabel">What could move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">The rupee (vs the US dollar)</div>
+          <div class="impact-why">Central bank dollar-selling and new rules reduce wild swings and support the currency, which makes imported goods slightly cheaper — good for consumers.</div>
+        </div>
+        <div class="impact-side">
+          <span class="plevel"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="lvl">High</span></span>
+          <span class="when">days</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Nifty 50 (India&#39;s main stock index)</div>
+          <div class="impact-why">A stable currency reduces panic among big investors, creating a healthier environment for the broader stock market — generally good for everyday investors.</div>
+        </div>
+        <div class="impact-side">
+          <span class="plevel"><span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><span class="lvl">Medium</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+    </div>
+  
+
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch">
+      <li>Further announcements or rules from the <span class="term" tabindex="0" role="button" aria-label="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable." data-def="Reserve Bank of India — India&#x27;s central bank. It sets interest rates and works to keep inflation and the rupee stable.">RBI</span> regarding foreign exchange markets</li><li>Updates on the debate surrounding long-term capital gains taxes</li>
+    </ul>
+  
+
+  <div class="foot">
+    <span class="conf">Confidence <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i></span><b>Medium</b></span>
+    <span>Economic Times Policy</span>
+    <a href="https://economictimes.indiatimes.com/news/economy/finance/rbi-may-take-further-measures-to-curb-rupee-volatility-fm-sitharaman/articleshow/134912758.cms" target="_blank" rel="noopener">Read the source →</a>
+  </div>
+  <div class="caveat">Where this could be wrong: Much of the provided source text consists of unrelated promotional links and headlines, leaving only brief mentions of the Finance Minister&#x27;s statements to build upon.</div>
+</article>
+<article class="card ">
+  <div class="tags">
+    
+    
+    <span class="tag">Geopolitics</span>
+    <span class="tag dot">1 source</span>
+  </div>
+
+  <h2>Sucking up to Putin : US politicians slam Trump over  craven , cowardly  Russia sanctions waiver</h2>
+
+  
+  <div class="tldr">
+    <span class="lbl">In plain English</span>
+    <p>US President Donald Trump waiving energy sanctions on Russia to get diesel could keep global fuel supplies stable, affecting how much India pays to import oil.</p>
+  </div>
+  
+
+  
+    <p class="what">US President Donald Trump decided to pause heavy penalties and taxes on Russia&#x27;s energy trade after striking a direct deal with Vladimir Putin to secure diesel shipments for the United States. Lawmakers from both major US political parties strongly condemned the decision, saying it undermines efforts to punish Russia for its war.</p>
+  
+
+  
+    <div class="blocklabel">What the article actually says</div>
+    <ul class="story">
+      <li>US President Donald Trump signed an executive order waiving sweeping sanctions and tariffs aimed at Russia&#x27;s energy revenues, just two days before a deadline set by law.</li><li>Under a deal reached with Russian President Vladimir Putin, Russia will supply over 300,000 tons of diesel immediately, another 500,000 tons in November, and 1 million tons thereafter in exchange for sanction relief.</li><li>US lawmakers from both the Democratic and Republican parties, including Senator Richard Blumenthal and Representative Don Bacon, heavily criticized the move, calling it a surrender and arguing it helps Russia sustain its war against Ukraine.</li>
+    </ul>
+    
+      <a class="readsrc" href="https://www.hindustantimes.com/world-news/sucking-up-to-putin-us-politicians-slam-trump-over-craven-cowardly-russia-sanctions-waiver-101792209849242.html" target="_blank" rel="noopener">Read the full article →</a>
+    
+  
+
+  
+    <div class="analogy"><b>Think of it like…</b> It is like a country that agreed to stop buying goods from a neighbor suddenly starting to buy fuel from them again because it struck a quick side-deal for cheaper supplies, making its allies angry.</div>
+  
+
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain">
+      <li>The US lifts sanctions and tariffs on Russian energy revenues in exchange for diesel supplies -&gt; global oil and fuel trade routes adjust</li><li>Availability of Russian energy changes on the global market -&gt; shifts how much competing buyers pay for <span class="term" tabindex="0" role="button" aria-label="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee." data-def="Unrefined oil — the raw material for petrol, diesel and many products. India imports most of what it uses, so its price hits inflation and the rupee.">crude oil</span></li><li>Changes in global oil prices directly influence India&#x27;s import bills, since India imports a large share of its oil</li><li>Fluctuations in import bills feed into domestic fuel costs and general <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> (rising prices of everyday goods)</li>
+    </ul>
+  
+
+  
+    <div class="blocklabel">What could move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Petrol &amp; diesel prices</div>
+          <div class="impact-why">More Russian fuel flowing into global markets could slightly cool international fuel costs, which is good for Indian consumers at the pump.</div>
+        </div>
+        <div class="impact-side">
+          <span class="plevel"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">India&#39;s inflation rate</div>
+          <div class="impact-why">Cheaper imported energy lowers transport and manufacturing costs across India, keeping price rises manageable for households.</div>
+        </div>
+        <div class="impact-side">
+          <span class="plevel"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">months</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">The rupee (vs the US dollar)</div>
+          <div class="impact-why">Shifts in US foreign policy and global trade tensions can alter foreign investor confidence, occasionally putting pressure on the Indian currency.</div>
+        </div>
+        <div class="impact-side">
+          <span class="plevel"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">weeks</span>
+        </div>
+      </div>
+      
+    </div>
+  
+
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch">
+      <li>Whether other US allies retaliate or follow Washington&#x27;s shift in trade policy toward Russia</li><li>Actual delivery volumes of the promised diesel shipments from Russia to the US</li>
+    </ul>
+  
+
+  <div class="foot">
+    <span class="conf">Confidence <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><b>High</b></span>
+    <span>hindustantimes.com</span>
+    <a href="https://www.hindustantimes.com/world-news/sucking-up-to-putin-us-politicians-slam-trump-over-craven-cowardly-russia-sanctions-waiver-101792209849242.html" target="_blank" rel="noopener">Read the source →</a>
+  </div>
+  <div class="caveat">Where this could be wrong: Political pushback in the US Congress could still force unexpected changes to how these energy waivers are implemented.</div>
+</article>
+<article class="card ">
+  <div class="tags">
+    
+    
+    <span class="tag">General</span>
+    <span class="tag dot">1 source</span>
+  </div>
+
+  <h2>China’s Military Expansion in Southeast Asia Masks a More Complicated Reality</h2>
+
+  
+  <div class="tldr">
+    <span class="lbl">In plain English</span>
+    <p>Rising security ties between China and Southeast Asia could affect regional stability, but there is no direct impact on Indian household costs, <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span>, or everyday interest rates.</p>
+  </div>
+  
+
+  
+    <p class="what">China is expanding its military and internal security footprint in Southeast Asian countries like Laos, Cambodia, and Vietnam. While Washington often views this strictly as a U.S.-China rivalry, the article explains that local governments partner with Beijing largely to secure their own ruling regimes and manage local rivalries.</p>
+  
+
+  
+    <div class="blocklabel">What the article actually says</div>
+    <ul class="story">
+      <li>Satellite imagery shows an 8-light-attack-aircraft facility and a 2,000-meter runway under construction in Laos, which helps China&#x27;s logistics and intelligence.</li><li>China&#x27;s regional footprint includes the Ream Naval Base in Cambodia (opened in 2025) and growing arms sales, such as Indonesia expecting J-10 fighter jets.</li><li>Beijing offers internal security assistance through its Global Security Initiative to partners like Cambodia, Laos, Myanmar, and Vietnam, helping governments protect against domestic revolutions.</li><li>A 2026 survey by Singaporean think tank ISEAS showed regional elites leaning toward Beijing, though alignments shift frequently based on specific global events.</li>
+    </ul>
+    
+      <a class="readsrc" href="https://warontherocks.com/chinas-military-expansion-in-southeast-asia-masks-a-more-complicated-reality/" target="_blank" rel="noopener">Read the full article →</a>
+    
+  
+
+  
+    <div class="analogy"><b>Think of it like…</b> It is like a local neighborhood association where houses team up with a powerful landlord not because they love him, but because he promises to help keep their own front gates locked against local troublemakers.</div>
+  
+
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain">
+      <li>China builds military infrastructure and deepens security ties in mainland Southeast Asia, including a new airfield in Laos.</li><li>These facilities expand the operational reach of the People&#x27;s Liberation Army Air Force.</li><li>Such expansion could eventually touch upon areas near the eastern Indian Ocean where U.S. and regional forces operate.</li><li>For an ordinary Indian investor, this is a geopolitical development with no direct transmission mechanism to retail <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span>, the rupee, or domestic stock prices.</li>
+    </ul>
+  
+
+  
+    <div class="blocklabel">What could move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Nifty 50 (India&#39;s main stock index)</div>
+          <div class="impact-why">Geopolitical friction in Asia rarely moves Indian domestic stock valuations directly, as local corporate earnings depend on the Indian economy.</div>
+        </div>
+        <div class="impact-side">
+          <span class="plevel"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">months</span>
+        </div>
+      </div>
+      
+      <div class="impact">
+        <span class="dir up">
+          ▲ Rises</span>
+        <div class="impact-body">
+          <div class="impact-target">Defense sector stocks in India</div>
+          <div class="impact-why">Increased Chinese regional expansion heightens long-term Indian defense awareness, though specific company contracts are driven by domestic government budgets.</div>
+        </div>
+        <div class="impact-side">
+          <span class="plevel"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">months</span>
+        </div>
+      </div>
+      
+    </div>
+  
+
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch">
+      <li>Further satellite updates on the Laos airfield and its operational capability</li><li>Shifts in regional diplomatic surveys like the ISEAS ASEAN ranking</li>
+    </ul>
+  
+
+  <div class="foot">
+    <span class="conf">Confidence <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><b>High</b></span>
+    <span>War on the Rocks</span>
+    <a href="https://warontherocks.com/chinas-military-expansion-in-southeast-asia-masks-a-more-complicated-reality/" target="_blank" rel="noopener">Read the source →</a>
+  </div>
+  <div class="caveat">Where this could be wrong: Only the headline and article text were used; broader geopolitical escalation in Asian waterways could alter market sentiment unpredictably.</div>
+</article>
+<article class="card ">
+  <div class="tags">
+    
+    
+    <span class="tag">General</span>
+    <span class="tag dot">1 source</span>
+  </div>
+
+  <h2>Light may influence morning basking behaviour in captive gharials</h2>
+
+  
+  <div class="tldr">
+    <span class="lbl">In plain English</span>
+    <p>This study on captive gharials has no direct impact on personal finances, <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span>, or the stock market, as it focuses entirely on wildlife conservation.</p>
+  </div>
+  
+
+  
+    <p class="what">Researchers discovered that captive gharials rely more on light than temperature to decide when to leave the water to warm up in the morning. This matters because rising light pollution near rivers could trick these critically endangered animals into basking at the wrong time, risking their health.</p>
+  
+
+  
+    <div class="blocklabel">What the article actually says</div>
+    <ul class="story">
+      <li>A study on captive Gangetic gharials at the Deori EcoCentre in Madhya Pradesh found that light is a stronger cue than temperature for their morning basking movements.</li><li>Researchers observed 382 captive gharials grouped by age between June 20 and 30, 2023, noting that younger gharials responded to lower light intensity and came out of the water earlier when air was still cold.</li><li>The study warns that artificial lighting at night and light pollution could cause gharials to bask at the wrong time, potentially leading to hypothermia or exposing hatchlings to predators.</li><li>Data from 2012 to 2020 showed a three-fold increase in night radiance along the Chambal and other river systems, while protected dark night sky areas along the Ganga declined from 92% to 67% between 2015 and 2021.</li><li>Gharials have an IUCN species recovery score of 19% indicating they are critically depleted, with experts noting additional threats from illegal sand mining, dams, and barrages.</li>
+    </ul>
+    
+      <a class="readsrc" href="https://india.mongabay.com/2026/10/light-may-influence-morning-basking-behaviour-in-captive-gharials/" target="_blank" rel="noopener">Read the full article →</a>
+    
+  
+
+  
+
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain">
+      <li>Researchers studied gharials in Madhya Pradesh and along major Indian river systems like the Chambal and Ganga.</li><li>Urbanization and night lights near rivers are increasing, which disrupts natural animal behaviors.</li><li>This highlights environmental challenges faced by endangered species in India, but does not affect the economy, currency, or markets.</li>
+    </ul>
+  
+
+  
+
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch">
+      <li>Further research on wild gharial behavior and the impact of light pollution on river ecosystems</li><li>Conservation policy updates regarding riverbank developments and artificial lighting near sanctuaries</li>
+    </ul>
+  
+
+  <div class="foot">
+    <span class="conf">Confidence <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><b>High</b></span>
+    <span>Mongabay India</span>
+    <a href="https://india.mongabay.com/2026/10/light-may-influence-morning-basking-behaviour-in-captive-gharials/" target="_blank" rel="noopener">Read the source →</a>
+  </div>
+  <div class="caveat">Where this could be wrong: The article text cuts off at the very end, but the core findings on gharial behavior and light pollution are fully detailed.</div>
+</article>
+<article class="card ">
+  <div class="tags">
+    
+    
+    <span class="tag">General</span>
+    <span class="tag dot">1 source</span>
+  </div>
+
+  <h2>Kids are outsmarting social media bans. That’s not a problem we need to solve.</h2>
+
+  
+  <div class="tldr">
+    <span class="lbl">In plain English</span>
+    <p>Efforts by foreign governments to block kids from social media are easily bypassed and do not directly change your personal finances or the Indian stock market.</p>
+  </div>
+  
+
+  
+    <p class="what">Governments around the world are trying to stop children from using social media by setting strict age limits. However, kids easily find ways around these rules, and experts argue that trying to block them creates bigger privacy risks for everyone.</p>
+  
+
+  
+    <div class="blocklabel">What the article actually says</div>
+    <ul class="story">
+      <li>Countries like France, Australia, the UK, and the EU have moved to restrict minors from accessing social media platforms, though some bans face legal blocks.</li><li>Data from Australia shows that four in five teens under 16 easily bypass these age restrictions using workarounds like drawing fake facial hair or using a sibling&#x27;s ID.</li><li>Strict age verification forces users to hand over sensitive personal documents, leading to privacy risks and data leaks, such as a Discord third-party service breach that exposed 70,000 government ID images.</li><li>When kids cannot access mainstream platforms, they often move to unmonitored, riskier online spaces or use privacy tools like VPNs (virtual private networks [secure digital tunnels that hide your internet activity]) which governments are trying to clamp down on.</li>
+    </ul>
+    
+      <a class="readsrc" href="https://www.technologyreview.com/2026/10/16/1146834/kids-are-outsmarting-social-media-bans-thats-not-a-problem-we-need-to-solve/" target="_blank" rel="noopener">Read the full article →</a>
+    
+  
+
+  
+    <div class="analogy"><b>Think of it like…</b> It is like trying to lock a gate in an open field—people just walk around the sides instead of using the gate.</div>
+  
+
+  
+    <div class="blocklabel">How this reaches India</div>
+    <ul class="chain">
+      <li>Global tech platforms (like Meta and TikTok) face changing rules abroad on how they verify user ages.</li><li>Stricter global tech regulations could eventually influence digital privacy laws and data protection rules in India.</li><li>Increased security requirements for tech companies raise questions about how user data is stored globally.</li><li>This news focuses entirely on social policy and internet freedom abroad, meaning it has no direct financial ripple effect on Indian <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span>, the rupee, or local stock prices.</li>
+    </ul>
+  
+
+  
+    <div class="blocklabel">What could move — and how likely</div>
+    <div class="impacts">
+      
+      <div class="impact">
+        <span class="dir down">
+          ▼ Falls</span>
+        <div class="impact-body">
+          <div class="impact-target">Nifty IT (India&#39;s major tech stock index)</div>
+          <div class="impact-why">Global rules on social media focus mostly on consumer tech giants rather than Indian software service companies, meaning minimal direct impact.</div>
+        </div>
+        <div class="impact-side">
+          <span class="plevel"><span class="dots" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i></span><span class="lvl">Low</span></span>
+          <span class="when">months</span>
+        </div>
+      </div>
+      
+    </div>
+  
+
+  
+    <div class="blocklabel">What to watch next</div>
+    <ul class="watch">
+      <li>How major global tech companies handle age verification requirements in Western markets</li><li>Whether Indian regulators propose similar age-gating rules for social media platforms</li>
+    </ul>
+  
+
+  <div class="foot">
+    <span class="conf">Confidence <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><b>High</b></span>
+    <span>MIT Technology Review</span>
+    <a href="https://www.technologyreview.com/2026/10/16/1146834/kids-are-outsmarting-social-media-bans-thats-not-a-problem-we-need-to-solve/" target="_blank" rel="noopener">Read the source →</a>
+  </div>
+  <div class="caveat">Where this could be wrong: If India decides to adopt strict age-verification rules for internet users in the future, it could change how local tech platforms operate.</div>
+</article>
+
+
+<div class="section">Deeper reads</div>
+<div class="deeper">
+  
+  <a class="dr" href="https://finshots.in/markets/idbi-bank-is-finally-being-sold/" target="_blank" rel="noopener">
+    <span class="src">Finshots</span><span class="t">IDBI Bank is finally being sold</span>
+  </a>
+  
+  <a class="dr" href="https://finshots.in/archive/can-starlink-win-indias-internet-war/" target="_blank" rel="noopener">
+    <span class="src">Finshots</span><span class="t">Can Starlink win India’s internet war?</span>
+  </a>
+  
+  <a class="dr" href="https://finshots.in/archive/the-new-gst-reforms-explained/" target="_blank" rel="noopener">
+    <span class="src">Finshots</span><span class="t">The new GST reforms explained</span>
+  </a>
+  
+  <a class="dr" href="https://finshots.in/archive/why-the-nobel-prize-in-economics-went-to-robert-hall-and-michael-woodford-2/" target="_blank" rel="noopener">
+    <span class="src">Finshots</span><span class="t">Why the Nobel Prize in Economics went to Robert Hall and Michael Woodford</span>
+  </a>
+  
+  <a class="dr" href="https://finshots.in/archive/how-china-is-building-its-global-ev-battery-empire/" target="_blank" rel="noopener">
+    <span class="src">Finshots</span><span class="t">How China is building its global EV battery empire</span>
+  </a>
+  
+  <a class="dr" href="https://finshots.in/archive/how-a-fistfight-helped-fix-your-eyesight-and-more/" target="_blank" rel="noopener">
+    <span class="src">Finshots</span><span class="t">How a fistfight helped fix your eyesight and more...</span>
+  </a>
+  
+</div>
+
+
+
+<div class="section">Pattern from history</div>
+<article class="histcard">
+  <div class="hkick">October 1973 · Middle East, felt globally</div>
+  <h3>The embargo that rewired the world economy</h3>
+  <p class="hlede">Arab oil producers cut output and embargoed several countries during the Yom Kippur war. Oil went from about $3 a barrel to $12 within months, and the industrial world discovered how completely it depended on a resource it did not control.</p>
+  <ol class="hchain">
+    <li><h5>Why it happened</h5><p>Oil demand had grown for two decades on the assumption of permanently cheap supply, so there was no spare capacity and no stockpile anywhere. The producers realised they had collective pricing power and used it. A political event became an economic one because no buffer existed.</p></li>
+    <li><h5>What it hit</h5><p>Stagflation — high <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> and high unemployment together, which economists had thought nearly impossible. US shares fell about 48%. Petrol rationing across the West. For oil-importing India, the <span class="term" tabindex="0" role="button" aria-label="The total amount of foreign currency India pays for its imports (oil, gold, electronics). A bigger bill pressures the rupee." data-def="The total amount of foreign currency India pays for its imports (oil, gold, electronics). A bigger bill pressures the rupee.">import bill</span> and inflation both surged.</p></li>
+    <li><h5>The policy brought in to fix it</h5><p>Strategic petroleum reserves were created so a political shock could not immediately become a price shock. Fuel-efficiency standards were imposed on cars. Nuclear and, much later, renewable programmes were accelerated. The International Energy Agency was founded to coordinate responses.</p></li>
+    <li><h5>And what that policy led to</h5><p>Rich-world oil consumption per unit of output has more than halved since. The reserves and efficiency rules genuinely worked, which is why later oil shocks — including 2022 — hurt considerably less than 1973 did.</p></li>
+  </ol>
+  <div class="hpattern"><b>The pattern to remember</b>A concentrated supply of something essential is a standing political risk, whatever the price chart says. The response is always the same — build a buffer, use less, find alternatives — and it takes about a decade to work.</div>
+  
+  <div class="hindia"><b>The India echo</b>India imports over 85% of its crude, so this is the permanent structural weakness behind the rupee, <span class="term" tabindex="0" role="button" aria-label="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value." data-def="How fast the general price of everyday goods and services is rising. High inflation eats into your money&#x27;s value.">inflation</span> and the <span class="term" tabindex="0" role="button" aria-label="When India spends more foreign currency on imports than it earns from exports. A wider gap tends to weaken the rupee." data-def="When India spends more foreign currency on imports than it earns from exports. A wider gap tends to weaken the rupee.">current account deficit</span>. It is also why India&#x27;s solar push and its own strategic reserve are macro stories, not environmental ones.</div>
+  
+  
+  <div class="hwatch"><b>The modern tell</b>Any critical input where a handful of countries control most of the supply. Rare earths, advanced chips and lithium are today&#x27;s version of the question.</div>
+  
+</article>
+
+
+<div class="disclaimer">
+  <b>Learning tool, not advice.</b> This brief explains how world events <i>tend</i> to
+  affect markets so you can learn the patterns and probabilities yourself. It never tells
+  you what to buy or sell, and the odds shown are rough judgments, not guarantees.
+</div>
+
+<footer class="pagefoot">
+  
+  <div class="archive"><b>Past briefs:</b>
+    <a href="2026-10-16.html">2026-10-16</a><a href="2026-10-15.html">2026-10-15</a><a href="2026-10-14.html">2026-10-14</a><a href="2026-10-13.html">2026-10-13</a><a href="2026-10-12.html">2026-10-12</a><a href="2026-10-11.html">2026-10-11</a><a href="2026-10-10.html">2026-10-10</a><a href="2026-10-09.html">2026-10-09</a><a href="2026-10-08.html">2026-10-08</a><a href="2026-10-07.html">2026-10-07</a><a href="2026-10-06.html">2026-10-06</a><a href="2026-10-05.html">2026-10-05</a><a href="2026-10-04.html">2026-10-04</a><a href="2026-10-03.html">2026-10-03</a>
+  </div>
+  <p>Generated automatically by your News Finance Hub · 2026-10-17T06:00:34+00:00</p>
+</footer>
+
+<script>
+(function(){
+  if(window.__tipbox)return; window.__tipbox=1;
+  var box=document.createElement('div');
+  box.id='tipbox'; box.setAttribute('role','tooltip');
+  document.body.appendChild(box);
+  var cur=null;
+  function show(t){
+    var d=t.getAttribute('data-def'); if(!d)return;
+    box.textContent=d;
+    var w=Math.min(300,window.innerWidth-24);
+    box.style.maxWidth=w+'px';
+    box.classList.add('on');
+    var r=t.getBoundingClientRect(), h=box.offsetHeight;
+    var left=Math.min(Math.max(12,r.left),window.innerWidth-w-12);
+    var top=r.bottom+8;
+    if(top+h>window.innerHeight-12){top=r.top-h-8;}
+    box.style.left=left+'px';
+    box.style.top=Math.max(12,top)+'px';
+    cur=t;
+  }
+  function hide(){box.classList.remove('on');cur=null;}
+  document.addEventListener('pointerover',function(e){
+    var t=e.target.closest&&e.target.closest('.term');
+    if(t){show(t);}else if(cur){hide();}
+  },true);
+  document.addEventListener('focusin',function(e){
+    var t=e.target.closest&&e.target.closest('.term');
+    if(t){show(t);}else{hide();}
+  },true);
+  document.addEventListener('scroll',hide,true);
+  window.addEventListener('resize',hide);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')hide();});
+})();
+</script>
+</div></body></html>
